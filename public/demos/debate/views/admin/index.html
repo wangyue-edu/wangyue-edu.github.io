@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>报名系统</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="{{__HOST__}}/public/css/ie10.css" rel="stylesheet">
+
+    <!-- <link href="{{__HOST__}}/admin/index.css" rel="stylesheet"> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <table class="table">
+
+            <thead>
+                <tr>
+                    <th>学校</th>
+                    <th>姓名</th>
+                    <th>胸卡号</th>
+                    <th>验证码</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{each list}}
+                <tr>
+                    <td>{{$value.school}}</td>
+                    <td>{{$value.username}}</td>
+                    <td>{{$value.password}}</td>
+                    <td>{{$value.id}}</td>
+
+                </tr>
+                {{/each}}
+
+
+            </tbody>
+        </table>
+        <div id="page" class="pagination"></div>
+
+    </div> <!-- /container -->
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="{{__HOST__}}/public/js/ie10.js"></script>
+
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <!--注意放在jq下面-->
+    <script src="{{__HOST__}}/public/js/jq-paginator.min.js"></script>
+
+
+
+    <script>
+        $('#page').jqPaginator({
+            totalPages: {{ totalPages }},  //总页数
+            visiblePages: 8,              //可见页数
+            currentPage: {{ page }},      //当前页数
+            onPageChange: function (num, type) {
+                console.log(num, type);
+                //
+                if (type == 'change') {
+                    location.href = "{{__HOST__}}/admin/index?page=" + num;
+                    //地址栏显示的内容http://localhost:3000/admin/article?page=3
+                }
+            }
+    			
+    
+    		});
+
+    </script>
+</body>
+
+</html>

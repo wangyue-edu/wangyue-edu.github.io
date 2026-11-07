@@ -1,0 +1,212 @@
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>校园展示</title>
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+</head>
+
+<body>
+    <div class="title_bar">
+        <img src="./img/logo.jpg" style="height: 75px" >
+    </div>
+
+
+    <div id="name">百年通中，英才辈出</div>
+    <div style="width: 800px; margin: 20px auto;">
+        <img id="map_img" style="width: 800px" src="./img/silingtai.jpg">
+    </div>
+
+    <div class="wrap">
+        <div class="a">
+            <img id="arrow_l" src="./img/arrow_l.png">
+            <span id="lw"></span>
+        </div>
+
+        <div class="a">
+            <img id="arrow_t" src="./img/arrow_t.png">
+            <span id="tw"></span>
+        </div>
+
+        <div class="a">
+            <img id="arrow_b" src="./img/arrow_b.png">
+            <span id="bw"></span>
+        </div>
+
+        <div class="a">
+            <img id="arrow_r" src="./img/arrow_r.png">
+            <span id="rw"></span>
+        </div>
+        
+    </div>
+
+    <script type="text/javascript">
+        var img = document.getElementById("map_img");
+        var al = document.getElementById("arrow_l");
+        var ar = document.getElementById("arrow_r");
+        var at = document.getElementById("arrow_t");
+        var ab = document.getElementById("arrow_b");
+
+        var wl = document.getElementById("lw");
+        var wr = document.getElementById("rw");
+        var wt = document.getElementById("tw");
+        var wb = document.getElementById("bw");
+
+        var l = "";
+        var l_word = "";
+        var r = "";
+        var r_word = "";
+        var t = "";
+        var t_word = "";
+        var b = "";
+        var b_word = "";
+        var src = "";
+        var rule = /img([^"]+)/g;
+        
+
+        var map = function() {
+            window.open("map.html")
+        }
+
+        al.onclick = function(){
+            src = "./" + img.src.match(rule);
+            if (src == "./img/silingtai.jpg") {
+                l = "honglou";
+            } else if (src == "./img/jianxiong.jpg") {
+                l = "silingtai";
+            } else if (src == "./img/chengheng.jpg") {
+                l = "chongya";
+            } else if (src == "./img/kexue.jpg") {
+                l = "qiuzhen";
+            } else if (src == "./img/chongya.jpg") {
+                l = "qiuzhen";
+            } else if (src == "./img/qiuzhen.jpg") {
+                l = "hongguan";
+            } else if (src == "./img/honglou.jpg") {
+                l = "chongheng";
+            } else if (src == "./img/pingfang.jpg") {
+                l = "hongguan";
+            } else if (src == "./img/hongguan.jpg") {
+                l = "chongheng";
+            } else if (src == "./img/chongheng.jpg") {
+                l = "jianwu";
+            } else if (src == "./img/nanmen.jpg") {
+                l = "nanmen";
+            } else if (src == "./img/chenghengshi.jpg") {
+                l = "nanmen";
+            } else if (src == "./img/jianwu.jpg") {
+                l = "jianwu";
+            }
+
+            img.src = "./img/" + l + ".jpg";
+            // wl.innerText = "前往" + l_word;
+        }
+
+        ar.onclick = function(){
+            src = "./" + img.src.match(rule);
+            if (src == "./img/silingtai.jpg") {
+                r = "jianxiong";
+            } else if (src == "./img/jianxiong.jpg") {
+                r = "jianxiong";
+            } else if (src == "./img/chengheng.jpg") {
+                r = "chengheng";
+            } else if (src == "./img/kexue.jpg") {
+                r = "chengheng";
+            } else if (src == "./img/chongya.jpg") {
+                r = "chengheng";
+            } else if (src == "./img/qiuzhen.jpg") {
+                r = "chongya";
+            } else if (src == "./img/honglou.jpg") {
+                r = "silingtai";
+            } else if (src == "./img/pingfang.jpg") {
+                r = "kexue";
+            } else if (src == "./img/hongguan.jpg") {
+                r = "qiuzhen";
+            } else if (src == "./img/chongheng.jpg") {
+                r = "hongguan";
+            } else if (src == "./img/nanmen.jpg") {
+                r = "chongheng";
+            } else if (src == "./img/chenghengshi.jpg") {
+                r = "chenghengshi";
+            } else if (src == "./img/jianwu.jpg") {
+                r = "chongheng";
+            }
+
+            img.src = "./img/" + r + ".jpg";
+            // wr.innerHTML = "前往" + r_word;
+        }
+
+        at.onclick = function(){
+            src = "./" + img.src.match(rule);
+            if (src == "./img/silingtai.jpg") {
+                t = "silingtai";
+            } else if (src == "./img/jianxiong.jpg") {
+                t = "jianxiong";
+            } else if (src == "./img/chengheng.jpg") {
+                t = "silingtai";
+            } else if (src == "./img/kexue.jpg") {
+                t = "chongya";
+            } else if (src == "./img/chongya.jpg") {
+                t = "silingtai";
+            } else if (src == "./img/qiuzhen.jpg") {
+                t = "honglou";
+            } else if (src == "./img/honglou.jpg") {
+                t = "honglou";
+            } else if (src == "./img/pingfang.jpg") {
+                t = "qiuzhen";
+            } else if (src == "./img/hongguan.jpg") {
+                t = "honglou";
+            } else if (src == "./img/chongheng.jpg") {
+                t = "chongheng";
+            } else if (src == "./img/nanmen.jpg") {
+                t = "chongheng";
+            } else if (src == "./img/chenghengshi.jpg") {
+                t = "nanmen";
+            } else if (src == "./img/jianwu.jpg") {
+                t = "jianwu";
+            }
+
+
+            img.src = "./img/" + t + ".jpg";
+            // wt.innerHTML = "前往" + t_word;
+        }
+
+
+
+        ab.onclick = function(){
+            src = "./" + img.src.match(rule);
+            if (src == "./img/silingtai.jpg") {
+                b = "chongya";
+            } else if (src == "./img/jianxiong.jpg") {
+                b = "chengheng";
+            } else if (src == "./img/chengheng.jpg") {
+                b = "chengheng";
+            } else if (src == "./img/kexue.jpg") {
+                b = "kexue";
+            } else if (src == "./img/chongya.jpg") {
+                b = "kexue";
+            } else if (src == "./img/qiuzhen.jpg") {
+                b = "pingfang";
+            } else if (src == "./img/honglou.jpg") {
+                b = "hongguan";
+            } else if (src == "./img/pingfang.jpg") {
+                b = "pingfang";
+            } else if (src == "./img/hongguan.jpg") {
+                b = "pingfang";
+            } else if (src == "./img/chongheng.jpg") {
+                b = "nanmen";
+            } else if (src == "./img/nanmen.jpg") {
+                b = "chenghengshi";
+            } else if (src == "./img/chenghengshi.jpg") {
+                b = "chenghengshi";
+            } else if (src == "./img/jianwu.jpg") {
+                b = "jianwu";
+            }
+
+
+            img.src = "./img/" + b + ".jpg";
+            // wb.innerHTML = "前往" + b_word;
+        }
+
+    </script>
+</body>
+</html>

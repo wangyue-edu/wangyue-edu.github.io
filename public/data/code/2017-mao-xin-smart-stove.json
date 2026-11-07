@@ -1,0 +1,26 @@
+{
+  "projectId": "2017-mao-xin-smart-stove",
+  "externalRepo": null,
+  "totalFiles": 1,
+  "totalLines": 23,
+  "coreFiles": [
+    "smart_stove_controller.cpp"
+  ],
+  "languages": [
+    {
+      "lang": "cpp",
+      "lines": 23,
+      "percent": 100.0
+    }
+  ],
+  "files": [
+    {
+      "path": "smart_stove_controller.cpp",
+      "name": "smart_stove_controller.cpp",
+      "lang": "cpp",
+      "lines": 23,
+      "size": 830,
+      "content": "#include <iostream>\nusing namespace std;\n\n// 智能灶台核心逻辑控制微程序\n// 根据电容式物位传感器采样反馈判断锅内受热沸腾高度与溢出风险\n// 从而实现灶台电磁阀/功率等级的自动闭环调节\n\nint main() {\n    int liquid_level;\n    cout << \"==> 智能防溢灶台监控微程序启动...\" << endl;\n    cout << \"请输入物位传感器实时检测高度值 a (10-20 为安全防溢区间): \";\n    \n    if (cin >> liquid_level) {\n        if ((liquid_level >= 10) && (liquid_level <= 20)) {\n            // 物位处于微沸稳定区间，执行小火稳压微调\n            cout << \"small\" << endl;\n        } else {\n            // 超出安全阈值或剧烈沸腾，触发自适应主控逻辑\n            cout << \"according to the brain\" << endl;\n        }\n    }\n    return 0;\n}\n"
+    }
+  ]
+}

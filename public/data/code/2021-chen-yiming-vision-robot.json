@@ -1,0 +1,26 @@
+{
+  "projectId": "2021-chen-yiming-vision-robot",
+  "externalRepo": null,
+  "totalFiles": 1,
+  "totalLines": 45,
+  "coreFiles": [
+    "clicbot_tracker.py"
+  ],
+  "languages": [
+    {
+      "lang": "python",
+      "lines": 45,
+      "percent": 100.0
+    }
+  ],
+  "files": [
+    {
+      "path": "clicbot_tracker.py",
+      "name": "clicbot_tracker.py",
+      "lang": "python",
+      "lines": 45,
+      "size": 1619,
+      "content": "# coding=utf-8\nimport random\nimport sys\nimport time\n\nsys.path.append(\"/userdata/\")\nfrom clicbot import *\n\n# 初始化 ClicBot 多模块机器人控制实例\nrobot = Clicbot()\nprint(\"ClicBot Vision Tracking System Initialized.\")\n\n# 智能循迹与动态避障抓取主循环\nwhile True:\n    # 读取测距传感器数值 (传感器 ID 9 与 8)\n    dist_front = robot.distance_sensor(9)\n    dist_side = robot.distance_sensor(8)\n    \n    if dist_front > 360:\n        if dist_side <= 50:\n            # 偏离中线过近，执行微幅右修\n            robot.preset_action(\"单右\")\n            robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 50)\n        elif dist_side <= 110:\n            # 姿态正常，保持正向全速巡线\n            robot.preset_action(\"正\")\n            robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 80)\n        elif dist_side <= 350:\n            # 偏离中线过远，执行微幅左修\n            robot.preset_action(\"单左\")\n            robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 50)\n        else:\n            # 到达目标抓取工位，刹车并执行抓取动作\n            robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 0)\n            robot.preset_action(\"正\")\n            robot.act_wheel_rotate(\"5cw,7cw,4ccw,6ccw\", 50)\n            time.sleep(0.5)\n            robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 0)\n            print(\"Target reached. Grasping sequence completed.\")\n            break\n    else:\n        # 前方遭遇障碍物，执行紧急转弯避障预设动作\n        robot.preset_action(\"转\")\n        robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 60)\n        time.sleep(0.5)\n"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "projectId": "2022-jiang-guanqun-nfc",
+  "externalRepo": null,
+  "totalFiles": 2,
+  "totalLines": 45,
+  "coreFiles": [
+    "activity_nfc.xml",
+    "CloudPunchClient.java"
+  ],
+  "languages": [
+    {
+      "lang": "xml",
+      "lines": 22,
+      "percent": 45.0
+    },
+    {
+      "lang": "java",
+      "lines": 23,
+      "percent": 55.0
+    }
+  ],
+  "files": [
+    {
+      "path": "activity_nfc.xml",
+      "name": "activity_nfc.xml",
+      "lang": "xml",
+      "lines": 22,
+      "size": 878,
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    android:layout_width=\"fill_parent\"\n    android:layout_height=\"fill_parent\"\n    android:orientation=\"vertical\">\n    \n    <!-- NFC 交互与实时刷卡日志回显滚动容器 -->\n    <ScrollView\n        android:id=\"@+id/scrollView\"\n        android:layout_width=\"fill_parent\"\n        android:layout_height=\"fill_parent\"\n        android:background=\"@android:drawable/edit_text\">\n        \n        <TextView\n            android:id=\"@+id/promt\"\n            android:layout_width=\"fill_parent\"\n            android:layout_height=\"wrap_content\"\n            android:scrollbars=\"vertical\"\n            android:singleLine=\"false\"\n            android:text=\"[系统就绪] 请将校园一卡通贴近手机背面 NFC 射频感应区域...\" />\n    </ScrollView>\n</LinearLayout>\n"
+    },
+    {
+      "path": "CloudPunchClient.java",
+      "name": "CloudPunchClient.java",
+      "lang": "java",
+      "lines": 23,
+      "size": 863,
+      "content": "import javax.swing.*;\nimport java.awt.*;\n\n// 校园一卡通云打卡桌面客户端 / 模拟打卡调试窗口\npublic class CloudPunchClient {\n    public static void main(String[] args) {\n        JFrame frame = new JFrame(\"校园一卡通 · 云打卡终端 (NTZX Cloud Punch)\");\n        Container container = frame.getContentPane();\n        \n        JButton btnStart = new JButton(\"开始打卡\");\n        JButton btnRead = new JButton(\"读取打卡记录\");\n        \n        container.setLayout(new FlowLayout());\n        container.add(btnStart);\n        container.add(btnRead);\n        \n        frame.setLocation(100, 100);\n        frame.setSize(600, 500);\n        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);\n        frame.setVisible(true);\n        System.out.println(\"云打卡调试前端已启动，等待 NFC 读卡器触发事件...\");\n    }\n}\n"
+    }
+  ]
+}

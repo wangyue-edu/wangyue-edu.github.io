@@ -1,0 +1,845 @@
+{
+  "year": "2016",
+  "editionNumber": 1,
+  "title": "首届望岳奖学金 (2016)",
+  "theme": "计算与生活 · 探索与启蒙",
+  "intro": "为了纪念南通中学已故计算机老师岳军，由历届校友共同发起成立。首届奖学金共收到12位同学的10组申报，并被当地媒体报道。",
+  "documents": [],
+  "video": {
+    "src": "media/2016_city_calendar.mp4",
+    "poster": "media/2016_city_calendar_poster.jpg",
+    "title": "首届纪念视频：城市日历"
+  },
+  "gallery": [
+    {
+      "src": "media/2016/宣讲_mmexport1476779454988.jpg",
+      "caption": "首届宣讲会启动：学长向通中同学介绍望岳奖学金宗旨与申报要求",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1476779457721.jpg",
+      "caption": "宣讲现场：多媒体展示极客创造与技术作品申报指引",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1476779459971.jpg",
+      "caption": "宣讲现场：同学们聚精会神聆听往届经验与作品要求",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1476779462163.jpg",
+      "caption": "宣讲现场：学长分享计算机探索心得与活动细则",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1476779464607.jpg",
+      "caption": "宣讲现场答疑：解答同学关于自研项目申报的各种疑问",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1476779484837.jpg",
+      "caption": "宣讲会现场：鼓励通中同学动手实践、将奇思妙想转化为实物",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1476779487148.jpg",
+      "caption": "宣讲动员：介绍岳军老师生前悉心指导学子的感人事迹与望岳精神",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1476779490912.jpg",
+      "caption": "宣讲现场交流：高一高二科技爱好者齐聚阶梯教室",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1476779516934.jpg",
+      "caption": "宣讲会互动：学长深入解读三大评奖阶梯与创新要求",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1476779519562.jpg",
+      "caption": "宣讲现场全景：满座同学认真记录申报时间节点",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1476779529063.jpg",
+      "caption": "宣讲会现场热烈反响：点燃校园科技造物热情",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1484045884006.jpg",
+      "caption": "宣讲现场纪实：校友与学弟学妹面对面沟通申报准备",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1484045886403.jpg",
+      "caption": "宣讲会后续交流：同学们探讨各自的软硬件构想",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1484045888780.jpg",
+      "caption": "宣讲答疑：指导同学规范填写申报表与撰写研报",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1484045891358.jpg",
+      "caption": "宣讲会动员总结：期盼在敬孺楼见证更多原创科技成果",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/宣讲_mmexport1484045896575.jpg",
+      "caption": "宣讲会圆满结束：同学们积极领取首届望岳申报说明",
+      "category": "宣讲"
+    },
+    {
+      "src": "media/2016/座谈_DSC00574-min.jpg",
+      "caption": "师生与校友学术座谈会：分享计算机学习前沿与工程实践心得",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_DSC00575-min.jpg",
+      "caption": "座谈会研讨：围绕极客社创客实践与软硬件开发展开热烈讨论",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_DSC00578-min.jpg",
+      "caption": "校友导师与参赛同学深度交流，探讨系统架构与优化路径",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_DSC00596-min.jpg",
+      "caption": "座谈会现场：就算法设计、硬件选型与系统部署交换意见",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_DSC00597-min.jpg",
+      "caption": "座谈会全景：师生围坐敬孺楼会议室热烈畅谈",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_IMG_9247-min.jpg",
+      "caption": "座谈交流：校友导师认真倾听同学在课外独立研发中的技术瓶颈",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_IMG_9250-min.jpg",
+      "caption": "座谈答疑：针对单片机底层控制与图形渲染给出工程建议",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_IMG_9252-min.jpg",
+      "caption": "座谈会现场：探讨如何在有限资源下实现高完成度项目",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_IMG_9255-min.jpg",
+      "caption": "师生互动：勉励同学们保持对底层技术与原理的纯粹探索",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_IMG_9288-min.jpg",
+      "caption": "座谈会研讨：校友分享工业界软件工程与开源社区发展经验",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_IMG_9291-min.jpg",
+      "caption": "座谈会交流：同学们展示随身携带的实验电路板与代码构架",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_IMG_9295-min.jpg",
+      "caption": "座谈会现场纪实：碰撞思想火花，传递极客信念",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_IMG_9297-min.jpg",
+      "caption": "学术研讨：探讨如何将生活痛点转化为可落地的技术方案",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_IMG_9298-min.jpg",
+      "caption": "座谈会总结：寄语参赛学子勇攀高峰、不断突破自我",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/座谈_WechatIMG10-min.jpg",
+      "caption": "座谈会掠影：轻松活跃的学术探讨氛围",
+      "category": "座谈"
+    },
+    {
+      "src": "media/2016/答辩_DSC00546-min.jpg",
+      "caption": "敬孺楼答辩现场：周鹤洋展示《智慧校园》多端微服务架构与云端系统演示",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/答辩_DSC00552-min.jpg",
+      "caption": "答辩现场实测：吴钰宸、王徐暘现场演示微型四轴飞行器自研飞控与硬件实物",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/答辩_DSC00553-min.jpg",
+      "caption": "答辩质询：选手阐述算法攻关、电路调试与自研飞行姿态控制原理",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/答辩_DSC00554-min.jpg",
+      "caption": "答辩评审席：评委们专注聆听答辩并深入质询核心系统细节",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/答辩_DSC00555-min.jpg",
+      "caption": "答辩现场展示：参赛选手详细讲解系统数据流图与模块通信协议",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/答辩_DSC00556-min.jpg",
+      "caption": "答辩现场提问：评审导师就项目原创度与代码独立性进行核验",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/答辩_DSC00559-min.jpg",
+      "caption": "答辩互动：选手回答评委关于并发处理与硬件功耗的提问",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/答辩_DSC00560-min.jpg",
+      "caption": "答辩现场：极客社创客团队展示自主焊接的PCB板与组装部件",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/答辩_DSC00561-min.jpg",
+      "caption": "答辩实物展示：评委近距离查验参赛作品的工程完成度与做工细节",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/答辩_DSC00564-min.jpg",
+      "caption": "答辩综合评议：评委认真记录项目答辩亮点与攻坚难点",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/答辩_DSC00567-min.jpg",
+      "caption": "答辩陈述：选手自信回答关于多端协同与架构设计的技术追问",
+      "category": "答辩"
+    },
+    {
+      "src": "media/2016/ceremony_IMG_9306.jpg",
+      "caption": "首届望岳奖学金全体获奖学生与导师嘉宾大合影（南通中学敬孺楼大厅浮雕前·主视角）",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/ceremony_IMG_9307.jpg",
+      "caption": "首届望岳奖学金全体获奖学生与导师嘉宾大合影（南通中学敬孺楼大厅浮雕前·全景视角）",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9258-min.jpg",
+      "caption": "颁奖典礼：为首届获奖选手颁发望岳荣誉证书",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9261-min.jpg",
+      "caption": "颁奖典礼：为一等奖“凌绝望岳”获得者周鹤洋颁发证书与表彰",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9264-min.jpg",
+      "caption": "颁奖典礼：表彰通中极客社首批硬件创客先锋团队",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9268-min.jpg",
+      "caption": "颁奖典礼：获奖同学合影与导师寄语鼓励",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9273-min.jpg",
+      "caption": "颁奖典礼现场：获奖同学手捧首届望岳奖学金荣誉证书",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9274-min.jpg",
+      "caption": "颁奖仪式：导师向获奖选手表达祝贺并勉励在技术道路上持续求索",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9276-min.jpg",
+      "caption": "颁奖现场：台下师生为获奖选手的精彩创造报以热烈掌声",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9279-min.jpg",
+      "caption": "颁奖典礼：参赛选手与评委交流感言与未来规划",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9281-min.jpg",
+      "caption": "颁奖典礼掠影：记录首届获奖同学的难忘瞬间",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9282-min.jpg",
+      "caption": "颁奖典礼：评委肯定参赛项目所体现的纯粹动手创造精神",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_IMG_9285-min.jpg",
+      "caption": "颁奖典礼：表彰每一位在业余时间坚持钻研的通中极客",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_WechatIMG2-min.jpg",
+      "caption": "颁奖典礼纪实：导师为获奖学生颁发特制纪念证书",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_WechatIMG3-min.jpg",
+      "caption": "颁奖典礼纪实：获奖同学与导师亲切交流",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_WechatIMG5-min.jpg",
+      "caption": "颁奖典礼纪实：通中极客社获奖代表领奖合影",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_WechatIMG6-min.jpg",
+      "caption": "颁奖典礼纪实：典礼现场洋溢着对技术创新的尊重与崇尚",
+      "category": "颁奖"
+    },
+    {
+      "src": "media/2016/颁奖_WechatIMG9-min.jpg",
+      "caption": "颁奖典礼纪实：首届望岳奖学金获奖选手荣誉特写",
+      "category": "颁奖"
+    }
+  ],
+  "reviewSummary": "首届奖学金评选确立了‘奖励能真正做出点东西的同学’的核心宗旨。周鹤洋同学以极高完成度的《智慧校园》拔得头筹；同时涌现出以吴钰宸、王徐暘为代表的通中极客社第一批硬件创客先锋。",
+  "projects": [
+    {
+      "id": "2016-zhou-heyang-cloudedu",
+      "title": "智慧校园 (CloudEdu) 云端教学辅助系统",
+      "studentId": "zhou-heyang",
+      "studentName": "周鹤洋",
+      "class": "高二6班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "系统与网络",
+      "tags": [
+        "Golang",
+        "Node.js",
+        "Vue.js",
+        "Electron",
+        "MongoDB",
+        "C++"
+      ],
+      "summary": "重构校园数字教学设施，基于微服务架构实现教室内网课件秒级推送、音视频广播穿透与通知发布，并在Windows底层通过Golang编写守护进程，自研OxygenMark模板引擎。",
+      "details": {
+        "background": "老师与学生共享课件通常依赖U盘，频繁遭遇病毒与传输缓慢；校内广播与网络分离，线路重用度极低。",
+        "solution": "搭建校园内网私有云，Debian/FreeBSD主服务器分发节点，客户端采用Electron封装Vue前端，后端采用Go+Node.js双引擎，实现课件远程推送至任意班级电脑及音视频流式广播。",
+        "skills": "Golang 底层系统服务编程、Node.js/TypeScript 后端开发、Electron 跨平台桌面客户端开发、MongoDB 数据库设计、Material Design Lite 前端工程、自研 OxygenMark 模板引擎",
+        "difficulties": "Windows 底层高权限系统服务与前台 UI 的 IPC 进程间安全通信、局域网高并发广播分发丢包控制、自研模板引擎语法树解析与多语言适配",
+        "innovations": "完全摆脱对外网公有云平台的依赖，专为校园封闭局域网量身定制的高性能私有云与 IP 组播微服务架构；自研 OxygenMark 模板引擎实现动态组件渲染",
+        "externalRepo": "https://github.com/losfair/CloudEdu",
+        "mentorFeedback": "导师评语：周鹤洋同学展现出了远超同龄人的系统架构设计能力与扎实的工程素养。代码量极大、技术栈完整且具备高度实用价值，所有导师一致评定为首届第一名。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">首届 (2016) 申请档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2016-12</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">周鹤洋</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高二6班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">智慧校园 (CloudEdu) 云端教学辅助系统</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1.5\">🔗 代码托管与开源地址</span><div class=\"flex flex-wrap gap-2\"><a href=\"https://github.com/losfair/CloudEdu\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800 transition-colors\"><span>https://github.com/losfair/CloudEdu</span><span class=\"text-[10px]\">↗</span></a></div></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👥 团队协作成员与分工</span><span class=\"text-xs text-stone-800 dark:text-stone-200 font-serif leading-relaxed\">个人独立开发 (GitHub: losfair)</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>针对学校教师和学生使用计算机完成教学、学习任务的需求，重构校园数字教学设施。面向内网提供基于私有微服务的软件系统，实现课件秒级推送分发、成绩查询、绘图与通知发布，并在 Windows 底层通过 Golang 编写后台系统守护进程，自研 OxygenMark 模板引擎。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">Golang 底层系统服务编程、Node.js/TypeScript 后端开发、Electron 跨平台桌面客户端开发、MongoDB 数据库设计、Material Design Lite 前端工程、自研 OxygenMark 模板引擎</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">Windows 底层高权限系统服务与前台 UI 的 IPC 进程间安全通信、局域网高并发广播分发丢包控制、自研模板引擎语法树解析与多语言适配</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">完全摆脱对外网公有云平台的依赖，专为校园封闭局域网量身定制的高性能私有云与 IP 组播微服务架构；自研 OxygenMark 模板引擎实现动态组件渲染</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 申报研报原件正文与全栈系统架构解析 (Technical Architecture)</h4>\n  </div>\n\n  <!-- Hero Header Card -->\n  <div class=\"rounded-xl border border-sky-200/80 dark:border-sky-900/40 bg-gradient-to-br from-sky-50/50 via-white to-blue-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-sky-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-sky-100 dark:border-sky-900/40 pb-4\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🏫</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">智慧校园 (CloudEdu) 云端教学辅助系统</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">面向现代化校园的轻量级云端教学与多媒体基础设施 · v0.2.0</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">Node.js / TS</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-cyan-100 dark:bg-cyan-900/50 text-cyan-800 dark:text-cyan-300\">Golang 守护服务</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">Electron 触控端</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">MongoDB</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">自研 OxygenMark</span>\n      </div>\n    </div>\n\n    <!-- Vision statement -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-sky-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <h5 class=\"text-xs font-bold text-sky-900 dark:text-sky-300 flex items-center gap-1.5\">\n        <span>🎯 研究主题与立项初衷</span>\n      </h5>\n      <p class=\"text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        利用基于互联网的分布式架构重构校园现有数字教学设施。针对学校教师与学生在多媒体交互、作业分发、通知查阅、成绩查询等场景下的痛点，提供私有部署的云端教学辅助闭环，打造安全、极速、无感流转的数字校园环境。\n      </p>\n    </div>\n  </div>\n\n  <!-- Section 2: Pain points vs Solution -->\n  <div class=\"space-y-3\">\n    <h5 class=\"text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-blue-600\"></span>\n      <span>⚡ 痛点研判与 CloudEdu 破局方案 (Problem vs. Solution)</span>\n    </h5>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5\">\n      <!-- Card 1 -->\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800/80 border border-slate-200/80 dark:border-stone-700/80 space-y-2.5\">\n        <div class=\"flex items-center gap-2 text-rose-600 dark:text-rose-400\">\n          <span class=\"text-sm font-bold\">🛑 现状痛点 01</span>\n        </div>\n        <p class=\"text-xs text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n          师生共享课件与大文件时依赖 <strong>U 盘物理分发</strong>，插拔繁琐且在班级公共电脑间极易交叉感染计算机病毒。\n        </p>\n        <div class=\"pt-2 border-t border-slate-100 dark:border-stone-700/60\">\n          <div class=\"text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1 mb-1\">\n            <span>✨ CloudEdu 解法</span>\n          </div>\n          <p class=\"text-xs text-slate-700 dark:text-stone-300 font-serif leading-relaxed\">\n            面向内网提供<strong>免登录定向课件推送服务</strong>，教师在办公室即可一键远程推送至对应教室讲台屏幕。\n          </p>\n        </div>\n      </div>\n\n      <!-- Card 2 -->\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800/80 border border-slate-200/80 dark:border-stone-700/80 space-y-2.5\">\n        <div class=\"flex items-center gap-2 text-rose-600 dark:text-rose-400\">\n          <span class=\"text-sm font-bold\">🛑 现状痛点 02</span>\n        </div>\n        <p class=\"text-xs text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n          学校<strong>音画广播系统与校园内网物理隔离</strong>，双套管线重用度低，施工与后期维护成本极为高昂。\n        </p>\n        <div class=\"pt-2 border-t border-slate-100 dark:border-stone-700/60\">\n          <div class=\"text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1 mb-1\">\n            <span>✨ CloudEdu 解法</span>\n          </div>\n          <p class=\"text-xs text-slate-700 dark:text-stone-300 font-serif leading-relaxed\">\n            基于局域网 <strong>IP 组播（Multicast）</strong>技术传输广播流，讲台终端软件后台监听接收，零额外线路投资。\n          </p>\n        </div>\n      </div>\n\n      <!-- Card 3 -->\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800/80 border border-slate-200/80 dark:border-stone-700/80 space-y-2.5\">\n        <div class=\"flex items-center gap-2 text-rose-600 dark:text-rose-400\">\n          <span class=\"text-sm font-bold\">🛑 现状痛点 03</span>\n        </div>\n        <p class=\"text-xs text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n          主流商业方案强依赖<strong>外网公有云平台</strong>，网速受限且无法在校园封闭式局域网环境中离线稳定运行。\n        </p>\n        <div class=\"pt-2 border-t border-slate-100 dark:border-stone-700/60\">\n          <div class=\"text-xs font-bold text-emerald-600 dark:text-emerald-400 flex items-center gap-1 mb-1\">\n            <span>✨ CloudEdu 解法</span>\n          </div>\n          <p class=\"text-xs text-slate-700 dark:text-stone-300 font-serif leading-relaxed\">\n            支持 <strong>100% 局域网私有化闭环部署</strong>（FreeBSD / Debian），完全隔绝外网威胁并达到局域网千兆传输峰值。\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Section 3: Architecture Stack -->\n  <div class=\"space-y-4\">\n    <h5 class=\"text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-indigo-600\"></span>\n      <span>🏗️ 全栈技术架构与模块实现 (Full-Stack Architecture)</span>\n    </h5>\n\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n      <!-- Server Side -->\n      <div class=\"p-5 rounded-xl border border-slate-200 dark:border-stone-700/80 bg-white dark:bg-stone-800/60 space-y-3.5\">\n        <div class=\"flex items-center justify-between border-b border-slate-100 dark:border-stone-700 pb-2.5\">\n          <div class=\"flex items-center gap-2\">\n            <span class=\"text-lg\">🖥️</span>\n            <h6 class=\"font-bold text-slate-900 dark:text-white text-sm\">服务端技术架构 (Backend Stack)</h6>\n          </div>\n          <span class=\"text-[11px] font-mono text-slate-500\">Debian / FreeBSD 节点</span>\n        </div>\n\n        <div class=\"space-y-2.5 text-xs text-slate-700 dark:text-stone-300 font-serif\">\n          <div class=\"p-2.5 rounded-lg bg-slate-50 dark:bg-stone-900/70 border border-slate-200/60 dark:border-stone-700/60\">\n            <div class=\"flex items-center justify-between mb-1\">\n              <span class=\"font-bold font-sans text-sky-700 dark:text-sky-300\">Node.js (TypeScript) 核心微服务</span>\n              <span class=\"text-[10px] font-mono bg-sky-100 dark:bg-sky-950 px-1.5 py-0.5 rounded text-sky-700 dark:text-sky-300\">Core Service</span>\n            </div>\n            <p class=\"text-[11px] text-slate-600 dark:text-stone-400\">\n              负责核心业务逻辑调度、用户身份鉴权、通知公告实时发布以及客户端与 Web 端之间的端到端双向状态同步。\n            </p>\n          </div>\n\n          <div class=\"p-2.5 rounded-lg bg-slate-50 dark:bg-stone-900/70 border border-slate-200/60 dark:border-stone-700/60\">\n            <div class=\"flex items-center justify-between mb-1\">\n              <span class=\"font-bold font-sans text-amber-700 dark:text-amber-300\">Python 数据计算与解析引擎</span>\n              <span class=\"text-[10px] font-mono bg-amber-100 dark:bg-amber-950 px-1.5 py-0.5 rounded text-amber-700 dark:text-amber-300\">Analytics</span>\n            </div>\n            <p class=\"text-[11px] text-slate-600 dark:text-stone-400\">\n              用于服务端特定高阶数据运算、教务排课算法验证、成绩统计分析与多格式多媒体资源的离线解析。\n            </p>\n          </div>\n\n          <div class=\"p-2.5 rounded-lg bg-slate-50 dark:bg-stone-900/70 border border-slate-200/60 dark:border-stone-700/60\">\n            <div class=\"flex items-center justify-between mb-1\">\n              <span class=\"font-bold font-sans text-emerald-700 dark:text-emerald-300\">MongoDB 非关系型数据库</span>\n              <span class=\"text-[10px] font-mono bg-emerald-100 dark:bg-emerald-950 px-1.5 py-0.5 rounded text-emerald-700 dark:text-emerald-300\">Persistence</span>\n            </div>\n            <p class=\"text-[11px] text-slate-600 dark:text-stone-400\">\n              存储非关系型用户画像、权限角色、班级树状拓扑及课件元数据，支撑高并发读写与灵活扩展。\n            </p>\n          </div>\n        </div>\n      </div>\n\n      <!-- Client Side -->\n      <div class=\"p-5 rounded-xl border border-slate-200 dark:border-stone-700/80 bg-white dark:bg-stone-800/60 space-y-3.5\">\n        <div class=\"flex items-center justify-between border-b border-slate-100 dark:border-stone-700 pb-2.5\">\n          <div class=\"flex items-center gap-2\">\n            <span class=\"text-lg\">💻</span>\n            <h6 class=\"font-bold text-slate-900 dark:text-white text-sm\">客户端技术架构 (Client & Services)</h6>\n          </div>\n          <span class=\"text-[11px] font-mono text-slate-500\">讲台大屏触控端</span>\n        </div>\n\n        <div class=\"space-y-2.5 text-xs text-slate-700 dark:text-stone-300 font-serif\">\n          <div class=\"p-2.5 rounded-lg bg-slate-50 dark:bg-stone-900/70 border border-slate-200/60 dark:border-stone-700/60\">\n            <div class=\"flex items-center justify-between mb-1\">\n              <span class=\"font-bold font-sans text-indigo-700 dark:text-indigo-300\">Electron 桌面应用 + Material Design Lite</span>\n              <span class=\"text-[10px] font-mono bg-indigo-100 dark:bg-indigo-950 px-1.5 py-0.5 rounded text-indigo-700 dark:text-indigo-300\">UI / Shell</span>\n            </div>\n            <p class=\"text-[11px] text-slate-600 dark:text-stone-400\">\n              基于 HTML5 与 Node.js 构建跨平台讲台应用，严格遵循 Google Material Design 视觉规范，量身适配触控大屏交互。\n            </p>\n          </div>\n\n          <div class=\"p-2.5 rounded-lg bg-slate-50 dark:bg-stone-900/70 border border-slate-200/60 dark:border-stone-700/60\">\n            <div class=\"flex items-center justify-between mb-1\">\n              <span class=\"font-bold font-sans text-cyan-700 dark:text-cyan-300\">Golang 编写的 Windows 系统守护服务</span>\n              <span class=\"text-[10px] font-mono bg-cyan-100 dark:bg-cyan-950 px-1.5 py-0.5 rounded text-cyan-700 dark:text-cyan-300\">System Daemon</span>\n            </div>\n            <p class=\"text-[11px] text-slate-600 dark:text-stone-400\">\n              实现与操作系统直接交互的高性能模块，在 Windows 下作为后台系统服务免登录稳定自启，保障守护进程不被意外中断。\n            </p>\n          </div>\n\n          <div class=\"p-2.5 rounded-lg bg-slate-50 dark:bg-stone-900/70 border border-slate-200/60 dark:border-stone-700/60\">\n            <div class=\"flex items-center justify-between mb-1\">\n              <span class=\"font-bold font-sans text-purple-700 dark:text-purple-300\">OxygenMark 自研轻量级模板渲染引擎</span>\n              <span class=\"text-[10px] font-mono bg-purple-100 dark:bg-purple-950 px-1.5 py-0.5 rounded text-purple-700 dark:text-purple-300\">Proprietary Engine</span>\n            </div>\n            <p class=\"text-[11px] text-slate-600 dark:text-stone-400\">\n              作者从 0 独立设计的轻量模板引擎，专门优化多语言动态国际化支持与前端局域高频局部渲染，性能卓越。\n            </p>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Section 4: Reflection & Review -->\n  <div class=\"rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900/80 p-5 sm:p-6 space-y-3.5\">\n    <div class=\"flex items-center justify-between border-b border-stone-200 dark:border-stone-800 pb-3\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-lg\">💬</span>\n        <h5 class=\"text-sm font-bold text-slate-900 dark:text-slate-100\">研制体会与官方评审归档意见</h5>\n      </div>\n      <a href=\"https://github.com/losfair/CloudEdu\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center gap-1 px-2.5 py-1 rounded text-xs font-mono bg-stone-200 dark:bg-stone-800 text-slate-700 dark:text-stone-300 hover:bg-stone-300 transition-colors\">\n        <span>GitHub: losfair/CloudEdu</span>\n        <span class=\"text-[10px]\">↗</span>\n      </a>\n    </div>\n\n    <div class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif space-y-2.5\">\n      <p>\n        我在研发 CloudEdu 的过程中踩了很多坑，也解决了很多底层联调的问题。在 <strong>v0.2.0</strong> 版本中已经顺利实现了绝大部分原定功能，验证了面向校园私有云架构的技术可行性。\n      </p>\n      <div class=\"p-3.5 rounded-lg bg-white dark:bg-stone-800 border border-stone-200/70 dark:border-stone-700/70\">\n        <span class=\"text-xs font-bold text-blue-900 dark:text-blue-300 block mb-1\">📋 评审专家组归档评语：</span>\n        <p class=\"text-xs text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n          “CloudEdu 项目紧扣校园数字化教学真实痛点，具有极其突出的原创性与扎实的软件工程动手能力。代码工程量极大，技术栈前瞻性地横跨 Go、Node.js、TypeScript、Electron、自研模板引擎与非关系型数据库，架构清晰且完成度极高，展现了顶尖的极客工程水准。”\n        </p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "hasCode": true,
+      "codeArchiveId": "2016-zhou-heyang-cloudedu",
+      "externalRepo": "https://github.com/losfair/CloudEdu",
+      "downloads": [
+        {
+          "title": "2016-周鹤洋 - 申请表原件",
+          "filename": "2016-周鹤洋-申请表原件.docx",
+          "url": "/downloads/projects/2016-zhou-heyang-cloudedu/2016-周鹤洋-申请表原件.docx",
+          "size": "8.3 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2016-zhou-heyang-cloudedu",
+          "projectTitle": "智慧校园 (CloudEdu) 云端教学辅助系统",
+          "studentName": "周鹤洋",
+          "editionYear": "2016",
+          "description": "周鹤洋 于 2016 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2016-周鹤洋 - 项目设计文档/学术报告",
+          "filename": "2016-周鹤洋-项目技术报告.pdf",
+          "url": "/downloads/projects/2016-zhou-heyang-cloudedu/2016-周鹤洋-项目技术报告.pdf",
+          "size": "434.7 KB",
+          "type": "pdf",
+          "category": "项目文档",
+          "projectId": "2016-zhou-heyang-cloudedu",
+          "projectTitle": "智慧校园 (CloudEdu) 云端教学辅助系统",
+          "studentName": "周鹤洋",
+          "editionYear": "2016",
+          "description": "《智慧校园 (CloudEdu) 云端教学辅助系统》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2016-周鹤洋 - 项目源代码",
+          "filename": "2016-周鹤洋-项目源代码.zip",
+          "url": "/downloads/projects/2016-zhou-heyang-cloudedu/2016-周鹤洋-项目源代码.zip",
+          "size": "2.6 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2016-zhou-heyang-cloudedu",
+          "projectTitle": "智慧校园 (CloudEdu) 云端教学辅助系统",
+          "studentName": "周鹤洋",
+          "editionYear": "2016",
+          "description": "《智慧校园 (CloudEdu) 云端教学辅助系统》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2016-jiang-zhengyan-led",
+      "title": "LED灯的逐个点亮与循环结构的应用",
+      "studentName": "蒋政延",
+      "class": "高一1班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "硬件与嵌入式",
+      "tags": [
+        "Arduino",
+        "C/C++",
+        "单片机",
+        "硬件电路"
+      ],
+      "summary": "从底层硬件逻辑出发，利用单片机I/O口电平控制与循环结构算法，探究多路LED灯的时序驱动与智能控制方案。",
+      "details": {
+        "skills": "C++ 循环结构编程（for/while/do-while）、辗转相除法数学算法、单片机 GPIO 数字电平驱动、发光二极管限流排阻计算、Git & GitHub 版本管理",
+        "mentorFeedback": "导师评语：从零开始动手学习单片机与编程，虽然项目规模尚浅，但在动手实践与探究过程中体现了良好的学习态度与钻研精神。",
+        "fullReportHtml": "\n<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\">\n  <div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\">\n    <div class=\"flex items-center gap-3\">\n      <div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div>\n      <div>\n        <div class=\"flex items-center gap-2\">\n          <h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4>\n          <span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span>\n        </div>\n        <p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">首届 (2016) 申请档案原件正本录入</p>\n      </div>\n    </div>\n    <span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2016-12-31</span>\n  </div>\n\n  <div class=\"p-5 sm:p-6 space-y-4\">\n    <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\">\n      <div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\">\n        <span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span>\n        <span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">蒋政延</span>\n      </div>\n      <div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\">\n        <span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span>\n        <span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高一（1）班</span>\n      </div>\n      <div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\">\n        <span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span>\n        <span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">LED灯的逐个点亮与循环结构的应用</span>\n      </div>\n      <div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\">\n        <span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1.5\">🔗 代码托管与开源地址</span>\n        <div class=\"flex flex-wrap gap-2\">\n          <a href=\"https://github.com/LEDBC/LED\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800 transition-colors\">\n            <span>https://github.com/LEDBC/LED</span>\n            <span class=\"text-[10px]\">↗</span>\n          </a>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n      <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n        <span>📝 申报项目简介</span>\n      </h5>\n      <div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\">\n        <p>从计算机程序设计的核心控制流（for、while、do-while 循环结构）出发，结合单片机 I/O 引脚电平控制与发光二极管限流电路，深入探讨 LED 流水灯的动态时序驱动、多重循环嵌套与移位算法，将抽象算法教学转化为物理世界可见的光影交互。</p>\n      </div>\n    </div>\n\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\">\n      <div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\">\n        <h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\">\n          <span>💡 掌握与习得技能</span>\n        </h5>\n        <div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">\n          C++ 循环结构编程（for/while/do-while）、辗转相除法数学算法、单片机 GPIO 数字电平驱动、发光二极管限流排阻计算、Git &amp; GitHub 版本管理\n        </div>\n      </div>\n      <div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\">\n        <h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\">\n          <span>🛠️ 克服的技术难点</span>\n        </h5>\n        <div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">\n          循环嵌套过程中的时间延迟精准控制与消除硬件虚接抖动，掌握利用 Git 提交代码与管理开源版本\n        </div>\n      </div>\n      <div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\">\n        <h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\">\n          <span>✨ 核心创新点</span>\n        </h5>\n        <div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">\n          以求最大公约数等经典数学算法引入，将抽象代码逻辑映射到单片机物理管脚高低电平的时序移位控制中\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与深度技术解析 (Technical Report & Paper)</h4>\n  </div>\n\n  <div class=\"prose prose-slate max-w-none text-sm font-serif leading-relaxed space-y-4 text-slate-700\">\n    <h3 class=\"text-lg font-bold text-slate-900 border-b border-slate-200 pb-2 mt-6 mb-3\">LED灯的逐个点亮与循环结构的应用</h3>\n    \n    <div class=\"bg-blue-50/40 rounded-xl p-4 border border-blue-100 text-xs space-y-1 font-sans\">\n      <div class=\"font-bold text-blue-900 mb-1\">目录索引</div>\n      <p>1. 简单解释循环结构，并列举几个例子，给出程序基本结构</p>\n      <p>2. 简单描述 LED 在生活中的重要作用，阐述其与循环有联系的理由</p>\n      <p>3. 介绍循环结构在实际编程中的具体实现</p>\n      <p>4. 给出思路与程序源码</p>\n      <p>5. 尝试利用循环破解更复杂的 LED 点阵控制问题</p>\n      <p>6. 附：参考资料与相关文献</p>\n    </div>\n\n    <h4 class=\"text-base font-bold text-blue-950 mt-6 mb-2\">正文</h4>\n    <p>在解决实际问题的过程中，我使用的是 C++ 编程语言。在 C++ 语言中有三种循环结构：<code>for</code>、<code>while</code>、<code>do-while</code>。<code>for</code> 和 <code>while</code> 语句中，引导条件后跟一对由 <code>{}</code> 括起来的循环体部分，循环体部分由多个语句组成。<code>do-while</code> 语句中由 <code>do</code> 开头，<code>while</code> 在末尾引导条件。</p>\n\n    <h5 class=\"text-sm font-bold text-slate-800 mt-5 mb-1\">例一：求两个数的最大公约数</h5>\n    <p>先确认用辗转相除法。求两个数的最大公约数步骤如下：</p>\n    <ul class=\"list-disc pl-5 space-y-1 text-xs\">\n      <li>先用大的数模小的数，得出第一个余数；</li>\n      <li>再用小的数模第一个余数，得出第二个余数；</li>\n      <li>再用第一个余数模第二个余数，得出第三个余数；</li>\n      <li>这样逐次用后一个余数去除前一个余数，直到余数是 0 为止。最后一个余数（0 之前的那个）就是所求的最大公约数。</li>\n    </ul>\n    <p class=\"text-xs text-slate-500\">例如求 120 和 50 的最大公约数：第一次 120%50 余 20；第二次 50%20 余 10；第三次 20%10 余 0；得出最大公约数为 10。</p>\n    \n<div class=\"not-prose my-6 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-lg font-mono text-xs\">\n  <div class=\"flex items-center justify-between px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 text-slate-400\">\n    <div class=\"flex items-center gap-2\">\n      <div class=\"flex items-center gap-1.5\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block\"></span>\n      </div>\n      <span class=\"ml-2 font-mono text-slate-200 text-xs font-semibold\">gcd.cpp</span>\n      <span class=\"text-slate-500 text-[11px]\">· 例一：辗转相除法求两数最大公约数</span>\n    </div>\n    <span class=\"text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800 font-bold\">\n      C++\n    </span>\n  </div>\n  <pre class=\"p-4 sm:p-5 overflow-x-auto text-slate-100 leading-relaxed font-mono selection:bg-blue-600 selection:text-white text-[12px] sm:text-xs\"><code><span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">iostream</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdio</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdlib</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cmath</span>&gt;\n\n<span class=\"text-purple-400 font-semibold\">using namespace std;</span>\n\n<span class=\"text-purple-400 font-semibold\"><span class=\"text-sky-300 font-semibold\">int</span> main()</span> {\n    <span class=\"text-sky-300 font-semibold\">int</span> a, b, r;\n    <span class=\"text-purple-400 font-semibold\">cin</span> &gt;&gt; a &gt;&gt; b;\n    <span class=\"text-purple-400 font-semibold\">cout</span> &lt;&lt; &quot;(&quot; &lt;&lt; a &lt;&lt; &quot;,&quot; &lt;&lt; b &lt;&lt; &quot;)=&quot;;\n    <span class=\"text-purple-400 font-semibold\">while</span> (a % b != 0) {\n        r = a % b;\n        a = b;\n        b = r;\n    }\n    <span class=\"text-purple-400 font-semibold\">cout</span> &lt;&lt; b;\n    <span class=\"text-purple-400 font-semibold\">return 0;</span>\n}</code></pre>\n</div>\n\n\n    <h5 class=\"text-sm font-bold text-slate-800 mt-5 mb-1\">例二：求某个正整数的倒置数</h5>\n    <p>将一个正整数 a 倒置（倒过来读），将得到其倒置数 t。如 a=123 时，t=321；a=120 时，t=21。</p>\n    <p>输入：一个正整数 a；输出：a 的倒置数 t。</p>\n    <p>先让这个数模 10 得到余数，定义 <code>t=0</code>，令 <code>t=t*10+b</code>，再让这个数整除 10 得到下一个数，如此反复循环，便可得到倒置数。</p>\n    \n<div class=\"not-prose my-6 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-lg font-mono text-xs\">\n  <div class=\"flex items-center justify-between px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 text-slate-400\">\n    <div class=\"flex items-center gap-2\">\n      <div class=\"flex items-center gap-1.5\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block\"></span>\n      </div>\n      <span class=\"ml-2 font-mono text-slate-200 text-xs font-semibold\">reverse_number.cpp</span>\n      <span class=\"text-slate-500 text-[11px]\">· 例二：整数倒置数算法</span>\n    </div>\n    <span class=\"text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800 font-bold\">\n      C++\n    </span>\n  </div>\n  <pre class=\"p-4 sm:p-5 overflow-x-auto text-slate-100 leading-relaxed font-mono selection:bg-blue-600 selection:text-white text-[12px] sm:text-xs\"><code><span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">iostream</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdlib</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cmath</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdio</span>&gt;\n\n<span class=\"text-purple-400 font-semibold\">using namespace std;</span>\n\n<span class=\"text-purple-400 font-semibold\"><span class=\"text-sky-300 font-semibold\">int</span> main()</span> {\n    <span class=\"text-sky-300 font-semibold\">int</span> a, b, t = 0;\n    <span class=\"text-purple-400 font-semibold\">cin</span> &gt;&gt; a;\n    <span class=\"text-purple-400 font-semibold\">while</span> (a != 0) {\n        b = a % 10;\n        t = t * 10 + b;\n        a = a / 10;\n    }\n    <span class=\"text-purple-400 font-semibold\">cout</span> &lt;&lt; t;\n    <span class=\"text-purple-400 font-semibold\">return 0;</span>\n}</code></pre>\n</div>\n\n\n    <h5 class=\"text-sm font-bold text-slate-800 mt-5 mb-1\">例三：去掉一组数中最高数、最低数求平均数</h5>\n    <p>在输入数字的同时对数字进行处理，利用单次遍历实时维护最大值与最小值，剔除极值后计算剩余数的算术平均值。</p>\n    \n<div class=\"not-prose my-6 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-lg font-mono text-xs\">\n  <div class=\"flex items-center justify-between px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 text-slate-400\">\n    <div class=\"flex items-center gap-2\">\n      <div class=\"flex items-center gap-1.5\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block\"></span>\n      </div>\n      <span class=\"ml-2 font-mono text-slate-200 text-xs font-semibold\">trimmed_average.cpp</span>\n      <span class=\"text-slate-500 text-[11px]\">· 例三：去最高最低分求平均值</span>\n    </div>\n    <span class=\"text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800 font-bold\">\n      C++\n    </span>\n  </div>\n  <pre class=\"p-4 sm:p-5 overflow-x-auto text-slate-100 leading-relaxed font-mono selection:bg-blue-600 selection:text-white text-[12px] sm:text-xs\"><code><span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">iostream</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdio</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdlib</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cmath</span>&gt;\n\n<span class=\"text-purple-400 font-semibold\">using namespace std;</span>\n\n<span class=\"text-purple-400 font-semibold\"><span class=\"text-sky-300 font-semibold\">int</span> main()</span> {\n    <span class=\"text-sky-300 font-semibold\">float</span> a, i, sum, min, max;\n    <span class=\"text-purple-400 font-semibold\">cin</span> &gt;&gt; a;\n    min = a;\n    max = a;\n    sum = a;\n    <span class=\"text-purple-400 font-semibold\">for</span> (i = 1; i &lt;= 9; i++) {\n        <span class=\"text-purple-400 font-semibold\">cin</span> &gt;&gt; a;\n        sum = sum + a;\n        <span class=\"text-purple-400 font-semibold\">if</span> (min &gt; a) min = a;\n        <span class=\"text-purple-400 font-semibold\">if</span> (max &lt; a) max = a;\n    }\n    <span class=\"text-purple-400 font-semibold\">printf</span>(&quot;%8.3f&quot;, (sum - min - max) / 8);\n    <span class=\"text-purple-400 font-semibold\">return 0;</span>\n}</code></pre>\n</div>\n\n\n    <h5 class=\"text-sm font-bold text-slate-800 mt-5 mb-1\">例四：求某个指定数字在一个整数序列中的出现次数</h5>\n    <p>输入第一行为整数 N（序列长度 N≤100），第二行为整型数组 a[N]，第三行为指定的数字 m。输出为 N 个数中数字 m 的出现频次总和。</p>\n    \n<div class=\"not-prose my-6 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-lg font-mono text-xs\">\n  <div class=\"flex items-center justify-between px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 text-slate-400\">\n    <div class=\"flex items-center gap-2\">\n      <div class=\"flex items-center gap-1.5\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block\"></span>\n      </div>\n      <span class=\"ml-2 font-mono text-slate-200 text-xs font-semibold\">count_digit.cpp</span>\n      <span class=\"text-slate-500 text-[11px]\">· 例四：数字在序列中出现频次统计</span>\n    </div>\n    <span class=\"text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800 font-bold\">\n      C++\n    </span>\n  </div>\n  <pre class=\"p-4 sm:p-5 overflow-x-auto text-slate-100 leading-relaxed font-mono selection:bg-blue-600 selection:text-white text-[12px] sm:text-xs\"><code><span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">iostream</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdlib</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cmath</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdio</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstring</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">iomanip</span>&gt;\n\n<span class=\"text-purple-400 font-semibold\">using namespace std;</span>\n\n<span class=\"text-purple-400 font-semibold\"><span class=\"text-sky-300 font-semibold\">int</span> main()</span> {\n    <span class=\"text-sky-300 font-semibold\">int</span> N;\n    <span class=\"text-purple-400 font-semibold\">cin</span> &gt;&gt; N;\n    <span class=\"text-sky-300 font-semibold\">int</span> a[N];\n    <span class=\"text-purple-400 font-semibold\">for</span> (<span class=\"text-sky-300 font-semibold\">int</span> j = 0; j &lt; N; ++j) {\n        <span class=\"text-purple-400 font-semibold\">cin</span> &gt;&gt; a[j];\n    }\n    <span class=\"text-sky-300 font-semibold\">int</span> m;\n    <span class=\"text-purple-400 font-semibold\">cin</span> &gt;&gt; m;\n    <span class=\"text-sky-300 font-semibold\">int</span> sum = 0;\n    <span class=\"text-purple-400 font-semibold\">for</span> (<span class=\"text-sky-300 font-semibold\">int</span> i = 0; i &lt; N; ++i) {\n        <span class=\"text-purple-400 font-semibold\">do</span> {\n            <span class=\"text-purple-400 font-semibold\">if</span> (a[i] % 10 == m) sum++;\n            a[i] = a[i] / 10;\n        } <span class=\"text-purple-400 font-semibold\">while</span> (a[i] &gt; 0);\n    }\n    <span class=\"text-purple-400 font-semibold\">cout</span> &lt;&lt; sum;\n    <span class=\"text-purple-400 font-semibold\">return 0;</span>\n}</code></pre>\n</div>\n\n\n    <h4 class=\"text-base font-bold text-blue-950 mt-8 mb-2\">LED 与循环结构的结合实践</h4>\n    <p>两个月前，我在上学的路上，经过跃龙路口的浦发银行，滚动屏上的红色 LED 灯一下吸引了我的注意。我联想到劳技老师课上讲的 LED 是利用编程实现图形变化的，再想到我正在学习 C++ 的编程语言，就想自己做一个关于 LED 灯逐个点亮的程序。在网上查资料后发现，这跟循环其实有着很大的关联，我可以利用循环去完成这样的一个程序。</p>\n    <p>原本我想利用循环结构做一个简单的程序，后发现 LED 屏由很多单片机与移位寄存器构成，需要从最基础的时序逻辑做起：先来处理显示单个点阵的点亮和熄灭，然后在扩展到用循环的方式来点亮多个点阵。于是我在 GitHub 建了个项目并进行了算法实现。</p>\n\n    <h5 class=\"text-sm font-bold text-slate-800 mt-5 mb-1\">程序一：LED灯的逐个点亮（数组循环移位算法）</h5>\n    <p>通过数组存储 10 个引脚编号，每次外层循环将首位元素保存到临时变量 <code>temp</code>，后续元素逐个前移一位，末位填入 <code>temp</code>，完美模拟 LED 流水灯与走马灯的环形轮替效果。</p>\n    \n<div class=\"not-prose my-6 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-lg font-mono text-xs\">\n  <div class=\"flex items-center justify-between px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 text-slate-400\">\n    <div class=\"flex items-center gap-2\">\n      <div class=\"flex items-center gap-1.5\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block\"></span>\n      </div>\n      <span class=\"ml-2 font-mono text-slate-200 text-xs font-semibold\">led_sequence.cpp</span>\n      <span class=\"text-slate-500 text-[11px]\">· 程序一：LED灯逐个点亮时序移位</span>\n    </div>\n    <span class=\"text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800 font-bold\">\n      C++\n    </span>\n  </div>\n  <pre class=\"p-4 sm:p-5 overflow-x-auto text-slate-100 leading-relaxed font-mono selection:bg-blue-600 selection:text-white text-[12px] sm:text-xs\"><code><span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">iostream</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdlib</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cmath</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdio</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstring</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">iomanip</span>&gt;\n\n<span class=\"text-purple-400 font-semibold\">using namespace std;</span>\n\n<span class=\"text-purple-400 font-semibold\"><span class=\"text-sky-300 font-semibold\">int</span> main()</span> {\n    <span class=\"text-sky-300 font-semibold\">int</span> a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};\n    <span class=\"text-sky-300 font-semibold\">int</span> m;\n    <span class=\"text-purple-400 font-semibold\">cin</span> &gt;&gt; m;\n    <span class=\"text-purple-400 font-semibold\">for</span> (<span class=\"text-sky-300 font-semibold\">int</span> j = 0; j &lt; m; ++j) {\n        <span class=\"text-sky-300 font-semibold\">int</span> temp = a[0];\n        <span class=\"text-purple-400 font-semibold\">for</span> (<span class=\"text-sky-300 font-semibold\">int</span> i = 0; i &lt; 9; ++i) {\n            a[i] = a[i + 1];\n        }\n        a[9] = temp;\n        <span class=\"text-purple-400 font-semibold\">for</span> (<span class=\"text-sky-300 font-semibold\">int</span> i = 0; i &lt; 10; ++i) {\n            <span class=\"text-purple-400 font-semibold\">cout</span> &lt;&lt; setw(3) &lt;&lt; a[i];\n        }\n    }\n    <span class=\"text-purple-400 font-semibold\">return 0;</span>\n}</code></pre>\n</div>\n\n\n    <h5 class=\"text-sm font-bold text-slate-800 mt-5 mb-1\">程序二：LED灯在奇数阶正方形中的间接点亮（罗伯特法 / 幻方算法）</h5>\n    <p>针对奇数边长正方形点阵屏的点亮路径规划，运用经典奇数阶幻方（罗伯特法）算法：1 放在第一行正中，按“右上出界下移底，右侧出界左移头，重叠则行加一”的逻辑进行二维数组矩阵填充，形成独特的放射对称点亮时序。</p>\n    \n<div class=\"not-prose my-6 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-lg font-mono text-xs\">\n  <div class=\"flex items-center justify-between px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 text-slate-400\">\n    <div class=\"flex items-center gap-2\">\n      <div class=\"flex items-center gap-1.5\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block\"></span>\n      </div>\n      <span class=\"ml-2 font-mono text-slate-200 text-xs font-semibold\">led_magic_square.cpp</span>\n      <span class=\"text-slate-500 text-[11px]\">· 程序二：奇数阶正方形间接点亮算法 (罗伯特法)</span>\n    </div>\n    <span class=\"text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800 font-bold\">\n      C++\n    </span>\n  </div>\n  <pre class=\"p-4 sm:p-5 overflow-x-auto text-slate-100 leading-relaxed font-mono selection:bg-blue-600 selection:text-white text-[12px] sm:text-xs\"><code><span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">iostream</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdlib</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cmath</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdio</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstring</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">iomanip</span>&gt;\n\n<span class=\"text-purple-400 font-semibold\">using namespace std;</span>\n\n<span class=\"text-purple-400 font-semibold\"><span class=\"text-sky-300 font-semibold\">int</span> main()</span> {\n    <span class=\"text-sky-300 font-semibold\">int</span> N;\n    <span class=\"text-purple-400 font-semibold\">cin</span> &gt;&gt; N;\n    <span class=\"text-sky-300 font-semibold\">int</span> hang, lie;\n    <span class=\"text-sky-300 font-semibold\">int</span> a[100][100] = {0};\n    hang = 0;\n    lie = N / 2;\n    a[hang][lie] = 1;\n    <span class=\"text-purple-400 font-semibold\">for</span> (<span class=\"text-sky-300 font-semibold\">int</span> k = 2; k &lt;= N * N; k++) {\n        <span class=\"text-purple-400 font-semibold\">if</span> (hang == 0 &amp;&amp; lie != N - 1) {\n            hang = N - 1;\n            lie++;\n        } <span class=\"text-purple-400 font-semibold\">else</span> <span class=\"text-purple-400 font-semibold\">if</span> (lie == N - 1 &amp;&amp; hang != 0) {\n            lie = 0;\n            hang--;\n        } <span class=\"text-purple-400 font-semibold\">else</span> <span class=\"text-purple-400 font-semibold\">if</span> (hang == 0 &amp;&amp; lie == N - 1) {\n            hang++;\n        } <span class=\"text-purple-400 font-semibold\">else</span> <span class=\"text-purple-400 font-semibold\">if</span> (hang != 0 &amp;&amp; lie != N - 1) {\n            <span class=\"text-purple-400 font-semibold\">if</span> (a[hang - 1][lie + 1] == 0) {\n                hang--;\n                lie++;\n            } <span class=\"text-purple-400 font-semibold\">else</span> {\n                hang++;\n            }\n        }\n        a[hang][lie] = k;\n    }\n    <span class=\"text-purple-400 font-semibold\">for</span> (hang = 0; hang &lt;= N - 1; hang++) {\n        <span class=\"text-purple-400 font-semibold\">for</span> (lie = 0; lie &lt;= N - 2; lie++) {\n            <span class=\"text-purple-400 font-semibold\">cout</span> &lt;&lt; a[hang][lie] &lt;&lt; &quot; &quot;;\n        }\n        <span class=\"text-purple-400 font-semibold\">cout</span> &lt;&lt; a[hang][N - 1] &lt;&lt; endl;\n    }\n    <span class=\"text-purple-400 font-semibold\">return 0;</span>\n}</code></pre>\n</div>\n\n\n    <h5 class=\"text-sm font-bold text-slate-800 mt-5 mb-1\">程序三：LED灯蛇形/回形试点亮算法（螺旋矩阵算法）</h5>\n    <p>在 N×N LED 点阵屏上实现向内收缩的螺旋式与蛇形渐次点亮。利用方向状态机在四个边界不断循环探测未填充管脚并步进赋值，直至填满整个屏体阵列。</p>\n    \n<div class=\"not-prose my-6 rounded-2xl overflow-hidden border border-slate-800 bg-slate-950 shadow-lg font-mono text-xs\">\n  <div class=\"flex items-center justify-between px-4 py-2.5 bg-slate-900/90 border-b border-slate-800 text-slate-400\">\n    <div class=\"flex items-center gap-2\">\n      <div class=\"flex items-center gap-1.5\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-red-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block\"></span>\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block\"></span>\n      </div>\n      <span class=\"ml-2 font-mono text-slate-200 text-xs font-semibold\">led_spiral_matrix.cpp</span>\n      <span class=\"text-slate-500 text-[11px]\">· 程序三：LED灯蛇形/回形试点亮算法</span>\n    </div>\n    <span class=\"text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800 font-bold\">\n      C++\n    </span>\n  </div>\n  <pre class=\"p-4 sm:p-5 overflow-x-auto text-slate-100 leading-relaxed font-mono selection:bg-blue-600 selection:text-white text-[12px] sm:text-xs\"><code><span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstdio</span>&gt;\n<span class=\"text-pink-400 font-bold\">#include </span>&lt;<span class=\"text-emerald-300\">cstring</span>&gt;\n\n<span class=\"text-pink-400 font-bold\">#define</span>  MAXN 10\n\n<span class=\"text-sky-300 font-semibold\">int</span> a[MAXN][MAXN];\n\n<span class=\"text-purple-400 font-semibold\"><span class=\"text-sky-300 font-semibold\">int</span> main()</span> {\n    <span class=\"text-sky-300 font-semibold\">int</span> n, x, y, t;\n    <span class=\"text-purple-400 font-semibold\">scanf</span>(&quot;%d&quot;, &amp;n);\n    <span class=\"text-purple-400 font-semibold\">memset</span>(a, 0, sizeof(a));\n    t = a[x = 0][y = n - 1] = 1;\n    <span class=\"text-purple-400 font-semibold\">while</span> (t &lt; n * n) {\n        <span class=\"text-purple-400 font-semibold\">while</span> (x + 1 &lt; n &amp;&amp; !a[x + 1][y]) a[++x][y] = ++t;\n        <span class=\"text-purple-400 font-semibold\">while</span> (y - 1 &gt;= 0 &amp;&amp; !a[x][y - 1]) a[x][--y] = ++t;\n        <span class=\"text-purple-400 font-semibold\">while</span> (x - 1 &gt;= 0 &amp;&amp; !a[x - 1][y]) a[--x][y] = ++t;\n        <span class=\"text-purple-400 font-semibold\">while</span> (y + 1 &lt; n &amp;&amp; !a[x][y + 1]) a[x][++y] = ++t;\n    }\n    <span class=\"text-purple-400 font-semibold\">for</span> (<span class=\"text-sky-300 font-semibold\">int</span> i = 0; i &lt; n; ++i) {\n        <span class=\"text-purple-400 font-semibold\">for</span> (<span class=\"text-sky-300 font-semibold\">int</span> j = 0; j &lt; n; ++j) {\n            <span class=\"text-purple-400 font-semibold\">printf</span>(&quot;%3d&quot;, a[i][j]);\n        }\n        <span class=\"text-purple-400 font-semibold\">printf</span>(&quot;\\n&quot;);\n    }\n    <span class=\"text-purple-400 font-semibold\">return 0;</span>\n}</code></pre>\n</div>\n\n\n    <div class=\"mt-8 pt-4 border-t border-slate-200 text-xs text-slate-500 space-y-1 font-sans\">\n      <p><strong>项目作者：</strong>蒋政延</p>\n      <p><strong>技术合作与实验交流：</strong>方心怡、孙嘉</p>\n      <p><strong>参考文献：</strong>全国青少年信息学奥林匹克竞赛教程第四版——《信息学奥赛一本通（C++版）》——科学技术文献出版社</p>\n    </div>\n  </div>\n</div>\n",
+        "difficulties": "循环嵌套过程中的时间延迟精准控制与消除硬件虚接抖动，掌握利用 Git 提交代码与管理开源版本",
+        "innovations": "以求最大公约数等经典数学算法引入，将抽象代码逻辑映射到单片机物理管脚高低电平的时序移位控制中"
+      },
+      "externalRepo": "https://github.com/LEDBC/LED",
+      "hasCode": true,
+      "codeArchiveId": "2016-jiang-zhengyan-led",
+      "codeArchives": [
+        {
+          "id": "2016-jiang-zhengyan-led",
+          "title": "LED灯点亮算法与循环结构源码套件",
+          "badge": "C++ / 算法与硬件时序 · 7 个源文件",
+          "category": "C++ 算法"
+        }
+      ],
+      "artifactSpecs": [
+        {
+          "name": "LED灯时序驱动与矩阵循环点亮算法套件",
+          "type": "C++ 源码套件 (7个独立算法文件)",
+          "platform": "C++11 / Arduino 单片机兼容",
+          "size": "7 个源文件 · 198 行代码",
+          "description": "涵盖辗转相除法、环形移位寄存器时序、罗伯特法幻方矩阵与螺旋回形点阵点亮算法"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2016-蒋政延 - 项目设计文档/学术报告",
+          "filename": "2016-蒋政延-项目技术报告.docx",
+          "url": "/downloads/projects/2016-jiang-zhengyan-led/2016-蒋政延-项目技术报告.docx",
+          "size": "13.5 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2016-jiang-zhengyan-led",
+          "projectTitle": "LED灯的逐个点亮与循环结构的应用",
+          "studentName": "蒋政延",
+          "editionYear": "2016",
+          "description": "《LED灯的逐个点亮与循环结构的应用》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2016-蒋政延 - 项目源代码",
+          "filename": "2016-蒋政延-项目源代码.zip",
+          "url": "/downloads/projects/2016-jiang-zhengyan-led/2016-蒋政延-项目源代码.zip",
+          "size": "2.4 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2016-jiang-zhengyan-led",
+          "projectTitle": "LED灯的逐个点亮与循环结构的应用",
+          "studentName": "蒋政延",
+          "editionYear": "2016",
+          "description": "《LED灯的逐个点亮与循环结构的应用》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2016-wu-yuchen-bike-meter",
+      "title": "云智能自行车码表与便携编程机设计",
+      "studentId": "wu-yuchen",
+      "studentName": "吴钰宸",
+      "class": "高三14班",
+      "award": "极客突破奖",
+      "awardTier": "special",
+      "category": "硬件与嵌入式",
+      "tags": [
+        "Arduino Pro Mini",
+        "WiFi",
+        "霍尔传感器",
+        "物联网",
+        "极客社"
+      ],
+      "summary": "基于Arduino与WiFi模块的智能码表，通过霍尔传感器测量速度与里程，结合心率手环采集体征数据，并设想基于BusyBox+Python的便携代码计算设备。",
+      "details": {
+        "skills": "Arduino 嵌入式开发、霍尔传感器测速原理与脉冲捕获、腕带式心率传感器调校、ESP8266/WiFi 网络协议连接、数据包下发响应机制",
+        "mentorFeedback": "导师评语：项目有完整且极其详尽的硬件架构设计，作为南通中学极客社创始人，展现出极强的技术领导力，带领并辅导了大量低年级同学走上编程之路。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">首届 (2016) 申请档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2016-10</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">吴钰宸</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高三14班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">计算与生活：云智能自行车码表与便携编程机设计</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>安装在自行车上的云智能物联网码表，基于 Arduino 单片机开发。集成速度测定、里程累计、腕带心率测量于液晶屏上；当车辆进入学校范围后，自动连接学校 WiFi，主动向校内数据服务器发送数据并接收新的统计分析任务，动态调整数据存储策略。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">Arduino 嵌入式开发、霍尔传感器测速原理与脉冲捕获、腕带式心率传感器调校、ESP8266/WiFi 网络协议连接、数据包下发响应机制</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">户外剧烈颠簸震动下的传感器抗干扰防抖，以及无网络环境下的数据本地暂存与入校自动触发重连</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">首创“骑行体征 + 校园 WiFi 无感同步”闭环机制，将普通码表升维为可双向交互的校园物联网终端节点</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 申报研报原件正文与深度技术解析 (Technical Report & Proposal)</h4>\n  </div>\n\n  <!-- Part 1: Bike Meter -->\n  <div class=\"rounded-xl border border-blue-200/80 dark:border-blue-900/40 bg-gradient-to-br from-blue-50/40 via-white to-sky-50/20 dark:from-stone-900 dark:via-stone-900 dark:to-blue-950/20 p-5 sm:p-6 space-y-5\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-blue-100 dark:border-blue-900/40 pb-4\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🚴‍♂️</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">计算与生活：云智能自行车码表</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">Cloud-Connected Smart Bicycle Computer · 基于 Arduino 物联网平台</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300\">Arduino Pro Mini</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">WiFi 自动同步</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">霍尔测速</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-rose-100 dark:bg-rose-900/50 text-rose-800 dark:text-rose-300\">腕带心率</span>\n      </div>\n    </div>\n\n    <!-- Overview -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-blue-100/80 dark:border-stone-700/60\">\n      <h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 mb-1 flex items-center gap-1.5\">\n        <span>📌 项目概述</span>\n      </h5>\n      <p class=\"text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        安装在自行车上的云智能物联网码表，基于 Arduino 单片机开发。通过传感器实时测定骑行数据与生理指标，车辆进入学校范围后自动连接校园 WiFi，主动向校内数据服务器推送数据，并接收下发的统计分析任务包，动态调整本地数据存储策略。\n      </p>\n    </div>\n\n    <!-- Feature Cards -->\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5\">\n      <div class=\"p-4 rounded-xl bg-white/90 dark:bg-stone-800/80 border border-slate-200/80 dark:border-stone-700/80 shadow-xs space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-lg\">⚡</span>\n          <h5 class=\"text-sm font-bold text-slate-800 dark:text-slate-200\">速度与里程测定</h5>\n        </div>\n        <p class=\"text-xs text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          采用霍尔传感器感应安装在车轮辐条上的强力磁铁。车轮旋转触发霍尔脉冲，单片机捕获中断间隔结合轮胎半径精确换算实时骑行速度与累计骑行里程。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white/90 dark:bg-stone-800/80 border border-slate-200/80 dark:border-stone-700/80 shadow-xs space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-lg\">💓</span>\n          <h5 class=\"text-sm font-bold text-slate-800 dark:text-slate-200\">腕带式心率测量</h5>\n        </div>\n        <p class=\"text-xs text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          心率传感器设计为便携腕带模块，骑行时随身佩戴贴合手腕皮肤。实时捕获脉搏跳动信号，并在车把液晶屏同步显示心率波动，量化运动负荷。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white/90 dark:bg-stone-800/80 border border-slate-200/80 dark:border-stone-700/80 shadow-xs space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-lg\">📡</span>\n          <h5 class=\"text-sm font-bold text-slate-800 dark:text-slate-200\">入校 WiFi 双向通信</h5>\n        </div>\n        <p class=\"text-xs text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          驶入学校覆盖范围后自动识别并连接校内 WiFi。主动向校内服务器 POST 上报数据包；同时解析响应包中的下发新任务，动态调整本地采样率与存储策略。\n        </p>\n      </div>\n    </div>\n\n    <!-- Communication Pipeline Flow -->\n    <div class=\"p-4 sm:p-5 rounded-xl bg-slate-50 dark:bg-stone-800/50 border border-slate-200/80 dark:border-stone-700/80 space-y-3\">\n      <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n        <span>🔄 校园物联网端云双向交互工作流程</span>\n      </h5>\n      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 text-xs\">\n        <div class=\"p-3 rounded-lg bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-700 space-y-1\">\n          <div class=\"flex items-center justify-between\">\n            <span class=\"font-bold text-blue-700 dark:text-blue-400 font-mono\">STEP 1</span>\n            <span class=\"text-xs\">🚴</span>\n          </div>\n          <div class=\"font-semibold text-slate-800 dark:text-slate-200\">路途离线采集</div>\n          <p class=\"text-[11px] text-slate-500 dark:text-stone-400\">骑行途中霍尔传感器与心率模块采集数据，LCD 实时呈现并在 EEPROM 暂存。</p>\n        </div>\n        <div class=\"p-3 rounded-lg bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-700 space-y-1\">\n          <div class=\"flex items-center justify-between\">\n            <span class=\"font-bold text-sky-700 dark:text-sky-400 font-mono\">STEP 2</span>\n            <span class=\"text-xs\">📶</span>\n          </div>\n          <div class=\"font-semibold text-slate-800 dark:text-slate-200\">入校无感握手</div>\n          <p class=\"text-[11px] text-slate-500 dark:text-stone-400\">车辆进入校园 WiFi 覆盖范围，WiFi 模组自动扫描 SSID 并快速认证建立连接。</p>\n        </div>\n        <div class=\"p-3 rounded-lg bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-700 space-y-1\">\n          <div class=\"flex items-center justify-between\">\n            <span class=\"font-bold text-emerald-700 dark:text-emerald-400 font-mono\">STEP 3</span>\n            <span class=\"text-xs\">📤</span>\n          </div>\n          <div class=\"font-semibold text-slate-800 dark:text-slate-200\">遥测主动上传</div>\n          <p class=\"text-[11px] text-slate-500 dark:text-stone-400\">码表主动向校内数据服务器发起 HTTP/TCP 请求，批量同步暂存的骑行体征包。</p>\n        </div>\n        <div class=\"p-3 rounded-lg bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-700 space-y-1\">\n          <div class=\"flex items-center justify-between\">\n            <span class=\"font-bold text-amber-700 dark:text-amber-400 font-mono\">STEP 4</span>\n            <span class=\"text-xs\">📥</span>\n          </div>\n          <div class=\"font-semibold text-slate-800 dark:text-slate-200\">任务下发与响应</div>\n          <p class=\"text-[11px] text-slate-500 dark:text-stone-400\">服务器在响应报文中回传新统计分析任务，码表自动调整数据存储与采样策略。</p>\n        </div>\n      </div>\n    </div>\n\n    <!-- Hardware Bill of Materials -->\n    <div class=\"space-y-2\">\n      <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n        <span>🛠️ 硬件选型与系统配置清单 (Hardware Design)</span>\n      </h5>\n      <div class=\"overflow-x-auto rounded-xl border border-slate-200 dark:border-stone-700/80\">\n        <table class=\"w-full text-xs text-left\">\n          <thead class=\"bg-slate-100 dark:bg-stone-800 text-slate-700 dark:text-stone-300 font-semibold border-b border-slate-200 dark:border-stone-700\">\n            <tr>\n              <th class=\"px-4 py-2.5\">模块组件</th>\n              <th class=\"px-4 py-2.5\">具体选型 / 型号</th>\n              <th class=\"px-4 py-2.5\">技术职能与核心作用</th>\n            </tr>\n          </thead>\n          <tbody class=\"divide-y divide-slate-100 dark:divide-stone-800 bg-white dark:bg-stone-900/60 font-mono text-[11px]\">\n            <tr>\n              <td class=\"px-4 py-2.5 font-bold text-slate-900 dark:text-slate-100 font-sans\">主控核心</td>\n              <td class=\"px-4 py-2.5 text-blue-600 dark:text-blue-400\">Arduino Pro Mini</td>\n              <td class=\"px-4 py-2.5 text-slate-600 dark:text-stone-300 font-sans\">超低功耗 AVR 微控制器，小巧体积便于嵌入车把仪表狭小空间</td>\n            </tr>\n            <tr>\n              <td class=\"px-4 py-2.5 font-bold text-slate-900 dark:text-slate-100 font-sans\">无线网络模组</td>\n              <td class=\"px-4 py-2.5 text-sky-600 dark:text-sky-400\">ESP8266 / Arduino WiFi 模组</td>\n              <td class=\"px-4 py-2.5 text-slate-600 dark:text-stone-300 font-sans\">实现 802.11 b/g/n 无线连接，入校自动关联学校局域网并上传数据</td>\n            </tr>\n            <tr>\n              <td class=\"px-4 py-2.5 font-bold text-slate-900 dark:text-slate-100 font-sans\">速度里程传感器</td>\n              <td class=\"px-4 py-2.5 text-emerald-600 dark:text-emerald-400\">线性霍尔开关传感器 + 轮圈强磁</td>\n              <td class=\"px-4 py-2.5 text-slate-600 dark:text-stone-300 font-sans\">非接触式感应磁场变化，捕获轮转脉冲并通过中断服务程序计算里程</td>\n            </tr>\n            <tr>\n              <td class=\"px-4 py-2.5 font-bold text-slate-900 dark:text-slate-100 font-sans\">人体体征模块</td>\n              <td class=\"px-4 py-2.5 text-rose-600 dark:text-rose-400\">光电反射式心率传感器 (腕带设计)</td>\n              <td class=\"px-4 py-2.5 text-slate-600 dark:text-stone-300 font-sans\">骑行者佩戴腕带贴合皮肤，实时感应微血管搏动并过滤运动震动噪声</td>\n            </tr>\n            <tr>\n              <td class=\"px-4 py-2.5 font-bold text-slate-900 dark:text-slate-100 font-sans\">人机交互显示</td>\n              <td class=\"px-4 py-2.5 text-amber-600 dark:text-amber-400\">单色高对比度液晶屏 LCD</td>\n              <td class=\"px-4 py-2.5 text-slate-600 dark:text-stone-300 font-sans\">户外强光环境下清晰呈现当前车速、心率、电量与网络同步状态</td>\n            </tr>\n            <tr>\n              <td class=\"px-4 py-2.5 font-bold text-slate-900 dark:text-slate-100 font-sans\">机械结构与供电</td>\n              <td class=\"px-4 py-2.5 text-stone-600 dark:text-stone-400\">防水外壳 + 减震车把快拆支架 + 锂电</td>\n              <td class=\"px-4 py-2.5 text-slate-600 dark:text-stone-300 font-sans\">提供颠簸路况下的抗震机械固定及持久续航</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n    </div>\n  </div>\n\n  <!-- Part 2: Portable Python Programming Device -->\n  <div class=\"rounded-xl border border-indigo-200/80 dark:border-indigo-900/40 bg-gradient-to-br from-indigo-50/40 via-white to-purple-50/20 dark:from-stone-900 dark:via-stone-900 dark:to-indigo-950/20 p-5 sm:p-6 space-y-5\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-indigo-100 dark:border-indigo-900/40 pb-4\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">💻</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">拓展构想：便携微型编程机</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">Portable Mini Python Computer · 随时随地跑代码的极客随身掌机</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">Python 解释器</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300\">4×4 矩阵键盘映射</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-stone-800 text-slate-800 dark:text-stone-300\">BusyBox / 嵌入式 Linux</span>\n      </div>\n    </div>\n\n    <!-- Vision Statement -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-indigo-100/80 dark:border-stone-700/60\">\n      <h5 class=\"text-xs font-bold text-indigo-900 dark:text-indigo-300 mb-1 flex items-center gap-1.5\">\n        <span>🎯 构想初衷与最终目标</span>\n      </h5>\n      <p class=\"text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        形态类似树莓派，但专为便携编程做极致优化的微型掌上电脑（便携编程机，可在校园无电脑课时或自习场景随身使用）。专为随时随地编写并运行 Python 代码、执行爬虫抓取、离线大数据处理等耗时长的后台计算任务而设计。\n      </p>\n    </div>\n\n    <!-- Evolutionary Roadmap -->\n    <div class=\"space-y-3\">\n      <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n        <span>🚀 系统演化路线图 (Evolution Roadmap)</span>\n      </h5>\n      <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5\">\n        <!-- Stage 1 -->\n        <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-indigo-100 dark:border-stone-700 space-y-2 relative\">\n          <div class=\"flex items-center justify-between\">\n            <span class=\"px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-indigo-100 text-indigo-800 dark:bg-indigo-900/60 dark:text-indigo-300\">PHASE 1</span>\n            <span class=\"text-xs text-slate-400\">雏形验证</span>\n          </div>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-sm\">4×4 矩阵按键掌机</h6>\n          <ul class=\"text-xs text-slate-600 dark:text-stone-300 space-y-1.5 font-serif list-disc list-inside\">\n            <li>搭载紧凑尺寸屏幕与 16 键微型矩阵物理按键。</li>\n            <li><strong>多套按键映射表：</strong>一套按键映射 <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded\">print</code>, <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded\">for</code>, <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded\">while</code> 等固定语法关键字；另一套映射自定义变量与函数。</li>\n            <li>按键表存放在外置 SD 卡，支持在电脑上自由修改导入。</li>\n            <li>底层系统基于 <strong>BusyBox + 极简 Python 运行时</strong>。</li>\n          </ul>\n        </div>\n\n        <!-- Stage 2 -->\n        <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-purple-100 dark:border-stone-700 space-y-2 relative\">\n          <div class=\"flex items-center justify-between\">\n            <span class=\"px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-purple-100 text-purple-800 dark:bg-purple-900/60 dark:text-purple-300\">PHASE 2</span>\n            <span class=\"text-xs text-slate-400\">体验升维</span>\n          </div>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-sm\">电容触屏 + 嵌入式 Linux</h6>\n          <ul class=\"text-xs text-slate-600 dark:text-stone-300 space-y-1.5 font-serif list-disc list-inside\">\n            <li>升级为电容触摸屏，人机交互更直观友好。</li>\n            <li>支持动态虚拟按键表与更丰富的快捷语法面板。</li>\n            <li>底层系统升级为<strong>深度定制的嵌入式 Linux 发行版</strong>，获得更完善的多任务调度与外设驱动支持。</li>\n          </ul>\n        </div>\n\n        <!-- Stage 3 -->\n        <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-emerald-100 dark:border-stone-700 space-y-2 relative\">\n          <div class=\"flex items-center justify-between\">\n            <span class=\"px-2 py-0.5 rounded text-[10px] font-bold font-mono bg-emerald-100 text-emerald-800 dark:bg-emerald-900/60 dark:text-emerald-300\">PHASE 3</span>\n            <span class=\"text-xs text-slate-400\">软硬一体</span>\n          </div>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-sm\">完整便携开发机生态</h6>\n          <ul class=\"text-xs text-slate-600 dark:text-stone-300 space-y-1.5 font-serif list-disc list-inside\">\n            <li>基于 ARM 架构处理器与高容量电池集成便携式外壳。</li>\n            <li>支持一键启动离线后台爬虫脚本与数据处理。</li>\n            <li>作者风趣自评：“好像差不多了 -_-||”</li>\n          </ul>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Part 3: About Me & Hacker Profile -->\n  <div class=\"rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-900 text-stone-100 p-5 sm:p-6 space-y-4 shadow-sm\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-stone-800 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <div class=\"w-10 h-10 rounded-xl bg-amber-400/20 text-amber-300 flex items-center justify-center font-mono font-bold text-lg border border-amber-400/30\">\n          👾\n        </div>\n        <div>\n          <h4 class=\"font-serif font-bold text-base text-white flex items-center gap-2\">\n            <span>关于申报人 · 通中极客社创始人</span>\n            <span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30\">Geek Club Founder</span>\n          </h4>\n          <p class=\"text-xs text-stone-400 font-mono mt-0.5\">高三（14）班 · 吴钰宸 · 极客档案正本</p>\n        </div>\n      </div>\n      <div class=\"flex items-center gap-2\">\n        <a href=\"http://www.ntzx-geek.cc\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono bg-stone-800 hover:bg-stone-700 text-cyan-300 border border-stone-700 transition-colors\">\n          <span>🌐 ntzx-geek.cc</span>\n          <span class=\"text-[10px]\">↗</span>\n        </a>\n      </div>\n    </div>\n\n    <!-- Skills & Interests -->\n    <div class=\"flex flex-wrap items-center gap-2 pt-1\">\n      <span class=\"text-xs text-stone-400 font-sans\">技术特长与爱好：</span>\n      <span class=\"px-2.5 py-1 rounded-md text-xs font-mono bg-blue-500/20 text-blue-300 border border-blue-500/30\"># Arduino 创客</span>\n      <span class=\"px-2.5 py-1 rounded-md text-xs font-mono bg-red-500/20 text-red-300 border border-red-500/30\"># 安全渗透测试</span>\n      <span class=\"px-2.5 py-1 rounded-md text-xs font-mono bg-purple-500/20 text-purple-300 border border-purple-500/30\"># CTF 夺旗攻防</span>\n      <span class=\"px-2.5 py-1 rounded-md text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30\"># Python 开发</span>\n      <span class=\"px-2.5 py-1 rounded-md text-xs font-mono bg-amber-500/20 text-amber-300 border border-amber-500/30\"># 硬件拆修折腾</span>\n    </div>\n\n    <!-- Hacker Voice Bubble -->\n    <div class=\"p-4 rounded-xl bg-stone-800/80 border border-stone-700/80 space-y-2.5\">\n      <div class=\"flex items-center justify-between text-xs text-stone-400 font-mono\">\n        <span>💬 申报人自述 (Original Manifesto)</span>\n        <span class=\"text-[11px] text-stone-500\">2016-10 申请留档</span>\n      </div>\n      <div class=\"text-xs sm:text-sm text-stone-200 leading-relaxed font-serif space-y-2\">\n        <p>“平时比较喜欢动手做些东西，拆来拆去。热爱撸代码，喜欢搞渗透。（修电脑算特长吗 ^ω^）”</p>\n        <p>“创办了通中极客社，搭建了社团交流平台 <a href='http://www.ntzx-geek.cc' target='_blank' class='text-cyan-400 underline decoration-cyan-400/50 hover:text-cyan-300'>www.ntzx-geek.cc</a>。这个网站目前内容由我发布，现在文章很少，以前有些视频没有做成图文发上来。”</p>\n        <p class=\"text-amber-300 font-mono text-xs pt-1\">“弱弱的问一句，有大神带我打 CTF 吗 (๑´ω`๑)”</p>\n      </div>\n    </div>\n  </div>\n</div>",
+        "difficulties": "户外剧烈颠簸震动下的传感器抗干扰防抖，以及无网络环境下的数据本地暂存与入校自动触发重连",
+        "innovations": "首创“骑行体征 + 校园 WiFi 无感同步”闭环机制，将普通码表升维为可双向交互的校园物联网终端节点"
+      },
+      "hasCode": true,
+      "codeArchiveId": "2016-wu-yuchen-bike-meter",
+      "downloads": [
+        {
+          "title": "2016-吴钰宸 - 项目设计文档/学术报告",
+          "filename": "2016-吴钰宸-项目技术报告.docx",
+          "url": "/downloads/projects/2016-wu-yuchen-bike-meter/2016-吴钰宸-项目技术报告.docx",
+          "size": "9.2 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2016-wu-yuchen-bike-meter",
+          "projectTitle": "云智能自行车码表与便携编程机设计",
+          "studentName": "吴钰宸",
+          "editionYear": "2016",
+          "description": "《云智能自行车码表与便携编程机设计》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2016-吴钰宸 - 项目源代码",
+          "filename": "2016-吴钰宸-项目源代码.zip",
+          "url": "/downloads/projects/2016-wu-yuchen-bike-meter/2016-吴钰宸-项目源代码.zip",
+          "size": "3.0 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2016-wu-yuchen-bike-meter",
+          "projectTitle": "云智能自行车码表与便携编程机设计",
+          "studentName": "吴钰宸",
+          "editionYear": "2016",
+          "description": "《云智能自行车码表与便携编程机设计》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2016-wang-xuyang-gesture-music",
+      "title": "基于Arduino的手势控制音乐播放器",
+      "studentId": "wang-xuyang",
+      "studentName": "王徐暘",
+      "class": "高二9班",
+      "award": "极客突破奖",
+      "awardTier": "special",
+      "category": "硬件与嵌入式",
+      "tags": [
+        "Arduino",
+        "传感器",
+        "交互设计",
+        "音频解码"
+      ],
+      "summary": "通过距离/手势感应传感器捕获手部运动轨迹，将其映射为音频播放控制信号，实现隔空切歌、调音与播控。",
+      "details": {
+        "mentorFeedback": "导师评语：在高二阶段利用课余时间探索无接触人机交互，为后续第二届制作高精度的无人电磁小车奠定了深厚的硬件与算法功底。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">首届 (2016) 申请档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2016-10</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">王徐旸</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高二9班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">基于Arduino的手势控制音乐播放器的设计与制作</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👥 团队协作成员与分工</span><span class=\"text-xs text-stone-800 dark:text-stone-200 font-serif leading-relaxed\">个人独立申报项目</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>从小热爱科技与编程，高中接触 Arduino 与 C++。本项目设计并制作了一款基于 Arduino 开源硬件的手势控制音乐播放器。通过非接触式手势识别传感阵列检测空间手部动作，解析切歌、悬停调音与播放/暂停指令，驱动硬件 MP3 模块播放音乐。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">Arduino 单片机架构、C/C++ 嵌入式编程、超声波/红外空间手势测距滤波算法、串口控制硬件 MP3 音频解码芯片</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">环境杂散反射干扰下的传感器距离跳变滤除，手势动作快速移动与悬停识别的状态机防误触设计</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">摆脱传统实体物理按键与触控屏的束缚，利用空间手势实现完全免接触的人机交互切歌与连续平滑音量调节</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 申报小论文正文与双 MCU 协同架构 (Technical Report)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-blue-200/80 dark:border-blue-900/40 bg-gradient-to-br from-blue-50/50 via-white to-sky-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-blue-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-blue-100 dark:border-blue-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🎵</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">基于 Arduino 的手势控制音乐播放器</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">非接触式空间手势感应 · 双单片机串口协同架构 · 2016 申报档案</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300\">双 Arduino 协同</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">超声测距手势识别</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">串口中断通信</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">PWM 音符驱动</span>\n      </div>\n    </div>\n\n    <!-- Author Self Intro -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-blue-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <div class=\"flex items-center justify-between text-xs text-blue-900 dark:text-blue-300 font-bold\">\n        <span>👤 申报人自我陈述 (Statement of Motivation)</span>\n        <span class=\"font-mono text-[11px] text-slate-400\">高二（9）班 · 王徐旸</span>\n      </div>\n      <p class=\"text-xs text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        “我从小热爱科技，小学便开始接触编程，利用业余时间编写了一些 VB 小程序应用到日常生活中。高中以来，通过科技社团和竞赛深入接触了 Arduino 与 C++，具备自主搭建硬件电路、编写嵌入式固件并制作实用化电子产品的工程能力。希望借助望岳奖学金完成更具挑战性的软硬一体项目，证明自己的极客能力。”\n      </p>\n    </div>\n  </div>\n\n  <!-- Dual-MCU Architecture -->\n  <div class=\"space-y-3\">\n    <h5 class=\"text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-indigo-600\"></span>\n      <span>⚡ 双单片机解耦架构设计 (Dual-MCU Decoupled Architecture)</span>\n    </h5>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n        <div class=\"flex items-center justify-between\">\n          <div class=\"flex items-center gap-2\">\n            <span class=\"text-base\">🖐️</span>\n            <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">主控 A1：手势感知与决策单元</h6>\n          </div>\n          <span class=\"text-[10px] font-mono px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300\">Sensor Host</span>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          专职驱动超声测距模组，高频采样手部距离与移动速度；执行空间手势数学分析算法，将连续距离变化解算为切歌、调音或暂停指令，并通过硬件串口打包发送至 A2。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n        <div class=\"flex items-center justify-between\">\n          <div class=\"flex items-center gap-2\">\n            <span class=\"text-base\">🔊</span>\n            <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">从控 A2：音频合成与中断响应单元</h6>\n          </div>\n          <span class=\"text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300\">Audio Synth</span>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          主程序循环执行 PWM 乐谱音调合成与扬声器驱动；接收到 A1 串口指令时触发硬件外部中断，瞬时暂停当前乐曲并切换播放状态，保障音频播放不卡顿。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Flowchart Pipeline -->\n  <div class=\"p-4 sm:p-5 rounded-xl bg-slate-50 dark:bg-stone-800/50 border border-slate-200/80 dark:border-stone-700/80 space-y-3\">\n    <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n      <span>🔄 空间手势交互与音频中断时序流程</span>\n    </h5>\n    <div class=\"grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 text-xs\">\n      <div class=\"p-2.5 rounded-lg bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <span class=\"font-mono font-bold text-blue-600 text-[10px]\">01 测距</span>\n        <div class=\"font-semibold text-slate-800 dark:text-slate-200 text-[11px]\">超声发射回波</div>\n        <p class=\"text-[10px] text-slate-500\">测量障碍物精确空间距离</p>\n      </div>\n      <div class=\"p-2.5 rounded-lg bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <span class=\"font-mono font-bold text-blue-600 text-[10px]\">02 解析</span>\n        <div class=\"font-semibold text-slate-800 dark:text-slate-200 text-[11px]\">空间手势数学判定</div>\n        <p class=\"text-[10px] text-slate-500\">距离变化率匹配预设手势</p>\n      </div>\n      <div class=\"p-2.5 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <span class=\"font-mono font-bold text-blue-600 text-[10px]\">03 编码</span>\n        <div class=\"font-semibold text-slate-800 dark:text-slate-200 text-[11px]\">串口指令帧发送</div>\n        <p class=\"text-[10px] text-slate-500\">A1 串口向 A2 投递指令</p>\n      </div>\n      <div class=\"p-2.5 rounded-lg bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <span class=\"font-mono font-bold text-emerald-600 text-[10px]\">04 中断</span>\n        <div class=\"font-semibold text-slate-800 dark:text-slate-200 text-[11px]\">外部中断挂起</div>\n        <p class=\"text-[10px] text-slate-500\">A2 瞬时捕获并读取串口</p>\n      </div>\n      <div class=\"p-2.5 rounded-lg bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <span class=\"font-mono font-bold text-emerald-600 text-[10px]\">05 状态</span>\n        <div class=\"font-semibold text-slate-800 dark:text-slate-200 text-[11px]\">状态机切换</div>\n        <p class=\"text-[10px] text-slate-500\">执行切歌/调音子程序</p>\n      </div>\n      <div class=\"p-2.5 rounded-lg bg-white dark:bg-stone-900 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <span class=\"font-mono font-bold text-emerald-600 text-[10px]\">06 驱动</span>\n        <div class=\"font-semibold text-slate-800 dark:text-slate-200 text-[11px]\">音频 PWM 合成</div>\n        <p class=\"text-[10px] text-slate-500\">恢复主循环播放新音符</p>\n      </div>\n    </div>\n  </div>\n</div>",
+        "skills": "Arduino 单片机架构、C/C++ 嵌入式编程、超声波/红外空间手势测距滤波算法、串口控制硬件 MP3 音频解码芯片",
+        "difficulties": "环境杂散反射干扰下的传感器距离跳变滤除，手势动作快速移动与悬停识别的状态机防误触设计",
+        "innovations": "摆脱传统实体物理按键与触控屏的束缚，利用空间手势实现完全免接触的人机交互切歌与连续平滑音量调节"
+      },
+      "downloads": [
+        {
+          "title": "2016-王徐暘 - 申请表原件",
+          "filename": "2016-王徐暘-申请表原件.docx",
+          "url": "/downloads/projects/2016-wang-xuyang-gesture-music/2016-王徐暘-申请表原件.docx",
+          "size": "9.2 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2016-wang-xuyang-gesture-music",
+          "projectTitle": "基于Arduino的手势控制音乐播放器",
+          "studentName": "王徐暘",
+          "editionYear": "2016",
+          "description": "王徐暘 于 2016 年提交的望岳奖学金官方申请表原件。"
+        }
+      ]
+    },
+    {
+      "id": "2016-yang-liu-care-system",
+      "title": "基于物联网技术的智能看护系统",
+      "studentName": "杨柳",
+      "class": "高三15班",
+      "award": "实用发明奖",
+      "awardTier": "third",
+      "category": "硬件与嵌入式",
+      "tags": [
+        "物联网",
+        "传感器",
+        "智能家居",
+        "看护报警"
+      ],
+      "summary": "针对空巢老人与特殊人群看护需求，设计集跌倒检测、生理指标监测与远程短信/网络报警为一体的智能看护设备。",
+      "details": {
+        "mentorFeedback": "导师评语：紧扣社会民生痛点，产品功能定位清晰，方案具备很高的现实应用价值。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">首届 (2016) 申请档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2016-12</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">杨柳</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高二15班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">一种基于物联网技术的智能看护系统的研制</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🔗 代码托管与开源地址</span><span class=\"text-xs text-stone-700 dark:text-stone-300 font-mono\">包含完整 Android APP 与 STM32 嵌入式固件代码</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>针对现代快节奏生活下对老人、儿童弱势群体看护的社会痛点，在经典三层物联网架构模型基础上，创新提出了由感知、控制、传输和应用组成的四层物联网智能看护系统架构。基于该架构设计实现了智能婴儿推车看护系统，具备本地智能闭环调控与 Android 移动端远程 MQTT 监控双重功能。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">四层物联网架构设计、STM32 微控制器 ARM Cortex-M3 底层开发、Android 移动客户端应用开发、MQTT 轻量级物联网消息传输协议、温湿度与倾角防侧翻传感器融合</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">多传感器时序采集同步、弱网环境下的 MQTT 长连接断线自动恢复、推车姿态倾斜失衡时的紧急制动与报警机制</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">系统性提出四层物联网智能看护理论模型；将本地自主微调控（伺服舵机自动开合遮阳蓬）与云端远程移动监控深度融合，打造智能婴儿推车硬件原型</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与四层物联网架构解析 (Technical Paper)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-sky-200/80 dark:border-sky-900/40 bg-gradient-to-br from-sky-50/50 via-white to-blue-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-sky-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-sky-100 dark:border-sky-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🍼</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">一种基于物联网技术的智能看护系统的研制</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">Development of Intelligent Nursing System Based on IoT · 高二（15）班 杨柳</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">四层物联网架构</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">MCU 控制层</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">婴儿车自动摇床</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">尿湿与体温远程预警</span>\n      </div>\n    </div>\n\n    <!-- Abstract -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-sky-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <h5 class=\"text-xs font-bold text-sky-900 dark:text-sky-300 flex items-center gap-1.5\">\n        <span>📖 研报摘要与设计初衷</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        在现代人快节奏生活背景下，对老人、儿童、病人等弱势群体的看护成为沉重负担。笔者在国际电联（ITU）经典三层物联网模型基础上，根据智能看护实际需求细化提出了由<strong>感知层、控制层、传输层和应用层</strong>构成的四层物联网架构，并研制了具体工程落地原型——婴儿推车智能看护系统，兼具本地闭环自主安抚与移动端远程监护双重功能。\n      </p>\n    </div>\n  </div>\n\n  <!-- 4-Tier IoT Architecture Grid -->\n  <div class=\"space-y-3\">\n    <h5 class=\"text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-blue-600\"></span>\n      <span>🏗️ 创新四层物联网智能看护系统架构 (4-Tier Architecture)</span>\n    </h5>\n    <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3\">\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1.5\">\n        <div class=\"flex items-center justify-between\">\n          <span class=\"font-bold text-xs text-blue-700 dark:text-blue-300 font-sans\">01 感知层</span>\n          <span class=\"text-[10px] font-mono bg-blue-50 dark:bg-blue-950 px-1.5 py-0.5 rounded text-blue-600\">Sensing</span>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n          部署哭声音频传感器、微型湿度检测电极、红外体温探头与防倾翻加速度计，实现生理与环境体征的全天候高频微感捕捉。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1.5\">\n        <div class=\"flex items-center justify-between\">\n          <span class=\"font-bold text-xs text-indigo-700 dark:text-indigo-300 font-sans\">02 控制层</span>\n          <span class=\"text-[10px] font-mono bg-indigo-50 dark:bg-indigo-950 px-1.5 py-0.5 rounded text-indigo-600\">Control</span>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n          以 MCU 单片机为核心控制中枢。具备强抗污抗震与微秒级响应能力，识别婴儿哭闹时就地驱动微型伺服电机执行轻柔摇晃安抚。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1.5\">\n        <div class=\"flex items-center justify-between\">\n          <span class=\"font-bold text-xs text-emerald-700 dark:text-emerald-300 font-sans\">03 传输层</span>\n          <span class=\"text-[10px] font-mono bg-emerald-50 dark:bg-emerald-950 px-1.5 py-0.5 rounded text-emerald-600\">Transport</span>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n          近场支持 WiFi 与蓝牙低功耗通信，广域无缝对接 3G/4G 蜂窝网络，将看护数据与报警帧实时推送至家庭路由器或基站。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1.5\">\n        <div class=\"flex items-center justify-between\">\n          <span class=\"font-bold text-xs text-amber-700 dark:text-amber-300 font-sans\">04 应用层</span>\n          <span class=\"text-[10px] font-mono bg-amber-50 dark:bg-amber-950 px-1.5 py-0.5 rounded text-amber-600\">Application</span>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n          云端数据库记录健康体征档案，家长通过手机 App 实时查看摇床状态、音视频画面并在尿湿或体温异常时接收强提醒通知。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Engineering Baby Stroller Features -->\n  <div class=\"p-5 rounded-xl border border-slate-200 dark:border-stone-700/80 bg-slate-50 dark:bg-stone-900/60 space-y-3\">\n    <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n      <span>🛒 婴儿推车智能看护系统核心功能与工作流 (System Features)</span>\n    </h5>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs font-serif leading-relaxed\">\n      <div class=\"p-3.5 rounded-lg bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <div class=\"font-bold text-slate-900 dark:text-white font-sans flex items-center gap-1.5\">\n          <span>👶 智能安抚摇晃</span>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300\">\n          当婴儿半夜或入睡前啼哭时，音频模块识别哭声包络，单片机启动偏心减速电机驱动车体仿人工缓慢平稳晃动，婴儿熟睡后自动停摇。\n        </p>\n      </div>\n\n      <div class=\"p-3.5 rounded-lg bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <div class=\"font-bold text-slate-900 dark:text-white font-sans flex items-center gap-1.5\">\n          <span>💧 尿湿与环境预警</span>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300\">\n          床垫底部埋设柔性电阻式感湿元件，一旦尿湿立即发出蜂鸣并向手机推送通知，避免因未及时更换尿布造成皮肤红疹。\n        </p>\n      </div>\n\n      <div class=\"p-3.5 rounded-lg bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <div class=\"font-bold text-slate-900 dark:text-white font-sans flex items-center gap-1.5\">\n          <span>📱 远程音视频互通</span>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300\">\n          推车遮阳棚集成超小型广角夜视摄像头，家长在厨房或办公室即可随时查看推车实时画面，打破传统监护距离局限。\n        </p>\n      </div>\n    </div>\n  </div>\n</div>",
+        "skills": "四层物联网架构设计、STM32 微控制器 ARM Cortex-M3 底层开发、Android 移动客户端应用开发、MQTT 轻量级物联网消息传输协议、温湿度与倾角防侧翻传感器融合",
+        "difficulties": "多传感器时序采集同步、弱网环境下的 MQTT 长连接断线自动恢复、推车姿态倾斜失衡时的紧急制动与报警机制",
+        "innovations": "系统性提出四层物联网智能看护理论模型；将本地自主微调控（伺服舵机自动开合遮阳蓬）与云端远程移动监控深度融合，打造智能婴儿推车硬件原型"
+      },
+      "hasCode": true,
+      "codeArchiveId": "2016-yang-liu-care-system",
+      "downloads": [
+        {
+          "title": "2016-杨柳 - 项目设计文档/学术报告",
+          "filename": "2016-杨柳-项目技术报告.doc",
+          "url": "/downloads/projects/2016-yang-liu-care-system/2016-杨柳-项目技术报告.doc",
+          "size": "525.0 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2016-yang-liu-care-system",
+          "projectTitle": "基于物联网技术的智能看护系统",
+          "studentName": "杨柳",
+          "editionYear": "2016",
+          "description": "《基于物联网技术的智能看护系统》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2016-杨柳 - 项目源代码",
+          "filename": "2016-杨柳-项目源代码.zip",
+          "url": "/downloads/projects/2016-yang-liu-care-system/2016-杨柳-项目源代码.zip",
+          "size": "112.0 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2016-yang-liu-care-system",
+          "projectTitle": "基于物联网技术的智能看护系统",
+          "studentName": "杨柳",
+          "editionYear": "2016",
+          "description": "《基于物联网技术的智能看护系统》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2016-sun-yanling-elevator",
+      "title": "非接触式电梯控制系统",
+      "studentName": "孙研岭",
+      "class": "高三15班",
+      "award": "实用发明奖",
+      "awardTier": "third",
+      "category": "硬件与嵌入式",
+      "tags": [
+        "光电传感",
+        "非接触交互",
+        "电梯控制"
+      ],
+      "summary": "针对公共场所电梯按键细菌交叉感染问题，设计基于光电对射传感器的非接触式呼梯与楼层选择系统。",
+      "details": {
+        "mentorFeedback": "导师评语：方案构想具有前瞻性，能在公共卫生与交互设计上提出创新设想。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">首届 (2016) 申请档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2016-12-25</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">孙研岭</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高三15班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">基于单片机控制的E3F-DS30C4漫反射光电开关电梯控制系统设计</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🔗 代码托管与开源地址</span><span class=\"text-xs text-stone-700 dark:text-stone-300 font-mono\">已结合实用新型专利成果</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>针对公共场所电梯机械式物理按钮频繁接触带来的病菌交叉感染健康隐患，研制基于单片机控制与 E3F-DS30C4 漫反射光电开关的非接触式电梯控制系统。应用单片机 PWM 波平滑控制电机升降，并独创凹陷式反射面机械结构，实现抗环境杂散光干扰与漫反射光信号聚焦增强。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">单片机 GPIO 与中断控制、PWM 脉宽调制直流电机平滑调速、E3F-DS30C4 漫反射光电传感器电气特性分析、抗杂散光干扰光学腔体结构设计</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">自然强光及杂散光对漫反射光电管的误触发、漫反射信号衰减补偿、手指掠过时的信号去抖与状态保持</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">独创凹陷式反射面结构设计，显著提高光电传感器抗杂散光信噪比；结合单片机 PWM 调速实现完全非接触的卫生乘梯系统，具备完备专利支撑</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与硬件工程设计解析 (Technical Paper)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-blue-200/80 dark:border-blue-900/40 bg-gradient-to-br from-blue-50/50 via-white to-sky-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-blue-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-blue-100 dark:border-blue-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🛗</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">基于单片机控制的 E3F-DS30C4 漫反射光电开关电梯控制系统设计</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">高三（15）班 孙研岭 · 2016 申报研报原件正本录入</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300\">非接触式呼梯</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">E3F-DS30C4 光电开关</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">凹陷式抗光干扰反射面</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">PWM 调速电机控制</span>\n      </div>\n    </div>\n\n    <!-- Paper Abstract -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-blue-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\">\n        <span>📖 研报摘要与公共卫生背景</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        随着城市高层建筑飞速发展，电梯成为人们出行不可或缺的公共设施。然而由于电梯人流密集复杂，机械按钮高频接触极易成为接触性传染病菌的传播媒介。本项目设计并实现了基于单片机控制的<strong>非接触式光电呼梯系统</strong>，应用 PWM 脉宽调制提升平层与启闭平顺度，并通过原创的<strong>凹陷式反射面</strong>结构彻底解决了环境杂散光误触发难题，具备成本低廉、控制精准、抗干扰力强等显著优势。\n      </p>\n    </div>\n  </div>\n\n  <!-- Hardware Innovations Grid -->\n  <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\">\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">📡</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">传感器选型：E3F-DS30C4</h6>\n      </div>\n      <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        选型采用工业级红外漫反射光电开关，NPN 常开三线制输出，感应距离在 10-30cm 范围内连续可调，乘客仅需在开关前挥手或靠近即可完成楼层选定，零接触防交叉感染。\n      </p>\n    </div>\n\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">🛡️</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">结构创新：凹陷式抗扰反射面</h6>\n      </div>\n      <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        针对传统光电开关易受走廊日光灯、大厅阳光直射干扰的问题，创新设计了<strong>圆弧内凹反射腔体</strong>，有效屏蔽侧向斜射杂散光，唯有正向手部遮挡反射红外光束方可触发。\n      </p>\n    </div>\n\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">⚡</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">单片机 PWM 调速与称重检测</h6>\n      </div>\n      <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        单片机产生高频 PWM 驱动信号替代昂贵的传统变频器，显著降低控制系统造价；轿厢底部加装高精度桥式重量传感器，实现超载刚性联锁保护与平层平顺制动。\n      </p>\n    </div>\n  </div>\n</div>",
+        "skills": "单片机 GPIO 与中断控制、PWM 脉宽调制直流电机平滑调速、E3F-DS30C4 漫反射光电传感器电气特性分析、抗杂散光干扰光学腔体结构设计",
+        "difficulties": "自然强光及杂散光对漫反射光电管的误触发、漫反射信号衰减补偿、手指掠过时的信号去抖与状态保持",
+        "innovations": "独创凹陷式反射面结构设计，显著提高光电传感器抗杂散光信噪比；结合单片机 PWM 调速实现完全非接触的卫生乘梯系统，具备完备专利支撑"
+      },
+      "downloads": [
+        {
+          "title": "2016-孙研岭 - 申请表原件",
+          "filename": "2016-孙研岭-申请表原件.docx",
+          "url": "/downloads/projects/2016-sun-yanling-elevator/2016-孙研岭-申请表原件.docx",
+          "size": "261.2 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2016-sun-yanling-elevator",
+          "projectTitle": "非接触式电梯控制系统",
+          "studentName": "孙研岭",
+          "editionYear": "2016",
+          "description": "孙研岭 于 2016 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2016-孙研岭 - 项目设计文档/学术报告",
+          "filename": "2016-孙研岭-项目技术报告.doc",
+          "url": "/downloads/projects/2016-sun-yanling-elevator/2016-孙研岭-项目技术报告.doc",
+          "size": "317.0 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2016-sun-yanling-elevator",
+          "projectTitle": "非接触式电梯控制系统",
+          "studentName": "孙研岭",
+          "editionYear": "2016",
+          "description": "《非接触式电梯控制系统》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2016-xu-yang-urinal-sensor",
+      "title": "方便清理的堵塞报警卫生感应小便器",
+      "studentName": "徐洋",
+      "class": "高三1班",
+      "award": "实用发明奖",
+      "awardTier": "third",
+      "category": "硬件与嵌入式",
+      "tags": [
+        "传感器",
+        "自动控制",
+        "管道防堵"
+      ],
+      "summary": "结合液位传感器与智能阀门，在检测到下水堵塞时自动关闭出水并触发声光报警，防止污水外溢。",
+      "details": {
+        "mentorFeedback": "导师评语：生活细节中的工程观察，设计合理，动手能力强。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">首届 (2016) 申请档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2016-12</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">徐洋</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高三1班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">方便清理的堵塞报警卫生感应小便器</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🔗 代码托管与开源地址</span><span class=\"text-xs text-stone-700 dark:text-stone-300 font-mono\">实用新型技术设计</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>属于卫生洁具领域实用创新发明。针对传统感应小便器遇异物堵塞依然持续冲水导致污水漫溢的顽疾，由水位感应器、粉碎器电机、感应电磁阀、蜂鸣报警器与进排污管组成智能联动系统。遇堵塞水位升高自动切断进水防漫溢并报警，一键启动粉碎刀盘清通排污。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">水位差压感应原理、电磁阀流体自动切断控制、粉碎刀组机械结构设计、声光报警电路联动集成</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">污水腐蚀环境下水位电极探针的耐用性与防结垢、粉碎电机强扭矩排障与防水密封保护</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">建立“堵塞水位感知-主动切断冲水防漫溢-高分贝声光报警-一键机械粉碎排污”的闭环联动机制，成本低廉、实用性极强</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 实用新型专利研报正文与工作原理 (Technical Proposal)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-amber-200/80 dark:border-amber-900/40 bg-gradient-to-br from-amber-50/50 via-white to-orange-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-amber-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-amber-100 dark:border-amber-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🚽</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">方便清理的堵塞报警卫生感应小便器</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">高三（1）班 徐洋 · 实用新型技术研报正本</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">自动断水防溢</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-rose-100 dark:bg-rose-900/50 text-rose-800 dark:text-rose-300\">声光蜂鸣报警</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300\">内置排污粉碎器</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">低成本可推广</span>\n      </div>\n    </div>\n\n    <!-- Background Problem -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-amber-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\">\n        <span>⚠️ 现实痛点研判</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        公共场所（如酒店、车站、学校）的感应小便器常因烟头、杂纸或酒后呕吐物发生排污口堵塞。堵塞后由于冲水传感器仍在正常工作，使用时发生<strong>“下面堵住、上面冲水”</strong>的恶性循环，导致污水漫溢，极其不卫生；且保洁工人在人工疏通时往往需用手或铁钳清理，体验极其恶劣。\n      </p>\n    </div>\n  </div>\n\n  <!-- 4-Step Closed Loop Pipeline -->\n  <div class=\"p-5 rounded-xl border border-slate-200 dark:border-stone-700/80 bg-slate-50 dark:bg-stone-900/60 space-y-3\">\n    <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n      <span>🔄 堵塞检测与自动排障工作时序闭环 (Work Sequence)</span>\n    </h5>\n    <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5 text-xs\">\n      <div class=\"p-3 rounded-lg bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <span class=\"font-mono font-bold text-rose-600 text-[10px]\">STEP 1 堵塞抬升</span>\n        <div class=\"font-semibold text-slate-800 dark:text-slate-200\">水位超限感应</div>\n        <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif\">当排污口被异物堵塞，积水水位上升触碰排污口内侧的水位感应器 (6)。</p>\n      </div>\n\n      <div class=\"p-3 rounded-lg bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <span class=\"font-mono font-bold text-amber-600 text-[10px]\">STEP 2 刚性截断</span>\n        <div class=\"font-semibold text-slate-800 dark:text-slate-200\">电磁阀断电停水</div>\n        <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif\">水位信号直接切断感应电磁阀 (2) 供电，即使感应到有人也不再冲水，根绝水流外溢。</p>\n      </div>\n\n      <div class=\"p-3 rounded-lg bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <span class=\"font-mono font-bold text-indigo-600 text-[10px]\">STEP 3 及时预警</span>\n        <div class=\"font-semibold text-slate-800 dark:text-slate-200\">蜂鸣器声光报警</div>\n        <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif\">位于小便器上沿的蜂鸣器 (4) 持续报警，引导附近保洁管理人员快速到位处理。</p>\n      </div>\n\n      <div class=\"p-3 rounded-lg bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-1\">\n        <span class=\"font-mono font-bold text-emerald-600 text-[10px]\">STEP 4 一键粉碎</span>\n        <div class=\"font-semibold text-slate-800 dark:text-slate-200\">排污粉碎排出</div>\n        <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif\">保洁人员合上开关 (1) 启动粉碎器 (5) 切碎杂物，水位回落后电磁阀接通、警报自解除。</p>\n      </div>\n    </div>\n  </div>\n</div>",
+        "skills": "水位差压感应原理、电磁阀流体自动切断控制、粉碎刀组机械结构设计、声光报警电路联动集成",
+        "difficulties": "污水腐蚀环境下水位电极探针的耐用性与防结垢、粉碎电机强扭矩排障与防水密封保护",
+        "innovations": "建立“堵塞水位感知-主动切断冲水防漫溢-高分贝声光报警-一键机械粉碎排污”的闭环联动机制，成本低廉、实用性极强"
+      },
+      "downloads": [
+        {
+          "title": "2016-徐洋 - 项目设计文档/学术报告",
+          "filename": "2016-徐洋-项目技术报告.docx",
+          "url": "/downloads/projects/2016-xu-yang-urinal-sensor/2016-徐洋-项目技术报告.docx",
+          "size": "11.6 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2016-xu-yang-urinal-sensor",
+          "projectTitle": "方便清理的堵塞报警卫生感应小便器",
+          "studentName": "徐洋",
+          "editionYear": "2016",
+          "description": "《方便清理的堵塞报警卫生感应小便器》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2016-huang-caoyang-txt-encrypt",
+      "title": "加密txt文件系统",
+      "studentName": "黄曹阳",
+      "class": "高一1班",
+      "award": "安全卫士奖",
+      "awardTier": "special",
+      "category": "系统与网络",
+      "tags": [
+        "密码学",
+        "文本加密",
+        "C语言"
+      ],
+      "summary": "实现简单的对称密钥字符流加密与解密工具，保护本地机密文本不被任意查看。",
+      "details": {
+        "mentorFeedback": "导师评语：在高一自发探究密码学原理与文件I/O，值得鼓励。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">首届 (2016) 申请档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2016-12</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">黄曹阳</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高一1班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">基于RSA非对称加密的文本保护系统设计 (简单加密)</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🔗 代码托管与开源地址</span><span class=\"text-xs text-stone-700 dark:text-stone-300 font-mono\">附加密与解密算法核心源码</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>针对网络通信中个人敏感数据与纯文本 (.txt) 文件明文存储极易泄密的风险，深入研究现代密码学理论。以形象生动的比喻剖析对称加密密钥分发的局限性，阐述 RSA 公钥/私钥体制原理，探讨大素数检验算法、模幂运算 (x^e)^d ≡ x (mod n)，并创新提出校园心理健康问卷端到端隐私保护方案。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">密码学基础理论、RSA 公钥/私钥非对称加密机制、模幂逆运算 (x^e)^d ≡ x (mod n)、Miller-Rabin 概率素数检验、文件 I/O 流处理</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">大整数素性测试在普通计算机上的运算效率、对称加密跨洋面签密钥的理论瓶颈突破、非对称加密算法的安全性证明理解</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">以生动形象的“中美好友跨洋信件面签密钥”揭示对称加密密钥分发痛点；将非对称密码机制创新性引入校园心理问卷调查，实现多学生公钥加密、学校统一私钥解密的端到端隐私保护</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与密码学算法设计 (Cryptography Report)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-purple-200/80 dark:border-purple-900/40 bg-gradient-to-br from-purple-50/50 via-white to-indigo-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-purple-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-purple-100 dark:border-purple-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🔐</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">简单加密：基于非对称加密思想的文本保护系统设计</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">高一（1）班 黄曹阳 · 密码学小论文原件正本录入</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300\">非对称密码思想</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">32位密钥生成</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">ASCII 映射置换</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">TXT 文件保护</span>\n      </div>\n    </div>\n\n    <!-- Security Insights -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-purple-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <h5 class=\"text-xs font-bold text-purple-900 dark:text-purple-300 flex items-center gap-1.5\">\n        <span>🌐 个人隐私安全与密码学立意</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        在数字化飞速普及的今天，电子邮件交流、网络电商购物、移动快捷支付已经融入每个人的日常生活。然而互联网并非天然安全，明文传输极易导致个人隐私、商业机密甚至账户凭据泄露。本项目自主探索了基于非对称密码学思想的文本加密算法，采用 32 位独立密钥对与非线性混淆矩阵，为本地机密 TXT 文档提供便捷安全的防护屏障。\n      </p>\n    </div>\n  </div>\n\n  <!-- Cryptography Pipeline Grid -->\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-serif leading-relaxed\">\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">🔒</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 font-sans\">加密流水线 (Encryption Pipeline)</h6>\n      </div>\n      <p class=\"text-slate-600 dark:text-stone-300\">\n        明文字符流输入后，首先解析为整型 ASCII 码流；程序通过 32 位公钥种子生成伪随机置换序列，结合异或与模数加权运算，将常规可读文本转化为高信息熵的混淆十六进制密文流，杜绝统计频率破译。\n      </p>\n    </div>\n\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">🔓</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 font-sans\">解密流水线 (Decryption Pipeline)</h6>\n      </div>\n      <p class=\"text-slate-600 dark:text-stone-300\">\n        用户输入正确的私钥凭证，系统反向计算逆元置换矩阵，对密文块进行逆向解构并还原出标准 ASCII 码，完整恢复原始排版与内容。输入错误密钥时输出完全随机乱码，有效抵御暴力穷举。\n      </p>\n    </div>\n  </div>\n</div>",
+        "skills": "密码学基础理论、RSA 公钥/私钥非对称加密机制、模幂逆运算 (x^e)^d ≡ x (mod n)、Miller-Rabin 概率素数检验、文件 I/O 流处理",
+        "difficulties": "大整数素性测试在普通计算机上的运算效率、对称加密跨洋面签密钥的理论瓶颈突破、非对称加密算法的安全性证明理解",
+        "innovations": "以生动形象的“中美好友跨洋信件面签密钥”揭示对称加密密钥分发痛点；将非对称密码机制创新性引入校园心理问卷调查，实现多学生公钥加密、学校统一私钥解密的端到端隐私保护"
+      },
+      "downloads": [
+        {
+          "title": "2016-黄曹阳 - 申请表原件",
+          "filename": "2016-黄曹阳-申请表原件.docx",
+          "url": "/downloads/projects/2016-huang-caoyang-txt-encrypt/2016-黄曹阳-申请表原件.docx",
+          "size": "6.8 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2016-huang-caoyang-txt-encrypt",
+          "projectTitle": "加密txt文件系统",
+          "studentName": "黄曹阳",
+          "editionYear": "2016",
+          "description": "黄曹阳 于 2016 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2016-黄曹阳 - 项目设计文档/学术报告",
+          "filename": "2016-黄曹阳-项目技术报告.pdf",
+          "url": "/downloads/projects/2016-huang-caoyang-txt-encrypt/2016-黄曹阳-项目技术报告.pdf",
+          "size": "161.1 KB",
+          "type": "pdf",
+          "category": "项目文档",
+          "projectId": "2016-huang-caoyang-txt-encrypt",
+          "projectTitle": "加密txt文件系统",
+          "studentName": "黄曹阳",
+          "editionYear": "2016",
+          "description": "《加密txt文件系统》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2016-zhang-jiaqi-phone-loc",
+      "title": "手机定位 App",
+      "studentName": "张嘉麒",
+      "class": "高一8班",
+      "award": "仰望星空奖",
+      "awardTier": "special",
+      "category": "Web与小程序",
+      "tags": [
+        "Android",
+        "GPS",
+        "地图API"
+      ],
+      "summary": "利用手机GPS与基站定位API，实现位置获取并能在移动端地图上实时标绘轨迹。",
+      "details": {
+        "mentorFeedback": "导师评语：高一阶段涉足移动端开发与地图API调用，具有开拓视野。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">首届 (2016) 申请档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2017-01-02</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">张嘉麒</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高一8班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">手机定位App与空间轨道运输系统构想</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🔗 代码托管与开源地址</span><span class=\"text-xs text-stone-700 dark:text-stone-300 font-mono\">包含双论文原稿</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>提交双篇科技论文：论文一针对校园食堂寻人、教室指引痛点，设计手机与校园卡绑定的双重鉴权好友定位与路径规划 App，引入动态验证码授权机制；论文二《太空电梯建设》突破传统电梯井机械思维，探讨规避近地空间碎片碰撞的新型柔性轨道太空运输载具。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">移动端定位服务机制、校园卡 RFID 与手机绑定协议、路径规划与距离测算逻辑、动态短信验证码鉴权、太空电梯天体力学轨道分析</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">定位分享中的个人隐私动态授权边界控制、太空电梯穿越近地卫星轨道的航线冲突规避</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">首创“手机 + 校园卡”互绑定位与防丢寻回协议；跳脱传统机械电梯井框架，提出抗空间垃圾撞击的柔性轨道太空电梯全新工程构想</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与校园定位系统设计 (Technical Proposal)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-teal-200/80 dark:border-teal-900/40 bg-gradient-to-br from-teal-50/50 via-white to-sky-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-teal-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-teal-100 dark:border-teal-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">📍</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">手机定位与校园智能寻人寻物系统设计</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">高一（8）班 张嘉麒 · 2016 申报研报原件正本录入</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-teal-100 dark:bg-teal-900/50 text-teal-800 dark:text-teal-300\">校园卡与手机绑定</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">自适应路径规划</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">好友授权隐私机制</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">防丢寻卡</span>\n      </div>\n    </div>\n\n    <!-- Campus Scenarios -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-teal-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <h5 class=\"text-xs font-bold text-teal-900 dark:text-teal-300 flex items-center gap-1.5\">\n        <span>🏫 校园现实痛点研判</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        在人头攒动的学校食堂，想找好友同桌用餐却被淹没在人海中；在广阔复杂的校园里，新生前往特定报告厅或选修教室经常找不准路线；此外校园卡遗失更是高发难题。本项目构想了一套将手机端与实体校园卡软硬件深度绑定的定位软件方案。\n      </p>\n    </div>\n  </div>\n\n  <!-- Key Architecture Modules -->\n  <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\">\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">🧭</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">实时坐标与相对距离规划</h6>\n      </div>\n      <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        采集 GPS/基站混合定位信息，实时计算寻人者与目标之间的相对距离与向量方位角，在校区平面图上动态绘制最佳通行路径。\n      </p>\n    </div>\n\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">🛡️</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">位置授权与隐私安全闭环</h6>\n      </div>\n      <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        严格保护个人位置隐私：位置共享必须由目标方主动授权给特定好友（或临时开启），配合短信验证码双重核验，杜绝非授权跟踪。\n      </p>\n    </div>\n\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">💳</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">校园卡防丢与一键解绑</h6>\n      </div>\n      <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        将校园卡与手机绑定，丢失时可回溯最后一次读卡机刷卡位置；若手机遗失亦可通过 Web 终端一键解绑挂失，保障财产安全。\n      </p>\n    </div>\n  </div>\n</div>",
+        "skills": "移动端定位服务机制、校园卡 RFID 与手机绑定协议、路径规划与距离测算逻辑、动态短信验证码鉴权、太空电梯天体力学轨道分析",
+        "difficulties": "定位分享中的个人隐私动态授权边界控制、太空电梯穿越近地卫星轨道的航线冲突规避",
+        "innovations": "首创“手机 + 校园卡”互绑定位与防丢寻回协议；跳脱传统机械电梯井框架，提出抗空间垃圾撞击的柔性轨道太空电梯全新工程构想"
+      },
+      "downloads": [
+        {
+          "title": "2016-张嘉麒 - 申请表原件",
+          "filename": "2016-张嘉麒-申请表原件.docx",
+          "url": "/downloads/projects/2016-zhang-jiaqi-phone-loc/2016-张嘉麒-申请表原件.docx",
+          "size": "8.1 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2016-zhang-jiaqi-phone-loc",
+          "projectTitle": "手机定位 App",
+          "studentName": "张嘉麒",
+          "editionYear": "2016",
+          "description": "张嘉麒 于 2016 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2016-张嘉麒 - 项目设计文档/学术报告",
+          "filename": "2016-张嘉麒-项目技术报告.docx",
+          "url": "/downloads/projects/2016-zhang-jiaqi-phone-loc/2016-张嘉麒-项目技术报告.docx",
+          "size": "11.0 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2016-zhang-jiaqi-phone-loc",
+          "projectTitle": "手机定位 App",
+          "studentName": "张嘉麒",
+          "editionYear": "2016",
+          "description": "《手机定位 App》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2016-sun-jia-sudoku",
+      "title": "论数独的编程解法与八皇后问题的异同点",
+      "studentName": "孙嘉、冒欣、方心怡",
+      "class": "高一1班",
+      "award": "计算思维奖",
+      "awardTier": "special",
+      "category": "算法与数据结构",
+      "tags": [
+        "回溯算法",
+        "约束满足",
+        "算法分析"
+      ],
+      "summary": "对比数独求解与经典八皇后问题在回溯搜索、剪枝策略及状态空间树表示上的异同点，探讨组合数学与搜索优化。",
+      "details": {
+        "mentorFeedback": "导师评语：三位同学合作撰写了规范的算法探究文章，体现了扎实的逻辑思维与理论探索热情。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">首届 (2016) 申请档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2016-10</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">孙嘉、冒欣、方心怡</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高一1班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">论数独的编程解法与八皇后问题的异同点</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🔗 代码托管与开源地址</span><span class=\"text-xs text-stone-700 dark:text-stone-300 font-mono\">包含算法设计提纲与参考文献</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👥 团队协作成员与分工</span><span class=\"text-xs text-stone-800 dark:text-stone-200 font-serif leading-relaxed\">孙嘉（算法设计与程序实现）、冒欣（数学模型建立与规则梳理）、方心怡（文献调研与资料整理）</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>高一团队合作课题。系统对比两类经典约束满足问题（CSP）——数独（Sudoku）与八皇后（Eight Queens）。针对数独的“九宫格不重复性”与八皇后的“对角线不攻击性”，深入讨论局部约束算法差异，归纳回溯算法在不同约束维度下的状态树剪枝策略与通用求解框架。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">回溯算法（Backtracking DFS）、递归与状态空间树构建、约束传播（Constraint Propagation）、剪枝策略（Pruning）、多维数组状态标记与矩阵运算</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">数独九宫格三维空间约束的快速冲突检测算法设计，高分支因子下搜索树深层递归的回溯剪枝优化</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">建立八皇后与数独求解的统一 CSP 算法对比模型，归纳对角线线性冲突与九宫格区域冲突在剪枝效率上的数学异同</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 组合数学论文正文与回溯算法深度解析 (Algorithm Paper)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-indigo-200/80 dark:border-indigo-900/40 bg-gradient-to-br from-indigo-50/50 via-white to-blue-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-indigo-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-indigo-100 dark:border-indigo-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">♟️</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">论数独的编程解法与八皇后问题的异同点</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">高一（1）班 孙嘉 · 经典组合搜索与回溯剪枝理论研报</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">八皇后问题 (Eight Queens)</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300\">9×9 标准数独 (Sudoku)</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300\">回溯法 (Backtracking)</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">对角线哈希 vs 宫格约束</span>\n      </div>\n    </div>\n\n    <!-- Paper Abstract -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-indigo-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <h5 class=\"text-xs font-bold text-indigo-900 dark:text-indigo-300 flex items-center gap-1.5\">\n        <span>📖 研报立意与组合数学背景</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        八皇后问题与数独问题是计算机科学与离散数学中研究约束满足问题（CSP）与深度优先搜索的经典范例。两者皆要求在离散网格空间中放置满足特定非冲突约束的符号集合。本文通过抽象出通用的<strong>递归回溯（Backtracking）模型</strong>，系统性剖析了两者的状态空间树分支因子、局部剪枝算法设计与时空复杂度收敛特征。\n      </p>\n    </div>\n  </div>\n\n  <!-- Deep Comparison Matrix -->\n  <div class=\"space-y-3\">\n    <h5 class=\"text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-indigo-600\"></span>\n      <span>⚖️ 八皇后与数独求解机制异同剖析 (Comparative Analysis)</span>\n    </h5>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-serif leading-relaxed\">\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-base\">👑</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 font-sans\">八皇后：连续对角线互斥约束</h6>\n        </div>\n        <p class=\"text-slate-600 dark:text-stone-300\">\n          要求 8 个皇后在 8×8 棋盘上同横行、同纵列及主副两条对角线互不攻击。算法通过行遍历将空间降为 8 维置换；利用对角线代数特征 <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded text-[10px]\">row + col</code> 与 <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded text-[10px]\">row - col + 7</code> 建立布尔数组，实现 <code class=\"font-mono text-[10px]\">O(1)</code> 常数阶冲突判定。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-base\">🔢</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 font-sans\">数独：三维正交区域不重复约束</h6>\n        </div>\n        <p class=\"text-slate-600 dark:text-stone-300\">\n          81 个单元格受到所在“行、列、3×3 九宫格”三重集合互异性约束。每个空白格需动态维护 1-9 候选数列表（Candidate Set）；采用最少剩余值（MRV）启发式优先填补候选数最少的格位，大幅压缩回溯递归搜索深度。\n        </p>\n      </div>\n    </div>\n  </div>\n</div>",
+        "skills": "回溯算法（Backtracking DFS）、递归与状态空间树构建、约束传播（Constraint Propagation）、剪枝策略（Pruning）、多维数组状态标记与矩阵运算",
+        "difficulties": "数独九宫格三维空间约束的快速冲突检测算法设计，高分支因子下搜索树深层递归的回溯剪枝优化",
+        "innovations": "建立八皇后与数独求解的统一 CSP 算法对比模型，归纳对角线线性冲突与九宫格区域冲突在剪枝效率上的数学异同"
+      },
+      "downloads": [
+        {
+          "title": "2016-孙嘉、冒欣、方心怡 - 项目设计文档/学术报告",
+          "filename": "2016-孙嘉、冒欣、方心怡-项目技术报告.docx",
+          "url": "/downloads/projects/2016-sun-jia-sudoku/2016-孙嘉、冒欣、方心怡-项目技术报告.docx",
+          "size": "7.0 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2016-sun-jia-sudoku",
+          "projectTitle": "论数独的编程解法与八皇后问题的异同点",
+          "studentName": "孙嘉、冒欣、方心怡",
+          "editionYear": "2016",
+          "description": "《论数独的编程解法与八皇后问题的异同点》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "title": "2016 届望岳奖学金评选细则 (官方章程)",
+      "filename": "2016第一届望岳奖学金评选细则.pdf",
+      "url": "/downloads/editions/2016/2016第一届望岳奖学金评选细则.pdf",
+      "size": "520.5 KB",
+      "type": "pdf",
+      "category": "评选细则",
+      "editionYear": "2016",
+      "description": "包含评选对象、申报要求、各级奖项标准与评审流程。"
+    }
+  ]
+}

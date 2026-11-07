@@ -1,0 +1,26 @@
+{
+  "projectId": "2023-yu-wentao-gu-yuming-hospital",
+  "externalRepo": null,
+  "totalFiles": 1,
+  "totalLines": 81,
+  "coreFiles": [
+    "望岳-智能挂号系统.cpp"
+  ],
+  "languages": [
+    {
+      "lang": "cpp",
+      "lines": 81,
+      "percent": 100.0
+    }
+  ],
+  "files": [
+    {
+      "path": "望岳-智能挂号系统.cpp",
+      "name": "望岳-智能挂号系统.cpp",
+      "lang": "cpp",
+      "lines": 81,
+      "size": 2635,
+      "content": "#include <iostream>  \n#include <queue>  \n#include <vector>  \n#include <algorithm>  \nusing namespace std;  \n  \n// 定义挂号记录结构体  \nstruct Record {  \n    string name;       // 患者姓名  \n    int time;          // 挂号时间  \n    int priority;      // 优先级  \n    bool online;       // 是否网上挂号  \n    bool need_check;   // 是否需要去检查  \n      \n    // 构造函数，初始化need_check为false  \n    Record(string n, int t, bool o) : name(n), time(t), online(o), need_check(false) {  \n        if (online) {  \n            priority = time - 60; // 网上挂号优先级提前60分钟  \n        } else {  \n            priority = time; // 现场挂号优先级与挂号时间相同  \n        }  \n    }  \n};  \n  \n// 比较函数，用于计算优先级  \nbool cmp(const Record& a, const Record& b) {  \n    if (a.priority != b.priority) {  \n        return a.priority > b.priority;  \n    } else {  \n        return a.time < b.time;  \n    }  \n}  \n  \nint main() {  \n    int n; // 挂号记录数量  \n    cin >> n;  \n      \n    // 读入挂号记录并进行初步处理  \n    vector<Record> records(n);  \n    for (int i = 0; i < n; i++) {  \n        string name;  \n        int time, online;  \n        cin >> name >> time >> online >> records[i].need_check;  \n        records[i] = Record(name, time, online);  \n    }  \n      \n    // 将挂号记录按优先级排序  \n    sort(records.begin(), records.end(), cmp);  \n      \n    // 将排序后的挂号记录加入优先队列中  \n    priority_queue<Record> q;  \n    for (const auto& r : records) {  \n        q.push(r);  \n    }  \n      \n    // 等待检查结果的队列  \n    deque<Record> wait_check; // 使用deque代替queue以优化性能  \n      \n    // 按照打卡顺序输出看病顺序  \n    cout << \"看病顺序：\" << endl;  \n    while (!q.empty()) {  \n        Record r = q.top();  \n        q.pop();  \n        cout << r.name << endl;  \n        if (r.need_check) {  \n            // 患者需要去检查，将其加入等待检查结果的队列中，并从优先队列中移除  \n            wait_check.push_back(r); // 使用push_back代替push以优化性能  \n        }  \n    }  \n      \n    // 处理等待检查结果的患者  \n    while (!wait_check.empty()) {  \n        Record r = wait_check.front();  \n        wait_check.pop_front(); // 使用pop_front代替pop以优化性能  \n        cout << r.name << \"检查结果已出，等待叫号...\" << endl;  \n        // 将患者重新加入优先队列中，按照原来的优先级进行排序  \n        q.push(r);  \n    }  \n      \n    cout << \"程序运行完毕。\" << endl;   \n}\n"
+    }
+  ]
+}

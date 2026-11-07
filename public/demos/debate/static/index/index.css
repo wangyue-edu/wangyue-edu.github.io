@@ -1,0 +1,29 @@
+.header{
+    text-align: center;
+}
+
+form label{
+    font-size: 16px;
+    margin-top: 6px;
+}
+.form-signin-heading{
+    padding-left: 35px;
+}
+
+
+.btn{
+    width: 86% !important;
+    margin-left: 10% !important;
+}
+
+.code{
+    color:rgb(43, 144, 226); 
+}
+
+@media screen and (max-width: 767px){
+    .btn{
+        width: 90% !important;
+         margin-left: 5% !important;
+    }
+       
+}

@@ -1,0 +1,40 @@
+{
+  "projectId": "2017-zhou-zihao-toolkit",
+  "externalRepo": null,
+  "totalFiles": 2,
+  "totalLines": 50,
+  "coreFiles": [
+    "全屋定制价格王/main.cpp",
+    "全屋定制价格王/jsq.dev"
+  ],
+  "languages": [
+    {
+      "lang": "cpp",
+      "lines": 33,
+      "percent": 65.0
+    },
+    {
+      "lang": "ini",
+      "lines": 17,
+      "percent": 35.0
+    }
+  ],
+  "files": [
+    {
+      "path": "全屋定制价格王/main.cpp",
+      "name": "main.cpp",
+      "lang": "cpp",
+      "lines": 33,
+      "size": 803,
+      "content": "#include <iostream>\n\nfloat a,b,c,d,e,i,COST,cost;\n\nint main()\n{\n    printf(\"输入已知家居的长、宽、高：（单位为米，用逗号隔开）\n\");\n    scanf(\"%f,%f,%f\",&a,&b,&c); \n    printf(\"输入已知家居的价格：（单位为元）\n\");\n    scanf(\"%f\",&cost); \n    COST = cost/(2*((a*b)+(a*c)+(b*c)));\n    printf(\"该类家具的单价为：%.2f 元/平方米\n\n\",COST); \n    for(i=0;;i++)\n    {\n        printf(\"输入该家居的长、宽、高：（单位为米，用逗号隔开）\n输入0,0,0以关闭\n\");\n        scanf(\"%f,%f,%f\",&a,&b,&c); \n        if(a==0,b==0,c==0) break;\n        d = 2*((a*b)+(a*c)+(b*c))*COST;\n        printf(\"该家居的目前价格为：%.2f 元\n\",d); \n        e += d;\n        printf(\"以上家居的累计总价为：%.2f 元\n\n\",e); \n    }\n    return 0;\n}\n"
+    },
+    {
+      "path": "全屋定制价格王/jsq.dev",
+      "name": "jsq.dev",
+      "lang": "ini",
+      "lines": 17,
+      "size": 210,
+      "content": "[Project]\nFileName=jsq.dev\nName=全屋定制价格王\nUnitCount=1\nType=1\nVer=1\nIsCpp=1\nExeOutput=\nObjectOutput=\nOverrideOutputName=jsq.exe\n\n[Unit1]\nFileName=main.cpp\nCompileCpp=1\nCompile=1\nLink=1\nPriority=1000\n"
+    }
+  ]
+}

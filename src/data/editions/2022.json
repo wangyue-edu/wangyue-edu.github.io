@@ -1,0 +1,994 @@
+{
+  "year": "2022",
+  "editionNumber": 6,
+  "title": "2022 第六届望岳奖学金",
+  "theme": "突破单一范式：硬核物联网、团队机器人集成与现代农业智能探索",
+  "intro": "第六届望岳奖学金见证了通中学子在技术维度上的重大突破：不仅有姜冠群深入 NFC 协议栈的软硬件全流程打通，更有徐天润等四位同学组成的通中历史上首个大型机器人协同研发团队，以及马佳悦针对农业现代化的三代智能仔猪导料食槽。本届首次迎来了首届望岳得主周鹤洋作为评委加入评审团，象征着望岳精神在两代通中极客间的生生不息。",
+  "documents": [],
+  "gallery": [
+    {
+      "src": "media/2022/ceremony_stage_recipients.jpg",
+      "caption": "2022年第六届望岳奖学金南通中学颁奖典礼（11位获奖学生与校领导在诚恒楼合影）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2022/ceremony_audience_hall.jpg",
+      "caption": "南通中学第六届望岳奖学金颁奖典礼现场全景（大礼堂全体师生观摩盛况）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2022/ceremony_stage_cheering.jpg",
+      "caption": "颁奖盛典舞台助威：同学校友高举手幅“高二9班 领航”“加油奥力给！”为获奖选手喝彩",
+      "category": "ceremony"
+    }
+  ],
+  "reviewSummary": "五位评委（李嘉、葛一凡、汤林鹏、吴培、首届得主周鹤洋）对11组作品进行了严格的多维综合评审与面谈验证。姜冠群、徐天润团队、马佳悦三项高完成度硬核作品共同斩获凌绝望岳奖；杨逍、黄天宇、俞晴岚荣膺坚韧登岳奖；李怿、朱辰祎、张林、曹烨、王唯分获凭高临岳奖。",
+  "projects": [
+    {
+      "id": "2022-jiang-guanqun-nfc",
+      "title": "上海某医院 NFC 云打卡系统研发与跨平台复盘",
+      "studentId": "jiang-guanqun",
+      "studentName": "姜冠群",
+      "class": "高三10班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "硬件与安全",
+      "tags": [
+        "NFC",
+        "RFID",
+        "ISO/IEC 14443",
+        "校园卡",
+        "Python",
+        "Web服务"
+      ],
+      "summary": "针对医疗场景离线巡检打卡需求，开发基于 Java/Kotlin 的 Android 原生 NFC 识别客户端，配合 HTML/PHP 跨平台管理端与 SQLite/PostgreSQL 数据鉴权。",
+      "video": {
+        "src": "media/2022_jiang_nfc_sim.mp4",
+        "poster": "media/2022_jiang_nfc_sim_poster.jpg",
+        "title": "NFC 校园卡全流程模拟演示"
+      },
+      "hasCode": true,
+      "details": {
+        "skills": "NFC 协议栈解析、Mifare Classic 密钥扇区认证、Flask 后端打卡流水服务、Web 管理看板",
+        "difficulties": "射频信号防碰撞冲突处理，卡片扇区加密密钥的合法性校验与事务原子性",
+        "innovations": "从硬件射频信号抓取到上位机管理系统全栈自主实现，代码托管规范，获评委最高均分（5.8分）。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">NFC 射频识别</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">Android 原生 (Java/Kotlin)</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">离线缓存 + 云端同步</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">项目背景与架构技术选型</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">上海某医院提出医护查房与设备巡检的 NFC 标签打卡需求，核心痛点在于：地下室或屏蔽病房经常无网络信号，必须在完全离线环境下可靠读取写入打卡日志，且在恢复连接后能够自动向云端服务器鉴权同步。姜冠群同学经技术评估，排除了缺乏离线底层存储与硬件中断支持的微信小程序方案，确立了<strong>“原生 Android NFC 采集端 + 跨平台 Web 后台”</strong>的混合架构。</p>\n  </div>\n\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-6\">\n    <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 shadow-xl backdrop-blur-sm flex flex-col justify-between\">\n      <div>\n        <h4 class=\"text-base font-bold text-slate-900 mb-2 flex items-center gap-2\">\n          <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n          客户端：Android 原生 NFC (Java / Kotlin)\n        </h4>\n        <ul class=\"text-xs text-slate-600 space-y-1.5 list-disc pl-4 mb-3\">\n          <li><strong>前台分发系统 (Foreground Dispatch)</strong>：配置 NFC 意图过滤器（Intent Filter），手机贴近巡检标签时免唤醒即刻响应。</li>\n          <li><strong>双模状态机切换</strong>：本地搭载 SQLite 轻量数据库。无网时本地加密暂存打卡记录；联网时触发 Worker 守护进程批量 POST 同步。</li>\n        </ul>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs text-[11px] font-mono text-sky-700\">\n        攻克了 NFC 后端数据解析与向鉴权接口进行 Token 校验的工程难点。\n      </div>\n    </div>\n\n    <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 shadow-xl backdrop-blur-sm flex flex-col justify-between\">\n      <div>\n        <h4 class=\"text-base font-bold text-slate-900 mb-2 flex items-center gap-2\">\n          <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n          服务端：全平台 Web 监控后台 (HTML / PHP)\n        </h4>\n        <div class=\"grid grid-cols-2 gap-2 text-xs\">\n          <div class=\"bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs\">\n            <div class=\"text-emerald-700 font-bold mb-1\">PostgreSQL 关系库</div>\n            <div class=\"text-slate-600 text-[11px]\">按病区、工号、巡检点建立严格时间序列索引，杜绝作弊与篡改。</div>\n          </div>\n          <div class=\"bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs\">\n            <div class=\"text-indigo-700 font-bold mb-1\">响应式 Web 仪表盘</div>\n            <div class=\"text-slate-600 text-[11px]\">免安装任何桌面软件，院方管理人员在任何 PC 或移动平板即可实时审阅。</div>\n          </div>\n        </div>\n      </div>\n      <div class=\"mt-3 bg-white p-3 rounded-xl border border-slate-200 shadow-xs text-[11px] font-mono text-emerald-700\">\n        项目已打包为 APK/AAB 交付部署，实现了“云端统筹、离线无阻”的落地效果。\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "软硬件结合非常严谨，全流程演示清晰规范。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "代码托管规范，对底层协议理解深入，工程表现极佳。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "工程完成度很好，架构完整。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "技术扎实，解决了真实场景的软硬件协同问题。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "作为往届学长，很高兴看到通中学弟做出如此完整规范的底层通信作品！"
+        }
+      ],
+      "artifactSpecs": [
+        {
+          "name": "NFC 校园一卡通模拟工具 app.apk",
+          "type": "Android 应用安装包",
+          "platform": "Android ARM64",
+          "size": "9.2 MB",
+          "description": "自主编写的 NFC 射频模拟与云端鉴权打卡客户端"
+        }
+      ],
+      "codeArchiveId": "2022-jiang-guanqun-nfc",
+      "downloads": [
+        {
+          "title": "2022-姜冠群 - 申请表原件",
+          "filename": "2022-姜冠群-申请表原件.docx",
+          "url": "/downloads/projects/2022-jiang-guanqun-nfc/2022-姜冠群-申请表原件.docx",
+          "size": "13.1 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-jiang-guanqun-nfc",
+          "projectTitle": "上海某医院 NFC 云打卡系统研发与跨平台复盘",
+          "studentName": "姜冠群",
+          "editionYear": "2022",
+          "description": "姜冠群 于 2022 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2022-姜冠群 - 项目源代码",
+          "filename": "2022-姜冠群-项目源代码.zip",
+          "url": "/downloads/projects/2022-jiang-guanqun-nfc/2022-姜冠群-项目源代码.zip",
+          "size": "22.4 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2022-jiang-guanqun-nfc",
+          "projectTitle": "上海某医院 NFC 云打卡系统研发与跨平台复盘",
+          "studentName": "姜冠群",
+          "editionYear": "2022",
+          "description": "《上海某医院 NFC 云打卡系统研发与跨平台复盘》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2022-xu-tianrun-robotics-team",
+      "title": "“DOBOT 智造大挑战—智慧冬奥”机器人物资运输项目与社团建设",
+      "studentId": "xu-tianrun",
+      "studentName": "徐天润、张林浩、李吴庶、俞乾齐",
+      "class": "高二6班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "机器人与自动化",
+      "tags": [
+        "世界机器人大赛",
+        "DOBOT Magician",
+        "多机协同",
+        "智能小车",
+        "传感器阵列",
+        "团队工程",
+        "智慧冬奥",
+        "社团建设"
+      ],
+      "summary": "高二（6）班徐天润作为机器人社团社长，率领张林浩、李吴庶、俞乾齐组成竞赛团队，备战世界机器人大赛“DOBOT 智造大挑战—智慧冬奥”赛项。自主编写与调试两台 DOBOT 工业级机械臂、微型自动化传送带以及 AI-Starter 无人驾驶避障小车等核心机电设备，打通“路障清除 → 传送带上料 → 颜色识别分拣 → 多层立体码垛 → 无人车巡线 → 学校路段避让鸣笛 → 翻斗精准卸载 → 闭环返航”九大作业环节，确立了通中中学生多机协同工程的新标杆。",
+      "video": {
+        "src": "media/2022_xu_robot_arm.mp4",
+        "poster": "media/2022_xu_robot_arm_poster.jpg",
+        "title": "机械臂取物与移动底盘协同测试"
+      },
+      "gallery": [
+        {
+          "src": "media/2022/xu_robotics/test_photo_1.jpg",
+          "caption": "智慧冬奥物料协同运输系统实机联调：两台 DOBOT 工业机械臂、传送带与 AI-Starter 无人小车全景",
+          "category": "实机联调"
+        },
+        {
+          "src": "media/2022/xu_robotics/test_photo_2.jpg",
+          "caption": "分拣码放机械臂末端执行器（真空吸盘）精准吸附物料积木与高精度角度调整",
+          "category": "机械臂执行"
+        },
+        {
+          "src": "media/2022/xu_robotics/test_photo_3.jpg",
+          "caption": "立体仓库区与避障回字形路线：多层立体积木码垛与避障停车测试现场",
+          "category": "智能仓库"
+        },
+        {
+          "src": "media/2022/xu_robotics/image1.png",
+          "caption": "世界机器人大赛“DOBOT 智造大挑战—智慧冬奥”全要素竞赛场地规划平面图",
+          "category": "赛道规划"
+        },
+        {
+          "src": "media/2022/xu_robotics/image2.png",
+          "caption": "上料机械臂 DobotBlock 控制程序：光电传感检测与装载区物料搬运逻辑",
+          "category": "模块程序"
+        },
+        {
+          "src": "media/2022/xu_robotics/image5.png",
+          "caption": "分拣码放机械臂程序：颜色传感器识别判定与多层立体仓库自动码垛逻辑",
+          "category": "模块程序"
+        },
+        {
+          "src": "media/2022/xu_robotics/image9.png",
+          "caption": "AI-Starter 无人驾驶小车循迹导航、蜂鸣器避让鸣笛与翻斗卸载程序",
+          "category": "控制程序"
+        }
+      ],
+      "artifactSpecs": [
+        {
+          "name": "DOBOT Winter Olympics Multi-Robot Logistics System",
+          "type": "DobotBlock 可视化模块化工程与固件配置",
+          "platform": "DOBOT Magician / AI-Starter / Arduino",
+          "size": "4 组多机协作程序 + 2.3MB 完整技术研报",
+          "description": "涵盖双机械臂光电触发、色度分拣、多层立体码垛、回字形巡线小车与主动避让鸣笛"
+        },
+        {
+          "name": "Robotics Club Leadership & Community Development",
+          "type": "通中机器人社团年度运营档案与招新问卷",
+          "platform": "社团活动小结 + 50份招新问卷",
+          "size": "90% 活动出勤率 / 嘉年华展演成果",
+          "description": "社团嘉年华全校展演（机器人写字/下棋/弹钢琴）、招新摸底问卷统计与极客团队梯队建设"
+        }
+      ],
+      "details": {
+        "skills": "DOBOT 机械臂逆解与示教编程、光电与颜色传感器信号判决、Arduino 控制盒与 XBee 无线数传通信、AI-Starter 无人小车红外光电循线算法、翻斗机电连杆机构调优、大型科技社团组织运营",
+        "difficulties": "1. 竞赛场地光照与地表反光变化导致的小车光电巡线漂移；2. 机械臂高速抓取惯性带来的末端微米级坐标累积误差；3. 积木多层高阶立体码放时的力矩平衡与重力掉落控制；4. 8分钟严格限时内多智能体作业时序高度紧凑的无阻塞同步；5. 疫情线下竞赛阻隔下的团队士气维护与纯自驱力技术攻坚",
+        "innovations": "通中首个由四位高二极客组成的大型跨硬件系统协作团队；融合工业机械臂、流水线与 AGV 无人小车构建了完整的工业 4.0 智能物流微缩实体闭环；结合冬奥场景设置主动礼让鸣笛与翻斗智能卸料；徐天润作为社长更展现了卓越的社团领导力与开源极客传承。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed font-sans\">\n  <!-- Card 1: 竞赛背景与任务闭环 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 text-amber-700 border border-amber-200\">世界机器人大赛专项</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">多智能体协同流水线</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">无人驾驶AGV主动避障</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">通中首个大型团队工程</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">项目背景与“智慧冬奥”多机协同使命</h3>\n    <p class=\"text-sm text-slate-700 mb-4 font-serif leading-relaxed\">\n      “DOBOT 智造大挑战—智慧冬奥”机器人物资运输项目是世界机器人大赛的核心赛项。赛项紧密结合北京冬奥会物资自动化供应实景，要求选手运用智能机械臂、流水线传送带与无人驾驶小车等多机协同作业，完成冬奥村物资的<strong>智能分类、自主装载、防碰撞运输、路段礼让与精准翻斗卸载</strong>。南通中学高二（6）班徐天润（机器人社团社长）、张林浩、李吴庶、俞乾齐四位同学自主组建竞赛团队，在黄虹娟老师指导下展开深度攻坚。\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-4 gap-3 text-xs mb-3\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-sky-700 font-bold mb-1\">队长 / 机械臂算法：徐天润</div>\n        <p class=\"text-slate-600\">社团社长兼队长，负责总体方案设计、训练组织、任务分工与机械臂取放参数联调。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-indigo-700 font-bold mb-1\">机械臂程序测试：张林浩</div>\n        <p class=\"text-slate-600\">负责上料机械臂与传送带协同逻辑，编写光电触发检测与障碍物清障搬运程序。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-emerald-700 font-bold mb-1\">分拣与码放工程：李吴庶</div>\n        <p class=\"text-slate-600\">负责分拣机械臂多层立体仓库的高精度码垛算法，测试色度传感器阈值漂移校准。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-amber-700 font-bold mb-1\">控制盒与AGV小车：俞乾齐</div>\n        <p class=\"text-slate-600\">负责 Arduino 控制盒 XBee 协议转发、AI-Starter 小车 PID 巡线与翻斗卸载机构调试。</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Card 2: 九大作业流程与赛道全要素物理拓扑 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      竞赛全要素物理拓扑与 9 大标准化作业流程\n    </h3>\n    <p class=\"text-xs text-slate-600 mb-4 font-serif leading-relaxed\">\n      竞赛要求在 <strong>8 分钟严格限时</strong> 内连续打通九大作业时序，对各执行单元的动作响应速度与通信同步提出了极高要求：\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-4\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-rose-700 font-bold\">① 搬运清障与小车出发</div>\n        <p class=\"text-slate-600\">机械臂自主将路障区内的黄色积木搬离行车道；同时 AI-Starter 无人小车从配送中心点火启航。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-amber-700 font-bold\">② 光电感应定位与精准上料</div>\n        <p class=\"text-slate-600\">小车沿黑色回字形路线行进至物资装载区，光电传感器检测到位后驻车；1号机械臂从调配区抓料并投放传送带。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-emerald-700 font-bold\">③ 流水线传送与色相智能分拣</div>\n        <p class=\"text-slate-600\">传送带将积木送达 2 号机械臂；末端吸附积木置于颜色传感器上方，识别为红（肉类）、绿（果蔬）、蓝（水源）。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-sky-700 font-bold\">④ 多层高阶码垛与装载分流</div>\n        <p class=\"text-slate-600\">任务指定颜色物料放置于小车车顶托盘；非配送物料码放至对应仓库，层数越高得分越多（最高三层堆叠）。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-indigo-700 font-bold\">⑤ 学校路段鸣笛与行人礼让</div>\n        <p class=\"text-slate-600\">小车受载后启航，行经学校避让区时检测到蓝色地标即刻制动，驱动板载蜂鸣器鸣笛 3 秒模拟文明礼让。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-purple-700 font-bold\">⑥ 翻斗精准卸载与闭环返航</div>\n        <p class=\"text-slate-600\">小车抵达北京/延庆/张家口指定冬奥村，电机驱动翻斗将物资翻转卸入指定料槽，随后安全巡线返回配送中心。</p>\n      </div>\n    </div>\n    <div class=\"rounded-xl overflow-hidden border border-slate-200 bg-white p-3 shadow-xs\">\n      <div class=\"text-xs font-bold text-slate-800 mb-2 flex items-center gap-1.5\">\n        <span>🗺️ “智慧冬奥”全要素赛区规划与传感器拓扑图</span>\n      </div>\n      <img src=\"/media/2022/xu_robotics/image1.png\" alt=\"竞赛场地全景规划图\" class=\"w-full max-h-80 object-contain rounded-lg mx-auto bg-slate-50\" />\n    </div>\n  </div>\n\n  <!-- Card 3: 硬件清单与系统集成架构 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-indigo-600\"></span>\n      工业级机电软硬件选型与系统集成清单\n    </h3>\n    <div class=\"overflow-x-auto rounded-xl border border-slate-200 bg-white\">\n      <table class=\"w-full text-xs text-left text-slate-700\">\n        <thead class=\"bg-slate-100 text-slate-800 font-bold border-b border-slate-200 text-[11px]\">\n          <tr>\n            <th class=\"p-2.5\">设备 / 组件名称</th>\n            <th class=\"p-2.5\">核心型号与选型说明</th>\n            <th class=\"p-2.5\">在多机协同系统中的工程职责</th>\n          </tr>\n        </thead>\n        <tbody class=\"divide-y divide-slate-100 font-mono text-[11px]\">\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans font-bold text-slate-900\">工业机械臂 (2台)</td>\n            <td class=\"p-2.5 text-blue-700\">DOBOT Magician 多自由度桌面机械臂</td>\n            <td class=\"p-2.5 font-sans\">分别承担装载区上料、清障以及传送带末端的分拣、色相识别与立体仓库码垛任务</td>\n          </tr>\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans font-bold text-slate-900\">末端执行器</td>\n            <td class=\"p-2.5 text-sky-700\">气泵盒 + 真空吸盘套件 + 电磁换向阀</td>\n            <td class=\"p-2.5 font-sans\">毫秒级通断负压气路，实现各色物料积木的平稳吸附、空中悬停与无碰撞轻放</td>\n          </tr>\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans font-bold text-slate-900\">输送机构</td>\n            <td class=\"p-2.5 text-indigo-700\">DOBOT 迷你自动化输送带套件</td>\n            <td class=\"p-2.5 font-sans\">搭载光电反射开关与步进调速马达，连接双臂作业空间，完成物料工位级流转</td>\n          </tr>\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans font-bold text-slate-900\">移动运输底盘</td>\n            <td class=\"p-2.5 text-emerald-700\">AI-Starter 智能四驱小车 + 机械翻斗</td>\n            <td class=\"p-2.5 font-sans\">板载红外巡线传感器、超声波避障、蜂鸣器与舵机连杆翻斗，执行长距离自主物流</td>\n          </tr>\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans font-bold text-slate-900\">主控与通信枢纽</td>\n            <td class=\"p-2.5 text-purple-700\">Arduino 控制盒 + XBee 射频通信模块</td>\n            <td class=\"p-2.5 font-sans\">桥接机械臂与移动小车间的跨机无线握手，通过 XCTU 工具配置射频通道与波特率</td>\n          </tr>\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans font-bold text-slate-900\">软件工程环境</td>\n            <td class=\"p-2.5 text-amber-700\">DobotBlock 模块化编程平台 + XCTU</td>\n            <td class=\"p-2.5 font-sans\">构建图形化模块逻辑、轨迹点位示教标定、时序闭环调度与在线参数固化</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n  </div>\n\n  <!-- Card 4: 核心控制逻辑与 DobotBlock 程序架构 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n      核心控制逻辑与 DobotBlock 模块化算法拆解\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs mb-4\">\n      <div class=\"bg-white p-4 rounded-xl border border-slate-200 shadow-xs space-y-2\">\n        <div class=\"font-bold text-sky-800 flex items-center gap-1.5\">\n          <span>🤖 1. 上料机械臂：状态机与光电同步</span>\n        </div>\n        <p class=\"text-slate-600 leading-relaxed font-serif\">\n          循环轮询光电引脚。当小车停靠在物资装载区遮挡传感器时，系统触发装载事件：机械臂吸盘依预置三维坐标下降至物资调配区，分层吸取积木，平滑转位至传送带起点释放，并启动传送带电机步进运转。\n        </p>\n        <img src=\"/media/2022/xu_robotics/image2.png\" alt=\"上料机械臂程序截图\" class=\"w-full max-h-48 object-contain rounded-lg border border-slate-100 bg-slate-50\" />\n      </div>\n      <div class=\"bg-white p-4 rounded-xl border border-slate-200 shadow-xs space-y-2\">\n        <div class=\"font-bold text-emerald-800 flex items-center gap-1.5\">\n          <span>📦 2. 分拣码放臂：色度判定与多层立体码垛</span>\n        </div>\n        <p class=\"text-slate-600 leading-relaxed font-serif\">\n          物料到达传送带末端触发光电开关，分拣臂执行吸附动作并悬停在颜色传感器探头上。通过 RGB 反射比提取特征色相值。若为任务目标颜色则投放至小车托盘；非任务颜色则移送至仓库执行<strong>立体多层精准堆叠码垛</strong>。\n        </p>\n        <img src=\"/media/2022/xu_robotics/image5.png\" alt=\"分拣机械臂程序截图\" class=\"w-full max-h-48 object-contain rounded-lg border border-slate-100 bg-slate-50\" />\n      </div>\n    </div>\n    <div class=\"bg-white p-4 rounded-xl border border-slate-200 shadow-xs space-y-2 text-xs\">\n      <div class=\"font-bold text-indigo-800 flex items-center gap-1.5\">\n        <span>🚗 3. AI-Starter 巡线、主动礼让与翻斗卸载逻辑</span>\n      </div>\n      <p class=\"text-slate-600 leading-relaxed font-serif\">\n        底盘搭载 4 组高敏红外对管，通过双闭环差速控制确保高速贴线巡航。行至学校避让区时识别到蓝色地标即刻制动，驱动板载蜂鸣器鸣笛 3 秒以礼让行人；进入冬奥村卸料区后，PWM 驱动舵机连杆上掀翻斗完成卸载。\n      </p>\n      <img src=\"/media/2022/xu_robotics/image9.png\" alt=\"控制盒与小车控制程序截图\" class=\"w-full max-h-48 object-contain rounded-lg border border-slate-100 bg-slate-50 mx-auto\" />\n    </div>\n  </div>\n\n  <!-- Card 5: 六大排障难点与解决方案 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-rose-600\"></span>\n      六大实操排障难点与系统性解决方案\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-xs mb-3\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1\">\n        <div class=\"font-bold text-slate-900\">① 场地光温变化与参数漂移</div>\n        <p class=\"text-slate-600 leading-relaxed font-serif\">不同时间段自然光照导致颜色传感器 RGB 读取值波动。团队建立<strong>参数基准纠偏台账</strong>，设定动态色度容差带，实现现场 1 分钟快速自校准。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1\">\n        <div class=\"font-bold text-slate-900\">② 回字形黑线红外反射抖动</div>\n        <p class=\"text-slate-600 leading-relaxed font-serif\">地毯细微褶皱容易造成小车巡线脱轨。团队引入软件时间窗口消抖滤波，结合小车两轮差速比例微调，实现平滑过弯无摆震。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1\">\n        <div class=\"font-bold text-slate-900\">③ 立体仓库多层码垛重力掉落</div>\n        <p class=\"text-slate-600 leading-relaxed font-serif\">积木层数越高重心越不稳。团队反复调试机械臂下降高度 offset 参数，在释放负压瞬间微调末端平滑度，确保三层积木堆叠稳如泰山。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1\">\n        <div class=\"font-bold text-slate-900\">④ 8分钟密集时序无阻塞优化</div>\n        <p class=\"text-slate-600 leading-relaxed font-serif\">9 个任务步骤串行极易超时。团队通过 XBee 异步状态握手，实现“小车回程巡线与机械臂下一轮预抓取”并发并行，将全流程节拍压缩至 6 分 40 秒。</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Card 6: 机器人社团卓越建设与极客传承 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex items-center justify-between mb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 flex items-center gap-2\">\n        <span class=\"w-2 h-2 rounded-full bg-amber-600\"></span>\n        机器人社团卓越建设、嘉年华风采展演与极客传承\n      </h3>\n      <span class=\"text-[11px] font-mono text-amber-700 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200\">社团建设与育人成果</span>\n    </div>\n    <p class=\"text-xs text-slate-700 mb-3 font-serif leading-relaxed\">\n      徐天润自 2021 年底接任南通中学机器人社团社长。面对疫情常态化带来的活动挑战，他不仅带队攻坚冬奥竞赛，更将社团建设推向了全新高度：\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-3\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-amber-800 font-bold\">🎉 社团嘉年华全校震撼展演</div>\n        <p class=\"text-slate-600 leading-relaxed\">在学校社团嘉年华上，组织社员用机器人写毛笔字、下五子棋、弹钢琴，并配合机械臂自动化物流演练，成为全场最瞩目的科技焦点。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-sky-800 font-bold\">📋 精准问卷摸底与 50 人招新</div>\n        <p class=\"text-slate-600 leading-relaxed\">自主制作精美宣传海报，面向全校吸引 50 余名高一新生报名。精心设计问卷调研编程基础，因材施教分层布置任务，社团常规活动出勤率达 90%。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-emerald-800 font-bold\">✨ 纯粹自驱力与极客风骨</div>\n        <p class=\"text-slate-600 leading-relaxed\">当得知因外省疫情导致线下比赛取消时，徐天润勉励队友：“我们因热爱而相聚，编程技能与解决问题的快乐已被我们收获！”全队不改初心坚持完成全套联调。</p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "通中首个高水平团队协同研发工程！四位同学分工极其明确，打通了工业级机械臂、自动化流水线与无人小车的全套物理闭环，工程量极其饱满。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "有成果、有合作、系统设计全面。不仅技术实现硬核，徐天润同学在社团建设与活动组织中展现了优秀的领导力与极客传承风骨，全票荣膺凌绝望岳奖。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "团队配合默契，面对突发情况展现了极强的韧性与解决真实问题的能力。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2022-徐天润、张林浩、李吴庶、俞乾齐 - 申请表原件",
+          "filename": "2022-徐天润、张林浩、李吴庶、俞乾齐-申请表原件.docx",
+          "url": "/downloads/projects/2022-xu-tianrun-robotics-team/2022-徐天润、张林浩、李吴庶、俞乾齐-申请表原件.docx",
+          "size": "12.4 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-xu-tianrun-robotics-team",
+          "projectTitle": "“DOBOT 智造大挑战—智慧冬奥”机器人物资运输项目与社团建设",
+          "studentName": "徐天润、张林浩、李吴庶、俞乾齐",
+          "editionYear": "2022",
+          "description": "徐天润、张林浩、李吴庶、俞乾齐 于 2022 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2022-徐天润、张林浩、李吴庶、俞乾齐 - 项目设计文档/学术报告",
+          "filename": "2022-徐天润、张林浩、李吴庶、俞乾齐-项目技术报告.docx",
+          "url": "/downloads/projects/2022-xu-tianrun-robotics-team/2022-徐天润、张林浩、李吴庶、俞乾齐-项目技术报告.docx",
+          "size": "2.3 MB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2022-xu-tianrun-robotics-team",
+          "projectTitle": "“DOBOT 智造大挑战—智慧冬奥”机器人物资运输项目与社团建设",
+          "studentName": "徐天润、张林浩、李吴庶、俞乾齐",
+          "editionYear": "2022",
+          "description": "《“DOBOT 智造大挑战—智慧冬奥”机器人物资运输项目与社团建设》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2022-徐天润、张林浩、李吴庶、俞乾齐 - 机器人社团活动总结与招新报告",
+          "filename": "2022-徐天润、张林浩、李吴庶、俞乾齐-机器人社团活动小结.docx",
+          "url": "/downloads/projects/2022-xu-tianrun-robotics-team/2022-徐天润、张林浩、李吴庶、俞乾齐-机器人社团活动小结.docx",
+          "size": "18.8 KB",
+          "type": "doc",
+          "category": "社团总结",
+          "projectId": "2022-xu-tianrun-robotics-team",
+          "projectTitle": "“DOBOT 智造大挑战—智慧冬奥”机器人物资运输项目与社团建设",
+          "studentName": "徐天润、张林浩、李吴庶、俞乾齐",
+          "editionYear": "2022",
+          "description": "徐天润作为社长提交的 2022 年机器人社团年度活动小结与招新总结。"
+        },
+        {
+          "title": "2022-徐天润、张林浩、李吴庶、俞乾齐 - 个人申报表（社团建设专项）",
+          "filename": "2022-徐天润、张林浩、李吴庶、俞乾齐-个人申请表(社团贡献).docx",
+          "url": "/downloads/projects/2022-xu-tianrun-robotics-team/2022-徐天润、张林浩、李吴庶、俞乾齐-个人申请表(社团贡献).docx",
+          "size": "11.9 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-xu-tianrun-robotics-team",
+          "projectTitle": "“DOBOT 智造大挑战—智慧冬奥”机器人物资运输项目与社团建设",
+          "studentName": "徐天润、张林浩、李吴庶、俞乾齐",
+          "editionYear": "2022",
+          "description": "徐天润个人就机器人社团建设与竞赛组织提交的望岳奖学金申报表。"
+        },
+        {
+          "title": "2022-徐天润、张林浩、李吴庶、俞乾齐 - 项目源代码",
+          "filename": "2022-徐天润、张林浩、李吴庶、俞乾齐-项目源代码.zip",
+          "url": "/downloads/projects/2022-xu-tianrun-robotics-team/2022-徐天润、张林浩、李吴庶、俞乾齐-项目源代码.zip",
+          "size": "5.8 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2022-xu-tianrun-robotics-team",
+          "projectTitle": "“DOBOT 智造大挑战—智慧冬奥”机器人物资运输项目与社团建设",
+          "studentName": "徐天润、张林浩、李吴庶、俞乾齐",
+          "editionYear": "2022",
+          "description": "《“DOBOT 智造大挑战—智慧冬奥”机器人物资运输项目与社团建设》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2022-ma-jiayue-pig-feeder",
+      "title": "“手自一体式”自动化仔猪精准导料食槽",
+      "studentId": "ma-jiayue",
+      "studentName": "马佳悦",
+      "class": "高三14班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "自动化与农林科技",
+      "tags": [
+        "红外传感",
+        "压力称重",
+        "电路设计",
+        "机构设计",
+        "农业现代化",
+        "迭代研发"
+      ],
+      "summary": "源于看到如东马塘镇爷爷奶奶冬季冻裂双手养猪的艰辛，发明集圆形分食盘、柱-锥复合刻度储料斗、旋转罗盘、橡皮护鼻圈、红外LM358自动导料与底盘压力防卧互锁于一体的新型食槽，历经三代工程迭代并在养猪基地进行了一年全周期对照实测，荣获江苏省青创赛一等奖与中国国际“互联网+”萌芽赛道奖。",
+      "video": {
+        "src": "media/2022_ma_pig_feeder.mp4",
+        "poster": "media/2022_ma_pig_feeder_poster.jpg",
+        "title": "仔猪自动导料食槽实物测试演示"
+      },
+      "details": {
+        "skills": "机械机构三维建模、重力自流分料设计、LM358电平比较器电路设计、红外对射传感器调理、底盘压力称重闭环互锁、生猪全周期生长对照实测",
+        "difficulties": "生猪频繁向前撞击与暴力拱食对旋转罗盘的疲劳防护；仔猪吃饱后躺卧食槽引发红外持续误判的难题（创新引入底盘压力传感器设置体重阈值闭环熔断）；生猪各月龄从8kg到250kg体型极差下食槽尺寸的阶梯参数调优",
+        "innovations": "立足乡村振兴与现代农牧真实痛点，首创“自动导料、防止污染、定位、定量、定顿次”五大功能一体化；设计柱-锥复合透明刻度料斗与抽拉节流阀；首创“红外对射+底盘压力双重互锁”防误动作电路；实测生猪日增重提升12%~25%、出栏提前7~10天，成果荣获江苏省青少年科技创新大赛一等奖并入围全国展评。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed font-sans\">\n  <!-- Card 1: 研发初心与产业痛点调研 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 text-amber-700 border border-amber-200\">发明专利型实用成果</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">江苏省青创赛一等奖</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">中国国际“互联网+”萌芽赛道入围</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">研发初心与产业痛点调研</h3>\n    <p class=\"text-sm text-slate-700 mb-4 font-serif\">\n      本项目最初的动力源于家庭真实生产生活观察。作者在南通如东县马塘镇马西村看到爷爷奶奶每天守在猪圈，尽心饲养二十余头生猪。夏天圈舍恶臭难耐挥汗如雨，冬天为让猪长膘需顶着刺骨寒风打捞青料，双手冻裂。然而，实地走访周边数十户家庭养殖户后发现，现行普遍采用的长条敞口传统食槽存在极严重的弊端：\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-3\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-rose-700 font-bold mb-1\">1. “大锅饭”踩踏浪费触目惊心</div>\n        <p class=\"text-slate-600\">敞口食槽过矮且无物理分隔，数十头生猪争抢进食肆意踩踏与拱出。据畜牧业统计，<strong>全国每年因踩踏拱散导致的饲料浪费高达 8960 万吨</strong>，给养殖户造成沉重经济损失。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-amber-700 font-bold mb-1\">2. 强弱两极分化与出栏延迟</div>\n        <p class=\"text-slate-600\">抢食能力强的猪过度肥胖，体弱仔猪瘦小，群体生长参差不齐。后续农户即便额外“开小灶”，也极大增加了人工看护与饲料成本。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-emerald-700 font-bold mb-1\">3. 经验目测与变质致病隐患</div>\n        <p class=\"text-slate-600\">传统投喂全凭目测经验，上顿未吃完的残料极易受唾液和泥浆污染。在夏秋高温环境下残料变质霉变，生猪误食极易诱发消化道疫病。</p>\n      </div>\n    </div>\n    <div class=\"bg-blue-50/60 border border-blue-200 rounded-xl p-3 text-xs text-blue-800\">\n      <strong>设备定位：</strong>市面上大型养殖场全套自动化饲喂系统造价动辄数万，中小型农户根本无力承担；本设计旨在为中小型家庭养殖户打造一款<strong>超低造价、坚固耐用、免复杂维护的轻量化智能导料食槽</strong>。\n    </div>\n  </div>\n\n  <!-- Card 2: 机械构造与五大核心功能 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n      机械结构与“自动导料·防止污染·定位·定量·定顿次”五大功能\n    </h3>\n    <p class=\"text-xs text-slate-600 mb-4 font-serif\">\n      本装置受到雏鸡分食盘的启发，自上而下由<strong>刻度储料斗、抽拉式阀门、机械旋转罗盘、弹性橡皮护鼻圈、锥形分料底盆与隔档分食盘</strong>等六大模块精密咬合构成：\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-xs mb-4\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-sky-700 font-bold\">① 柱-锥复合式刻度储料斗（定量 / 定顿次）</div>\n        <p class=\"text-slate-600 leading-relaxed\">上半部为透明圆柱体，内壁标有精准容积刻度线以便定量控制；下半部为锥度下缩体利于物料重力自流；底部连接抽拉式插板阀，可精准控制当顿出料总量与投放时段。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-indigo-700 font-bold\">② 锥形凸起底盆（均匀分散导料）</div>\n        <p class=\"text-slate-600 leading-relaxed\">位于落料正下方，中心呈圆锥形凸起。饲料自上落下时撞击锥面，依靠重力与斜面发散效应，360° 无死角均匀滑入外围各个独立进食餐槽。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-amber-700 font-bold\">③ 拱动式旋转罗盘与橡皮护鼻圈（半自动落料与护体）</div>\n        <p class=\"text-slate-600 leading-relaxed\">安装于下料口处，外圈附着软质橡皮护鼻圈。仔猪进食时向前拱动罗盘，带动转动机构开启下料间隙使干料均匀掉落；同时橡皮圈保护仔猪娇嫩鼻吻不被机械擦伤。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs space-y-1.5\">\n        <div class=\"text-emerald-700 font-bold\">④ 加高隔离圆形分食盘（定位 / 防止踩踏污染）</div>\n        <p class=\"text-slate-600 leading-relaxed\">槽壁高度针对不同月龄由 15cm 梯次增加至 30cm，外周安装弧形金属隔离竖栏。将生猪头部限定在固定扇形格位内进食，彻底阻断生猪将蹄爪踏入食槽拱散污染的可能。</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Card 3: 三代完整工程迭代演进史 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-indigo-600\"></span>\n      三代样机精益求精的工程迭代路径\n    </h3>\n    <div class=\"space-y-3 text-xs\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs flex items-start gap-3\">\n        <span class=\"px-2 py-0.5 rounded font-mono font-bold bg-slate-100 text-slate-800 shrink-0\">第一代</span>\n        <div class=\"space-y-1\">\n          <div class=\"font-bold text-slate-900\">纯手动分餐加高导料食槽（原型验证）</div>\n          <p class=\"text-slate-600 leading-relaxed\">首度引入圆形分餐格和储料仓刻度概念，通过人工拉动抽拉阀门下料。成功解决了传统食槽的踩踏和拱翻问题，但仍需人工在场定时看护放料。</p>\n        </div>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs flex items-start gap-3\">\n        <span class=\"px-2 py-0.5 rounded font-mono font-bold bg-blue-100 text-blue-800 shrink-0\">第二代</span>\n        <div class=\"space-y-1\">\n          <div class=\"font-bold text-slate-900\">机械罗盘半自动拱料食槽（自反馈下料）</div>\n          <p class=\"text-slate-600 leading-relaxed\">增设内部旋转罗盘与锥形导料体，利用生猪拱动天性驱动罗盘旋转下料，实现“越拱越落、不吃不落”的自适应平衡，显著降低放料频次。</p>\n        </div>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs flex items-start gap-3\">\n        <span class=\"px-2 py-0.5 rounded font-mono font-bold bg-emerald-100 text-emerald-800 shrink-0\">第三代</span>\n        <div class=\"space-y-1\">\n          <div class=\"font-bold text-slate-900\">红外对射智能感应 + 底盘压力防卧互锁机制（机电一体化成型）</div>\n          <p class=\"text-slate-600 leading-relaxed\">增加红外发射接收管与 LM358 模拟比较器控制舵机自动补料；同时在底盘加装<strong>压力传感器双重闭环保护</strong>，彻底解决仔猪吃饱后躺卧槽内引发红外误动作的行业隐患。</p>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Card 4: 电气控制系统与闭环防误触原理 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      智能电路原理与防躺卧双重传感互锁\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs mb-3\">\n      <div class=\"bg-white p-4 rounded-xl border border-slate-200 shadow-xs space-y-2\">\n        <div class=\"font-bold text-sky-800 flex items-center gap-1.5\">\n          <span>⚡ 红外反射与 LM358 比较器电平调理</span>\n        </div>\n        <p class=\"text-slate-600 leading-relaxed font-serif\">\n          由红外发射管 VD1 持续发出调制光波。当仔猪头部靠近食槽遮挡时光线反射至红外接收管 VD2，VD2 导通使负极电位骤降，送入 LM358 比较器 3 脚（同相端 $V_+$）。当 $V_+ &lt; V_-$ 时，1 脚翻转输出低电平，通过限流电阻使 PNP 三极管 VT1、VT2 饱和导通，蜂鸣器发声提示并驱动舵机带动撒料盘自动旋转下落干料。\n        </p>\n      </div>\n      <div class=\"bg-white p-4 rounded-xl border border-slate-200 shadow-xs space-y-2\">\n        <div class=\"font-bold text-rose-800 flex items-center gap-1.5\">\n          <span>🛡️ 底盘压力传感器闭环互锁（防躺误触保护）</span>\n        </div>\n        <p class=\"text-slate-600 leading-relaxed font-serif\">\n          实际养殖中发现部分仔猪吃饱后习惯直接蜷卧在食槽内，导致红外常闭触发、舵机持续下料造成浪费。作者创新在底盘加装<strong>压敏电阻/称重传感器</strong>，设定体重压力阈值。一旦整猪压于槽内，传感器触发断路保护强行关闭舵机；当仔猪爬起离开、检测承重减小至初值 1/2 以下时，系统自动复位清零恢复感应，构成了极具匠心的自愈闭环。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Card 5: 真实养殖对照实验数据全景表 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex items-center justify-between mb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 flex items-center gap-2\">\n        <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n        一年期生猪全周期生长与日增重对比实测记录表\n      </h3>\n      <span class=\"text-[11px] font-mono text-slate-500\">实地猪圈跟踪数据</span>\n    </div>\n    <p class=\"text-xs text-slate-600 mb-3 font-serif\">\n      作者在如东马塘养猪基地进行了长达一年、贯穿断奶仔猪到出栏全周期的严格对照试验（等量投喂相同风干精料与青饲配比）：\n    </p>\n    <div class=\"overflow-x-auto rounded-xl border border-slate-200 bg-white\">\n      <table class=\"w-full text-xs text-left text-slate-700\">\n        <thead class=\"bg-slate-100 text-slate-800 font-bold border-b border-slate-200 text-[11px]\">\n          <tr>\n            <th class=\"p-2.5\">生猪月龄 / 阶段体重</th>\n            <th class=\"p-2.5\">日食量 (风干料)</th>\n            <th class=\"p-2.5\">投喂频次</th>\n            <th class=\"p-2.5 text-emerald-800 font-bold bg-emerald-50/50\">新型食槽日增重</th>\n            <th class=\"p-2.5 text-slate-600\">传统食槽日增重</th>\n            <th class=\"p-2.5\">食槽直径 / 格数</th>\n            <th class=\"p-2.5\">每格外围尺寸</th>\n          </tr>\n        </thead>\n        <tbody class=\"divide-y divide-slate-100 font-mono text-[11px]\">\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans\">1月龄断奶 / 8 kg</td>\n            <td class=\"p-2.5\">0.20 kg</td>\n            <td class=\"p-2.5\">4~5 次</td>\n            <td class=\"p-2.5 text-emerald-700 font-bold bg-emerald-50/30\">0.11 kg</td>\n            <td class=\"p-2.5 text-slate-500\">0.09~0.10 kg</td>\n            <td class=\"p-2.5\">Ø 120 cm / 8 格</td>\n            <td class=\"p-2.5 font-sans\">约 45 cm（每格2头）</td>\n          </tr>\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans\">2月龄保育 / 18 kg</td>\n            <td class=\"p-2.5\">1.50 kg</td>\n            <td class=\"p-2.5\">3~4 次</td>\n            <td class=\"p-2.5 text-emerald-700 font-bold bg-emerald-50/30\">0.80 kg</td>\n            <td class=\"p-2.5 text-slate-500\">0.60~0.70 kg</td>\n            <td class=\"p-2.5\">Ø 140 cm / 6 格</td>\n            <td class=\"p-2.5 font-sans\">约 73 cm（每格2头）</td>\n          </tr>\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans\">3月龄育肥 / 60 kg</td>\n            <td class=\"p-2.5\">2.0~2.2 kg</td>\n            <td class=\"p-2.5\">3~4 次</td>\n            <td class=\"p-2.5 text-emerald-700 font-bold bg-emerald-50/30\">1.20 kg</td>\n            <td class=\"p-2.5 text-slate-500\">1.00 kg</td>\n            <td class=\"p-2.5\">Ø 180 cm / 6 格</td>\n            <td class=\"p-2.5 font-sans\">约 94 cm（每格1~2头）</td>\n          </tr>\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans\">4月龄育肥 / 90 kg</td>\n            <td class=\"p-2.5\">2.2~2.3 kg</td>\n            <td class=\"p-2.5\">3~4 次</td>\n            <td class=\"p-2.5 text-emerald-700 font-bold bg-emerald-50/30\">1.20 kg</td>\n            <td class=\"p-2.5 text-slate-500\">1.09 kg</td>\n            <td class=\"p-2.5\">Ø 200 cm / 6 格</td>\n            <td class=\"p-2.5 font-sans\">约 104 cm（每格2头）</td>\n          </tr>\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans\">6~7月龄育肥 / 150 kg</td>\n            <td class=\"p-2.5\">3.50 kg</td>\n            <td class=\"p-2.5\">3 次</td>\n            <td class=\"p-2.5 text-emerald-700 font-bold bg-emerald-50/30\">1.78 kg</td>\n            <td class=\"p-2.5 text-slate-500\">1.50~1.60 kg</td>\n            <td class=\"p-2.5\">Ø 200 cm / 5 格</td>\n            <td class=\"p-2.5 font-sans\">约 125 cm（每格2头）</td>\n          </tr>\n          <tr class=\"hover:bg-slate-50/50\">\n            <td class=\"p-2.5 font-sans\">11~12月龄出栏 / 250 kg</td>\n            <td class=\"p-2.5\">3.60 kg</td>\n            <td class=\"p-2.5\">3 次</td>\n            <td class=\"p-2.5 text-emerald-700 font-bold bg-emerald-50/30\">1.38 kg</td>\n            <td class=\"p-2.5 text-slate-500\">1.30 kg</td>\n            <td class=\"p-2.5\">Ø 220 cm / 4 格</td>\n            <td class=\"p-2.5 font-sans\">约 172 cm（每格2头）</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n    <div class=\"mt-3 p-3 bg-emerald-50/70 border border-emerald-200 rounded-xl text-xs text-emerald-800 leading-relaxed\">\n      <strong>对照结论：</strong>在投放等量干物料的严格对照下，新型食槽组各阶段日增重平均提高 <strong>12%~25%</strong>。原因在于传统槽残料发酵污染、强壮生猪抢食踩塌导致弱猪摄入不足；新型食槽实现均匀分餐，生猪各得其所无应激，饲料转化率（FCR）提升极显著，提前 7~10 天达到出栏体重。\n    </div>\n  </div>\n\n  <!-- Card 6: 四代前瞻升级（冬季双电热盘预热） -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-2 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-amber-600\"></span>\n      第四代前瞻设想：“让小猪在冬日吃上一口热饭”\n    </h3>\n    <p class=\"text-xs text-slate-600 leading-relaxed font-serif\">\n      针对苏中地区冬季湿冷、刚断奶幼猪胃肠娇嫩易发生应激腹泻的难题，作者在研究报告中进一步提出了四代料温管理构想：摒弃在食槽底部加热容易烫伤猪吻的旧思路，将<strong>预热单元前置至上部锥形储料仓</strong>内。在料斗两侧开孔加装直径 18cm 两管三段式环绕电热盘，开饭前 15 分钟定时对干料进行双面温和加热，再经由自流管导落食盘。既保护了仔猪胃肠消化酶活性，又确保设备接触面完全隔热绝缘。\n    </p>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "非常优秀的工程实践！展示极其清晰，项目有强烈的现实意义，经历多轮合理迭代，令人印象深刻。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "很有意思的项目，设计细致，思路开阔。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "项目有意义、有难度、落地性强。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "机械构思精巧，完成了实物制作。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "建议补充更多电路原理图与力学传感标定数据。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2022-马佳悦 - 申请表原件",
+          "filename": "2022-马佳悦-申请表原件.docx",
+          "url": "/downloads/projects/2022-ma-jiayue-pig-feeder/2022-马佳悦-申请表原件.docx",
+          "size": "16.1 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-ma-jiayue-pig-feeder",
+          "projectTitle": "“手自一体式”自动化仔猪精准导料食槽",
+          "studentName": "马佳悦",
+          "editionYear": "2022",
+          "description": "马佳悦 于 2022 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2022-马佳悦 - 项目设计文档/学术报告",
+          "filename": "2022-马佳悦-项目技术报告.docx",
+          "url": "/downloads/projects/2022-ma-jiayue-pig-feeder/2022-马佳悦-项目技术报告.docx",
+          "size": "3.2 MB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2022-ma-jiayue-pig-feeder",
+          "projectTitle": "“手自一体式”自动化仔猪精准导料食槽",
+          "studentName": "马佳悦",
+          "editionYear": "2022",
+          "description": "《“手自一体式”自动化仔猪精准导料食槽》官方归档技术文档/研究报告原稿。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2022/ma_award_cert.png",
+          "caption": "第33届江苏省青少年科技创新大赛一等奖获奖证书（马佳悦《“手自一体式”仔猪导料食槽》）",
+          "category": "cert"
+        },
+        {
+          "src": "media/2022/ma_national_presentation.jpg",
+          "caption": "入选全国科技创新大赛并作为代表向评审专家进行全国线上交流汇报",
+          "category": "presentation"
+        }
+      ]
+    },
+    {
+      "id": "2022-yang-xiao-home-server",
+      "title": "基于低成本微型服务器的家庭数据中心与私有云平台",
+      "studentId": "yang-xiao",
+      "studentName": "杨逍",
+      "class": "高三10班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "系统与运维",
+      "tags": [
+        "Linux",
+        "Samba",
+        "CUPS云打印",
+        "内网穿透",
+        "自动化备份",
+        "极客生活"
+      ],
+      "summary": "作者基于廉价的 Intel Celeron G5905 与 H410M 主板组装了一台超低功耗微型服务器，全栈运行 Arch Linux，实现了高性能软路由、CUPS 老旧打印机无线 AirPrint 改造、systemd-nspawn 容器化 OpenMediaVault 私有云 NAS 存储（集中备份单反 RAW 摄影原片），以及 EFB + go-cqhttp 双向消息中继中枢，以 ￥1300 元极低成本切实解决了家庭日常生活与极客学习的多重刚需。",
+      "details": {
+        "skills": "Arch Linux 极客系统深度定制、systemd-networkd/resolved 软路由配置、CUPS 与 brlaser 打印驱动编译、debootstrap + systemd-nspawn 轻量容器化技术、Samba 与 Avahi mDNS 局域网广播、EFB (EH Forwarder Bot) 跨平台通讯中继",
+        "difficulties": "在 Arch Linux 上运行依赖 Debian 环境的 OpenMediaVault 兼顾 I/O 性能与系统隔离；老旧 Brother 打印机开源驱动适配与 iOS/Android 手机免驱 AirPrint 广播；EFB 与无头 QQ 客户端在无公网与复杂网络环境下的常态低内存稳定守护",
+        "innovations": "超低成本（整机约￥1300）达成品牌商业 NAS 与软路由数千元级别的功能体验；创新的 debootstrap+nspawn 容器架构兼顾了 Arch 最新内核与 OMV 稳定性；自制通讯中继彻底打通纯 Linux 学习环境与主流社交网络",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed font-sans\">\n  <!-- Card 1: 痛点调研与极客生活需求 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">家庭数据中枢</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">Arch Linux 极客实践</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">软硬一体低功耗</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">研发背景与家庭真实生活痛点</h3>\n    <p class=\"text-sm text-slate-700 mb-4 font-serif\">\n      本项目的出发点源于日常学习与家庭生活中的三大真实痛点。作为南通中学高三学生，作者平时的主要工作环境为 Windows 11 + Arch Linux 双系统，在实际使用中长期面临软硬件协同与家庭服务共享的现实困扰：\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-3\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-blue-700 font-bold mb-1\">1. Arch Linux 原生通信匮乏</div>\n        <p class=\"text-slate-600\">主力极客工作环境为 Arch Linux，然而在 Linux 平台上缺乏稳定、好用且原生轻量的 QQ 客户端，时常导致学习资料与日常班级沟通脱节。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-amber-700 font-bold mb-1\">2. 老旧打印机共享困难</div>\n        <p class=\"text-slate-600\">家中有一台旧款黑白激光打印机（Brother HL-1208），仅支持 USB 连接。每次打印试卷作业都必须单独开启一台电脑，且全家其他成员及手机无法共享，使用门槛极高。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-emerald-700 font-bold mb-1\">3. 大量摄影 RAW 原片存储告急</div>\n        <p class=\"text-slate-600\">作者爱好摄影，高像素单反相机产生的大量 RAW 格式照片原片迅速塞满个人电脑硬盘，急需一个局域网高速存储池实现全家访问与集中备份，解放本机存储空间。</p>\n      </div>\n    </div>\n    <div class=\"text-xs text-slate-500 font-mono bg-white p-3 rounded-lg border border-slate-200\">\n      💡 <strong>架构决策</strong>：三大需求对服务器峰值算力要求适中，但对 24 小时开机运行的稳定性、静音与功耗控制要求极高。因此采用低成本硬件组装微型服务器，搭配高定制度的 Arch Linux 构建全能私有云生态。\n    </div>\n  </div>\n\n  <!-- Card 2: 硬件选型与系统负载 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2 mb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900\">￥1300 元超低成本微型硬件平台与能效调优</h3>\n      <span class=\"px-2 py-0.5 text-xs font-mono bg-blue-100 text-blue-800 rounded\">总造价仅约 ￥1300</span>\n    </div>\n    <p class=\"text-xs sm:text-sm text-slate-700 mb-4 font-serif\">\n      摒弃昂贵的品牌 NAS 或高功耗机架服务器，作者采用精选配件自主组装了一台超低功耗的家用小主机，兼具高性价比与长期运行可靠性：\n    </p>\n    <div class=\"grid grid-cols-2 sm:grid-cols-4 gap-3 text-xs mb-4\">\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 text-center\">\n        <div class=\"text-slate-400 font-mono text-[11px]\">处理器 CPU</div>\n        <div class=\"font-bold text-slate-900 mt-1\">Intel Celeron G5905</div>\n        <div class=\"text-[11px] text-slate-500 mt-0.5\">***************</div>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 text-center\">\n        <div class=\"text-slate-400 font-mono text-[11px]\">主板 Motherboard</div>\n        <div class=\"font-bold text-slate-900 mt-1\">Gigabyte H410M H V3</div>\n        <div class=\"text-[11px] text-slate-500 mt-0.5\">稳定扎实的入门工控主板</div>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 text-center\">\n        <div class=\"text-slate-400 font-mono text-[11px]\">运行内存 RAM</div>\n        <div class=\"font-bold text-slate-900 mt-1\">8 GB DDR4</div>\n        <div class=\"text-[11px] text-slate-500 mt-0.5\">常态占用 &lt; 400MB</div>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 text-center\">\n        <div class=\"text-slate-400 font-mono text-[11px]\">存储阵列 Storage</div>\n        <div class=\"font-bold text-slate-900 mt-1\">WD Red Plus 2TB</div>\n        <div class=\"text-[11px] text-slate-500 mt-0.5\">CMR 垂直记录 NAS 专用盘</div>\n      </div>\n    </div>\n    <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 text-xs space-y-2\">\n      <div class=\"font-bold text-slate-900 flex items-center gap-2\">\n        <span>📊 实际负载监测指标（htop 实测）</span>\n      </div>\n      <div class=\"grid grid-cols-1 sm:grid-cols-3 gap-2 text-slate-600\">\n        <div>• <strong>系统进程总数</strong>：仅 56 个任务（44 线程），轻量无臃肿</div>\n        <div>• <strong>CPU 常态负载</strong>：平均利用率 &lt; 10%，1 分钟 Load Average 仅 0.09</div>\n        <div>• <strong>内存占用表现</strong>：全栈服务并发运行仅占用 388 MB / 7.6 GB</div>\n      </div>\n    </div>\n  </div>\n\n  <!-- Card 3: 软路由 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2 mb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900\">systemd-networkd 全栈高性能软路由设计</h3>\n      <span class=\"px-2 py-0.5 text-xs font-mono bg-indigo-100 text-indigo-800 rounded\">网络中枢</span>\n    </div>\n    <p class=\"text-xs sm:text-sm text-slate-700 mb-4 font-serif\">\n      作者摒弃常规 OpenWrt 虚拟机的高开销方案，直接在 Arch Linux 原生环境利用 systemd 网络基础设施实现全功能软路由与内核调优：\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-xs mb-3\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 space-y-1.5\">\n        <div class=\"font-bold text-blue-900\">🌐 WAN 口与内网桥接 (WAN &amp; Bridge)</div>\n        <p class=\"text-slate-600\">\n          • <strong>WAN 接口 (<code>extern0</code>)</strong>：<code>20-wired-external-dhcp.network</code> 开启 DHCP、IPv6 RA 接收与隐私扩展。<br/>\n          • <strong>网桥设备 (<code>br_lan</code>)</strong>：<code>10-br_lan.netdev</code> 创建内核 bridge，并通过 <code>30-br_lan-bind.network</code> 聚合内部千兆网口。\n        </p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 space-y-1.5\">\n        <div class=\"font-bold text-indigo-900\">📡 内网网段与 NAT 转发 (LAN &amp; Masquerade)</div>\n        <p class=\"text-slate-600\">\n          • <strong>内网 IP 规划</strong>：网关设定为 <code>10.0.0.1/24</code>，开启 <code>MulticastDNS=yes</code> 与 <code>IPMasquerade=both</code> 进行双向流量伪装转发。<br/>\n          • <strong>DHCP 服务</strong>：采用工业级 <code>dhcpd</code> 分配 <code>10.0.0.100~10.0.0.250</code> 动态地址池。\n        </p>\n      </div>\n    </div>\n    <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 text-xs space-y-1 text-slate-600 font-mono\">\n      <div>• <strong>DNS 智能解析</strong>：利用 <code>systemd-resolved</code> 监听在 <code>10.0.0.1</code>，配置上游公共 DNS（8.8.8.8 及局域网解析），提供零延迟域名解析缓存。</div>\n      <div>• <strong>Linux 内核网络调优</strong>：参照 Arch Linux Sysctl Networking 规范，优化 TCP 窗口与缓冲区大小，提升大流量内网吞吐。</div>\n    </div>\n  </div>\n\n  <!-- Card 4: CUPS 打印系统 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2 mb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900\">CUPS + Avahi 老旧打印机免驱 AirPrint 网络化改造</h3>\n      <span class=\"px-2 py-0.5 text-xs font-mono bg-emerald-100 text-emerald-800 rounded\">家庭实用</span>\n    </div>\n    <p class=\"text-xs sm:text-sm text-slate-700 mb-3 font-serif\">\n      针对家中老旧的 Brother HL-1208 激光打印机，作者在 Linux 服务器上架设 CUPS 打印服务后台，成功赋予其无缝全屋网络打印与移动端 AirPrint 打印能力：\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-3\">\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200\">\n        <div class=\"font-bold text-slate-900 mb-1\">1. 开源驱动编译与加载</div>\n        <p class=\"text-slate-600\">通过 AUR 安装并配置专有开源驱动包 <code>brlaser</code>（选用 Brother HL-1200 series using brlaser v6 灰度驱动），实现稳定光栅化转换。</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200\">\n        <div class=\"font-bold text-slate-900 mb-1\">2. Avahi mDNS 跨网段广播</div>\n        <p class=\"text-slate-600\">CUPS 深度依赖 Avahi 实现自动服务发现。修改 <code>/etc/nsswitch.conf</code> 开启 <code>mdns_minimal</code>，使局域网手机与平板能够秒级识别 AirPrint 设备。</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200\">\n        <div class=\"font-bold text-slate-900 mb-1\">3. 全平台免驱无感接入</div>\n        <p class=\"text-slate-600\">Windows 电脑通过 IPP 协议添加打印机直接使用；苹果 iOS/macOS 纯原生自动识别；无需每次特意开电脑打印作业。</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Card 5: OMV 存储 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2 mb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900\">systemd-nspawn 容器化 OpenMediaVault 私有云存储</h3>\n      <span class=\"px-2 py-0.5 text-xs font-mono bg-purple-100 text-purple-800 rounded\">2TB RAW 原片云库</span>\n    </div>\n    <p class=\"text-xs sm:text-sm text-slate-700 mb-3 font-serif\">\n      为了兼顾 Arch Linux 前沿内核特性与 OpenMediaVault（OMV）官方对 Debian 系统的深度强依赖，作者创新性地采用轻量级系统容器方案：\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3 text-xs mb-3\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 space-y-1.5\">\n        <div class=\"font-bold text-purple-900\">📦 debootstrap + systemd-nspawn 容器架构</div>\n        <p class=\"text-slate-600\">\n          使用 <code>debootstrap</code> 快速拉取构建原生 Debian 根文件系统环境，通过 <code>systemd-nspawn</code> 启动 OMV 服务容器。在配置文件中将物理机械硬盘 <code>/dev/sda</code> 与分区 <code>/dev/sda1</code> 直接直通绑定挂载进入容器，打通原生硬盘 I/O。\n        </p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 space-y-1.5\">\n        <div class=\"font-bold text-purple-900\">🗂️ 全平台自动发现与极速网络驱动器</div>\n        <p class=\"text-slate-600\">\n          编写 Avahi 服务描述文件 <code>omv-smb.service</code>（宣告 <code>_smb._tcp</code> 445 端口）。Linux 下 Dolphin 文件管理器可零配置自动探测发现；Windows 端直接将 <code>\\yx-server</code> 映射为本地网络驱动器 <code>Z:</code> 盘（可用空间达 1.69TB），摄影照片存取如本地硬盘般顺畅。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Card 6: 消息中继 -->\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2 mb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900\">EFB + go-cqhttp 跨平台即时通讯无头中继系统</h3>\n      <span class=\"px-2 py-0.5 text-xs font-mono bg-slate-100 text-slate-800 rounded\">极客通信流</span>\n    </div>\n    <p class=\"text-xs sm:text-sm text-slate-700 mb-3 font-serif\">\n      为彻底解决 Arch Linux 纯极客工作环境下缺乏可靠 QQ 客户端的刚需痛点，作者部署了 EH Forwarder Bot（EFB）消息中继网络：\n    </p>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs\">\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200\">\n        <div class=\"font-bold text-slate-900 mb-1\">1. 安全沙盒独立用户</div>\n        <p class=\"text-slate-600\">为防止服务污染主用户家目录，专门在 Linux 底层新建 <code>efb</code> 沙盒用户，隔离网络会话凭据与运行时缓存。</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200\">\n        <div class=\"font-bold text-slate-900 mb-1\">2. EFB 主从通道协同</div>\n        <p class=\"text-slate-600\">配置 <code>blueset.telegram</code> 为 Master 主端，<code>milkice.qq</code> 为 Slave 从端，建立 Telegram 与 QQ 之间的实时双向消息映射通道。</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200\">\n        <div class=\"font-bold text-slate-900 mb-1\">3. 无头 go-cqhttp 守护进程</div>\n        <p class=\"text-slate-600\">使用高性能 Go 语言无头客户端 <code>go-cqhttp</code> 对接协议网关，通过本地 HTTP API (127.0.0.1:5700) 与 EFB 通信，免去图形界面消耗。</p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "解决实际生活痛点，架构稳定实用。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "真正解决实际问题，动手能力强。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "实用性好，创新性尚有提升空间。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "系统部署完整。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2022-杨逍 - 申请表原件",
+          "filename": "2022-杨逍-申请表原件.docx",
+          "url": "/downloads/projects/2022-yang-xiao-home-server/2022-杨逍-申请表原件.docx",
+          "size": "14.4 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-yang-xiao-home-server",
+          "projectTitle": "基于低成本微型服务器的家庭数据中心与私有云平台",
+          "studentName": "杨逍",
+          "editionYear": "2022",
+          "description": "杨逍 于 2022 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2022-杨逍 - 项目设计文档/学术报告",
+          "filename": "2022-杨逍-项目技术报告.pdf",
+          "url": "/downloads/projects/2022-yang-xiao-home-server/2022-杨逍-项目技术报告.pdf",
+          "size": "1.8 MB",
+          "type": "pdf",
+          "category": "项目文档",
+          "projectId": "2022-yang-xiao-home-server",
+          "projectTitle": "基于低成本微型服务器的家庭数据中心与私有云平台",
+          "studentName": "杨逍",
+          "editionYear": "2022",
+          "description": "《基于低成本微型服务器的家庭数据中心与私有云平台》官方归档技术文档/研究报告原稿。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2022/yang_xiao_neofetch.jpg",
+          "caption": "Arch Linux 系统信息与微型服务器硬件概况 (Neofetch · Intel G5905 + H410M + 8GB RAM)",
+          "category": "system"
+        },
+        {
+          "src": "media/2022/yang_xiao_htop.jpg",
+          "caption": "htop 系统资源占用监控 (56 任务常态稳定运行，全栈内存占用仅 388MB，CPU 利用率不足 10%)",
+          "category": "monitor"
+        },
+        {
+          "src": "media/2022/yang_xiao_cups.jpg",
+          "caption": "CUPS 打印后台管理面板 (成功驱动 Brother HL-1208 老式激光打印机，支持局域网免驱 AirPrint)",
+          "category": "service"
+        },
+        {
+          "src": "media/2022/yang_xiao_omv.jpg",
+          "caption": "OpenMediaVault 容器化私有云存储仪表盘 (WD Red Plus 2TB NAS 专用盘与 Samba 共享状态)",
+          "category": "nas"
+        },
+        {
+          "src": "media/2022/yang_xiao_efb_telegram.jpg",
+          "caption": "EH Forwarder Bot (EFB) Telegram 主端配置文件 (敏感通信凭证与私有 ID 已规范掩蔽)",
+          "category": "config"
+        },
+        {
+          "src": "media/2022/yang_xiao_gocqhttp.jpg",
+          "caption": "go-cqhttp 协议接入端配置文件 (账户数字等敏感凭证已规范掩蔽)",
+          "category": "config"
+        }
+      ]
+    },
+    {
+      "id": "2022-huang-tianyu-3d-glasses",
+      "title": "高效便捷防交叉感染 3D 眼镜智能回收与紫外消杀一体机",
+      "studentId": "huang-tianyu",
+      "studentName": "黄天宇",
+      "class": "高三14班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "机电一体化",
+      "tags": [
+        "紫外消杀",
+        "光电传感",
+        "防异物投递",
+        "机构设计",
+        "公共卫生"
+      ],
+      "summary": "针对影院公用3D眼镜传统人工湿巾擦拭残留病毒细菌的卫生痛点，研制集UVC多波段深紫外线杀菌、重力滚落齿轮机构与非接触感应取镜于一体的智能化设备。",
+      "video": {
+        "src": "media/2022_huang_glasses.mp4",
+        "poster": "media/2022_huang_glasses_poster.jpg",
+        "title": "3D眼镜消杀一体机功能展示"
+      },
+      "details": {
+        "skills": "紫外 C 波段辐射安全隔离设计、光电进出料检测、单片机定时与安全互锁逻辑",
+        "difficulties": "防止非眼镜异物误投卡死机构，以及短时间内确保镜片两面辐照剂量达标",
+        "innovations": "构思巧妙，直面影院公共卫生痛点，具有较好的产品转化前景。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">公共卫生防护</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-purple-50 text-purple-700 border border-purple-200\">UVC 紫外线复合消杀</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">纯自重无卡阻机械结构</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">公共卫生痛点与立项动机</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">随着 3D/IMAX 影院普及，观众入场时重复佩戴由上一场观众归还的公用 3D 眼镜已成常态。大部分影院因散场清洁时间紧迫，仅使用普通湿巾随意擦拭，镜框鼻托与镜腿残留的皮脂、结膜炎病原体与流行性病毒极易引发交叉感染。黄天宇同学针对该痛点，研发了兼具高吞吐量、全方位 360&deg; 消杀与非接触智能派发的自动化一体机。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-purple-600\"></span>\n      机械传动与消杀光路创新\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-4\">\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-sky-700 font-bold mb-1\">1. 重力滚落式传送滑道</div>\n        <p class=\"text-slate-600\">利用眼镜折叠后的重心偏心特性，自上而下通过特制倾角导轨与防卡阻齿爪平稳滑行，减少电机依赖与卡壳故障率。</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-purple-700 font-bold mb-1\">2. 环形 UVC 254nm 强辐射舱</div>\n        <p class=\"text-slate-600\">通道内壁采用高漫反射镜面铝板，上下双管深紫外线交叉照射，确保镜片两面与鼻托凹槽无死角秒级灭活。</p>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-emerald-700 font-bold mb-1\">3. 红外非接触感应派发</div>\n        <p class=\"text-slate-600\">出镜口配备非接触接近开关，观众手掌轻扫即由电磁挡板单枚释放，全程杜绝二次接触污染。</p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "结构设计有模有样，贴合公共卫生需求。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "外观与功能设计具有工业产品雏形。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "有模有样，不错。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "视频细节未完全体现设计图中的复杂机构。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2022-黄天宇 - 项目设计文档/学术报告",
+          "filename": "2022-黄天宇-项目技术报告.doc",
+          "url": "/downloads/projects/2022-huang-tianyu-3d-glasses/2022-黄天宇-项目技术报告.doc",
+          "size": "1.1 MB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2022-huang-tianyu-3d-glasses",
+          "projectTitle": "高效便捷防交叉感染 3D 眼镜智能回收与紫外消杀一体机",
+          "studentName": "黄天宇",
+          "editionYear": "2022",
+          "description": "《高效便捷防交叉感染 3D 眼镜智能回收与紫外消杀一体机》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2022-yu-qinglan-smart-trash",
+      "title": "基于智能语音识别的智联猫垃圾分类开盖装置",
+      "studentId": "yu-qinglan",
+      "studentName": "俞晴岚",
+      "class": "高三14班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "智能家居与控制",
+      "tags": [
+        "智联猫",
+        "语音识别",
+        "舵机控制",
+        "垃圾分类",
+        "无接触交互"
+      ],
+      "summary": "针对日常垃圾分类盲区与繁琐困扰，利用 OSTD 智联猫 AI 模块、声音传感器与微型舵机，研制可进行垃圾属性智能语音问答并自主精准开盖的智慧分类系统。",
+      "video": {
+        "src": "media/2022_yu_trash_bin.mp4",
+        "poster": "media/2022_yu_trash_bin_poster.jpg",
+        "title": "语音控制垃圾桶分类开盖演示"
+      },
+      "details": {
+        "skills": "语音识别词库映射、PWM 舵机角度精准控制、机械开盖力臂力矩校核",
+        "difficulties": "开盖瞬间力矩不足导致电机堵转，通过力臂结构调试解决",
+        "innovations": "将垃圾分类与无接触智能家居结合，响应环保潮流。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">生态环保科技</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">OSTD 智联猫 AI 硬件</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 text-amber-700 border border-amber-200\">智能语音交互开盖</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">项目背景与环保实用价值</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">随着南通市及全国重点城市全面推行生活垃圾强制分类，师生与居民在面对红、蓝、灰、绿不同分类桶时，常常因不清楚具体废弃物属性（如干湿纸巾、塑料软包装等）而陷入“这到底是什么垃圾”的困惑。俞晴岚同学从实用、便捷的生活常识出发，以“创意模型 + 电子硬件 + 程序智控”深度融合的方式，研发了一款可在校园班级与家庭便捷布设的智能语音分类开盖垃圾桶。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n      系统工作逻辑与控制链路\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-4\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-sky-700 font-bold mb-1\">1. 语音声学特征采集</div>\n        <p class=\"text-slate-600\">高灵敏度声音传感器捕获使用者自然发问（如“香蕉皮”、“旧电池”），滤除周围环境白噪音后完成声学特征提取。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-amber-700 font-bold mb-1\">2. 智联猫 AI 语义决策</div>\n        <p class=\"text-slate-600\">主控芯片在本地分类库中进行关键字匹对，确定属于“厨余 / 有害 / 可回收 / 其他”垃圾大类，并驱动扬声器即时语音播报。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-emerald-700 font-bold mb-1\">3. 多通道舵机精准掀盖</div>\n        <p class=\"text-slate-600\">对应仓室的舵机输出轴旋转预定开盖角，保持敞口数秒方便投放，延时后平缓回位关盖，有效阻隔异味挥发。</p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "综合利用了语音识别与机械控制技术。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "还行，完成了基本声控功能。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "功能相对基础。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "实现较为简单。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2022-俞晴岚 - 申请表原件",
+          "filename": "2022-俞晴岚-申请表原件.docx",
+          "url": "/downloads/projects/2022-yu-qinglan-smart-trash/2022-俞晴岚-申请表原件.docx",
+          "size": "1.3 MB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-yu-qinglan-smart-trash",
+          "projectTitle": "基于智能语音识别的智联猫垃圾分类开盖装置",
+          "studentName": "俞晴岚",
+          "editionYear": "2022",
+          "description": "俞晴岚 于 2022 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2022-俞晴岚 - 项目设计文档/学术报告",
+          "filename": "2022-俞晴岚-项目技术报告.docx",
+          "url": "/downloads/projects/2022-yu-qinglan-smart-trash/2022-俞晴岚-项目技术报告.docx",
+          "size": "559.1 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2022-yu-qinglan-smart-trash",
+          "projectTitle": "基于智能语音识别的智联猫垃圾分类开盖装置",
+          "studentName": "俞晴岚",
+          "editionYear": "2022",
+          "description": "《基于智能语音识别的智联猫垃圾分类开盖装置》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2022-li-yi-physics-engine",
+      "title": "Docker 分布式云技巧与实践心得",
+      "studentId": "li-yi",
+      "studentName": "李怿",
+      "class": "高三13班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "图形与物理",
+      "tags": [
+        "刚体物理",
+        "碰撞检测",
+        "分离轴定理(SAT)",
+        "数值积分",
+        "C++"
+      ],
+      "summary": "作为极客社校园云维护核心成员，主持由单机环境向 Docker 容器化微服务集群的架构迁移，深度剖析镜像构建原理与低成本高可用备份容灾机制。",
+      "details": {
+        "skills": "欧拉积分与 Verlet 积分、SAT 分离轴碰撞检测、冲量法(Impulse-based)动量计算",
+        "difficulties": "高速物体穿透（Tunneling）现象抑制与多物体连续碰撞能量发散",
+        "innovations": "在高中阶段探索物理引擎核心算法，数学推导与代码逻辑清晰。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">Docker 容器虚拟化</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">分布式云运维</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">高可用容灾迁移</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">项目背景与容器化架构演进</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">作为南通中学极客社分布式云基础设施的共同维护人员，李怿同学借鉴现代电信运营商与大型互联网数据中心将所有底层网络与服务深度虚拟化的演进思路，针对社团早期多台老旧物理机环境“环境污染严重、单点故障率高、跨机迁移困难”的痛点，主导了向全容器化架构的平滑过渡，并在低成本预算约束下实现了敏捷部署与热备容灾。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      核心技术剖析：docker load 与 docker import 的本质差异\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-sky-700 font-bold mb-1\">docker save / load（保留分层历史）</div>\n        <p class=\"text-slate-600\">基于镜像打包，完整保存所有 Layer 的构建元数据、历史提交与环境变量（ENV/ENTRYPOINT）。体积较大，适用于生产节点间的镜像绝对无损同步。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-indigo-700 font-bold mb-1\">docker export / import（扁平化快照）</div>\n        <p class=\"text-slate-600\">丢弃所有中间历史层与元数据，仅压缩保存当前容器运行时文件系统状态。体积精简，但在重新导入时必须手动重新定义 CMD/EXPOSE 等网络运行指令。</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n      分布式容器集群轻量维护心得\n    </h3>\n    <ul class=\"text-xs text-slate-600 space-y-2 list-disc pl-4\">\n      <li><strong>存储卷解耦</strong>：将持久化数据库目录与日志全部挂载到外部卷，实现“升级镜像无需停机迁移数据”。</li>\n      <li><strong>自定义 Bridge / Macvlan 网络隔离</strong>：对内网暴露特定业务端口，防止跨容器 ARP 欺骗与端口争用。</li>\n      <li><strong>低成本轻量级编排</strong>：以标准化 Docker-Compose 配置文件集中版本控制，可在数分钟内将全部校园服务在备用机器上完成一键重建拉起。</li>\n    </ul>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "数学基础扎实，探索精神可嘉。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "代码完备，有一定的技术含量。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "物理仿真有深度。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2022-李怿 - 申请表原件",
+          "filename": "2022-李怿-申请表原件.docx",
+          "url": "/downloads/projects/2022-li-yi-physics-engine/2022-李怿-申请表原件.docx",
+          "size": "12.9 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-li-yi-physics-engine",
+          "projectTitle": "Docker 分布式云技巧与实践心得",
+          "studentName": "李怿",
+          "editionYear": "2022",
+          "description": "李怿 于 2022 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2022-李怿 - 项目设计文档/学术报告",
+          "filename": "2022-李怿-项目技术报告.docx",
+          "url": "/downloads/projects/2022-li-yi-physics-engine/2022-李怿-项目技术报告.docx",
+          "size": "469.0 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2022-li-yi-physics-engine",
+          "projectTitle": "Docker 分布式云技巧与实践心得",
+          "studentName": "李怿",
+          "editionYear": "2022",
+          "description": "《Docker 分布式云技巧与实践心得》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2022-zhu-chenyi-robotics-base",
+      "title": "Android Debug Bridge (ADB) 高级实践与智能家居远程指导",
+      "studentId": "zhu-chenyi",
+      "studentName": "朱辰祎",
+      "class": "高三10班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "机器人与控制",
+      "tags": [
+        "差速底盘",
+        "编码器测速",
+        "PID调速",
+        "搬运机构"
+      ],
+      "summary": "挖掘 Android Debug Bridge (ADB) 系统底层调试潜能，打通电视盒子、智能硬件与哑终端的权限壁垒，实现针对独居老人智能设备的远程屏幕镜像与运维协助。",
+      "details": {
+        "skills": "增量式光电编码器测速、增量式 PID 控制算法、机械传动减速比选型",
+        "difficulties": "两轮电机特性不一致导致的直线行驶跑偏问题校正",
+        "innovations": "持之以恒进行工程迭代，不断追求更高控制精度。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">Android 底层调试</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">ADB 协议与权限提升</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">助老适老化远程技术</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">项目背景与解决现实问题</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">Android Debug Bridge（ADB）是 Google 官方为 Android 打造的高权限调试工具套件。随着智能物联网发展，大到智能电视、投影仪，小到词典笔与智能手表，底层几乎均搭载定制版 Android 系统。朱辰祎同学发现，家中年迈的爷爷奶奶在使用智能电视时常因误按跳入复杂界面而不知所措。由于电视前端 GUI 操作受限，他通过局域网与穿透开启的 ADB 守护进程，实现了远距离跨屏幕实时镜像与参数调试。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      核心应用场景与工程技巧\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-4\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-sky-700 font-bold mb-1\">远程助老屏幕指导</div>\n        <p class=\"text-slate-600\">通过 <code>adb exec-out screenrecord</code> 或轻量投屏协议，在自己电脑端实时获知老人电视当前画面，语音电话同步指引遥控器操作。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-indigo-700 font-bold mb-1\">无 GUI 哑终端网络认证</div>\n        <p class=\"text-slate-600\">利用 ADB Shell 调用系统隐藏 Activity，强行向定制 Android 设备（词典笔等）写入校园网静态 IP 与 DNS 路由表，跨越认证障碍。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-emerald-700 font-bold mb-1\">特权服务清理与流氓软件拦截</div>\n        <p class=\"text-slate-600\">通过 <code>pm disable-user</code> 与 <code>appops</code> 精准冻结后台自动唤醒的流氓预装广告服务，还电视系统以纯净流畅。</p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "持续改进工程项目，态度认真。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "相较去年有一定工作量补充。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2022-朱辰祎 - 申请表原件",
+          "filename": "2022-朱辰祎-申请表原件.docx",
+          "url": "/downloads/projects/2022-zhu-chenyi-robotics-base/2022-朱辰祎-申请表原件.docx",
+          "size": "12.9 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-zhu-chenyi-robotics-base",
+          "projectTitle": "Android Debug Bridge (ADB) 高级实践与智能家居远程指导",
+          "studentName": "朱辰祎",
+          "editionYear": "2022",
+          "description": "朱辰祎 于 2022 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2022-朱辰祎 - 项目设计文档/学术报告",
+          "filename": "2022-朱辰祎-项目技术报告.docx",
+          "url": "/downloads/projects/2022-zhu-chenyi-robotics-base/2022-朱辰祎-项目技术报告.docx",
+          "size": "2.2 MB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2022-zhu-chenyi-robotics-base",
+          "projectTitle": "Android Debug Bridge (ADB) 高级实践与智能家居远程指导",
+          "studentName": "朱辰祎",
+          "editionYear": "2022",
+          "description": "《Android Debug Bridge (ADB) 高级实践与智能家居远程指导》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2022-zhang-lin-os-scheduler",
+      "title": "基于 API 的 DDNS 动态域名解析与 IPv6 穿透实践",
+      "studentId": "zhang-lin",
+      "studentName": "张林",
+      "class": "高三13班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "操作系统与算法",
+      "tags": [
+        "操作系统",
+        "时间片轮转(RR)",
+        "优先级调度",
+        "多级反馈队列"
+      ],
+      "summary": "针对公网 IPv4 资源匮乏及商宽 VPS 转发穿透带宽受限的痛点，利用校园网原生 SLAAC IPv6 与 Cloudflare v4 REST API，研发高并发跨平台 DDNS 动态解析套件。",
+      "details": {
+        "skills": "进程状态迁移机、就绪队列管理、平均周转时间数学统计",
+        "difficulties": "长作业饥饿（Starvation）现象的模拟量化与动态老化因子调整",
+        "innovations": "通过可视化图表生动呈现操作系统理论，研究方法规范。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">计算机网络架构</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">SLAAC IPv6 原生入栈</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">Cloudflare v4 API 自动化</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">项目背景与突破传统穿透瓶颈</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">极客社在南通中学校园内网托管有高性能服务器。为了实现高效流畅的校外远程访问，社团起初尝试搭建 frps 进行公网中继。但在千兆光纤与 4K/8K 视频流普及的时代，国内商业 VPS 极为昂贵且上行带宽通常限制在以几兆（M）为单位，穿透体验极其卡顿。张林同学敏锐发现校园网分配有完全具备入栈和出栈权限的公网 IPv6 地址，但该地址基于 SLAAC 模式由路由通告动态生成（租期约 7 天），因此确立了<strong>“基于 DNS API 动态映射 IPv6，替代昂贵公网转发”</strong>的破局思路。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      最小权限原则：Zone 模式下的 API Token 安全隔离\n    </h3>\n    <p class=\"text-sm text-slate-700 mb-3\">早期开发者常使用全局 <code>X-Auth-Key</code>，存在严重安全隐患（一旦泄露即导致名下全部域及 R2 对象存储被盗用）。张林同学深入研读官方 API 规范，攻克了针对特定域名 Zone 的最小权限 API Token 签发与跨平台 PowerShell 脚本实现：</p>\n    <pre class=\"bg-slate-900 text-slate-100 border border-slate-800 p-4 rounded-xl overflow-x-auto border border-slate-800 font-mono text-xs leading-relaxed text-slate-200\"><code># 1. 查询目标 Zone ID (GET 请求)\ncurl --request GET   --url \"https://api.cloudflare.com/client/v4/zones?name=quner.cloud\"   --header 'Content-Type: application/json'   --header 'Authorization: Bearer [RESTRICTED_ZONE_TOKEN]'\n\n# 2. 动态更新 AAAA 记录 (PUT 请求)\ncurl --request PUT   --url \"https://api.cloudflare.com/client/v4/zones/[ZONE_ID]/dns_records/[RECORD_ID]\"   --header 'Content-Type: application/json'   --header 'Authorization: Bearer [RESTRICTED_ZONE_TOKEN]'   --data '{\n    \"type\": \"AAAA\",\n    \"name\": \"srv.quner.cloud\",\n    \"content\": \"240e:xxx:xxxx:xxxx:b827:ebff:fe31:xxxx\",\n    \"ttl\": 120,\n    \"proxied\": false\n  }'</code></pre>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "算法对比清晰，理论基础好。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "完成了扎实的操作系统算法模拟。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2022-张林 - 申请表原件",
+          "filename": "2022-张林-申请表原件.docx",
+          "url": "/downloads/projects/2022-zhang-lin-os-scheduler/2022-张林-申请表原件.docx",
+          "size": "15.0 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-zhang-lin-os-scheduler",
+          "projectTitle": "基于 API 的 DDNS 动态域名解析与 IPv6 穿透实践",
+          "studentName": "张林",
+          "editionYear": "2022",
+          "description": "张林 于 2022 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2022-张林 - 项目设计文档/学术报告",
+          "filename": "2022-张林-项目技术报告.docx",
+          "url": "/downloads/projects/2022-zhang-lin-os-scheduler/2022-张林-项目技术报告.docx",
+          "size": "252.8 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2022-zhang-lin-os-scheduler",
+          "projectTitle": "基于 API 的 DDNS 动态域名解析与 IPv6 穿透实践",
+          "studentName": "张林",
+          "editionYear": "2022",
+          "description": "《基于 API 的 DDNS 动态域名解析与 IPv6 穿透实践》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2022-cao-ye-algorithms",
+      "title": "OPENWRT 自主定制编译与轻量软路由系统构建",
+      "studentId": "cao-ye",
+      "studentName": "曹烨",
+      "class": "高三9班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "算法与数学",
+      "tags": [
+        "信息学竞赛",
+        "线段树",
+        "区间DP",
+        "代码托管"
+      ],
+      "summary": "针对网络爱好者对极致路由性能的追求，摒弃臃肿的第三方固件，坚守“低内存占用、高转发吞吐”宗旨，自建 Linux 交叉编译流水线并定制高效路由模块矩阵。",
+      "details": {
+        "skills": "线段树单点/区间修改 Lazy 标记、状态转移方程设计、代码重构",
+        "difficulties": "高维动态规划状态空间的降维与滚动数组优化",
+        "innovations": "代码托管规范，题解逻辑条理清晰，展现了良好的开源精神。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">嵌入式 Linux 交叉编译</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">OpenWrt 架构客制化</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">mwan3 多拨与负载均衡</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">项目背景与软路由设计哲学</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">在探索网络技术的过程中，从爱快（iKuai）到 RouterOS，各种路由系统各有千秋。然而，许多网络上流传的大神打包编译版 OpenWrt 盲目堆砌无用插件，违背了路由器<strong>“低内存开销、高数据包吞吐转发”</strong>的核心使命。高三（9）班曹烨同学决定从纯净官方源码起步，自行搭建编译环境，根据实际应用需求按需裁剪、定制专属固件。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n      定制包矩阵定义脚本 (PACKAGES Selection)\n    </h3>\n    <p class=\"text-xs text-slate-600 mb-3\">通过配置环境变量 <code>PACKAGES</code>，精炼整合涵盖管理、代理、穿透与流量调度的模块架构：</p>\n    <pre class=\"bg-slate-900 text-slate-100 border border-slate-800 p-4 rounded-xl overflow-x-auto border border-slate-800 font-mono text-xs leading-relaxed text-slate-200\"><code># 核心管理与现代 UI 界面\nPACKAGES=\"$PACKAGES luci-theme-argon luci-i18n-argon-config-zh-cn luci-i18n-diskman-zh-cn\"\n\n# 系统性能监控与 CPU 保护\nPACKAGES=\"$PACKAGES luci-i18n-cpulimit-zh-cn luci-i18n-statistics-zh-cn collectd\"\n\n# 跨网络组网与分布式穿透\nPACKAGES=\"$PACKAGES luci-i18n-nps-zh-cn luci-i18n-frpc-zh-cn luci-i18n-zerotier-zh-cn luci-i18n-ipsec-vpnd-zh-cn\"\n\n# QoS 智能流控与多线并发均衡\nPACKAGES=\"$PACKAGES luci-i18n-eqos-zh-cn luci-app-syncdial luci-i18n-mwan3-zh-cn\"</code></pre>\n    <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs text-xs text-slate-600 mt-3\">\n      <strong>编译踩坑与解决心得：</strong>初次编译时频繁遭遇 <code>make[3] error</code> 异常，排查发现是境外依赖源网络超时导致软件包校验失败。通过在脚本中引入国内镜像源重定向与预缓存下载机制，实现了固件无人值守自动化一键打包。\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "有完整的代码托管，总结认真。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "基础算法训练扎实。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2022-cao-ye-openwrt",
+      "downloads": [
+        {
+          "title": "2022-曹烨 - 申请表原件",
+          "filename": "2022-曹烨-申请表原件.docx",
+          "url": "/downloads/projects/2022-cao-ye-algorithms/2022-曹烨-申请表原件.docx",
+          "size": "13.1 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-cao-ye-algorithms",
+          "projectTitle": "OPENWRT 自主定制编译与轻量软路由系统构建",
+          "studentName": "曹烨",
+          "editionYear": "2022",
+          "description": "曹烨 于 2022 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2022-曹烨 - 项目设计文档/学术报告",
+          "filename": "2022-曹烨-项目技术报告.docx",
+          "url": "/downloads/projects/2022-cao-ye-algorithms/2022-曹烨-项目技术报告.docx",
+          "size": "174.2 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2022-cao-ye-algorithms",
+          "projectTitle": "OPENWRT 自主定制编译与轻量软路由系统构建",
+          "studentName": "曹烨",
+          "editionYear": "2022",
+          "description": "《OPENWRT 自主定制编译与轻量软路由系统构建》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2022-曹烨 - 项目源代码",
+          "filename": "2022-曹烨-项目源代码.zip",
+          "url": "/downloads/projects/2022-cao-ye-algorithms/2022-曹烨-项目源代码.zip",
+          "size": "3.3 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2022-cao-ye-algorithms",
+          "projectTitle": "OPENWRT 自主定制编译与轻量软路由系统构建",
+          "studentName": "曹烨",
+          "editionYear": "2022",
+          "description": "《OPENWRT 自主定制编译与轻量软路由系统构建》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2022-wang-wei-drone",
+      "title": "RoboMaster Tello Talent 无人机飞行控制与视觉定位系统实践",
+      "studentId": "wang-wei",
+      "studentName": "王唯",
+      "class": "高二6班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "无人机与控制",
+      "tags": [
+        "Tello Edu",
+        "无人机",
+        "C++",
+        "空中姿态控制"
+      ],
+      "summary": "基于大疆 RoboMaster TT 无人机，运用 Python SDK 与底层视觉传感器融合算法，突破微型无人机气流抖动与悬停漂移瓶颈，实现室内高精度稳定航线飞行。",
+      "details": {
+        "skills": "无人机通信协议、空间三维坐标变换、飞行状态监测",
+        "difficulties": "室内光流定位偏差导致的机体漂移校正",
+        "innovations": "积极探索前沿无人机编程技术，展现了对新技术的好奇心。",
+        "fullReportHtml": "<div class=\"space-y-8 text-slate-700 leading-relaxed font-sans\">\n  <!-- 头部卡片 -->\n  <div class=\"bg-gradient-to-br from-sky-500/10 via-slate-50 to-indigo-500/10 border border-sky-200/80 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-3 py-1 text-xs font-semibold rounded-full bg-sky-100 text-sky-800 border border-sky-300\">大疆教育生态 RoboMaster TT</span>\n      <span class=\"px-3 py-1 text-xs font-semibold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-300\">底置视觉光流 + 红外测距融合</span>\n      <span class=\"px-3 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-800 border border-amber-300\">ESP32 双频 Wi-Fi 开源控制器</span>\n      <span class=\"px-3 py-1 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300\">中国航空学会 EDE 赛事实战</span>\n    </div>\n    <h3 class=\"text-2xl font-bold text-slate-900 mb-3\">RoboMaster Tello Talent 无人机飞行控制与视觉定位系统实践</h3>\n    <p class=\"text-sm md:text-base text-slate-700 leading-relaxed mb-4\">\n      本项目由南通中学 <strong>高二（6）班 王唯</strong> 同学独立研发与调试。项目基于大疆专为高阶人工智能与创客教育打造的 <strong>RoboMaster Tello Talent (TT)</strong> 开源四旋翼飞行器平台。王唯同学针对微型无人机在室内复杂气流、无 GPS 弱纹理环境下极易漂移与机身抖动的核心痛点，深入研究了<strong>底置视觉定位系统（VPS 单目灰度光流 + 红外传感器）</strong>的滤波调优算法，并通过 ESP32 开源控制器完成多传感器硬件扩展与嵌入式 C++ / Python SDK 双模编程，率队在<strong>全国青少年无人机大赛（EDE）</strong>竞技中完成精准障碍穿越与自主巡航任务。\n    </p>\n\n    <!-- 申报原件下载横幅 -->\n    <div class=\"bg-white/90 border border-sky-200 rounded-xl p-4 mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs\">\n      <div class=\"flex items-center gap-3\">\n        <div class=\"w-10 h-10 rounded-lg bg-sky-500/10 text-sky-700 flex items-center justify-center font-bold text-lg shrink-0\">DOC</div>\n        <div>\n          <div class=\"font-bold text-slate-900 text-sm\">申报材料原件、竞赛实况照片与源码手稿已上线</div>\n          <div class=\"text-xs text-slate-500\">包含官方申请表原件 (.docx)、全国无人机大赛现场实飞原图 (4.51MB) 与飞控初始化源码手稿</div>\n        </div>\n      </div>\n      <div class=\"flex items-center gap-2 shrink-0\">\n        <a href=\"/downloads/projects/2022-wang-wei-drone/2022-王唯-申请表原件.docx\" download class=\"inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-sky-600 hover:bg-sky-700 text-white transition-colors shadow-xs\">\n          <span>下载申请表原件</span>\n        </a>\n        <a href=\"/downloads/projects/2022-wang-wei-drone/2022-王唯-全国青少年无人机大赛现场实飞照片(高清).jpg\" target=\"_blank\" class=\"inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition-colors shadow-xs\">\n          <span>查看大赛实况原图</span>\n        </a>\n      </div>\n    </div>\n  </div>\n\n  <!-- 一、大赛实战现场与视觉导航实飞 -->\n  <div class=\"bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <h3 class=\"text-xl font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-sky-500\"></span>\n      一、全国青少年无人机大赛（EDE）赛事实飞调试\n    </h3>\n    <p class=\"text-sm text-slate-600 mb-5\">\n      王唯同学与团队积极投身于中国航空学会主办的<strong>全国青少年无人机大赛（Educational Drone Event, China）</strong>。在专业赛道围挡与复杂障碍环境下，团队对 RoboMaster TT 无人机的悬停稳定性、起飞离地定高响应以及多轴姿态联动进行了多轮实机联调。\n    </p>\n\n    <!-- 赛事大图展示 -->\n    <div class=\"rounded-2xl overflow-hidden border border-slate-200 bg-slate-50 shadow-sm mb-4\">\n      <div class=\"relative aspect-16/9 md:aspect-21/9 overflow-hidden bg-slate-900 flex items-center justify-center\">\n        <img src=\"media/2022/wang_drone/wang_wei_drone_competition_flight.jpg\" alt=\"全国青少年无人机大赛现场实飞联调\" class=\"w-full h-full object-cover object-center\" />\n        <div class=\"absolute bottom-0 inset-x-0 bg-gradient-to-t from-slate-950/85 via-slate-900/40 to-transparent p-4 text-white text-xs\">\n          <span class=\"font-bold text-sm block mb-1\">中国航空学会 EDE 赛场联调实况</span>\n          王唯（左二）与队友在赛道围挡前聚精会神监测 RoboMaster TT 无人机悬停状态与航线执行反馈\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- 二、硬件架构与多传感器外设拓展 -->\n  <div class=\"bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <h3 class=\"text-xl font-bold text-slate-900 mb-4 flex items-center gap-2\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-indigo-500\"></span>\n      二、机体装配与开源控制器传感器外设扩展\n    </h3>\n    <p class=\"text-sm text-slate-600 mb-6\">\n      RoboMaster Tello Talent 采用红黑竞速涂装机身，配合快拆式全包围螺旋桨安全保护罩，在保障安全的同时具备极高的拓展自由度。王唯同学通过顶部转接拓展板，将各类第三方传感器接入板载开源控制器：\n    </p>\n\n    <!-- 三张硬件实装照片对比 -->\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-5 mb-6\">\n      <div class=\"group border border-slate-200 rounded-xl overflow-hidden bg-slate-50 shadow-xs\">\n        <div class=\"aspect-4/3 overflow-hidden bg-slate-100 flex items-center justify-center p-2\">\n          <img src=\"media/2022/wang_drone/wang_wei_drone_accessories_exploded.jpg\" alt=\"整机与拓展配件全家福\" class=\"w-full h-full object-contain group-hover:scale-105 transition-transform duration-300\" />\n        </div>\n        <div class=\"p-3.5 text-xs text-slate-700\">\n          <div class=\"font-bold text-slate-900 mb-1\">图 1：机体与拓展配件全景</div>\n          <p class=\"text-slate-500 text-[11px]\">TT 红色机体、8×8 点阵屏模块、PIR 人体感应器、摇杆模块与总线连接线缆展开。</p>\n        </div>\n      </div>\n\n      <div class=\"group border border-slate-200 rounded-xl overflow-hidden bg-slate-50 shadow-xs\">\n        <div class=\"aspect-4/3 overflow-hidden bg-slate-100 flex items-center justify-center p-2\">\n          <img src=\"media/2022/wang_drone/wang_wei_drone_pir_sensor_mounted.jpg\" alt=\"人体红外传感器实装形态\" class=\"w-full h-full object-contain group-hover:scale-105 transition-transform duration-300\" />\n        </div>\n        <div class=\"p-3.5 text-xs text-slate-700\">\n          <div class=\"font-bold text-slate-900 mb-1\">图 2：PIR 红外感应模块实装</div>\n          <p class=\"text-slate-500 text-[11px]\">机顶加装菲涅尔透镜人体红外检测器，可用于低空自主巡检生命体征搜索场景。</p>\n        </div>\n      </div>\n\n      <div class=\"group border border-slate-200 rounded-xl overflow-hidden bg-slate-50 shadow-xs\">\n        <div class=\"aspect-4/3 overflow-hidden bg-slate-100 flex items-center justify-center p-2\">\n          <img src=\"media/2022/wang_drone/wang_wei_drone_tof_matrix_mounted.jpg\" alt=\"ToF激光测距与点阵屏实装\" class=\"w-full h-full object-contain group-hover:scale-105 transition-transform duration-300\" />\n        </div>\n        <div class=\"p-3.5 text-xs text-slate-700\">\n          <div class=\"font-bold text-slate-900 mb-1\">图 3：ToF 测距点阵屏实装</div>\n          <p class=\"text-slate-500 text-[11px]\">集成高精度激光飞行时间（ToF）测距单元，点阵屏实时渲染像素动画与距离数值。</p>\n        </div>\n      </div>\n    </div>\n\n    <!-- 关键参数与功能对照表 -->\n    <div class=\"grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs\">\n      <div class=\"bg-slate-50 p-3 rounded-xl border border-slate-200\">\n        <div class=\"text-slate-500 text-[11px] mb-1\">机载主控芯片</div>\n        <div class=\"font-bold text-slate-900\">双核 ESP32-D2WD</div>\n      </div>\n      <div class=\"bg-slate-50 p-3 rounded-xl border border-slate-200\">\n        <div class=\"text-slate-500 text-[11px] mb-1\">机载相机</div>\n        <div class=\"font-bold text-slate-900\">500万像素 / 720p 视频</div>\n      </div>\n      <div class=\"bg-slate-50 p-3 rounded-xl border border-slate-200\">\n        <div class=\"text-slate-500 text-[11px] mb-1\">最长飞行续航</div>\n        <div class=\"font-bold text-slate-900\">13分钟 (净机) / 8分钟 (带载)</div>\n      </div>\n      <div class=\"bg-slate-50 p-3 rounded-xl border border-slate-200\">\n        <div class=\"text-slate-500 text-[11px] mb-1\">无线通信链路</div>\n        <div class=\"font-bold text-slate-900\">双频 2.4G/5.8G Wi-Fi + BLE</div>\n      </div>\n    </div>\n  </div>\n\n  <!-- 三、攻克的关键技术瓶颈与调优 -->\n  <div class=\"bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <h3 class=\"text-xl font-bold text-slate-900 mb-4 flex items-center gap-2\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-amber-500\"></span>\n      三、攻克的关键技术困难与控制算法调优\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm\">\n      <div class=\"p-4 rounded-xl bg-amber-50/50 border border-amber-200\">\n        <div class=\"font-bold text-amber-900 mb-2 flex items-center gap-1.5\">\n          <span>🎯 1. 普通模式机身抖动抑制</span>\n        </div>\n        <p class=\"text-slate-600 text-xs leading-relaxed\">\n          微型无人机在近地面起飞时受到地面效应反冲及螺旋桨动平衡振动影响。王唯通过加装微孔减震垫圈、平滑电机转速爬升阶跃函数，成功消除机体高频共振与画面水波纹。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-sky-50/50 border border-sky-200\">\n        <div class=\"font-bold text-sky-900 mb-2 flex items-center gap-1.5\">\n          <span>👁️ 2. 底置视觉光流与精准悬停</span>\n        </div>\n        <p class=\"text-slate-600 text-xs leading-relaxed\">\n          在室内无 GPS 环境下，快速水平机动会导致位置漂移。王唯将视觉定位系统（VPS 单目下视相机与红外传感器组）置于机身底盘，通过连续提取地面微观纹理特征点光流位移量，实现无风与弱风下的厘米级精准锁定。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-emerald-50/50 border border-emerald-200\">\n        <div class=\"font-bold text-emerald-900 mb-2 flex items-center gap-1.5\">\n          <span>🧹 3. 套接字与多线程优雅析构</span>\n        </div>\n        <p class=\"text-slate-600 text-xs leading-relaxed\">\n          在 Python 交互式控制中，异常中断常导致 UDP 端口被占用、心跳线程死锁。王唯设计了严格的上下文管理器与对象析构链，确保异常时即刻释放网络地址、终止后台线程并释放地址空间。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 四、源码手稿与双语言实现 -->\n  <div class=\"bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <h3 class=\"text-xl font-bold text-slate-900 mb-4 flex items-center gap-2\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-slate-800\"></span>\n      四、嵌入式初始化手稿与多语言控制实现\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-12 gap-6 items-start mb-6\">\n      <div class=\"md:col-span-5\">\n        <div class=\"border border-slate-200 rounded-xl overflow-hidden bg-white p-2 shadow-xs\">\n          <img src=\"media/2022/wang_drone/wang_wei_drone_source_code_sheet.jpg\" alt=\"项目实现手稿\" class=\"w-full h-auto object-contain\" />\n          <div class=\"p-2 text-center text-[11px] text-slate-500 bg-slate-50 rounded-b-lg border-t border-slate-100\">\n            申报材料原件中的手写代码截图：RMTT 飞控通信与外设初始化\n          </div>\n        </div>\n      </div>\n      <div class=\"md:col-span-7 space-y-4\">\n        <div class=\"text-xs text-slate-600 leading-relaxed\">\n          <strong>C++ / Arduino 框架初始化实现：</strong>配置 1Mbps 高速串口通信，依次初始化 RGB 指示灯、点阵屏、ToF 测距仪与底层飞行协议栈：\n        </div>\n        <pre class=\"bg-slate-900 text-slate-100 p-4 rounded-xl font-mono text-xs overflow-x-auto leading-relaxed border border-slate-800\"><code class=\"language-cpp\">#include &lt;Wire.h&gt;\n#include &lt;RMTT_Libs.h&gt;\n\n// 函数前向声明\nvoid matrixDisplayText(int text, char color, uint8_t light);\n\n// 创建外设驱动对象\nRMTT_Protocol protocol;\nRMTT_RGB tt_rgb;\nRMTT_TOF tt_sensor;\nRMTT_Matrix tt_matrix;\n\nvoid setup() {\n  // 初始化高速通信串口 (1000000 波特率)\n  Serial1.begin(1000000, 23, 18, SERIAL_8N1);\n  tt_rgb.Init();\n  tt_matrix.Init(255);\n  tt_matrix.SetLEDStatus(RMTT_MATRIX_CS, RMTT_MATRIX_SW, RMTT_MATRIX_LED_ON);\n  matrix_effect_init(255);\n  protocol.startUntilControl(); // 阻塞等待飞控握手控制就绪\n  delay(1000);\n}</code></pre>\n      </div>\n    </div>\n\n    <!-- Python SDK 语法解析 -->\n    <div class=\"bg-slate-50 border border-slate-200 rounded-xl p-4\">\n      <div class=\"font-bold text-slate-800 text-xs mb-2\">RoboMaster SDK Python 端双模式对象获取与航线闭环</div>\n      <pre class=\"bg-slate-900 text-slate-100 p-3 rounded-lg font-mono text-xs overflow-x-auto leading-relaxed border border-slate-800\"><code class=\"language-python\"># 方法一：属性运算符直接获取 flight 驱动\ntl_flight = tl_drone.flight\n\n# 方法二：通过统一模块反射管理器获取\ntl_flight = tl_drone.get_module(\"flight\")\n\n# 闭环执行起飞、定距巡航、偏航旋转与安全降落\ntry:\n    tl_flight.takeoff().wait_for_completed()\n    tl_flight.forward(distance=100).wait_for_completed()\n    tl_flight.rotate(angle=90).wait_for_completed()\n    tl_flight.land().wait_for_completed()\nfinally:\n    tl_drone.close() # 释放网络套接字与终止后台心跳线程</code></pre>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "尝试了无人机前沿编程领域。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "手写代码量略偏少，希望未来能看到更完整的程序。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2022-王唯 - 申请表原件",
+          "filename": "2022-王唯-申请表原件.docx",
+          "url": "/downloads/projects/2022-wang-wei-drone/2022-王唯-申请表原件.docx",
+          "size": "148.3 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2022-wang-wei-drone",
+          "projectTitle": "RoboMaster Tello Talent 无人机飞行控制与视觉定位系统实践",
+          "studentName": "王唯",
+          "editionYear": "2022",
+          "description": "王唯 于 2022 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2022-王唯 - 全国青少年无人机大赛现场实飞照片 (高清原图)",
+          "filename": "2022-王唯-全国青少年无人机大赛现场实飞照片(高清).jpg",
+          "url": "/downloads/projects/2022-wang-wei-drone/2022-王唯-全国青少年无人机大赛现场实飞照片(高清).jpg",
+          "size": "4.5 MB",
+          "type": "image",
+          "category": "赛事照片",
+          "projectId": "2022-wang-wei-drone",
+          "projectTitle": "RoboMaster Tello Talent 无人机飞行控制与视觉定位系统实践",
+          "studentName": "王唯",
+          "editionYear": "2022",
+          "description": "王唯与团队参加全国青少年无人机大赛现场实飞调试的高清原图（中国航空学会 EDE 赛场）。"
+        },
+        {
+          "title": "2022-王唯 - 飞控与拓展模块初始化源码手稿",
+          "filename": "2022-王唯-飞控与拓展模块初始化源码手稿.jpg",
+          "url": "/downloads/projects/2022-wang-wei-drone/2022-王唯-飞控与拓展模块初始化源码手稿.jpg",
+          "size": "55.1 KB",
+          "type": "image",
+          "category": "源码手稿",
+          "projectId": "2022-wang-wei-drone",
+          "projectTitle": "RoboMaster Tello Talent 无人机飞行控制与视觉定位系统实践",
+          "studentName": "王唯",
+          "editionYear": "2022",
+          "description": "王唯项目实现的飞控通信、ToF测距、RGB状态灯与点阵屏初始化核心源码手稿截图。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2022/wang_drone/wang_wei_drone_competition_flight.jpg",
+          "caption": "全国青少年无人机大赛现场实飞联调：王唯与团队在赛道围挡前操控 RoboMaster Tello 无人机悬停与视觉导航航线测试（中国航空学会 EDE 赛场）",
+          "category": "赛事现场"
+        },
+        {
+          "src": "media/2022/wang_drone/wang_wei_drone_accessories_exploded.jpg",
+          "caption": "RoboMaster Tello Talent 红色整机与拓展配件全家福：机载开源控制器、测距点阵屏拓展模块、人体红外 PIR 传感器、微型摇杆传感器与跳线",
+          "category": "实机装配"
+        },
+        {
+          "src": "media/2022/wang_drone/wang_wei_drone_pir_sensor_mounted.jpg",
+          "caption": "传感器拓展实装形态一：机顶加装开源控制器转接板与人体红外感应模块（PIR 菲涅尔透镜），实现空中动态人体红外监测与避障",
+          "category": "传感器拓展"
+        },
+        {
+          "src": "media/2022/wang_drone/wang_wei_drone_tof_matrix_mounted.jpg",
+          "caption": "传感器拓展实装形态二：机顶集成高精度 ToF 微型激光测距传感器与点阵屏模块，实现定高测距与状态动画实时回传",
+          "category": "传感器拓展"
+        },
+        {
+          "src": "media/2022/wang_drone/wang_wei_drone_source_code_sheet.jpg",
+          "caption": "项目核心实现源码手稿：Wire.h / RMTT_Libs.h 库引入、ToF、Matrix 点阵屏驱动与 protocol 协议初始化代码",
+          "category": "源码手稿"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "title": "2022 届望岳奖学金评选细则 (官方章程)",
+      "filename": "2022第六届望岳奖学金评选细则.pdf",
+      "url": "/downloads/editions/2022/2022第六届望岳奖学金评选细则.pdf",
+      "size": "208.1 KB",
+      "type": "pdf",
+      "category": "评选细则",
+      "editionYear": "2022",
+      "description": "包含评选对象、申报要求、各级奖项标准与评审流程。"
+    }
+  ]
+}

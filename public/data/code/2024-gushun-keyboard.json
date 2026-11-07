@@ -1,0 +1,26 @@
+{
+  "projectId": "2024-gushun-keyboard",
+  "externalRepo": "https://github.com/cactusworkshop/keyboard-project",
+  "totalFiles": 1,
+  "totalLines": 66,
+  "coreFiles": [
+    "matrix_scan.ino"
+  ],
+  "languages": [
+    {
+      "lang": "cpp",
+      "lines": 66,
+      "percent": 100.0
+    }
+  ],
+  "files": [
+    {
+      "path": "matrix_scan.ino",
+      "name": "matrix_scan.ino",
+      "lang": "cpp",
+      "lines": 66,
+      "size": 1615,
+      "content": "#include <Arduino.h>\n\n// 75键分体式键盘矩阵扫描与状态防抖算法\n// 主控引脚分配：ESP32 GPIO 12, 14, 26, 27 驱动 CD74HC4067B 4位二进制选择线\n// GPIO 25 接收模拟开关信号反馈；GPIO 4, 5, 15, 17 驱动 LED 状态指示\n\nbool p[17], q[17];\n// 按键物理位置与逻辑扫描线映射表\nint mapp[17] = {3, 7, 4, 8, 12, 16, 15, 11, 14, 13, 10, 9, 6, 5, 2, 1, 0};\n\nvoid setup() {\n  pinMode(12, OUTPUT);\n  pinMode(14, OUTPUT);\n  pinMode(27, OUTPUT);\n  pinMode(26, OUTPUT);\n  pinMode(5, OUTPUT);\n  pinMode(4, OUTPUT);\n  pinMode(15, OUTPUT);\n  pinMode(17, OUTPUT);\n  pinMode(25, INPUT);\n  for (int i = 0; i < 16; i++) {\n    q[i] = 0;\n  }\n  Serial.begin(115200);\n}\n\n// 快速电平转换工具函数\nbool ctc(int x) {\n  return x ? HIGH : LOW;\n}\n\nint cnt;\nvoid loop() {\n  // 1. 16路复用器快速轮询扫描\n  for (int i = 0; i < 16; i++) {\n    digitalWrite(26, ctc(i & 1));\n    digitalWrite(27, ctc(i & 2));\n    digitalWrite(14, ctc(i & 4));\n    digitalWrite(12, ctc(i & 8));\n    p[i] = digitalRead(25);\n  }\n\n  // 2. 状态比对、异或防抖与按键事件上报\n  cnt = 0;\n  for (int i = 0; i < 16; i++) {\n    if (p[i]) cnt++;\n    if (p[i] ^ q[i]) {\n      if (p[i]) {\n        Serial.print(\"down: \");\n        Serial.println(mapp[i]);\n      } else {\n        Serial.print(\"up: \");\n        Serial.println(mapp[i]);\n      }\n    }\n    // 状态迭代交换\n    p[i] ^= q[i] ^= p[i] ^= q[i];\n  }\n\n  // 3. 统计计数指示灯更新\n  digitalWrite(5, ctc(cnt & 1));\n  digitalWrite(4, ctc(cnt & 2));\n  digitalWrite(15, ctc(cnt & 4));\n  digitalWrite(17, ctc(cnt & 8));\n  delay(10);\n}\n"
+    }
+  ]
+}

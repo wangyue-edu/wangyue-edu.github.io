@@ -1,0 +1,1429 @@
+{
+  "meta": {
+    "title": "望岳奖学金十周年人物与评审名录",
+    "description": "所有申请人、获奖者及评审导师名录索引。",
+    "totalStudents": 51,
+    "totalJudges": 17
+  },
+  "students": [
+    {
+      "id": "zhou-heyang",
+      "name": "周鹤洋",
+      "class": "高二6班",
+      "editions": [
+        "2016"
+      ],
+      "awards": [
+        {
+          "year": "2016",
+          "award": "凌绝望岳",
+          "title": "智慧校园 (CloudEdu) 云端教学辅助系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2016-zhou-heyang-cloudedu",
+          "title": "智慧校园 (CloudEdu) 云端教学辅助系统",
+          "year": "2016",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        }
+      ]
+    },
+    {
+      "id": "蒋政延",
+      "name": "蒋政延",
+      "class": "高一1班",
+      "editions": [
+        "2016"
+      ],
+      "awards": [
+        {
+          "year": "2016",
+          "award": "坚韧登岳",
+          "title": "LED灯的逐个点亮与循环结构的应用"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2016-jiang-zhengyan-led",
+          "title": "LED灯的逐个点亮与循环结构的应用",
+          "year": "2016",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        }
+      ]
+    },
+    {
+      "id": "wu-yuchen",
+      "name": "吴钰宸",
+      "class": "高三14班",
+      "editions": [
+        "2016"
+      ],
+      "awards": [
+        {
+          "year": "2016",
+          "award": "极客突破奖",
+          "title": "云智能自行车码表与便携编程机设计"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2016-wu-yuchen-bike-meter",
+          "title": "云智能自行车码表与便携编程机设计",
+          "year": "2016",
+          "award": "极客突破奖",
+          "awardTier": "special"
+        }
+      ]
+    },
+    {
+      "id": "wang-xuyang",
+      "name": "王徐暘",
+      "class": "高二9班",
+      "editions": [
+        "2016"
+      ],
+      "awards": [
+        {
+          "year": "2016",
+          "award": "极客突破奖",
+          "title": "基于Arduino的手势控制音乐播放器"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2016-wang-xuyang-gesture-music",
+          "title": "基于Arduino的手势控制音乐播放器",
+          "year": "2016",
+          "award": "极客突破奖",
+          "awardTier": "special"
+        }
+      ]
+    },
+    {
+      "id": "杨柳",
+      "name": "杨柳",
+      "class": "高三15班",
+      "editions": [
+        "2016"
+      ],
+      "awards": [
+        {
+          "year": "2016",
+          "award": "实用发明奖",
+          "title": "基于物联网技术的智能看护系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2016-yang-liu-care-system",
+          "title": "基于物联网技术的智能看护系统",
+          "year": "2016",
+          "award": "实用发明奖",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "孙研岭",
+      "name": "孙研岭",
+      "class": "高三15班",
+      "editions": [
+        "2016"
+      ],
+      "awards": [
+        {
+          "year": "2016",
+          "award": "实用发明奖",
+          "title": "非接触式电梯控制系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2016-sun-yanling-elevator",
+          "title": "非接触式电梯控制系统",
+          "year": "2016",
+          "award": "实用发明奖",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "徐洋",
+      "name": "徐洋",
+      "class": "高三1班",
+      "editions": [
+        "2016"
+      ],
+      "awards": [
+        {
+          "year": "2016",
+          "award": "实用发明奖",
+          "title": "方便清理的堵塞报警卫生感应小便器"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2016-xu-yang-urinal-sensor",
+          "title": "方便清理的堵塞报警卫生感应小便器",
+          "year": "2016",
+          "award": "实用发明奖",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "黄曹阳",
+      "name": "黄曹阳",
+      "class": "高一1班",
+      "editions": [
+        "2016"
+      ],
+      "awards": [
+        {
+          "year": "2016",
+          "award": "安全卫士奖",
+          "title": "加密txt文件系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2016-huang-caoyang-txt-encrypt",
+          "title": "加密txt文件系统",
+          "year": "2016",
+          "award": "安全卫士奖",
+          "awardTier": "special"
+        }
+      ]
+    },
+    {
+      "id": "张嘉麒",
+      "name": "张嘉麒",
+      "class": "高一8班",
+      "editions": [
+        "2016"
+      ],
+      "awards": [
+        {
+          "year": "2016",
+          "award": "仰望星空奖",
+          "title": "手机定位 App"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2016-zhang-jiaqi-phone-loc",
+          "title": "手机定位 App",
+          "year": "2016",
+          "award": "仰望星空奖",
+          "awardTier": "special"
+        }
+      ]
+    },
+    {
+      "id": "孙嘉、冒欣、方心怡",
+      "name": "孙嘉、冒欣、方心怡",
+      "class": "高一1班",
+      "editions": [
+        "2016"
+      ],
+      "awards": [
+        {
+          "year": "2016",
+          "award": "计算思维奖",
+          "title": "论数独的编程解法与八皇后问题的异同点"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2016-sun-jia-sudoku",
+          "title": "论数独的编程解法与八皇后问题的异同点",
+          "year": "2016",
+          "award": "计算思维奖",
+          "awardTier": "special"
+        }
+      ]
+    },
+    {
+      "id": "wang-xuyang",
+      "name": "王徐旸",
+      "class": "高三9班",
+      "editions": [
+        "2017"
+      ],
+      "awards": [
+        {
+          "year": "2017",
+          "award": "凌绝望岳",
+          "title": "无人电磁武器仿真模型的设计与制作"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2017-wang-xuyang-coilgun",
+          "title": "无人电磁武器仿真模型的设计与制作",
+          "year": "2017",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        }
+      ]
+    },
+    {
+      "id": "zhou-zihao",
+      "name": "周子皓",
+      "class": "高一6班",
+      "editions": [
+        "2017",
+        "2018"
+      ],
+      "awards": [
+        {
+          "year": "2017",
+          "award": "坚韧登岳",
+          "title": "全屋定制价格王 / 元宝PK战 / 柔情雪花屏保 / 教师节贺卡"
+        },
+        {
+          "year": "2018",
+          "award": "凌绝望岳",
+          "title": "全国大学生机器人大赛 RoboMaster 博弈算法、开源生态及信息管理系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2017-zhou-zihao-toolkit",
+          "title": "全屋定制价格王 / 元宝PK战 / 柔情雪花屏保 / 教师节贺卡",
+          "year": "2017",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        },
+        {
+          "id": "2018-zhou-zihao-robomaster",
+          "title": "全国大学生机器人大赛 RoboMaster 博弈算法、开源生态及信息管理系统",
+          "year": "2018",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        }
+      ]
+    },
+    {
+      "id": "于吴桐",
+      "name": "于吴桐",
+      "class": "高一6班",
+      "editions": [
+        "2017"
+      ],
+      "awards": [
+        {
+          "year": "2017",
+          "award": "坚韧登岳",
+          "title": "NOIP2005 过河问题算法分析与动态规划剪枝改进"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2017-yu-wutong-river",
+          "title": "NOIP2005 过河问题算法分析与动态规划剪枝改进",
+          "year": "2017",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        }
+      ]
+    },
+    {
+      "id": "王晟宇",
+      "name": "王晟宇",
+      "class": "高二8班",
+      "editions": [
+        "2017"
+      ],
+      "awards": [
+        {
+          "year": "2017",
+          "award": "凭高临岳",
+          "title": "盐水交叉配血法判定红细胞血型的实验观察"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2017-wang-shengyu-blood",
+          "title": "盐水交叉配血法判定红细胞血型的实验观察",
+          "year": "2017",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "王安南",
+      "name": "王安南",
+      "class": "高二1班",
+      "editions": [
+        "2017"
+      ],
+      "awards": [
+        {
+          "year": "2017",
+          "award": "凭高临岳",
+          "title": "银行客户智能分流与排队预测系统设计"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2017-wang-annan-bank-dispatch",
+          "title": "银行客户智能分流与排队预测系统设计",
+          "year": "2017",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "冒欣",
+      "name": "冒欣",
+      "class": "高二7班",
+      "editions": [
+        "2017"
+      ],
+      "awards": [
+        {
+          "year": "2017",
+          "award": "凭高临岳",
+          "title": "基于电容式物位传感器的厨具智能革新"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2017-mao-xin-smart-stove",
+          "title": "基于电容式物位传感器的厨具智能革新",
+          "year": "2017",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "gu-wentao",
+      "name": "顾文韬",
+      "class": "高三10班",
+      "editions": [
+        "2018"
+      ],
+      "awards": [
+        {
+          "year": "2018",
+          "award": "坚韧登岳",
+          "title": "Unity 3D 游戏开发全流程：坦克大战智能对战系统与兔子大冒险"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2018-gu-wentao-unity-games",
+          "title": "Unity 3D 游戏开发全流程：坦克大战智能对战系统与兔子大冒险",
+          "year": "2018",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        }
+      ]
+    },
+    {
+      "id": "qiu-yi",
+      "name": "仇怡",
+      "class": "高二8班",
+      "editions": [
+        "2018"
+      ],
+      "awards": [
+        {
+          "year": "2018",
+          "award": "凭高临岳",
+          "title": "辩论赛智能计时与在线报名抽签系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2018-qiu-yi-debate-system",
+          "title": "辩论赛智能计时与在线报名抽签系统",
+          "year": "2018",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "lu-zhengyang",
+      "name": "陆正扬",
+      "class": "高三11班",
+      "editions": [
+        "2018"
+      ],
+      "awards": [
+        {
+          "year": "2018",
+          "award": "凭高临岳",
+          "title": "Lisp S表达式的抽象语法树 (AST) 解析器与求值引擎"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2018-lu-zhengyang-lisp-parser",
+          "title": "Lisp S表达式的抽象语法树 (AST) 解析器与求值引擎",
+          "year": "2018",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "liu-jianan",
+      "name": "刘嘉楠",
+      "class": "高三5班",
+      "editions": [
+        "2018"
+      ],
+      "awards": [
+        {
+          "year": "2018",
+          "award": "凭高临岳",
+          "title": "旅行商问题 (TSP) 的启发式求解与算法优化模拟"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2018-liu-jianan-tsp-algorithm",
+          "title": "旅行商问题 (TSP) 的启发式求解与算法优化模拟",
+          "year": "2018",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "zhu-zhenpeng",
+      "name": "朱振鹏",
+      "class": "高二5班",
+      "editions": [
+        "2020"
+      ],
+      "awards": [
+        {
+          "year": "2020",
+          "award": "凌绝望岳",
+          "title": "智慧校园综合服务系统与仓储物资数字化管理平台"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2020-zhu-zhenpeng-smart-campus",
+          "title": "智慧校园综合服务系统与仓储物资数字化管理平台",
+          "year": "2020",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        }
+      ]
+    },
+    {
+      "id": "tong-yizhou",
+      "name": "童亦洲",
+      "class": "高二5班",
+      "editions": [
+        "2020",
+        "2021"
+      ],
+      "awards": [
+        {
+          "year": "2020",
+          "award": "坚韧登岳",
+          "title": "RUIOS：基于现代微内核架构的轻量级操作系统内核"
+        },
+        {
+          "year": "2021",
+          "award": "凌绝望岳",
+          "title": "RedIM：基于高并发事件驱动架构的分布式即时通信系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2020-tong-yizhou-ruios",
+          "title": "RUIOS：基于现代微内核架构的轻量级操作系统内核",
+          "year": "2020",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        },
+        {
+          "id": "2021-tong-yizhou-redim",
+          "title": "RedIM：基于高并发事件驱动架构的分布式即时通信系统",
+          "year": "2021",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        }
+      ]
+    },
+    {
+      "id": "wang-zhe",
+      "name": "王喆",
+      "class": "高三14班",
+      "editions": [
+        "2020"
+      ],
+      "awards": [
+        {
+          "year": "2020",
+          "award": "坚韧登岳",
+          "title": "《胖球对决 Fattingball》物理碰撞游戏与校运会极客微信小程序"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2020-wang-zhe-fattingball",
+          "title": "《胖球对决 Fattingball》物理碰撞游戏与校运会极客微信小程序",
+          "year": "2020",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        }
+      ]
+    },
+    {
+      "id": "wang-haojin",
+      "name": "王昊金",
+      "class": "高二5班",
+      "editions": [
+        "2020"
+      ],
+      "awards": [
+        {
+          "year": "2020",
+          "award": "凭高临岳",
+          "title": "智能班级排座系统 (Seats) 与 MNIST 深度神经网络手写识别"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2020-wang-haojin-seats-mnist",
+          "title": "智能班级排座系统 (Seats) 与 MNIST 深度神经网络手写识别",
+          "year": "2020",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "yang-xiao",
+      "name": "杨逍",
+      "class": "高二9班",
+      "editions": [
+        "2021",
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2021",
+          "award": "坚韧登岳",
+          "title": "校园网 Portal 自动认证套件与网络诊断脚本"
+        },
+        {
+          "year": "2022",
+          "award": "坚韧登岳",
+          "title": "基于低成本微型服务器的家庭数据中心与私有云平台"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2021-yang-xiao-portal-auth",
+          "title": "校园网 Portal 自动认证套件与网络诊断脚本",
+          "year": "2021",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        },
+        {
+          "id": "2022-yang-xiao-home-server",
+          "title": "基于低成本微型服务器的家庭数据中心与私有云平台",
+          "year": "2022",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        }
+      ]
+    },
+    {
+      "id": "jiang-guanqun",
+      "name": "姜冠群",
+      "class": "高二7班",
+      "editions": [
+        "2021",
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2021",
+          "award": "坚韧登岳",
+          "title": "音视频实时流式传输服务器搭建与 Web 播放终端 (SRS + flv.js)"
+        },
+        {
+          "year": "2022",
+          "award": "凌绝望岳",
+          "title": "基于 NFC 与智能卡射频协议的校园一卡通交互系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2021-jiang-guanqun-streaming",
+          "title": "音视频实时流式传输服务器搭建与 Web 播放终端 (SRS + flv.js)",
+          "year": "2021",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        },
+        {
+          "id": "2022-jiang-guanqun-nfc",
+          "title": "基于 NFC 与智能卡射频协议的校园一卡通交互系统",
+          "year": "2022",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        }
+      ]
+    },
+    {
+      "id": "zhu-chenyi",
+      "name": "朱辰祎",
+      "class": "高二9班",
+      "editions": [
+        "2021",
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2021",
+          "award": "坚韧登岳",
+          "title": "智能运载小车与自动上料机械臂复合控制系统"
+        },
+        {
+          "year": "2022",
+          "award": "凭高临岳",
+          "title": "双驱差速移动机器人底盘与自动化搬运系统迭代"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2021-zhu-chenyi-robotics",
+          "title": "智能运载小车与自动上料机械臂复合控制系统",
+          "year": "2021",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        },
+        {
+          "id": "2022-zhu-chenyi-robotics-base",
+          "title": "双驱差速移动机器人底盘与自动化搬运系统迭代",
+          "year": "2022",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "gu-jianhao",
+      "name": "顾键濠",
+      "class": "高一18班",
+      "editions": [
+        "2021"
+      ],
+      "awards": [
+        {
+          "year": "2021",
+          "award": "凭高临岳",
+          "title": "高级算法解题实战库与 CSDN 技术博客知识沉淀"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2021-gu-jianhao-algorithms",
+          "title": "高级算法解题实战库与 CSDN 技术博客知识沉淀",
+          "year": "2021",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "yu-qinglan",
+      "name": "俞晴岚",
+      "class": "高二14班",
+      "editions": [
+        "2021",
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2021",
+          "award": "凭高临岳",
+          "title": "基于智能语音识别与物联网控制的无接触门禁系统"
+        },
+        {
+          "year": "2022",
+          "award": "坚韧登岳",
+          "title": "基于智能语音识别的智联猫垃圾分类开盖装置"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2021-yu-qinglan-smart-gate",
+          "title": "基于智能语音识别与物联网控制的无接触门禁系统",
+          "year": "2021",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        },
+        {
+          "id": "2022-yu-qinglan-smart-trash",
+          "title": "基于智能语音识别的智联猫垃圾分类开盖装置",
+          "year": "2022",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        }
+      ]
+    },
+    {
+      "id": "chen-yiming",
+      "name": "陈一鸣",
+      "class": "高二16班",
+      "editions": [
+        "2021"
+      ],
+      "awards": [
+        {
+          "year": "2021",
+          "award": "凭高临岳",
+          "title": "基于视觉伺服与多传感器融合的智能巡线抓取机器人"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2021-chen-yiming-vision-robot",
+          "title": "基于视觉伺服与多传感器融合的智能巡线抓取机器人",
+          "year": "2021",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "yu-xuantao",
+      "name": "俞选涛",
+      "class": "高二16班",
+      "editions": [
+        "2021"
+      ],
+      "awards": [
+        {
+          "year": "2021",
+          "award": "凭高临岳（入围奖）",
+          "title": "南通中学 3D 全景漫游与智慧校园导览系统 (school_map)"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2021-yu-xuantao-school-map",
+          "title": "南通中学 3D 全景漫游与智慧校园导览系统 (school_map)",
+          "year": "2021",
+          "award": "凭高临岳（入围奖）",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "hang-junjie",
+      "name": "杭俊杰",
+      "class": "高二7班",
+      "editions": [
+        "2021"
+      ],
+      "awards": [
+        {
+          "year": "2021",
+          "award": "凭高临岳（入围奖）",
+          "title": "基于机器视觉的工件自动分类与机械臂分拣系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2021-hang-junjie-dobot-vision",
+          "title": "基于机器视觉的工件自动分类与机械臂分拣系统",
+          "year": "2021",
+          "award": "凭高临岳（入围奖）",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "zhang-jiacheng",
+      "name": "张家诚",
+      "class": "高一5班",
+      "editions": [
+        "2021"
+      ],
+      "awards": [
+        {
+          "year": "2021",
+          "award": "凭高临岳（入围奖）",
+          "title": "全国信息学奥赛 CSP-S 2021《廊桥分配》算法深入剖析与优化"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2021-zhang-jiacheng-bridge-report",
+          "title": "全国信息学奥赛 CSP-S 2021《廊桥分配》算法深入剖析与优化",
+          "year": "2021",
+          "award": "凭高临岳（入围奖）",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "zhang-chenyu",
+      "name": "张成宇",
+      "class": "高一6班",
+      "editions": [
+        "2021"
+      ],
+      "awards": [
+        {
+          "year": "2021",
+          "award": "凭高临岳（入围奖）",
+          "title": "A* 启发式搜索算法原理与迷宫最佳路径规划实践"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2021-zhang-chenyu-astar",
+          "title": "A* 启发式搜索算法原理与迷宫最佳路径规划实践",
+          "year": "2021",
+          "award": "凭高临岳（入围奖）",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "xu-tianrun",
+      "name": "徐天润、张林浩、李吴庶、俞乾齐",
+      "class": "高二6班",
+      "editions": [
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2022",
+          "award": "凌绝望岳",
+          "title": "智能多工位仓储物流机器人协同作业系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2022-xu-tianrun-robotics-team",
+          "title": "智能多工位仓储物流机器人协同作业系统",
+          "year": "2022",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        }
+      ]
+    },
+    {
+      "id": "ma-jiayue",
+      "name": "马佳悦",
+      "class": "高三14班",
+      "editions": [
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2022",
+          "award": "凌绝望岳",
+          "title": "“手自一体式”自动化仔猪精准导料食槽"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2022-ma-jiayue-pig-feeder",
+          "title": "“手自一体式”自动化仔猪精准导料食槽",
+          "year": "2022",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        }
+      ]
+    },
+    {
+      "id": "huang-tianyu",
+      "name": "黄天宇",
+      "class": "高三14班",
+      "editions": [
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2022",
+          "award": "坚韧登岳",
+          "title": "高效便捷防交叉感染 3D 眼镜智能回收与紫外消杀一体机"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2022-huang-tianyu-3d-glasses",
+          "title": "高效便捷防交叉感染 3D 眼镜智能回收与紫外消杀一体机",
+          "year": "2022",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        }
+      ]
+    },
+    {
+      "id": "li-yi",
+      "name": "李怿",
+      "class": "高三13班",
+      "editions": [
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2022",
+          "award": "凭高临岳",
+          "title": "基于数值积分与刚体动力学的二维物理碰撞仿真引擎"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2022-li-yi-physics-engine",
+          "title": "基于数值积分与刚体动力学的二维物理碰撞仿真引擎",
+          "year": "2022",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "zhang-lin",
+      "name": "张林",
+      "class": "高三13班",
+      "editions": [
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2022",
+          "award": "凭高临岳",
+          "title": "多任务操作系统进程调度算法模拟与性能评估"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2022-zhang-lin-os-scheduler",
+          "title": "多任务操作系统进程调度算法模拟与性能评估",
+          "year": "2022",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "cao-ye",
+      "name": "曹烨",
+      "class": "高三9班",
+      "editions": [
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2022",
+          "award": "凭高临岳",
+          "title": "高级数据结构与动态规划解题方法论解析"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2022-cao-ye-algorithms",
+          "title": "高级数据结构与动态规划解题方法论解析",
+          "year": "2022",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "wang-wei",
+      "name": "王唯",
+      "class": "高二6班",
+      "editions": [
+        "2022"
+      ],
+      "awards": [
+        {
+          "year": "2022",
+          "award": "凭高临岳",
+          "title": "基于 Tello Edu SDK 的微型无人机编队飞行控制探索"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2022-wang-wei-drone",
+          "title": "基于 Tello Edu SDK 的微型无人机编队飞行控制探索",
+          "year": "2022",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "gu-shun",
+      "name": "顾顺、吴泽宇",
+      "class": "高二5班 / 高二12班",
+      "editions": [
+        "2023",
+        "2024"
+      ],
+      "awards": [
+        {
+          "year": "2023",
+          "award": "凌绝望岳",
+          "title": "Cactus：面向算法竞赛与工业落地的现代 C++ 基础算法库"
+        },
+        {
+          "year": "2024",
+          "award": "坚韧登岳",
+          "title": "基于纯硬件分立逻辑电路的多功能数字时钟与报时闹钟 (v5.6)"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2023-gushun-wu-cactus",
+          "title": "Cactus：面向算法竞赛与工业落地的现代 C++ 基础算法库",
+          "year": "2023",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        },
+        {
+          "id": "2024-gushun-wu-logic-clock",
+          "title": "基于纯硬件分立逻辑电路的多功能数字时钟与报时闹钟 (v5.6)",
+          "year": "2024",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        }
+      ]
+    },
+    {
+      "id": "gu-shun",
+      "name": "顾顺",
+      "class": "高二5班",
+      "editions": [
+        "2023",
+        "2024"
+      ],
+      "awards": [
+        {
+          "year": "2023",
+          "award": "坚韧登岳",
+          "title": "Twist Tree：一种基于启发式局部重构的新型自平衡二叉搜索树设计与分析"
+        },
+        {
+          "year": "2024",
+          "award": "凌绝望岳",
+          "title": "75键分体式人体工程学客制化机械键盘（PCB硬件设计与QMK固件自研）"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2023-gu-shun-twist-tree",
+          "title": "Twist Tree：一种基于启发式局部重构的新型自平衡二叉搜索树设计与分析",
+          "year": "2023",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        },
+        {
+          "id": "2024-gu-shun-keyboard",
+          "title": "75键分体式人体工程学客制化机械键盘（PCB硬件设计与QMK固件自研）",
+          "year": "2024",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        }
+      ]
+    },
+    {
+      "id": "chen-wanxuan",
+      "name": "陈万瑄",
+      "class": "高一5班",
+      "editions": [
+        "2023"
+      ],
+      "awards": [
+        {
+          "year": "2023",
+          "award": "凭高临岳",
+          "title": "全国青少年信息学奥林匹克联赛 (NOIP) 一等奖成果与高阶算法实践"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2023-chen-wanxuan-noip",
+          "title": "全国青少年信息学奥林匹克联赛 (NOIP) 一等奖成果与高阶算法实践",
+          "year": "2023",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "yu-wentao",
+      "name": "余文涛、顾郁铭",
+      "class": "高一15班 / 高一7班",
+      "editions": [
+        "2023"
+      ],
+      "awards": [
+        {
+          "year": "2023",
+          "award": "凭高临岳",
+          "title": "中医智能体质辨识与分时段预约挂号综合系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2023-yu-wentao-gu-yuming-hospital",
+          "title": "中医智能体质辨识与分时段预约挂号综合系统",
+          "year": "2023",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "gu-yuming",
+      "name": "顾郁铭",
+      "class": "高二7班",
+      "editions": [
+        "2024"
+      ],
+      "awards": [
+        {
+          "year": "2024",
+          "award": "凭高临岳",
+          "title": "基于三路切分快速排序 (3-Way QuickSort) 的高考等级赋分仿真分析系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2024-gu-yuming-quicksort-ranking",
+          "title": "基于三路切分快速排序 (3-Way QuickSort) 的高考等级赋分仿真分析系统",
+          "year": "2024",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "wang-ziyi",
+      "name": "王籽易",
+      "class": "高一11班",
+      "editions": [
+        "2024"
+      ],
+      "awards": [
+        {
+          "year": "2024",
+          "award": "凭高临岳",
+          "title": "多径反射环境下的室内 WiFi 信号数据离群去噪与滑动窗口滤波算法"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2024-wang-ziyi-wifi-denoising",
+          "title": "多径反射环境下的室内 WiFi 信号数据离群去噪与滑动窗口滤波算法",
+          "year": "2024",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "yu-wentao",
+      "name": "余文涛",
+      "class": "高二15班",
+      "editions": [
+        "2024"
+      ],
+      "awards": [
+        {
+          "year": "2024",
+          "award": "凭高临岳",
+          "title": "面向高中文献阅览的智慧图书借阅与分类检索管理系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2024-yu-wentao-library-system",
+          "title": "面向高中文献阅览的智慧图书借阅与分类检索管理系统",
+          "year": "2024",
+          "award": "凭高临岳",
+          "awardTier": "third"
+        }
+      ]
+    },
+    {
+      "id": "xu-tianren",
+      "name": "须天人",
+      "class": "高二5班",
+      "editions": [
+        "2025"
+      ],
+      "awards": [
+        {
+          "year": "2025",
+          "award": "凌绝望岳",
+          "title": "基于注意力机制与深度卷积神经网络 (CNN) 的人脸多任务分析与表示学习研究"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2025-xu-tianren-facerecog",
+          "title": "基于注意力机制与深度卷积神经网络 (CNN) 的人脸多任务分析与表示学习研究",
+          "year": "2025",
+          "award": "凌绝望岳",
+          "awardTier": "first"
+        }
+      ]
+    },
+    {
+      "id": "wang-zihuan",
+      "name": "王梓涣",
+      "class": "高二8班",
+      "editions": [
+        "2025"
+      ],
+      "awards": [
+        {
+          "year": "2025",
+          "award": "坚韧登岳",
+          "title": "基于 DOBOT Magician 机械臂与机器视觉的工业级流水线智能分拣系统"
+        }
+      ],
+      "projects": [
+        {
+          "id": "2025-wang-zihuan-dobot-sorting",
+          "title": "基于 DOBOT Magician 机械臂与机器视觉的工业级流水线智能分拣系统",
+          "year": "2025",
+          "award": "坚韧登岳",
+          "awardTier": "second"
+        }
+      ]
+    }
+  ],
+  "judges": [
+    {
+      "name": "吴培",
+      "editions": [
+        "2017",
+        "2018",
+        "2021",
+        "2022",
+        "2023"
+      ]
+    },
+    {
+      "name": "陈功",
+      "editions": [
+        "2017"
+      ]
+    },
+    {
+      "name": "王闯",
+      "editions": [
+        "2017"
+      ]
+    },
+    {
+      "name": "施沛哲",
+      "editions": [
+        "2017"
+      ]
+    },
+    {
+      "name": "国际特邀评价 (Andrei Broder)",
+      "editions": [
+        "2017"
+      ]
+    },
+    {
+      "name": "范一呈",
+      "editions": [
+        "2017"
+      ]
+    },
+    {
+      "name": "李嘉",
+      "editions": [
+        "2017",
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "name": "韩剑雷",
+      "editions": [
+        "2017"
+      ]
+    },
+    {
+      "name": "裴宇晨",
+      "editions": [
+        "2017",
+        "2018"
+      ]
+    },
+    {
+      "name": "陈鑫",
+      "editions": [
+        "2017"
+      ]
+    },
+    {
+      "name": "蔡伟",
+      "editions": [
+        "2017"
+      ]
+    },
+    {
+      "name": "汤林鹏",
+      "editions": [
+        "2017",
+        "2018",
+        "2022"
+      ]
+    },
+    {
+      "name": "葛一凡",
+      "editions": [
+        "2017",
+        "2021",
+        "2022"
+      ]
+    },
+    {
+      "name": "顾佳唯",
+      "editions": [
+        "2018"
+      ]
+    },
+    {
+      "name": "杨圣",
+      "editions": [
+        "2021"
+      ]
+    },
+    {
+      "name": "周昊",
+      "editions": [
+        "2021"
+      ]
+    },
+    {
+      "name": "周鹤洋",
+      "editions": [
+        "2022"
+      ]
+    }
+  ]
+}

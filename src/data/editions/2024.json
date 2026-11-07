@@ -1,0 +1,494 @@
+{
+  "year": "2024",
+  "editionNumber": 8,
+  "title": "2024 第八届望岳奖学金",
+  "theme": "硬件底座的极致突破与六维评审体系的全面建立",
+  "intro": "第八届望岳奖学金标志着评审制度与技术高度的双重成熟。本届正式确立了涵盖“独立性、完成度、创新度、难度/深度、复杂度、社区贡献”的六维度客观量化评价标准与强制面谈验证机制。在申报作品中，高三极客顾顺带来的自研 75 键分体机械键盘与纯分立逻辑数字时钟双双震撼评委，以全满分的绝佳表现荣获凌绝望岳奖；顾郁铭的快排算法模拟、王籽易的 WiFi 去噪与余文涛的图书系统亦各展风采。",
+  "documents": [],
+  "gallery": [
+    {
+      "src": "media/2024/ceremony_roundtable_session.jpg",
+      "caption": "第八届望岳奖学金评审座谈与师生现场交流（江苏省南通中学会议室 · 2025年1月7日）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2024/ceremony_award_group.jpg",
+      "caption": "第八届望岳奖学金获奖学生手持荣誉证书合影（背景大屏幕：“第八届望岳奖学金颁发仪式”）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2024_gu_shun_keyboard_poster.jpg",
+      "caption": "顾顺自研 75键 分体式人体工程学机械键盘实物通电打字测试",
+      "category": "demo"
+    },
+    {
+      "src": "media/2024_wang_ziyi_wifi_poster.jpg",
+      "caption": "王籽易 WIFI 信号多径反射数据去噪算法讲解录像",
+      "category": "demo"
+    }
+  ],
+  "reviewSummary": "评审团依据六维标准进行了严苛打分与一对一面谈答辩。顾顺的 75 键分体机械键盘获得独立性5、完成度5、复杂度5的全场唯一顶格评定，斩获凌绝望岳奖；顾顺与吴泽宇的纯分立逻辑时钟荣膺坚韧登岳奖；顾郁铭、王籽易、余文涛分别荣获凭高临岳奖。",
+  "projects": [
+    {
+      "id": "2024-gu-shun-keyboard",
+      "title": "基于多路复用器与 TTP233/TTP223 的双模客制化机械键盘",
+      "studentId": "gu-shun",
+      "studentName": "顾顺",
+      "class": "高三5班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "硬件与嵌入式",
+      "tags": [
+        "客制化键盘",
+        "PCB设计",
+        "EasyEDA",
+        "QMK固件",
+        "Arduino",
+        "分体式",
+        "开源硬件"
+      ],
+      "summary": "针对常规客制化机械键盘尺寸庞大与引脚占用过多的痛点，创新结合 CD4067B 模拟多路复用器与 TTP233 触摸传感方案，自研防误触扫描算法与 STM32/Si24R1 双模固件。",
+      "video": {
+        "src": "media/2024_gu_shun_keyboard.mp4",
+        "poster": "media/2024_gu_shun_keyboard_poster.jpg",
+        "title": "75键分体式机械键盘实物打字测试演示"
+      },
+      "hasCode": true,
+      "codeArchiveId": "2024-gushun-keyboard",
+      "artifactSpecs": [
+        {
+          "name": "75-Key Split Keyboard PCB & Firmware",
+          "type": "EasyEDA PCB 工程与 QMK C++ 固件",
+          "platform": "Atmega32u4 / Arduino USB HID",
+          "size": "双层高密度布线 PCB Gerber 文件",
+          "description": "包含分体按键矩阵、多路复用器采样与自定义物理层键位映射"
+        }
+      ],
+      "details": {
+        "skills": "EDA 电路设计、高速数字电路抗干扰走线、USB HID 通信协议、C++ 嵌入式驱动",
+        "difficulties": "分体间通信防抖动、Atmega32u4 USB 握手异常导致的枚举失败与矩阵瞬态干扰消除",
+        "innovations": "从零打造出媲美商业量产水准的高颜值分体机械键盘，不仅完全满足自己高强度编程需求，更向全校证明了中学生完全具备独立打通复杂硬件产品的全栈能力。",
+        "fullReportHtml": "<div class=\"space-y-8 text-slate-700 leading-relaxed font-sans\">\n  <!-- 头部信息卡片 -->\n  <div class=\"bg-gradient-to-br from-amber-500/10 via-slate-50 to-indigo-500/10 border border-amber-200/80 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2.5 mb-4\">\n      <span class=\"px-3 py-1 text-xs font-semibold rounded-full bg-amber-100 text-amber-800 border border-amber-300\">纯硬件与低功耗架构创新</span>\n      <span class=\"px-3 py-1 text-xs font-semibold rounded-full bg-sky-100 text-sky-800 border border-sky-300\">CD4067B 16选1 模拟复用</span>\n      <span class=\"px-3 py-1 text-xs font-semibold rounded-full bg-indigo-100 text-indigo-800 border border-indigo-300\">TTP223D-BA6 电容触控</span>\n      <span class=\"px-3 py-1 text-xs font-semibold rounded-full bg-emerald-100 text-emerald-800 border border-emerald-300\">STM32 USB HID 协议栈</span>\n      <span class=\"px-3 py-1 text-xs font-semibold rounded-full bg-purple-100 text-purple-800 border border-purple-300\">9.3mW 极限功耗</span>\n    </div>\n    <h3 class=\"text-2xl font-bold text-slate-900 mb-3\">基于多路复用器的超薄电容触摸宏键盘技术验证</h3>\n    <p class=\"text-sm md:text-base text-slate-700 leading-relaxed mb-4\">\n      传统客制化机械键盘受制于机械轴体结构，厚度往往超过 15~25mm，且依赖大量防冲二极管与密集的行列矩阵扫描网络。本项目由南通中学 <strong>顾顺（2205班）</strong> 同学独立研发，设计了一种<strong>基于 CD4067B 模拟开关多路复用技术的电容触摸宏键盘方案</strong>。以板载 PCB 沉金 Touch PAD 为输入实体，电路板直接充当键盘主体，突破机械行程限制，实现仅 <strong>4.6mm</strong> 极薄机身、完全静音触控与 1000Hz 超高回报率。\n    </p>\n\n    <!-- 原件下载指引横幅 -->\n    <div class=\"bg-white/90 border border-amber-200 rounded-xl p-4 mt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 shadow-xs\">\n      <div class=\"flex items-center gap-3\">\n        <div class=\"w-10 h-10 rounded-lg bg-amber-500/10 text-amber-700 flex items-center justify-center font-bold text-lg shrink-0\">PDF</div>\n        <div>\n          <div class=\"font-bold text-slate-900 text-sm\">完整学术论文与原理图现已开放下载</div>\n          <div class=\"text-xs text-slate-500\">包含 12 页完整 LaTeX 方案推导论文 (keyboard-scanner.pdf, 8.65MB) 与 11.4MB 官方技术报告原件</div>\n        </div>\n      </div>\n      <div class=\"flex items-center gap-2 shrink-0\">\n        <a href=\"/downloads/projects/2024-gu-shun-keyboard/2024-顾顺-键盘扫描电路原理图与方案论文(keyboard-scanner).pdf\" target=\"_blank\" class=\"inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-amber-600 hover:bg-amber-700 text-white transition-colors shadow-xs\">\n          <span>下载论文 PDF</span>\n        </a>\n        <a href=\"/downloads/projects/2024-gu-shun-keyboard/2024-顾顺-项目技术报告(键盘).docx\" download class=\"inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg bg-slate-800 hover:bg-slate-900 text-white transition-colors shadow-xs\">\n          <span>技术报告 DOCX</span>\n        </a>\n      </div>\n    </div>\n  </div>\n\n  <!-- 一、项目概述与沉金 Touch PAD 设计 -->\n  <div class=\"bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <h3 class=\"text-xl font-bold text-slate-900 mb-4 flex items-center gap-2\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-amber-500\"></span>\n      一、项目概述与板载沉金电容触控按键\n    </h3>\n    <p class=\"text-sm text-slate-700 leading-relaxed mb-6\">\n      电容触摸键盘不同于依赖物理金属弹片闭合的机械键盘，其核心在于直接利用 PCB 顶层裸露的<strong>铜箔沉金 Touch PAD 电极</strong>作为按键输入介质。当手指、导电金属物体或电容手写笔触碰沉金表面时，人体寄生电容导致感应极板电容值发生微小变化，被专用电容检测芯片 TTP223 敏锐捕捉并转换为电平输出。整个键盘不需要额外外壳支撑，PCB 板本身即为主体结构。\n    </p>\n\n    <!-- 沉金 Touch PAD 图文展示 -->\n    <div class=\"grid grid-cols-1 md:grid-cols-12 gap-6 items-center bg-slate-50 border border-slate-200 rounded-xl p-5 mb-6\">\n      <div class=\"md:col-span-5 flex justify-center\">\n        <div class=\"group relative overflow-hidden rounded-xl border border-slate-200 shadow-sm max-w-[280px]\">\n          <img src=\"media/2024/gu_keyboard/gu_keyboard_touch_pad.jpg\" alt=\"板载铜沉金电容触摸按键\" class=\"w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300\" />\n          <div class=\"absolute bottom-0 inset-x-0 bg-slate-900/75 backdrop-blur-xs text-[11px] text-white p-2 text-center\">\n            板载沉金 Touch PAD 触控焊盘实物\n          </div>\n        </div>\n      </div>\n      <div class=\"md:col-span-7 space-y-3 text-xs md:text-sm text-slate-600\">\n        <div class=\"font-semibold text-slate-800 text-base\">超薄便携式规格参数与形态规划</div>\n        <p>• <strong>机身极致紧凑</strong>：100 键配列键盘外形尺寸预计控制在 <code>200mm × 75mm × 4.6mm</code> 以内，厚度不到传统机械键盘的 1/4。</p>\n        <p>• <strong>无磨损全静音</strong>：无轴体敲击机械噪音，无触点氧化损耗，适用于图书馆、会议室等静音生产力场景。</p>\n        <p>• <strong>多介质感应支持</strong>：调优感度调节电容 \\(C_p = 120\text{pF}\\)，即使佩戴手套或隔着轻薄贴膜依然能保持高灵敏度响应。</p>\n      </div>\n    </div>\n\n    <!-- 工程研发阶段路线 -->\n    <h4 class=\"text-base font-bold text-slate-800 mb-3\">三阶段工程验证路线</h4>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-4 text-xs\">\n      <div class=\"bg-amber-50/60 border border-amber-200 rounded-xl p-4\">\n        <div class=\"flex items-center justify-between mb-2\">\n          <span class=\"font-bold text-amber-900 text-sm\">第一阶段验证工程</span>\n          <span class=\"px-2 py-0.5 rounded text-[10px] bg-emerald-100 text-emerald-800 font-semibold\">已完成</span>\n        </div>\n        <p class=\"text-slate-600\">验证 CD4067B 硬件轮询速度，TTP223X-BA6 触控芯片高频响应与方波输出波形，标定最佳 \\(C_p\\) 滤波电容值（120pF）。</p>\n      </div>\n      <div class=\"bg-sky-50/60 border border-sky-200 rounded-xl p-4\">\n        <div class=\"flex items-center justify-between mb-2\">\n          <span class=\"font-bold text-sky-900 text-sm\">第二阶段验证一期</span>\n          <span class=\"px-2 py-0.5 rounded text-[10px] bg-emerald-100 text-emerald-800 font-semibold\">已完成</span>\n        </div>\n        <p class=\"text-slate-600\">完成 STM32F103C8T6 硬件 USB 从机枚举、标准 HID 报告传输；评估 USART2-CH932X HID 方案；完成 3线 SPI-Ci24R1 + 板载 2.4G ANT#1 射频链路。</p>\n      </div>\n      <div class=\"bg-purple-50/60 border border-purple-200 rounded-xl p-4\">\n        <div class=\"flex items-center justify-between mb-2\">\n          <span class=\"font-bold text-purple-900 text-sm\">第二阶段验证二期</span>\n          <span class=\"px-2 py-0.5 rounded text-[10px] bg-indigo-100 text-indigo-800 font-semibold\">进行中</span>\n        </div>\n        <p class=\"text-slate-600\">将固件架构移植至 STM32F405RGT6 高性能平台；开发 DFU 在线固件升级协议、基于 SDIO 的板载宏指令存储与触觉线性震动反馈。</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 二、键盘扫描方案对比与核心原理 -->\n  <div class=\"bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <h3 class=\"text-xl font-bold text-slate-900 mb-4 flex items-center gap-2\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-sky-500\"></span>\n      二、键盘扫描方案拓扑深度对比与多路复用创新\n    </h3>\n    <p class=\"text-sm text-slate-700 leading-relaxed mb-6\">\n      键盘扫描的本质是将矩阵阵列中每一个键位（如 100 配列的 100 个按键）的开关状态精准上报给微处理器。为避免每个按键独占一个 MCU GPIO 引脚，业界探索了多种扫描拓扑，顾顺同学针对触控键盘特性深入分析了各方案优劣：\n    </p>\n\n    <!-- 原理图对比栅格 -->\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-6 mb-6\">\n      <div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 flex flex-col justify-between\">\n        <div>\n          <div class=\"text-center font-bold text-sm text-slate-800 mb-3\">传统矩阵扫描方案（行列 + 隔离二极管）</div>\n          <div class=\"rounded-lg overflow-hidden border border-slate-200 bg-white mb-3 max-h-56 flex items-center justify-center p-2\">\n            <img src=\"media/2024/gu_keyboard/gu_keyboard_matrix_scan.jpg\" alt=\"矩阵扫描方案原理图\" class=\"max-h-52 w-auto object-contain\" />\n          </div>\n          <p class=\"text-xs text-slate-600 leading-relaxed\">\n            从 <code>KEY_LONx</code> 输入低电平扫描信号，根据 <code>KEY_HORx</code> 电平判断闭合。二极管用于防止键位串扰。\n          </p>\n        </div>\n        <div class=\"mt-3 pt-3 border-t border-slate-200 text-xs text-rose-700 bg-rose-50/60 p-2.5 rounded-lg\">\n          <strong>致命缺陷：</strong>需手工焊接上百只二极管；走线极其繁杂，且<strong>无法支持具有直接主动数字电平输出</strong>的电容触控芯片（TTP223）。\n        </div>\n      </div>\n\n      <div class=\"border border-amber-300 rounded-xl p-4 bg-amber-50/40 flex flex-col justify-between shadow-xs\">\n        <div>\n          <div class=\"text-center font-bold text-sm text-amber-900 mb-3\">被动多路复用扫描方案（CD4067B 16进1）</div>\n          <div class=\"rounded-lg overflow-hidden border border-amber-200 bg-white mb-3 max-h-56 flex items-center justify-center p-2\">\n            <img src=\"media/2024/gu_keyboard/gu_keyboard_cd4067b_schematic.png\" alt=\"被动扫描方案原理图\" class=\"max-h-52 w-auto object-contain\" />\n          </div>\n          <p class=\"text-xs text-slate-700 leading-relaxed\">\n            采用 <strong>CD4067B</strong> 16 通道双向模拟开关，将 16 路按键信号通过 4 位二进制选通地址（S0~S3）集中轮询至 1 根 IO 引脚。\n          </p>\n        </div>\n        <div class=\"mt-3 pt-3 border-t border-amber-200 text-xs text-emerald-800 bg-emerald-50/70 p-2.5 rounded-lg\">\n          <strong>核心优势：</strong>每增加 16 键仅增 1 根数据线；支持地址线全并联级联；彻底解决主动数字触控信号输入难题。\n        </div>\n      </div>\n    </div>\n\n    <!-- 方案三大核心优势详解 -->\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-4 text-xs md:text-sm\">\n      <div class=\"p-4 rounded-xl bg-slate-50 border border-slate-200\">\n        <div class=\"font-bold text-amber-700 mb-1.5 flex items-center gap-1.5\">\n          <span>⚡ 极高的硬件回报率</span>\n        </div>\n        <p class=\"text-slate-600 text-xs leading-relaxed\">\n          CD4067B 模拟开关导通带宽达数十 MHz，引脚传输延迟仅纳秒级。整个扫描速度的唯一瓶颈仅在于微控制器的 GPIO 读写周期，实测可轻松稳定达成 <strong>1000Hz (1kHz)</strong> 极速硬件回报率。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-slate-50 border border-slate-200\">\n        <div class=\"font-bold text-sky-700 mb-1.5 flex items-center gap-1.5\">\n          <span>🔌 极省主控 GPIO 引脚</span>\n        </div>\n        <p class=\"text-slate-600 text-xs leading-relaxed\">\n          多片 CD4067B 可共享相同的 4 位地址总线（S0~S3）。扫描 \\(16 \times n\\) 个按键仅需 \\((n + 4)\\) 个 IO 口！若扫描 100 键配列仅需 7 片芯片并联，总共只需 <strong>11 个 GPIO</strong>，大幅降低 MCU 选型成本与布线难度。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-slate-50 border border-slate-200\">\n        <div class=\"font-bold text-emerald-700 mb-1.5 flex items-center gap-1.5\">\n          <span>🔋 微瓦级芯片超低功耗</span>\n        </div>\n        <p class=\"text-slate-600 text-xs leading-relaxed\">\n          根据德州仪器（TI）官方 Datasheet，CD4067B 在 5V 供电下的静态功耗典型值仅为 <strong>0.2µW</strong>，即使在最高开关频率下极限功耗亦不超过 25µW，几乎不消耗电池电量。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 三、硬件原型验证平台实物照片 -->\n  <div class=\"bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2 flex items-center gap-2\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500\"></span>\n      三、第二阶段验证一期工程：硬件平台联调实物档案\n    </h3>\n    <p class=\"text-sm text-slate-600 mb-6\">\n      顾顺同学搭建了完整的 16 键电容宏键盘实验平台。主控基于 STM32F103 最小系统板，外接 CD4067B 逻辑切换模块、TTP223 触控阵列、逻辑分析探针以及 2.4G 射频天线进行全流程联调。\n    </p>\n\n    <!-- 三张实物高清照片 -->\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-5 mb-4\">\n      <div class=\"group border border-slate-200 rounded-xl overflow-hidden bg-slate-50 shadow-xs\">\n        <div class=\"aspect-4/3 overflow-hidden bg-slate-900/5 flex items-center justify-center\">\n          <img src=\"media/2024/gu_keyboard/gu_keyboard_hardware_bench_1.jpg\" alt=\"硬件平台全景联调\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-300\" />\n        </div>\n        <div class=\"p-3.5 text-xs text-slate-700\">\n          <div class=\"font-bold text-slate-900 mb-1\">图 2：实验验证台全景</div>\n          <p class=\"text-slate-500 text-[11px]\">STM32F103 主板与面包板飞线连接，对 16 路输入通道进行实时逻辑电平选通与防抖抓包。</p>\n        </div>\n      </div>\n\n      <div class=\"group border border-slate-200 rounded-xl overflow-hidden bg-slate-50 shadow-xs\">\n        <div class=\"aspect-4/3 overflow-hidden bg-slate-900/5 flex items-center justify-center\">\n          <img src=\"media/2024/gu_keyboard/gu_keyboard_hardware_bench_2.jpg\" alt=\"触控芯片与逻辑矩阵特写\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-300\" />\n        </div>\n        <div class=\"p-3.5 text-xs text-slate-700\">\n          <div class=\"font-bold text-slate-900 mb-1\">图 3：TTP223 矩阵模块特写</div>\n          <p class=\"text-slate-500 text-[11px]\">TTP223 触控传感器阵列与 CD4067B 之间的多路复用总线走线，探针接入测试点进行波形量测。</p>\n        </div>\n      </div>\n\n      <div class=\"group border border-slate-200 rounded-xl overflow-hidden bg-slate-50 shadow-xs\">\n        <div class=\"aspect-4/3 overflow-hidden bg-slate-900/5 flex items-center justify-center\">\n          <img src=\"media/2024/gu_keyboard/gu_keyboard_hardware_bench_3.jpg\" alt=\"俯视视角模块走线\" class=\"w-full h-full object-cover group-hover:scale-105 transition-transform duration-300\" />\n        </div>\n        <div class=\"p-3.5 text-xs text-slate-700\">\n          <div class=\"font-bold text-slate-900 mb-1\">图 4：走线与供电回路细节</div>\n          <p class=\"text-slate-500 text-[11px]\">高频总线去耦电容与电源滤波拓扑，保证快速扫描切换过程中的信号信噪比（SNR）。</p>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <!-- 四、示波器波形实测与高响应验证 -->\n  <div class=\"bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <h3 class=\"text-xl font-bold text-slate-900 mb-4 flex items-center gap-2\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-indigo-500\"></span>\n      四、示波器高速波形实测与触发响应验证\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-12 gap-6 items-center\">\n      <div class=\"md:col-span-6\">\n        <div class=\"border border-slate-200 rounded-xl overflow-hidden bg-black shadow-sm p-1\">\n          <img src=\"media/2024/gu_keyboard/gu_keyboard_oscilloscope_wave.png\" alt=\"按键快速触发测试波形\" class=\"w-full h-auto object-contain\" />\n          <div class=\"p-2 text-center text-[11px] text-slate-300 bg-slate-900\">\n            示波器实测波形：按键快速触发瞬间方波上升沿与高频脉冲响应\n          </div>\n        </div>\n      </div>\n      <div class=\"md:col-span-6 space-y-3 text-xs md:text-sm text-slate-600\">\n        <div class=\"font-bold text-slate-900 text-base\">波形实测结论与触发分析</div>\n        <p>• <strong>波形极速翻转</strong>：从示波器抓取到的电平跃迁曲线可以看出，方波上升沿陡峭无明显振铃过冲，电平翻转迅速，完全满足微秒级采样需求。</p>\n        <p>• <strong>零机械抖动</strong>：不同于机械轴体通断瞬间长达 5~15ms 的触点抖动，TTP223 电容感应芯片输出为纯净的数字电平，不需要繁琐冗长的软件延时防抖。</p>\n        <p>• <strong>HID 协议即插即用</strong>：STM32 经由标准 USB D+/D- 差分信号上报 Standard Keyboard HID 描述符，经电脑识别为标准输入设备，按键数据包上报延迟 &lt; 1ms。</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 五、超低功耗理论测算与芯片 Datasheet 参数 -->\n  <div class=\"bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <h3 class=\"text-xl font-bold text-slate-900 mb-4 flex items-center gap-2\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-rose-500\"></span>\n      五、系统功耗理论测算与极度能效分析\n    </h3>\n    <p class=\"text-sm text-slate-600 mb-6\">\n      顾顺同学在技术报告中对第二阶段一期工程（16 键宏键盘原型）进行了详尽的半导体器件 Datasheet 功耗比对与理论测算：\n    </p>\n\n    <!-- 功耗三要素公式与图片 -->\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-5 mb-6\">\n      <div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 flex flex-col justify-between\">\n        <div>\n          <div class=\"font-bold text-slate-900 text-xs mb-2\">1. STM32 微控制器功耗</div>\n          <div class=\"bg-white border border-slate-200 rounded-lg p-2 mb-2\">\n            <img src=\"media/2024/gu_keyboard/gu_keyboard_stm32_power.png\" alt=\"STM32 运行功耗公式\" class=\"w-full h-auto object-contain\" />\n          </div>\n          <p class=\"text-xs text-slate-600\">STM32F103 处于低频运行及 USB 等待状态下的电流约为 2.71mA：</p>\n        </div>\n        <div class=\"mt-3 p-2 rounded bg-amber-50 text-amber-900 font-mono text-xs font-semibold\">\n          P_mcu = 2.71mA × 3.3V = 8.943 mW\n        </div>\n      </div>\n\n      <div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 flex flex-col justify-between\">\n        <div>\n          <div class=\"font-bold text-slate-900 text-xs mb-2\">2. TTP223D-HA6 触控芯片组</div>\n          <div class=\"bg-white border border-slate-200 rounded-lg p-2 mb-2\">\n            <img src=\"media/2024/gu_keyboard/gu_keyboard_ttp223_datasheet.png\" alt=\"TTP223 规格书功耗\" class=\"w-full h-auto object-contain\" />\n          </div>\n          <p class=\"text-xs text-slate-600\">单颗芯片低功耗模式典型工作电流仅 10µA，16 颗芯片并联：</p>\n        </div>\n        <div class=\"mt-3 p-2 rounded bg-sky-50 text-sky-900 font-mono text-xs font-semibold\">\n          P_ttp = 3.3V × 10µA × 16 = 0.330 mW\n        </div>\n      </div>\n\n      <div class=\"border border-slate-200 rounded-xl p-4 bg-slate-50 flex flex-col justify-between\">\n        <div>\n          <div class=\"font-bold text-slate-900 text-xs mb-2\">3. CD4067BPWR 模拟复用器</div>\n          <div class=\"bg-white border border-slate-200 rounded-lg p-2 mb-2\">\n            <img src=\"media/2024/gu_keyboard/gu_keyboard_cd4067b_datasheet.png\" alt=\"CD4067B 规格书功耗\" class=\"w-full h-auto object-contain\" />\n          </div>\n          <p class=\"text-xs text-slate-600\">5V 供电下的静态电源电流最大不超过 5µA：</p>\n        </div>\n        <div class=\"mt-3 p-2 rounded bg-purple-50 text-purple-900 font-mono text-xs font-semibold\">\n          P_mux = 5.0V × 5µA = 0.025 mW\n        </div>\n      </div>\n    </div>\n\n    <!-- 总功耗结论横幅 -->\n    <div class=\"bg-gradient-to-r from-emerald-500/10 via-teal-50 to-emerald-500/10 border border-emerald-300 rounded-xl p-4 text-center text-sm text-slate-800\">\n      <strong>16 键宏键盘整机理论总功耗：</strong>\n      <span class=\"font-mono font-bold text-emerald-800 ml-1\">8.943 mW + 0.330 mW + 0.025 mW = 9.303 mW</span>\n      <span class=\"text-xs text-slate-500 block sm:inline sm:ml-2\">(若搭载常规 500mAh 锂电池，待机与连续打字理论续航可达数百小时以上)</span>\n    </div>\n  </div>\n\n  <!-- 六、核心驱动代码实现与扫描算法 -->\n  <div class=\"bg-white border border-slate-200 rounded-2xl p-6 md:p-8 shadow-xs\">\n    <h3 class=\"text-xl font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-slate-800\"></span>\n      六、核心扫描驱动代码实现（Arduino / 嵌入式 C++）\n    </h3>\n    <p class=\"text-sm text-slate-600 mb-4\">\n      以下为顾顺同学在技术报告中收录的 16 选 1 模拟开关分时选通与异或边沿跳变检测代码。通过 4 个 GPIO 输出 4 位二进制地址选通通道，单引脚读取电平，结合异或运算 <code>p[i] ^ q[i]</code> 极速捕获按键按下（down）与释放（up）事件：\n    </p>\n\n    <div class=\"rounded-xl overflow-hidden border border-slate-800 bg-slate-900 text-slate-100 font-mono text-xs shadow-md\">\n      <div class=\"bg-slate-800 px-4 py-2 border-b border-slate-700 flex items-center justify-between text-slate-400 text-[11px]\">\n        <span>keyboard_scanner_cd4067b.ino</span>\n        <span>Arduino / STM32 Core</span>\n      </div>\n      <pre class=\"p-4 overflow-x-auto leading-relaxed\"><code class=\"language-cpp\">#include &lt;Arduino.h&gt;\n\n// 当前状态 p，上一轮状态 q\nbool p[17], q[17];\n// 按键物理编号映射表 (根据 PCB 走线顺序映射至键盘标准键码)\nint mapp[17] = {3, 7, 4, 8, 12, 16, 15, 11, 14, 13, 10, 9, 6, 5, 2, 1, 0};\n\nvoid setup() {\n  // CD4067B 地址选择线：S0(GPIO26), S1(GPIO27), S2(GPIO14), S3(GPIO12)\n  pinMode(26, OUTPUT);\n  pinMode(27, OUTPUT);\n  pinMode(14, OUTPUT);\n  pinMode(12, OUTPUT);\n  \n  // LED 状态指示引脚\n  pinMode(5, OUTPUT);\n  pinMode(4, OUTPUT);\n  pinMode(15, OUTPUT);\n  pinMode(17, OUTPUT);\n  \n  // CD4067B 汇聚数据输入引脚 (SIG 引脚连接至 GPIO25)\n  pinMode(25, INPUT);\n  \n  for(int i = 0; i &lt; 16; i++) q[i] = 0;\n  Serial.begin(115200);\n}\n\ninline bool ctc(int x) {\n  return x ? HIGH : LOW;\n}\n\nvoid loop() {\n  // 1. 毫秒级轮询 16 个模拟开关通道\n  for(int i = 0; i &lt; 16; i++) {\n    digitalWrite(26, ctc(i & 1));\n    digitalWrite(27, ctc(i & 2));\n    digitalWrite(14, ctc(i & 4));\n    digitalWrite(12, ctc(i & 8));\n    p[i] = digitalRead(25); // 读取当前选通键位电平\n  }\n  \n  int cnt = 0;\n  // 2. 异或位运算快速捕获按键边缘跳变\n  for(int i = 0; i &lt; 16; i++) {\n    if(p[i]) cnt++;\n    if(p[i] ^ q[i]) { // 状态发生改变\n      if(p[i]) {\n        Serial.print(\"down: \");\n        Serial.println(mapp[i]);\n      } else {\n        Serial.print(\"up: \");\n        Serial.println(mapp[i]);\n      }\n    }\n    p[i] ^= q[i] ^= p[i] ^= q[i]; // 异或交换，更新上一轮状态 q\n  }\n  \n  // 3. 将当前同时按下按键总数输出至状态指示灯\n  digitalWrite(5,  ctc(cnt & 1));\n  digitalWrite(4,  ctc(cnt & 2));\n  digitalWrite(15, ctc(cnt & 4));\n  digitalWrite(17, ctc(cnt & 8));\n  \n  delay(10); // 轮询主周期\n}</code></pre>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "独立性极高、完成度饱满、架构精巧！展示了完整、稳定、可实用的硬核产品，各维度表现无可挑剔，毫无争议授予全场唯一的最高奖项——凌绝望岳奖。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2024-顾顺 - 申请表原件",
+          "filename": "2024-顾顺-申请表原件.docx",
+          "url": "/downloads/projects/2024-gu-shun-keyboard/2024-顾顺-申请表原件.docx",
+          "size": "14.4 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2024-gu-shun-keyboard",
+          "projectTitle": "基于多路复用器与 TTP233/TTP223 的双模客制化机械键盘",
+          "studentName": "顾顺",
+          "editionYear": "2024",
+          "description": "顾顺 于 2024 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2024-顾顺 - 项目源代码",
+          "filename": "2024-顾顺-项目源代码.zip",
+          "url": "/downloads/projects/2024-gu-shun-keyboard/2024-顾顺-项目源代码.zip",
+          "size": "946 B",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2024-gu-shun-keyboard",
+          "projectTitle": "基于多路复用器与 TTP233/TTP223 的双模客制化机械键盘",
+          "studentName": "顾顺",
+          "editionYear": "2024",
+          "description": "《基于多路复用器与 TTP233/TTP223 的双模客制化机械键盘》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        },
+        {
+          "title": "2024-顾顺 - 键盘扫描电路原理图与方案论文 (keyboard-scanner.pdf)",
+          "filename": "2024-顾顺-键盘扫描电路原理图与方案论文(keyboard-scanner).pdf",
+          "url": "/downloads/projects/2024-gu-shun-keyboard/2024-顾顺-键盘扫描电路原理图与方案论文(keyboard-scanner).pdf",
+          "size": "8.7 MB",
+          "type": "pdf",
+          "category": "原理图与论文",
+          "projectId": "2024-gu-shun-keyboard",
+          "projectTitle": "基于多路复用器与 TTP233/TTP223 的双模客制化机械键盘",
+          "studentName": "顾顺",
+          "editionYear": "2024",
+          "description": "顾顺撰写的完整技术方案论文与硬件原理图（LaTeX排版，含被动与主动多路复用扫描方案详细推导与电路图，12页）。"
+        },
+        {
+          "title": "2024-顾顺 - 项目技术报告原件",
+          "filename": "2024-顾顺-项目技术报告(键盘).docx",
+          "url": "/downloads/projects/2024-gu-shun-keyboard/2024-顾顺-项目技术报告(键盘).docx",
+          "size": "11.4 MB",
+          "type": "doc",
+          "category": "技术报告",
+          "projectId": "2024-gu-shun-keyboard",
+          "projectTitle": "基于多路复用器与 TTP233/TTP223 的双模客制化机械键盘",
+          "studentName": "顾顺",
+          "editionYear": "2024",
+          "description": "包含项目概述、电容触摸按键设计、CD4067B扫描方案、Arduino测试代码、示波器波形及硬件原型实物测试的高清技术报告原件。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2024/gu_keyboard/gu_keyboard_hardware_bench_1.jpg",
+          "caption": "第二阶段验证工程硬件平台全景：基于 STM32F103 主控板与 CD4067B 模拟开关搭建的 16 键电容触控宏键盘实验验证台与飞线联调",
+          "category": "硬件实物"
+        },
+        {
+          "src": "media/2024/gu_keyboard/gu_keyboard_hardware_bench_2.jpg",
+          "caption": "验证测试台特写：TTP223 触控芯片与逻辑开关矩阵在面包板上的信号通路布局及探针测试节点",
+          "category": "硬件实物"
+        },
+        {
+          "src": "media/2024/gu_keyboard/gu_keyboard_hardware_bench_3.jpg",
+          "caption": "硬件测试板俯视视角：多路复用选通总线引脚配置与各模块级联测试环境",
+          "category": "硬件实物"
+        },
+        {
+          "src": "media/2024/gu_keyboard/gu_keyboard_touch_pad.jpg",
+          "caption": "板载电容触摸按键设计：沉金 Touch PAD 触控铜箔电极结构（支持手指、金属物体或电容笔直接触控）",
+          "category": "按键设计"
+        },
+        {
+          "src": "media/2024/gu_keyboard/gu_keyboard_cd4067b_schematic.png",
+          "caption": "图 1：被动扫描方案原理图（基于 CD4067B 16进1 模拟开关芯片的按键阵列集中轮询架构）",
+          "category": "原理图"
+        },
+        {
+          "src": "media/2024/gu_keyboard/gu_keyboard_matrix_scan.jpg",
+          "caption": "传统键盘矩阵扫描方案原理图：行列扫描与防冲二极管阵列结构（对比多路复用方案的优缺点分析）",
+          "category": "方案对比"
+        },
+        {
+          "src": "media/2024/gu_keyboard/gu_keyboard_oscilloscope_wave.png",
+          "caption": "示波器信号实测：按键快速触发测试波形（边沿陡峭，方波翻转速度极快，确保回报率可达 kHz 级别）",
+          "category": "波形测试"
+        },
+        {
+          "src": "media/2024/gu_keyboard/gu_keyboard_cd4067b_datasheet.png",
+          "caption": "CD4067BPWR 模拟多路复用芯片 Datasheet 功耗参数：5V 供电下典型功耗仅 0.2µW（极限不超过 25µW）",
+          "category": "功耗分析"
+        },
+        {
+          "src": "media/2024/gu_keyboard/gu_keyboard_ttp223_datasheet.png",
+          "caption": "TTP223D-HA6 电容式触摸感应芯片功耗参数表：3.3V 供电下单芯片功耗仅约 10µA",
+          "category": "功耗分析"
+        },
+        {
+          "src": "media/2024/gu_keyboard/gu_keyboard_stm32_power.png",
+          "caption": "系统理论总功耗计算表：STM32(8.943mW) + TTP223D(0.33mW) + CD4067B(0.025mW) = 9.303mW 极致超低功耗",
+          "category": "功耗分析"
+        }
+      ]
+    },
+    {
+      "id": "2024-gushun-wu-logic-clock",
+      "title": "基于纯硬件分立逻辑电路的多功能数字时钟与报时闹钟 (v5.6)",
+      "studentId": "gu-shun",
+      "studentName": "顾顺、吴泽宇",
+      "class": "高三5班 / 高三12班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "硬件与逻辑电路",
+      "tags": [
+        "分立门电路",
+        "74系列逻辑芯片",
+        "晶振分频",
+        "硬件闹钟",
+        "双层PCB",
+        "无MCU纯硬件"
+      ],
+      "summary": "彻底摒弃现代单片机与软件编程，回归计算机体系结构源头——纯硬件数字逻辑。利用石英晶体振荡器、74 系列计数器、非门与与非门芯片，在复杂双层电路板上完成了高精度秒脉冲分频、六十进制与二十四进制计数、数码管驱动及逻辑比对闹钟电路。",
+      "hasCode": true,
+      "codeArchiveId": "2024-gushun-logic-clock",
+      "details": {
+        "skills": "纯硬件逻辑门电路综合、晶振无源RC网络调谐、双层密集PCB手动布线、时序竞争与冒险消除",
+        "difficulties": "大规模分立芯片导致的布线飞线交错，高频时钟信号在长走线上的毛刺与反弹干扰",
+        "innovations": "不借助一行软件代码，仅用硬件芯片搭建出精准的时序与逻辑状态机，体现出对数字电路本质的深刻敬畏与高超动手能力。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2024年 11 月 24 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">顾顺</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">2205</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">基于逻辑电路的闹钟&amp;时钟（v5.6）</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1.5\">🔗 代码托管与开源地址</span><div class=\"flex flex-wrap gap-2\"><a href=\"https://oshwhub.com/cactusstudio/clock_rev-5\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800 transition-colors\"><span>https://oshwhub.com/cactusstudio/clock_rev-5</span><span class=\"text-[10px]\">↗</span></a></div></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👥 团队协作成员与分工</span><span class=\"text-xs text-stone-800 dark:text-stone-200 font-serif leading-relaxed\">2212 吴泽宇 参与部分焊接</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>基于逻辑电路的时钟+闹钟</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">大规模电路设计与debug，复杂双层板布线</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">布线</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">采用部分触摸按键，且采用了创新的显示模块。</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与硬件电路架构解析 (Hardware Engineering)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-amber-200/80 dark:border-amber-900/40 bg-gradient-to-br from-amber-50/50 via-white to-orange-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-amber-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-amber-100 dark:border-amber-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">⏰</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">基于纯分立逻辑芯片的多功能数字时钟与闹钟</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">零 MCU / 零单片机代码 · 纯硬件分立 CMOS 逻辑电路系统 · v5.6</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">CD4xxx CMOS</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-orange-100 dark:bg-orange-900/50 text-orange-800 dark:text-orange-300\">1MHz 有源晶振 (±10ppm)</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-rose-100 dark:bg-rose-900/50 text-rose-800 dark:text-rose-300\">NE555P 单稳态</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-slate-100 dark:bg-stone-800 text-slate-800 dark:text-stone-300\">多层电容触摸</span>\n      </div>\n    </div>\n\n    <!-- Hardware Subsystems Grid -->\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\">\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-base\">⚡</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">高稳时基发生与分频链路</h6>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          时钟基准源采用 <strong>1MHz 有源高精度晶振</strong>（±10ppm 极低温漂）。级联两级高速 <strong>CD74HC4017PWR</strong> 与多级 <strong>CD4017BM</strong> 逐级分频，精确输出 1Hz 准周期秒脉冲。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-base\">📟</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">数码管显示驱动矩阵</h6>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          时钟与闹钟的计时逻辑采用 <strong>CD4518BM 双 BCD 计数器</strong>，配合 <strong>CH440R 模拟开关</strong>（实现当前时间与闹钟预设源的硬件切选）与 <strong>CD4511BM 译码器</strong>驱动 3611AS 高亮数码管。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-base\">🔔</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">闹钟比对与触摸控制</h6>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          闹钟触发采用 <strong>CD4077BM 异或门逻辑比对</strong>，触发后驱动 <strong>单稳态模式 NE555P</strong> 发出报时提示。人机操作端采用多层电容触摸按键 PCB，配有电源与触控状态双色指示。\n        </p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "独立性强、硬件极具挑战性！电路图完备，布线极其精巧，重现了经典计算机底层硬件逻辑的魅力，荣膺坚韧登岳奖。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2024-顾顺、吴泽宇 - 申请表原件",
+          "filename": "2024-顾顺、吴泽宇-申请表原件.docx",
+          "url": "/downloads/projects/2024-gushun-wu-logic-clock/2024-顾顺、吴泽宇-申请表原件.docx",
+          "size": "14.1 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2024-gushun-wu-logic-clock",
+          "projectTitle": "基于纯硬件分立逻辑电路的多功能数字时钟与报时闹钟 (v5.6)",
+          "studentName": "顾顺、吴泽宇",
+          "editionYear": "2024",
+          "description": "顾顺、吴泽宇 于 2024 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2024-顾顺、吴泽宇 - 项目设计文档/学术报告",
+          "filename": "2024-顾顺、吴泽宇-项目技术报告.docx",
+          "url": "/downloads/projects/2024-gushun-wu-logic-clock/2024-顾顺、吴泽宇-项目技术报告.docx",
+          "size": "13.3 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2024-gushun-wu-logic-clock",
+          "projectTitle": "基于纯硬件分立逻辑电路的多功能数字时钟与报时闹钟 (v5.6)",
+          "studentName": "顾顺、吴泽宇",
+          "editionYear": "2024",
+          "description": "《基于纯硬件分立逻辑电路的多功能数字时钟与报时闹钟 (v5.6)》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2024-顾顺、吴泽宇 - 项目源代码",
+          "filename": "2024-顾顺、吴泽宇-项目源代码.zip",
+          "url": "/downloads/projects/2024-gushun-wu-logic-clock/2024-顾顺、吴泽宇-项目源代码.zip",
+          "size": "4.9 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2024-gushun-wu-logic-clock",
+          "projectTitle": "基于纯硬件分立逻辑电路的多功能数字时钟与报时闹钟 (v5.6)",
+          "studentName": "顾顺、吴泽宇",
+          "editionYear": "2024",
+          "description": "《基于纯硬件分立逻辑电路的多功能数字时钟与报时闹钟 (v5.6)》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2024-gu-yuming-quicksort-ranking",
+      "title": "基于三路切分快速排序 (3-Way QuickSort) 的高考等级赋分仿真分析系统",
+      "studentId": "gu-yuming",
+      "studentName": "顾郁铭",
+      "class": "高二7班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "算法与教育信息化",
+      "tags": [
+        "三路快排",
+        "荷兰国旗问题",
+        "新高考赋分",
+        "C++优化",
+        "算法实验"
+      ],
+      "summary": "针对新高考选考科目等级赋分中大量相同原始分数导致传统排序算法退化的问题，实现了基于三路切分（荷兰国旗算法）的快速排序算法，结合插入排序阈值优化，构建了快速准确的高考等级分区间动态拟合系统。",
+      "details": {
+        "skills": "三路快速排序、双指针区间划分、小数据量插入排序常数优化、新高考赋分区间数学映射",
+        "difficulties": "大量重复元素场景下快排递归深度退化与极端浮点数分段四舍五入平滑",
+        "innovations": "将经典算法工程优化与高中生切身相关的“新高考等级赋分”紧密结合，兼具算法思考与现实针对性。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2024年 12 月 14 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">顾郁铭</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高二（7）</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">模拟赋分（大数据量快速排序）</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>假设全国高考人员统一赋分，数百万考生的高考试卷已经评阅完毕，需要对考生的各科原始成绩进行标准分赋分处理，以确保不同地区、不同科目之间的公平性。赋分后，将生成考生的最终综合成绩，用于排名和录取。本项目模拟单科考试，考试成绩0-100分。</p><p>通过学习和研究，快速排序算法虽然很快，但是仍然存在缺点：极端情况下比如数据趋于有序时或者存在大量重复数据时，时间复杂度可能退化为O(n^2)。通过改善传统的快速排序算法，使得退化的可能性大大降低，时间复杂度稳定在O（log n）。另外结合插入排序算法，对该程序进行优化，进一步缩小程序运行时间。程序模拟了50万条数据，运行时间在3毫秒左右。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">懂得常用排序算法(选择排序、插入排序、归并排序、快速排序和堆排序等)的基本逻辑和思路及使用C++ 代码如何实现。知道各个排序算法的时间复杂度、空间复杂度及稳定性，算法之间没有优劣之分，对于不同的应用场景使用不同的排序算法达到最优的选择。测试数据使用程序随机生成进行模拟。</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">自学C++语言、数据结构和排序算法，使用C++代码实现。</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">由于快速排序是一种不稳定的算法，极端情况下时间复杂度可能退化为O(n^2)。使用随机选取中间点解决数据趋于有序时导致快速排序不稳定和使用三路快速排序改进存在大量重复数据时导致运行时间增加，使退化可能性几乎为0。另外当区间长度低于15个时，改用插入排序算法，进一步提高运算速度。</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与算法数学模型解析 (Algorithm & Math Model)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-blue-200/80 dark:border-blue-900/40 bg-gradient-to-br from-blue-50/50 via-white to-indigo-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-blue-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-blue-100 dark:border-blue-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">📊</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">基于三路切分快速排序的高考等级赋分仿真分析系统</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">百万量级考生原始成绩极速正态赋分与综合排名算法模拟 · C++</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300\">3-Way QuickSort</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">时间复杂度 O(n log n)</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">空间复杂度 O(log n)</span>\n      </div>\n    </div>\n\n    <!-- Application & Model -->\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-serif leading-relaxed\">\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n        <h6 class=\"font-bold font-sans text-slate-900 dark:text-slate-100 flex items-center gap-1.5\">\n          <span>🎯 应用场景与赋分公平性意义</span>\n        </h6>\n        <p class=\"text-slate-600 dark:text-stone-300\">\n          模拟数百万考生在全国统考科目中的等级赋分全流程。各科试卷难度存在天然客观差异，直接比较卷面原始分将破坏跨科目录取的科学性。本项目通过快速排序确定考生的全域位次百分比，并映射至标准分赋分区间，消除学科难度差异。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n        <h6 class=\"font-bold font-sans text-slate-900 dark:text-slate-100 flex items-center gap-1.5\">\n          <span>📐 线性插值等级赋分数学公式</span>\n        </h6>\n        <p class=\"text-slate-600 dark:text-stone-300\">\n          依据考生原始分所在区间的上下限，采用规范的线性等比例换算公式计算赋分结果：\n        </p>\n        <div class=\"p-2.5 rounded-lg bg-slate-50 dark:bg-stone-900 text-center font-mono font-bold text-blue-700 dark:text-blue-300 text-sm border border-slate-200 dark:border-stone-700\">\n          (Y₂ - Y) / (Y - Y₁) = (T₂ - T) / (T - T₁)\n        </div>\n        <p class=\"text-[11px] text-slate-500 dark:text-stone-400\">\n          其中 Y₁, Y₂ 分别代表区间原始分的最低与最高分，T₁, T₂ 代表对应赋分等级区间的基准上下限，T 为最终换算等级分。\n        </p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "提出了切合实际的问题，算法具有针对性的优化与实验对比，荣膺凭高临岳奖。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2024-gu-yuming-quicksort",
+      "downloads": [
+        {
+          "title": "2024-顾郁铭 - 申请表原件",
+          "filename": "2024-顾郁铭-申请表原件.docx",
+          "url": "/downloads/projects/2024-gu-yuming-quicksort-ranking/2024-顾郁铭-申请表原件.docx",
+          "size": "14.8 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2024-gu-yuming-quicksort-ranking",
+          "projectTitle": "基于三路切分快速排序 (3-Way QuickSort) 的高考等级赋分仿真分析系统",
+          "studentName": "顾郁铭",
+          "editionYear": "2024",
+          "description": "顾郁铭 于 2024 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2024-顾郁铭 - 项目设计文档/学术报告",
+          "filename": "2024-顾郁铭-项目技术报告.docx",
+          "url": "/downloads/projects/2024-gu-yuming-quicksort-ranking/2024-顾郁铭-项目技术报告.docx",
+          "size": "12.1 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2024-gu-yuming-quicksort-ranking",
+          "projectTitle": "基于三路切分快速排序 (3-Way QuickSort) 的高考等级赋分仿真分析系统",
+          "studentName": "顾郁铭",
+          "editionYear": "2024",
+          "description": "《基于三路切分快速排序 (3-Way QuickSort) 的高考等级赋分仿真分析系统》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2024-顾郁铭 - 项目源代码",
+          "filename": "2024-顾郁铭-项目源代码.zip",
+          "url": "/downloads/projects/2024-gu-yuming-quicksort-ranking/2024-顾郁铭-项目源代码.zip",
+          "size": "1.9 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2024-gu-yuming-quicksort-ranking",
+          "projectTitle": "基于三路切分快速排序 (3-Way QuickSort) 的高考等级赋分仿真分析系统",
+          "studentName": "顾郁铭",
+          "editionYear": "2024",
+          "description": "《基于三路切分快速排序 (3-Way QuickSort) 的高考等级赋分仿真分析系统》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2024-wang-ziyi-wifi-denoising",
+      "title": "多径反射环境下的室内 WiFi 信号数据离群去噪与滑动窗口滤波算法",
+      "studentId": "wang-ziyi",
+      "studentName": "王籽易",
+      "class": "高一11班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "算法与信号处理",
+      "tags": [
+        "WiFi信号处理",
+        "去噪滤波",
+        "中值绝对偏差(MAD)",
+        "滑动窗口",
+        "CSP-J/NOIP"
+      ],
+      "summary": "针对室内多径反射与障碍物阻隔导致的 WiFi 射频数据突发离群突刺，设计基于中值与中值绝对偏差 (MAD) 的动态滑动窗口滤波算法，实现信号的高保真平滑。",
+      "video": {
+        "src": "media/2024_wang_ziyi_wifi.mp4",
+        "poster": "media/2024_wang_ziyi_wifi_poster.jpg",
+        "title": "WiFi 信号数据去噪算法汇报视频"
+      },
+      "details": {
+        "skills": "统计学数据清洗、中位数绝对偏差(MAD)准则、滑动窗口设计、复杂度分析",
+        "difficulties": "高密度异常毛刺下的窗口边界滑动修正与时间复杂度优化",
+        "innovations": "高一阶段自主探索环境无线电传感与信号清洗问题，立意新颖，讲解流畅。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">射频信号处理</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">中值绝对偏差 (MAD) 滤波</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">多径室内去噪 C++</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">研究背景与生活中的物理观察</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">在居家使用手机时，王籽易同学发现房间内常因墙壁阻隔而信号骤降，但即使在同一位置，信号强度（RSSI）也会频繁发生跳动。查阅资料后发现：WiFi 射频信号不仅沿视线路径传播，还会经由墙面、天花板和家具产生无数条反射路径（多径效应）。多条反射波在接收端叠加时，相位干涉会产生大量离群突刺（Outliers），严重影响室内定位与链路感知精度。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-indigo-600\"></span>\n      MAD（中值绝对偏差）算法数学原理\n    </h3>\n    <p class=\"text-sm text-slate-700 mb-3\">相比传统均值标准差易被极端离群点“严重拉偏”，<strong>中位数与中值绝对偏差（MAD）</strong>具有天然的崩溃点鲁棒性：</p>\n    <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs text-xs font-mono text-sky-700 mb-3\">\n      <div>1. 计算局部窗口数据中位数: Median = 中位数(window)</div>\n      <div>2. 计算离散残差偏离度: MAD = 中位数(|window[i] - Median|)</div>\n      <div>3. 离群判定准则: 若 |data[i] - Median| &gt; &lambda; &times; MAD，则判定为多径噪点，以局部中位数置换之。</div>\n    </div>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n      C++ 滑动窗口滤波核心代码实现\n    </h3>\n    <pre class=\"bg-slate-900 text-slate-100 border border-slate-800 p-4 rounded-xl overflow-x-auto border border-slate-800 font-mono text-xs leading-relaxed text-slate-200\"><code>std::vector&lt;double&gt; Filter(const std::vector&lt;double&gt; &amp;data, double threshold_scale, int k) {\n    int n = data.size();\n    std::vector&lt;double&gt; outData = data;\n    std::vector&lt;double&gt; median(n);\n\n    for (int i = 0; i &lt; n; ++i) {\n        std::vector&lt;double&gt; window;\n        // 构造大小为 2k+1 的局部邻域滑动窗口\n        for (int j = std::max(0, i - k); j &lt;= std::min(n - 1, i + k); ++j) {\n            window.push_back(data[j]);\n        }\n        std::sort(window.begin(), window.end());\n        median[i] = window[window.size() / 2];\n\n        // 计算 MAD\n        double mad_sum = 0;\n        for (double val : window) {\n            mad_sum += std::abs(val - median[i]);\n        }\n        double mad = mad_sum / window.size();\n\n        // 离群点检测与替换\n        if (std::abs(data[i] - median[i]) &gt; threshold_scale * mad) {\n            outData[i] = median[i]; // 平滑替换\n        }\n    }\n    return outData;\n}</code></pre>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "提出了非常有价值的研究课题，汇报清晰，答辩逻辑流畅，荣获凭高临岳奖。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2024-wang-ziyi-wifi",
+      "downloads": [
+        {
+          "title": "2024-王籽易 - 申请表原件",
+          "filename": "2024-王籽易-申请表原件.docx",
+          "url": "/downloads/projects/2024-wang-ziyi-wifi-denoising/2024-王籽易-申请表原件.docx",
+          "size": "15.8 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2024-wang-ziyi-wifi-denoising",
+          "projectTitle": "多径反射环境下的室内 WiFi 信号数据离群去噪与滑动窗口滤波算法",
+          "studentName": "王籽易",
+          "editionYear": "2024",
+          "description": "王籽易 于 2024 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2024-王籽易 - 项目设计文档/学术报告",
+          "filename": "2024-王籽易-项目技术报告.docx",
+          "url": "/downloads/projects/2024-wang-ziyi-wifi-denoising/2024-王籽易-项目技术报告.docx",
+          "size": "51.2 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2024-wang-ziyi-wifi-denoising",
+          "projectTitle": "多径反射环境下的室内 WiFi 信号数据离群去噪与滑动窗口滤波算法",
+          "studentName": "王籽易",
+          "editionYear": "2024",
+          "description": "《多径反射环境下的室内 WiFi 信号数据离群去噪与滑动窗口滤波算法》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2024-王籽易 - 项目源代码",
+          "filename": "2024-王籽易-项目源代码.zip",
+          "url": "/downloads/projects/2024-wang-ziyi-wifi-denoising/2024-王籽易-项目源代码.zip",
+          "size": "45.8 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2024-wang-ziyi-wifi-denoising",
+          "projectTitle": "多径反射环境下的室内 WiFi 信号数据离群去噪与滑动窗口滤波算法",
+          "studentName": "王籽易",
+          "editionYear": "2024",
+          "description": "《多径反射环境下的室内 WiFi 信号数据离群去噪与滑动窗口滤波算法》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2024-yu-wentao-library-system",
+      "title": "面向高中文献阅览的智慧图书借阅与分类检索管理系统",
+      "studentId": "yu-wentao",
+      "studentName": "余文涛",
+      "class": "高二15班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "应用与软件开发",
+      "tags": [
+        "C++",
+        "面向对象",
+        "数据结构",
+        "图书检索",
+        "文件持久化"
+      ],
+      "summary": "针对班级图书角与社团藏书管理缺乏数字化手段的现状，使用 C++ 面向对象范式构建了支持多关键字查询、借还状态流转与本地文件数据持久化的智慧图书管理系统原型。",
+      "details": {
+        "skills": "C++ 类封装与继承、动态内存容器管理、文件流序列化与反序列化",
+        "difficulties": "多条件组合检索下的性能优化与异常输入边界处理",
+        "innovations": "立足校园学习生活，探索了软件工程中的模块解耦与状态机流转。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2024年 月 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">余文涛</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高二15</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">图书管理系统</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>南通中学的图书馆登记借阅图书时，需要人工进行抄写登记。较为繁琐且查找不便。我通过c++语言编写了一个简易的程序来解决这个问题。该程序主要执行了以下几个功能。</p><p>添加图书：用户选择“1. 添加图书”后，程序会提示用户输入图书的ID、标题和作者，然后调用addBook函数将图书添加到系统中。</p><p>查看图书：用户选择“2. 查看图书”后，程序会调用viewBooks函数显示系统中所有图书的信息。</p><p>借阅图书：用户选择“3. 借阅图书”后，程序会提示用户输入要借阅的图书ID，然后调用borrowBook函数尝试借阅该图书。</p><p>归还图书：用户选择“4. 归还图书”后，程序会提示用户输入要归还的图书ID，然后调用returnBook函数尝试归还该图书。</p><p>退出系统：用户选择“5. 退出”后，程序会打印退出消息并终止执行。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">复习了bool函数与结构体的应用，学习了动态存储</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">简化程序内容</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">运用结构体代码总数并用string和auto优化计算量</div></div></div></div></div>\n        <div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\">\n          <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n            <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n            <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 系统功能矩阵与业务闭环说明 (System Specification)</h4>\n          </div>\n\n          <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3\">\n            <div class=\"p-3.5 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-1\">\n              <span class=\"text-xs font-bold text-blue-600 dark:text-blue-400 font-mono\">01 入库登记</span>\n              <div class=\"text-xs font-bold text-slate-900 dark:text-slate-100\">添加图书 (addBook)</div>\n              <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif\">录入唯一 ID、书名与作者，推入动态向量内存池并初始化在馆状态。</p>\n            </div>\n\n            <div class=\"p-3.5 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-1\">\n              <span class=\"text-xs font-bold text-emerald-600 dark:text-emerald-400 font-mono\">02 馆藏检索</span>\n              <div class=\"text-xs font-bold text-slate-900 dark:text-slate-100\">查看图书 (viewBooks)</div>\n              <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif\">遍历输出馆藏所有图书元数据，以清晰格式呈现借还实时状态。</p>\n            </div>\n\n            <div class=\"p-3.5 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-1\">\n              <span class=\"text-xs font-bold text-amber-600 dark:text-amber-400 font-mono\">03 借出办理</span>\n              <div class=\"text-xs font-bold text-slate-900 dark:text-slate-100\">借阅图书 (borrowBook)</div>\n              <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif\">根据 ID 匹配目标书籍，原子性判定并更新借出状态，杜绝冲突重复借出。</p>\n            </div>\n\n            <div class=\"p-3.5 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-1\">\n              <span class=\"text-xs font-bold text-purple-600 dark:text-purple-400 font-mono\">04 归还交接</span>\n              <div class=\"text-xs font-bold text-slate-900 dark:text-slate-100\">归还图书 (returnBook)</div>\n              <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif\">核验借出记录并恢复在馆状态，提示师生借还办理完毕。</p>\n            </div>\n          </div>\n        </div>\n        "
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "提出了切合实际的问题，功能完整，荣膺凭高临岳奖。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2024-yu-wentao-library",
+      "downloads": [
+        {
+          "title": "2024-余文涛 - 申请表原件",
+          "filename": "2024-余文涛-申请表原件.docx",
+          "url": "/downloads/projects/2024-yu-wentao-library-system/2024-余文涛-申请表原件.docx",
+          "size": "1.8 MB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2024-yu-wentao-library-system",
+          "projectTitle": "面向高中文献阅览的智慧图书借阅与分类检索管理系统",
+          "studentName": "余文涛",
+          "editionYear": "2024",
+          "description": "余文涛 于 2024 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2024-余文涛 - 项目源代码",
+          "filename": "2024-余文涛-项目源代码.zip",
+          "url": "/downloads/projects/2024-yu-wentao-library-system/2024-余文涛-项目源代码.zip",
+          "size": "1.4 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2024-yu-wentao-library-system",
+          "projectTitle": "面向高中文献阅览的智慧图书借阅与分类检索管理系统",
+          "studentName": "余文涛",
+          "editionYear": "2024",
+          "description": "《面向高中文献阅览的智慧图书借阅与分类检索管理系统》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "title": "2024 届望岳奖学金评选细则 (官方章程)",
+      "filename": "2024第八届望岳奖学金评选细则.pdf",
+      "url": "/downloads/editions/2024/2024第八届望岳奖学金评选细则.pdf",
+      "size": "270.9 KB",
+      "type": "pdf",
+      "category": "评选细则",
+      "editionYear": "2024",
+      "description": "包含评选对象、申报要求、各级奖项标准与评审流程。"
+    },
+    {
+      "title": "2024年度第八届望岳奖学金申请表",
+      "filename": "2024年度第八届望岳奖学金申请表.docx",
+      "url": "/downloads/editions/2024/2024年度第八届望岳奖学金申请表.docx",
+      "size": "763.8 KB",
+      "type": "doc",
+      "category": "官方申请表",
+      "editionYear": "2024",
+      "description": "南通中学官方 2024 年度望岳奖学金申请表原件。"
+    }
+  ]
+}

@@ -1,0 +1,248 @@
+{
+  "projectId": "2018-qiu-yi-debate",
+  "externalRepo": null,
+  "totalFiles": 26,
+  "totalLines": 1112,
+  "coreFiles": [
+    "app.js",
+    "model/db.js",
+    "routes/index.js"
+  ],
+  "languages": [
+    {
+      "lang": "js",
+      "lines": 468,
+      "percent": 42.1
+    },
+    {
+      "lang": "html",
+      "lines": 442,
+      "percent": 39.7
+    },
+    {
+      "lang": "css",
+      "lines": 131,
+      "percent": 11.8
+    },
+    {
+      "lang": "md",
+      "lines": 49,
+      "percent": 4.4
+    },
+    {
+      "lang": "json",
+      "lines": 22,
+      "percent": 2.0
+    }
+  ],
+  "files": [
+    {
+      "path": "app.js",
+      "name": "app.js",
+      "lang": "js",
+      "lines": 56,
+      "size": 1651,
+      "content": "\nconst koa = require('koa');\nconst app = new koa();\nconst path = require('path');\nvar Router = require('koa-router');\nvar router = new Router();\nconst render = require('koa-art-template'); //模板引擎\nconst serve = require('koa-static');  //引入静态文件中间件\nconst session = require('koa-session'); //引入session中间件\nvar bodyParser = require('koa-bodyparser');  //解析post提交数据为json格式的中间件\n\n\n//配置bodyParser\napp.use(bodyParser());  //一定要在所有的最上层配置\n\n//配置session中间件，一定要在所有的最上层配置\napp.keys = [process.env.SESSION_SECRET || 'your_secret_session_key'];\n\nconst CONFIG = {\n    key: 'koa:sess',\n    maxAge: 86400000,\n    autoCommit: true,\n    overwrite: true,\n    httpOnly: true,\n    signed: true,\n    rolling: true,\n    renew: false,\n};\napp.use(session(CONFIG, app));\n\n//引入routes中的路由模块\nvar admin = require('./routes/admin.js');\nvar index = require('./routes/index.js');\n\n\n//配置层级路由\n\nrouter.use('/admin', admin); //http://localhost:3000/admin\nrouter.use(index);  //最好放在最下面，因为index里面也有子路由/admin的话，就会先配置放在前面的/admin路由http://localhost:3000\n\n//配置模板引擎,所有的文件的父级为views文件夹\nrender(app, {\n    root: path.join(__dirname, 'views'),\n    extname: '.html',\n    debug: process.env.NODE_ENV !== 'production'\n    \n});\n//配置静态资源中间件\napp.use(serve(__dirname + '/static'));\n\napp\n    .use(router.routes())   //启动路由\n    .use(router.allowedMethods());\n\napp.listen(3000);\nconsole.log('正在运行于3000端口');"
+    },
+    {
+      "path": "model/config.js",
+      "name": "config.js",
+      "lang": "js",
+      "lines": 9,
+      "size": 107,
+      "content": "var app = {\n\n    dbUrl: 'mongodb://localhost:27017/',\n\n    dbName: 'ntzx'\n\n}\n\nmodule.exports = app;"
+    },
+    {
+      "path": "model/db.js",
+      "name": "db.js",
+      "lang": "js",
+      "lines": 167,
+      "size": 4394,
+      "content": "/**\n\n * http://mongodb.github.io/node-mongodb-native\n\n * http://mongodb.github.io/node-mongodb-native/3.0/api/\n */\n\n//DB??\nvar MongoDB = require('mongodb');\nvar MongoClient = MongoDB.MongoClient;\nconst ObjectID = MongoDB.ObjectID;\n\nvar Config = require('./config.js');\n\nclass Db {\n\n    static getInstance() {\n\n        if (!Db.instance) {\n            Db.instance = new Db();\n        }\n        return Db.instance;\n    }\n\n    constructor() {\n\n        this.dbClient = '';\n        this.connect();\n\n    }\n\n    connect() {\n        let _that = this;\n        return new Promise((resolve, reject) => {\n            if (!_that.dbClient) {\n                MongoClient.connect(Config.dbUrl, { useNewUrlParser: true, useUnifiedTopology: true }, (err, client) => {\n\n                    if (err) {\n                        reject(err)\n\n                    } else {\n\n                        _that.dbClient = client.db(Config.dbName);\n                        resolve(_that.dbClient)\n                    }\n                })\n\n            } else {\n                resolve(_that.dbClient);\n\n            }\n\n\n        })\n\n    }\n\n    find(collectionName, json1, json2, json3) {\n\n        if (arguments.length == 2) { //当传入2个参数时，查询指定参数这一条数据\n            var attr = {};\n            var skipNum = 0;\n            var pageSize = 0;\n            // db.user.find().skip(0).limit(0) //查询出所有数据\n        } else if (arguments.length == 3) {  //查询一列或多列\n            var attr = json2;\n            var skipNum = 0;\n            var pageSize = 0;\n            // db.user.find({},json2).skip(0).limit(0) //查询出json2指定的一列\n        } else if (arguments.length == 4) {  //实现数据库分页显示\n            var attr = json2;\n            var page = json3.page || 1;             //当前页或默认第一页\n            var pageSize = json3.pageSize || 20;     //每一页的条数或默认每页20条\n            var skipNum = (page - 1) * pageSize;\n            //判断是否排序\n            if (json3.sortJson) {\n                var sortJson = json3.sortJson;\n            } else {\n                var sortJson = {};\n            }\n        } else {\n            console.log(\"参数错误\")\n        }\n\n        return new Promise((resolve, reject) => {\n\n            this.connect().then((db) => {\n\n                //var result = db.collection(collectionName).find(json);\n                var result = db.collection(collectionName).find(json1, { filters: attr }).skip(skipNum).limit(pageSize).sort(sortJson);\n\n                result.toArray(function (err, docs) {\n\n                    if (err) {\n                        reject(err);\n                        return;\n                    }\n                    resolve(docs);\n                })\n\n            })\n        })\n    }\n\n    insert(collectionName, json) {\n        return new Promise((resolve, reject) => {\n            this.connect().then((db) => {\n\n                db.collection(collectionName).insertOne(json, function (err, result) {\n                    if (err) {\n                        reject(err);\n                    } else {\n\n                        resolve(result);\n                    }\n                })\n\n\n            })\n        })\n    }\n\n\n    getObjectId(id) {   //�õ����ݿ�\"_id\"\n\n        return new ObjectID(id);\n    }\n\n    count(collectionName, json) {\n        return new Promise((resolve, reject) => {\n            this.connect().then((db) => {\n\n                db.collection(collectionName).find(json).count(function (err, result) {\n                    if (err) {\n                        reject(err);\n                    } else {\n\n                        resolve(result);\n                    }\n                })\n\n\n            })\n        })\n    }\n\n    insert(collectionName, json) {\n        return new Promise((resolve, reject) => {\n            this.connect().then((db) => {\n\n                db.collection(collectionName).insertOne(json, function (err, result) {\n                    if (err) {\n                        reject(err);\n                    } else {\n\n                        resolve(result);\n                    }\n                })\n\n\n            })\n        })\n    }\n}\n\n\nmodule.exports = Db.getInstance();\n"
+    },
+    {
+      "path": "package.json",
+      "name": "package.json",
+      "lang": "json",
+      "lines": 22,
+      "size": 499,
+      "content": "{\n  \"name\": \"register\",\n  \"version\": \"1.0.0\",\n  \"description\": \"node v0.10.28+\",\n  \"main\": \"app.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"dependencies\": {\n    \"art-template\": \"^4.13.2\",\n    \"jq-paginator\": \"^2.0.2\",\n    \"koa\": \"^2.7.0\",\n    \"koa-art-template\": \"^1.1.1\",\n    \"koa-bodyparser\": \"^4.2.1\",\n    \"koa-router\": \"^7.4.0\",\n    \"koa-session\": \"^5.10.1\",\n    \"koa-static\": \"^5.0.0\",\n    \"mongodb\": \"^3.2.2\"\n  }\n}\n"
+    },
+    {
+      "path": "readme.md",
+      "name": "readme.md",
+      "lang": "md",
+      "lines": 49,
+      "size": 1760,
+      "content": "########### 环境依赖\nnode v0.10.28+\n\n########### 目录结构描述\n├── Readme.md                   // help\n├── app.js                      // 应用\n├── model                       // 配置\n│   ├── db.js                   //数据库增、删、改、查\n|   |-- config.js               //数据库名称\n│   \n|—— static                      // web静态资源加载\n|      |--public                //前后端公用静态资源\n|           |--css\n|           |   |--ie10.css   \n|           |--js\n|               |--ie10.js\n|      |--admin                 //后端静态资源\n|      |--index                 //前端静态资源\n|\n|--routes                      // 配置路由\n|    |--admin.js               // 后台路由\n|    |--index.js               //前台路由\n|    |--admin                  //后台渲染js文件\n|         |--index.js\n|         |--login.js          //管理员登陆\n|         |--list.js\n|\n|--views                       //模板\n|     |--admin                 //后台模板\n|          |--list.html        //根据验证码查询\n|          |--login.html       //管理员登陆\n|          |--index.html       //显示全部信息\n|          |--error.html       //错误显示页\n|          |--search.html      //显示查找到的信息页\n|     |--index                 //前台模板\n|          |--index.html\n\n\n\n## 数据库mongodb 数据库名:ntzx  集合名:ntzx  npm install mongodb --save\n\n## 使用步骤：\n###  1、npm init\n###  2、npm install\n###  3、开启mongodb数据库\n###  4、node app.js\n### 浏览器打开http://localhost:3000\n###  http://localhost:3000/admin登陆时\n####    管理员姓名:张三    密码：123456\n"
+    },
+    {
+      "path": "routes/admin.js",
+      "name": "admin.js",
+      "lang": "js",
+      "lines": 51,
+      "size": 1534,
+      "content": "var Router = require('koa-router');\nvar router = new Router();\nvar url = require('url');   //过滤url里？后面的内容\n\nvar login = require('./admin/login.js');\nvar list = require('./admin/list.js');\nvar index = require('./admin/index.js');\n\n\n//配置中间件，获取url地址router.use([path], middleware) ⇒ Router， middleware为中间件，和koa的用法相同\nrouter.use(async (ctx, next) => {\n    \n    //模板引擎配置全局变量__HOST__\n    ctx.state.__HOST__ = 'http://' + ctx.request.header.host;\n    var path = url.parse(ctx.request.url).pathname.substring(1);\n    var splitUrl = path.split('/');\n\n    //用于退出登陆\n    ctx.state.G = {\n        url: splitUrl,\n        userinfo: ctx.session.userinfo,\n        prevPage:ctx.request.headers['referer'] //得到前一个页面\n    }\n\n\n    //console.log(ctx.url)    //  /admin\n    //权限判断，如果有权限，则可以访问，没有跳转到登陆页面\n    if (ctx.session.userinfo) {\n        await next();  //有了这个，才可向下运行\n    } else {\n\n        //如果当前页面不是登陆页面的话跳转到登陆页面，否则继续向下匹配\n        if (path == 'admin/login' || path == 'admin/login/doLogin' ) {\n            await next();\n\n        } else {\n            ctx.redirect('/admin/login');\n        }\n\n    }\n   \n})\n//默认加载后台首页\nrouter.use(list);\n\n//配置层级路由\nrouter.use('/login', login);\nrouter.use('/index', index);\n\n\nmodule.exports = router.routes();"
+    },
+    {
+      "path": "routes/admin/index.js",
+      "name": "index.js",
+      "lang": "js",
+      "lines": 27,
+      "size": 682,
+      "content": "var Router = require('koa-router');\nvar router = new Router();\nvar DB = require('../../model/db.js');\n\nrouter.get('/', async (ctx) => {\n\n    var page = ctx.query.page || 1;  //得到显示第几页\n    var pageSize = 12;           //设置每页12条数据\n\n    var result = await DB.find('ntzx', {}, {}, {\n        page: page,\n        pageSize: pageSize,\n        sortJson: {\n            \"school\": -1\n        }\n    });\n    var count = await DB.count('ntzx', {});\n    //渲染模板\n    await ctx.render('admin/index', {\n        list: result,\n        page: page,\n        totalPages: Math.ceil(count / pageSize)\n\n    });\n\n})\nmodule.exports = router.routes(); "
+    },
+    {
+      "path": "routes/admin/list.js",
+      "name": "list.js",
+      "lang": "js",
+      "lines": 36,
+      "size": 1006,
+      "content": "var Router = require('koa-router');\nvar router = new Router();\nvar DB = require('../../model/db.js');\n\nrouter.get('/', async (ctx) => {\n\n    //渲染模板\n    await ctx.render('admin/list');\n})\n\nrouter.post('/search', async (ctx) => {\n    //获取验证码\n    ctx.body = ctx.request.body;  //{\"username\":\"张三\",\"password\":\"123456\"}\n    //console.log(ctx.body)\n    \n    //根据提供的验证码查询数据库\n    var list = await DB.find('ntzx', { \"id\": ctx.body.id});\n    //console.log(ctx.state.G.prevPage);  //http://localhost:3000/admin\n    //在页面渲染\n    if(list.length > 0){\n        await ctx.render('admin/search',{\n            list:list,\n            prevPage: ctx.state.G.prevPage,\n            show:true\n\n        });\n    } else {\n        //ctx.redirect(ctx.state.__HOST__ + '/admin');\n        await ctx.render('admin/search',{\n            value:true,\n            prevPage: ctx.state.G.prevPage\n        });\n    }\n\n})\nmodule.exports = router.routes(); "
+    },
+    {
+      "path": "routes/admin/login.js",
+      "name": "login.js",
+      "lang": "js",
+      "lines": 34,
+      "size": 1008,
+      "content": "var Router = require('koa-router');\nvar router = new Router();\n\nrouter.get('/', async (ctx) => {\n    \n    //渲染模板\n    await ctx.render('admin/login');\n})\n\nrouter.post('/doLogin', async (ctx) => {\n    \n     ctx.body = ctx.request.body;  //{\"username\":\"admin\",\"password\":\"placeholder_password\"}\n    //成功后信息写入session \n    ctx.session.userinfo = ctx.body;\n\n    if (ctx.body.username === (process.env.ADMIN_USER || \"admin\") && ctx.body.password === (process.env.ADMIN_PASSWORD || \"placeholder_password\")){\n       // console.log('登陆成功');\n        ctx.redirect(ctx.state.__HOST__ + '/admin'); //禁止跳转，还在当前页面\n    } else {\n        await ctx.render('admin/error', {\n            message: \"验证码错误\",\n            redirect: ctx.state.__HOST__ + '/admin/login'\n        }); \n    }\n})\n\n//退出登陆\nrouter.get('/loginOut', async (ctx) => {\n    //清除session数据\n    ctx.session.userinfo = null;\n    //跳转到登陆页面\n    ctx.redirect(ctx.state.__HOST__ + '/admin/login');\n})\nmodule.exports = router.routes(); "
+    },
+    {
+      "path": "routes/index.js",
+      "name": "index.js",
+      "lang": "js",
+      "lines": 60,
+      "size": 1843,
+      "content": "var Router = require('koa-router');\nvar router = new Router();\nvar DB = require('../model/db.js');\n\n\n\n\n\nrouter.get('/', async (ctx) => {\n    await ctx.render('index/index')\n\n})\n\nrouter.post('/search', async (ctx) => {\n    ctx.body = ctx.request.body;   //{\"school\":\"南通中学\",\"username\":\"王五\",\"password\":\"12345678\"}\n\n    //验证姓名不超过4个汉字\n    var pattern = /^[\\u4e00-\\u9fa5]{1,4}$/g;\n    var string = ctx.body.username;\n    var arr = pattern.exec(string);  //超过4个汉字为null\n\n\n    //设置一个随机验证码：3位数字+数据条数\n    var count = await DB.count('ntzx', {}); //没有数据时为0\n    var randomNum = Math.ceil(Math.random() * 900 + 100).toString();\n    // console.log('randomNum', randomNum)\n    ctx.body.id = randomNum.toString() + count;\n\n    //添加数据到数据库\n    if (arr) {\n        //如果是不同的password,则添加进数据库，否则提示错误\n        var searchPassword = await DB.find('ntzx', { \"password\": ctx.body.password.toString(), \"school\": ctx.body.school.toString() });\n        //console.log(searchPassword)\n        if (searchPassword.length > 0) {\n            var error = \"已经注册过了！\"\n            await ctx.render('index/index', {\n                error: error\n            })\n        } else {\n            var result = await DB.insert('ntzx', ctx.body);\n            var findId = await DB.find('ntzx', { \"id\": ctx.body.id.toString() });\n            if (result && result.result.ok == 1) {\n\n                await ctx.render('index/index', {\n                    list: findId[0].id\n\n                })\n            }\n        }\n    } else {\n        await ctx.render('index/index', {\n            list: \"请输入正确的姓名格式\"\n\n        })\n    }\n\n\n})\n\nmodule.exports = router.routes(); \n"
+    },
+    {
+      "path": "static/admin/error.css",
+      "name": "error.css",
+      "lang": "css",
+      "lines": 8,
+      "size": 116,
+      "content": "h1, h3{\n     color: #287390c4;\n    margin-bottom: 20px;\n}\n.btn a{\n    text-decoration:none;\n    color:#fff;\n}"
+    },
+    {
+      "path": "static/admin/index.css",
+      "name": "index.css",
+      "lang": "css",
+      "lines": 0,
+      "size": 0,
+      "content": ""
+    },
+    {
+      "path": "static/admin/list.css",
+      "name": "list.css",
+      "lang": "css",
+      "lines": 21,
+      "size": 277,
+      "content": "form label{\n    font-size: 20px;\n    color: #287390c4;\n    margin-bottom: 20px;\n}\n\n#myModal{\n    width: 50%;\n    height: 50%;\n    margin: 0 auto;\n}\n\n.btn.btn-block{\n    margin-top: 20px;\n}\n\n.btn a{\n    color:#fff;\n    display:inline-block;\n    width:100%;\n}"
+    },
+    {
+      "path": "static/admin/login.css",
+      "name": "login.css",
+      "lang": "css",
+      "lines": 11,
+      "size": 118,
+      "content": ".header{\n    text-align: center;\n}\n\n.loginOut {\n    color: white;\n}\n\n.btn.btn-block{\n    margin-top: 20px;\n}"
+    },
+    {
+      "path": "static/admin/search.css",
+      "name": "search.css",
+      "lang": "css",
+      "lines": 9,
+      "size": 96,
+      "content": ".table, h3{\n    font-size: 20px;\n    color: #287390c4;\n}\n\n.btn a {\n    color: #fff;\n}\n\n"
+    },
+    {
+      "path": "static/index/index.css",
+      "name": "index.css",
+      "lang": "css",
+      "lines": 29,
+      "size": 410,
+      "content": ".header{\n    text-align: center;\n}\n\nform label{\n    font-size: 16px;\n    margin-top: 6px;\n}\n.form-signin-heading{\n    padding-left: 35px;\n}\n\n\n.btn{\n    width: 86% !important;\n    margin-left: 10% !important;\n}\n\n.code{\n    color:rgb(43, 144, 226); \n}\n\n@media screen and (max-width: 767px){\n    .btn{\n        width: 90% !important;\n         margin-left: 5% !important;\n    }\n       \n}"
+    },
+    {
+      "path": "static/public/css/ie10.css",
+      "name": "ie10.css",
+      "lang": "css",
+      "lines": 13,
+      "size": 444,
+      "content": "/*!\n * IE10 viewport hack for Surface/desktop Windows 8 bug\n * Copyright 2014-2015 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */\n\n/*\n * See the Getting Started docs for more information:\n * http://getbootstrap.com/getting-started/#support-ie10-width\n */\n@-ms-viewport     { width: device-width; }\n@-o-viewport      { width: device-width; }\n@viewport         { width: device-width; }"
+    },
+    {
+      "path": "static/public/css/signin.css",
+      "name": "signin.css",
+      "lang": "css",
+      "lines": 40,
+      "size": 833,
+      "content": "body {\n  padding-top: 40px;\n  padding-bottom: 40px;\n  background-color: #eee;\n}\n\n.form-signin {\n  max-width: 330px;\n  padding: 15px;\n  margin: 0 auto;\n}\n.form-signin .form-signin-heading,\n.form-signin .checkbox {\n  margin-bottom: 10px;\n}\n.form-signin .checkbox {\n  font-weight: normal;\n}\n.form-signin .form-control {\n  position: relative;\n  height: auto;\n  -webkit-box-sizing: border-box;\n     -moz-box-sizing: border-box;\n          box-sizing: border-box;\n  padding: 10px;\n  font-size: 16px;\n}\n.form-signin .form-control:focus {\n  z-index: 2;\n}\n.form-signin input[type=\"email\"] {\n  margin-bottom: -1px;\n  border-bottom-right-radius: 0;\n  border-bottom-left-radius: 0;\n}\n.form-signin input[type=\"password\"] {\n  margin-bottom: 10px;\n  border-top-left-radius: 0;\n  border-top-right-radius: 0;\n}\n"
+    },
+    {
+      "path": "static/public/js/ie10.js",
+      "name": "ie10.js",
+      "lang": "js",
+      "lines": 23,
+      "size": 704,
+      "content": "/*!\n * IE10 viewport hack for Surface/desktop Windows 8 bug\n * Copyright 2014-2015 Twitter, Inc.\n * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)\n */\n\n// See the Getting Started docs for more information:\n// http://getbootstrap.com/getting-started/#support-ie10-width\n\n(function () {\n    'use strict';\n\n    if (navigator.userAgent.match(/IEMobile\\/10\\.0/)) {\n        var msViewportStyle = document.createElement('style')\n        msViewportStyle.appendChild(\n            document.createTextNode(\n                '@-ms-viewport{width:auto!important}'\n            )\n        )\n        document.querySelector('head').appendChild(msViewportStyle)\n    }\n\n})();"
+    },
+    {
+      "path": "static/public/js/jq-paginator.min.js",
+      "name": "jq-paginator.min.js",
+      "lang": "js",
+      "lines": 5,
+      "size": 4938,
+      "content": "/*!\n * jq-paginator v2.0.2\n * http://jqPaginator.keenwon.com\n */\n!function(){\"use strict\";var t=jQuery;t.jqPaginator=function(e,a){if(!(this instanceof t.jqPaginator))return new t.jqPaginator(e,a);var r=this;return r.$container=t(e),r.$container.data(\"jqPaginator\",r),r.init=function(){(a.first||a.prev||a.next||a.last||a.page)&&(a=t.extend({},{first:\"\",prev:\"\",next:\"\",last:\"\",page:\"\"},a)),r.options=t.extend({},t.jqPaginator.defaultOptions,a),r.verify(),r.extendJquery(),r.render(),r.fireEvent(this.options.currentPage,\"init\")},r.verify=function(){var t=r.options;if(!r.isNumber(t.totalPages))throw new Error(\"[jqPaginator] type error: totalPages\");if(!r.isNumber(t.totalCounts))throw new Error(\"[jqPaginator] type error: totalCounts\");if(!r.isNumber(t.pageSize))throw new Error(\"[jqPaginator] type error: pageSize\");if(!r.isNumber(t.currentPage))throw new Error(\"[jqPaginator] type error: currentPage\");if(!r.isNumber(t.visiblePages))throw new Error(\"[jqPaginator] type error: visiblePages\");if(!t.totalPages&&!t.totalCounts)throw new Error(\"[jqPaginator] totalCounts or totalPages is required\");if(!t.totalPages&&t.totalCounts&&!t.pageSize)throw new Error(\"[jqPaginator] pageSize is required\");if(t.totalCounts&&t.pageSize&&(t.totalPages=Math.ceil(t.totalCounts/t.pageSize)),t.currentPage<1||t.currentPage>t.totalPages)throw new Error(\"[jqPaginator] currentPage is incorrect\");if(t.totalPages<1)throw new Error(\"[jqPaginator] totalPages cannot be less currentPage\")},r.extendJquery=function(){t.fn.jqPaginatorHTML=function(e){return e?this.before(e).remove():t(\"<p>\").append(this.eq(0).clone()).html()}},r.render=function(){r.renderHtml(),r.setStatus(),r.bindEvents()},r.renderHtml=function(){for(var e=[],a=r.getPages(),n=0,i=a.length;n<i;n++)e.push(r.buildItem(\"page\",a[n]));r.isEnable(\"prev\")&&e.unshift(r.buildItem(\"prev\",r.options.currentPage-1)),r.isEnable(\"first\")&&e.unshift(r.buildItem(\"first\",1)),r.isEnable(\"statistics\")&&e.unshift(r.buildItem(\"statistics\")),r.isEnable(\"next\")&&e.push(r.buildItem(\"next\",r.options.currentPage+1)),r.isEnable(\"last\")&&e.push(r.buildItem(\"last\",r.options.totalPages)),r.options.wrapper?r.$container.html(t(r.options.wrapper).html(e.join(\"\")).jqPaginatorHTML()):r.$container.html(e.join(\"\"))},r.buildItem=function(e,a){var n=r.options[e].replace(/{{page}}/g,a).replace(/{{totalPages}}/g,r.options.totalPages).replace(/{{totalCounts}}/g,r.options.totalCounts);return t(n).attr({\"jp-role\":e,\"jp-data\":a}).jqPaginatorHTML()},r.setStatus=function(){var e=r.options;r.isEnable(\"first\")&&1!==e.currentPage||t(\"[jp-role=first]\",r.$container).addClass(e.disableClass),r.isEnable(\"prev\")&&1!==e.currentPage||t(\"[jp-role=prev]\",r.$container).addClass(e.disableClass),(!r.isEnable(\"next\")||e.currentPage>=e.totalPages)&&t(\"[jp-role=next]\",r.$container).addClass(e.disableClass),(!r.isEnable(\"last\")||e.currentPage>=e.totalPages)&&t(\"[jp-role=last]\",r.$container).addClass(e.disableClass),t(\"[jp-role=page]\",r.$container).removeClass(e.activeClass),t(\"[jp-role=page][jp-data=\"+e.currentPage+\"]\",r.$container).addClass(e.activeClass)},r.getPages=function(){var t=[],e=r.options.visiblePages,a=r.options.currentPage,n=r.options.totalPages;e>n&&(e=n);var i=Math.floor(e/2),o=a-i+1-e%2,s=a+i;o<1&&(o=1,s=e),s>n&&(s=n,o=1+n-e);for(var l=o;l<=s;)t.push(l),l++;return t},r.isNumber=function(t){var e=typeof t;return\"number\"===e||\"undefined\"===e},r.isEnable=function(t){return r.options[t]&&\"string\"==typeof r.options[t]},r.switchPage=function(t){r.options.currentPage=t,r.render()},r.fireEvent=function(t,e){return\"function\"!=typeof r.options.onPageChange||!1!==r.options.onPageChange(t,e)},r.callMethod=function(e,a){switch(e){case\"option\":r.options=t.extend({},r.options,a),r.verify(),r.render();break;case\"destroy\":r.$container.empty(),r.$container.removeData(\"jqPaginator\");break;default:throw new Error('[jqPaginator] method \"'+e+'\" does not exist')}return r.$container},r.bindEvents=function(){var e=r.options;r.$container.off(),r.$container.on(\"click\",\"[jp-role]\",function(){var a=t(this);if(!a.hasClass(e.disableClass)&&!a.hasClass(e.activeClass)){var n=+a.attr(\"jp-data\");r.fireEvent(n,\"change\")&&r.switchPage(n)}})},r.init(),r.$container},t.jqPaginator.defaultOptions={wrapper:\"\",first:'<li class=\"first\"><a href=\"javascript:;\">First</a></li>',prev:'<li class=\"prev\"><a href=\"javascript:;\">Previous</a></li>',next:'<li class=\"next\"><a href=\"javascript:;\">Next</a></li>',last:'<li class=\"last\"><a href=\"javascript:;\">Last</a></li>',page:'<li class=\"page\"><a href=\"javascript:;\">{{page}}</a></li>',totalPages:0,totalCounts:0,pageSize:0,currentPage:1,visiblePages:7,disableClass:\"disabled\",activeClass:\"active\",onPageChange:null},t.fn.jqPaginator=function(){var e=Array.prototype.slice.call(arguments);if(\"string\"==typeof e[0]){var a=t(this).data(\"jqPaginator\");if(a)return a.callMethod(e[0],e[1]);throw new Error(\"[jqPaginator] the element is not instantiated\")}return new t.jqPaginator(this,e[0])}}();\n"
+    },
+    {
+      "path": "views/admin/error.html",
+      "name": "error.html",
+      "lang": "html",
+      "lines": 33,
+      "size": 1063,
+      "content": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <title></title>\n        <meta charset=\"UTF-8\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <!--3秒后自动跳转-->\n        <meta http-equiv=\"refresh\" content=\"3; url={{redirect}}\" />\n        <!-- Bootstrap core CSS -->\n        <link href=\"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n        <link href=\"{{__HOST__}}/admin/error.css\" rel=\"stylesheet\">\n    </head>\n    <body>\n    <div class=\"container\">\n        <div class=\"well\">\n            <h1 class=\"grey lighter smaller\">\n                 {{message}}\n            </h1>\n    \n            <hr>\n            <h3 class=\"lighter smaller\">\n                网页三秒后将自动跳转...\n            </h3>\n            <div class=\"space\"></div>\n            <button class=\"btn btn-primary\">\n                <a href=\"{{redirect}}\" >\n                    立即返回\n                </a>\n            </button>\n        </div>\n    </div>\n    </body>\n</html>"
+    },
+    {
+      "path": "views/admin/index.html",
+      "name": "index.html",
+      "lang": "html",
+      "lines": 91,
+      "size": 2819,
+      "content": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->\n    <meta name=\"description\" content=\"\">\n    <meta name=\"author\" content=\"\">\n\n    <title>报名系统</title>\n\n    <!-- Bootstrap core CSS -->\n    <link href=\"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <link href=\"{{__HOST__}}/public/css/ie10.css\" rel=\"stylesheet\">\n\n    <!-- <link href=\"{{__HOST__}}/admin/index.css\" rel=\"stylesheet\"> -->\n\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n    <!--[if lt IE 9]>\n      <script src=\"https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n      <script src=\"https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n\n</head>\n\n<body>\n\n    <div class=\"container\">\n\n        <table class=\"table\">\n\n            <thead>\n                <tr>\n                    <th>学校</th>\n                    <th>姓名</th>\n                    <th>胸卡号</th>\n                    <th>验证码</th>\n                </tr>\n            </thead>\n            <tbody>\n                {{each list}}\n                <tr>\n                    <td>{{$value.school}}</td>\n                    <td>{{$value.username}}</td>\n                    <td>{{$value.password}}</td>\n                    <td>{{$value.id}}</td>\n\n                </tr>\n                {{/each}}\n\n\n            </tbody>\n        </table>\n        <div id=\"page\" class=\"pagination\"></div>\n\n    </div> <!-- /container -->\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <script src=\"{{__HOST__}}/public/js/ie10.js\"></script>\n\n    <script src=\"https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js\"></script>\n    <!--注意放在jq下面-->\n    <script src=\"{{__HOST__}}/public/js/jq-paginator.min.js\"></script>\n\n\n\n    <script>\n        $('#page').jqPaginator({\n            totalPages: {{ totalPages }},  //总页数\n            visiblePages: 8,              //可见页数\n            currentPage: {{ page }},      //当前页数\n            onPageChange: function (num, type) {\n                console.log(num, type);\n                //\n                if (type == 'change') {\n                    location.href = \"{{__HOST__}}/admin/index?page=\" + num;\n                    //地址栏显示的内容http://localhost:3000/admin/article?page=3\n                }\n            }\n    \t\t\t\n    \n    \t\t});\n\n    </script>\n</body>\n\n</html>"
+    },
+    {
+      "path": "views/admin/list.html",
+      "name": "list.html",
+      "lang": "html",
+      "lines": 69,
+      "size": 2322,
+      "content": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->\n    <meta name=\"description\" content=\"\">\n    <meta name=\"author\" content=\"\">\n\n    <title>报名系统</title>\n\n    <!-- Bootstrap core CSS -->\n    <link href=\"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <link href=\"{{__HOST__}}/public/css/ie10.css\" rel=\"stylesheet\">\n\n    <!-- Custom styles for this template -->\n    <link href=\"{{__HOST__}}/public/css/signin.css\" rel=\"stylesheet\">\n\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n    <!--[if lt IE 9]>\n      <script src=\"https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n      <script src=\"https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n    <link href=\"{{__HOST__}}/admin/list.css\" rel=\"stylesheet\">\n\n    <script src=\"https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js\"></script>\n    <!--用这个版本号，高版本无效果-->\n    <script src=\"https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n</head>\n\n<body>\n\n    <div class=\"container\">\n\n        <form class=\"form-signin form-horizontal\" action=\"{{__HOST__}}/admin/search\" method=\"post\">\n\n\n            <label for=\"password\">请输入你的验证码</label>\n            <div>\n                <input type=\"text\" id=\"password\" class=\"form-control\" name=\"id\" placeholder=\"请输入你的验证码\" required>\n            </div>\n\n            <button type=\"submit\" class=\"btn btn-primary btn-lg btn-block\">\n                提交\n            </button>\n\n            <button class=\"btn btn-primary btn-lg btn-block \">\n                <a href=\"{{__HOST__}}/admin/index\">查询总数据</a>\n            </button>\n\n\n        </form>\n\n\n\n    </div> <!-- /container -->\n\n\n\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <script src=\"{{__HOST__}}/public/js/ie10.js\"></script>\n</body>\n\n</html>"
+    },
+    {
+      "path": "views/admin/login.html",
+      "name": "login.html",
+      "lang": "html",
+      "lines": 74,
+      "size": 2678,
+      "content": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->\n    <meta name=\"description\" content=\"\">\n    <meta name=\"author\" content=\"\">\n\n    <title>报名系统</title>\n\n    <!-- Bootstrap core CSS -->\n    <link href=\"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <link href=\"{{__HOST__}}/public/css/ie10.css\" rel=\"stylesheet\">\n\n    <!-- Custom styles for this template -->\n    <link href=\"{{__HOST__}}/public/css/signin.css\" rel=\"stylesheet\">\n\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n    <!--[if lt IE 9]>\n      <script src=\"https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n      <script src=\"https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n    <link href=\"{{__HOST__}}/admin/login.css\" rel=\"stylesheet\">\n</head>\n\n<body>\n\n    <div class=\"container\">\n\n        <form class=\"form-signin form-horizontal\" action=\"{{__HOST__}}/admin/login/doLogin\" method=\"post\">\n            <h2 class=\"form-signin-heading header\">报名系统</h2>\n\n\n\n            <div class=\"form-group\">\n                <label class=\"col-sm-4 control-label\">管理员姓名</label>\n                <div class=\"col-sm-8\">\n                    <input type=\"text\" id=\"username\" class=\"form-control\" name=\"username\" placeholder=\"姓名\" required>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <label\n                    class=\"col-sm-4 control-label\">密&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;码</label>\n                <div class=\"col-sm-8\">\n                    <input type=\"password\" id=\"password\" class=\"form-control\" name=\"password\" placeholder=\"密码\" required>\n                </div>\n            </div>\n\n\n            <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">登陆</button>\n            <button class=\"btn btn-lg btn-primary btn-block\">\n                <a href=\"{{__HOST__}}/admin/login/loginOut\" class=\"loginOut\">\n                    退出\n                </a>\n            </button>\n        </form>\n        \n\n    </div> <!-- /container -->\n\n\n\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <script src=\"{{__HOST__}}/public/js/ie10.js\"></script>\n</body>\n\n</html>"
+    },
+    {
+      "path": "views/admin/search.html",
+      "name": "search.html",
+      "lang": "html",
+      "lines": 81,
+      "size": 2533,
+      "content": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->\n    <meta name=\"description\" content=\"\">\n    <meta name=\"author\" content=\"\">\n\n    <title>报名系统</title>\n\n    <!-- Bootstrap core CSS -->\n    <link href=\"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <link href=\"{{__HOST__}}/public/css/ie10.css\" rel=\"stylesheet\">\n\n    <!-- Custom styles for this template -->\n    <link href=\"{{__HOST__}}/public/css/signin.css\" rel=\"stylesheet\">\n\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n    <!--[if lt IE 9]>\n      <script src=\"https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n      <script src=\"https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n    <link href=\"{{__HOST__}}/admin/search.css\" rel=\"stylesheet\">\n\n    <script src=\"https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js\"></script>\n    <!--用这个版本号，高版本无效果-->\n    <script src=\"https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n</head>\n\n<body>\n\n    <div class=\"container\">\n        <h3>{{if value}} 输入错误，请重新输入！{{/if}}</h3>\n\n        {{if show}}\n        <table class=\"table\">\n\n            <thead>\n                <tr>\n                    <th>学校</th>\n                    <th>姓名</th>\n                    <th>胸卡号</th>\n                    <th>验证码</th>\n                </tr>\n            </thead>\n            <tbody>\n                {{each list}}\n                <tr>\n                    <td>{{$value.school}}</td>\n                    <td>{{$value.username}}</td>\n                    <td>{{$value.password}}</td>\n                    <td>{{$value.id}}</td>\n\n                </tr>\n                {{/each}}\n\n            </tbody>\n        </table>\n\n\n        {{/if}}\n        <button class=\"btn btn-primary\">\n            <a href={{prevPage}}>继续查询</a>\n        </button>\n\n\n    </div> <!-- /container -->\n\n\n\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <script src=\"{{__HOST__}}/public/js/ie10.js\"></script>\n</body>\n\n</html>"
+    },
+    {
+      "path": "views/index/index.html",
+      "name": "index.html",
+      "lang": "html",
+      "lines": 94,
+      "size": 3378,
+      "content": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n\n<head>\n    <meta charset=\"utf-8\">\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->\n    <meta name=\"description\" content=\"\">\n    <meta name=\"author\" content=\"\">\n\n    <title>报名系统</title>\n\n    <!-- Bootstrap core CSS -->\n    <link href=\"https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <link href=\"{{__HOST__}}/public/css/ie10.css\" rel=\"stylesheet\">\n\n    <!-- Custom styles for this template -->\n    <link href=\"{{__HOST__}}/public/css/signin.css\" rel=\"stylesheet\">\n\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\n    <!--[if lt IE 9]>\n      <script src=\"https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js\"></script>\n      <script src=\"https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js\"></script>\n    <![endif]-->\n    <link href=\"{{__HOST__}}/index/index.css\" rel=\"stylesheet\">\n</head>\n\n<body>\n\n    <div class=\"container\">\n\n        <form class=\"form-signin form-horizontal\" action=\"{{__HOST__}}/search\" method=\"post\">\n            <div class=\"form-group\">\n                <h2 class=\"form-signin-heading header\">报名系统</h2>\n            </div>\n\n            <!--下拉列表-->\n            <div class=\"form-group\">\n                <label class=\"col-sm-4 control-label\">选择学校</label>\n                <div class=\"col-sm-8\">\n                    <select class=\"form-control form-control-static\" name=\"school\">\n                        <option>南通中学</option>\n                        <option>南通市第一中学</option>\n                        <option>通大附中</option>\n                        <option>南通市第二中学</option>\n                    </select>\n                </div>\n            </div>\n\n\n            <div class=\"form-group\">\n                <label class=\"col-sm-4 control-label\">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名</label>\n                <div class=\"col-sm-8\">\n                    <input type=\"text\" id=\"username\" class=\"form-control\" name=\"username\" placeholder=\"姓名\" required>\n                </div>\n            </div>\n            <!--胸卡-->\n            <div class=\"form-group\">\n                <label class=\"col-sm-4 control-label\">胸&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;卡</label>\n                <div class=\"col-sm-8\">\n                    <input type=\"text\" id=\"\n                    \" class=\"form-control\" name=\"password\" placeholder=\"胸卡号\" required>\n                </div>\n            </div>\n\n            <div class=\"form-group\">\n                <button class=\"btn btn-lg btn-primary btn-block\" type=\"submit\">提交</button>\n            </div>\n\n        </form>\n\n\n        <h2 class=\"form-signin code\">\n            {{if list}}\n               你的验证码：{{list}}\n            {{else}}\n               {{error}}\n            {{/if}}\n\n        </h2>\n    </div> <!-- /container -->\n\n\n\n\n    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->\n    <script src=\"{{__HOST__}}/public/js/ie10.js\"></script>\n\n</body>\n\n</html>"
+    }
+  ]
+}

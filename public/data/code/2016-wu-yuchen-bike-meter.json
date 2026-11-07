@@ -1,0 +1,40 @@
+{
+  "projectId": "2016-wu-yuchen-bike-meter",
+  "externalRepo": "http://www.ntzx-geek.cc",
+  "totalFiles": 2,
+  "totalLines": 181,
+  "coreFiles": [
+    "bike_meter.ino",
+    "mini_python_concept.py"
+  ],
+  "languages": [
+    {
+      "lang": "cpp",
+      "lines": 103,
+      "percent": 55.0
+    },
+    {
+      "lang": "python",
+      "lines": 78,
+      "percent": 45.0
+    }
+  ],
+  "files": [
+    {
+      "path": "bike_meter.ino",
+      "name": "bike_meter.ino",
+      "lang": "cpp",
+      "lines": 103,
+      "size": 3115,
+      "content": "// =================================================================\n// 项目：云智能自行车码表 (Cloud Smart Bike Meter)\n// 申报人：南通中学 高三(14)班 吴钰宸\n// 平台：Arduino Pro Mini (ATmega328P 16MHz) + ESP8266 WiFi\n// =================================================================\n\n#include <Arduino.h>\n#include <SoftwareSerial.h>\n\n// 引脚分配\nconst int HALL_PIN = 2;        // 霍尔测速传感器输入 (外部中断 0)\nconst int HEART_RATE_PIN = A0; // 腕带光电心率模拟采样引脚\nSoftwareSerial wifiSerial(10, 11); // ESP8266 WiFi 串口通信 (RX, TX)\n\n// 轮圈几何参数\nconst float WHEEL_CIRCUMFERENCE_M = 2.07; // 700c 公路车轮周长 (米)\n\n// 运行状态与采样统计变量\nvolatile unsigned long lastPulseTime = 0;\nvolatile unsigned long pulseInterval = 0;\nvolatile unsigned long totalRevolutions = 0;\n\nfloat currentSpeedKmh = 0.0;\nfloat totalDistanceKm = 0.0;\nint currentBpm = 75;\nbool wifiConnected = false;\n\n// 霍尔传感器脉冲中断服务函数 (ISR)\nvoid onHallPulse() {\n  unsigned long now = millis();\n  if (now - lastPulseTime > 50) { // 硬件防抖 (过滤震动毛刺)\n    pulseInterval = now - lastPulseTime;\n    lastPulseTime = now;\n    totalRevolutions++;\n  }\n}\n\nvoid setup() {\n  Serial.begin(9600);\n  wifiSerial.begin(9600);\n  \n  pinMode(HALL_PIN, INPUT_PULLUP);\n  attachInterrupt(digitalPinToInterrupt(HALL_PIN), onHallPulse, FALLING);\n  \n  Serial.println(F(\"Cloud Smart Bike Meter Initialized.\"));\n  Serial.println(F(\"NTZX Geek Club - Wu Yuchen (2016)\"));\n}\n\n// 检查是否进入校园 WiFi 覆盖范围并尝试握手\nvoid checkCampusWiFi() {\n  wifiSerial.println(F(\"AT+CWJAP?\"));\n  delay(100);\n  // 若未连接，尝试关联南通中学校园无线网络\n  if (!wifiConnected) {\n    wifiSerial.println(F(\"AT+CWJAP=\\\"NTZX-Campus\\\",\\\"\\\"\"));\n    wifiConnected = true;\n  }\n}\n\n// 向校内数据服务器推送遥测数据包\nvoid syncDataToServer() {\n  if (!wifiConnected) return;\n  \n  // 构造 JSON 格式遥测数据包\n  String payload = \"{\";\n  payload += \"\\\"speed\\\":\" + String(currentSpeedKmh, 1) + \",\";\n  payload += \"\\\"distance\\\":\" + String(totalDistanceKm, 2) + \",\";\n  payload += \"\\\"bpm\\\":\" + String(currentBpm);\n  payload += \"}\";\n  \n  // 主动上传并解析响应包中的下发新任务\n  Serial.print(F(\"Uploading telemetry to NTZX server: \"));\n  Serial.println(payload);\n}\n\nvoid loop() {\n  unsigned long now = millis();\n  \n  // 1. 速度与里程换算\n  if (now - lastPulseTime < 3000 && pulseInterval > 0) {\n    float speedMps = WHEEL_CIRCUMFERENCE_M / (pulseInterval / 1000.0);\n    currentSpeedKmh = speedMps * 3.6;\n  } else {\n    currentSpeedKmh = 0.0; // 停车状态\n  }\n  totalDistanceKm = (totalRevolutions * WHEEL_CIRCUMFERENCE_M) / 1000.0;\n  \n  // 2. 模拟读取腕带光电心率\n  int rawHeart = analogRead(HEART_RATE_PIN);\n  if (rawHeart > 512) {\n    currentBpm = map(rawHeart, 512, 1023, 60, 160);\n  }\n  \n  // 3. 入校 WiFi 检测与同步\n  checkCampusWiFi();\n  static unsigned long lastSync = 0;\n  if (now - lastSync > 5000) {\n    lastSync = now;\n    syncDataToServer();\n  }\n  \n  delay(200);\n}\n"
+    },
+    {
+      "path": "mini_python_concept.py",
+      "name": "mini_python_concept.py",
+      "lang": "python",
+      "lines": 78,
+      "size": 2689,
+      "content": "#!/usr/bin/env python3\n# =================================================================\n# 项目：便携微型编程机构想 (Portable Python Mini-Computer)\n# 申报人：南通中学 高三(14)班 吴钰宸\n# 运行环境设想：ARM SoC + BusyBox + Python 运行时 + 4x4 矩阵键盘\n# =================================================================\n\nimport sys\nimport time\n\n# 4x4 矩阵物理按键与关键字/函数映射表 (存放在外置 SD 卡中，可随时插拔修改)\nKEYMAP_KEYWORDS = {\n    (0, 0): \"print(\",\n    (0, 1): \"for i in range(\",\n    (0, 2): \"while \",\n    (0, 3): \"if \",\n    (1, 0): \"def \",\n    (1, 1): \"return \",\n    (1, 2): \"import \",\n    (1, 3): \"class \",\n    (2, 0): \"sys.argv\",\n    (2, 1): \"open(\",\n    (2, 2): \"requests.get(\",\n    (2, 3): \"len(\",\n    (3, 0): \"True\",\n    (3, 1): \"False\",\n    (3, 2): \"None\",\n    (3, 3): \"\\n\",  # 回车换行执行\n}\n\n# 模式二：自定义变量与常用函数映射表\nKEYMAP_CUSTOM = {\n    (0, 0): \"url\",\n    (0, 1): \"data\",\n    (0, 2): \"headers\",\n    (0, 3): \"result\",\n    (1, 0): \"fetch_data()\",\n    (1, 1): \"parse_html()\",\n    (1, 2): \"save_to_sd()\",\n    (1, 3): \"run_spider()\",\n}\n\nclass MiniPythonTerminal:\n    def __init__(self):\n        self.current_mode = \"KEYWORDS\" # KEYWORDS 或 CUSTOM\n        self.code_buffer = \"\"\n        print(\"==> 便携微型编程机 (NTZX Geek Edition) 启动中...\")\n        print(\"==> BusyBox 核心加载完成，Python 交互运行环境就绪。\")\n        print(\"==> 按键表已从 /mnt/sdcard/keymap.cfg 挂载成功。\")\n\n    def switch_keymap_mode(self):\n        self.current_mode = \"CUSTOM\" if self.current_mode == \"KEYWORDS\" else \"KEYWORDS\"\n        print(f\"[*] 切换按键表映射模式: {self.current_mode}\")\n\n    def on_matrix_key_pressed(self, row: int, col: int):\n        active_map = KEYMAP_KEYWORDS if self.current_mode == \"KEYWORDS\" else KEYMAP_CUSTOM\n        token = active_map.get((row, col), \"\")\n        self.code_buffer += token\n        print(f\"[INPUT] 写入: {token} | 当前代码缓冲区: {self.code_buffer}\")\n\n    def execute_script(self):\n        print(f\"[*] 开始在后台微型进程执行代码: {self.code_buffer}\")\n        # 在受控上下文中运行自定义爬虫/计算代码\n        try:\n            exec(self.code_buffer)\n        except Exception as e:\n            print(f\"[!] 执行异常: {e}\")\n        self.code_buffer = \"\"\n\nif __name__ == \"__main__\":\n    device = MiniPythonTerminal()\n    # 模拟矩阵键盘输入代码示例\n    device.on_matrix_key_pressed(0, 0) # print(\n    device.switch_keymap_mode()\n    device.on_matrix_key_pressed(0, 3) # result\n    device.switch_keymap_mode()\n    device.on_matrix_key_pressed(3, 3) # \n\n"
+    }
+  ]
+}

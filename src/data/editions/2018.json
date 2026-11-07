@@ -1,0 +1,477 @@
+{
+  "year": "2018",
+  "editionNumber": 3,
+  "title": "2018-2019 第三届望岳奖学金",
+  "theme": "拓宽视野与深耕工程：从工业级机器人对抗到程序语言理论探索",
+  "intro": "第三届望岳奖学金拓展了活动周期，在一年内先后举办了三场高水平学术与产业技术讲座，涵盖人工智能、自动驾驶与应用数学等前沿领域。本届参赛作品呈现出“极客工程”与“理论思辨”并驾齐驱的蓬勃态势，既有达到大学RoboMaster主力算法水准的机器人控制架构，也有对Lisp语法树与程序语言根基的纯粹探索。",
+  "documents": [],
+  "gallery": [],
+  "reviewSummary": "周子皓凭借在 RoboMaster 机器人博弈算法与开源项目生态方面的杰出表现斩获凌绝望岳奖；顾文韬自主开发的两款完备 Unity 游戏荣膺坚韧登岳奖；仇怡、陆正扬、刘嘉楠分获凭高临岳奖。",
+  "projects": [
+    {
+      "id": "2018-zhou-zihao-robomaster",
+      "title": "RoboMaster 2019 机器人博弈对抗算法、校园数字化系统群与底层逆向工程",
+      "studentId": "zhou-zihao",
+      "studentName": "周子皓",
+      "class": "高三6班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "算法与系统",
+      "tags": [
+        "RoboMaster",
+        "ROS",
+        "C++",
+        "启发式搜索",
+        "逆向工程",
+        "汇编注入",
+        "Node.js",
+        "微信小程序",
+        "Android",
+        "开源社区"
+      ],
+      "summary": "周子皓提交了跨越四大技术领域的综合性硬核成果集：包括获全国季军的 RoboMaster 2019 机器人启发式博弈火控算法；自主编写 C++ 跨进程线程注入与汇编修改的《植物大战僵尸·东方永夜抄》弹幕逆向系统；南通中学全校真实投用的研学旅行在线选报系统、校社团活动申报平台（小程序+Android双端）、辩论赛订票系统、智学网爬虫、安全月报系统；以及 ArknightsAutoHelper 开源贡献。",
+      "hasCode": true,
+      "codeArchiveId": "2018-zhou-zihao-robomaster-ai",
+      "artifactSpecs": [
+        {
+          "name": "RoboMaster 2019 机器人对抗博弈火控与决策系统",
+          "type": "ROS 节点 / C++ 源码包与算法库",
+          "platform": "Linux / ROS (Robot Operating System)",
+          "size": "111 个源文件 · 17,750 行代码",
+          "description": "涵盖启发式深度搜索火控、局部博弈状态机、麦轮运动学逆解与 AprilTag 定位"
+        },
+        {
+          "name": "植物大战僵尸底层线程注入与东方弹幕游戏逆向系统",
+          "type": "C++ 跨进程线程注入 DLL / Cheat Engine 汇编脚本",
+          "platform": "Windows x86 / DirectX",
+          "size": "10 个源文件 · 1,195 行代码",
+          "description": "包含《东方永夜抄》三合一 Boss 弹幕重写、pvzclass 逆向及豌豆坦克内存汇编注入"
+        },
+        {
+          "name": "南通中学研学旅行在线选线与准入验证系统",
+          "type": "Node.js / Express Web 平台 + MySQL 数据库",
+          "platform": "Linux Web Server / MySQL",
+          "size": "6 个核心源文件 · 825 行代码",
+          "description": "2018年南通中学全校真实投入使用，支持各线路并发控流、身份证后六位核销"
+        },
+        {
+          "name": "校级社团活动申报与审批平台（小程序 + Android APP）",
+          "type": "微信小程序客户端 + Android Studio 原生 Java App",
+          "platform": "微信开发者工具 / Android SDK",
+          "size": "13 个源文件 · 521 行代码",
+          "description": "南通中学极客社与社团部实际投用，社长端申报与工作人员周报审核双端协同"
+        }
+      ],
+      "details": {
+        "skills": "多自由度运动学逆解、扩展卡尔曼滤波(EKF)、自主决策树与博弈算法、大型开源项目工程化规范",
+        "difficulties": "在高速机动中对受电磁抖动影响的图像进行稳定特征提取，实时闭环控制中的毫秒级延迟控制",
+        "innovations": "高三阶段即达到本科RoboMaster校队主力算法架构师水平，兼顾开源生态贡献与底层工程落地，是评审导师一致推崇的标杆项目。",
+        "fullReportHtml": "\n<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\">\n  <div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\">\n    <div class=\"flex items-center gap-3\">\n      <div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div>\n      <div>\n        <div class=\"flex items-center gap-2\">\n          <h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 第三届望岳奖学金申报档案原件正本</h4>\n          <span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">完整成果集录入</span>\n        </div>\n        <p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报人：高三（6）班 周子皓 · 包含 8 项软硬件及底层工程成果</p>\n      </div>\n    </div>\n    <span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2019年申报</span>\n  </div>\n\n  <div class=\"p-5 sm:p-6 space-y-4\">\n    <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\">\n      <div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\">\n        <span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span>\n        <span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">周子皓</span>\n      </div>\n      <div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\">\n        <span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span>\n        <span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高三（6）班</span>\n      </div>\n      <div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\">\n        <span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目统称</span>\n        <span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">RoboMaster2019 机器人博弈算法，及信息管理系统若干</span>\n      </div>\n    </div>\n\n    <div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n      <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n        <span>📝 申报项目总体综述</span>\n      </h5>\n      <div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\">\n        <p><strong>【算法领域】</strong>参加了 RoboMaster2019 机器人夏令营并斩获季军。负责算法核心，使用启发式搜索，通过固定层数的深度优先搜索确定估价函数的值，寻找最优对抗策略，成功在实战中击败人类玩家。</p>\n        <p><strong>【软件工程】</strong>先后独立开发了辩论社友谊赛观赛报名系统、智学网成绩爬虫、研学旅行报名系统、校安全月报提交系统、社团活动申请系统（含小程序与 Android 端），利用技术为学校、老师和同学服务，减轻管理负担，积累了大量全栈工程经验。</p>\n        <p><strong>【逆向与底层】</strong>参与开源项目 ArknightsAutoHelper；在《植物大战僵尸》中深入学习汇编语言、Cheat Engine 内存代码注入，并编写 C++ 线程注入工具将原版游戏重构为《东方永夜抄》弹幕游戏，是通中极客动手创造的杰出体现。</p>\n      </div>\n    </div>\n\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\">\n      <div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\">\n        <h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\">\n          <span>💡 习得技能</span>\n        </h5>\n        <div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">\n          ROS 机器人操作系统、启发式博弈算法、C++ 汇编与内存线程注入、Node.js / Express / MySQL 全栈、微信小程序与 Android 原生开发\n        </div>\n      </div>\n      <div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\">\n        <h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\">\n          <span>🛠️ 克服的技术难点</span>\n        </h5>\n        <div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">\n          算法和系统跨团队协作开发、机器人实时通信毫秒级延迟控制、校园高并发选线并发锁机制、跨进程线程注入与 DirectSound/DirectX 钩子\n        </div>\n      </div>\n      <div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\">\n        <h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\">\n          <span>✨ 评审委员会评价</span>\n        </h5>\n        <div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">\n          实现了多个完备应用，工作量和技术完成度均极其突出。既有理论深度与竞赛实绩，又有服务全校的工程落地，获全票一致推荐为“凌绝望岳奖”。\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n<div class=\"space-y-8 pt-4\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-200\">\n    <span class=\"w-3 h-3 rounded-full bg-blue-600\"></span>\n    <h3 class=\"font-serif font-bold text-lg text-slate-900\">📑 周子皓申报原件正文：八项软硬件成果逐一解析</h3>\n  </div>\n\n  <!-- Project 1 -->\n  <div class=\"p-5 rounded-2xl border border-slate-200 bg-white shadow-xs space-y-3\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2\">\n      <h4 class=\"font-serif font-bold text-base text-slate-900 flex items-center gap-2\">\n        <span class=\"px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-mono\">01</span>\n        一、辩社友谊赛观赛报名系统 (Ticket Booking System)\n      </h4>\n      <div class=\"flex gap-2\">\n        <a href=\"https://github.com/ZhouZiHao-Moon/Ticket\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-xs font-mono text-blue-600 hover:underline\">GitHub: Ticket</a>\n        <span class=\"text-slate-300\">·</span>\n        <a href=\"https://github.com/ZhouZiHao-Moon/BianShe2\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-xs font-mono text-blue-600 hover:underline\">GitHub: BianShe2</a>\n      </div>\n    </div>\n    <p class=\"text-sm text-slate-700 leading-relaxed font-serif\">\n      该项目使用 Python 的 Flask 框架编写。学生可以通过该报名系统登记选座信息，之后会自动收到一封带有唯一验证码的确认邮件。在比赛现场检票处，工作人员可根据邮件中的验证码实时核实登记信息，极大保障了校内大型辩论赛的观赛秩序。\n    </p>\n  </div>\n\n  <!-- Project 2 -->\n  <div class=\"p-5 rounded-2xl border border-slate-200 bg-white shadow-xs space-y-3\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2\">\n      <h4 class=\"font-serif font-bold text-base text-slate-900 flex items-center gap-2\">\n        <span class=\"px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-mono\">02</span>\n        二、智学网成绩爬虫 (ZhiXueWang Crawler)\n      </h4>\n      <a href=\"https://github.com/ZhouZiHao-Moon/zhiXueWang\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-xs font-mono text-blue-600 hover:underline\">GitHub: zhiXueWang</a>\n    </div>\n    <p class=\"text-sm text-slate-700 leading-relaxed font-serif\">\n      该项目使用 Python 编写，利用智学网的“好友伴学”接口获取全科成绩数据。在安全审计中，周子皓敏锐地发现了好友伴学剩余查询次数（非会员限制 3 次）仅在前端校验的安全漏洞，成功绕过频次限制，实现了全校各班级成绩分布与排名的无限制统计分析（基于学号与姓名映射表），后在智学网修复该接口漏洞前为班级提供了详尽的学习大数据分析报告。\n    </p>\n  </div>\n\n  <!-- Project 3 -->\n  <div class=\"p-5 rounded-2xl border border-slate-200 bg-white shadow-xs space-y-3\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2\">\n      <h4 class=\"font-serif font-bold text-base text-slate-900 flex items-center gap-2\">\n        <span class=\"px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-mono\">03</span>\n        三、研学旅行报名系统（yanxue - 全校投用实战工程）\n      </h4>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">2018年全校投用</span>\n    </div>\n    <p class=\"text-sm text-slate-700 leading-relaxed font-serif\">\n      应学校指导老师要求，该项目未公开发布在 GitHub，完整源码已附在奖学金申请包中。该系统采用 Node.js + Express 编写，底层基于 MySQL 关系型数据库。学生可以提前下载各条研学线路的详细行程与名额，并在规定选课时刻凭借身份证号后六位和姓名在内网准入选线，彻底取代了以往纸质排队抢报的方式，极大减轻了教务处与班主任的工作负担，保证了选报过程的高度公开透明。在 2018 年南通中学研学选拔中平稳承载了高并发流量。\n    </p>\n  </div>\n\n  <!-- Project 4 -->\n  <div class=\"p-5 rounded-2xl border border-slate-200 bg-white shadow-xs space-y-3\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2\">\n      <h4 class=\"font-serif font-bold text-base text-slate-900 flex items-center gap-2\">\n        <span class=\"px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-mono\">04</span>\n        四、校安全月报提交系统 (Security Monthly Report Form)\n      </h4>\n      <a href=\"https://github.com/ZhouZiHao-Moon/securityForm\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-xs font-mono text-blue-600 hover:underline\">GitHub: securityForm</a>\n    </div>\n    <p class=\"text-sm text-slate-700 leading-relaxed font-serif\">\n      使用 Python 编写的微型管理工具，为学校德育处与各年级班主任定制，让各班班主任每月便捷提交安全巡查情况，并自动生成班级安全汇总仪表盘与未提交预警。\n    </p>\n  </div>\n\n  <!-- Project 5 -->\n  <div class=\"p-5 rounded-2xl border border-slate-200 bg-white shadow-xs space-y-3\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2\">\n      <h4 class=\"font-serif font-bold text-base text-slate-900 flex items-center gap-2\">\n        <span class=\"px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-mono\">05</span>\n        五、社团活动申请系统（微信小程序 + Android APP 双端）\n      </h4>\n      <a href=\"https://github.com/ZhouZiHao-Moon/activity\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-xs font-mono text-blue-600 hover:underline\">GitHub: activity</a>\n    </div>\n    <p class=\"text-sm text-slate-700 leading-relaxed font-serif\">\n      面向全校各学生社团的活动立项、场地预约与报批系统。除了 Web 后台之外，还自主开发了微信小程序与 Android 原生客户端（APK 已打包产出）。各社团社长凭借分配的独立社团凭证即可移动端随时发起活动申请，社团部及指导教师在管理后台按周清晰查看审批全校社团动态。\n    </p>\n  </div>\n\n  <!-- Project 6 -->\n  <div class=\"p-5 rounded-2xl border-2 border-blue-200 bg-blue-50/20 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2 border-b border-blue-100 pb-3\">\n      <h4 class=\"font-serif font-bold text-base text-blue-950 flex items-center gap-2\">\n        <span class=\"px-2 py-0.5 rounded bg-blue-600 text-white text-xs font-mono\">06</span>\n        六、RoboMaster 2019 夏令营机器人对抗博弈算法（全国季军）\n      </h4>\n      <span class=\"text-xs font-mono px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800 font-bold border border-amber-300\">\n        🏆 全国季军 · 核心火控\n      </span>\n    </div>\n    <p class=\"text-sm text-slate-700 leading-relaxed font-serif\">\n      在大疆 RoboMaster 2019 高中生夏令营中，作为战队主力算法架构师负责整套对抗决策系统。基于 Linux ROS 架构，核心算法模块 <code>algorithm</code> 全由周子皓自主研发。\n    </p>\n    <p class=\"text-sm text-slate-700 leading-relaxed font-serif\">\n      对抗算法采用了<strong>启发式搜索（Heuristic Search）</strong>与深度优先搜索（DFS）动态确定博弈估价函数，在毫秒级时间内输出最优决策序列。周子皓在工程演进中先后尝试并对比了多种算法范式：单纯步数与时间估价、蒙特卡洛随机采样模拟、蒙特卡洛树搜索（MCTS）博弈等，并在源码中完整保留了 <code>algorithm_MCTS.cpp</code>, <code>algorithm_BFS.cpp</code>, <code>algorithm_step.cpp</code>, <code>algorithm_force.cpp</code> 等迭代演进版本。在对抗实测中，该算法执蓝方对战人类高水平玩家执红方，算法成功战胜人类选手取得优胜！\n    </p>\n\n    <!-- Images -->\n    <div class=\"grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2\">\n      <figure class=\"rounded-xl overflow-hidden border border-slate-200 bg-white p-2\">\n        <img src=\"media/2018_zhou_zihao/image1.png\" alt=\"RoboMaster 对抗规则图\" class=\"w-full rounded-lg object-contain max-h-48 mx-auto\" />\n        <figcaption class=\"text-[11px] text-center text-slate-500 mt-1 font-mono\">RoboMaster 比赛对抗规则截取（能量机关与阵地）</figcaption>\n      </figure>\n      <figure class=\"rounded-xl overflow-hidden border border-slate-200 bg-white p-2\">\n        <img src=\"media/2018_zhou_zihao/image3.png\" alt=\"装甲板攻击规则解析\" class=\"w-full rounded-lg object-contain max-h-48 mx-auto\" />\n        <figcaption class=\"text-[11px] text-center text-slate-500 mt-1 font-mono\">装甲板击打与血量判定规则模型</figcaption>\n      </figure>\n      <figure class=\"rounded-xl overflow-hidden border border-slate-200 bg-white p-2\">\n        <img src=\"media/2018_zhou_zihao/image4.png\" alt=\"补给点与战场地图\" class=\"w-full rounded-lg object-contain max-h-48 mx-auto\" />\n        <figcaption class=\"text-[11px] text-center text-slate-500 mt-1 font-mono\">战场地图拓扑结构、障碍区与补给站</figcaption>\n      </figure>\n      <figure class=\"rounded-xl overflow-hidden border border-slate-200 bg-white p-2\">\n        <img src=\"media/2018_zhou_zihao/image6.png\" alt=\"决策推演与状态转移\" class=\"w-full rounded-lg object-contain max-h-48 mx-auto\" />\n        <figcaption class=\"text-[11px] text-center text-slate-500 mt-1 font-mono\">决策树分支推演与胜负得分计算逻辑</figcaption>\n      </figure>\n    </div>\n  </div>\n\n  <!-- Project 7 -->\n  <div class=\"p-5 rounded-2xl border border-slate-200 bg-white shadow-xs space-y-3\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2\">\n      <h4 class=\"font-serif font-bold text-base text-slate-900 flex items-center gap-2\">\n        <span class=\"px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-mono\">07</span>\n        七、参与开源项目：ArknightsAutoHelper\n      </h4>\n      <a href=\"https://github.com/ninthDevilHAUNSTER/ArknightsAutoHelper\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-xs font-mono text-blue-600 hover:underline\">GitHub: ArknightsAutoHelper</a>\n    </div>\n    <p class=\"text-sm text-slate-700 leading-relaxed font-serif\">\n      作为活跃的代码贡献者，为知名开源自动化脚本项目 ArknightsAutoHelper 贡献了 Windows 开机自启动、环境自动探测与批处理脚本，深入理解了 Git 协作与现代开源社区的工作流程。\n    </p>\n  </div>\n\n  <!-- Project 8 -->\n  <div class=\"p-5 rounded-2xl border border-slate-200 bg-white shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between flex-wrap gap-2\">\n      <h4 class=\"font-serif font-bold text-base text-slate-900 flex items-center gap-2\">\n        <span class=\"px-2 py-0.5 rounded bg-blue-100 text-blue-800 text-xs font-mono\">08</span>\n        八、《植物大战僵尸》底层内存修改与东方弹幕游戏逆向\n      </h4>\n      <div class=\"flex gap-2\">\n        <a href=\"https://www.bilibili.com/video/av51472601\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-xs font-mono text-pink-600 hover:underline\">B站视频: 东方永夜抄</a>\n        <span class=\"text-slate-300\">·</span>\n        <a href=\"https://www.bilibili.com/video/av70323578\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"text-xs font-mono text-pink-600 hover:underline\">B站视频: 安洁莉娜</a>\n      </div>\n    </div>\n    <div class=\"text-sm text-slate-700 leading-relaxed space-y-2 font-serif\">\n      <p><strong>1. Cheat Engine 内存代码注入（豌豆坦克 tank.CT）：</strong>深入逆向游戏运行期内存布局，直接注入自定义汇编程序，实现：①阳光消耗提升至 250；②发射间隔缩短 50%；③当被僵尸啃食到 100 血量以下时触发向前冲锋技能，秒杀沿途碾压的所有僵尸。</p>\n      <p><strong>2. C++ 跨进程线程注入（《东方永夜抄》三合一弹幕工程）：</strong>自主编写三个独立 C++ 模块（<code>boss</code>, <code>PVZ永夜抄</code>, <code>弹幕</code>），通过动态创建远端线程向游戏内存空间写入二进制代码，劫持主循环渲染与碰撞检测，将经典的塔防游戏彻底改造为东方风格的高难度弹幕躲避射击游戏！</p>\n      <p><strong>3. 基于开源 pvzclass 的底层扩展：</strong>基于 C++ 类库深入游戏底层，在植物大战僵尸引擎中完美重现《明日方舟》安洁莉娜的反重力与微粒浮游炮攻击机制。</p>\n    </div>\n  </div>\n\n  <!-- Summary -->\n  <div class=\"p-5 rounded-2xl border border-slate-200 bg-slate-50 space-y-3\">\n    <h4 class=\"font-serif font-bold text-base text-slate-900\">九、高中两年技术探索总结与极客精神感悟</h4>\n    <blockquote class=\"text-xs sm:text-sm text-slate-700 italic leading-relaxed font-serif border-l-2 border-blue-500 pl-4 py-1\">\n      “两年的时间里我学习了很多新知识，做了一些小项目，每一个项目其实都能提高我对某方面知识的理解。网页系统和爬虫的开发让我理解了我是怎样看到一个网页的，也积累了最初的项目经验。博弈算法让我理解了如何使用学到的算法解决实际问题而不仅仅是完成 NOIP 的题目，编写项目的过程也让我积累了与项目伙伴合作的宝贵经验。参与开源项目让我更深地理解了 Git 和 GitHub，也是我支持开源运动的一小步。对《植物大战僵尸》的修改让我懂得了底层汇编语句，对程序的最底层实现与运行过程有了更深的体会。未来我会尝试学习 Qt，将命令行变成可视化界面；人工智能的学习也在我的计划之中，打算使用人工智能完成更复杂游戏的博弈。”\n      <div class=\"mt-2 text-right not-italic font-bold text-slate-800 text-xs\">— 高三（6）班 周子皓</div>\n    </blockquote>\n  </div>\n</div>\n"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "非常厉害！不仅有极其扎实的工程与算法功底，而且有真正的开源精神与极客追求，当之无愧的头名。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "展现了令人惊叹的自驱力与工程成熟度，代码架构清晰规范。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "算法模型与实际物理硬件结合得非常紧密，工作量极其饱满。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "体系完整，技术路线明确。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "综合实力全面，具备极高技术上限。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2018/mcts_search_debug.png",
+          "caption": "算法训练与蒙特卡洛树搜索（MCTS）调试日志终端",
+          "category": "algorithm"
+        },
+        {
+          "src": "media/2018_zhou_zihao/image1.png",
+          "caption": "RoboMaster 2019 比赛对抗规则与博弈决策地图（能量机关与阵地）",
+          "category": "rules"
+        },
+        {
+          "src": "media/2018_zhou_zihao/image3.png",
+          "caption": "RoboMaster 2019 装甲板击打与血量判定规则模型",
+          "category": "rules"
+        },
+        {
+          "src": "media/2018_zhou_zihao/image4.png",
+          "caption": "战场地图拓扑结构、障碍区与补给站示意图",
+          "category": "rules"
+        },
+        {
+          "src": "media/2018_zhou_zihao/image6.png",
+          "caption": "决策树分支推演与胜负得分计算逻辑",
+          "category": "rules"
+        }
+      ],
+      "video": {
+        "src": "media/2018_zhou_zihao_algorithm.mp4",
+        "poster": "media/2018_zhou_zihao_algorithm_poster.jpg",
+        "title": "RoboMaster 2019 机器人启发式博弈算法对抗人类玩家实测录屏"
+      },
+      "codeArchives": [
+        {
+          "id": "2018-zhou-zihao-robomaster-ai",
+          "title": "RoboMaster 2019 机器人对抗博弈算法",
+          "badge": "ROS / C++ 启发式搜索 / 季军 · 111 源文件",
+          "category": "机器人 / 博弈算法"
+        },
+        {
+          "id": "2018-zhou-zihao-pvz-modding",
+          "title": "植物大战僵尸底层修改与东方弹幕游戏逆向",
+          "badge": "C++ 线程注入 / Cheat Engine 汇编 · 10 源文件",
+          "category": "逆向工程 / 汇编注入"
+        },
+        {
+          "id": "2018-zhou-zihao-yanxue",
+          "title": "南通中学研学旅行在线选线与准入验证系统",
+          "badge": "Node.js / Express / MySQL (全校实战投用) · 6 源文件",
+          "category": "Web全栈 / 校园数字化"
+        },
+        {
+          "id": "2018-zhou-zihao-club-activity",
+          "title": "校级社团活动申报与审批平台",
+          "badge": "微信小程序 + Android App 双端 · 13 源文件",
+          "category": "移动端开发 / 双端协同"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2018-周子皓 - 项目源代码",
+          "filename": "2018-周子皓-项目源代码.zip",
+          "url": "/downloads/projects/2018-zhou-zihao-robomaster/2018-周子皓-项目源代码.zip",
+          "size": "27.6 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2018-zhou-zihao-robomaster",
+          "projectTitle": "RoboMaster 2019 机器人博弈对抗算法、校园数字化系统群与底层逆向工程",
+          "studentName": "周子皓",
+          "editionYear": "2018",
+          "description": "《RoboMaster 2019 机器人博弈对抗算法、校园数字化系统群与底层逆向工程》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2018-gu-wentao-unity-games",
+      "title": "Unity 3D 游戏开发全流程：坦克大战智能对战系统与兔子大冒险",
+      "studentId": "gu-wentao",
+      "studentName": "顾文韬",
+      "class": "高三10班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "游戏与图形",
+      "tags": [
+        "Unity 3D",
+        "C#",
+        "游戏AI",
+        "物理引擎",
+        "动画骨骼"
+      ],
+      "summary": "自主运用 Unity 引擎研发两款完整独立游戏：实现了包含视线检测、寻路与开火策略的坦克对战 AI 系统，以及具有物理重力、多段跳跃、骨骼动画与音效配乐的横版冒险动作游戏。",
+      "video": {
+        "src": "media/2018_gu_wentao_unity.mp4",
+        "poster": "media/2018_gu_wentao_unity_poster.jpg",
+        "title": "顾文韬 Unity 游戏制作与实机演示"
+      },
+      "hasCode": true,
+      "codeArchiveId": "2018-gu-wentao-unity-games",
+      "details": {
+        "skills": "C# 面向对象编程、Unity 物理刚体碰撞检测、有限状态机(FSM)对战AI、骨骼动画融合",
+        "difficulties": "自主寻路算法与地形碰撞在复杂场景下的穿模问题，以及音画同步与手感调优",
+        "innovations": "从美术、音效、关卡设计到底层 AI 逻辑全部独立攻克，完成了完整的商业级游戏 Demo 闭环开发。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2019年 月 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">顾文韬</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高三10</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">Unity游戏开发：坦克大战、兔子大冒险</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>最早通过Unity设计了坦克大战的游戏，之后又学习Unity人工智能技术，设计了对战的坦克AI系统。</p><p>兔子大冒险有了更生动的画面，特别是动画效果，另外设计了比较复杂的主角行动效果：比如条约、重力、射击等。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">Unity游戏开发、Unity人工智能、动画和配音</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">游戏开发中缺少素材，游戏关卡的设计和对战AI</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">采用了动画和AI来实现游戏中的部分功能\n有完整的代码和详细实现过程，很出色，能看出对他作品心血的自豪</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与游戏技术架构解析 (Technical Architecture)</h4>\n  </div>\n\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n    <!-- Game 1 -->\n    <div class=\"rounded-xl border border-blue-200/80 dark:border-blue-900/40 bg-gradient-to-br from-blue-50/40 via-white to-slate-50 dark:from-stone-900 dark:via-stone-900 dark:to-blue-950/20 p-5 space-y-3.5 shadow-xs\">\n      <div class=\"flex items-center justify-between border-b border-blue-100 dark:border-blue-900/40 pb-3\">\n        <div class=\"flex items-center gap-2.5\">\n          <span class=\"text-2xl\">🎮</span>\n          <div>\n            <h5 class=\"text-sm font-bold text-slate-900 dark:text-white\">一、《坦克大作战》智能对战系统研发</h5>\n            <p class=\"text-[11px] text-blue-700 dark:text-blue-300 font-mono\">Unity 3D · C# · 有限状态机 (FSM) AI 体系</p>\n          </div>\n        </div>\n        <span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-300\">3D Combat</span>\n      </div>\n\n      <div class=\"space-y-2 text-xs text-slate-700 dark:text-stone-300 font-serif leading-relaxed\">\n        <p>\n          本项目采用 Unity 3D 游戏引擎结合 C# 脚本自主研发。游戏中设计了包括<strong>小兵坦克、巡逻队长、自杀突击队与多形态大Boss</strong>在内的丰富 AI 敌对阵营体系。\n        </p>\n        <div class=\"p-3 rounded-lg bg-white dark:bg-stone-800/80 border border-slate-200/70 dark:border-stone-700/70 space-y-1.5\">\n          <div class=\"font-bold text-slate-900 dark:text-slate-100 font-sans flex items-center gap-1.5\">\n            <span>👁️ 视线索敌与有限状态机 (FSM)</span>\n          </div>\n          <p class=\"text-[11px] text-slate-600 dark:text-stone-300\">\n            利用物理射线检测（Raycast）与扇形视锥模拟敌人索敌视野；为敌军坦克构建巡逻、追踪、迂回包抄与动态掩护开火的有限状态机逻辑，实现拟人化智能博弈。\n          </p>\n        </div>\n        <div class=\"p-3 rounded-lg bg-white dark:bg-stone-800/80 border border-slate-200/70 dark:border-stone-700/70 space-y-1.5\">\n          <div class=\"font-bold text-slate-900 dark:text-slate-100 font-sans flex items-center gap-1.5\">\n            <span>💥 多段碰撞检测与反弹物理</span>\n          </div>\n          <p class=\"text-[11px] text-slate-600 dark:text-stone-300\">\n            自主编写了连续碰撞检测（CCD）算法与子弹几何反弹反射计算，彻底杜绝高速弹丸穿模（Tunneling Effect），赋予游戏真实的战术掩体弹射打击玩法。\n          </p>\n        </div>\n      </div>\n    </div>\n\n    <!-- Game 2 -->\n    <div class=\"rounded-xl border border-emerald-200/80 dark:border-emerald-900/40 bg-gradient-to-br from-emerald-50/40 via-white to-slate-50 dark:from-stone-900 dark:via-stone-900 dark:to-emerald-950/20 p-5 space-y-3.5 shadow-xs\">\n      <div class=\"flex items-center justify-between border-b border-emerald-100 dark:border-emerald-900/40 pb-3\">\n        <div class=\"flex items-center gap-2.5\">\n          <span class=\"text-2xl\">🐰</span>\n          <div>\n            <h5 class=\"text-sm font-bold text-slate-900 dark:text-white\">二、《兔子大冒险》物理平台跳跃机制</h5>\n            <p class=\"text-[11px] text-emerald-700 dark:text-emerald-300 font-mono\">2D/3D Hybrid · 刚体运动学 · 独立制作</p>\n          </div>\n        </div>\n        <span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-100 dark:bg-emerald-900 text-emerald-700 dark:text-emerald-300\">Platformer</span>\n      </div>\n\n      <div class=\"space-y-2 text-xs text-slate-700 dark:text-stone-300 font-serif leading-relaxed\">\n        <p>\n          深入探索了 2D/3D 混合物理刚体运动学与重力加速度曲线调优，实现了灵敏的手感响应、多段跳跃空中悬停、骨骼动画无缝融合与受击硬直效果。\n        </p>\n        <div class=\"p-3 rounded-lg bg-white dark:bg-stone-800/80 border border-slate-200/70 dark:border-stone-700/70 space-y-1.5\">\n          <div class=\"font-bold text-slate-900 dark:text-slate-100 font-sans flex items-center gap-1.5\">\n            <span>⚙️ 独立全流程攻克</span>\n          </div>\n          <p class=\"text-[11px] text-slate-600 dark:text-stone-300\">\n            从原画设计、像素美术贴图、关卡解谜机关逻辑到底层 C# 角色控制器代码全部由作者一人独立攻关完成，展现了全面的游戏工匠精神与设计闭环。\n          </p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "能看出他对游戏开发倾注的巨大心血与自豪感，非常完整的作品。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "独立完成全部模块，工作量巨大，对战AI设计巧妙。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "交互体验优秀，具备极强的创意表达力。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "代码完备，表现出色。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "良好的工程规范与创意实践。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2018_gu_wentao_unity_poster.jpg",
+          "caption": "顾文韬 Unity 游戏开发过程及实机测试画面",
+          "category": "demo"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2018-顾文韬 - 申请表原件",
+          "filename": "2018-顾文韬-申请表原件.doc",
+          "url": "/downloads/projects/2018-gu-wentao-unity-games/2018-顾文韬-申请表原件.doc",
+          "size": "30.0 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2018-gu-wentao-unity-games",
+          "projectTitle": "Unity 3D 游戏开发全流程：坦克大战智能对战系统与兔子大冒险",
+          "studentName": "顾文韬",
+          "editionYear": "2018",
+          "description": "顾文韬 于 2018 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2018-顾文韬 - 项目源代码",
+          "filename": "2018-顾文韬-项目源代码.zip",
+          "url": "/downloads/projects/2018-gu-wentao-unity-games/2018-顾文韬-项目源代码.zip",
+          "size": "16.0 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2018-gu-wentao-unity-games",
+          "projectTitle": "Unity 3D 游戏开发全流程：坦克大战智能对战系统与兔子大冒险",
+          "studentName": "顾文韬",
+          "editionYear": "2018",
+          "description": "《Unity 3D 游戏开发全流程：坦克大战智能对战系统与兔子大冒险》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2018-qiu-yi-debate-system",
+      "title": "辩论赛智能计时与在线报名抽签系统",
+      "studentId": "qiu-yi",
+      "studentName": "仇怡",
+      "class": "高二8班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "Web与应用",
+      "tags": [
+        "HTML5",
+        "JavaScript",
+        "CSS3",
+        "校园实用工具",
+        "辩论社"
+      ],
+      "summary": "为解决通中辩论社日常训练与正式比赛中计时繁琐、环节复杂、人工抽签容易失误的痛点，自主开发了响应式辩论赛计时器与在线赛程管理工具，支持自定义赛制规则、倒计时警示音效与各辩位时间精准同步。",
+      "interactiveDemos": [
+        {
+          "title": "辩论赛智能计时器 Web 应用",
+          "type": "html",
+          "entryUrl": "/demos/debate/index.html",
+          "description": "实时网页交互演示：支持不同辩制阶段切换、倒计时提示音与自由辩论交替计时"
+        }
+      ],
+      "details": {
+        "skills": "Web 前端交互设计、JavaScript 定时器高精度修正、Audio API 声音事件调度、响应式界面适配",
+        "difficulties": "浏览器切入后台时 JavaScript `setInterval` 定时漂移修正，以及复杂多环节辩制的流程树设计",
+        "innovations": "直接扎根学校社团核心需求，交付了开箱即用的实际产品，多次成功支撑校内外大型辩论赛事。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2019年 月 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">仇怡</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高二8</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">辩赛报名系统</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>基于NodeJs开发的辩赛报名系统，包括了MongoDB数据库系统，前端静态加载资源，管理系统和验证码查询系统</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">NodeJS开发系统</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">全栈网站开发</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">实现了完整的网站开发功能</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与技术架构说明 (Technical Report)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-indigo-200/80 dark:border-indigo-900/40 bg-gradient-to-br from-indigo-50/50 via-white to-sky-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-indigo-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-indigo-100 dark:border-indigo-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">⚖️</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">辩论赛智能计时与在线报名抽签系统</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">面向校级辩论赛事的赛务管理与抽签系统 · Node.js + Express + MongoDB</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">Node v0.10.28+</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">MongoDB</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">MVC 架构</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">IE10+ 兼容</span>\n      </div>\n    </div>\n\n    <!-- Quick Start Terminal -->\n    <div class=\"space-y-2\">\n      <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n        <span>⚡ 快速部署与运行指引 (Deployment Guide)</span>\n      </h5>\n      <div class=\"rounded-xl overflow-hidden border border-slate-700 bg-slate-900 shadow-sm font-mono text-xs\">\n        <div class=\"bg-slate-800/90 px-4 py-2 flex items-center justify-between border-b border-slate-700 text-slate-300\">\n          <div class=\"flex items-center gap-2\">\n            <div class=\"flex gap-1.5\"><span class=\"w-2.5 h-2.5 rounded-full bg-rose-500/80\"></span><span class=\"w-2.5 h-2.5 rounded-full bg-amber-500/80\"></span><span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500/80\"></span></div>\n            <span class=\"text-[11px] font-sans font-semibold text-slate-200 ml-1\">Terminal · 初始化与启动服务</span>\n          </div>\n          <span class=\"text-[10px] text-slate-400\">bash</span>\n        </div>\n        <div class=\"p-4 text-slate-200 overflow-x-auto space-y-1.5 leading-relaxed\">\n          <div class=\"text-slate-500\"># 1. 初始化并安装依赖模块</div>\n          <div><span class=\"text-emerald-400\">$</span> npm init -y</div>\n          <div><span class=\"text-emerald-400\">$</span> npm install mongodb express body-parser --save</div>\n          <div class=\"text-slate-500 pt-1.5\"># 2. 启动 MongoDB 守护进程 (数据库名: ntzx, 集合名: ntzx)</div>\n          <div><span class=\"text-emerald-400\">$</span> mongod --dbpath /data/db</div>\n          <div class=\"text-slate-500 pt-1.5\"># 3. 启动应用主进程</div>\n          <div><span class=\"text-emerald-400\">$</span> node app.js</div>\n          <div class=\"text-slate-400 text-[11px] pt-1\">\n            ==&gt; 服务已监听于 <span class=\"text-cyan-300\">http://localhost:3000</span> (后台地址: <span class=\"text-cyan-300\">http://localhost:3000/admin</span>)\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <!-- Directory Structure Tree -->\n    <div class=\"space-y-2 pt-1\">\n      <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n        <span>📁 工程目录结构与模块划分 (Project Directory Tree)</span>\n      </h5>\n      <div class=\"rounded-xl overflow-hidden border border-slate-700 bg-slate-950 p-4 font-mono text-xs text-slate-300 leading-relaxed overflow-x-auto\">\n        <div class=\"text-amber-400 font-bold\">├── Readme.md <span class=\"text-slate-500 font-normal\">// 项目部署与使用文档</span></div>\n        <div class=\"text-blue-400 font-bold\">├── app.js <span class=\"text-slate-500 font-normal\">// 主程序入口与 Express 实例</span></div>\n        <div>├── <span class=\"text-purple-400 font-bold\">model/</span> <span class=\"text-slate-500\">// 数据持久化层与数据库抽象</span></div>\n        <div>│   ├── <span class=\"text-emerald-300\">db.js</span> <span class=\"text-slate-500\">// MongoDB 增、删、改、查核心封装</span></div>\n        <div>│   └── <span class=\"text-emerald-300\">config.js</span> <span class=\"text-slate-500\">// 数据库连接配置与集合设定 (ntzx)</span></div>\n        <div>├── <span class=\"text-purple-400 font-bold\">routes/</span> <span class=\"text-slate-500\">// 业务路由控制层</span></div>\n        <div>│   ├── <span class=\"text-emerald-300\">admin.js</span> <span class=\"text-slate-500\">// 后台管理路由 (报名审核、分组抽签、权限判定)</span></div>\n        <div>│   ├── <span class=\"text-emerald-300\">index.js</span> <span class=\"text-slate-500\">// 前台公开路由 (赛程公告、计时牌、队伍展示)</span></div>\n        <div>│   └── admin/ <span class=\"text-slate-500\">// 后台业务逻辑处理器 (login.js, list.js)</span></div>\n        <div>├── <span class=\"text-purple-400 font-bold\">views/</span> <span class=\"text-slate-500\">// 视图模板层</span></div>\n        <div>│   ├── admin/ <span class=\"text-slate-500\">// 后台视图 (login.html, list.html, search.html, error.html)</span></div>\n        <div>│   └── index/ <span class=\"text-slate-500\">// 前台视图 (index.html 实时计时与抽签大屏)</span></div>\n        <div>└── <span class=\"text-purple-400 font-bold\">static/</span> <span class=\"text-slate-500\">// 静态资源目录 (CSS, JS, IE10 兼容补丁)</span></div>\n      </div>\n    </div>\n\n    <!-- Admin Credentials Callout -->\n    <div class=\"p-4 rounded-xl bg-amber-50 dark:bg-amber-950/20 border border-amber-200/80 dark:border-amber-900/40 flex items-center justify-between text-xs\">\n      <div class=\"space-y-0.5\">\n        <span class=\"font-bold text-amber-900 dark:text-amber-200\">🔑 默认演示管理凭证 (Default Test Account)</span>\n        <p class=\"text-stone-600 dark:text-stone-400 font-serif\">供评委快速实测体验后台报名审核与抽签管理模块</p>\n      </div>\n      <div class=\"font-mono bg-white dark:bg-stone-900 px-3 py-1.5 rounded-lg border border-amber-300 dark:border-amber-800 text-amber-800 dark:text-amber-300\">\n        管理员: <span class=\"font-bold\">张三</span> | 密码: <span class=\"font-bold\">123456</span>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "针对具体校园痛点开发，界面友好，实用性强。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "产品落地度高，用户体验良好。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "解决实际问题，设计清爽。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "鼓励将实际需求转化为软件的实践。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "技术难度适中，完成度尚佳。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2018-qiu-yi-debate",
+      "downloads": [
+        {
+          "title": "2018-仇怡 - 项目源代码",
+          "filename": "2018-仇怡-项目源代码.zip",
+          "url": "/downloads/projects/2018-qiu-yi-debate-system/2018-仇怡-项目源代码.zip",
+          "size": "19.0 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2018-qiu-yi-debate-system",
+          "projectTitle": "辩论赛智能计时与在线报名抽签系统",
+          "studentName": "仇怡",
+          "editionYear": "2018",
+          "description": "《辩论赛智能计时与在线报名抽签系统》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2018-lu-zhengyang-lisp-parser",
+      "title": "Lisp S表达式的抽象语法树 (AST) 解析器与求值引擎",
+      "studentId": "lu-zhengyang",
+      "studentName": "陆正扬",
+      "class": "高三11班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "编程语言与理论",
+      "tags": [
+        "Lisp",
+        "AST",
+        "编译器前端",
+        "函数式编程",
+        "类型论",
+        "Curry-Howard"
+      ],
+      "summary": "深入函数式编程语言与形式化逻辑底层，自研针对 Lisp S 表达式的词法语法分析器与 AST 生成器，并在申报报告中对 Curry-Howard 同构、Pierce 定律与 call/cc 一等控制流进行了深刻的理论推演。",
+      "details": {
+        "skills": "编译原理词法语法分析、递归下降解析、形式语义学、Lambda 演算与类型论",
+        "difficulties": "嵌套括号与宏扩展中的卫生宏（Hygienic Macro）作用域保护，无副作用纯函数的 AST 重构",
+        "innovations": "在高中阶段即展现出远超同龄人的理论计算机科学视野，深入涉足现代程序语言设计的最核心领域。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2019年 月 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">陆正扬</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高三11</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">LISP S表达式的AST解析器</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>Lisp 几乎就是 AST，语法简单。借助简单的语法可以实现强大的卫生宏系统。对比其他语言，只有 Haskell、Idris 可以达到同等水平（借助无括号语法）。Julia 的宏系统明显是从 Lisp 语言中继承的。Rust 也实现了卫生宏，但显然不如 Lisp 优美。Ruby 号称是 Lisp 方言，正是因为它们都能方便地实现 DSL。</p><p>Lisp 有 call/cc 函数，可以表达一切控制流，而 Lambda 演算无法表达它。在 Curry-Howard 同构中，call/cc 对应 Pirece 定律((P→ Q)→ P)→ P。Lambda 演算对应的直觉逻辑中 Pirece 定律是不可证明的。而显然，经典逻辑下的 Pirece 定律可以通过排中律推出。通过 call/cc 可以实现副作用的管理、协程。Haskell 中的 Free Monad、F#中的计算表达式，只不过是 call/cc 可轻易表达的结构。</p><p>Lisp 和 Erlang 是少数采用动态类型而备受使用者欢迎的程序设计语言。</p><p>Lisp 可以算是函数式程序设计语言和面向对象程序设计语言的起源。Lisp 的设计极大地影响了 Smalltalk。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">编译器相关知识</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">如何简单高效的实现AST是程序语言领域相当高难度的问题</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">编译器算法难度较高</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与程序语言理论解析 (Programming Language Theory)</h4>\n  </div>\n\n  <!-- Terminal Card -->\n  <div class=\"rounded-xl overflow-hidden border border-slate-700 bg-slate-900 shadow-sm font-mono text-xs\">\n    <div class=\"bg-slate-800/90 px-4 py-2.5 flex items-center justify-between border-b border-slate-700 text-slate-300\">\n      <div class=\"flex items-center gap-2\">\n        <div class=\"flex gap-1.5\"><span class=\"w-2.5 h-2.5 rounded-full bg-rose-500/80\"></span><span class=\"w-2.5 h-2.5 rounded-full bg-amber-500/80\"></span><span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500/80\"></span></div>\n        <span class=\"text-[11px] font-sans font-semibold text-slate-200 ml-1\">Lisp S 表达式解析器 · 编译与执行验证</span>\n      </div>\n      <span class=\"text-[10px] text-slate-400\">c++11</span>\n    </div>\n    <div class=\"p-4 text-slate-200 overflow-x-auto space-y-2 leading-relaxed\">\n      <div class=\"text-slate-500\"># 编译环境与编译指令 (纯手工编写词法与语法分析，零第三方解析器生成器依赖)</div>\n      <div><span class=\"text-emerald-400\">$</span> g++ -std=gnu++0x lisp.cc -o lisp_parser</div>\n      <div class=\"text-slate-500 pt-2\"># 示例一：基础算术前缀表达式转 AST</div>\n      <div class=\"text-amber-300\">输入: (+ 1 2)</div>\n      <div class=\"text-emerald-300\">输出: * + 1 2</div>\n      <div class=\"text-slate-500 pt-2\"># 示例二：高阶阴阳谜题 (Yin-Yang Puzzle with call/cc) 抽象语法树构建</div>\n      <div class=\"text-amber-300\">输入: (let* ((yin ((lambda (foo) (newline) foo) (call/cc (lambda (bar) bar)))) (yang ((lambda (foo) (write-char #\\*) foo) (call/cc (lambda (bar) bar))))) (yin yang))</div>\n      <div class=\"text-emerald-300\">输出: * let* * * yin * * lambda * foo * newline foo * call/cc * lambda * bar bar * yang * * lambda * foo * write-char #\\* foo * call/cc * lambda * bar bar * yin yang</div>\n    </div>\n  </div>\n\n  <!-- Deep PLT Theory Notes -->\n  <div class=\"space-y-3\">\n    <h5 class=\"text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-purple-600\"></span>\n      <span>📜 对 Lisp 语言体系与编译原理的深度思辨 (Theory & Philosophy)</span>\n    </h5>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-serif leading-relaxed\">\n      <div class=\"p-4 rounded-xl bg-purple-50/50 dark:bg-purple-950/20 border border-purple-200/70 dark:border-purple-900/40 space-y-2\">\n        <h6 class=\"font-bold font-sans text-purple-900 dark:text-purple-300 flex items-center gap-1.5\">\n          <span>🧩 同像性与卫生宏 (Homoiconicity & Hygiene Macros)</span>\n        </h6>\n        <p class=\"text-slate-700 dark:text-stone-300\">\n          Lisp 代码本身即是 AST（抽象语法树），语法极其规整精简。借助这种同像性（Homoiconicity），能够轻松构建远超普通预处理器的强大卫生宏系统。对比现代语言，仅有 Haskell 与 Idris 借助无括号高阶抽象能逼近同等表达力，Julia 与 Rust 的宏系统也深受 Lisp 启发。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-indigo-50/50 dark:bg-indigo-950/20 border border-indigo-200/70 dark:border-indigo-900/40 space-y-2\">\n        <h6 class=\"font-bold font-sans text-indigo-900 dark:text-indigo-300 flex items-center gap-1.5\">\n          <span>⚡ 续延演算与柯里-霍华德同构 (call/cc & Curry-Howard)</span>\n        </h6>\n        <p class=\"text-slate-700 dark:text-stone-300\">\n          Lisp 中的 <code class=\"font-mono bg-white dark:bg-stone-900 px-1 py-0.5 rounded text-[11px]\">call/cc</code>（Call with Current Continuation）具备表达一切控制流的终极威力。在柯里-霍华德同构（Curry-Howard Isomorphism）中，<code class=\"font-mono bg-white dark:bg-stone-900 px-1 py-0.5 rounded text-[11px]\">call/cc</code> 精准对应经典命题逻辑的皮尔士定律（Peirce's Law: ((P → Q) → P) → P）。Haskell 的 Free Monad 与 F# 的计算表达式，本质上皆是可用 call/cc 简洁表达的特例。\n        </p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "选题非常有理论深度，在高中生中极其罕见。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "理论视野开阔，对程序语言本质有独到见解。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "编译器领域算法难度高，具备很好的理论素养。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "理论功底扎实。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "概念清晰，期待未来能看到更多工程实现与解释器运行成果。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2018-lu-zhengyang-lisp",
+      "downloads": [
+        {
+          "title": "2018-陆正扬 - 项目源代码",
+          "filename": "2018-陆正扬-项目源代码.zip",
+          "url": "/downloads/projects/2018-lu-zhengyang-lisp-parser/2018-陆正扬-项目源代码.zip",
+          "size": "1.7 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2018-lu-zhengyang-lisp-parser",
+          "projectTitle": "Lisp S表达式的抽象语法树 (AST) 解析器与求值引擎",
+          "studentName": "陆正扬",
+          "editionYear": "2018",
+          "description": "《Lisp S表达式的抽象语法树 (AST) 解析器与求值引擎》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2018-liu-jianan-tsp-algorithm",
+      "title": "旅行商问题 (TSP) 的启发式求解与算法优化模拟",
+      "studentId": "liu-jianan",
+      "studentName": "刘嘉楠",
+      "class": "高三5班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "算法与数学",
+      "tags": [
+        "NP-Hard",
+        "启发式算法",
+        "动态规划",
+        "模拟退火",
+        "算法复杂度"
+      ],
+      "summary": "围绕经典NP-Hard问题TSP展开探究，详细论证了无向图分支限界精确搜索法，并推导了基于Prim最小生成树遍历的三角不等式2-近似算法及其误差边界证明。",
+      "details": {
+        "skills": "组合优化算法、图论建模、状态压缩动态规划、启发式邻域搜索",
+        "difficulties": "大规模城市节点下的指数级状态爆炸抑制，局部最优解与全局收敛速度的权衡",
+        "innovations": "建立了清晰的对比基准测试，详细绘制了收敛轨迹曲线，为算法竞赛与组合优化问题提供了实证研究参考。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">NP-Complete 组合数学</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">分支限界法 (Branch &amp; Bound)</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">三角不等式 2-近似算法</span>\n    </div>\n    <div class=\"border-l-2 border-indigo-500 pl-4 py-1 mb-4 italic text-slate-600 text-sm\">\n      “它产生于三个人求解一道经典数学问题的研究工作。这个历史悠久的问题叫做‘旅行商问题’，无论靠人工计算还是借助最快的计算机都一直无法解决。” —— IBM新闻稿，1964年\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">问题抽象与图论建模</h3>\n    <p class=\"text-sm text-slate-700\">旅行商问题（Travelling Salesman Problem, TSP）要求在给定一组城市及各城市间距离的条件下，求经过每座城市一次且仅一次并最终返回出发点的最小代价回路。在图论中，等价于在一个带权无向完全图 G=(V, E) 中寻找具有最小总权值的哈密顿回路（Hamiltonian Cycle）。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      方法一：分支限界法（精确求解小规模实例）\n    </h3>\n    <p class=\"text-sm text-slate-700 mb-3\">分支限界法的核心在于将可行解空间树动态剪枝。报告以 5 城市实例（v1, v2, v3, v4, v5）为例进行演练，距离矩阵 D 为对称阵：</p>\n    <div class=\"bg-white p-4 rounded-xl border border-slate-200 shadow-xs font-mono text-xs text-slate-700 mb-3 overflow-x-auto\">\n      <div class=\"text-sky-700 font-semibold mb-1\">距离矩阵 D 对角线上三角元素排序与贪心下界筛选：</div>\n      <div>候选边从小到大选取前 5 条边：d(1,3)=2, d(2,4)=3, d(1,5)=4, d(4,5)=5, d(2,5)=5</div>\n      <div>初始代价下界: 2 + 3 + 4 + 5 + 5 = 19</div>\n      <div>由于顶点 5 在初选集中出现次数超标，进行分支替换与界更新，最终求得最优回路: v1 - v3 - v4 - v5 - v2 - v1，最小代价为 19。</div>\n    </div>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n      方法二：三角不等式近似算法与精度证明\n    </h3>\n    <p class=\"text-sm text-slate-700 mb-3\">当城市规模 n 扩展时，精确分支限界算法呈现指数级复杂度爆炸。若距离矩阵满足三角不等式 c(u, v) &le; c(u, w) + c(w, v)，则可基于最小生成树（MST）构建多项式时间近似解：</p>\n    <div class=\"space-y-3 text-xs mb-4\">\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs\">\n        <span class=\"text-emerald-700 font-bold\">1. 最小生成树生成：</span> 任选根节点 r，调用 Prim 算法在 O(|V|² log |V|) 内生成图 G 的最小生成树 T。\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs\">\n        <span class=\"text-emerald-700 font-bold\">2. 欧拉回路展开与捷径化：</span> 对树 T 的每条边遍历两次得到欧拉回路 L，其总权值 c(L) = 2 &times; c(T)。通过跳过重复顶点形成哈密顿回路 C。由三角不等式知 c(C) &le; c(L) = 2 &times; c(T)。\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs\">\n        <span class=\"text-emerald-700 font-bold\">3. 近似比数学证明：</span> 设最优哈密顿环为 C*，任意删去一条边即可得到生成树，故 c(T) &le; c(C*)。代入得 c(C) &le; 2 c(C*)，证明了该算法具有确定性的 <strong>2-近似比（Approximation Ratio &le; 2）</strong>。\n      </div>\n    </div>\n    <div class=\"bg-indigo-50/60 border border-indigo-200 rounded-lg p-3 text-xs text-indigo-700\">\n      <strong>学术延伸与感悟：</strong>报告进一步探讨了 Christofides 算法（结合最小生成树与奇数度顶点最小权完美匹配，将近似比进一步优化至 1.5），并展望了模拟退火与遗传算法等元启发式在工业路径规划中的实践潜力。\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "研究方法严谨，图表清晰。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "对经典难题有认真的算法调研和对比。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "学习态度端正，理论探讨深入。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "建议结合实际物流路径数据集进行实测验证。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "完成了一份扎实的算法探索报告。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2018-刘嘉楠 - 申请表原件",
+          "filename": "2018-刘嘉楠-申请表原件.docx",
+          "url": "/downloads/projects/2018-liu-jianan-tsp-algorithm/2018-刘嘉楠-申请表原件.docx",
+          "size": "13.1 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2018-liu-jianan-tsp-algorithm",
+          "projectTitle": "旅行商问题 (TSP) 的启发式求解与算法优化模拟",
+          "studentName": "刘嘉楠",
+          "editionYear": "2018",
+          "description": "刘嘉楠 于 2018 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2018-刘嘉楠 - 项目设计文档/学术报告",
+          "filename": "2018-刘嘉楠-项目技术报告.docx",
+          "url": "/downloads/projects/2018-liu-jianan-tsp-algorithm/2018-刘嘉楠-项目技术报告.docx",
+          "size": "272.1 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2018-liu-jianan-tsp-algorithm",
+          "projectTitle": "旅行商问题 (TSP) 的启发式求解与算法优化模拟",
+          "studentName": "刘嘉楠",
+          "editionYear": "2018",
+          "description": "《旅行商问题 (TSP) 的启发式求解与算法优化模拟》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "title": "2018 届望岳奖学金评选细则 (官方章程)",
+      "filename": "2018第三届望岳奖学金评选细则.docx",
+      "url": "/downloads/editions/2018/2018第三届望岳奖学金评选细则.docx",
+      "size": "161.1 KB",
+      "type": "doc",
+      "category": "评选细则",
+      "editionYear": "2018",
+      "description": "包含评选对象、申报要求、各级奖项标准与评审流程。"
+    }
+  ]
+}

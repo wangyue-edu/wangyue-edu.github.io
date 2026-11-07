@@ -1,0 +1,21 @@
+form label{
+    font-size: 20px;
+    color: #287390c4;
+    margin-bottom: 20px;
+}
+
+#myModal{
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+}
+
+.btn.btn-block{
+    margin-top: 20px;
+}
+
+.btn a{
+    color:#fff;
+    display:inline-block;
+    width:100%;
+}

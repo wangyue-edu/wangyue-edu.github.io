@@ -1,0 +1,40 @@
+{
+  "projectId": "2024-gu-yuming-quicksort",
+  "externalRepo": null,
+  "totalFiles": 2,
+  "totalLines": 220,
+  "coreFiles": [
+    "Grading.cpp",
+    "InsertionSort.h"
+  ],
+  "languages": [
+    {
+      "lang": "cpp",
+      "lines": 201,
+      "percent": 91.4
+    },
+    {
+      "lang": "h",
+      "lines": 19,
+      "percent": 8.6
+    }
+  ],
+  "files": [
+    {
+      "path": "Grading.cpp",
+      "name": "Grading.cpp",
+      "lang": "cpp",
+      "lines": 201,
+      "size": 4008,
+      "content": "#include <iostream>\n#include <algorithm>\n#include <ctime>\n#include <cassert>\n#include \"InsertionSort.h\"\n\nusing namespace std;\n\n\ntemplate <typename T>\nint _partition(T arr[], int l, int r){\n\n    swap( arr[l] , arr[rand()%(r-l+1)+l] );\n    T v = arr[l];\n    int i = l+1, j = r;\n    while( true ){\n        while( i <= r && arr[i] < v )\n            i ++;\n\n        while( j >= l+1 && arr[j] > v )\n            j --;\n\n        if( i > j )\n            break;\n\n        swap( arr[i] , arr[j] );\n        i ++;\n        j --;\n    }\n\n    swap( arr[l] , arr[j]);\n\n    return j;\n}\n\ntemplate <typename T>\nvoid _quickSort(T arr[], int l, int r){\n\n\t// 䳤<=15ʱòٶȸ\n    if( r - l <= 15 ){\n        insertionSort(arr,l,r);\n        return;\n    }\n\n    int p = _partition(arr, l, r);\n    _quickSort(arr, l, p-1 );\n    _quickSort(arr, p+1, r);\n}\n\ntemplate <typename T>\nvoid quickSort(T arr[], int n){\n\n    srand(time(NULL));\n    _quickSort(arr, 0, n-1);\n}\n\n\ntemplate <typename T>\n// · \nvoid __quickSort3Ways(T arr[], int l, int r){\n\n    if( r - l <= 15 ){\n        insertionSort(arr,l,r);\n        return;\n    }\n\n    swap( arr[l], arr[rand()%(r-l+1)+l ] );\n\n    T v = arr[l];\n\n    int lt = l;     // arr[l+1...lt] < v\n    int gt = r + 1; // arr[gt...r] > v\n    int i = l+1;    // arr[lt+1...i) == v\n    while( i < gt ){\n        if( arr[i] < v ){\n            swap( arr[i], arr[lt+1]);\n            i ++;\n            lt ++;\n        }\n        else if( arr[i] > v ){\n            swap( arr[i], arr[gt-1]);\n            gt --;\n        }\n        else{ // arr[i] == v\n            i ++;\n        }\n    }\n\n    swap( arr[l] , arr[lt] );\n\n    __quickSort3Ways(arr, l, lt-1);\n    __quickSort3Ways(arr, gt, r);\n}\n\ntemplate <typename T>\nvoid quickSort3Ways(T arr[], int n){\n\n    srand(time(NULL));\n    __quickSort3Ways( arr, 0, n-1);\n}\n\n// \nint *generateRandomArray(int n, int range_l, int range_r) {\n\n        int *arr = new int[n];\n\n        srand(time(NULL));\n        for (int i = 0; i < n; i++)\n            arr[i] = rand() % (range_r - range_l + 1) + range_l;\n        return arr;\n    }\n\n//ʱ \nint *copyIntArray(int a[], int n){\n\n    int *arr = new int[n];\n    copy(a, a+n, arr);\n    return arr;\n}\n    \ntemplate<typename T>\nbool isSorted(T arr[], int n) {\n\n    for (int i = 0; i < n - 1; i++)\n        if (arr[i] > arr[i + 1])\n            return false;\n    return true;\n}\n\nbool areSameIntArrs(int* arr, int* arr2, int n){\n\n    std::sort(arr,arr+n);\n    std::sort(arr2,arr2+n);\n    for( int i = 0 ; i < n ; i ++ )\n        if( arr[i] != arr2[i] )\n            return false;\n    return true;\n}\n\ntemplate<typename T>\nvoid testSort(const string &sortName, void (*sort)(T[], int), T arr[], int n) {\n\n    T* arr2 = copyIntArray(arr, n);\n\n    clock_t startTime = clock();\n    sort(arr, n);\n    clock_t endTime = clock();\n    cout << sortName << \" : \" << double(endTime - startTime) / CLOCKS_PER_SEC << \" s\"<<endl;\n\n    assert(isSorted(arr, n));\n    assert(areSameIntArrs(arr,arr2,n));\n    delete[] arr2;\n    return;\n}\n    \nint main() {\n\n\t//Ϊn(Ŀǰ50) \n\tint n = 500000;\n\tint *arr=generateRandomArray(n,0,100);\n\t__quickSort3Ways(arr,0,n);\n\t\n\ttestSort(\"Time of Sort\", quickSort3Ways, arr, n);\n\t\n\tdouble t1=86,t2=100,t3=71,t4=85,t5=56,t6=70,t7=41,t8=55,t9=30,t10=40,y1,y2,y3,y4,y5,y6,y7,y8,y9,y10,y,t;\n\tint n1,n2,n3,n4,n5,n6,n7,n8,n9;\n\t// ֶ \n\tn1=n*0.85,n2=n-1;\n\tn3=n*0.5,n4=n1-1;\n\tn5=n*0.15,n6=n3-1;\n\tn7=n*0.02,n8=n5-1;\n\tn9=n7-1;\n\ty1=arr[n1];\n\ty2=arr[n2];\n\ty3=arr[n3];\n\ty4=arr[n4];\n\ty5=arr[n5];\n\ty6=arr[n6];\n\ty7=arr[n7];\n\ty8=arr[n8];\n\ty9=arr[n9];\n\ty10=arr[0];\n\t\n\t// ԭʼ֣ж䣬ݻ㹫ʽõת \n\tcout<<\"Original Grades:\";\n\tcin>>y;\n\tif(y>=y1 && y<=y2)\n\t\tt=(t2*(y-y1)+t1*(y2-y))/(y2-y1);\n\telse if(y>=y3 && y<=y4)\n\t\tt=(t4*(y-y3)+t3*(y4-y))/(y4-y3);\n\telse if(y>=y5 && y<=y6)\n\t\tt=(t6*(y-y5)+t5*(y6-y))/(y6-y5);\n\telse if(y>=y1 && y<=y2)\n\t\tt=(t8*(y-y7)+t7*(y8-y))/(y8-y7);\n\telse t=(t10*(y-y9)+t9*(y10-y))/(y10-y9);\n\tprintf(\"%.0f\\n\",t);\n   \n    delete[] arr;\n    \n    return 0;\n}\n"
+    },
+    {
+      "path": "InsertionSort.h",
+      "name": "InsertionSort.h",
+      "lang": "h",
+      "lines": 19,
+      "size": 328,
+      "content": "#include <iostream>\n#include <algorithm>\n\nusing namespace std;\n\ntemplate<typename T>\nvoid insertionSort(T arr[], int l, int r){\n\n    for( int i = l+1 ; i <= r ; i ++ ) {\n\n        T e = arr[i];\n        int j;\n        for (j = i; j > l && arr[j-1] > e; j--)\n            arr[j] = arr[j-1];\n        arr[j] = e;\n    }\n\n    return;\n}\n"
+    }
+  ]
+}

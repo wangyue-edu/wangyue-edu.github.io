@@ -1,0 +1,26 @@
+{
+  "projectId": "2024-yu-wentao-library",
+  "externalRepo": null,
+  "totalFiles": 1,
+  "totalLines": 124,
+  "coreFiles": [
+    "图书管理系统/源.cpp"
+  ],
+  "languages": [
+    {
+      "lang": "cpp",
+      "lines": 124,
+      "percent": 100.0
+    }
+  ],
+  "files": [
+    {
+      "path": "图书管理系统/源.cpp",
+      "name": "源.cpp",
+      "lang": "cpp",
+      "lines": 124,
+      "size": 4136,
+      "content": "#include <iostream>\n#include <vector>\n#include <string>\n\n// 图书信息数据模型结构体\nstruct Book {\n    int id;              // 图书唯一识别编号\n    std::string title;   // 图书题名\n    std::string author;  // 作者信息\n    bool isBorrowed;     // 借阅在馆状态标识\n};\n\n// 智慧图书管理系统核心业务类\nclass Library {\nprivate:\n    std::vector<Book> books;\n\npublic:\n    // 1. 添加新图书记录\n    void addBook(int id, const std::string& title, const std::string& author) {\n        Book newBook = { id, title, author, false };\n        books.push_back(newBook);\n        std::cout << \"==> 图书 [\" << title << \"] 成功入库！\" << std::endl;\n    }\n\n    // 2. 遍历打印在馆图书总览\n    void viewBooks() const {\n        if (books.empty()) {\n            std::cout << \"==> 当前馆藏暂无图书记录。\" << std::endl;\n            return;\n        }\n        std::cout << \"\\n============= 馆藏图书总览 =============\" << std::endl;\n        for (const auto& book : books) {\n            std::cout << \"ID: \" << book.id\n                      << \" | 书名: \" << book.title\n                      << \" | 作者: \" << book.author\n                      << \" | 状态: \" << (book.isBorrowed ? \"已借出 [不可借]\" : \"在馆 [可借阅]\")\n                      << std::endl;\n        }\n        std::cout << \"========================================\" << std::endl;\n    }\n\n    // 3. 办理图书借阅\n    void borrowBook(int id) {\n        for (auto& book : books) {\n            if (book.id == id && !book.isBorrowed) {\n                book.isBorrowed = true;\n                std::cout << \"==> 借阅办理成功！请妥善保管图书。\" << std::endl;\n                return;\n            }\n        }\n        std::cout << \"==> 借阅失败：未查询到该图书或已被借出。\" << std::endl;\n    }\n\n    // 4. 办理图书归还\n    void returnBook(int id) {\n        for (auto& book : books) {\n            if (book.id == id && book.isBorrowed) {\n                book.isBorrowed = false;\n                std::cout << \"==> 归还登记成功！图书已恢复在馆状态。\" << std::endl;\n                return;\n            }\n        }\n        std::cout << \"==> 归还失败：未查询到该借出记录。\" << std::endl;\n    }\n};\n\nint main() {\n    Library library;\n\n    int choice;\n    while (true) {\n        std::cout << \"\\n========================================\\n\";\n        std::cout << \"     南通中学 · 智慧图书借阅管理系统      \\n\";\n        std::cout << \"========================================\\n\";\n        std::cout << \"  1. 添加图书\\n\";\n        std::cout << \"  2. 查看全部图书\\n\";\n        std::cout << \"  3. 办理图书借阅\\n\";\n        std::cout << \"  4. 办理图书归还\\n\";\n        std::cout << \"  5. 退出系统\\n\";\n        std::cout << \"----------------------------------------\\n\";\n        std::cout << \"请选择操作菜单 [1-5]: \";\n        if (!(std::cin >> choice)) break;\n\n        switch (choice) {\n        case 1: {\n            int id;\n            std::string title, author;\n            std::cout << \"请输入图书 ID: \";\n            std::cin >> id;\n            std::cout << \"请输入图书名称: \";\n            std::cin.ignore();\n            std::getline(std::cin, title);\n            std::cout << \"请输入作者姓名: \";\n            std::getline(std::cin, author);\n            library.addBook(id, title, author);\n            break;\n        }\n        case 2:\n            library.viewBooks();\n            break;\n        case 3: {\n            int id;\n            std::cout << \"请输入借阅图书 ID: \";\n            std::cin >> id;\n            library.borrowBook(id);\n            break;\n        }\n        case 4: {\n            int id;\n            std::cout << \"请输入归还图书 ID: \";\n            std::cin >> id;\n            library.returnBook(id);\n            break;\n        }\n        case 5:\n            std::cout << \"感谢使用，系统安全退出。\" << std::endl;\n            return 0;\n        default:\n            std::cout << \"无效指令，请重新输入！\" << std::endl;\n        }\n    }\n    return 0;\n}\n"
+    }
+  ]
+}

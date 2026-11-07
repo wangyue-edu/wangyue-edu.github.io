@@ -1,0 +1,26 @@
+{
+  "projectId": "2024-wang-ziyi-wifi",
+  "externalRepo": null,
+  "totalFiles": 1,
+  "totalLines": 69,
+  "coreFiles": [
+    "wifi_filter.cpp"
+  ],
+  "languages": [
+    {
+      "lang": "cpp",
+      "lines": 69,
+      "percent": 100.0
+    }
+  ],
+  "files": [
+    {
+      "path": "wifi_filter.cpp",
+      "name": "wifi_filter.cpp",
+      "lang": "cpp",
+      "lines": 69,
+      "size": 2042,
+      "content": "#include <bits/stdc++.h>\n\n// 多径反射环境下的室内 WiFi 信号数据离群去噪与滑动窗口滤波算法\n// 采用窗口中位数 (Median) 与绝对中位差 (MAD, Median Absolute Deviation) 组合阈值剔除离群毛刺\n\nstd::vector<double> data;\nint n;\nconst double o = 3.0; // 离群判定倍率阈值\nconst double k = 3;   // 滑动滤波窗口半径 (总窗口宽度为 2k + 1)\n\ndouble max(int x, double y) {\n    return (x > y) ? x : y;\n}\n\ndouble min(int x, double y) {\n    return (x < y) ? x : y;\n}\n\n// 核心滑动窗口滤波算法实现\nstd::vector<double> Filter(const std::vector<double>& data, double o, double k) {\n    std::vector<double> outData = data;\n    std::vector<double> median(n);\n    std::vector<double> mad(n);\n\n    // 1. 局部滑动窗口中位数与绝对离差计算\n    for (int i = 0; i < n; ++i) {\n        std::vector<double> window;\n        for (int j = max(0, i - k); j <= min(n - 1, i + k); ++j) {\n            window.push_back(data[j]);\n        }\n        std::sort(window.begin(), window.end());\n        median[i] = window[window.size() / 2];\n        mad[i] = 0;\n        for (size_t j = 0; j < window.size(); ++j) {\n            mad[i] += std::abs(window[j] - median[i]);\n        }\n        mad[i] /= window.size();\n    }\n\n    // 2. 离群毛刺识别与平滑重构\n    double O = o * median[0];\n    for (int i = 0; i < n; ++i) {\n        if (std::abs(data[i] - median[i]) > O) {\n            outData[i] = median[i];\n        }\n    }\n    return outData;\n}\n\nint main() {\n    std::cout << \"请输入 WiFi 信号采样点总数 n: \";\n    if (!(std::cin >> n)) return 0;\n\n    std::cout << \"请依次输入 \" << n << \" 个 RSSI 信号强度采样值:\" << std::endl;\n    for (int i = 0; i < n; i++) {\n        double t;\n        std::cin >> t;\n        data.push_back(t);\n    }\n\n    std::vector<double> Fdata = Filter(data, o, k);\n\n    std::cout << \"滤波去噪后输出序列:\" << std::endl;\n    for (double num : Fdata) {\n        std::cout << num << \" \";\n    }\n    std::cout << std::endl;\n    return 0;\n}\n"
+    }
+  ]
+}

@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>智能防疫门禁 - 省赛陈述与答辩完整幻灯片 (俞晴岚)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background-color: #0B0F19; color: #F3F4F6; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; }
+    .slide { display: none; }
+    .slide.active { display: flex; animation: fadeIn 0.3s ease-in-out; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body class="h-screen flex flex-col justify-between overflow-hidden select-none">
+  <!-- Top Bar -->
+  <header class="px-6 py-3.5 bg-slate-900/90 border-b border-slate-800 flex items-center justify-between z-10">
+    <div class="flex items-center gap-3">
+      <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-sm border border-emerald-500/30">
+        PPT
+      </div>
+      <div>
+        <h1 class="text-sm font-bold text-white tracking-wide">智能防疫门禁 · 省赛陈述和答辩演示文稿</h1>
+        <p class="text-[11px] text-slate-400 font-mono">江苏省南通中学 · 俞晴岚 (高二14班) · 江苏省自制教具二等奖</p>
+      </div>
+    </div>
+    <div class="flex items-center gap-3 text-xs font-mono">
+      <span id="slideCounter" class="bg-slate-800 text-emerald-400 px-3 py-1 rounded-full border border-slate-700 font-bold">1 / 13</span>
+      <button onclick="toggleFullscreen()" class="px-3 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 border border-slate-700 transition">全屏</button>
+    </div>
+  </header>
+
+  <!-- Slide Stage -->
+  <main class="flex-1 relative flex items-center justify-center p-4 sm:p-8 overflow-y-auto">
+    
+    <!-- Slide 1: 封面 -->
+    <div class="slide active flex-col justify-center items-center text-center max-w-3xl w-full p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-slate-850 to-emerald-950/40 border border-slate-800 shadow-2xl space-y-6">
+      <span class="px-3.5 py-1 rounded-full text-xs font-mono bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+        江苏省中小学优秀自制教具展评活动 · 高中组
+      </span>
+      <h2 class="text-4xl sm:text-5xl font-black text-white tracking-tight">智能防疫门禁</h2>
+      <p class="text-lg text-slate-300 font-serif">让人工智能走进校园生活，赋能常态化智慧防疫</p>
+      <div class="pt-6 border-t border-slate-800/80 flex items-center justify-center gap-6 text-sm text-slate-400 font-mono">
+        <span>🏫 江苏省南通中学</span>
+        <span>👤 作者：俞晴岚</span>
+        <span>🏷️ 高二（14）班</span>
+      </div>
+    </div>
+
+    <!-- Slide 2: 目录 -->
+    <div class="slide flex-col justify-center max-w-3xl w-full p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-6">
+      <div class="border-b border-slate-800 pb-3 flex justify-between items-center">
+        <h2 class="text-2xl font-bold text-white">目录 / CONTENTS</h2>
+        <span class="text-xs font-mono text-emerald-400">教具陈述与答辩提纲</span>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+        <div class="p-3.5 rounded-xl bg-slate-800/50 border border-slate-700/60 flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">01</span>
+          <span class="font-bold text-slate-200">创作背景 (Creation Background)</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/50 border border-slate-700/60 flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold">02</span>
+          <span class="font-bold text-slate-200">制作过程 (Hardware & Fabrication)</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/50 border border-slate-700/60 flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-indigo-500/20 text-indigo-400 flex items-center justify-center font-bold">03</span>
+          <span class="font-bold text-slate-200">作品功能 (Core Functions)</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/50 border border-slate-700/60 flex items-center gap-3">
+          <span class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold">04</span>
+          <span class="font-bold text-slate-200">实验案例 (Testing Scenarios)</span>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/50 border border-slate-700/60 flex items-center gap-3 sm:col-span-2">
+          <span class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 flex items-center justify-center font-bold">05</span>
+          <span class="font-bold text-slate-200">分享物创云 (IoT Cloud Platform Integration)</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3: 创作背景 -->
+    <div class="slide flex-col justify-center max-w-3xl w-full p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-6">
+      <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider">Part 01 · 创作背景</span>
+      <h2 class="text-3xl font-bold text-white">战胜疫情，智慧防控</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-serif leading-relaxed">
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 space-y-2">
+          <h4 class="font-bold text-emerald-300 text-sm flex items-center gap-1.5"><span>🌡️</span> 传统痛点</h4>
+          <p class="text-slate-300">平时进入校门，都是保安叔叔和老师们帮大家用额温枪测试温度，人工查看并手动放行。早高峰易造成人员排队聚集，存在近距离交叉接触风险。</p>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700/60 space-y-2">
+          <h4 class="font-bold text-sky-300 text-sm flex items-center gap-1.5"><span>🤖</span> AI 解决方案</h4>
+          <p class="text-slate-300">将高中《信息技术》必修一“数据与计算”中的人工智能知识运用于现实生活，打造非接触式红外测温、人脸自动识别与舵机联动开闸放行的一体化教具。</p>
+        </div>
+      </div>
+      <div class="p-3 rounded-xl bg-emerald-950/30 border border-emerald-800/50 text-xs text-emerald-300 text-center font-mono">
+        “让同学们体验身边的人工智能，消除对人工智能的神秘感。”
+      </div>
+    </div>
+
+    <!-- Slide 4: 制作过程概述 -->
+    <div class="slide flex-col justify-center max-w-3xl w-full p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-6">
+      <span class="text-xs font-mono text-sky-400 uppercase tracking-wider">Part 02 · 制作过程</span>
+      <h2 class="text-2xl font-bold text-white">核心硬件选型与模块化搭建</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs">
+        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700">
+          <span class="text-2xl block mb-1">🌡️</span>
+          <div class="font-bold text-white">红外测温模组</div>
+          <p class="text-[10px] text-slate-400 mt-1">非接触快速测温，省力高效</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700">
+          <span class="text-2xl block mb-1">⚙️</span>
+          <div class="font-bold text-white">舵机执行机构</div>
+          <p class="text-[10px] text-slate-400 mt-1">控制闸机开启与闭合</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700">
+          <span class="text-2xl block mb-1">🔢</span>
+          <div class="font-bold text-white">TM1637 数码管</div>
+          <p class="text-[10px] text-slate-400 mt-1">实时清晰直观显示体温数值</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700">
+          <span class="text-2xl block mb-1">👁️</span>
+          <div class="font-bold text-white">机器视觉摄像头</div>
+          <p class="text-[10px] text-slate-400 mt-1">特定人脸云端比对识别</p>
+        </div>
+      </div>
+      <p class="text-xs text-slate-300 font-serif leading-relaxed">
+        主控采用 OSTD xAI-智联猫，支持 USB 5V 或 3.7V 锂电池供电。外接 2 种传感器（红外测温探头、声音传感器）、1 种显示模块（数码管）与 2 种执行模块（SG90 舵机、警报红灯），底座按 49 &times; 44 &times; 12 cm 搭建微缩通中校门沙盘。
+      </p>
+    </div>
+
+    <!-- Slide 5: 算法设计与流程图 -->
+    <div class="slide flex-col justify-center max-w-3xl w-full p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+        <h2 class="text-xl font-bold text-white">系统程序控制逻辑与算法设计</h2>
+        <span class="text-xs font-mono text-emerald-400">xDingAI Python + 物创云</span>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <img src="/media/2021/yu_gate/yu_gate_sub_flowchart.png" alt="人脸测温流程图" class="w-full sm:w-1/2 h-56 object-contain rounded-xl bg-slate-800 p-2" />
+        <div class="space-y-2 text-xs text-slate-300 font-serif leading-relaxed">
+          <div class="p-2.5 rounded-lg bg-slate-800/50 border border-slate-700">
+            <strong>1. 语音引导与人脸注册：</strong>靠近发出“请测量体温”语音，比对特定师生面孔。
+          </div>
+          <div class="p-2.5 rounded-lg bg-slate-800/50 border border-slate-700">
+            <strong>2. 红外无接触感应测温：</strong>检测距离 2~5cm，数码管毫秒级刷新。
+          </div>
+          <div class="p-2.5 rounded-lg bg-slate-800/50 border border-slate-700">
+            <strong>3. 云端判定与舵机放行：</strong>体温在正常范围则播报“体温正常，请通行”并开闸；异常则蜂鸣报警。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 6: 制作实况照片 -->
+    <div class="slide flex-col justify-center max-w-3xl w-full p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-4">
+      <h2 class="text-xl font-bold text-white">教具沙盘制作与传感器调试实录</h2>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="space-y-1 text-center">
+          <img src="/media/2021/yu_gate/yu_gate_build_scene.jpeg" class="w-full h-36 object-cover rounded-xl border border-slate-700" />
+          <span class="text-[10px] font-mono text-slate-400">图2：微缩校门沙盘</span>
+        </div>
+        <div class="space-y-1 text-center">
+          <img src="/media/2021/yu_gate/yu_gate_build_wiring.jpeg" class="w-full h-36 object-cover rounded-xl border border-slate-700" />
+          <span class="text-[10px] font-mono text-slate-400">图3：底座布线固定</span>
+        </div>
+        <div class="space-y-1 text-center">
+          <img src="/media/2021/yu_gate/yu_gate_debug_cat_board.jpeg" class="w-full h-36 object-cover rounded-xl border border-slate-700" />
+          <span class="text-[10px] font-mono text-slate-400">图5：智联猫主板接线</span>
+        </div>
+      </div>
+      <p class="text-xs text-slate-300 font-serif text-center">在课余时间经历数十次调校，攻克了背光条件下的人脸角度微调与舵机连杆开门阻尼匹配。</p>
+    </div>
+
+    <!-- Slide 7: 作品核心功能 -->
+    <div class="slide flex-col justify-center max-w-3xl w-full p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-6">
+      <span class="text-xs font-mono text-indigo-400 uppercase tracking-wider">Part 03 · 作品功能</span>
+      <h2 class="text-2xl font-bold text-white">全流程无接触智慧交互体验</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-serif">
+        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 space-y-1">
+          <h4 class="font-bold text-emerald-400 flex items-center gap-1.5"><span>🌡️</span> 毫秒级非接触红外测温</h4>
+          <p class="text-slate-300">感应距离 2~5cm，数码管快速显示真实体温，避免近距离接触。</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 space-y-1">
+          <h4 class="font-bold text-sky-400 flex items-center gap-1.5"><span>👤</span> AI 视觉人脸识别</h4>
+          <p class="text-slate-300">连上 Wi-Fi 后通过物创云端人脸比对，自动识别已注册师生并播报姓名。</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 space-y-1">
+          <h4 class="font-bold text-indigo-400 flex items-center gap-1.5"><span>🗣️</span> 自然语言智能语音对话</h4>
+          <p class="text-slate-300">支持语音交互：“蓝猫蓝猫”、“开门”、“我体温是多少”，实现亲和互动。</p>
+        </div>
+        <div class="p-3.5 rounded-xl bg-slate-800/60 border border-slate-700 space-y-1">
+          <h4 class="font-bold text-purple-400 flex items-center gap-1.5"><span>🌐</span> 物创云双向联动控制</h4>
+          <p class="text-slate-300">测温与考勤数据实时同步上报云端，云平台亦可对门禁闸机进行远程反控制。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 8: 实验案例与应用场景 -->
+    <div class="slide flex-col justify-center max-w-3xl w-full p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-6">
+      <span class="text-xs font-mono text-purple-400 uppercase tracking-wider">Part 04 · 实验案例</span>
+      <h2 class="text-2xl font-bold text-white">真实校园与社会化场景适配</h2>
+      <div class="space-y-3 text-xs font-serif">
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 flex items-start gap-3">
+          <span class="text-xl">🏫</span>
+          <div>
+            <h4 class="font-bold text-white text-sm mb-1">场景 1：南通中学返校日高峰测温</h4>
+            <p class="text-slate-300 leading-relaxed">在校门口设立 3 个智能防疫门禁通道，大大减轻了值班保卫人员的负担，同学们分流进校、井然有序。</p>
+          </div>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 flex items-start gap-3">
+          <span class="text-xl">🛒</span>
+          <div>
+            <h4 class="font-bold text-white text-sm mb-1">场景 2：超市商场与公共场所入口</h4>
+            <p class="text-slate-300 leading-relaxed">于大润发超市入口配置智能防疫监测点，节省商超人力成本，保障消费者安全顺畅的购物环境。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 9: 课堂教学与社团体验 -->
+    <div class="slide flex-col justify-center max-w-3xl w-full p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-4">
+      <h2 class="text-xl font-bold text-white">课堂互动教学与教具普及</h2>
+      <div class="flex flex-col sm:flex-row gap-4 items-center">
+        <img src="/media/2021/yu_gate/yu_gate_classroom_demo.jpeg" class="w-full sm:w-1/2 h-52 object-cover rounded-xl border border-slate-700" />
+        <div class="space-y-2 text-xs text-slate-300 font-serif leading-relaxed">
+          <p>“课堂里，同学们都想体验人工智能设备，了解其内部传感器与云端判定原理。使用本教具后有效突破了教学重点与难点，教学反馈极佳。”</p>
+          <div class="p-3 rounded-lg bg-slate-800/60 border border-slate-700 text-slate-400 font-mono text-[11px]">
+            依托南通中学创客社团开展多次同行互评与硬件开源分享。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 10: 物创云平台数据互联 -->
+    <div class="slide flex-col justify-center max-w-3xl w-full p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-6">
+      <span class="text-xs font-mono text-amber-400 uppercase tracking-wider">Part 05 · 物联网赋能</span>
+      <h2 class="text-2xl font-bold text-white">物创云平台实时数据监控</h2>
+      <div class="p-5 rounded-2xl bg-slate-800/60 border border-slate-700 text-xs font-serif leading-relaxed space-y-3">
+        <p>教具接入物创云物联网平台（<code>wlwiot.com.cn</code>），智联猫模块开机自动连入无线网络进行心跳与状态同步。</p>
+        <div class="grid grid-cols-2 gap-3 font-mono text-slate-300">
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+            <span class="text-emerald-400 block mb-1">📡 数据上报</span>
+            现场采集的体温数据与人脸 ID 毫秒级上传，云端建档。
+          </div>
+          <div class="p-3 rounded-xl bg-slate-900 border border-slate-800">
+            <span class="text-sky-400 block mb-1">🎛️ 远程反控制</span>
+            管理员可通过云端后台对门禁舵机进行强制开锁或锁定。
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 11: 省赛获奖与媒体报道 -->
+    <div class="slide flex-col justify-center max-w-3xl w-full p-6 sm:p-8 rounded-3xl bg-slate-900/90 border border-slate-800 shadow-2xl space-y-4">
+      <div class="flex justify-between items-center border-b border-slate-800 pb-2">
+        <h2 class="text-xl font-bold text-white">省展评实况、获奖证书与新闻报道</h2>
+        <span class="text-xs font-mono text-emerald-400">省级二等奖</span>
+      </div>
+      <div class="grid grid-cols-3 gap-3">
+        <div class="space-y-1 text-center">
+          <img src="/media/2021/yu_gate/yu_gate_exhibition_photo.jpeg" class="w-full h-36 object-cover rounded-xl border border-slate-700" />
+          <span class="text-[10px] font-mono text-slate-400">布展现场专家评审</span>
+        </div>
+        <div class="space-y-1 text-center">
+          <img src="/media/2021/yu_gate/yu_gate_award_cert_hd.jpg" class="w-full h-36 object-cover rounded-xl border border-slate-700" />
+          <span class="text-[10px] font-mono text-slate-400">省二等奖获奖证书</span>
+        </div>
+        <div class="space-y-1 text-center">
+          <img src="/media/2021/yu_gate/yu_gate_school_news.jpeg" class="w-full h-36 object-cover rounded-xl border border-slate-700" />
+          <span class="text-[10px] font-mono text-slate-400">南通中学官方新闻报道</span>
+        </div>
+      </div>
+      <p class="text-xs text-slate-300 font-serif text-center">在江苏省教育厅主办的展评活动中斩获全省二等奖，获学校官方报道点赞。</p>
+    </div>
+
+    <!-- Slide 12: 结语 · 大思想与小艺术 -->
+    <div class="slide flex-col justify-center items-center text-center max-w-3xl w-full p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-indigo-950/40 border border-slate-800 shadow-2xl space-y-6">
+      <span class="px-3 py-1 rounded-full text-xs font-mono bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">
+        创作心得与思考
+      </span>
+      <blockquote class="text-xl sm:text-2xl font-serif text-slate-200 italic leading-relaxed max-w-xl">
+        “喜欢一个作品，不仅仅是因为它画面精致、技术绝伦；更多的时候是因为作品背后的思想，让我们感动……”
+      </blockquote>
+      <div class="text-xs font-mono text-slate-400">
+        —— 俞晴岚 ·《智能防疫门禁》
+      </div>
+    </div>
+
+    <!-- Slide 13: 致谢 -->
+    <div class="slide flex-col justify-center items-center text-center max-w-2xl w-full p-8 rounded-3xl bg-slate-900 border border-slate-800 shadow-2xl space-y-6">
+      <h2 class="text-4xl font-black text-white">感谢您的观看与指导！</h2>
+      <p class="text-sm text-slate-300 font-serif">敬请各位评审导师批评指正</p>
+      <div class="pt-4 text-xs font-mono text-slate-500">
+        江苏省南通中学 · 2021年度第五届望岳奖学金申报答辩
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Bottom Navigation Bar -->
+  <footer class="px-6 py-3 bg-slate-900/90 border-t border-slate-800 flex items-center justify-between z-10">
+    <div class="flex items-center gap-2">
+      <button onclick="prevSlide()" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-medium text-xs border border-slate-700 transition flex items-center gap-1">
+        <span>&larr;</span> 上一页 (Prev)
+      </button>
+      <button onclick="nextSlide()" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs shadow-md transition flex items-center gap-1">
+        下一页 (Next) <span>&rarr;</span>
+      </button>
+    </div>
+    <div class="hidden sm:flex items-center gap-1 text-[11px] text-slate-500 font-mono">
+      <span>提示：支持键盘方向键 &larr; / &rarr; 或空格键翻页</span>
+    </div>
+  </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    let currentIdx = 0;
+
+    function showSlide(idx) {
+      if (idx < 0) idx = 0;
+      if (idx >= slides.length) idx = slides.length - 1;
+      slides.forEach((s, i) => {
+        s.classList.toggle('active', i === idx);
+      });
+      currentIdx = idx;
+      document.getElementById('slideCounter').textContent = `${currentIdx + 1} / ${slides.length}`;
+    }
+
+    function prevSlide() { showSlide(currentIdx - 1); }
+    function nextSlide() { showSlide(currentIdx + 1); }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' || e.key === 'PageUp') prevSlide();
+      else if (e.key === 'ArrowRight' || e.key === 'PageDown' || e.key === ' ') {
+        e.preventDefault();
+        nextSlide();
+      }
+    });
+
+    function toggleFullscreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        document.exitFullscreen();
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,752 @@
+{
+  "projectId": "2016-zhou-heyang-cloudedu",
+  "externalRepo": "https://github.com/losfair/CloudEdu",
+  "totalFiles": 84,
+  "totalLines": 4432,
+  "coreFiles": [
+    "client_service/ClientService.go",
+    "backend/typescript/CloudEduService.ts",
+    "backend/typescript/Login.ts",
+    "new_frontend/src/main.js",
+    "new_frontend/src/BrowserView/AlphaBoard/index.js",
+    "client_service/src/WindowsService/service.go",
+    "new_backend/main.js",
+    "new_frontend/src/BrowserView/index.html"
+  ],
+  "languages": [
+    {
+      "lang": "js",
+      "lines": 1994,
+      "percent": 45.0
+    },
+    {
+      "lang": "go",
+      "lines": 1030,
+      "percent": 23.2
+    },
+    {
+      "lang": "html",
+      "lines": 475,
+      "percent": 10.7
+    },
+    {
+      "lang": "css",
+      "lines": 351,
+      "percent": 7.9
+    },
+    {
+      "lang": "ts",
+      "lines": 311,
+      "percent": 7.0
+    },
+    {
+      "lang": "json",
+      "lines": 103,
+      "percent": 2.3
+    },
+    {
+      "lang": "omt",
+      "lines": 80,
+      "percent": 1.8
+    },
+    {
+      "lang": "txt",
+      "lines": 40,
+      "percent": 0.9
+    },
+    {
+      "lang": "manifest",
+      "lines": 23,
+      "percent": 0.5
+    },
+    {
+      "lang": "bat",
+      "lines": 21,
+      "percent": 0.5
+    },
+    {
+      "lang": "md",
+      "lines": 2,
+      "percent": 0.0
+    },
+    {
+      "lang": "sh",
+      "lines": 2,
+      "percent": 0.0
+    }
+  ],
+  "files": [
+    {
+      "path": ".gitignore",
+      "name": ".gitignore",
+      "lang": "txt",
+      "lines": 6,
+      "size": 51,
+      "content": "build/\nnode_modules/\nStaging/\n*.js.map\n*.log\n*.exe\n"
+    },
+    {
+      "path": "README.md",
+      "name": "README.md",
+      "lang": "md",
+      "lines": 2,
+      "size": 63,
+      "content": "# CloudEdu\nA light web app for education written in Typescript\n"
+    },
+    {
+      "path": "backend/Makefile",
+      "name": "Makefile",
+      "lang": "txt",
+      "lines": 3,
+      "size": 54,
+      "content": "all:\n\tmake -C ./typescript\n\tcp typescript/*.js build/\n"
+    },
+    {
+      "path": "backend/typescript/.gitignore",
+      "name": ".gitignore",
+      "lang": "txt",
+      "lines": 1,
+      "size": 5,
+      "content": "*.js\n"
+    },
+    {
+      "path": "backend/typescript/CloudEduService.ts",
+      "name": "CloudEduService.ts",
+      "lang": "ts",
+      "lines": 45,
+      "size": 1380,
+      "content": "/// <reference path=\"../typings/node/node.d.ts\" />\n/// <reference path=\"../typings/express/express.d.ts\" />\n/// <reference path=\"../typings/body-parser/body-parser.d.ts\" />\n/// <reference path=\"../typings/mongodb/mongodb.d.ts\" />\n\nimport mongodb = require(\"mongodb\");\nimport express = require(\"express\");\nimport bodyParser = require(\"body-parser\");\nimport loginHandler = require(\"./Login\");\nimport userHandler = require(\"./User\");\n\nlet mongoClient = mongodb.MongoClient;\n\nconst listenPort = 6711;\n\nasync function connectToDb() {\n    let db = await new Promise(function(callback: Function) {\n        mongoClient.connect(\"mongodb://localhost:27017/CloudEduService\", function(err, db) {\n            if(err) throw err;\n            callback(db);\n        });\n    });\n    return db;\n}\n\nasync function runApp() {\n    let dbContext = await connectToDb();\n    loginHandler.initModule(dbContext);\n    userHandler.initModule(dbContext);\n\n    let app = express();\n\n    app.use(bodyParser.json());\n\n    app.post(\"/login/getSession\", loginHandler.onGetSession);\n    app.post(\"/login/verifyToken\", loginHandler.onVerifyTokenRequest);\n    app.post(\"/user/createUserInfo\", userHandler.onCreateUserInfo);\n    app.post(\"/user/modifyUserClass\", userHandler.onUserClassModify);\n\n    app.listen(listenPort, function() {\n        console.log(\"Listening on \" + listenPort.toString());\n    });\n}\n\nrunApp();\n"
+    },
+    {
+      "path": "backend/typescript/Login.ts",
+      "name": "Login.ts",
+      "lang": "ts",
+      "lines": 105,
+      "size": 2349,
+      "content": "/// <reference path=\"../typings/node/node.d.ts\" />\n/// <reference path=\"../typings/express/express.d.ts\" />\n/// <reference path=\"../typings/request/request.d.ts\" />\n\nimport request = require(\"request\");\nimport Session = require(\"./Session\");\n\nconst ssoApiUrlPrefix = \"https://hyperidentity.ifxor.com/\";\n\nasync function verifyClientToken(token: string) {\n    let respStr: any = await new Promise(function(callback: Function) {\n        request.post(\n            ssoApiUrlPrefix + \"identity/verify/verify_client_token\", \n            {\n                form: {\n                    \"client_token\": token\n                }\n            },\n            function(err, resp, body) {\n                if(err) callback(null);\n                else callback(body);\n            }\n        );\n    });\n\n    if(!respStr) {\n        return null;\n    }\n\n    let respData = null;\n\n    try {\n        respData = JSON.parse(respStr);\n    } catch(e) {\n        return null;\n    }\n\n    if(respData.err !== 0) {\n        return null;\n    }\n\n    return {\n        \"username\": respData.username,\n        \"domain\": respData.domain\n    };\n}\n\nexport async function onVerifyTokenRequest(req, resp) {\n    if(!req.body.client_token) {\n        resp.send(\"Invalid client token\");\n        return;\n    }\n\n    let result = await verifyClientToken(req.body.client_token);\n\n    if(!result) {\n        resp.send(\"Unable to verify client token\");\n        return;\n    }\n\n    let sessionInfo = null;\n    \n    try {\n        sessionInfo = await Session.createSession(result.username);\n    } catch(e) {\n        resp.send(\"Error while creating session: \" + e);\n        return;\n    }\n\n    sessionInfo[\"_id\"] = \"\";\n\n    resp.send(JSON.stringify(sessionInfo));\n}\n\nexport async function onGetSession(req, resp) {\n    if(!req.body.sessionId) {\n        resp.send(\"Invalid session id\");\n        return;\n    }\n\n    let sessionInfo = null;\n\n    try {\n        sessionInfo = await Session.getSessionInfo(req.body.sessionId);\n    } catch(e) {\n        resp.send(\"Error while getting session info: \" + e);\n        return;\n    }\n\n    if(!sessionInfo) {\n        resp.send(\"Session not found.\");\n        return;\n    }\n\n    resp.send(JSON.stringify(sessionInfo));\n}\n\nlet moduleInitialized = false;\n\nexport function initModule(db) {\n    if(moduleInitialized) return;\n    moduleInitialized = true;\n\n    Session.initModule(db);\n}"
+    },
+    {
+      "path": "backend/typescript/Makefile",
+      "name": "Makefile",
+      "lang": "txt",
+      "lines": 3,
+      "size": 28,
+      "content": "CloudEduService:\n\ttsc -p .\n\n"
+    },
+    {
+      "path": "backend/typescript/Notification.ts",
+      "name": "Notification.ts",
+      "lang": "ts",
+      "lines": 5,
+      "size": 185,
+      "content": "/// <reference path=\"../typings/node/node.d.ts\" />\n/// <reference path=\"../typings/mongodb/mongodb.d.ts\" />\n\nimport mongodb = require(\"mongodb\");\nlet mongoClient = mongodb.MongoClient;\n"
+    },
+    {
+      "path": "backend/typescript/Session.ts",
+      "name": "Session.ts",
+      "lang": "ts",
+      "lines": 59,
+      "size": 1549,
+      "content": "/// <reference path=\"../typings/node/node.d.ts\" />\n\nlet dbContext = null;\n\nfunction generateRandomString(l: number) {\n    const charList = \"0123456789abcdefghijklmnopqrstuvwxyz\";\n    let result = \"\";\n\n    for(let i = 0; i < l; i++) {\n        result += charList[Math.floor(Math.random() * 10000) % charList.length];\n    }\n\n    return result;\n}\n\nexport async function createSession(username: string) {\n    let sessionInfo = {\n        \"sessionId\": generateRandomString(16),\n        \"userName\": username,\n        \"createTime\": Date.now()\n    };\n    let result = await new Promise(function(callback: Function) {\n        dbContext.collection(\"sessions\").insert(sessionInfo, function(err, data) {\n            if(err) throw \"Unable to create session: Database operation failed\";\n            callback(data);\n        });\n    });\n    return sessionInfo;\n}\n\nexport async function getSessionInfo(sessionId: string) {\n    if(!sessionId) return null;\n\n    let result = await new Promise(function(callback: Function) {\n        dbContext.collection(\"sessions\").find({\n            \"sessionId\": sessionId\n        }).toArray(function(err, data) {\n            if(err) throw err;\n            if(data.length == 0) {\n                callback(null);\n                return;\n            }\n            data[0][\"_id\"] = \"\";\n            callback(data[0]);\n        });\n    });\n\n    return result;\n}\n\n\nlet moduleInitialized = false;\n\nexport function initModule(db) {\n    if(moduleInitialized) return;\n    moduleInitialized = true;\n    dbContext = db;\n    console.log(dbContext);\n}"
+    },
+    {
+      "path": "backend/typescript/User.ts",
+      "name": "User.ts",
+      "lang": "ts",
+      "lines": 68,
+      "size": 1692,
+      "content": "/// <reference path=\"../typings/node/node.d.ts\" />\n\nimport util = require(\"util\");\nimport Session = require(\"./Session\");\n\nlet dbContext = null;\n\nexport async function onUserClassModify(req, resp) {\n    let userClass = req.body.newUserClass;\n    if(!util.isNumber(userClass)) {\n        resp.send(\"Bad new class\");\n        return;\n    }\n\n    let userSession = await Session.getSessionInfo(req.body.sessionId);\n    if(!userSession) {\n        resp.send(\"Unable to get user session info\");\n        return;\n    }\n\n    dbContext.collection(\"users\").update({\n        \"userName\": userSession.userName\n    }, {\n        \"$set\": {\n            \"userClass\": userClass\n        }\n    }, function(){});\n\n    resp.send(\"OK\");\n}\n\nexport async function onCreateUserInfo(req, resp) {\n    let userSession = await Session.getSessionInfo(req.body.sessionId);\n    if(!userSession) {\n        resp.send(\"Unable to get user session info\");\n        return;\n    }\n\n    let result = await new Promise(function(callback) {\n        dbContext.collection(\"users\").find({\n            \"userName\": userSession.userName\n        }).limit(1).toArray(function(err, result) {\n            if(err || result.length == 0) callback(null);\n            else callback(result[0]);\n        });\n    });\n\n    if(result) {\n        resp.send(\"User info already exists\");\n        return;\n    } else {\n        dbContext.collection(\"users\").insert({\n            \"userName\": userSession.userName,\n            \"userClass\": 0\n        }, function(err) {\n            resp.send(\"OK\");\n        });\n    }\n}\n\nlet moduleInitialized = false;\n\nexport function initModule(db) {\n    if(moduleInitialized) return;\n    moduleInitialized = true;\n\n    dbContext = db;\n}"
+    },
+    {
+      "path": "backend/typescript/package.json",
+      "name": "package.json",
+      "lang": "json",
+      "lines": 15,
+      "size": 326,
+      "content": "{\n  \"name\": \"cloudedu-service\",\n  \"version\": \"1.0.0\",\n  \"description\": \"CloudEdu Service\",\n  \"main\": \"CloudEduService.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"author\": \"losfair\",\n  \"license\": \"LGPL-3.0\",\n  \"dependencies\": {\n    \"express\": \"^4.14.0\",\n    \"mongodb\": \"^2.2.11\"\n  }\n}\n"
+    },
+    {
+      "path": "backend/typescript/tsconfig.json",
+      "name": "tsconfig.json",
+      "lang": "json",
+      "lines": 9,
+      "size": 179,
+      "content": "{\n    \"compilerOptions\": {\n        \"target\": \"es2015\",\n        \"noImplicitAny\": false,\n        \"module\": \"none\",\n        \"removeComments\": true,\n        \"sourceMap\": true\n    }\n}\n"
+    },
+    {
+      "path": "client_service/.gitignore",
+      "name": ".gitignore",
+      "lang": "txt",
+      "lines": 4,
+      "size": 28,
+      "content": "*.exe\nconfig.json\nbin/\npkg/\n"
+    },
+    {
+      "path": "client_service/ClientService.go",
+      "name": "ClientService.go",
+      "lang": "go",
+      "lines": 297,
+      "size": 7337,
+      "content": "package main\n\nimport (\n    \"os\"\n    \"log\"\n    \"time\"\n    \"strconv\"\n    \"net/http\"\n    \"io/ioutil\"\n    \"crypto/rand\"\n    \"encoding/hex\"\n    \"encoding/json\"\n    \"DeviceManager\"\n    \"GeneralService\"\n    \"TemplateRenderer\"\n    \"ConfigurationManager\"\n)\n\nconst CLIENT_SERVICE_VERSION = \"0.3.0 20161217\"\n\nvar deviceId string\nvar cfg map[string]interface{}\nvar isPaused bool = false\nvar driveListUpdateChan chan []string\nvar currentDriveList []string\n\nfunc generateRandomString(n int) string {\n    r := make([]byte, n)\n    rand.Read(r)\n    return hex.EncodeToString(r)\n}\n\nfunc loadDeviceId() {\n    currentDeviceId, err := ConfigurationManager.GetStringValue(\"deviceId\")\n    if err != nil || currentDeviceId == \"\" {\n        currentDeviceId = generateRandomString(32)\n        ConfigurationManager.SetStringValue(\"deviceId\", currentDeviceId)\n    }\n    deviceId = currentDeviceId\n}\n\nfunc loadConfig() {\n    cfg = make(map[string]interface{})\n    cfgFilePath, err := ConfigurationManager.GetStringValue(\"cfgFilePath\")\n    if err != nil || cfgFilePath == \"\" {\n        cfgFilePath = ConfigurationManager.DEFAULT_CONFIG_FILE_DIR + \"config.json\"\n        ConfigurationManager.SetStringValue(\"cfgFilePath\", cfgFilePath)\n    }\n    cfgFileData, err := ioutil.ReadFile(cfgFilePath)\n    if err != nil {\n        panic(err)\n    }\n    err = json.Unmarshal(cfgFileData, &cfg)\n    if err != nil {\n        panic(err)\n    }\n}\n\nfunc onPing(w http.ResponseWriter, r *http.Request) {\n    if isPaused {\n        return\n    }\n    w.Write([]byte(\"Pong\"))\n}\n\nfunc onGetVersion(w http.ResponseWriter, r *http.Request) {\n    if isPaused {\n        return\n    }\n    w.Write([]byte(CLIENT_SERVICE_VERSION))\n}\n\nfunc onPollDriveListUpdate(w http.ResponseWriter, r *http.Request) {\n    if isPaused {\n        return\n    }\n    select {\n        case update := <-driveListUpdateChan:\n            respJson, err := json.Marshal(update)\n            if err != nil {\n                w.Write([]byte(\"Error\"))\n                return\n            }\n            w.Write(respJson)\n        case <-time.After(30 * time.Second):\n            w.Write([]byte(\"Timeout\"))\n    }\n}\n\nfunc onGetDriveList(w http.ResponseWriter, r *http.Request) {\n    if isPaused {\n        return\n    }\n    drives := DeviceManager.GetDriveList()\n    result, err := json.Marshal(drives)\n    if err != nil {\n        w.Write([]byte(\"Failed\"))\n        return\n    }\n    w.Write(result)\n}\n\nfunc onGetDeviceId(w http.ResponseWriter, r *http.Request) {\n    if isPaused {\n        return\n    }\n    w.Write([]byte(deviceId))\n}\n\nfunc onGetConfigItem(w http.ResponseWriter, r *http.Request) {\n    if isPaused {\n        return\n    }\n    defer func() {\n        if err := recover(); err != nil {\n            w.Write([]byte(\"Failed\"))\n        }\n    }()\n\n    reqBodyData, err := ioutil.ReadAll(r.Body)\n    if err != nil {\n        panic(err)\n    }\n    defer r.Body.Close()\n    reqBody := make(map[string]interface{})\n    err = json.Unmarshal(reqBodyData, &reqBody)\n    if err != nil {\n        panic(err)\n    }\n    v := cfg[reqBody[\"key\"].(string)]\n    switch v.(type) {\n        case map[string]interface{}:\n            result, err := json.Marshal(v)\n            if err != nil {\n                panic(err)\n            }\n            w.Write(result)\n            break\n        case []interface{}:\n            result, err := json.Marshal(v)\n            if err != nil {\n                panic(err)\n            }\n            w.Write(result)\n            break\n        case float64:\n            result := strconv.FormatFloat(v.(float64), 'g', 2, 64)\n            w.Write([]byte(result))\n            break\n        case string:\n            w.Write([]byte(v.(string)))\n            break\n        default:\n            w.Write([]byte(\"Unknown type\"))\n    }\n}\n\nfunc onReboot(w http.ResponseWriter, r *http.Request) {\n    ret := DeviceManager.RequestSystemReboot()\n    if ret {\n        DeviceManager.DoSystemReboot()\n        w.Write([]byte(\"OK\"))\n    } else {\n        w.Write([]byte(\"Failed\"))\n    }\n}\n\nfunc onPoweroff(w http.ResponseWriter, r *http.Request) {\n    ret := DeviceManager.RequestSystemPoweroff()\n    if ret {\n        DeviceManager.DoSystemPoweroff()\n        w.Write([]byte(\"OK\"))\n    } else {\n        w.Write([]byte(\"Failed\"))\n    }\n}\n\nfunc onTemplateRenderRequest(w http.ResponseWriter, r *http.Request) {\n    defer func() {\n        if err := recover(); err != nil {\n            w.Write([]byte(\"Unknown error\"))\n        }\n    }()\n\n    reqRawData, err := ioutil.ReadAll(r.Body)\n    if err != nil {\n        w.Write([]byte(\"Failed\"))\n        return\n    }\n    defer r.Body.Close()\n    reqData := make(map[string]interface{})\n    err = json.Unmarshal(reqRawData, &reqData)\n    if err != nil {\n        w.Write([]byte(\"Unable to parse request\"))\n        return\n    }\n\n    tpl := reqData[\"template\"].(string)\n    doc := TemplateRenderer.LoadDocumentFromSource([]byte(tpl))\n    if doc == nil {\n        w.Write([]byte(\"Unable to load template\"))\n        return\n    }\n    defer doc.Destroy()\n\n    if v, ok := reqData[\"params\"]; ok {\n        params := v.(map[string]interface{})\n        for key, value := range params {\n            strValue := \"\";\n            switch value.(type) {\n                case string:\n                    strValue = value.(string)\n                case float64:\n                    strValue = strconv.FormatFloat(value.(float64), 'g', -1, 64)\n                case bool:\n                    strValue = \"false\"\n                    if value.(bool) {\n                        strValue = \"true\"\n                    }\n                default:\n                    strValue = \"\"\n            }\n            doc.SetParam(key, strValue)\n        }\n    }\n\n    w.Write([]byte(doc.GenerateJavascriptRenderer(false)))\n}\n\nfunc updateDriveList() {\n    newDrives := DeviceManager.GetDriveList()\n    if len(newDrives) != len(currentDriveList) {\n        currentDriveList = newDrives\n        select {\n            case driveListUpdateChan <- newDrives:\n            default:\n        }\n    }\n}\n\nfunc runBackgroundTasks() {\n    for {\n        updateDriveList()\n        time.Sleep(1 * time.Second)\n    }\n}\n\nfunc onServiceStart() {\n    go http.ListenAndServe(\"127.0.0.1:9033\", nil)\n}\n\nfunc onServicePause() {\n    isPaused = true\n}\n\nfunc onServiceContinue() {\n    isPaused = false\n}\n\nfunc onServiceStop() {\n}\n\nfunc main() {\n    const svcName = \"CloudEdu Client Service\"\n    const svcDesc = \"CloudEdu Client Service\"\n\n    loadDeviceId()\n    loadConfig()\n    DeviceManager.Init()\n    go runBackgroundTasks()\n\n    http.HandleFunc(\"/ping\", onPing)\n    http.HandleFunc(\"/version\", onGetVersion)\n    http.HandleFunc(\"/id\", onGetDeviceId)\n    http.HandleFunc(\"/config/get\", onGetConfigItem)\n    http.HandleFunc(\"/devices/drives/list\", onGetDriveList)\n    // http.HandleFunc(\"/devices/drives/poll\", onPollDriveListUpdate) // Fixme: Not working\n    http.HandleFunc(\"/system/power/reboot\", onReboot)\n    http.HandleFunc(\"/system/power/poweroff\", onPoweroff)\n    http.HandleFunc(\"/render_template\", onTemplateRenderRequest)\n\n    cmd := \"\"\n\n    if len(os.Args) >= 2 {\n        cmd = os.Args[1]\n    }\n\n    err := GeneralService.Run(svcName, svcDesc, cmd, &GeneralService.ServiceHandlers{\n        OnStart: onServiceStart,\n        OnStop: onServiceStop,\n        OnPause: onServicePause,\n        OnContinue: onServiceContinue,\n    })\n    if err != nil {\n        log.Fatal(err)\n    }\n}\n"
+    },
+    {
+      "path": "client_service/ClientService.manifest",
+      "name": "ClientService.manifest",
+      "lang": "manifest",
+      "lines": 12,
+      "size": 546,
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\">\n    <assemblyIdentity version=\"0.1.0.0\"  name=\"ClientService\" type=\"win32\" />\n    <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v3\">\n        <security>\n            <requestedPrivileges>\n                <!-- <requestedExecutionLevel level=\"requireAdministrator\" /> -->\n                <requestedExecutionLevel level=\"asInvoker\" />\n            </requestedPrivileges>\n        </security>\n    </trustInfo>\n</assembly>\n"
+    },
+    {
+      "path": "client_service/DeviceManagerTest.go",
+      "name": "DeviceManagerTest.go",
+      "lang": "go",
+      "lines": 10,
+      "size": 118,
+      "content": "package main\n\nimport (\n    \"fmt\"\n    \"DeviceManager\"\n)\n\nfunc main() {\n    fmt.Println(DeviceManager.GetDriveList())\n}\n"
+    },
+    {
+      "path": "client_service/InstallHelper.go",
+      "name": "InstallHelper.go",
+      "lang": "go",
+      "lines": 61,
+      "size": 1676,
+      "content": "package main\n\nimport (\n    \"os\"\n    \"strings\"\n    \"os/exec\"\n    \"io/ioutil\"\n    \"WindowsUI\"\n)\n\nconst INSTALL_PREFIX = `C:\\CloudEdu\\`\n\nfunc runClientServiceAction(action string) {\n    cmd := exec.Command(INSTALL_PREFIX + \"ClientService.exe\", action)\n    cmd.Output()\n}\n\nfunc copyFile(src, dst string) {\n    srcData, err := ioutil.ReadFile(src)\n    if err != nil {\n        WindowsUI.MessageBoxFatal(err.Error())\n    }\n\n    if !strings.HasPrefix(dst, INSTALL_PREFIX) {\n        WindowsUI.MessageBoxFatal(\"Illegal destination path\")\n    }\n\n    err = ioutil.WriteFile(dst, srcData, 0644)\n    if err != nil {\n        WindowsUI.MessageBoxFatal(err.Error())\n    }\n}\n\nfunc main() {\n    if len(os.Args) != 2 {\n        WindowsUI.MessageBoxFatal(\"Illegal usage\")\n    }\n\n    srcDir := os.Args[1] + `\\`\n\n    if _, err := os.Stat(INSTALL_PREFIX + \"ClientService.exe\"); err == nil || !os.IsNotExist(err) {\n        userInput := WindowsUI.MessageBox(\"Notice\", \"Service already exists. Overwrite?\", WindowsUI.MB_YESNO)\n        if userInput == WindowsUI.IDNO {\n            runClientServiceAction(\"install\")\n            runClientServiceAction(\"start\")\n            WindowsUI.MessageBox(\"Notice\", \"Service not updated.\", 0)\n            return\n        }\n        runClientServiceAction(\"stop\")\n        runClientServiceAction(\"remove\")\n    }\n\n    os.Mkdir(INSTALL_PREFIX, 0644)\n\n    copyFile(srcDir + `bin\\ClientService.exe`, INSTALL_PREFIX + \"ClientService.exe\")\n    copyFile(srcDir + `bin\\libOxygenMark.dll`, INSTALL_PREFIX + \"libOxygenMark.dll\")\n    copyFile(srcDir + \"default_config.json\", INSTALL_PREFIX + \"config.json\")\n\n    runClientServiceAction(\"install\")\n    runClientServiceAction(\"start\")\n}\n"
+    },
+    {
+      "path": "client_service/InstallHelper.manifest",
+      "name": "InstallHelper.manifest",
+      "lang": "manifest",
+      "lines": 11,
+      "size": 475,
+      "content": "<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>\n<assembly xmlns=\"urn:schemas-microsoft-com:asm.v1\" manifestVersion=\"1.0\">\n    <assemblyIdentity version=\"0.1.0.0\"  name=\"ClientService\" type=\"win32\" />\n    <trustInfo xmlns=\"urn:schemas-microsoft-com:asm.v3\">\n        <security>\n            <requestedPrivileges>\n                <requestedExecutionLevel level=\"requireAdministrator\" />\n            </requestedPrivileges>\n        </security>\n    </trustInfo>\n</assembly>\n"
+    },
+    {
+      "path": "client_service/Launcher.bat",
+      "name": "Launcher.bat",
+      "lang": "bat",
+      "lines": 3,
+      "size": 34,
+      "content": "@echo off\nstart /min %1 %2\necho OK"
+    },
+    {
+      "path": "client_service/MessageBoxTest.go",
+      "name": "MessageBoxTest.go",
+      "lang": "go",
+      "lines": 11,
+      "size": 174,
+      "content": "package main\n\nimport (\n    \"fmt\"\n    \"WindowsUI\"\n)\n\nfunc main() {\n    ret := WindowsUI.WTSSendMessage(1, \"Hello\", \"Hello world\", WindowsUI.MB_YESNO, 5)\n    fmt.Println(ret)\n}"
+    },
+    {
+      "path": "client_service/RendererTest.go",
+      "name": "RendererTest.go",
+      "lang": "go",
+      "lines": 12,
+      "size": 230,
+      "content": "package main\n\nimport (\n    \"fmt\"\n    \"TemplateRenderer\"\n)\n\nfunc main() {\n    doc := TemplateRenderer.LoadDocumentFromFile(\"test.omt\")\n    fmt.Println(doc.RenderToHtml(true))\n    fmt.Println(doc.GenerateJavascriptRenderer(true))\n}\n"
+    },
+    {
+      "path": "client_service/build.bat",
+      "name": "build.bat",
+      "lang": "bat",
+      "lines": 8,
+      "size": 404,
+      "content": "go build ClientService.go\nmt -manifest ClientService.manifest -outputresource:ClientService.exe\n\ngo build InstallHelper.go\nmt -manifest InstallHelper.manifest -outputresource:InstallHelper.exe\n\nsigntool sign /t http://time.certum.pl/ /sha1 03CC8CF614117AD2B073676754BB97ABA81032DE ClientService.exe\nsigntool sign /t http://time.certum.pl/ /sha1 03CC8CF614117AD2B073676754BB97ABA81032DE InstallHelper.exe\n"
+    },
+    {
+      "path": "client_service/src/.gitignore",
+      "name": ".gitignore",
+      "lang": "txt",
+      "lines": 1,
+      "size": 12,
+      "content": "golang.org/\n"
+    },
+    {
+      "path": "client_service/src/ConfigurationManager/ConfigurationManager_windows.go",
+      "name": "ConfigurationManager_windows.go",
+      "lang": "go",
+      "lines": 25,
+      "size": 669,
+      "content": "package ConfigurationManager\n\nimport (\n    \"golang.org/x/sys/windows/registry\"\n)\n\nconst DEFAULT_CONFIG_FILE_DIR = `C:\\CloudEdu\\`\n\nfunc GetStringValue(itemName string) (string, error) {\n    k, _, err := registry.CreateKey(registry.LOCAL_MACHINE, `SOFTWARE\\CloudEdu`, registry.ALL_ACCESS)\n    if err != nil {\n        return \"\", err\n    }\n    v, _, err := k.GetStringValue(itemName)\n    return v, err\n}\n\nfunc SetStringValue(itemName, itemValue string) error {\n    k, _, err := registry.CreateKey(registry.LOCAL_MACHINE, `SOFTWARE\\CloudEdu`, registry.ALL_ACCESS)\n    if err != nil {\n        return err\n    }\n    err = k.SetStringValue(itemName, itemValue)\n    return err\n}\n"
+    },
+    {
+      "path": "client_service/src/DeviceManager/DeviceManager_windows.go",
+      "name": "DeviceManager_windows.go",
+      "lang": "go",
+      "lines": 93,
+      "size": 2024,
+      "content": "package DeviceManager\n\nimport (\n    \"os/exec\"\n    \"syscall\"\n    \"WindowsUI\"\n)\n\nvar isInitialized bool = false\nvar kernel32 *syscall.DLL = nil\nvar user32 *syscall.DLL = nil\n\nvar _getLogicalDrives *syscall.Proc\nvar _exitWindowsEx *syscall.Proc\n\nfunc Init() {\n    if isInitialized {\n        return\n    }\n    var err error\n    kernel32, err = syscall.LoadDLL(\"kernel32.dll\")\n    if err != nil {\n        panic(err)\n    }\n    user32, err = syscall.LoadDLL(\"user32.dll\")\n    if err != nil {\n        panic(err)\n    }\n    _getLogicalDrives = kernel32.MustFindProc(\"GetLogicalDrives\")\n    _exitWindowsEx = user32.MustFindProc(\"ExitWindowsEx\")\n\n    isInitialized = true\n}\n\nfunc parseLogicalDriveList(l uint32) []string {\n    ret := make([]string, 0)\n    for i := 0; i < 26; i++ {\n        if l & 1 == 1 {\n            ret = append(ret, string(byte(int('A') + i)))\n        }\n        l >>= 1\n    }\n    return ret\n}\n\nfunc GetDriveList() []string {\n    Init()\n    ret, _, _ := _getLogicalDrives.Call()\n    driveList := parseLogicalDriveList(uint32(ret))\n    return driveList\n}\n\nfunc RequestSystemReboot() bool {\n    userInput := WindowsUI.WTSSendMessage(1, \"CloudEdu Notice\", \"Reboot?\", WindowsUI.MB_YESNO, 10)\n    if userInput != WindowsUI.IDYES {\n        return false\n    }\n    return true\n}\n\nfunc RequestSystemPoweroff() bool {\n    userInput := WindowsUI.WTSSendMessage(1, \"CloudEdu Notice\", \"Poweroff?\", WindowsUI.MB_YESNO, 10)\n    if userInput != WindowsUI.IDYES {\n        return false\n    }\n    return true\n}\n\nfunc DoSystemReboot() {\n    Init()\n\n    cmd := exec.Command(\"shutdown.exe\", \"-r\", \"-t\", \"0\")\n    cmd.Output()\n\n    // Fixme: Requires AdjustTokenPrivileges() to work\n    /*_exitWindowsEx.Call(\n        uintptr(0x02), // EWX_REBOOT\n        uintptr(0),\n    )*/\n}\n\nfunc DoSystemPoweroff() {\n    Init()\n\n    cmd := exec.Command(\"shutdown.exe\", \"-s\", \"-t\", \"0\")\n    cmd.Output()\n\n    // Fixme: Requires AdjustTokenPrivileges() to work\n    /*_exitWindowsEx.Call(\n        uintptr(0x08), // EWX_POWEROFF\n        uintptr(0),\n    )*/\n}\n"
+    },
+    {
+      "path": "client_service/src/GeneralService/GeneralService_windows.go",
+      "name": "GeneralService_windows.go",
+      "lang": "go",
+      "lines": 24,
+      "size": 581,
+      "content": "package GeneralService\n\nimport (\n    \"WindowsService\"\n)\n\ntype ServiceHandlers struct {\n    OnStart func()\n    OnStop func()\n    OnPause func()\n    OnContinue func()\n}\n\nfunc Run(svcName, svcDesc, cmd string, handlers *ServiceHandlers) error {\n    if handlers != nil {\n        WindowsService.OnServiceStart = handlers.OnStart\n        WindowsService.OnServiceStop = handlers.OnStop\n        WindowsService.OnServicePause = handlers.OnPause\n        WindowsService.OnServiceContinue = handlers.OnContinue\n    }\n\n    err := WindowsService.DoAction(svcName, svcDesc, cmd)\n    return err\n}\n"
+    },
+    {
+      "path": "client_service/src/TemplateRenderer/TemplateRenderer.go",
+      "name": "TemplateRenderer.go",
+      "lang": "go",
+      "lines": 100,
+      "size": 2283,
+      "content": "package TemplateRenderer\n\nimport (\n    \"unsafe\"\n    \"io/ioutil\"\n)\n\n/*\n#cgo LDFLAGS: -L. -lOxygenMark\nvoid * loadDocument(const char *filename);\nvoid * loadDocumentFromSource(const char *src_c);\nvoid destroyDocument(void *doc);\nvoid setDocumentParam(void *doc, const char *key, const char *value);\nvoid clearDocumentParams(void *doc);\nchar * renderToHtml(void *doc, unsigned char isWholePage);\nchar * generateJavascriptRenderer(void *doc, unsigned char isWholePage);\nvoid free(char *ptr);\n*/\nimport \"C\"\n\ntype Document struct {\n    resource unsafe.Pointer\n}\n\nfunc LoadDocumentFromSource(src []byte) *Document {\n    if src == nil || len(src) == 0 {\n        return nil\n    }\n    ret := new(Document)\n    buf := make([]byte, len(src) + 1)\n    copy(buf, src)\n    buf[len(src)] = 0\n    ret.resource = C.loadDocumentFromSource((*C.char)(unsafe.Pointer(&buf[0])))\n    return ret\n}\n\nfunc LoadDocumentFromFile(fileName string) *Document {\n    data, err := ioutil.ReadFile(fileName)\n    if err != nil {\n        return nil\n    }\n    return LoadDocumentFromSource(data)\n}\n\n\nfunc (d *Document) Destroy() {\n    if d.resource == nil {\n        return\n    }\n    C.destroyDocument(d.resource)\n    d.resource = nil\n}\n\nfunc (d *Document) SetParam(key, value string) {\n    if d.resource == nil {\n        return\n    }\n    keyBuf := C.CString(key)\n    valueBuf := C.CString(value)\n\n    C.setDocumentParam(d.resource, keyBuf, valueBuf)\n\n    C.free(keyBuf)\n    C.free(valueBuf)\n}\n\nfunc (d *Document) ClearParams() {\n    if d.resource == nil {\n        return\n    }\n    C.clearDocumentParams(d.resource)\n}\n\nfunc (d *Document) RenderToHtml(isWholePage bool) string {\n    if d.resource == nil {\n        return \"\"\n    }\n    isWholePageParam := byte(0)\n    if isWholePage {\n        isWholePageParam = byte(1)\n    }\n    result := C.renderToHtml(d.resource, C.uchar(isWholePageParam))\n    ret := C.GoString(result)\n    C.free(result)\n    return ret\n}\n\nfunc (d *Document) GenerateJavascriptRenderer(isWholePage bool) string {\n    if d.resource == nil {\n        return \"\"\n    }\n    isWholePageParam := byte(0)\n    if isWholePage {\n        isWholePageParam = byte(1)\n    }\n    result := C.generateJavascriptRenderer(d.resource, C.uchar(isWholePageParam))\n    ret := C.GoString(result)\n    C.free(result)\n    return ret\n}\n"
+    },
+    {
+      "path": "client_service/src/WindowsService/install.go",
+      "name": "install.go",
+      "lang": "go",
+      "lines": 95,
+      "size": 1884,
+      "content": "// Copyright 2012 The Go Authors. All rights reserved.\n// Use of this source code is governed by a BSD-style\n// license that can be found in the LICENSE file.\n\n// +build windows\n\npackage WindowsService\n\nimport (\n\t\"fmt\"\n\t\"os\"\n\t\"path/filepath\"\n\n\t\"golang.org/x/sys/windows/svc/eventlog\"\n\t\"golang.org/x/sys/windows/svc/mgr\"\n)\n\nfunc exePath() (string, error) {\n\tprog := os.Args[0]\n\tp, err := filepath.Abs(prog)\n\tif err != nil {\n\t\treturn \"\", err\n\t}\n\tfi, err := os.Stat(p)\n\tif err == nil {\n\t\tif !fi.Mode().IsDir() {\n\t\t\treturn p, nil\n\t\t}\n\t\terr = fmt.Errorf(\"%s is directory\", p)\n\t}\n\tif filepath.Ext(p) == \"\" {\n\t\tp += \".exe\"\n\t\tfi, err := os.Stat(p)\n\t\tif err == nil {\n\t\t\tif !fi.Mode().IsDir() {\n\t\t\t\treturn p, nil\n\t\t\t}\n\t\t\terr = fmt.Errorf(\"%s is directory\", p)\n\t\t}\n\t}\n\treturn \"\", err\n}\n\nfunc installService(name, desc string) error {\n\texepath, err := exePath()\n\tif err != nil {\n\t\treturn err\n\t}\n\tm, err := mgr.Connect()\n\tif err != nil {\n\t\treturn err\n\t}\n\tdefer m.Disconnect()\n\ts, err := m.OpenService(name)\n\tif err == nil {\n\t\ts.Close()\n\t\treturn fmt.Errorf(\"service %s already exists\", name)\n\t}\n\ts, err = m.CreateService(name, exepath, mgr.Config{\n\t\tDisplayName: desc,\n\t\tStartType: mgr.StartAutomatic,\n\t}, \"is\", \"auto-started\")\n\tif err != nil {\n\t\treturn err\n\t}\n\tdefer s.Close()\n\terr = eventlog.InstallAsEventCreate(name, eventlog.Error|eventlog.Warning|eventlog.Info)\n\tif err != nil {\n\t\ts.Delete()\n\t\treturn fmt.Errorf(\"SetupEventLogSource() failed: %s\", err)\n\t}\n\treturn nil\n}\n\nfunc removeService(name string) error {\n\tm, err := mgr.Connect()\n\tif err != nil {\n\t\treturn err\n\t}\n\tdefer m.Disconnect()\n\ts, err := m.OpenService(name)\n\tif err != nil {\n\t\treturn fmt.Errorf(\"service %s is not installed\", name)\n\t}\n\tdefer s.Close()\n\terr = s.Delete()\n\tif err != nil {\n\t\treturn err\n\t}\n\terr = eventlog.Remove(name)\n\tif err != nil {\n\t\treturn fmt.Errorf(\"RemoveEventLogSource() failed: %s\", err)\n\t}\n\treturn nil\n}\n"
+    },
+    {
+      "path": "client_service/src/WindowsService/main.go",
+      "name": "main.go",
+      "lang": "go",
+      "lines": 40,
+      "size": 794,
+      "content": "package WindowsService\n\nimport (\n\t\"errors\"\n\n\t\"golang.org/x/sys/windows/svc\"\n)\n\nfunc DoAction(svcName, svcDesc, cmd string) error {\n\tisIntSess, err := svc.IsAnInteractiveSession()\n\tif err != nil {\n\t\treturn err\n\t}\n\tif !isIntSess {\n\t\trunService(svcName, false)\n\t\treturn nil\n\t}\n\n\tswitch cmd {\n\t\tcase \"debug\":\n\t\t\trunService(svcName, true)\n\t\t\treturn nil\n\t\tcase \"install\":\n\t\t\terr = installService(svcName, svcDesc)\n\t\tcase \"remove\":\n\t\t\terr = removeService(svcName)\n\t\tcase \"start\":\n\t\t\terr = startService(svcName)\n\t\tcase \"stop\":\n\t\t\terr = controlService(svcName, svc.Stop, svc.Stopped)\n\t\tcase \"pause\":\n\t\t\terr = controlService(svcName, svc.Pause, svc.Paused)\n\t\tcase \"continue\":\n\t\t\terr = controlService(svcName, svc.Continue, svc.Running)\n\t\tdefault:\n\t\t\terr = errors.New(\"Unknown command\")\n\t}\n\n\treturn err\n}\n"
+    },
+    {
+      "path": "client_service/src/WindowsService/manage.go",
+      "name": "manage.go",
+      "lang": "go",
+      "lines": 62,
+      "size": 1406,
+      "content": "// Copyright 2012 The Go Authors. All rights reserved.\n// Use of this source code is governed by a BSD-style\n// license that can be found in the LICENSE file.\n\n// +build windows\n\npackage WindowsService\n\nimport (\n\t\"fmt\"\n\t\"time\"\n\n\t\"golang.org/x/sys/windows/svc\"\n\t\"golang.org/x/sys/windows/svc/mgr\"\n)\n\nfunc startService(name string) error {\n\tm, err := mgr.Connect()\n\tif err != nil {\n\t\treturn err\n\t}\n\tdefer m.Disconnect()\n\ts, err := m.OpenService(name)\n\tif err != nil {\n\t\treturn fmt.Errorf(\"could not access service: %v\", err)\n\t}\n\tdefer s.Close()\n\terr = s.Start(\"is\", \"manual-started\")\n\tif err != nil {\n\t\treturn fmt.Errorf(\"could not start service: %v\", err)\n\t}\n\treturn nil\n}\n\nfunc controlService(name string, c svc.Cmd, to svc.State) error {\n\tm, err := mgr.Connect()\n\tif err != nil {\n\t\treturn err\n\t}\n\tdefer m.Disconnect()\n\ts, err := m.OpenService(name)\n\tif err != nil {\n\t\treturn fmt.Errorf(\"could not access service: %v\", err)\n\t}\n\tdefer s.Close()\n\tstatus, err := s.Control(c)\n\tif err != nil {\n\t\treturn fmt.Errorf(\"could not send control=%d: %v\", c, err)\n\t}\n\ttimeout := time.Now().Add(10 * time.Second)\n\tfor status.State != to {\n\t\tif timeout.Before(time.Now()) {\n\t\t\treturn fmt.Errorf(\"timeout waiting for service to go to state=%d\", to)\n\t\t}\n\t\ttime.Sleep(300 * time.Millisecond)\n\t\tstatus, err = s.Query()\n\t\tif err != nil {\n\t\t\treturn fmt.Errorf(\"could not retrieve service status: %v\", err)\n\t\t}\n\t}\n\treturn nil\n}\n"
+    },
+    {
+      "path": "client_service/src/WindowsService/service.go",
+      "name": "service.go",
+      "lang": "go",
+      "lines": 79,
+      "size": 1802,
+      "content": "package WindowsService\n\nimport (\n\t\"fmt\"\n\n\t\"golang.org/x/sys/windows/svc\"\n\t\"golang.org/x/sys/windows/svc/debug\"\n\t\"golang.org/x/sys/windows/svc/eventlog\"\n)\n\nvar elog debug.Log\n\nvar OnServiceStart func()\nvar OnServiceStop func()\nvar OnServicePause func()\nvar OnServiceContinue func()\n\ntype thisService struct{}\n\nfunc (m *thisService) Execute(args []string, r <-chan svc.ChangeRequest, changes chan<- svc.Status) (ssec bool, errno uint32) {\n\tconst cmdsAccepted = svc.AcceptStop | svc.AcceptShutdown | svc.AcceptPauseAndContinue\n\tchanges <- svc.Status{State: svc.StartPending}\n\tif OnServiceStart != nil {\n\t\tOnServiceStart()\n\t}\n\tchanges <- svc.Status{State: svc.Running, Accepts: cmdsAccepted}\nloop:\n\tfor {\n\t\tc := <-r\n\t\tswitch c.Cmd {\n\t\t\tcase svc.Interrogate:\n\t\t\t\tchanges <- c.CurrentStatus\n\t\t\tcase svc.Stop, svc.Shutdown:\n\t\t\t\tif OnServiceStop != nil {\n\t\t\t\t\tOnServiceStop()\n\t\t\t\t}\n\t\t\t\tbreak loop\n\t\t\tcase svc.Pause:\n\t\t\t\tif OnServicePause != nil {\n\t\t\t\t\tOnServicePause()\n\t\t\t\t}\n\t\t\t\tchanges <- svc.Status{State: svc.Paused, Accepts: cmdsAccepted}\n\t\t\tcase svc.Continue:\n\t\t\t\tif OnServiceContinue != nil {\n\t\t\t\t\tOnServiceContinue()\n\t\t\t\t}\n\t\t\t\tchanges <- svc.Status{State: svc.Running, Accepts: cmdsAccepted}\n\t\t\tdefault:\n\t\t\t\telog.Error(1, fmt.Sprintf(\"Unexpected control request #%d\", c))\n\t\t}\n\t}\n\tchanges <- svc.Status{State: svc.StopPending}\n\treturn\n}\n\nfunc runService(name string, isDebug bool) {\n\tvar err error\n\tif isDebug {\n\t\telog = debug.New(name)\n\t} else {\n\t\telog, err = eventlog.Open(name)\n\t\tif err != nil {\n\t\t\treturn\n\t\t}\n\t}\n\tdefer elog.Close()\n\n\telog.Info(1, fmt.Sprintf(\"Starting %s\", name))\n\trun := svc.Run\n\tif isDebug {\n\t\trun = debug.Run\n\t}\n\terr = run(name, &thisService{})\n\tif err != nil {\n\t\telog.Error(1, fmt.Sprintf(\"%s failed: %v\", name, err))\n\t\treturn\n\t}\n\telog.Info(1, fmt.Sprintf(\"%s stopped\", name))\n}\n"
+    },
+    {
+      "path": "client_service/src/WindowsUI/MessageBox.go",
+      "name": "MessageBox.go",
+      "lang": "go",
+      "lines": 78,
+      "size": 1984,
+      "content": "package WindowsUI\n\nimport (\n    \"syscall\"\n    \"unsafe\"\n)\n\nvar _messageBox *syscall.Proc\nvar _wtsSendMessage *syscall.Proc\n\nconst (\n    MB_OK                = 0x00000000\n    MB_OKCANCEL          = 0x00000001\n    MB_ABORTRETRYIGNORE  = 0x00000002\n    MB_YESNOCANCEL       = 0x00000003\n    MB_YESNO             = 0x00000004\n    MB_RETRYCANCEL       = 0x00000005\n    MB_CANCELTRYCONTINUE = 0x00000006\n    MB_ICONHAND          = 0x00000010\n    MB_ICONQUESTION      = 0x00000020\n    MB_ICONEXCLAMATION   = 0x00000030\n    MB_ICONASTERISK      = 0x00000040\n    MB_USERICON          = 0x00000080\n    MB_ICONWARNING       = MB_ICONEXCLAMATION\n    MB_ICONERROR         = MB_ICONHAND\n    MB_ICONINFORMATION   = MB_ICONASTERISK\n    MB_ICONSTOP          = MB_ICONHAND\n\n    MB_DEFBUTTON1 = 0x00000000\n    MB_DEFBUTTON2 = 0x00000100\n    MB_DEFBUTTON3 = 0x00000200\n    MB_DEFBUTTON4 = 0x00000300\n)\n\nfunc MessageBox(title, content string, style uint) int {\n    Init()\n    if _messageBox == nil {\n        _messageBox = user32.MustFindProc(\"MessageBoxW\")\n    }\n\n    ret, _, _ := _messageBox.Call(\n        0,\n        uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(content))),\n        uintptr(unsafe.Pointer(syscall.StringToUTF16Ptr(title))),\n        uintptr(style),\n    )\n\n    return int(ret)\n}\n\nfunc MessageBoxFatal(content string) {\n    MessageBox(\"Fatal Error\", content, MB_ICONERROR)\n    panic(content)\n}\n\nfunc WTSSendMessage(sessionId uint, title, content string, style, timeoutSec uint) int {\n    Init()\n    if _wtsSendMessage == nil {\n        _wtsSendMessage = wtsapi32.MustFindProc(\"WTSSendMessageA\")\n    }\n\n    var ret int\n\n    _wtsSendMessage.Call(\n        0,\n        uintptr(sessionId),\n        uintptr(unsafe.Pointer(&([]byte(title))[0])),\n        uintptr(len(title)),\n        uintptr(unsafe.Pointer(&([]byte(content))[0])),\n        uintptr(len(content)),\n        uintptr(style),\n        uintptr(timeoutSec),\n        uintptr(unsafe.Pointer(&ret)),\n        uintptr(1),\n    )\n\n    return ret\n}\n"
+    },
+    {
+      "path": "client_service/src/WindowsUI/WIndowsUI.go",
+      "name": "WIndowsUI.go",
+      "lang": "go",
+      "lines": 43,
+      "size": 701,
+      "content": "package WindowsUI\n\nimport (\n    \"syscall\"\n)\n\nconst (\n    IDABORT = 3\n    IDCANCEL = 2\n    IDCONTINUE = 11\n    IDIGNORE = 5\n    IDNO = 7\n    IDOK = 1\n    IDRETRY = 4\n    IDTRYAGAIN = 10\n    IDYES = 6\n)\n\nvar isInitialized bool = false\nvar kernel32 *syscall.DLL\nvar user32 *syscall.DLL\nvar wtsapi32 *syscall.DLL\n\nfunc Init() {\n    if isInitialized {\n        return\n    }\n    isInitialized = true\n\n    var err error\n    kernel32, err = syscall.LoadDLL(\"kernel32.dll\")\n    if err != nil {\n        panic(err)\n    }\n    user32, err = syscall.LoadDLL(\"user32.dll\")\n    if err != nil {\n        panic(err)\n    }\n    wtsapi32, err = syscall.LoadDLL(\"wtsapi32.dll\")\n    if err != nil {\n        panic(err)\n    }\n}\n"
+    },
+    {
+      "path": "frontend/.gitignore",
+      "name": ".gitignore",
+      "lang": "txt",
+      "lines": 1,
+      "size": 6,
+      "content": "html/\n"
+    },
+    {
+      "path": "frontend/Makefile",
+      "name": "Makefile",
+      "lang": "txt",
+      "lines": 9,
+      "size": 262,
+      "content": "CloudEdu-Frontend:\n\tmake -C ./om_templates\n\tmake -C ./typescript\n\tbrowserify -o build/bundle.js ts_compiled/index.js\n\tuglifyjs -o build/bundle.min.js build/bundle.js\n\tcp -r html/* build/\n\tcp -r prebuilt_scripts/* build/scripts/\n\tcp -r prebuilt_css/* build/css/\n\n"
+    },
+    {
+      "path": "frontend/om_templates/Makefile",
+      "name": "Makefile",
+      "lang": "txt",
+      "lines": 2,
+      "size": 70,
+      "content": "om_templates:\n\tnode render.js templates/index.omt > ../html/index.html"
+    },
+    {
+      "path": "frontend/om_templates/constants.json",
+      "name": "constants.json",
+      "lang": "json",
+      "lines": 3,
+      "size": 34,
+      "content": "{\n    \"defaultTitle\": \"CloudEdu\"\n}"
+    },
+    {
+      "path": "frontend/om_templates/render.js",
+      "name": "render.js",
+      "lang": "js",
+      "lines": 18,
+      "size": 354,
+      "content": "const fs = require(\"fs\");\nconst process = require(\"process\");\nconst om = require(\"oxygenmark\");\n\nif(process.argv.length != 3) {\n    throw \"Bad usage\";\n}\n\nconst srcFile = process.argv[2];\n\nconst constants = JSON.parse(fs.readFileSync(\"constants.json\"));\n\nconst doc = new om();\ndoc.loadFile(srcFile, constants);\n\nconsole.log(doc.render());\n\ndoc.destroy();\n"
+    },
+    {
+      "path": "frontend/om_templates/templates/index.omt",
+      "name": "index.omt",
+      "lang": "omt",
+      "lines": 37,
+      "size": 1551,
+      "content": "head\n\ttitle => [defaultTitle]\n\tmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\n\tlink rel=\"stylesheet\" href=\"css/index.css\"\n\tlink rel=\"stylesheet\" href=\"css/material.indigo-pink.min.css\"\n\tlink rel=\"stylesheet\" href=\"https://fonts.googleapis.com/icon?family=Material+Icons\"\n\nbody\n\tdiv .mdl-layout .mdl-js-layout .mdl-layout--fixed-header\n\t\theader .mdl-layout__header\n\t\t\tdiv .mdl-layout__header-row\n\t\t\t\tspan .mdl-layout-title => [defaultTitle]\n\t\t\t\tdiv .mdl-layout-spacer\n\t\t\t\t\n\t\tdiv .mdl-layout__drawer\n\t\t\tnav .mdl-navigation\n\t\t\t\ta .mdl-navigation__link href=\"http://example.com\" => \"Example\"\n\n\t\tmain .mdl-layout__content #page-content\n\t\t\tdiv #login-form .mdl-card .mdl-shadow--2dp .default-card-style\n\t\t\t\tdiv .mdl-card__title\n\t\t\t\t\th2 .mdl-card__title-text => \"Login\"\n\t\t\t\tdiv .mdl-card__supporting-text\n\t\t\t\t\tform action=\"#\"\n\t\t\t\t\t\tdiv .mdl-textfield .mdl-js-textfield\n\t\t\t\t\t\t\tinput #login-username .mdl-textfield__input type=\"text\"\n\t\t\t\t\t\t\tlabel .mdl-textfield__label for=\"login-username\" => \"Username\"\n\t\t\t\t\t\tdiv .mdl-textfield .mdl-js-textfield\n\t\t\t\t\t\t\tinput #login-password .mdl-textfield__input type=\"password\"\n\t\t\t\t\t\t\tlabel .mdl-textfield__label for=\"login-password\" => \"Password\"\n\t\t\t\tdiv .mdl-card__actions .mdl-card--border\n\t\t\t\t\ta #login-button .mdl-button .mdl-button--colored .mdl-js-button .mdl-js-ripple-effect => \"Login\"\n\t\t\t\t\ta #register-button .mdl-button .mdl-button--colored .mdl-js-button .mdl-js-ripple-effect => \"Register\"\n\n\tscript src=\"scripts/vue.min.js\"\n\tscript src=\"scripts/material.min.js\"\n\tscript src=\"bundle.min.js\""
+    },
+    {
+      "path": "frontend/prebuilt_css/index.css",
+      "name": "index.css",
+      "lang": "css",
+      "lines": 14,
+      "size": 214,
+      "content": "#page-content {\n    padding-top: 30px;\n    width: 100%;\n}\n\n.default-card-style {\n    width: 100%;\n    margin: 0 auto;\n}\n\n.default-card-style > .mdl-card__title {\n    background-color: #C2185B;\n    color: #FFFFFF;\n}"
+    },
+    {
+      "path": "frontend/ts_compiled/.gitignore",
+      "name": ".gitignore",
+      "lang": "txt",
+      "lines": 1,
+      "size": 5,
+      "content": "*.js\n"
+    },
+    {
+      "path": "frontend/typescript/.babelrc",
+      "name": ".babelrc",
+      "lang": "txt",
+      "lines": 3,
+      "size": 27,
+      "content": "{\n\t\"presets\": [\"es2015\"]\n}\n"
+    },
+    {
+      "path": "frontend/typescript/.gitignore",
+      "name": ".gitignore",
+      "lang": "txt",
+      "lines": 1,
+      "size": 5,
+      "content": "*.js\n"
+    },
+    {
+      "path": "frontend/typescript/Makefile",
+      "name": "Makefile",
+      "lang": "txt",
+      "lines": 3,
+      "size": 49,
+      "content": "ts:\n\ttsc -p .\n\tbabel -d ../ts_compiled/ index.js\n"
+    },
+    {
+      "path": "frontend/typescript/index.ts",
+      "name": "index.ts",
+      "lang": "ts",
+      "lines": 29,
+      "size": 603,
+      "content": "/// <reference path=\"../typings/node/node.d.ts\" />\n/// <reference path=\"../typings/vue/vue.d.ts\" />\n\nrequire(\"babel-polyfill\");\n\nfunction sleep(ms: number) {\n    return new Promise(function(callback) {\n        setTimeout(callback, ms);\n    });\n}\n\nfunction onLoginClick() {\n    alert(\"Hello world\");\n}\n\nasync function loadPage () {\n    var app = new Vue({\n        el: \"#container\",\n        data: {\n            \"testMsg\": \"Hello world\",\n            \"showTestMsg\": true\n        },\n        methods: {\n            \"onLoginClick\": onLoginClick\n        }\n    });\n};\n\nwindow.addEventListener(\"load\", loadPage);\n"
+    },
+    {
+      "path": "frontend/typescript/tsconfig.json",
+      "name": "tsconfig.json",
+      "lang": "json",
+      "lines": 9,
+      "size": 180,
+      "content": "{\n    \"compilerOptions\": {\n        \"target\": \"es2015\",\n        \"noImplicitAny\": false,\n        \"module\": \"system\",\n        \"removeComments\": true,\n        \"sourceMap\": true\n    }\n}"
+    },
+    {
+      "path": "new_backend/main.js",
+      "name": "main.js",
+      "lang": "js",
+      "lines": 100,
+      "size": 2665,
+      "content": "const express = require(\"express\");\nconst bodyParser = require(\"body-parser\")\nconst util = require(\"util\");\nconst dbClient = require(\"mongodb\").MongoClient;\nconst validator = require(\"./validator.js\");\n\nconst listenPort = 7729;\nconst dbUrl = \"mongodb://127.0.0.1:27017/CloudEdu\"\nlet dbContext;\n\nvar app = express();\napp.use(bodyParser.json());\n\napp.post(\"/notification/publish\", (req, resp) => {\n    if(!req.body\n    || !req.body.deviceId\n    || !util.isString(req.body.deviceId)\n    || !req.body.content\n    || !util.isString(req.body.content)) {\n        resp.send(\"Bad request\");\n        return;\n    }\n    dbContext.collection(\"notifications\").insert({\n        \"deviceId\": req.body.deviceId,\n        \"content\": req.body.content,\n        \"time\": Date.now()\n    }, (err) => {\n        if(err) {\n            resp.send(\"Failed\");\n        } else {\n            resp.send(\"OK\");\n        }\n    })\n})\n\napp.post(\"/notification/fetch\", (req, resp) => {\n    if(!req.body\n    || !req.body.deviceId\n    || !util.isString(req.body.deviceId)) {\n        resp.send(\"Bad request\");\n        return;\n    }\n    dbContext.collection(\"notifications\").find({\n        \"deviceId\": req.body.deviceId\n    }).sort({\n        \"time\": -1\n    }).toArray((err, result) => {\n        if(err || !result || !result.length) {\n            resp.send(\"Failed\");\n        } else {\n            var ret = [];\n            for(var key in result) {\n                ret.push({\n                    \"content\": result[key].content,\n                    \"time\": result[key].time\n                })\n            }\n            resp.send(JSON.stringify(ret));\n        }\n    })\n})\n\napp.post(\"/notification/fetch_with_prefix\", (req, resp) => {\n    if(!req.body\n    || !req.body.deviceIdPrefix\n    || !util.isString(req.body.deviceIdPrefix)\n    || req.body.deviceIdPrefix.length < 8\n    || !validator.validateDeviceId(req.body.deviceIdPrefix)) {\n        resp.send(\"Bad request or device id\");\n        return;\n    }\n    dbContext.collection(\"notifications\").find({\n        \"deviceId\": {\n            \"$regex\": \"^\" + req.body.deviceIdPrefix\n        }\n    }).sort({\n        \"time\": -1\n    }).toArray((err, result) => {\n        if(err || !result || !result.length) {\n            resp.send(\"Failed\");\n        } else {\n            var ret = [];\n            for(var key in result) {\n                ret.push({\n                    \"content\": result[key].content,\n                    \"time\": result[key].time\n                })\n            }\n            resp.send(JSON.stringify(ret));\n        }\n    })\n})\n\ndbClient.connect(dbUrl, (err, db) => {\n    if(err) {\n        throw err;\n    }\n    dbContext = db;\n    app.listen(listenPort);\n});\n"
+    },
+    {
+      "path": "new_backend/package.json",
+      "name": "package.json",
+      "lang": "json",
+      "lines": 31,
+      "size": 673,
+      "content": "{\n  \"name\": \"cloudedu_backend\",\n  \"version\": \"0.1.0\",\n  \"description\": \"CloudEdu Backend\",\n  \"main\": \"main.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/losfair/CloudEdu.git\"\n  },\n  \"keywords\": [\n    \"cloud\",\n    \"edu\",\n    \"education\",\n    \"cloudedu\",\n    \"backend\"\n  ],\n  \"author\": \"Heyang Zhou\",\n  \"license\": \"LGPL-3.0\",\n  \"bugs\": {\n    \"url\": \"https://github.com/losfair/CloudEdu/issues\"\n  },\n  \"homepage\": \"https://github.com/losfair/CloudEdu#readme\",\n  \"dependencies\": {\n    \"body-parser\": \"^1.15.2\",\n    \"express\": \"^4.14.0\",\n    \"mongodb\": \"^2.2.15\"\n  }\n}\n"
+    },
+    {
+      "path": "new_backend/validator.js",
+      "name": "validator.js",
+      "lang": "js",
+      "lines": 20,
+      "size": 396,
+      "content": "const util = require(\"util\");\n\nfunction validateDeviceId(d) {\n    if(\n        !d\n     || !util.isString(d)\n    ) {\n        return false;\n    }\n    for(let i = 0; i < d.length; i++) {\n        if(\n            !(d[i] >= 'a' && d[i] <= 'z')\n         && !(d[i] >= '0' && d[i] <= '9')) {\n            return false;\n        }\n    }\n    return true;\n}\n\nmodule.exports.validateDeviceId = validateDeviceId;\n"
+    },
+    {
+      "path": "new_frontend/.gitignore",
+      "name": ".gitignore",
+      "lang": "txt",
+      "lines": 2,
+      "size": 20,
+      "content": "Installer/\nsrc/bin/\n"
+    },
+    {
+      "path": "new_frontend/Releases/sign.bat",
+      "name": "sign.bat",
+      "lang": "bat",
+      "lines": 1,
+      "size": 90,
+      "content": "signtool sign /t http://time.certum.pl/ /sha1 03CC8CF614117AD2B073676754BB97ABA81032DE %1\n"
+    },
+    {
+      "path": "new_frontend/build.bat",
+      "name": "build.bat",
+      "lang": "bat",
+      "lines": 6,
+      "size": 381,
+      "content": "copy ..\\client_service\\ClientService.exe src\\bin\\\ncopy ..\\client_service\\libOxygenMark.dll src\\bin\\\ncopy ..\\client_service\\Launcher.bat src\\bin\\\ncopy ..\\client_service\\InstallHelper.exe src\\bin\\\n\ncmd /c electron-packager src CloudEdu --overwrite --platform=win32 --arch=x64 --version=1.4.11 --out=Staging --version-string.ProductName=CloudEdu --version-string.ProductVersion=0.2.0\n"
+    },
+    {
+      "path": "new_frontend/build.sh",
+      "name": "build.sh",
+      "lang": "sh",
+      "lines": 2,
+      "size": 176,
+      "content": "#!/bin/sh\nelectron-packager src CloudEdu --platform=win32 --arch=all --version=1.4.11 --out=Staging --version-string.ProductName=CloudEdu --version-string.ProductVersion=0.1.0\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/AlphaBoard/index.css",
+      "name": "index.css",
+      "lang": "css",
+      "lines": 162,
+      "size": 2591,
+      "content": "body {\n    user-select:none;\n    -webkit-user-select:none;\n    touch-action: none;\n}\n\n#drawing {\n    position: fixed;\n    top: 0px;\n    left: 0px;\n    right: 0px;\n    z-index: -1;\n}\n\n#options {\n    position: fixed;\n    bottom: 0px;\n    left: 0px;\n    width: 100%;\n    height: 50px;\n    padding-left: 10px;\n    background-color: #555555;\n    z-index: 0;\n}\n\n#last-commit {\n    position: fixed;\n    top: 10px;\n    right: 20px;\n    width: 200px;\n    height: 50px;\n    text-align: right;\n    line-height: 50px;\n    color: #999999;\n}\n\n#cloud-status {\n    position: fixed;\n    top: 10px;\n    left: 20px;\n    width: 200px;\n    height: 50px;\n    text-align: left;\n    line-height: 50px;\n    color: #999999;\n}\n\n#cover-div {\n    position: fixed;\n    top: 0px;\n    bottom: 0px;\n    left: 0px;\n    right: 0px;\n    z-index: 100;\n    background-color: #FFFFFF;\n    opacity: 0;\n    -webkit-opacity: 0;\n    line-height: 100%;\n    text-align: center;\n    display: none;\n}\n\n.cover-layer {\n    z-index: 200;\n    background-color: #000000;\n    opacity: 0.5;\n    -webkit-opacity: 0.5;\n    position: fixed;\n    top: 0px;\n    bottom: 0px;\n    left: 0px;\n    right: 0px;\n}\n\n.msg-box {\n    z-index: 201;\n    position: fixed;\n    width: 100%;\n    max-width: 300px;\n    min-width: 200px;\n    min-height: 100px;\n    background-color: #0066CC;\n    color: #FFFFFF;\n    box-shadow: 0 0 20px #0066CC;\n    padding: 10px 10px;\n\n}\n\n#options div {\n    line-height: 50px;\n    color: #FFFFFF;\n    padding-right: 10px;\n    padding-left: 10px;\n    border-right: 1px solid #999999;\n    display: inline;\n}\n\n.sidebar {\n    position: fixed;\n    top: 0px;\n    bottom: 0px;\n    right: 0px;\n    width: 300px;\n    background-color:#000000;\n    padding-left: 20px;\n    opacity: 0.8;\n    -webkit-opacity: 0.8;\n    z-index: 101;\n    display: none;\n}\n\n.sidebar-title {\n    margin-top: 50px;\n    font-size: 24px;\n    color: #FFFFFF;\n}\n\n.sidebar-content {\n    margin-top: 30px;\n    font-size: 16px;\n    color: #FFFFFF;\n}\n\n#action-list-content tr:hover {\n    background-color: #333333;\n}\n\n#action-list-cancel-button {\n    margin-top: 30px;\n    font-size: 12px;\n    color: #FFFFFF;\n}\n\n#action-list-show-paths {\n    margin-top: 15px;\n    font-size: 12px;\n    color: #FFFFFF;\n}\n\n#action-list-show-commits {\n    margin-top: 15px;\n    font-size: 12px;\n    color: #FFFFFF;\n}\n\n#action-list-load-commit {\n    margin-top: 15px;\n    font-size: 12px;\n    color: #FFFFFF;\n}\n\n#path-list-remove-button {\n    margin-top: 30px;\n    font-size: 12px;\n    color: #FFFFFF;\n}\n\n#commit-list-goto-button {\n    margin-top: 30px;\n    font-size: 12px;\n    color: #FFFFFF;\n}"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/AlphaBoard/index.html",
+      "name": "index.html",
+      "lang": "html",
+      "lines": 45,
+      "size": 2281,
+      "content": "<html>\n    <head>\n        <meta charset=\"utf-8\" />\n        <meta name=\"ViewPort\" content=\"initial-scale=1, minimum-scale=1, width=device-width\"/>\n        <title>AlphaBoard</title>\n        <link rel=\"stylesheet\" href=\"index.css\" />\n        <script src=\"../scripts/jquery.min.js\"></script>\n        <script src=\"index.js\"></script>\n    </head>\n    <body>\n        <canvas id=\"drawing\" width=\"100%\" height=\"100%\"></canvas>\n        <div id=\"options\">\n            <div onclick=\"lineMode='straight'\">直线</div>\n            <div onclick=\"lineMode='any'\">任意线</div>\n            <div onclick=\"lineMode='rect'\">矩形</div>\n            <div onclick=\"lineMode='circle'\">圆</div>\n            <div onclick=\"resetEverything()\">重置</div>\n            <div onclick=\"commitActions()\">提交</div>\n            <div onclick=\"cancelStep()\">撤销</div>\n            <div onclick=\"toggleActionList()\">编辑</div>\n            <div onclick=\"showAboutInfo()\">关于</div>\n        </div>\n        <div id=\"last-commit\">上次提交: <code id=\"last-commit-id\">root</code></div>\n        <div id=\"cloud-status\">云服务状态: <font id=\"cloud-status-text\">未知</font></div>\n        <div id=\"action-list\" class=\"sidebar\">\n            <div id=\"action-list-title\" class=\"sidebar-title\">操作列表</div>\n            <table id=\"action-list-content\" class=\"sidebar-content\"></table>\n            <div id=\"action-list-cancel-button\" onclick=\"cancelActionsInList()\">撤销操作</div>\n            <div id=\"action-list-show-commits\" onclick=\"showCommitList()\">提交列表</div>\n            <div id=\"action-list-show-paths\" onclick=\"showPathList()\">路径列表</div>\n            <div id=\"action-list-load-commit\" onclick=\"promptForLoadCommit()\">加载提交</div>\n        </div>\n        <div id=\"commit-list\" class=\"sidebar\">\n            <div id=\"commit-list-title\" class=\"sidebar-title\">提交记录</div>\n            <table id=\"commit-list-content\" class=\"sidebar-content\"></table>\n            <div id=\"commit-list-goto-button\" onclick=\"\">回滚提交</div>\n        </div>\n        <div id=\"path-list\" class=\"sidebar\">\n            <div id=\"path-list-title\" class=\"sidebar-title\">路径</div>\n            <table id=\"path-list-content\" class=\"sidebar-content\"></table>\n            <div id=\"path-list-remove-button\" onclick=\"removeSelectedPaths()\">移除</div>\n        </div>\n        <div id=\"cover-div\"></div>\n    </body>\n</html>"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/AlphaBoard/index.js",
+      "name": "index.js",
+      "lang": "js",
+      "lines": 894,
+      "size": 25186,
+      "content": "//const $ = require(\"jquery\");\n\nvar drawingCxt;\nvar cvsHeight,cvsWidth;\n\nvar isDrawing = false;\n\nvar lineMode = \"any\"; // \"any\", \"straight\"\n\nvar lineWidth = 3;\n\nvar currentPath = [];\n\nvar paths = [];\n\nvar actions = [];\nvar new_actions = [];\n\nvar parentCommit = \"root\";\nvar commitHistory = [\"root\"];\n\nvar drawingDisabled = false;\n\nvar isSticky = true;\n\nvar stickyRadius = 20;\n\nvar coverLayer;\nvar coverCxt;\n\nvar enableNodeExtensions = false;\n\nconst localServiceAddr = \"http://127.0.0.1:9021\";\n\nvar serverAddr = localStorage[\"AlphaBoard-ServerAddr\"];\n\nfunction isInNode() {\n    try {\n        var fs = require(\"fs\");\n        if(!fs) return false;\n    } catch(e) {\n        return false;\n    }\n    return true;\n}\n\nfunction loadLocalConfig() {\n    /*\n    var fs = require(\"fs\");\n    var process = require(\"process\");\n    var path = require(\"path\");\n\n    var targetFile = path.dirname(process.execPath) + \"/config.json\";\n    var cfgText = fs.readFileSync(targetFile);\n    if(!cfgText) throw \"配置文件加载失败。\";\n\n    var cfgData = JSON.parse(cfgText);\n\n    if(cfgData.serverAddr) serverAddr = cfgData.serverAddr;\n    if(cfgData.stickyRadius) stickyRadius = cfgData.stickyRadius;\n    if(cfgData.lineWidth) lineWidth = cfgData.lineWidth;\n    */\n}\n\nfunction toggleFullScreen() {\n}\n\nfunction getQueryString(name)\n{\n    var reg = new RegExp(\"(^|&)\"+ name +\"=([^&]*)(&|$)\");\n    var r = window.location.search.substr(1).match(reg);\n    if(r) return unescape(r[2]);\n    else return null;\n}\n\n// localStorage is used instead of cookies.\n\nfunction getCookie(cname) {\n    return localStorage[cname];\n}\n\nfunction setCookie(cname, cvalue, exdays) {\n    localStorage[cname] = cvalue;\n}\n\nfunction randomNumeric() {\n    var str = \"\";\n\n    str += Math.floor(Math.random()*100000).toString();\n    str += \"_\";\n    str += Math.floor(Math.random()*100000).toString();\n    str += \"_\";\n    str += Math.floor(Math.random()*100000).toString();\n    str += \"_\";\n    str += Math.floor(Math.random()*100000).toString();\n\n    return str;\n}\n\nfunction showPopup(msg) {\n    var coverLayer = document.createElement(\"div\");\n    coverLayer.className = \"cover-layer\";\n\n    var msgBox = document.createElement(\"div\");\n    msgBox.className = \"msg-box\";\n    msgBox.innerHTML = msg;\n\n    var prevDrawingDisabled = drawingDisabled;\n\n    drawingDisabled = true;\n\n    $(msgBox).click(function() {\n        document.body.removeChild(coverLayer);\n        document.body.removeChild(msgBox);\n        drawingDisabled = prevDrawingDisabled;\n    });\n\n    document.body.appendChild(coverLayer);\n    document.body.appendChild(msgBox);\n\n    $(msgBox).css(\"top\", $(document).height() / 2 - $(msgBox).height() / 2);\n    $(msgBox).css(\"left\", $(document).width() / 2 - $(msgBox).width() / 2);\n}\n\nfunction clearCanvas() {\n    cvsHeight = document.getElementById(\"drawing\").height;\n    cvsWidth = document.getElementById(\"drawing\").width;\n\n    document.getElementById(\"drawing\").width = 0;\n    document.getElementById(\"drawing\").height = 0;\n\n    document.getElementById(\"drawing\").width = cvsWidth;\n    document.getElementById(\"drawing\").height = cvsHeight;\n\n    drawingCxt.clearRect(0,0,cvsWidth,cvsHeight);\n\n    drawingCxt.fillStyle = \"#333333\";\n    drawingCxt.fillRect(0,0,cvsWidth,cvsHeight);\n\n    drawingCxt.fillStyle = \"#FFFFFF\";\n    drawingCxt.strokeStyle = \"#FFFFFF\";\n\n    drawingCxt.lineWidth = lineWidth;\n}\n\nfunction resetEverything(noLog) {\n    if(!noLog) {\n        addAction(\"reset\",\"\");\n    }\n\n    paths = [];\n    currentPath = [];\n    clearCanvas();\n}\n\nfunction removePath(id) {\n    paths[id] = null;\n}\n\nfunction renderAllPaths() {\n    clearCanvas();\n    for(var i in paths) {\n        var currPath = paths[i];\n        if(!currPath) continue;\n\n        if(currPath.type) {\n            var currType = currPath.type;\n            if(currType == \"circle\") {\n                var props = currPath.props;\n                if(props.length != 3) continue;\n                drawingCxt.moveTo(props[0] + props[2], props[1]);\n                drawingCxt.arc(props[0], props[1], props[2], 0, Math.PI * 2);\n            }\n            continue;\n        }\n        if(currPath.length < 1) continue;\n        drawingCxt.moveTo(currPath[0][0],currPath[0][1]);\n        for(var j = 1; j < currPath.length; j++) {\n            drawingCxt.lineTo(currPath[j][0],currPath[j][1]);\n        }\n    }\n\n    drawingCxt.stroke();\n\n    console.log(paths);\n}\n\nfunction getActions() {\n    return JSON.stringify(actions);\n}\n\nfunction loadActions(ats, noReset) {\n    if(noReset) {\n        for(var i in ats) {\n            var currAction = ats[i];\n            if(currAction.actionType == \"cancel\") {\n                for(var j=0; j<actions.length; j++) {\n                    if(actions[j].id == currAction.targetId) {\n                        //console.log(\"Canceling action\");\n                        actions.splice(j,1);\n                        break;\n                    }\n                }\n                for(var j=0; j<ats.length; j++) {\n                    if(ats[j].id == currAction.targetId) {\n                        //console.log(\"Canceling action\");\n                        ats.splice(j,1);\n                        break;\n                    }\n                }\n                ats.splice(i,1);\n            }\n        }\n\n        for(var id in ats) {\n            actions.push(ats[id]);\n        }\n    } else {\n        actions = ats;\n    }\n\n    paths = [];\n\n    for(var i in actions) {\n        var currAction = actions[i];\n        console.log(\"Loading action \"+currAction.id);\n        switch(currAction.actionType) {\n            case \"new\":\n                switch(currAction.objectType) {\n                    case \"path\":\n                        paths.push(currAction.points);\n                        break;\n                    default:\n                        console.log(\"Unknown object type \"+currAction.objectType);\n                }\n                break;\n            case \"remove\":\n                switch(currAction.objectType) {\n                    case \"path\":\n                        removePath(currAction.pathId);\n                        break;\n                    default:\n                        console.log(\"Unknown object type \"+currAction.objectType);\n                }\n                break;\n            case \"reset\":\n                resetEverything(true);\n                break;\n            default:\n                console.log(\"Unknown action type \"+currAction.actionType);\n        }\n    }\n    renderAllPaths();\n}\n\nfunction loadActionsFromServer(commitToken) {\n    $.post(serverAddr+\"/fetch\",commitToken,function(resp) {\n        if(resp == \"Failed\" || resp[0] != '[') return;\n\n        /*var parts = resp.split(\"\\n\");\n        actions = [];\n\n        for(var i = parts.length-1; i >= 0; i--) loadActions(JSON.parse(parts[i]), true);*/\n\n        loadActions(JSON.parse(resp));\n\n        parentCommit = commitToken;\n        commitHistory.push(commitToken);\n\n        $(\"#last-commit-id\").html(commitToken);\n    });\n}\n\nfunction cancelStep() {\n    if(actions.length == 0) return;\n    cancelAction(actions[actions.length-1].id);\n    clearCanvas();\n    loadActions(actions);\n}\n\nfunction addAction(actionType, objectType, details) {\n    var actionId = randomNumeric();\n\n    var actionDetails = {\n        \"id\": actionId,\n        \"actionType\": actionType,\n        \"objectType\": objectType\n    }\n\n    if(details) {\n        for(key in details) {\n            actionDetails[key] = details[key];\n        }\n    }\n\n    if(actionType != \"cancel\") actions.push(actionDetails);\n\n    new_actions.push(actionDetails);\n\n    return actionId;\n}\n\nfunction cancelAction(actionId) {\n    for(var i in actions) {\n        if(actions[i].id == actionId) {\n            actions.splice(i,1);\n            addAction(\"cancel\",\"action\",{\n                \"targetId\": actionId\n            });\n            return true;\n        }\n    }\n\n    return false;\n}\n\nfunction commitActions(callback) {\n    $(\"#last-commit-id\").html(\"...\");\n\n    $.post(serverAddr+\"/commit\",JSON.stringify({\n        \"parentCommit\": parentCommit,\n        \"actions\": new_actions\n    }),function(resp) {\n        if(resp==\"Failed\" || resp.length != 8) {\n            alert(\"提交失败。\");\n            return;\n        }\n        parentCommit = resp;\n        commitHistory.push(resp);\n        new_actions = [];\n        $(\"#last-commit-id\").html(resp);\n        setCookie(\"AlphaBoard-Last-Commit-Id\",resp,30);\n        if(callback) callback(resp);\n    })\n}\n\nfunction showCoverDiv(msg) {\n    $(\"#cover-div\").html(msg);\n    $(\"#cover-div\").css(\"line-height\",$(\"#cover-div\").css(\"height\"));\n    $(\"#cover-div\").fadeIn();\n    $(\"#cover-div\").dblclick(function() {\n        $(\"#cover-div\").fadeOut();\n        $(\"#cover-div\").click(function() {});\n    });\n}\n\nfunction commitAndShare() {\n    commitActions(function(token) {\n        showCoverDiv(window.location.href + \"?alphaboard_load=\" + token);\n    });\n}\n\nvar actionListShowed = false;\n\nfunction toggleActionList() {\n    if(!actionListShowed) {\n        actionListShowed = true;\n        drawingDisabled = true;\n        updateActionList();\n        $(\"#action-list\").fadeIn();\n        $(\"#cover-div\").html(\"\");\n        $(\"#cover-div\").fadeIn();\n        $(\"#cover-div\").click(toggleActionList);\n    } else {\n        actionListShowed = false;\n        drawingDisabled = false;\n        $(\"#cover-div\").unbind(\"click\");\n        $(\"#action-list\").fadeOut();\n        $(\"#commit-list\").fadeOut();\n        $(\"#path-list\").fadeOut();\n        $(\"#cover-div\").fadeOut();\n\n        var pathPreviews = document.getElementsByClassName(\"path-preview\");\n        for(var id = 0; id < pathPreviews.length; id++) {\n            console.log(pathPreviews[id]);\n            if(pathPreviews[id]) document.body.removeChild(pathPreviews[id])\n        };\n    }\n}\n\nfunction cancelActionsInList() {\n    var children = $(\"#action-list-content\").children(\"tr\");\n    for(var i=0; i<children.length; i++) {\n        if(children[i].isSelected) {\n            cancelAction(children[i].actionId);\n            break;\n        }\n    }\n    updateActionList();\n    loadActions(actions);\n}\n\nfunction updateActionList() {\n    var actionList = document.getElementById(\"action-list-content\");\n\n    actionList.innerHTML = \"\";\n\n    for(var id = actions.length - 1; id >= 0 && id >= actions.length - 10; id--) {\n        var item = actions[id];\n        var actionDesc = \"\";\n\n        switch(item.actionType) {\n            case \"new\":\n                actionDesc = \"新建\";\n                switch(item.objectType) {\n                    case \"path\":\n                        if(item.hasOwnProperty(\"desc\")) actionDesc += item.desc;\n                        else actionDesc += \"路径\";\n\n                        if(!item.points.type) {\n                            actionDesc += \" 从 \"+Math.floor(item.points[0][0])+\",\"+Math.floor(item.points[0][1])\n                                +\" 到 \"+Math.floor(item.points[item.points.length - 1][0])+\",\"+Math.floor(item.points[item.points.length - 1][1]);\n                        }\n                        break;\n                    default:\n                        actionDesc += item.objectType;\n                }\n                break;\n            case \"remove\":\n                actionDesc = \"移除\";\n                switch(item.objectType) {\n                    case \"path\":\n                        if(item.hasOwnProperty(\"desc\")) actionDesc += item.desc;\n                        else actionDesc += \"路径\";\n                        break;\n                    default:\n                        actionDesc += item.objectType;\n                }\n                break;\n            case \"reset\":\n                actionDesc = \"重置\";\n                break;\n            default:\n                actionDesc = item.actionType;\n        }\n\n        var newElement = document.createElement(\"tr\");\n        newElement.innerHTML = actionDesc;\n        newElement.actionId = item.id;\n\n        $(newElement).click(function(e) {\n            if(e.target.isSelected) {\n                $(e.target).css(\"background\",\"none\");\n                $(e.target).css(\"color\",\"#FFFFFF\");\n                e.target.isSelected = false;\n            } else {\n                $(e.target).css(\"background-color\",\"#FFFFFF\");\n                $(e.target).css(\"color\",\"#000000\");\n                e.target.isSelected = true;\n            }\n        });\n\n        actionList.appendChild(newElement);\n    }\n}\n\nfunction showCommitList() {\n    updateCommitList();\n    $(\"#action-list\").fadeOut();\n    $(\"#commit-list\").fadeIn();\n}\n\nfunction removeSelectedPaths() {\n    var items = document.getElementsByClassName(\"path-list-item\");\n    var pathList = document.getElementById(\"path-list-content\");\n\n    console.log(items);\n\n    for(var id in items) {\n        var item = items[id];\n        console.log(item);\n        if(item.isSelected) {\n            addAction(\"remove\",\"path\",{\n                \"pathId\": item.pathId\n            });\n            removePath(item.pathId);\n            pathList.removeChild(item);\n            if(item.previewCanvas) document.body.removeChild(item.previewCanvas);\n        }\n    }\n\n    renderAllPaths();\n}\n\nfunction createPathPreview(path) {\n    coverLayer = document.createElement(\"canvas\");\n    coverLayer.className = \"path-preview\";\n    coverLayer.width = $(document).width();\n    coverLayer.height = $(document).height() - 50;\n\n    $(coverLayer).css(\"position\",\"fixed\");\n    $(coverLayer).css(\"top\",\"0px\");\n    $(coverLayer).css(\"bottom\",\"50px\");\n    $(coverLayer).css(\"left\",\"0px\");\n    $(coverLayer).css(\"right\",\"0px\");\n\n    coverCxt = coverLayer.getContext(\"2d\");\n    coverCxt.fillStyle = \"#FF0000\";\n    coverCxt.strokeStyle = \"#FF0000\";\n\n    coverCxt.lineWidth = lineWidth;\n\n    coverCxt.moveTo(path[0][0], path[0][1]);\n\n    for(var i=1; i<path.length; i++) {\n        coverCxt.lineTo(path[i][0],path[i][1]);\n    }\n\n    coverCxt.stroke();\n\n    document.body.appendChild(coverLayer);\n\n    return coverLayer;\n}\n\nfunction updatePathList() {\n    var pathList = document.getElementById(\"path-list-content\");\n\n    pathList.innerHTML = \"\";\n\n    for(var id = paths.length - 1; id >= 0 && id >= paths.length - 15; id--) {\n        var item = paths[id];\n        if(!item) continue;\n\n        var newElement = document.createElement(\"tr\");\n        newElement.pathId = id;\n        newElement.className = \"path-list-item\";\n        newElement.innerHTML = \"路径 \" + id.toString();\n\n        if(item.hasOwnProperty(\"type\")) newElement.innerHTML += \" [\" + item.type + \"]\";\n        else newElement.innerHTML += \" 共 \"+item.length+\" 个节点\";\n\n        $(newElement).click(function(e) {\n            if(e.target.isSelected) {\n                $(e.target).css(\"background\",\"none\");\n                $(e.target).css(\"color\",\"#FFFFFF\");\n                e.target.isSelected = false;\n                if(e.target.previewCanvas) document.body.removeChild(e.target.previewCanvas);\n            } else {\n                $(e.target).css(\"background-color\",\"#FFFFFF\");\n                $(e.target).css(\"color\",\"#000000\");\n                e.target.isSelected = true;\n                e.target.previewCanvas = createPathPreview(paths[e.target.pathId]);\n            }\n        });\n\n        pathList.appendChild(newElement);\n    }\n}\n\nfunction showPathList() {\n    updatePathList();\n    $(\"#action-list\").fadeOut();\n    $(\"#path-list\").fadeIn();\n}\n\nfunction updateCommitList() {\n    var commitList = document.getElementById(\"commit-list-content\");\n    commitList.innerHTML = \"\";\n    for(var id = commitHistory.length - 1; id >= 0; id--) {\n        var item = commitHistory[id];\n\n        var newElement = document.createElement(\"tr\");\n        newElement.innerHTML = item;\n        newElement.commitId = item;\n\n        $(newElement).click(function(e) {\n            if(e.target.isSelected) {\n                $(e.target).css(\"background\",\"none\");\n                $(e.target).css(\"color\",\"#FFFFFF\");\n                e.target.isSelected = false;\n            } else {\n                $(e.target).css(\"background-color\",\"#FFFFFF\");\n                $(e.target).css(\"color\",\"#000000\");\n                e.target.isSelected = true;\n            }\n        });\n\n        commitList.appendChild(newElement);\n    }\n}\n\nfunction onResize() {\n    setTimeout(function() {\n        cvsWidth = $(document).width();\n        cvsHeight = $(document).height() - 50;\n\n        document.getElementById(\"drawing\").width = cvsWidth;\n        document.getElementById(\"drawing\").height = cvsHeight;\n\n        renderAllPaths();\n    },100);\n}\n\nfunction startCheckResize() {\n    var prevHeight,prevWidth;\n\n    prevWidth = $(document).width();\n    prevHeight = $(document).height();\n\n    setInterval(function() {\n        if($(document).width() != prevWidth || $(document).height() != prevHeight) {\n            onResize(); \n            prevWidth = $(document).width();\n            prevHeight = $(document).height();\n        }\n    },500);\n}\n\nfunction promptForLoadCommit() {\n    var targetCommitId = prompt(\"输入要加载的提交 ID: \");\n    if(targetCommitId) {\n        console.log(targetCommitId);\n        loadActionsFromServer(targetCommitId);\n        renderAllPaths();\n        toggleActionList();\n    }\n}\n\nfunction switchFullScreen() {\n    toggleFullScreen();\n    onResize();\n}\n\nfunction showAboutInfo() {\n    var aboutInfo = \"AlphaBoard nightly-20161214\\n\\nCopyright &copy; 2016 Heyang Zhou.\\nLicensed under LGPL v3.\";\n    if(!enableNodeExtensions) showPopup(\"<pre>\"+aboutInfo+\"</pre>\");\n    else {\n        var request = require(\"request\");\n        request.get(localServiceAddr + \"/version\", function(err,resp,body) {\n            if(!err) aboutInfo += \"\\nWith \" + body;\n            showPopup(\"<pre>\"+aboutInfo+\"</pre>\");\n        });\n    }\n}\n\nfunction checkCloudStatus(targetElement) {\n    $(targetElement).html(\"未知\");\n    $.get(serverAddr + \"/ping\", function(resp) {\n        if(resp == \"Pong\") $(targetElement).html(\"正常\");\n        else $(targetElement).html(\"异常\");\n    });\n}\nfunction startCheckCloudStatus() {\n    var targetElement = document.getElementById(\"cloud-status-text\");\n\n    checkCloudStatus(targetElement);\n\n    setInterval(function() {\n        checkCloudStatus(targetElement);\n    },10000);\n}\n\nwindow.addEventListener(\"load\",function() {\n    if(isInNode()) {\n        enableNodeExtensions = true;\n        try {\n            loadLocalConfig();\n        } catch(e) {\n        }\n        toggleFullScreen();\n    }\n\n    document.oncontextmenu = function() {\n        return false;\n    };\n\n    cvsWidth = $(document).width();\n    cvsHeight = $(document).height() - 50;\n\n    document.getElementById(\"drawing\").width = cvsWidth;\n    document.getElementById(\"drawing\").height = cvsHeight;\n\n    drawingCxt = document.getElementById(\"drawing\").getContext(\"2d\");\n\n    drawingCxt.strokeStyle = \"#FFFFFF\";\n\n    clearCanvas();\n\n    var initialCommit = getQueryString(\"alphaboard_load\");\n    if(!initialCommit) var initialCommit = getCookie(\"AlphaBoard-Last-Commit-Id\");\n\n    if(initialCommit) {\n        loadActionsFromServer(initialCommit);\n    }\n\n    startCheckResize();\n    startCheckCloudStatus();\n});\n\nfunction drawBegin(e) {\n    if(drawingDisabled) return;\n\n    var targetX = e.pageX, targetY = e.pageY;\n\n    if(targetX > cvsWidth || targetY > cvsHeight) return;\n\n    isDrawing = true;\n\n    var foundStickingTarget = false;\n\n    if(isSticky && lineMode != \"any\") {\n        for(var i in paths) {\n            var currPath = paths[i];\n            if(currPath.length && currPath.length > 5) continue;\n            for(var j in currPath) {\n                var pt = currPath[j];\n                if(Math.abs(pt[0] - e.pageX) <= stickyRadius && Math.abs(pt[1] - e.pageY) <= stickyRadius) {\n                    targetX = pt[0];\n                    targetY = pt[1];\n                    foundStickingTarget = true;\n                    break;\n                }\n            }\n            if(foundStickingTarget) break;\n        }\n    }\n\n    currentPath.push([targetX, targetY]);\n\n    coverLayer = document.createElement(\"canvas\");\n    coverLayer.width = $(document).width();\n    coverLayer.height = $(document).height() - 50;\n\n    $(coverLayer).css(\"position\",\"fixed\");\n    $(coverLayer).css(\"top\",\"0px\");\n    $(coverLayer).css(\"bottom\",\"50px\");\n    $(coverLayer).css(\"left\",\"0px\");\n    $(coverLayer).css(\"right\",\"0px\");\n\n    coverCxt = coverLayer.getContext(\"2d\");\n    coverCxt.fillStyle = \"#FFFFFF\";\n    coverCxt.strokeStyle = \"#FFFFFF\";\n\n    coverCxt.moveTo(targetX, targetY);\n\n    document.body.appendChild(coverLayer);\n}\n\n$(document).mousedown(drawBegin);\ndocument.addEventListener(\"touchstart\",function(e) {\n    drawBegin(e.touches[0]);\n});\n\nfunction drawEnd() {\n    if(drawingDisabled || !isDrawing) return;\n\n    isDrawing = false;\n\n    var origX = currentPath[currentPath.length - 1][0], origY = currentPath[currentPath.length - 1][1];\n\n    var targetX = origX, targetY = origY;\n\n    var foundStickingTarget = false;\n\n    if(isSticky && lineMode != \"any\") {\n        for(var i in paths) {\n            var currPath = paths[i];\n            if(currPath.length && currPath.length > 5) continue;\n            for(var j in currPath) {\n                var pt = currPath[j];\n                if(Math.abs(pt[0] - origX) <= stickyRadius && Math.abs(pt[1] - origY) <= stickyRadius) {\n                    targetX = pt[0];\n                    targetY = pt[1];\n                    foundStickingTarget = true;\n                    break;\n                }\n            }\n            if(foundStickingTarget) break;\n        }\n    }\n\n    coverCxt.lineTo(targetX, targetY);\n    coverCxt.stroke();\n\n    currentPath.push([targetX, targetY]);\n\n    if(lineMode == \"straight\") {\n        paths.push([currentPath[0],currentPath[currentPath.length - 1]]);\n        addAction(\"new\",\"path\",{\n            \"desc\": \"直线\",\n            \"points\": [currentPath[0],currentPath[currentPath.length - 1]]\n        });\n    } else if(lineMode == \"rect\") {\n        var startPt = currentPath[0];\n        var endPt = currentPath[currentPath.length - 1];\n        var ptA = [endPt[0], startPt[1]];\n        var ptB = [startPt[0], endPt[1]];\n        var targetPath = [startPt,ptA,endPt,ptB,startPt];\n        paths.push(targetPath);\n        addAction(\"new\",\"path\",{\n            \"desc\": \"矩形\",\n            \"points\": targetPath\n        });\n    } else if(lineMode == \"circle\") {\n        var centerPt = currentPath[0];\n        var endPt = currentPath[currentPath.length - 1];\n\n        var distanceX = Math.abs(endPt[0] - centerPt[0]);\n        var distanceY = Math.abs(endPt[1] - centerPt[1]);\n        var distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);\n\n        var targetPath = {\n            \"type\": \"circle\",\n            \"props\": [centerPt[0], centerPt[1], distance]\n        };\n\n        paths.push(targetPath);\n\n        addAction(\"new\",\"path\",{\n            \"desc\": \"圆\",\n            \"points\": targetPath\n        });\n    } else {\n        paths.push(currentPath);\n        addAction(\"new\",\"path\",{\n            \"points\": currentPath\n        });\n    }\n\n    if(enableNodeExtensions) {\n        var target_paths_length = paths.length - 1;\n        for(var i = 0; i < target_paths_length; i++) {\n            var p = paths[i];\n            if(!p.length || p.length > 5) continue;\n            for(var j = 0; j < p.length - 1; j++) {\n                var item = [p[j], p[j+1]];\n                if(item[0][0] == item[1][0] && item[0][1] == item[1][1]) continue;\n                (function() {\n                    currentPath = paths[paths.length - 1];\n                    for(var k = 0; k < currentPath.length - 1; k++) {\n                        var lineA = [currentPath[k][0], currentPath[k][1], currentPath[k+1][0], currentPath[k+1][1]];\n                        var lineB = [item[0][0], item[0][1], item[1][0], item[1][1]];\n                        var reqJson = {\n                            \"lineA\": lineA,\n                            \"lineB\": lineB\n                        };\n                        var request = require(\"request\");\n                        request.post(localServiceAddr + \"/algorithms/get_intersection\", {\n                            \"form\": JSON.stringify(reqJson)\n                        }, function(err,resp,body) {\n                            if(err || !body.length || body[0] != \"[\") {\n                                return;\n                            }\n\n                            var respData = JSON.parse(body);\n\n                            if(respData[0] < 0 || respData[1] < 0) return;\n\n                            paths.push([respData, respData]);\n\n                            addAction(\"new\",\"path\",{\n                                \"desc\": \"交点\",\n                                \"points\": [respData, respData]\n                            });\n                        });\n                    }\n                })();\n            }\n        }\n    }\n\n    currentPath = [];\n\n    document.body.removeChild(coverLayer);\n    coverLayer = null;\n    coverCxt = null;\n\n    renderAllPaths();\n}\n\n$(document).mouseup(drawEnd);\ndocument.addEventListener(\"touchend\",function() {\n    drawEnd();\n});\n\nfunction drawMove(e) {\n    if(drawingDisabled) return;\n\n    if(!isDrawing) return;\n\n    //e.preventDefault();\n\n    coverCxt.lineTo(e.pageX, e.pageY);\n    coverCxt.stroke();\n\n    currentPath.push([e.pageX, e.pageY]);\n}\n\n\n$(document).mousemove(drawMove);\ndocument.addEventListener(\"touchmove\",function(e) {\n    drawMove(e.touches[0]);\n});\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/css/MaterialIcons.css",
+      "name": "MaterialIcons.css",
+      "lang": "css",
+      "lines": 23,
+      "size": 573,
+      "content": "/* fallback */\n@font-face {\n  font-family: 'Material Icons';\n  font-style: normal;\n  font-weight: 400;\n  src: local('Material Icons'), local('MaterialIcons-Regular'), url(../fonts/MaterialIcons.woff2) format('woff2');\n}\n\n.material-icons {\n  font-family: 'Material Icons';\n  font-weight: normal;\n  font-style: normal;\n  font-size: 24px;\n  line-height: 1;\n  letter-spacing: normal;\n  text-transform: none;\n  display: inline-block;\n  white-space: nowrap;\n  word-wrap: normal;\n  direction: ltr;\n  -webkit-font-feature-settings: 'liga';\n  -webkit-font-smoothing: antialiased;\n}\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/css/nav-cards.css",
+      "name": "nav-cards.css",
+      "lang": "css",
+      "lines": 27,
+      "size": 644,
+      "content": ".index-nav-card.mdl-card {\n    width: 256px;\n    height: 256px;\n    margin: 0 auto;\n}\n.index-nav-card > .mdl-card__actions {\n    border-color: rgba(255, 255, 255, 0.2);\n}\n.index-nav-card > .mdl-card__title {\n    align-items: flex-start;\n}\n.index-nav-card > .mdl-card__title > h4 {\n    margin-top: 0;\n}\n.index-nav-card > .mdl-card__actions {\n    display: flex;\n    box-sizing:border-box;\n    align-items: center;\n}\n.index-nav-card > .mdl-card__actions > .material-icons {\n    padding-right: 10px;\n}\n.index-nav-card > .mdl-card__title,\n.index-nav-card > .mdl-card__actions,\n.index-nav-card > .mdl-card__actions > .mdl-button {\n    color: #fff;\n}\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/css/notification_publisher.css",
+      "name": "notification_publisher.css",
+      "lang": "css",
+      "lines": 33,
+      "size": 648,
+      "content": ".notification-card {\n    padding: 20px 20px;\n    margin-right: 20px;\n    margin-bottom: 30px;\n    margin-top: 30px;\n    background-color: #FFFFFF;\n}\n.notification-card-date {\n    color: #666666;\n    font-size: 12px;\n    line-height: 24px;\n}\n.notification-card-date-icon {\n    font-size: 12px;\n}\n.expand-new-notification-form {\n    display: none;\n}\n#notifications {\n    user-select: text;\n    -webkit-user-select: text;\n    height: 330px;\n    margin-right: 100px;\n    overflow-y: scroll;\n    word-wrap: break-word;\n    word-break: break-all;\n}\n#new-notification-form {\n    margin-bottom: 20px;\n}\n#new-notification {\n    background-color: #E0E0E0;\n}\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/css/settings.css",
+      "name": "settings.css",
+      "lang": "css",
+      "lines": 8,
+      "size": 135,
+      "content": ".settings-content-item-key {\n    font-weight: bold;\n}\n\n.settings-content-item-value {\n    margin-left: 15px;\n    margin-right: 15px;\n}\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/css/style.css",
+      "name": "style.css",
+      "lang": "css",
+      "lines": 84,
+      "size": 1346,
+      "content": "body {\n    user-select: none;\n    -webkit-user-select: none;\n    background-color: #CCCCCC;\n    background-size: cover;\n}\n\n#main-dialog {\n    display: none;\n    position: fixed;\n    z-index: 100;\n}\n\n#main-notification-card {\n    display: none;\n    position: fixed;\n    left: 50px;\n    bottom: 50px;\n    height: 60px;\n    width: 350px;\n    padding: 20px 20px;\n    color: #FFFFFF;\n    font-size: 24px;\n    z-index: 100;\n}\n\n.card-color-pink {\n    background-color: rgb(233, 30, 99);\n}\n.card-color-purple {\n    background-color: rgb(156, 39, 176);\n}\n.card-color-blue {\n    background-color: rgb(33, 150, 243);\n}\n.card-color-orange {\n    background-color: rgb(255, 152, 0);\n}\n.card-color-teal {\n    background-color: rgb(0, 150, 136);\n}\n\n.card-with-background-image {\n    background-size: cover;\n    background-position: center;\n}\n\n.header-icons {\n    margin-left: 10px;\n}\n\n#header-clock {\n    margin-left: 15px;\n}\n\n.page-content {\n    position: fixed;\n    width: 100%;\n    margin-top: 50px;\n    overflow: hidden;\n}\n\n.page-content-invisible {\n    display: none;\n    margin-left: 100px;\n}\n\n.page-content-no-transparent {\n    padding: 20px 20px;\n    background-color: #EEEEEE;\n}\n\n.system-info-list-item-value {\n    color: #000000;\n}\n\n#local-app {\n    position: fixed;\n    top: 0px;\n    left: -100px;\n    bottom: 0px;\n    width: 100%;\n    z-index: 10;\n}\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/external_program_panel.html",
+      "name": "external_program_panel.html",
+      "lang": "html",
+      "lines": 25,
+      "size": 748,
+      "content": "<html>\n    <head>\n        <link rel=\"stylesheet\" type=\"text/css\" href=\"css/MaterialIcons.css\" />\n        <script src=\"scripts/external_program_panel.js\"></script>\n        <style>\n            body {\n                background-color: #454545;\n            }\n            .return-button {\n                position: fixed;\n                margin: 0 auto;\n                top: 0px;\n                left: 0px;\n                width: 100%;\n                height: 100%;\n                color: #FFFFFF;\n            }\n        </style>\n    </head>\n    <body>\n        <div class=\"return-button text-external-program-return\" onclick=\"terminateAll()\">\n            <i class=\"material-icons\" style=\"font-size: 50px\">arrow_back</i>\n        </div>\n    </body>\n</html>"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/global_notification.html",
+      "name": "global_notification.html",
+      "lang": "html",
+      "lines": 30,
+      "size": 862,
+      "content": "<html>\n    <head>\n        <style>\n            body {\n                background-color: rgb(0, 150, 136);\n                color: #FFFFFF;\n            }\n            #notification {\n                margin-top: 20px;\n                margin-left: 20px;\n                margin-bottom: 20px;\n                margin-right: 20px;\n                font-size: 24px;\n            }\n        </style>\n    </head>\n    <body>\n        <div id=\"notification\"></div>\n        <script>\n            const {ipcRenderer} = require(\"electron\");\n            ipcRenderer.on(\"notification-content\", (e, msg) => {\n                document.getElementById(\"notification\").innerHTML = msg;\n            });\n            document.body.addEventListener(\"click\", () => {\n                window.close();\n            });\n            setTimeout(window.close, 5000);\n        </script>\n    </body>\n</html>\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/index.html",
+      "name": "index.html",
+      "lang": "html",
+      "lines": 144,
+      "size": 7727,
+      "content": "<!DOCTYPE html>\n\n<html>\n\n<head>\n    <meta charset=\"utf-8\" />\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/material.min.css\" />\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/MaterialIcons.css\" />\n    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/style.css\" />\n    <script src=\"scripts/jquery.min.js\"></script>\n    <script src=\"scripts/material.min.js\"></script>\n    <script src=\"scripts/translations/zh-CN.js\"></script>\n    <script src=\"scripts/translations/zh-CN-om.js\"></script>\n    <script src=\"scripts/index.js\"></script>\n    <title>CloudEdu</title>\n</head>\n\n<body>\n    <div class=\"mdl-layout mdl-js-layout mdl-layout--fixed-header\">\n        <header class=\"mdl-layout__header\">\n            <div class=\"mdl-layout__header-row\">\n                <!-- Title -->\n                <span class=\"mdl-layout-title goto-home\">CloudEdu</span>\n                <div class=\"mdl-layout-spacer\"></div>\n                <!-- No client service warning -->\n                <i class=\"material-icons header-icons show-if-no-client-service\" onclick=\"tryShowNoClientServiceWarning()\">warning</i>\n                <i class=\"material-icons header-icons\" onclick=\"showSettings()\">settings</i>\n                <i class=\"material-icons header-icons\" onclick=\"reloadPage()\">refresh</i>\n                <i class=\"material-icons header-icons\" onclick=\"exitApp()\">close</i>\n                <span class=\"current-time\" id=\"header-clock\"></span>\n            </div>\n        </header>\n        <div class=\"mdl-layout__drawer\">\n            <span class=\"mdl-layout-title\">CloudEdu</span>\n            <nav class=\"mdl-navigation\">\n                <a class=\"mdl-navigation__link goto-home\" href=\"javascript:;\" id=\"nav-button-goto-home\"></a>\n                <a class=\"mdl-navigation__link lookup-score\" href=\"javascript:;\" id=\"nav-button-lookup-score\"></a>\n                <a class=\"mdl-navigation__link do-reboot\" href=\"javascript:;\" id=\"nav-button-reboot\"></a>\n                <a class=\"mdl-navigation__link do-poweroff\" href=\"javascript:;\" id=\"nav-button-poweroff\"></a>\n            </nav>\n            <div style=\"height: 20px\"></div>\n            <!-- Copyright -->\n            <div style=\"margin-left: 15px\">\n                <span>Copyright &copy; 2016 Heyang Zhou.<br></span>\n                <span>GitHub: <strong>losfair/CloudEdu</strong></span>\n            </div>\n        </div>\n        <dialog class=\"mdl-dialog\" id=\"main-dialog\">\n            <h4 class=\"mdl-dialog__title\" id=\"main-dialog-title\"></h4>\n            <div class=\"mdl-dialog__content\" id=\"main-dialog-content\"></div>\n            <div class=\"mdl-dialog__actions\">\n                <button type=\"button\" class=\"mdl-button\" id=\"main-dialog-ok-button\">OK</button>\n            </div>\n        </dialog>\n        <div class=\"card-color-teal mdl-shadow--2dp\" id=\"main-notification-card\">\n        </div>\n        <main class=\"mdl-layout__content\">\n            <div id=\"main-container\" class=\"page-content\">\n                <link rel=\"stylesheet\" type=\"text/css\" href=\"css/nav-cards.css\" />\n                <table style=\"margin: 0 auto\">\n                    <tr>\n                        <td>\n                            <!-- Notification publishing -->\n                            <div class=\"index-nav-card card-with-background-image mdl-card mdl-shadow--2dp\" style=\"background-image: url(images/blackboard.jpg)\">\n                                <div class=\"mdl-card__title mdl-card--expand\">\n                                    <h4 class=\"text-notification-publish-title\"></h4>\n                                </div>\n                                <div class=\"mdl-card__actions mdl-card--border\">\n                                    <a class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text-nav-card-enter\" onclick=\"openNotificationPublisher()\">\n                                    </a>\n                                    <div class=\"mdl-layout-spacer\"></div>\n                                </div>\n                            </div>\n                        </td>\n\n                        <td>\n                            <!-- AlphaBoard -->\n                            <div class=\"index-nav-card card-with-background-image mdl-card mdl-shadow--2dp\" style=\"background-image: url(images/colors.jpg)\">\n                                <div class=\"mdl-card__title mdl-card--expand\">\n                                    <h4 class=\"text-alphaboard-title\"></h4>\n                                </div>\n                                <div class=\"mdl-card__actions mdl-card--border\">\n                                    <a class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text-nav-card-enter\" onclick=\"openAlphaBoard()\">\n                                    </a>\n                                    <div class=\"mdl-layout-spacer\"></div>\n                                </div>\n                            </div>\n                        </td>\n\n                    </tr>\n                    <tr>\n\n                        <td>\n\n                            <!-- File browser -->\n                            <div class=\"index-nav-card card-with-background-image mdl-card mdl-shadow--2dp\" style=\"background-image: url(images/files.jpg)\">\n                                <div class=\"mdl-card__title mdl-card--expand\">\n                                    <h4 class=\"text-file-browser-title\"></h4>\n                                </div>\n                                <div class=\"mdl-card__actions mdl-card--border\">\n                                    <a class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text-nav-card-enter\" onclick=\"openFileBrowser()\">\n                                    </a>\n                                    <div class=\"mdl-layout-spacer\"></div>\n                                </div>\n                            </div>\n                        </td>\n                        <td>\n\n                            <!-- System info -->\n                            <div class=\"index-nav-card card-with-background-image mdl-card mdl-shadow--2dp\" style=\"background-image: url(images/gears.jpg)\">\n                                <div class=\"mdl-card__title mdl-card--expand\">\n                                    <h4 class=\"text-system-info-title\"></h4>\n                                </div>\n                                <div class=\"mdl-card__actions mdl-card--border\">\n                                    <a class=\"mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect text-nav-card-enter\" onclick=\"showSystemInfo()\">\n                                    </a>\n                                    <div class=\"mdl-layout-spacer\"></div>\n                                </div>\n                            </div>\n                        </td>\n                    </tr>\n                </table>\n            </div>\n            <!-- Local apps in other pages -->\n            <webview id=\"local-app\" class=\"page-content page-content-invisible\">\n            </webview>\n            <!-- Notification publisher -->\n            <div id=\"notification-publisher-container\" class=\"page-content page-content-invisible\">\n            </div>\n            <!-- System info -->\n            <div id=\"system-info-container\" class=\"page-content page-content-invisible page-content-no-transparent\">\n            </div>\n            <!-- Settings -->\n            <div id=\"settings-container\" class=\"page-content page-content-invisible page-content-no-transparent\">\n            </div>\n            <!-- Lookup score -->\n            <div id=\"lookup-score-container\" class=\"page-content page-content-invisible page-content-no-transparent\">\n            </div>\n            <div style=\"height: 50px\"></div>\n        </main>\n    </div>\n</body>\n\n</html>"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/lookup_score.html",
+      "name": "lookup_score.html",
+      "lang": "html",
+      "lines": 128,
+      "size": 5501,
+      "content": "<div class=\"mdl-typography--display-2 text-score-lookup-title inner-page-title\"></div>\n\n<table id=\"settings-content\" cellspacing=\"10\">\n    <tr>\n        <td class=\"text-score-lookup-service\"></td>\n        <td class=\"mdl-textfield mdl-js-textfield\">\n            <input class=\"mdl-textfield__input\" type=\"text\" id=\"score-lookup-service-name\" value=\"zhixue\" />\n            <label class=\"mdl-textfield__label\" for=\"score-lookup-service-name\"></label>\n        </td>\n    </tr>\n    <tr>\n        <td class=\"text-score-lookup-username\"></td>\n        <td class=\"mdl-textfield mdl-js-textfield\">\n            <input class=\"mdl-textfield__input\" type=\"text\" id=\"score-lookup-username\" />\n            <label class=\"mdl-textfield__label\" for=\"score-lookup-username\"></label>\n        </td>\n    </tr>\n    <tr>\n        <td class=\"text-score-lookup-password\"></td>\n        <td class=\"mdl-textfield mdl-js-textfield\">\n            <input class=\"mdl-textfield__input\" type=\"password\" id=\"score-lookup-password\" />\n            <label class=\"mdl-textfield__label\" for=\"score-lookup-password\"></label>\n        </td>\n    </tr>\n</table>\n<button class=\"mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent text-score-lookup-login score-lookup-login-button\"></button>\n<div class=\"mdl-spinner mdl-js-spinner is-active\" id=\"score-lookup-loading\" style=\"display: none\"></div>\n\n<div id=\"score-lookup-exam-info\" style=\"display: none; margin-top: 30px\">\n    <span class=\"text-score-lookup-user-id\"></span>:&nbsp;<span id=\"score-lookup-user-id\"></span><br>\n    <span id=\"score-lookup-last-desc\"></span>:&nbsp;<span id=\"score-lookup-last-total\"></span><br>\n    <div id=\"score-lookup-exam-details\"></div>\n</div>\n\n<script>\n    if(lookupScoreToken === undefined) {\n        var lookupScoreToken = \"\";\n    }\n    $(\".score-lookup-login-button\").click(() => {\n        let svc = $(\"#score-lookup-service-name\").val();\n        let user = $(\"#score-lookup-username\").val();\n        let pw = $(\"#score-lookup-password\").val();\n        getConfigItem(\"cloudServiceUrl\", (csurl) => {\n            if(!csurl) {\n                showDialog(texts[\".text-error-title\"], texts[\".text-unable-to-get-service-url\"]);\n                return;\n            }\n            $(\".score-lookup-login-button\").fadeOut(() => {\n                $(\"#score-lookup-loading\").fadeIn();\n            });\n            new Promise((cb) => {\n                request.post(csurl + \"et/login/\" + svc, {\n                    \"json\": {\n                        \"loginName\": user,\n                        \"password\": pw\n                    }\n                }, (err, resp, body) => {\n                    if(err || !body) cb(null);\n                    else cb(body);\n                })\n            }).then((data) => {\n                if(!data) {\n                    throw texts[\".text-unable-to-parse-response\"];\n                }\n                if(!data.token) {\n                    throw texts[\".text-login-failed\"];\n                }\n                lookupScoreToken = data.token;\n                $(\"#score-lookup-user-id\").text(data.user_id);\n                $(\"#score-lookup-exam-info\").fadeIn();\n                return new Promise((cb) => {\n                    request.post(csurl + \"et/exams/list\", {\n                        \"json\": {\n                            \"token\": lookupScoreToken\n                        }\n                    }, (err, resp, body) => {\n                        if(err || !body) cb(null);\n                        else cb(body);\n                    });\n                });\n            }).then((data) => {\n                if(!data) {\n                    throw texts[\".text-score-lookup-unable-to-fetch-exam-list\"];\n                }\n                let exams = data;\n                if(!exams.length) {\n                    throw texts[\".text-score-lookup-no-exams\"];\n                }\n                let lastExam = exams[exams.length - 1];\n                $(\"#score-lookup-last-desc\").text(lastExam.name);\n                $(\"#score-lookup-last-total\").text(lastExam.score);\n                return new Promise((cb) => {\n                    request.post(csurl + \"et/exams/details\", {\n                        \"json\": {\n                            \"token\": lookupScoreToken,\n                            \"examId\": lastExam.id\n                        }\n                    }, (err, resp, body) => {\n                        if(err || !body) {\n                            cb(null);\n                            return;\n                        }\n                        cb(body);\n                    });\n                })\n            }).then((details) => {\n                if(!details || !details.length) {\n                    throw texts[\".text-score-lookup-unable-to-fetch-exam-details\"];\n                }\n                let targetElem = document.getElementById(\"score-lookup-exam-details\");\n                targetElem.innerHTML = \"\";\n                details.forEach((examInfo) => {\n                    targetElem.innerHTML += examInfo.name + \": \" + examInfo.score + \"<br>\";\n                });\n                $(\"#score-lookup-loading\").fadeOut(() => {\n                    $(\".score-lookup-login-button\").fadeIn();\n                });\n            }).catch((e) => {\n                $(\"#score-lookup-loading\").fadeOut(() => {\n                    $(\".score-lookup-login-button\").fadeIn();\n                });\n                showDialog(texts[\".text-error-title\"], e.toString());\n            });\n        })\n    })\n\n    updateTexts();\n</script>\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/notification_publisher.omt",
+      "name": "notification_publisher.omt",
+      "lang": "omt",
+      "lines": 13,
+      "size": 729,
+      "content": "link rel=\"stylesheet\" type=\"text/css\" href=\"css/notification_publisher.css\"\n\nform #new-notification-form action=\"javascript:;\"\n\tdiv .mdl-textfield .mdl-js-textfield\n\t\ttextarea .mdl-textfield__input .mdl-shadow--2dp #new-notification type=\"text\" rows=\"10\"\n\t\tlabel .mdl-textfield__label for=\"new-notification\"\n\tbr\n\tbutton .mdl-button .mdl-js-button .mdl-button--raised .mdl-js-ripple-effect .mdl-button--accent .do-notification-publish => [text-do-notification-publish]\n\nbutton .mdl-button .mdl-js-button .mdl-button--raised .mdl-js-ripple-effect .mdl-button--accent .expand-new-notification-form style=\"margin-bottom: 20px\" => [text-expand-new-notification-form]\ndiv #notifications\n\nscript src=\"scripts/notification_publisher.js\"\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/scripts/external_program_panel.js",
+      "name": "external_program_panel.js",
+      "lang": "js",
+      "lines": 8,
+      "size": 193,
+      "content": "const {ipcRenderer} = require(\"electron\");\n\nfunction terminateAll() {\n    ipcRenderer.sendSync(\"synchronous-message\", {\n        \"actionType\": \"terminateExternals\"\n    });\n    window.close();\n}\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/scripts/index.js",
+      "name": "index.js",
+      "lang": "js",
+      "lines": 359,
+      "size": 11101,
+      "content": "const CURRENT_VERSION = \"0.2.0\";\nconst CURRENT_BUILD = \"20161218\";\nconst CLIENT_SERVICE_ADDR = \"http://127.0.0.1:9033/\";\n\nconst request = require(\"request\");\nconst process = require(\"process\");\nconst url = require(\"url\");\nconst path = require(\"path\");\nconst child_process = require(\"child_process\");\nconst os = require(\"os\");\nconst fs = require(\"fs\");\nconst {ipcRenderer, shell} = require(\"electron\");\nconst $ = require(\"jquery\");\n\nlet clientServiceRunning = false;\n\nlet currentCpus = os.cpus();\nlet CURRENT_CPU_MODEL = currentCpus[0].model;\nlet CURRENT_PLATFORM = os.platform();\nlet CURRENT_OS_RELEASE = os.release();\nlet CURRENT_USERNAME = os.userInfo().username;\nlet CLIENT_SERVICE_VERSION = \"Unknown\";\nlet DEVICE_ID = \"\";\n\nlet templateCache = {};\n\nfunction updateTexts() {\n    for(var key in texts) {\n        $(key).text(texts[key]);\n    }\n}\n\nif(!localStorage.modifiedConfigItems) {\n    localStorage.modifiedConfigItems = \"{}\";\n};\n\nlet modifiedConfigItems = {};\ntry {\n    modifiedConfigItems = JSON.parse(localStorage.modifiedConfigItems);\n} catch(e) {\n    modifiedConfigItems = {};\n    localStorage.modifiedConfigItems = \"{}\";\n}\n\nfunction setConfigItem(key, value, callback) {\n    modifiedConfigItems[key] = value;\n    localStorage.modifiedConfigItems = JSON.stringify(modifiedConfigItems);\n    if(callback) callback(\"OK\");\n}\n\nfunction getConfigItem(key, callback) {\n    if(modifiedConfigItems[key]) {\n        callback(modifiedConfigItems[key]);\n        return;\n    }\n    request.post({\n        \"url\": CLIENT_SERVICE_ADDR + \"config/get\",\n        \"body\": JSON.stringify({\n            \"key\": key\n        })\n    }, (err, resp, body) => {\n        if(err || !body || body == \"Failed\" || body == \"Unknown type\") callback(null);\n        else callback(body);\n    });\n}\n\nfunction showDialog(title, content) {\n    $(\"#main-dialog-ok-button\").unbind(\"click\");\n    $(\"#main-dialog-ok-button\").click(() => {\n        $(\"#main-dialog\").hide();\n    });\n    $(\"#main-dialog-title\").text(title);\n    $(\"#main-dialog-content\").text(content);\n    $(\"#main-dialog\").css(\"top\", window.innerHeight / 2 - parseInt($(\"#main-dialog\").css(\"height\")) / 2)\n    $(\"#main-dialog\").show();\n}\n\nfunction showNotification(content) {\n    $(\"#main-notification-card\").text(content);\n    $(\"#main-notification-card\").fadeIn();\n    setTimeout(() => {\n        $(\"#main-notification-card\").fadeOut();\n    }, 5000);\n}\n\nfunction showGlobalNotification(content) {\n    ipcRenderer.sendSync(\"synchronous-message\", {\n        \"actionType\": \"showGlobalNotification\",\n        \"content\": content\n    });\n}\n\nfunction tryShowNoClientServiceWarning() {\n    if(clientServiceRunning) return;\n    showDialog(texts[\".text-warning-title\"], texts[\".text-warning-no-client-service\"]);\n}\n\nfunction getClientServiceInfo() {\n    request.get(CLIENT_SERVICE_ADDR + \"version\", (err, resp, body) => {\n        if(err || !body) return;\n        CLIENT_SERVICE_VERSION = body;\n    });\n    request.get(CLIENT_SERVICE_ADDR + \"id\", (err, resp, body) => {\n        if(err || !body) return;\n        DEVICE_ID = body;\n    });\n}\n\nfunction checkClientService() {\n    request.get(CLIENT_SERVICE_ADDR + \"ping\", (err, resp, body) => {\n        if(err || body != \"Pong\") clientServiceRunning = false;\n        else {\n            clientServiceRunning = true;\n            getClientServiceInfo();\n        }\n        if(clientServiceRunning) $(\".show-if-no-client-service\").hide();\n        else $(\".show-if-no-client-service\").show();\n        setTimeout(tryShowNoClientServiceWarning, 3000);\n    });\n}\n\nfunction loadTemplate(filename, params, callback) {\n    if(!params) params = {};\n    let fileData = fs.readFileSync(filename, \"utf-8\");\n    request.post(CLIENT_SERVICE_ADDR + \"render_template\", {\n        \"form\": JSON.stringify({\n            \"template\": fileData,\n            \"params\": params\n        })\n    }, (err, resp, body) => {\n        if(err) callback(null);\n        else {\n            if(body.substr(0, 8) != \"function\") callback(null);\n            eval(\"var renderer = \" + body);\n            callback(renderer);\n        }\n    });\n}\n\nfunction getUptimeString() {\n    let uptime = new Date(os.uptime() * 1000);\n    let uptimeString = uptime.getHours() + \"h \" + uptime.getMinutes() + \"m \" + uptime.getSeconds() + \"s\";\n    return uptimeString;\n}\n\nfunction reloadPage() {\n    location.reload();\n}\n\nfunction exitApp() {\n    window.close();\n}\n\nfunction updateStyles() {\n    $(\".page-content-no-transparent\").css(\"width\", window.innerWidth - 200);\n    $(\".page-content-no-transparent\").addClass(\"mdl-shadow--2dp\");\n}\n\nfunction showSystemInfo() {\n    updateStyles();\n    $(\".page-content\").fadeOut();\n    $(\"#system-info-container\").load(\"system_info.html\", () => {\n        updateTexts();\n        $(\".current-version\").text(CURRENT_VERSION);\n        $(\".current-build\").text(CURRENT_BUILD);\n        $(\".current-client-service-version\").text(CLIENT_SERVICE_VERSION);\n        $(\".current-device-id\").text(DEVICE_ID.substr(0, 8));\n        $(\".current-cpu-model\").text(CURRENT_CPU_MODEL);\n        $(\".current-platform\").text(CURRENT_PLATFORM);\n        $(\".current-os-release\").text(CURRENT_OS_RELEASE);\n        $(\".current-username\").text(CURRENT_USERNAME);\n        $(\".current-node-version\").text(process.version);\n        $(\".current-uptime\").text(getUptimeString());\n        $(\"#system-info-container\").fadeIn();\n    });\n}\n\nfunction showSettings() {\n    if(!clientServiceRunning) {\n        showDialog(om_texts[\"text-error-title\"], om_texts[\"text-settings-error-no-client-service\"]);\n        return;\n    }\n\n    updateStyles();\n\n    let params = {};\n    new Promise((cb) => {\n        getConfigItem(\"AlphaBoard_ServerAddr\", (v) => {\n            if(!v) {\n                cb(null);\n            } else {\n                cb(v);\n            }\n        });\n    }).then((result) => {\n        if(result) {\n            params[\"alphaboard-server-addr\"] = result;\n        }\n        return new Promise((cb) => {\n            getConfigItem(\"backgroundImage\", (v) => {\n                if(!v) {\n                    cb(null);\n                } else {\n                    cb(v);\n                }\n            });\n        });\n    }).then((result) => {\n        if(result) {\n            params[\"background-image-path\"] = result;\n        }\n        $(\".page-content\").fadeOut();\n        $(\"#settings-container\").html(templateCache[\"settings\"](params));\n        componentHandler.upgradeAllRegistered();\n        $(\"#settings-container\").fadeIn();\n    })\n}\n\nfunction openNotificationPublisher() {\n    updateStyles();\n    $(\".page-content\").fadeOut()\n    $(\"#notification-publisher-container\").html(templateCache[\"notification_publisher\"]());\n    componentHandler.upgradeAllRegistered();\n    $(\"#notification-publisher-container\").fadeIn()\n}\n\nfunction openProgramSafe(cmd, args) {\n    ipcRenderer.sendSync(\"synchronous-message\", {\n        \"actionType\": \"openExternal\",\n        \"cmd\": cmd,\n        \"args\": args\n    });\n}\n\nfunction openFileBrowser() {\n    openProgramSafe(\"explorer.exe\", []);\n}\n\nfunction openAlphaBoard() {\n    getConfigItem(\"AlphaBoard_ServerAddr\", (v) => {\n        if(!v) showDialog(texts[\".text-error-title\"], texts[\".text-no-alphaboard-server-address\"]);\n        else {\n            localStorage[\"AlphaBoard-ServerAddr\"] = v;\n            /*ipcRenderer.sendSync(\"synchronous-message\", {\n                \"actionType\": \"openApp\",\n                \"appName\": \"AlphaBoard\"\n            });*/\n            $(\"#local-app\").attr(\"src\",\"AlphaBoard/index.html\");\n            $(\"#local-app\").fadeIn();\n        }\n    })\n}\n\nlet drives = {};\nlet isFirstDriveCheck = true;\n\nfunction startCheckDriveChange() {\n    request.get(CLIENT_SERVICE_ADDR + \"devices/drives/list\", (err, resp, body) => {\n        setTimeout(startCheckDriveChange, 1000);\n        if(err || !body) return;\n        else {\n            let parsed = JSON.parse(body);\n            let newDrives = {};\n            for(let key in parsed) {\n                newDrives[parsed[key]] = true;\n            }\n            if(Object.keys(newDrives).length != Object.keys(drives).length) {\n                if(!isFirstDriveCheck) shell.beep();\n                if(Object.keys(newDrives).length > Object.keys(drives).length) {\n                    for(let key in drives) {\n                        delete newDrives[key];\n                    }\n                    let newDriveNames = \"\";\n                    for(let key in newDrives) {\n                        newDriveNames += \" \" + key;\n                        drives[key] = true;\n                    }\n                    if(!isFirstDriveCheck) showGlobalNotification(texts[\".text-drive-added\"] + newDriveNames);\n                } else {\n                    for(let key in newDrives) {\n                        delete drives[key];\n                    }\n                    let newDriveNames = \"\";\n                    for(let key in drives) {\n                        newDriveNames += \" \" + key;\n                    }\n                    drives = newDrives;\n                    if(!isFirstDriveCheck) showGlobalNotification(texts[\".text-drive-removed\"] + newDriveNames);\n                }\n            }\n            isFirstDriveCheck = false;\n        }\n    })\n}\n\nfunction startTimerUpdate() {\n    let currentTime = new Date();\n    let currentHours = currentTime.getHours().toString();\n    let currentMinutes = currentTime.getMinutes().toString();\n    if(currentHours.length == 1) currentHours = \"0\" + currentHours;\n    if(currentMinutes.length == 1) currentMinutes = \"0\" + currentMinutes;\n    let timeString = currentHours + \":\" + currentMinutes;\n    $(\".current-time\").text(timeString);\n    setTimeout(startTimerUpdate, 1000);\n}\n\nfunction loadStylesFromConfig() {\n    getConfigItem(\"backgroundImage\", (result) => {\n        if(!result) return;\n        $(document.body).css(\"background-image\", \"url(\" + \"file:///\" + result + \")\");\n    })\n}\n\nfunction showLookupScore() {\n    $(\".page-content\").fadeOut();\n    $(\"#lookup-score-container\").load(\"lookup_score.html\", () => {\n        componentHandler.upgradeAllRegistered();\n        $(\"#lookup-score-container\").fadeIn();\n    })\n}\n\nfunction doReboot() {\n    request.get(CLIENT_SERVICE_ADDR + \"system/power/reboot\", () => {});\n}\n\nfunction doPoweroff() {\n    request.get(CLIENT_SERVICE_ADDR + \"system/power/poweroff\", () => {});\n}\n\nfunction loadTemplateFileToCacheLocalized(name) {\n    loadTemplate(path.join(__dirname, name + \".omt\"), om_texts, (result) => {\n        if(!result) return;\n        templateCache[name] = result;\n    })\n}\n\nfunction initTemplateCache() {\n    loadTemplateFileToCacheLocalized(\"notification_publisher\");\n    loadTemplateFileToCacheLocalized(\"settings\");\n}\n\nwindow.addEventListener(\"load\", () => {\n    initTemplateCache();\n    updateTexts();\n    checkClientService();\n    loadStylesFromConfig();\n    $(\".goto-home\").click(() => {\n        $(\".page-content\").fadeOut();\n        $(\"#main-container\").fadeIn();\n    });\n    $(\".lookup-score\").click(() => {\n        showLookupScore();\n    });\n    $(\".do-reboot\").click(doReboot);\n    $(\".do-poweroff\").click(doPoweroff);\n    startCheckDriveChange();\n    startTimerUpdate();\n    setTimeout(updateStyles, 500);\n});\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/scripts/notification_publisher.js",
+      "name": "notification_publisher.js",
+      "lang": "js",
+      "lines": 93,
+      "size": 3528,
+      "content": "if(cloudServiceUrl === undefined) {\n    var cloudServiceUrl = \"\";\n}\n\nfunction loadNotifications() {\n    request.post(cloudServiceUrl + \"notification/fetch\", {\n        \"json\": {\n            \"deviceId\": DEVICE_ID\n        }\n    }, (err, resp, body) => {\n        if(err || !body) {\n            return;\n        }\n        /*try {\n            let items = JSON.parse(body);\n        } catch(e) {\n            showDialog(\"Error\", \"Unable to parse notifications: \" + JSON.stringify(body));\n            return;\n        }*/\n        let items = body;\n        document.getElementById(\"notifications\").innerHTML = \"\";\n        for(let key in items) {\n            let item = items[key];\n            let newElem = document.createElement(\"div\");\n            newElem.className = \"notification-card\";\n            $(newElem).addClass(\"mdl-shadow--2dp\");\n\n            let dateElem = document.createElement(\"span\");\n            dateElem.className = \"notification-card-date\";\n            dateElem.innerHTML = \"<i class=\\\"material-icons notification-card-date-icon\\\">access_time</i> \" + new Date(item.time).toLocaleString();\n            newElem.appendChild(dateElem);\n\n            let contentElem = document.createElement(\"p\");\n            contentElem.className = \"notification-card-content\";\n            let contentHtml = \"\";\n            for(let i in item.content) {\n                let ch = item.content[i];\n                if(ch == \"\\n\") contentHtml += \"<br>\";\n                else contentHtml += ch;\n            }\n            contentElem.innerHTML = contentHtml;\n            newElem.appendChild(contentElem);\n            \n            (() => {\n                let currentElem = contentElem;\n                $(newElem).click(() => {\n                    $(\"#new-notification-form\").hide();\n                    $(\".expand-new-notification-form\").show();\n                    $(\"#notifications\").css(\"height\", window.innerHeight - 200);\n                    $(\".notification-card-content\").css(\"line-height\", \"20px\");\n                    $(\".notification-card-content\").css(\"font-size\", \"16px\");\n                    $(currentElem).css(\"line-height\", \"60px\");\n                    $(currentElem).css(\"font-size\", \"56px\");\n                });\n            })();\n            document.getElementById(\"notifications\").appendChild(newElem);\n        }\n    })\n}\n\nnew Promise((cb) => {\n    getConfigItem(\"cloudServiceUrl\", (r) => {\n        cb(r);\n    });\n}).then((svcUrl) => {\n    if(svcUrl == null) {\n        showDialog(texts[\".text-error-title\"], texts[\".text-unable-to-get-service-url\"]);\n        throw texts[\".text-unable-to-get-service-url\"];\n    }\n    cloudServiceUrl = svcUrl;\n    $(\"#notifications\").text(texts[\".text-notification-loading\"]);\n    loadNotifications();\n    $(\".expand-new-notification-form\").click(() => {\n        $(\".expand-new-notification-form\").hide();\n        $(\"#new-notification-form\").show();\n    })\n    $(\".do-notification-publish\").click(() => {\n        let text = $(\"#new-notification\").val();\n        request.post(cloudServiceUrl + \"notification/publish\", {\n            \"json\": {\n                \"deviceId\": DEVICE_ID,\n                \"content\": text\n            }\n        }, (err, resp, body) => {\n            if(err || !body || body != \"OK\") {\n                showDialog(texts[\".text-error-title\"], texts[\".text-failed-to-publish-notification\"]);\n                return;\n            }\n            showDialog(texts[\".text-notice-title\"], texts[\".text-notification-published\"]);\n            loadNotifications();\n        });\n    })\n});\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/scripts/settings.js",
+      "name": "settings.js",
+      "lang": "js",
+      "lines": 39,
+      "size": 1236,
+      "content": "(() => {\n    const settingsIdCfgKeyMappings = {\n        \"alphaboard-server-addr\": \"AlphaBoard_ServerAddr\",\n        \"background-image-path\": \"backgroundImage\"\n    };\n    const {dialog} = require(\"electron\").remote;\n\n    function onValueChange(target) {\n        if(!settingsIdCfgKeyMappings[target.id]) {\n            return;\n        }\n        setConfigItem(settingsIdCfgKeyMappings[target.id], target.value);\n    }\n\n    $(\".settings-content-item-value-input\").change((e) => {\n        onValueChange(e.target);\n    });\n\n    $(\".select-background-image\").click(() => {\n        dialog.showOpenDialog({\n            \"filters\": [\n                {\n                    \"name\": om_texts[\"text-image-title\"],\n                    \"extensions\": [\n                        \"jpg\",\n                        \"png\"\n                    ]\n                }\n            ]\n        }, (filenames) => {\n            if(!filenames) {\n                showDialog(om_texts[\"text-error-title\"], om_texts[\"text-no-file-selected\"]);\n                return;\n            }\n            $(\"#background-image-path\").val(filenames[0].replace(/\\\\/g, \"/\").replace(/ /g, \"%20\"));\n            onValueChange(document.getElementById(\"background-image-path\"));\n        })\n    })\n})();"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/scripts/translations.js",
+      "name": "translations.js",
+      "lang": "js",
+      "lines": 0,
+      "size": 0,
+      "content": ""
+    },
+    {
+      "path": "new_frontend/src/BrowserView/scripts/translations/en-US.js",
+      "name": "en-US.js",
+      "lang": "js",
+      "lines": 27,
+      "size": 1267,
+      "content": "let texts = {\n    \"#nav-button-goto-home\": \"Home\",\n    \"#nav-button-exit\": \"Quit\",\n    \".text-warning-title\": \"Warning\",\n    \".text-warning-no-client-service\": \"Client service is not running. Some functions will be unavailable.\",\n    \".text-nav-card-enter\": \"Enter\",\n    \".text-notification-publish-title\": \"Notification Publisher\",\n    \".text-alphaboard-title\": \"Drawing\",\n    \".text-file-browser-title\": \"File Browser\",\n    \".text-system-info-title\": \"System Info\",\n    \".text-settings-title\": \"Settings\",\n    \".text-app-version\": \"CloudEdu Version\",\n    \".text-app-build\": \"Build Id\",\n    \".text-client-service-version\": \"Client Service Version\",\n    \".text-node-version\": \"Node Version\",\n    \".text-cpu-model\": \"CPU Model\",\n    \".text-current-platform\": \"OS Type\",\n    \".text-os-release\": \"OS Version\",\n    \".text-current-username\": \"Current Username\",\n    \".text-current-uptime\": \"Uptime\",\n    \".text-alphaboard-server-addr\": \"AlphaBoard Cloud Service Address\",\n    \".text-settings-error-no-client-service\": \"Error: Client service is not running.\",\n    \".text-drive-added\": \"Drive added:\",\n    \".text-drive-removed\": \"Drive removed:\",\n    \".text-error-title\": \"Error\",\n    \".text-no-alphaboard-server-address\": \"Unable to get AlphaBoard cloud service address\"\n}\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/scripts/translations/zh-CN-om.js",
+      "name": "zh-CN-om.js",
+      "lang": "js",
+      "lines": 55,
+      "size": 2182,
+      "content": "let om_texts = {\n    \"nav-button-goto-home\": \"主界面\",\n    \"nav-button-lookup-score\": \"成绩查询\",\n    \"nav-button-reboot\": \"重启\",\n    \"nav-button-poweroff\": \"关机\",\n    \"nav-button-exit\": \"退出\",\n    \"text-warning-title\": \"警告\",\n    \"text-warning-no-client-service\": \"客户端服务未运行。部分功能将不可用。\",\n    \"text-nav-card-enter\": \"进入\",\n    \"text-notification-publish-title\": \"通知发布\",\n    \"text-alphaboard-title\": \"绘图\",\n    \"text-file-browser-title\": \"文件浏览器\",\n    \"text-system-info-title\": \"系统信息\",\n    \"text-settings-title\": \"设置\",\n    \"text-app-version\": \"CloudEdu 版本\",\n    \"text-app-build\": \"构建编号\",\n    \"text-client-service-version\": \"客户端服务版本\",\n    \"text-device-id\": \"设备 ID\",\n    \"text-node-version\": \"Node 版本\",\n    \"text-cpu-model\": \"CPU 型号\",\n    \"text-current-platform\": \"操作系统类型\",\n    \"text-os-release\": \"操作系统版本\",\n    \"text-current-username\": \"当前用户名\",\n    \"text-current-uptime\": \"运行时间\",\n    \"text-alphaboard-server-addr\": \"AlphaBoard 云服务地址\",\n    \"text-settings-error-no-client-service\": \"错误：客户端服务未运行。\",\n    \"text-drive-added\": \"新增驱动器:\",\n    \"text-drive-removed\": \"移除驱动器:\",\n    \"text-error-title\": \"错误\",\n    \"text-no-alphaboard-server-address\": \"无法获取 AlphaBoard 云服务地址。\",\n    \"text-external-program-return\": \"返回\",\n    \"text-do-notification-publish\": \"发布\",\n    \"text-unable-to-get-service-url\": \"无法获取云服务地址。\",\n    \"text-failed-to-publish-notification\": \"通知发布失败。\",\n    \"text-notification-published\": \"通知已发布。\",\n    \"text-notification-loading\": \"正在加载通知\",\n    \"text-expand-new-notification-form\": \"展开\",\n    \"text-score-lookup-title\": \"成绩查询\",\n    \"text-score-lookup-service\": \"服务类型\",\n    \"text-score-lookup-username\": \"用户名\",\n    \"text-score-lookup-password\": \"密码\",\n    \"text-score-lookup-login\": \"登录\",\n    \"text-score-lookup-user-id\": \"用户 ID\",\n    \"text-score-lookup-last-total\": \"最近一次总分\",\n    \"text-notice-title\": \"提示\",\n    \"text-login-failed\": \"登录失败。\",\n    \"text-unable-to-parse-response\": \"数据解析失败。\",\n    \"text-score-lookup-unable-to-fetch-exam-list\": \"无法获取考试列表。\",\n    \"text-score-lookup-unable-to-fetch-exam-details\": \"无法获取考试详情。\",\n    \"text-score-lookup-no-exams\": \"当前无考试。\",\n    \"text-background-image\": \"背景图片\",\n    \"text-select-file\": \"选择文件\",\n    \"text-no-file-selected\": \"未选择文件。\",\n    \"text-image-title\": \"图片\"\n}\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/scripts/translations/zh-CN.js",
+      "name": "zh-CN.js",
+      "lang": "js",
+      "lines": 51,
+      "size": 2090,
+      "content": "let texts = {\n    \"#nav-button-goto-home\": \"主界面\",\n    \"#nav-button-lookup-score\": \"成绩查询\",\n    \"#nav-button-reboot\": \"重启\",\n    \"#nav-button-poweroff\": \"关机\",\n    \"#nav-button-exit\": \"退出\",\n    \".text-warning-title\": \"警告\",\n    \".text-warning-no-client-service\": \"客户端服务未运行。部分功能将不可用。\",\n    \".text-nav-card-enter\": \"进入\",\n    \".text-notification-publish-title\": \"通知发布\",\n    \".text-alphaboard-title\": \"绘图\",\n    \".text-file-browser-title\": \"文件浏览器\",\n    \".text-system-info-title\": \"系统信息\",\n    \".text-settings-title\": \"设置\",\n    \".text-app-version\": \"CloudEdu 版本\",\n    \".text-app-build\": \"构建编号\",\n    \".text-client-service-version\": \"客户端服务版本\",\n    \".text-device-id\": \"设备 ID\",\n    \".text-node-version\": \"Node 版本\",\n    \".text-cpu-model\": \"CPU 型号\",\n    \".text-current-platform\": \"操作系统类型\",\n    \".text-os-release\": \"操作系统版本\",\n    \".text-current-username\": \"当前用户名\",\n    \".text-current-uptime\": \"运行时间\",\n    \".text-alphaboard-server-addr\": \"AlphaBoard 云服务地址\",\n    \".text-settings-error-no-client-service\": \"错误：客户端服务未运行。\",\n    \".text-drive-added\": \"新增驱动器:\",\n    \".text-drive-removed\": \"移除驱动器:\",\n    \".text-error-title\": \"错误\",\n    \".text-no-alphaboard-server-address\": \"无法获取 AlphaBoard 云服务地址。\",\n    \".text-external-program-return\": \"返回\",\n    \".text-do-notification-publish\": \"发布\",\n    \".text-unable-to-get-service-url\": \"无法获取云服务地址。\",\n    \".text-failed-to-publish-notification\": \"通知发布失败。\",\n    \".text-notification-published\": \"通知已发布。\",\n    \".text-notification-loading\": \"正在加载通知\",\n    \".text-expand-new-notification-form\": \"展开\",\n    \".text-score-lookup-title\": \"成绩查询\",\n    \".text-score-lookup-service\": \"服务类型\",\n    \".text-score-lookup-username\": \"用户名\",\n    \".text-score-lookup-password\": \"密码\",\n    \".text-score-lookup-login\": \"登录\",\n    \".text-score-lookup-user-id\": \"用户 ID\",\n    \".text-score-lookup-last-total\": \"最近一次总分\",\n    \".text-notice-title\": \"提示\",\n    \".text-login-failed\": \"登录失败。\",\n    \".text-unable-to-parse-response\": \"数据解析失败。\",\n    \".text-score-lookup-unable-to-fetch-exam-list\": \"无法获取考试列表。\",\n    \".text-score-lookup-unable-to-fetch-exam-details\": \"无法获取考试详情。\",\n    \".text-score-lookup-no-exams\": \"当前无考试。\"\n}\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/settings.omt",
+      "name": "settings.omt",
+      "lang": "omt",
+      "lines": 21,
+      "size": 1031,
+      "content": "link rel=\"stylesheet\" type=\"text/css\" href=\"css/settings.css\"\n\ndiv .mdl-typography--display-2 .inner-page-title => [text-settings-title]\n\ntable #settings-content cellspacing=\"10\"\n\ttr\n\t\ttd .settings-content-item-key => [text-alphaboard-server-addr]\n\t\ttd\n\t\t\tdiv .settings-content-item-value .mdl-textfield .mdl-js-textfield\n\t\t\t\tinput .mdl-textfield__input .settings-content-item-value-input #alphaboard-server-addr type=\"text\" value=[alphaboard-server-addr]\n\t\t\t\tlabel .mdl-textfield__label for=\"alphaboard-server-addr\"\n\ttr\n\t\ttd .settings-content-item-key => [text-background-image]\n\t\ttd\n\t\t\tdiv .settings-content-item-value .mdl-textfield .mdl-js-textfield\n\t\t\t\tinput .mdl-textfield__input .settings-content-item-value-input #background-image-path type=\"text\" value=[background-image-path]\n\t\t\t\tlabel .mdl-textfield__label for=\"background-image-path\"\n\t\ttd\n\t\t\tbutton .mdl-button .mdl-js-button .mdl-button--raised .mdl-js-ripple-effect .mdl-button--accent .select-background-image => [text-select-file]\n\nscript src=\"scripts/settings.js\"\n"
+    },
+    {
+      "path": "new_frontend/src/BrowserView/system_info.html",
+      "name": "system_info.html",
+      "lang": "html",
+      "lines": 103,
+      "size": 2942,
+      "content": "<div class=\"mdl-typography--display-2 text-system-info-title inner-page-title\"></div>\n<table style=\"margin-top: 50px\">\n    <tr>\n        <td>\n            <span class=\"mdl-chip\">\n                <span class=\"mdl-chip__text text-app-version\"></span>\n            </span>\n        </td>\n        <td>\n            <span class=\"system-info-list-item-value current-version\"></span>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <span class=\"mdl-chip\">\n                <span class=\"mdl-chip__text text-app-build\"></span>\n            </span>\n        </td>\n        <td>\n            <span class=\"system-info-list-item-value current-build\"></span>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <span class=\"mdl-chip\">\n                <span class=\"mdl-chip__text text-client-service-version\"></span>\n            </span>\n        </td>\n        <td>\n            <span class=\"system-info-list-item-value current-client-service-version\"></span>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <span class=\"mdl-chip\">\n                <span class=\"mdl-chip__text text-device-id\"></span>\n            </span>\n        </td>\n        <td>\n            <span class=\"system-info-list-item-value current-device-id\"></span>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <span class=\"mdl-chip\">\n                <span class=\"mdl-chip__text text-node-version\"></span>\n            </span>\n        </td>\n        <td>\n            <span class=\"system-info-list-item-value current-node-version\"></span>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <span class=\"mdl-chip\">\n                <span class=\"mdl-chip__text text-cpu-model\"></span>\n            </span>\n        </td>\n        <td>\n            <span class=\"system-info-list-item-value current-cpu-model\"></span>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <span class=\"mdl-chip\">\n                <span class=\"mdl-chip__text text-current-platform\"></span>\n            </span>\n        </td>\n        <td>\n            <span class=\"system-info-list-item-value current-platform\"></span>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <span class=\"mdl-chip\">\n                <span class=\"mdl-chip__text text-os-release\"></span>\n            </span>\n        </td>\n        <td>\n            <span class=\"system-info-list-item-value current-os-release\"></span>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <span class=\"mdl-chip\">\n                <span class=\"mdl-chip__text text-current-username\"></span>\n            </span>\n        </td>\n        <td>\n            <span class=\"system-info-list-item-value current-username\"></span>\n        </td>\n    </tr>\n    <tr>\n        <td>\n            <span class=\"mdl-chip\">\n                <span class=\"mdl-chip__text text-current-uptime\"></span>\n            </span>\n        </td>\n        <td>\n            <span class=\"system-info-list-item-value current-uptime\"></span>\n        </td>\n    </tr>\n</table>\n"
+    },
+    {
+      "path": "new_frontend/src/bin/Launcher.bat",
+      "name": "Launcher.bat",
+      "lang": "bat",
+      "lines": 3,
+      "size": 34,
+      "content": "@echo off\nstart /min %1 %2\necho OK"
+    },
+    {
+      "path": "new_frontend/src/build_installer.js",
+      "name": "build_installer.js",
+      "lang": "js",
+      "lines": 16,
+      "size": 408,
+      "content": "const installer = require(\"electron-winstaller\");\n\ninstaller.createWindowsInstaller({\n    appDirectory: \"..\\\\Staging\\\\CloudEdu-win32-x64\",\n    outputDirectory: \"..\\\\Installer\",\n    authors: \"Heyang Zhou\",\n    description: \"The CloudEdu Project\",\n    title: \"CloudEdu\",\n    name: \"CloudEdu\",\n    exe: \"CloudEdu.exe\",\n    noMsi: true\n}).then(() => {\n    console.log(\"Done\");\n}, (e) => {\n    console.log(e);\n})\n"
+    },
+    {
+      "path": "new_frontend/src/default_config.json",
+      "name": "default_config.json",
+      "lang": "json",
+      "lines": 4,
+      "size": 144,
+      "content": "{\n    \"cloudServiceUrl\": \"https://hydrocloud.ntzx.cn/CloudEdu/\",\n    \"AlphaBoard_ServerAddr\": \"https://hydrocloud.ntzx.cn/AlphaBoard/backend\"\n}\n"
+    },
+    {
+      "path": "new_frontend/src/installationHandler.js",
+      "name": "installationHandler.js",
+      "lang": "js",
+      "lines": 81,
+      "size": 2211,
+      "content": "const {app} = require(\"electron\");\nconst fs = require(\"fs\");\nconst child_process = require(\"child_process\");\n\nfunction copyFile(src, dst) {\n    let ret = new Promise((cb, reject) => {\n        let reader = fs.createReadStream(src);\n        let writer = fs.createWriteStream(dst);\n        reader.on(\"error\", reject);\n        writer.on(\"error\", reject);\n        writer.on(\"close\", () => {\n            cb();\n        });\n        reader.pipe(writer);\n    });\n    return () => {\n        return ret;\n    };\n}\n\nfunction runCommand(cmd, args) {\n    return () => {\n        return new Promise((cb) => {\n            let p = child_process.spawn(cmd, args);\n            p.on(\"close\", cb);\n        });\n    }\n}\n\nmodule.exports.handleSquirrelEvent = () => {\n    if (process.argv.length === 1) {\n        return false;\n    }\n\n    const ChildProcess = require('child_process');\n    const path = require('path');\n\n    const appFolder = path.resolve(process.execPath, '..');\n    const rootAtomFolder = path.resolve(appFolder, '..');\n    const updateDotExe = path.resolve(path.join(rootAtomFolder, 'Update.exe'));\n    const exeName = path.basename(process.execPath);\n\n    const spawn = (command, args) => {\n        let spawnedProcess, error;\n\n        try {\n            spawnedProcess = ChildProcess.spawn(command, args, { detached: true });\n        } catch (error) { }\n\n        return spawnedProcess;\n    };\n\n    const spawnUpdate = (args) => {\n        return spawn(updateDotExe, args);\n    };\n\n    const squirrelEvent = process.argv[1];\n    switch (squirrelEvent) {\n        case '--squirrel-install':\n        case '--squirrel-updated':\n            runCommand(path.join(__dirname, \"bin\\\\Launcher.bat\"), [path.join(__dirname, \"bin\\\\InstallHelper.exe\"), __dirname])()\n            .then(() => {\n                spawnUpdate(['--createShortcut', exeName]);\n                setTimeout(app.quit, 1000);\n            });\n\n            return true;\n\n        case '--squirrel-uninstall':\n            spawnUpdate(['--removeShortcut', exeName]);\n\n            setTimeout(app.quit, 1000);\n            return true;\n\n        case '--squirrel-obsolete':\n            app.quit();\n            return true;\n    }\n    console.log(\"Done\");\n    return false;\n};"
+    },
+    {
+      "path": "new_frontend/src/main.js",
+      "name": "main.js",
+      "lang": "js",
+      "lines": 222,
+      "size": 5912,
+      "content": "const {app, BrowserWindow, ipcMain} = require(\"electron\");\nconst url = require(\"url\");\nconst child_process = require(\"child_process\");\nconst path = require(\"path\");\nconst fs = require(\"fs\");\nconst util = require(\"util\");\nconst installationHandler = require(\"./installationHandler.js\");\n\nif(installationHandler.handleSquirrelEvent()) {\n    return;\n}\n\nconst SBIE_PATH = \"C:\\\\Program Files\\\\Sandboxie\\\\Start.exe\";\nconst appPaths = {\n    \"AlphaBoard\": \"BrowserView/AlphaBoard/index.html\"\n};\n\nlet browserWindow = null;\nlet externalPanel = null;\nlet globalNotification = null;\nlet appWindows = {};\nlet mainScreen;\n\nfunction tryOpenProgramInSandboxie(cmd, args) {\n    if(!fs.existsSync(SBIE_PATH)) return false;\n    let newArgs = [\"/nosbiectrl\", \"/silent\", cmd];\n    for(let item in args) {\n        newArgs.push(item);\n    }\n    child_process.spawn(SBIE_PATH, newArgs);\n    return true;\n}\n\nfunction openProgramSafe(cmd, args) {\n    if(tryOpenProgramInSandboxie(cmd, args) == false) child_process.spawn(cmd, args);\n}\n\nfunction terminateProgramsInSandboxie() {\n    if(!fs.existsSync(SBIE_PATH)) return false;\n    child_process.spawn(SBIE_PATH, [\"/terminate\"]);\n    return true;\n}\n\nfunction showGlobalNotification(content) {\n    if(globalNotification) return;\n    if(!content || !util.isString(content)) return;\n    globalNotification = new BrowserWindow({\n        \"width\": 350,\n        \"height\": 100,\n        \"resizable\": false,\n        \"alwaysOnTop\": true,\n        \"x\": 30,\n        \"y\": mainScreen.size.height - 130,\n        \"minimizable\": false,\n        \"frame\": false,\n        \"titleBarStyle\": \"hidden\"\n    });\n    globalNotification.loadURL(url.format({\n        \"pathname\": path.join(__dirname, \"BrowserView/global_notification.html\"),\n        \"protocol\": \"file:\",\n        \"slashes\": true\n    }));\n    globalNotification.webContents.on(\"did-finish-load\", () => {\n        globalNotification.webContents.send(\"notification-content\", content);\n    });\n    globalNotification.on(\"closed\", () => {\n        globalNotification = null;\n    });\n}\n\nfunction openExternalPanel() {\n    if(externalPanel) return;\n    externalPanel = new BrowserWindow({\n        \"width\": 50,\n        \"height\": 50,\n        \"resizable\": false,\n        \"alwaysOnTop\": true,\n        \"x\": mainScreen.size.width - 70,\n        \"y\": 20,\n        \"minimizable\": false,\n        \"frame\": false,\n        \"titleBarStyle\": \"hidden\"\n    });\n    externalPanel.loadURL(url.format({\n        \"pathname\": path.join(__dirname, \"BrowserView/external_program_panel.html\"),\n        \"protocol\": \"file:\",\n        \"slashes\": true\n    }));\n    externalPanel.on(\"closed\", () => {\n        externalPanel = null;\n    });\n}\n\nfunction openAppWindow(appName) {\n    let appPath = null;\n\n    try {\n        appPath = appPaths[appName];\n    } catch (e) {\n        appPath = null;\n    }\n\n    if (!appPath) return;\n    if (appWindows[appName]) return;\n\n    appWindows[appName] = new BrowserWindow({\n        \"width\": 0,\n        \"height\": 0,\n        \"show\": false\n    });\n    appWindows[appName].loadURL(url.format({\n        \"pathname\": path.join(__dirname, appPath),\n        \"protocol\": \"file:\",\n        \"slashes\": true\n    }));\n    appWindows[appName].on(\"closed\", () => {\n        appWindows[appName] = null;\n    })\n    appWindows[appName].webContents.on('did-finish-load', function () {\n        setTimeout(() => {\n            appWindows[appName].show();\n            appWindows[appName].setFullScreen(true);\n        }, 100);\n    });\n}\n\nfunction initWindow() {\n    const {screen} = require(\"electron\");\n    mainScreen = screen.getPrimaryDisplay();\n    browserWindow = new BrowserWindow({\n        \"width\": 0,\n        \"height\": 0,\n        \"show\": false\n    });\n    browserWindow.loadURL(url.format({\n        \"pathname\": path.join(__dirname, \"BrowserView/index.html\"),\n        \"protocol\": \"file:\",\n        \"slashes\": true\n    }));\n    browserWindow.on(\"closed\", () => {\n        browserWindow = null;\n    })\n    browserWindow.webContents.on('did-finish-load', function () {\n        setTimeout(() => {\n            browserWindow.show();\n            browserWindow.setFullScreen(true);\n        }, 100);\n    });\n}\n\napp.on(\"ready\", () => {\n    initWindow();\n});\n\napp.on(\"window-all-closed\", () => {\n    app.quit();\n});\n\nipcMain.on(\"synchronous-message\", (event, arg) => {\n    try {\n        var actionType = arg.actionType;\n    } catch (e) {\n        var actionType = null;\n    }\n    if (!actionType) {\n        event.returnValue = \"Unknown action type\";\n        return;\n    }\n    if (actionType == \"openApp\") {\n        try {\n            var appName = arg.appName;\n        } catch (e) {\n            var appName = null;\n        }\n        if (!appName || !appPaths[appName]) {\n            event.returnValue = \"Invalid app name\";\n            return;\n        }\n        openAppWindow(appName);\n        event.returnValue = \"OK\";\n        return;\n    } else if(actionType == \"openExternal\") {\n        try {\n            var cmd = arg.cmd;\n        } catch (e) {\n            var cmd = null;\n        }\n        if (!cmd) {\n            event.returnValue = \"Invalid command\";\n            return;\n        }\n        try {\n            var cmdArgs = arg.args;\n        } catch(e) {\n            var cmdArgs = null;\n        }\n        if(!cmdArgs) cmdArgs = [];\n\n        openProgramSafe(cmd, cmdArgs);\n        openExternalPanel();\n\n        event.returnValue = \"OK\";\n    } else if (actionType == \"terminateExternals\") {\n        terminateProgramsInSandboxie();\n        event.returnValue = \"OK\";\n    } else if(actionType == \"showGlobalNotification\") {\n        try {\n            var content = arg.content;\n        } catch(e) {\n            var content = null;\n        }\n        if(!content) {\n            event.returnValue = \"No content\";\n            return;\n        }\n        showGlobalNotification(content);\n        event.returnValue = \"OK\";\n    } else {\n        event.returnValue = \"Unknown action type\";\n        return;\n    }\n})\n"
+    },
+    {
+      "path": "new_frontend/src/package.json",
+      "name": "package.json",
+      "lang": "json",
+      "lines": 32,
+      "size": 695,
+      "content": "{\n  \"name\": \"cloudedu_frontend\",\n  \"version\": \"0.2.0\",\n  \"description\": \"CloudEdu Frontend\",\n  \"main\": \"main.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/losfair/CloudEdu.git\"\n  },\n  \"keywords\": [\n    \"cloud\",\n    \"education\",\n    \"cloudedu\",\n    \"school\"\n  ],\n  \"author\": \"Heyang Zhou\",\n  \"license\": \"LGPL-3.0\",\n  \"bugs\": {\n    \"url\": \"https://github.com/losfair/CloudEdu/issues\"\n  },\n  \"homepage\": \"https://github.com/losfair/CloudEdu#readme\",\n  \"dependencies\": {\n    \"jquery\": \"^3.1.1\",\n    \"request\": \"^2.79.0\"\n  },\n  \"devDependencies\": {\n    \"electron-winstaller\": \"^2.5.0\"\n  }\n}\n"
+    },
+    {
+      "path": "new_frontend/src/renderer_test.js",
+      "name": "renderer_test.js",
+      "lang": "js",
+      "lines": 11,
+      "size": 279,
+      "content": "const request = require(\"request\");\nconst fs = require(\"fs\");\n\nvar fileData = fs.readFileSync(process.argv[2], \"utf-8\");\nrequest.post(\"http://127.0.0.1:9033/render_template\", {\n    \"json\": {\n        \"template\": fileData\n    }\n}, (err, resp, body) => {\n    console.log(body);\n});\n"
+    },
+    {
+      "path": "new_frontend/src/test.omt",
+      "name": "test.omt",
+      "lang": "omt",
+      "lines": 9,
+      "size": 196,
+      "content": "head\n\ttitle => \"Hello world\"\nbody\n\tdiv\n\t\tp .testclass1 .testclass2 @invisible=[isInvisible] => [text1]\n\t\t\tstrong => \"Test string 1\"\n\t\ta id=[text1] href=\"str\" => [text2]\n\t\tbr\n\t\t_ => \"Test string 2\""
+    }
+  ]
+}

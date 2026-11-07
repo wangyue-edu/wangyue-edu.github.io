@@ -1,0 +1,419 @@
+{
+  "year": "2020",
+  "editionNumber": 4,
+  "title": "2019-2020 第四届望岳奖学金",
+  "theme": "全栈工程落地与底层内核突破：极客社团与硬核技术的百花齐放",
+  "intro": "第四届望岳奖学金涌现出多位极具探索精神的通中学子：朱振鹏的全栈物资平台、童亦洲从零手写微内核操作系统、王喆的服务全校校运会小程序与物理游戏、王昊金的班级排座与深度学习探索。",
+  "documents": [],
+  "gallery": [
+    {
+      "src": "media/2020/ceremony_stage_20210130.jpg",
+      "caption": "2021年1月30日第四届望岳奖学金南通中学现场颁奖典礼（沈惠祥副校长等校领导与获奖学生合影）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2020_zhu_zhenpeng_app_poster.jpg",
+      "caption": "朱振鹏自研“智慧通中”移动端应用功能实机录屏",
+      "category": "demo"
+    },
+    {
+      "src": "media/2020_wang_zhe_fattingball_poster.jpg",
+      "caption": "王喆自研《胖球对决 Fattingball》物理碰撞游戏演示画面",
+      "category": "demo"
+    },
+    {
+      "src": "media/2020/zhu_zhenpeng_club_photo.jpg",
+      "caption": "第四届朱振鹏在校期间极客社团骨干成员合影与技术研讨",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2020/IMG_4012.JPG",
+      "caption": "2021年1月30日第四届望岳奖学金南通中学现场颁奖典礼：沈惠祥副校长等校领导与全体获奖学生在舞台上欢呼合影（原件编号：IMG_4012）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2020/IMG_4013.JPG",
+      "caption": "2021年1月30日第四届望岳奖学金南通中学现场颁奖典礼：学术报告厅礼堂现场全景（台下师生、评委与观众席全景，原件编号：IMG_4013）",
+      "category": "ceremony"
+    }
+  ],
+  "reviewSummary": "评审委员会由学术界与工业界校友导师联合组成，经严谨审阅与比对：朱振鹏以全栈高完成度斩获凌绝望岳奖；童亦洲（微内核操作系统）与王喆（校运会小程序与游戏）荣膺坚韧登岳奖；王昊金荣获凭高临岳奖。",
+  "projects": [
+    {
+      "id": "2020-zhu-zhenpeng-smart-campus",
+      "title": "智慧校园综合服务系统与仓储物资数字化管理平台",
+      "studentId": "zhu-zhenpeng",
+      "studentName": "朱振鹏",
+      "class": "高二5班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "Web与系统",
+      "tags": [
+        "Full-Stack",
+        "Vue.js",
+        "Node.js",
+        "MySQL",
+        "移动端开发",
+        "智慧校园"
+      ],
+      "summary": "针对企业与校园后勤物资流转繁琐易错的问题，独立研发基于 Python Tkinter 的树状分类库存管理系统；针对校园社团招新与校运会赛事统计痛点，开发“南通中学智慧校园”微信小程序矩阵，包含线上社团双向申报审批系统、校运会实时赛程与成绩积分大屏系统，并编写了完整图文操作手册。",
+      "video": {
+        "src": "media/2020_zhu_zhenpeng_app.mp4",
+        "poster": "media/2020_zhu_zhenpeng_app_poster.jpg",
+        "title": "智慧校园移动端与物资系统演示"
+      },
+      "hasCode": true,
+      "codeArchiveId": "2020-zhu-zhenpeng-smartcampus",
+      "details": {
+        "skills": "Python 应用编程（xlrd 读入、xlwt 写入、xlutils 格式转换、Tkinter 相对布局窗体控件）、微信小程序开发（WXML/WXSS/JavaScript、云开发 CloudBase 数据库设计与本地 Excel 导出）、C++ 数据预处理脚本",
+        "difficulties": "仓库系统中 Excel 单元格查空与写入格式保留转换、Tkinter 跨平台控件相对位置适配、小程序云数据库高并发请求状态监视与网络断线容错",
+        "innovations": "利用前缀和预处理货物多层分类数据架构；将小程序页面采用“功能+编号”工程化规范命名；编写详尽的学生端与社长端图文操作手册；深度扎根通中校园实际场景，交付即用型数字化服务",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed font-sans\">\n  <!-- 申报正本概述卡片 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800\">全场最高分 · 凌绝望岳</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800\">云极科联（云平台 &amp; 极客社）副社长</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800\">微信小程序 + 云开发 CloudBase</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800\">Python Tkinter 仓储数字化</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 font-serif\">项目背景：根植通中校园生活的数字化全栈工程</h3>\n    <p class=\"text-sm text-slate-700 dark:text-stone-300 mb-3 leading-relaxed font-serif\">\n      朱振鹏同学在担任南通中学“云极科联”（云平台 &amp; 极客社）副社长期间，敏锐洞察校园与企业中的真实数字化痛点，一人独立完成了两大重量级软件工程：<br/>\n      1. <strong>仓储物资数字化管理平台</strong>：针对传统 Excel 仓库表格操作复杂、易误触致错的痛点，使用 Python <code>xlrd / xlwt / xlutils</code> 搭配 Tkinter 相对位置布局开发多级树状分类库存管理桌面系统，并设计前缀和预处理算法优化货物索引。<br/>\n      2. <strong>“南通中学智慧校园”微信小程序矩阵</strong>：包含<strong>社团招新双向审批系统</strong>与<strong>校运会实时赛程成绩积分系统</strong>。改变了以往招新现场填表拥挤混乱、社长汇总耗时滞后的历史，并亲自编写了完整规范的《学生端操作手册》与《社长端操作手册》。\n    </p>\n  </div>\n\n  <!-- 社团领导力与招新海报展示 (原件大图展示) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-amber-600\"></span>\n        云极科联社团活动、招新海报与荣誉证书原件\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">社团风采</span>\n    </div>\n\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-4 items-start pt-1\">\n      <!-- 海报大图 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img\n          src=\"/media/2020/zhu_zhenpeng_club_poster.png\"\n          alt=\"云极科联招新宣传海报原件\"\n          class=\"w-full max-h-80 object-contain rounded-lg shadow-sm bg-slate-50 dark:bg-stone-800 p-1\"\n        />\n        <div class=\"text-xs font-mono text-slate-800 dark:text-stone-200 font-bold\">图1：云极科联招新宣传海报</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          朱振鹏亲手绘制设计（尺寸 2362 &times; 3544，近 7MB 高清原件）\n        </p>\n      </div>\n\n      <!-- 社团合影 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img\n          src=\"/media/2020/zhu_zhenpeng_club_photo.jpg\"\n          alt=\"南通中学云极科联社团合影\"\n          class=\"w-full max-h-80 object-contain rounded-lg shadow-sm\"\n        />\n        <div class=\"text-xs font-mono text-slate-800 dark:text-stone-200 font-bold\">图2：云极科联社团活动合影</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          南通中学诚恒楼社员线下研讨与项目答辩备赛实况（2020年10月）\n        </p>\n      </div>\n\n      <!-- 积极社员证书 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img\n          src=\"/media/2020/zhu_zhenpeng_active_member.jpg\"\n          alt=\"共青团南通中学委员会积极社员证书\"\n          class=\"w-full max-h-80 object-contain rounded-lg shadow-sm\"\n        />\n        <div class=\"text-xs font-mono text-slate-800 dark:text-stone-200 font-bold\">图3：校团委“积极社员”荣誉证书</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          在任内多次组织社员志愿义卖、技术分享与学术答疑\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 智慧校园微信小程序操作界面 (选自两份图文操作手册) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-sky-600\"></span>\n        “南通中学智慧校园”微信小程序矩阵与操作手册实机图\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">WeChat Mini</span>\n    </div>\n\n    <p class=\"text-xs text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n      小程序采用“功能+编号”工程规范设计，依托微信云开发（CloudBase）实现无服务器免运维部署。作者分别撰写了长达数十页的《学生端操作手册》与《社长端操作手册》，以下为手册中记录的实际交互流程：\n    </p>\n\n    <!-- 小程序截图矩阵 (6幅精选UI) -->\n    <div class=\"grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-1\">\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2020/zhu_smartcampus/zhu_app_qr_entry.png\" class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[10px] font-mono text-slate-800 dark:text-stone-200 font-bold\">图4：小程序封面入口</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">智慧校园主界面</p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2020/zhu_smartcampus/zhu_app_society_list.jpeg\" class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[10px] font-mono text-slate-800 dark:text-stone-200 font-bold\">图5：全校社团列表</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">社团分类检索</p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2020/zhu_smartcampus/zhu_app_society_detail.jpeg\" class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[10px] font-mono text-slate-800 dark:text-stone-200 font-bold\">图6：社团风采详情</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">招新说明与寄语</p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2020/zhu_smartcampus/zhu_app_apply_form.jpeg\" class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[10px] font-mono text-slate-800 dark:text-stone-200 font-bold\">图7：职位申报表单</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">9位学号实名认证</p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2020/zhu_smartcampus/zhu_app_status_track.jpeg\" class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[10px] font-mono text-slate-800 dark:text-stone-200 font-bold\">图8：进度实时追踪</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">录取通知直接触达</p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2020/zhu_smartcampus/zhu_app_president_admin.jpeg\" class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[10px] font-mono text-slate-800 dark:text-stone-200 font-bold\">图9：社长专属后台</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">批量审批与Excel导出</p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "独立自主完成了完整的全栈系统闭环，从数据库设计到前后端交互一应俱全，工程落地度极高，所有评委一致评定拔得头筹。"
+        }
+      ],
+      "codeArchives": [
+        {
+          "id": "2020-zhu-zhenpeng-smartcampus",
+          "title": "南通中学“智慧校园”综合服务系统",
+          "badge": "微信小程序与云开发 · 177 个源文件",
+          "category": "小程序 / 云开发 / C++"
+        },
+        {
+          "id": "2020-zhu-zhenpeng-warehouse",
+          "title": "仓储物资数字化管理平台",
+          "badge": "Python / Tkinter / Excel 自动化 · 3 个源文件",
+          "category": "桌面系统 / 自动化"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2020-朱振鹏 - 申请表原件",
+          "filename": "2020-朱振鹏-申请表原件.docx",
+          "url": "/downloads/projects/2020-zhu-zhenpeng-smart-campus/2020-朱振鹏-申请表原件.docx",
+          "size": "18.4 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2020-zhu-zhenpeng-smart-campus",
+          "projectTitle": "智慧校园综合服务系统与仓储物资数字化管理平台",
+          "studentName": "朱振鹏",
+          "editionYear": "2020",
+          "description": "朱振鹏 于 2020 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2020-朱振鹏 - 项目源代码",
+          "filename": "2020-朱振鹏-项目源代码.zip",
+          "url": "/downloads/projects/2020-zhu-zhenpeng-smart-campus/2020-朱振鹏-项目源代码.zip",
+          "size": "24.7 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2020-zhu-zhenpeng-smart-campus",
+          "projectTitle": "智慧校园综合服务系统与仓储物资数字化管理平台",
+          "studentName": "朱振鹏",
+          "editionYear": "2020",
+          "description": "《智慧校园综合服务系统与仓储物资数字化管理平台》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        },
+        {
+          "title": "2020-朱振鹏 - 社团申报微信小程序学生端操作手册",
+          "filename": "2020-朱振鹏-社团申报小程序学生端操作手册.docx",
+          "url": "/downloads/projects/2020-zhu-zhenpeng-smart-campus/2020-朱振鹏-社团申报小程序学生端操作手册.docx",
+          "size": "495.0 KB",
+          "type": "doc",
+          "category": "操作手册",
+          "projectId": "2020-zhu-zhenpeng-smart-campus",
+          "projectTitle": "智慧校园综合服务系统与仓储物资数字化管理平台",
+          "studentName": "朱振鹏",
+          "editionYear": "2020",
+          "description": "朱振鹏编写的《南通中学智慧校园社团申报微信小程序学生端操作手册》官方图文归档原件。"
+        },
+        {
+          "title": "2020-朱振鹏 - 社团申报微信小程序社团端操作手册",
+          "filename": "2020-朱振鹏-社团申报小程序社团端操作手册.docx",
+          "url": "/downloads/projects/2020-zhu-zhenpeng-smart-campus/2020-朱振鹏-社团申报小程序社团端操作手册.docx",
+          "size": "441.9 KB",
+          "type": "doc",
+          "category": "操作手册",
+          "projectId": "2020-zhu-zhenpeng-smart-campus",
+          "projectTitle": "智慧校园综合服务系统与仓储物资数字化管理平台",
+          "studentName": "朱振鹏",
+          "editionYear": "2020",
+          "description": "朱振鹏编写的《南通中学智慧校园社团申报微信小程序社团端（社长）操作手册》官方图文归档原件。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2020/zhu_zhenpeng_club_poster.png",
+          "caption": "图1：云极科联（云平台 & 极客社）官方招新宣传海报原件（朱振鹏亲手设计 · 尺寸 2362x3544）",
+          "category": "社团海报"
+        },
+        {
+          "src": "media/2020/zhu_zhenpeng_club_photo.jpg",
+          "caption": "图2：南通中学云极科联社团活动实况合影（社长与核心社员在通中诚恒楼研讨）",
+          "category": "社团活动"
+        },
+        {
+          "src": "media/2020/zhu_zhenpeng_active_member.jpg",
+          "caption": "图3：共青团江苏省南通中学委员会颁发“积极社员”荣誉证书（朱振鹏）",
+          "category": "荣誉证书"
+        },
+        {
+          "src": "media/2020/zhu_smartcampus/zhu_app_qr_entry.png",
+          "caption": "图4：“南通中学智慧校园”微信小程序官方入口与操作指南封面",
+          "category": "小程序入口"
+        },
+        {
+          "src": "media/2020/zhu_smartcampus/zhu_app_society_list.jpeg",
+          "caption": "图5：学生端：南通中学全社团风采列表一览与多维度筛选界面",
+          "category": "小程序界面"
+        },
+        {
+          "src": "media/2020/zhu_smartcampus/zhu_app_society_detail.jpeg",
+          "caption": "图6：学生端：社团介绍详情页（社长寄语、社团宗旨、招新名额与往届风采）",
+          "category": "小程序界面"
+        },
+        {
+          "src": "media/2020/zhu_smartcampus/zhu_app_apply_form.jpeg",
+          "caption": "图7：学生端：基于 9 位通中学号实名认证、意向职位与个人特长填报表单",
+          "category": "小程序界面"
+        },
+        {
+          "src": "media/2020/zhu_smartcampus/zhu_app_status_track.jpeg",
+          "caption": "图8：学生端：个人志愿申报状态追踪、录取进度通知与考核反馈",
+          "category": "小程序界面"
+        },
+        {
+          "src": "media/2020/zhu_smartcampus/zhu_app_president_admin.jpeg",
+          "caption": "图9：社长端：专属权限后台与各班报名学生简历信息列表",
+          "category": "社长后台"
+        },
+        {
+          "src": "media/2020/zhu_smartcampus/zhu_app_audit_detail.jpeg",
+          "caption": "图10：社长端：线上审核面试、一键批准/驳回操作与微信云开发 Excel 数据报表导出",
+          "category": "社长后台"
+        }
+      ]
+    },
+    {
+      "id": "2020-tong-yizhou-ruios",
+      "title": "RUIOS：基于现代微内核架构的轻量级操作系统内核",
+      "studentId": "tong-yizhou",
+      "studentName": "童亦洲",
+      "class": "高二5班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "操作系统与底层",
+      "tags": [
+        "Operating System",
+        "C",
+        "Rust",
+        "x86汇编",
+        "微内核",
+        "内存分页"
+      ],
+      "summary": "System Rui Project 是一个面向现代化微内核架构的轻量级操作系统项目。设计上致力于构建完全对用户开放的底层系统——用户可在运行时动态加载甚至更换文件系统、驱动管理器与用户态运行时；而将内存管理、进程调度与内核关键任务保留在内核空间以保障极致性能与安全。截至申报时已完成裸机引导与底层内存管理系统。",
+      "hasCode": true,
+      "codeArchiveId": "2020-tong-yizhou-ruios",
+      "artifactSpecs": [
+        {
+          "name": "RUIOS 内核源码与引导镜像",
+          "type": "C / 汇编操作系统内核",
+          "platform": "x86 Bare Metal / QEMU",
+          "size": "完整的引导扇区与微内核实现",
+          "description": "包含 Bootloader、内存虚拟化、中断服务例程与键盘驱动"
+        }
+      ],
+      "details": {
+        "skills": "Intel x86 处理器技术细节、GCC 内联汇编与 C/C++ 混合编程、操作系统微内核原理、Multiboot2 引导协议、段页式虚拟内存分页与链接脚本编写",
+        "difficulties": "裸机环境下缺乏标准运行时库支持，交叉编译、静态链接定位与 QEMU 虚拟机底层寄存器单步调试",
+        "innovations": "采用高度自定义的用户态执行环境；微内核极简化设计，将驱动、文件系统与 Shell 剥离至用户空间；开机终端定制专属“天依蓝 (#66ccff)”界面",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">第四届 (2019-2020) 档案原件数字化录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2020年 12月 8日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">童亦洲</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高二5班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">System Rui Project (RUIOS 操作系统微内核)</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1.5\">🔗 代码托管与开源地址</span><div class=\"flex flex-wrap gap-2\"><a href=\"http://github.com/ntzxtyz/RUIOS.git\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800 transition-colors\"><span>http://github.com/ntzxtyz/RUIOS.git</span><span class=\"text-[10px]\">↗</span></a></div></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👥 团队协作成员与分工</span><span class=\"text-xs text-stone-800 dark:text-stone-200 font-serif leading-relaxed\">个人独立开发 (GitHub: @taishang)</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>System Rui Project 是一个面向现代化微内核架构的轻量级操作系统项目。设计上致力于构建完全对用户开放的底层系统——用户可在运行时动态加载甚至更换文件系统、驱动管理器与用户态运行时；而将内存管理、进程调度与内核关键任务保留在内核空间以保障极致性能与安全。截至申报时已完成裸机引导与底层内存管理系统。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">Intel x86 处理器技术细节、GCC 内联汇编与 C/C++ 混合编程、操作系统微内核原理、Multiboot2 引导协议、段页式虚拟内存分页与链接脚本编写</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">裸机环境下缺乏标准运行时库支持，交叉编译、静态链接定位与 QEMU 虚拟机底层寄存器单步调试</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">采用高度自定义的用户态执行环境；微内核极简化设计，将驱动、文件系统与 Shell 剥离至用户空间；开机终端定制专属“天依蓝 (#66ccff)”界面</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 System Rui Project 技术报告与微内核设计说明 (Kernel Architecture)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-sky-200/80 dark:border-sky-900/40 bg-gradient-to-br from-sky-50/50 via-white to-blue-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-sky-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-sky-100 dark:border-sky-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <div class=\"w-10 h-10 rounded-xl bg-[#66ccff]/20 text-[#0088cc] dark:text-[#66ccff] flex items-center justify-center font-bold text-lg border border-[#66ccff]/40\">\n          ⚙️\n        </div>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">System Rui (RUIOS) 现代操作系统微内核</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">面向极致模块化与高可靠性的微内核架构操作系统 · C &amp; Assembly</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">Microkernel Ring 0/3</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">Multiboot2</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-cyan-100 dark:bg-cyan-900/50 text-cyan-800 dark:text-cyan-300\">两级分页 MMU</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-[#66ccff]/20 text-[#0077b6] dark:text-[#66ccff] border border-[#66ccff]/30\">天依蓝 #66ccff</span>\n      </div>\n    </div>\n\n    <!-- Microkernel Philosophy Card -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-sky-100/80 dark:border-stone-700/60 space-y-2\">\n      <h5 class=\"text-xs font-bold text-sky-900 dark:text-sky-300 flex items-center gap-1.5\">\n        <span>🛡️ 项目愿景与微内核设计哲学 (Microkernel Philosophy)</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        在传统宏内核（Monolithic Kernel）中，文件系统、网络协议栈与设备驱动均运行在最高特权级（Ring 0），单一第三方驱动缺陷便可导致整机蓝屏宕机。<strong>System Rui 秉持微内核设计哲学</strong>：内核态仅保留物理/虚拟内存管理、进程调度与核心 IPC 通信，驱动程序、文件系统与图形渲染均移入用户态（Ring 3），支持运行时动态热插拔与崩溃无缝重启，兼具极致弹性与安全壁垒。\n      </p>\n    </div>\n  </div>\n\n  <!-- Implementation Highlights Grid -->\n  <div class=\"space-y-3\">\n    <h5 class=\"text-sm font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-blue-600\"></span>\n      <span>🔧 底层技术实现与工程架构 (Implementation Details)</span>\n    </h5>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5\">\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-lg\">🚀</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">引导扇区与规范兼容</h6>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          编写 <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded\">boot/boot.S</code> 汇编，严格符合 <strong>Multiboot2 规范</strong>，平滑引导至 32/64 位保护模式，初始化全局段描述符（GDT）与中断描述符表（IDT）。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-lg\">🧠</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">两级分页与虚拟内存</h6>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          在 <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded\">boot/init.c</code> 与 <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded\">mm/</code> 实现了两级分页机制，精确映射内核保留区域并隔离用户地址空间，杜绝越界覆写。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-lg\">📐</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">自定义内核链接脚本</h6>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          自主设计 <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded\">kernel.lds</code> 链接脚本，精确规划 <code class=\"font-mono text-[10px]\">.text</code>, <code class=\"font-mono text-[10px]\">.rodata</code>, <code class=\"font-mono text-[10px]\">.data</code>, <code class=\"font-mono text-[10px]\">.bss</code> 的物理内存对齐边界。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- Multiboot & Roadmap -->\n  <div class=\"rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-900/60 p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4 text-xs font-mono\">\n    <div class=\"space-y-1\">\n      <span class=\"font-bold text-slate-900 dark:text-white font-sans\">🌐 开源仓库与多架构蓝图 (Roadmap)</span>\n      <p class=\"text-slate-500 dark:text-stone-400 font-serif\">远景架构规划支持：x86-PC、ARM/MIPS 嵌入式以及 PowerPC 节点</p>\n    </div>\n    <div class=\"flex items-center gap-2\">\n      <a href=\"http://github.com/ntzxtyz/RUIOS.git\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white dark:bg-stone-800 border border-slate-300 dark:border-stone-700 hover:border-sky-500 text-sky-600 dark:text-sky-400 transition-colors\">\n        <span>github.com/ntzxtyz/RUIOS.git</span>\n        <span class=\"text-[10px]\">↗</span>\n      </a>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "在高中生阶段敢于涉足操作系统内核开发并成功在虚拟机上跑通 Shell，技术难度与钻研精神令人惊叹。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2020-童亦洲 - 申请表原件",
+          "filename": "2020-童亦洲-申请表原件.docx",
+          "url": "/downloads/projects/2020-tong-yizhou-ruios/2020-童亦洲-申请表原件.docx",
+          "size": "9.1 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2020-tong-yizhou-ruios",
+          "projectTitle": "RUIOS：基于现代微内核架构的轻量级操作系统内核",
+          "studentName": "童亦洲",
+          "editionYear": "2020",
+          "description": "童亦洲 于 2020 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2020-童亦洲 - 项目源代码",
+          "filename": "2020-童亦洲-项目源代码.zip",
+          "url": "/downloads/projects/2020-tong-yizhou-ruios/2020-童亦洲-项目源代码.zip",
+          "size": "14.7 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2020-tong-yizhou-ruios",
+          "projectTitle": "RUIOS：基于现代微内核架构的轻量级操作系统内核",
+          "studentName": "童亦洲",
+          "editionYear": "2020",
+          "description": "《RUIOS：基于现代微内核架构的轻量级操作系统内核》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2020-wang-zhe-fattingball",
+      "title": "《胖球对决 Fattingball》物理碰撞游戏与校运会极客微信小程序",
+      "studentId": "wang-zhe",
+      "studentName": "王喆",
+      "class": "高三14班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "游戏与应用",
+      "tags": [
+        "微信小程序",
+        "Unity 3D",
+        "物理引擎",
+        "极客社",
+        "全校赛事服务"
+      ],
+      "summary": "独立研发2D微重力刚体弹性碰撞对战游戏《Fattingball》，并主持南通中学极客社2019校运会微信小程序系统架构，实现全校赛事数据全链路处理。",
+      "video": {
+        "src": "media/2020_wang_zhe_fattingball.mp4",
+        "poster": "media/2020_wang_zhe_fattingball_poster.jpg",
+        "title": "《胖球对决》双人物理碰撞实机演示"
+      },
+      "hasCode": false,
+      "details": {
+        "skills": "全栈 Web 开发基础、微信小程序架构与业务设计、Unity 3D 物理引擎动量仿真、大型学生科技社团统筹与工程规划",
+        "difficulties": "高三学业压力下极其有限的电脑上机时间（在家严格受限）、从零自学 Web 前端与小程序框架、初次执掌大型技术社团化解团队协调危机",
+        "innovations": "首创校运会全流程微信小程序生态；搭建“一个联盟+双社长+技术/普及双轨”的全新社团组织机制；自主研发双人同屏弹性物理博弈游戏",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 text-amber-700 border border-amber-200\">2D 物理刚体引擎</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">微信小程序全栈</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">极客社校园数字化</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">双模块工程概览</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">王喆同学在本届申报中提交了两项扎实的软硬件实践：一是基于刚体碰撞与动量守恒物理机制的竞技对战微游戏<strong>《Fattingball（胖球对决）》</strong>；二是为全校数千名师生打造的<strong>2019南通中学校运会赛事编排与实时成绩流转小程序</strong>。</p>\n  </div>\n\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-6\">\n    <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 shadow-xl backdrop-blur-sm flex flex-col justify-between\">\n      <div>\n        <h4 class=\"text-base font-bold text-slate-900 mb-2 flex items-center gap-2\">\n          <span class=\"w-2 h-2 rounded-full bg-amber-600\"></span>\n          模块一：《胖球对决 Fattingball》\n        </h4>\n        <p class=\"text-xs text-slate-700 mb-3\">利用矢量速度分解与动量定理模拟小球在圆环擂台内的弹性对撞，具备完整的角动量衰减、力矩反馈及阻尼物理引擎：</p>\n        <ul class=\"text-xs text-slate-600 space-y-1.5 list-disc pl-4 mb-3\">\n          <li><strong>碰撞检测</strong>：圆-圆连心线投影判别与连续碰撞避免穿透穿模。</li>\n          <li><strong>动态蓄力机制</strong>：触控摇杆角度与拉伸量转换为初速度矢量。</li>\n          <li><strong>胜负裁决算法</strong>：基于同心圆安全区边缘出界判据。</li>\n        </ul>\n      </div>\n      <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs text-[11px] font-mono text-amber-700\">\n        Demo 视频已随申请归档，完整展示了高帧率平滑物理运动与音效同步反馈。\n      </div>\n    </div>\n\n    <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 shadow-xl backdrop-blur-sm flex flex-col justify-between\">\n      <div>\n        <h4 class=\"text-base font-bold text-slate-900 mb-2 flex items-center gap-2\">\n          <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n          模块二：校运会极客微信小程序系统\n        </h4>\n        <p class=\"text-xs text-slate-700 mb-3\">重构传统纸质运动会手工登分、广播滞后的低效流程，建立多终端闭环体系：</p>\n        <div class=\"grid grid-cols-2 gap-2 text-xs\">\n          <div class=\"bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs\">\n            <div class=\"text-sky-700 font-bold mb-1\">体育教研组 / 裁判</div>\n            <div class=\"text-slate-600 text-[11px]\">一键发布日程、限时开启报名、检录状态录入与秒级成绩上传。</div>\n          </div>\n          <div class=\"bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs\">\n            <div class=\"text-emerald-700 font-bold mb-1\">班主任 / 体委 / 广播台</div>\n            <div class=\"text-slate-600 text-[11px]\">实时查阅本班积分榜、个人前三名直通校广播站播报流水线。</div>\n          </div>\n        </div>\n      </div>\n      <div class=\"mt-3 bg-white p-3 rounded-xl border border-slate-200 shadow-xs text-[11px] font-mono text-sky-700\">\n        全校3个年级60余个班级全程平稳运转，彻底解决校运会历史性信息孤岛。\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "社团领导力与技术产品力俱佳，小程序服务全校反响热烈，游戏制作趣味横生。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2020/wang_zhe_application_p1.jpg",
+          "caption": "王喆第四届望岳奖学金申报表亲笔手写稿原件（第1页：社团体系重构与项目综述）",
+          "category": "document"
+        },
+        {
+          "src": "media/2020/wang_zhe_application_p2.jpg",
+          "caption": "王喆第四届望岳奖学金申报表亲笔手写稿原件（第2页：技能习得、克服困难与社团框架创新）",
+          "category": "document"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2020-王喆 - 项目设计文档/学术报告",
+          "filename": "2020-王喆-项目技术报告.docx",
+          "url": "/downloads/projects/2020-wang-zhe-fattingball/2020-王喆-项目技术报告.docx",
+          "size": "44.7 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2020-wang-zhe-fattingball",
+          "projectTitle": "《胖球对决 Fattingball》物理碰撞游戏与校运会极客微信小程序",
+          "studentName": "王喆",
+          "editionYear": "2020",
+          "description": "《《胖球对决 Fattingball》物理碰撞游戏与校运会极客微信小程序》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2020-wang-haojin-seats-mnist",
+      "title": "智能班级排座系统 (Seats) 与 MNIST 深度神经网络手写识别",
+      "studentId": "wang-haojin",
+      "studentName": "王昊金",
+      "class": "高二5班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "AI与算法",
+      "tags": [
+        "Python",
+        "TensorFlow",
+        "深度学习",
+        "班级排座",
+        "贪心启发式算法"
+      ],
+      "summary": "同时提交两项扎实的技术成果：其一为针对学校崇雅楼千人会场排座痛点开发的《校园崇雅楼座位管理程序》，基于 Python Tkinter 与 xlrd/xlwt 实现 1096 个座位的自动划分、矩阵颜色标记与一键导出，已被学校正式录用并投入全校大型集会使用；其二为自主钻研的《基于 Ipython 的三层神经网络编程》，从底层矩阵乘法与 Sigmoid 激活函数出发，实现 MNIST 手写数字识别与旋转数据增强。",
+      "details": {
+        "skills": "Python 应用编程（Tkinter 桌面 GUI、xlrd/xlwt 读写 Excel 与单元格调色板样式控制）、机器学习基础（前向传播矩阵运算、Sigmoid 函数 1/(1+e^-x)、误差反向传播、旋转图像增强）",
+        "difficulties": "自主推导学习高阶线性代数与矩阵求导数学原理、利用 xlwt 为不同班级单元格填充不同实体颜色进行视觉区分、读取并转换非标准 CSV/图像手写数字数据",
+        "innovations": "直接解决高中学校大型场馆人工排座的繁琐难题，算法经实测已被学校正式采纳并投入实际应用；在高中阶段从零自主跑通神经网络正反向传播完整闭环",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件正本录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">第四届 (2019-2020) 档案原件数字化录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2020年 10月</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">王昊金</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高一5班（申报时）/ 高二5班（获奖时）</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">校园崇雅楼座位管理程序 (已被学校录用) &amp; 基于Ipython的神经网络编程</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🔗 代码托管与开源地址</span><span class=\"text-xs text-stone-700 dark:text-stone-300 font-mono\">包含座位自动排布 Tkinter 源码与 MNIST 3层神经网络 Jupyter Notebook</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👥 团队协作成员与分工</span><span class=\"text-xs text-stone-800 dark:text-stone-200 font-serif leading-relaxed\">个人独立开发 (座位管理程序由高一5班童亦洲、王昊金联合协作)</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>同时提交两项扎实的技术成果：其一为针对学校崇雅楼千人会场排座痛点开发的《校园崇雅楼座位管理程序》，基于 Python Tkinter 与 xlrd/xlwt 实现 1096 个座位的自动划分、矩阵颜色标记与一键导出，已被学校正式录用并投入全校大型集会使用；其二为自主钻研的《基于 Ipython 的三层神经网络编程》，从底层矩阵乘法与 Sigmoid 激活函数出发，实现 MNIST 手写数字识别与旋转数据增强。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">Python 应用编程（Tkinter 桌面 GUI、xlrd/xlwt 读写 Excel 与单元格调色板样式控制）、机器学习基础（前向传播矩阵运算、Sigmoid 函数 1/(1+e^-x)、误差反向传播、旋转图像增强）</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">自主推导学习高阶线性代数与矩阵求导数学原理、利用 xlwt 为不同班级单元格填充不同实体颜色进行视觉区分、读取并转换非标准 CSV/图像手写数字数据</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">直接解决高中学校大型场馆人工排座的繁琐难题，算法经实测已被学校正式采纳并投入实际应用；在高中阶段从零自主跑通神经网络正反向传播完整闭环</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\"><span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span><h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与深度技术解析 (Technical Report & Paper)</h4></div><h5 className=\"font-bold text-blue-950 mt-4 mb-2 text-sm\">【项目原件申报正文与核心算法解析】</h5><p className=\"leading-relaxed mb-2.5 text-slate-700\">（王昊金同学在第四届评选中提交了两份独立申报表，分别聚焦校园实际工具开发与前沿深度学习探索）</p><h5 className=\"font-bold text-blue-950 mt-4 mb-2 text-sm\">一、成果一：校园崇雅楼座位管理程序 (已被学校录用)</h5><p className=\"leading-relaxed mb-2.5 text-slate-700\">1. 需求背景：南通中学崇雅楼是全校开展大型讲座、年级大会与文艺汇演的核心学术场馆，拥有多达 1096 个固定阶梯坐席。以往每逢大型活动，负责老师需要手动在纸上或 Excel 中逐行逐列数座位并为各班划界，耗时耗力且极易因为班级人数变动导致座次错位甚至产生空座浪费。</p><p className=\"leading-relaxed mb-2.5 text-slate-700\">2. 算法与实现逻辑：本软件由王昊金与童亦洲联合编写。程序读取“示例.xlsx”中输入的各班级名称与实到人数，同时加载崇雅楼真实的 1096 个座位空间物理排布拓扑矩阵（ex.xlsx）。算法遍历 1 至 1096 号坐席序列，依次将对应班级名称填入矩阵单元格；更为精巧的是，程序预设了醒目的调色板序列，自动为不同班级的坐席单元格渲染上互不混淆的纯色背景（Pattern.SOLID_PATTERN），最终一键生成直观可视化的“结果.xls”，方便直接打印并张贴在会场门前与各班座位扶手上。</p><h5 className=\"font-bold text-blue-950 mt-4 mb-2 text-sm\">3. 实际成效：该桌面软件已在南通中学成功部署并正式录用，极大提升了学校组织千人大会的场馆调度效率。</h5><h5 className=\"font-bold text-blue-950 mt-4 mb-2 text-sm\">二、成果二：基于 Ipython 的三层神经网络手写数字识别</h5><p className=\"leading-relaxed mb-2.5 text-slate-700\">1. 网络拓扑设计：基于 Python 编写三层前馈神经网络（Input Layer 784 维，Hidden Layer 200 维，Output Layer 10 维）。</p><p className=\"leading-relaxed mb-2.5 text-slate-700\">2. 核心数学公式与激活机制：各层节点采用 Sigmoid 非线性激活函数 $S(x) = \\frac{1}{1 + e^{-x}}$；各层权重矩阵采用与输入节点度相关的正态分布随机初始化（均值 0，方差 $1/\\sqrt{\\text{incoming}}$），有效抑制了训练初期的梯度消失或梯度爆炸现象。</p><p className=\"leading-relaxed mb-2.5 text-slate-700\">3. 误差反向传播与矩阵计算：在 Jupyter Notebook 中利用 NumPy 进行矩阵矢量化运算，通过输出层误差与隐藏层误差的链式求导，反向迭代微调权重矩阵；</p><p className=\"leading-relaxed mb-2.5 text-slate-700\">4. 图像旋转数据增强：为了突破模型在实际手写样本倾斜时的识别局限，创新性利用 scipy.ndimage.interpolation 对 MNIST 训练图片进行正负 10 度的仿射旋转变换，在原数据集基础上扩充了 2 倍增强样本，显著提升了泛化鲁棒性，并在测试集和个人拍摄手写图片上均成功跑通了推理预测。</p></div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "能够主动观察身边的实际需求并尝试用代码解决，同时对深度学习保持了积极的探索态度。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2020-wang-haojin-seats-mnist",
+      "downloads": [
+        {
+          "title": "2020-王昊金 - 申请表原件",
+          "filename": "2020-王昊金-申请表原件.docx",
+          "url": "/downloads/projects/2020-wang-haojin-seats-mnist/2020-王昊金-申请表原件.docx",
+          "size": "12.3 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2020-wang-haojin-seats-mnist",
+          "projectTitle": "智能班级排座系统 (Seats) 与 MNIST 深度神经网络手写识别",
+          "studentName": "王昊金",
+          "editionYear": "2020",
+          "description": "王昊金 于 2020 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2020-王昊金 - 项目设计文档/学术报告",
+          "filename": "2020-王昊金-项目技术报告.docx",
+          "url": "/downloads/projects/2020-wang-haojin-seats-mnist/2020-王昊金-项目技术报告.docx",
+          "size": "12.3 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2020-wang-haojin-seats-mnist",
+          "projectTitle": "智能班级排座系统 (Seats) 与 MNIST 深度神经网络手写识别",
+          "studentName": "王昊金",
+          "editionYear": "2020",
+          "description": "《智能班级排座系统 (Seats) 与 MNIST 深度神经网络手写识别》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2020-王昊金 - 项目源代码",
+          "filename": "2020-王昊金-项目源代码.zip",
+          "url": "/downloads/projects/2020-wang-haojin-seats-mnist/2020-王昊金-项目源代码.zip",
+          "size": "694.4 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2020-wang-haojin-seats-mnist",
+          "projectTitle": "智能班级排座系统 (Seats) 与 MNIST 深度神经网络手写识别",
+          "studentName": "王昊金",
+          "editionYear": "2020",
+          "description": "《智能班级排座系统 (Seats) 与 MNIST 深度神经网络手写识别》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "title": "2020 届望岳奖学金评选细则 (官方章程)",
+      "filename": "2020第四届望岳奖学金评选细则.docx",
+      "url": "/downloads/editions/2020/2020第四届望岳奖学金评选细则.docx",
+      "size": "162.7 KB",
+      "type": "doc",
+      "category": "评选细则",
+      "editionYear": "2020",
+      "description": "包含评选对象、申报要求、各级奖项标准与评审流程。"
+    }
+  ]
+}

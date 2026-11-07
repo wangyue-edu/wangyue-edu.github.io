@@ -1,0 +1,111 @@
+{
+  "projectId": "2020-tong-yizhou-ruios",
+  "externalRepo": "http://github.com/ntzxtyz/RUIOS",
+  "totalFiles": 8,
+  "totalLines": 745,
+  "coreFiles": [
+    "boot/boot.S",
+    "boot/init.c",
+    "kernel/head.S",
+    "kernel.lds",
+    "Makefile"
+  ],
+  "languages": [
+    {
+      "lang": "h",
+      "lines": 367,
+      "percent": 49.3
+    },
+    {
+      "lang": "s",
+      "lines": 264,
+      "percent": 35.4
+    },
+    {
+      "lang": "c",
+      "lines": 52,
+      "percent": 7.0
+    },
+    {
+      "lang": "lds",
+      "lines": 40,
+      "percent": 5.4
+    },
+    {
+      "lang": "md",
+      "lines": 18,
+      "percent": 2.4
+    },
+    {
+      "lang": "cpp",
+      "lines": 4,
+      "percent": 0.5
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "name": "README.md",
+      "lang": "md",
+      "lines": 18,
+      "size": 999,
+      "content": "## System Rui Project\n\nSystem Rui是一个操作系统微内核。System Rui Project致力于建立一个对于用户完全开放的系统——用户可以在运行时加载甚至更换文件系统、设备管理器、图形界面、进程执行环境。\n\n\n源代码：http://github.com/ntzxtyz/RUIOS.git\n附件为截至20201115时源代码\n\n介绍：SystemRuiProject是一个操作系统项目，RUIOS是其微内核，设计为高度自定义的操作系统，将文件系统、设备管理器、图形界面、运行时等全部放在用户空间并且可更改，而将内存管理、进程管理、内核任务放在内核空间以提高性能。远景目标为在下x86-PC、arm/mips-嵌入式和ppc-分布式三类设备上运行。目前实现为引导、内存管理。\n\n展示：本操作系统尚未支持图形界面，仅有开机界面。\n\n（色号：#66ccff，天依色）\n\n申报人：高二五班童亦洲（@taishang）\n\n\n作者邮箱：********************, ******************.\n"
+    },
+    {
+      "path": "boot/boot.S",
+      "name": "boot.S",
+      "lang": "s",
+      "lines": 121,
+      "size": 3071,
+      "content": "#include \"multiboot2.h\"\n#define STACK_SIZE\t0x4000\n\n\t.intel_syntax noprefix\n\t.text\n\t.code32\n\t.globl\t_start\n_start:\tjmp\tmultiboot_entry\n\n\t.align\t8\nmultiboot_header:\n        //识别头，魔数&体系&校验和\n        .long   MULTIBOOT2_HEADER_MAGIC\n        .long   MULTIBOOT_ARCHITECTURE_I386\n        .long   multiboot_header_end - multiboot_header\n        .long   -(MULTIBOOT2_HEADER_MAGIC + MULTIBOOT_ARCHITECTURE_I386 + (multiboot_header_end - multiboot_header))\n\n#ifndef __ELF__\naddress_tag_start:\n        //加载地址\n        .short  MULTIBOOT_HEADER_TAG_ADDRESS\n        .short  MULTIBOOT_HEADER_TAG_OPTIONAL\n        .long   address_tag_end - address_tag_start\n\n        .long   multiboot_header\n\n        .long   _start\n\n        .long   _edata\n\n        .long   _end\naddress_tag_end:\nentry_address_tag_start:\n        .short  MULTIBOOT_HEADER_TAG_ENTRY_ADDRESS\n        .short  MULTIBOOT_HEADER_TAG_OPTIONAL\n        .long   entry_address_tag_end - entry_address_tag_start\n        .long   multiboot_entry\nentry_address_tag_end:\n#endif /*  __ELF__ */\n\nframebuffer_tag_start:\n        //视频缓冲区信息\n        .short  MULTIBOOT_HEADER_TAG_FRAMEBUFFER\n        .short  MULTIBOOT_HEADER_TAG_OPTIONAL\n        .long   framebuffer_tag_end - framebuffer_tag_start\n        .long   1024\n        .long   768\n        .long   32\nframebuffer_tag_end:\n        .short  MULTIBOOT_HEADER_TAG_END\n        .short  0\n        .long   0\nmultiboot_header_end:\n\nmultiboot_entry:\n\t\n\tmov\tesp,\t(stack + STACK_SIZE)\n\tpush\t0\n\n        pop     ecx\n        push    eax\n        push    ebx\n        call    init\n\t\n.prepare_PAE:\n        mov     dword   ptr     [0x90000],      0x91007\n        mov     dword   ptr     [0x90004],      0x00000\n        mov     dword   ptr     [0x90800],      0x91007\n        mov     dword   ptr     [0x90804],      0x00000\n        mov     dword   ptr     [0x91000],      0x92007\n        mov     dword   ptr     [0x91004],      0x00000\n        mov     dword   ptr     [0x92000],      0x000083\n        mov     dword   ptr     [0x92004],      0x000000\n        mov     dword   ptr     [0x92008],      0x200083\n        mov     dword   ptr     [0x9200c],      0x000000\n        mov     dword   ptr     [0x92010],      0x400083\n        mov     dword   ptr     [0x92014],      0x000000\n        mov     dword   ptr     [0x92018],      0x600083\n        mov     dword   ptr     [0x9201c],      0x000000\n        mov     dword   ptr     [0x92020],      0x800083\n        mov     dword   ptr     [0x92024],      0x000000\n        mov     dword   ptr     [0x92028],      0xa00083\n        mov     dword   ptr     [0x9202c],      0x000000\n\n\t.byte\t0x66\n\tlgdt\t[GdtPtr]\n\n.enter_ia32e:\n\tmov\teax,\t0x18\n\tmov\tds,\teax\n\tmov\tes,\teax\n\tmov\tfs,\teax\n\tmov\tss,\teax\n\n\tmov\teax,\tcr4\n\tbts\teax,\t5\n\tmov\tcr4,\teax\n\n\tmov\tecx,\t0x0c0000080\n\trdmsr\n\t\n\tmov\teax,\t8\n\twrmsr\n\n\tmov\teax,\tcr0\n\tbts\teax,\t0\n\tbts\teax,\t31\n\tmov\tcr0,\teax\n\n\tjmp\t0x10:\tstart\n\nGDT64:\t.quad\t0x0000000000000000\nCODE:\t.quad\t0x0020980000000000\nDATA:\t.quad\t0x0000920000000000\nGdtEnd:\n\nGdtPtr:\t.word\tGdtEnd - GDT64 - 1\n\t.long\tGDT64\n\n\t.comm\tstack,\tSTACK_SIZE\n\n"
+    },
+    {
+      "path": "boot/init.c",
+      "name": "init.c",
+      "lang": "c",
+      "lines": 52,
+      "size": 2622,
+      "content": "#include \"multiboot2.h\"\n#include \"init.h\"\n\nvoid init(unsigned long magic, unsigned long addr) {\n\n        if (magic != MULTIBOOT2_BOOTLOADER_MAGIC)\n                return;\n\n        struct multiboot_tag *tag;\n\n        for (tag = (struct multiboot_tag *) (addr + 8);\n             tag->type != MULTIBOOT_TAG_TYPE_END;\n             tag = (struct multiboot_tag *) ((multiboot_uint8_t *) tag\n                                             + ((tag->size + 7) & ~7)))\n                switch (tag->type) {\n                        case MULTIBOOT_TAG_TYPE_MMAP: {\n                                multiboot_memory_map_t *mmap;\n                                struct meminfo *info = (struct meminfo *) MEMMAP_ADDR;\n                                int i = 0;\n\n                                for (mmap = ((struct multiboot_tag_mmap *) tag)->entries;\n                                     (multiboot_uint8_t *) mmap\n                                     < (multiboot_uint8_t *) tag + tag->size;\n                                     mmap = (multiboot_memory_map_t *)\n                                             ((unsigned long) mmap\n                                              + ((struct multiboot_tag_mmap *) tag)->entry_size)) {\n                                        info[i].addr = mmap->addr;\n                                        info[i].size = mmap->len;\n                                        info[i].type = mmap->type;\n                                        i++;\n                                }\n                        }\n                                break;\n\n                        case MULTIBOOT_TAG_TYPE_FRAMEBUFFER: {\n                                struct multiboot_tag_framebuffer *tagfb = (struct multiboot_tag_framebuffer *) tag;\n                                struct bufferinfo *info = (struct bufferinfo *) BUFFER_ADDR;\n                                if (tagfb->common.framebuffer_type == MULTIBOOT_FRAMEBUFFER_TYPE_RGB) {\n                                        info->addr = tagfb->common.framebuffer_addr;\n                                        info->width = tagfb->common.framebuffer_width;\n                                        info->height = tagfb->common.framebuffer_height;\n                                }\n\n                                int *fb = (int *) (unsigned long) info->addr;\n                                for (int i = 0; i < info->height * info->width; i++)\n                                        fb[i] = 0x00ee0000;\n                        }\n\n                        default:\n                                break;\n                }\n}"
+    },
+    {
+      "path": "boot/init.h",
+      "name": "init.h",
+      "lang": "h",
+      "lines": 298,
+      "size": 6953,
+      "content": "\ntypedef unsigned char multiboot_uint8_t;\ntypedef unsigned short multiboot_uint16_t;\ntypedef unsigned int multiboot_uint32_t;\ntypedef unsigned long long multiboot_uint64_t;\n\nstruct multiboot_header {\n\t/*  Must be MULTIBOOT_MAGIC - see above. */\n\tmultiboot_uint32_t magic;\n\t\n\t/*  ISA */\n\tmultiboot_uint32_t architecture;\n\t\n\t/*  Total header length. */\n\tmultiboot_uint32_t header_length;\n\t\n\t/*  The above fields plus this one must equal 0 mod 2^32. */\n\tmultiboot_uint32_t checksum;\n};\n\nstruct multiboot_header_tag {\n\tmultiboot_uint16_t type;\n\tmultiboot_uint16_t flags;\n\tmultiboot_uint32_t size;\n};\n\nstruct multiboot_header_tag_information_request {\n\tmultiboot_uint16_t type;\n\tmultiboot_uint16_t flags;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t requests[0];\n};\n\nstruct multiboot_header_tag_address {\n\tmultiboot_uint16_t type;\n\tmultiboot_uint16_t flags;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t header_addr;\n\tmultiboot_uint32_t load_addr;\n\tmultiboot_uint32_t load_end_addr;\n\tmultiboot_uint32_t bss_end_addr;\n};\n\nstruct multiboot_header_tag_entry_address {\n\tmultiboot_uint16_t type;\n\tmultiboot_uint16_t flags;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t entry_addr;\n};\n\nstruct multiboot_header_tag_console_flags {\n\tmultiboot_uint16_t type;\n\tmultiboot_uint16_t flags;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t console_flags;\n};\n\nstruct multiboot_header_tag_framebuffer {\n\tmultiboot_uint16_t type;\n\tmultiboot_uint16_t flags;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t width;\n\tmultiboot_uint32_t height;\n\tmultiboot_uint32_t depth;\n};\n\nstruct multiboot_header_tag_module_align {\n\tmultiboot_uint16_t type;\n\tmultiboot_uint16_t flags;\n\tmultiboot_uint32_t size;\n};\n\nstruct multiboot_header_tag_relocatable {\n\tmultiboot_uint16_t type;\n\tmultiboot_uint16_t flags;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t min_addr;\n\tmultiboot_uint32_t max_addr;\n\tmultiboot_uint32_t align;\n\tmultiboot_uint32_t preference;\n};\n\nstruct multiboot_color {\n\tmultiboot_uint8_t red;\n\tmultiboot_uint8_t green;\n\tmultiboot_uint8_t blue;\n};\n\nstruct multiboot_mmap_entry {\n\tmultiboot_uint64_t addr;\n\tmultiboot_uint64_t len;\n#define MULTIBOOT_MEMORY_AVAILABLE              1\n#define MULTIBOOT_MEMORY_RESERVED               2\n#define MULTIBOOT_MEMORY_ACPI_RECLAIMABLE       3\n#define MULTIBOOT_MEMORY_NVS                    4\n#define MULTIBOOT_MEMORY_BADRAM                 5\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t zero;\n};\ntypedef struct multiboot_mmap_entry multiboot_memory_map_t;\n\nstruct multiboot_tag {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n};\n\nstruct multiboot_tag_string {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tchar string[0];\n};\n\nstruct multiboot_tag_module {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t mod_start;\n\tmultiboot_uint32_t mod_end;\n\tchar cmdline[0];\n};\n\nstruct multiboot_tag_basic_meminfo {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t mem_lower;\n\tmultiboot_uint32_t mem_upper;\n};\n\nstruct multiboot_tag_bootdev {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t biosdev;\n\tmultiboot_uint32_t slice;\n\tmultiboot_uint32_t part;\n};\n\nstruct multiboot_tag_mmap {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t entry_size;\n\tmultiboot_uint32_t entry_version;\n\tstruct multiboot_mmap_entry entries[0];\n};\n\nstruct multiboot_vbe_info_block {\n\tmultiboot_uint8_t external_specification[512];\n};\n\nstruct multiboot_vbe_mode_info_block {\n\tmultiboot_uint8_t external_specification[256];\n};\n\nstruct multiboot_tag_vbe {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\t\n\tmultiboot_uint16_t vbe_mode;\n\tmultiboot_uint16_t vbe_interface_seg;\n\tmultiboot_uint16_t vbe_interface_off;\n\tmultiboot_uint16_t vbe_interface_len;\n\t\n\tstruct multiboot_vbe_info_block vbe_control_info;\n\tstruct multiboot_vbe_mode_info_block vbe_mode_info;\n};\n\nstruct multiboot_tag_framebuffer_common {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\t\n\tmultiboot_uint64_t framebuffer_addr;\n\tmultiboot_uint32_t framebuffer_pitch;\n\tmultiboot_uint32_t framebuffer_width;\n\tmultiboot_uint32_t framebuffer_height;\n\tmultiboot_uint8_t framebuffer_bpp;\n#define MULTIBOOT_FRAMEBUFFER_TYPE_INDEXED 0\n#define MULTIBOOT_FRAMEBUFFER_TYPE_RGB     1\n#define MULTIBOOT_FRAMEBUFFER_TYPE_EGA_TEXT     2\n\tmultiboot_uint8_t framebuffer_type;\n\tmultiboot_uint16_t reserved;\n};\n\nstruct multiboot_tag_framebuffer {\n\tstruct multiboot_tag_framebuffer_common common;\n\t\n\tunion {\n\t\tstruct {\n\t\t\tmultiboot_uint16_t framebuffer_palette_num_colors;\n\t\t\tstruct multiboot_color framebuffer_palette[0];\n\t\t};\n\t\tstruct {\n\t\t\tmultiboot_uint8_t framebuffer_red_field_position;\n\t\t\tmultiboot_uint8_t framebuffer_red_mask_size;\n\t\t\tmultiboot_uint8_t framebuffer_green_field_position;\n\t\t\tmultiboot_uint8_t framebuffer_green_mask_size;\n\t\t\tmultiboot_uint8_t framebuffer_blue_field_position;\n\t\t\tmultiboot_uint8_t framebuffer_blue_mask_size;\n\t\t};\n\t};\n};\n\nstruct multiboot_tag_elf_sections {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t num;\n\tmultiboot_uint32_t entsize;\n\tmultiboot_uint32_t shndx;\n\tchar sections[0];\n};\n\nstruct multiboot_tag_apm {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint16_t version;\n\tmultiboot_uint16_t cseg;\n\tmultiboot_uint32_t offset;\n\tmultiboot_uint16_t cseg_16;\n\tmultiboot_uint16_t dseg;\n\tmultiboot_uint16_t flags;\n\tmultiboot_uint16_t cseg_len;\n\tmultiboot_uint16_t cseg_16_len;\n\tmultiboot_uint16_t dseg_len;\n};\n\nstruct multiboot_tag_efi32 {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t pointer;\n};\n\nstruct multiboot_tag_efi64 {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint64_t pointer;\n};\n\nstruct multiboot_tag_smbios {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint8_t major;\n\tmultiboot_uint8_t minor;\n\tmultiboot_uint8_t reserved[6];\n\tmultiboot_uint8_t tables[0];\n};\n\nstruct multiboot_tag_old_acpi {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint8_t rsdp[0];\n};\n\nstruct multiboot_tag_new_acpi {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint8_t rsdp[0];\n};\n\nstruct multiboot_tag_network {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint8_t dhcpack[0];\n};\n\nstruct multiboot_tag_efi_mmap {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t descr_size;\n\tmultiboot_uint32_t descr_vers;\n\tmultiboot_uint8_t efi_mmap[0];\n};\n\nstruct multiboot_tag_efi32_ih {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t pointer;\n};\n\nstruct multiboot_tag_efi64_ih {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint64_t pointer;\n};\n\nstruct multiboot_tag_load_base_addr {\n\tmultiboot_uint32_t type;\n\tmultiboot_uint32_t size;\n\tmultiboot_uint32_t load_base_addr;\n};\n\n#define BUFFER_ADDR 0x7000\nstruct bufferinfo {\n\tunsigned long long addr;\n\tunsigned int width, height;\n};\n\n#define MEMMAP_ADDR 0x7200\nstruct meminfo {\n\tunsigned long long addr, size;\n\tunsigned int type;\n};"
+    },
+    {
+      "path": "boot/multiboot2.h",
+      "name": "multiboot2.h",
+      "lang": "h",
+      "lines": 69,
+      "size": 2686,
+      "content": "#ifndef MULTIBOOT_HEADER\n#define MULTIBOOT_HEADER 1\n\n/*  How many bytes from the start of the file we search for the header. */\n#define MULTIBOOT_SEARCH                        32768\n#define MULTIBOOT_HEADER_ALIGN                  8\n\n/*  The magic field should contain this. */\n#define MULTIBOOT2_HEADER_MAGIC                 0xe85250d6\n\n/*  This should be in %eax. */\n#define MULTIBOOT2_BOOTLOADER_MAGIC             0x36d76289\n\n/*  Alignment of multiboot modules. */\n#define MULTIBOOT_MOD_ALIGN                     0x00001000\n\n/*  Alignment of the multiboot info structure. */\n#define MULTIBOOT_INFO_ALIGN                    0x00000008\n\n/*  Flags set in the ’flags’ member of the multiboot header. */\n\n#define MULTIBOOT_TAG_ALIGN                  8\n#define MULTIBOOT_TAG_TYPE_END               0\n#define MULTIBOOT_TAG_TYPE_CMDLINE           1\n#define MULTIBOOT_TAG_TYPE_BOOT_LOADER_NAME  2\n#define MULTIBOOT_TAG_TYPE_MODULE            3\n#define MULTIBOOT_TAG_TYPE_BASIC_MEMINFO     4\n#define MULTIBOOT_TAG_TYPE_BOOTDEV           5\n#define MULTIBOOT_TAG_TYPE_MMAP              6\n#define MULTIBOOT_TAG_TYPE_VBE               7\n#define MULTIBOOT_TAG_TYPE_FRAMEBUFFER       8\n#define MULTIBOOT_TAG_TYPE_ELF_SECTIONS      9\n#define MULTIBOOT_TAG_TYPE_APM               10\n#define MULTIBOOT_TAG_TYPE_EFI32             11\n#define MULTIBOOT_TAG_TYPE_EFI64             12\n#define MULTIBOOT_TAG_TYPE_SMBIOS            13\n#define MULTIBOOT_TAG_TYPE_ACPI_OLD          14\n#define MULTIBOOT_TAG_TYPE_ACPI_NEW          15\n#define MULTIBOOT_TAG_TYPE_NETWORK           16\n#define MULTIBOOT_TAG_TYPE_EFI_MMAP          17\n#define MULTIBOOT_TAG_TYPE_EFI_BS            18\n#define MULTIBOOT_TAG_TYPE_EFI32_IH          19\n#define MULTIBOOT_TAG_TYPE_EFI64_IH          20\n#define MULTIBOOT_TAG_TYPE_LOAD_BASE_ADDR    21\n\n#define MULTIBOOT_HEADER_TAG_END  0\n#define MULTIBOOT_HEADER_TAG_INFORMATION_REQUEST  1\n#define MULTIBOOT_HEADER_TAG_ADDRESS  2\n#define MULTIBOOT_HEADER_TAG_ENTRY_ADDRESS  3\n#define MULTIBOOT_HEADER_TAG_CONSOLE_FLAGS  4\n#define MULTIBOOT_HEADER_TAG_FRAMEBUFFER  5\n#define MULTIBOOT_HEADER_TAG_MODULE_ALIGN  6\n#define MULTIBOOT_HEADER_TAG_EFI_BS        7\n#define MULTIBOOT_HEADER_TAG_ENTRY_ADDRESS_EFI32  8\n#define MULTIBOOT_HEADER_TAG_ENTRY_ADDRESS_EFI64  9\n#define MULTIBOOT_HEADER_TAG_RELOCATABLE  10\n\n#define MULTIBOOT_ARCHITECTURE_I386  0\n#define MULTIBOOT_ARCHITECTURE_MIPS32  4\n#define MULTIBOOT_HEADER_TAG_OPTIONAL 1\n\n#define MULTIBOOT_LOAD_PREFERENCE_NONE 0\n#define MULTIBOOT_LOAD_PREFERENCE_LOW 1\n#define MULTIBOOT_LOAD_PREFERENCE_HIGH 2\n\n#define MULTIBOOT_CONSOLE_FLAGS_CONSOLE_REQUIRED 1\n#define MULTIBOOT_CONSOLE_FLAGS_EGA_TEXT_SUPPORTED 2\n\n#endif /*  ! MULTIBOOT_HEADER */\n"
+    },
+    {
+      "path": "kernel.lds",
+      "name": "kernel.lds",
+      "lang": "lds",
+      "lines": 40,
+      "size": 449,
+      "content": "OUTPUT_FORMAT(\"elf64-x86-64\")\nOUTPUT_ARCH(i386:x86-64)\nENTRY(_start)\nSECTIONS\n{\n\t. = 0x100000;\n\t.text :\n\t{\n\t\t_text = .;\n\t\t*(.text)\n\t\t_etext = .;\n\t}\n\t. = ALIGN(8);\n\n\t.data :\n\t{\n\t\t_data = .;\n\t\t*(.data)\t\t\n\t\t_edata = .;\n\t}\n\n\t.rodata : \n\t{\n\t\t_rodata = .;\t\n\t\t*(.rodata)\n\t\t_erodata = .;\n\t}\n\n\t. = ALIGN(32768);\n\t.data.init_task : { *(.data.init_task) }\n\n\t.bss :\n\t{\n\t\t_bss = .;\n\t\t*(.bss)\n\t\t_ebss = .;\n\t}\n\n\t_end = .;\n}\n"
+    },
+    {
+      "path": "kernel/head.S",
+      "name": "head.S",
+      "lang": "s",
+      "lines": 143,
+      "size": 2387,
+      "content": ".section .text\n\n.globl start\n\nstart:\n\n\tmov\t$0x10,\t%ax\n\tmov\t%ax,\t%ds\n\tmov\t%ax,\t%es\n\tmov\t%ax,\t%fs\n\tmov\t%ax,\t%ss\n\tmov\t$0x7E00,\t%esp\n\n//=======\tload GDTR\n\n\tlgdt\tGDT_POINTER(%rip)\n\n//=======\tload\tIDTR\n\n\tlidt\tIDT_POINTER(%rip)\n\n\tmov\t$0x10,\t%ax\n\tmov\t%ax,\t%ds\n\tmov\t%ax,\t%es\n\tmov\t%ax,\t%fs\n\tmov\t%ax,\t%gs\n\tmov\t%ax,\t%ss\n\n\tmovq\t$0x7E00,\t%rsp\n\n//=======\tload\tcr3\n\n\tmovq\t$0x101000,\t%rax\n\tmovq\t%rax,\t\t%cr3\n\tmovq\tswitch_seg(%rip),\t%rax\n\tpushq\t$0x08\n\tpushq\t%rax\n\tlretq\n\n//=======\t64-bit mode code\n\nswitch_seg:\n\t.quad\tentry64\n\nentry64:\n\tmovq\t$0x10,\t%rax\n\tmovq\t%rax,\t%ds\n\tmovq\t%rax,\t%es\n\tmovq\t%rax,\t%gs\n\tmovq\t%rax,\t%ss\n\tmovq\t$0xffff800000007E00,\t%rsp\t\t/* rsp address */\n\n\tmovq\tgo_to_kernel(%rip),\t%rax\t\t/* movq address */\n\tpushq\t$0x08\n\tpushq\t%rax\n\tlretq\n\ngo_to_kernel:\n\t.quad\tStart_Kernel\n\n//=======\tinit page\n.align 8\n\n.org\t0x1000\n\n__PML4E:\n\n\t.quad\t0x102007\n\t.fill\t255,8,0\n\t.quad\t0x102007\n\t.fill\t255,8,0\n\n.org\t0x2000\n\n__PDPTE:\n\t\n\t.quad\t0x103003\n\t.fill\t511,8,0\n\n.org\t0x3000\n\n__PDE:\n\n\t.quad\t0x000083\t\n\t.quad\t0x200083\n\t.quad\t0x400083\n\t.quad\t0x600083\n\t.quad\t0x800083\n\t.quad\t0xe0000083\t\t/*0x a00000*/\n\t.quad\t0xe0200083\n\t.quad\t0xe0400083\n\t.quad\t0xe0600083\t\t/*0x1000000*/\n\t.quad\t0xe0800083\n\t.quad\t0xe0a00083\n\t.quad\t0xe0c00083\n\t.quad\t0xe0e00083\n\t.fill\t499,8,0\n\n//=======\tGDT_Table\n\n.section .data\n\n.globl GDT_Table\n\nGDT_Table:\n\t.quad\t0x0000000000000000\t\t\t/*0\tNULL descriptor\t\t       \t00*/\n\t.quad\t0x0020980000000000\t\t\t/*1\tKERNEL\tCode\t64-bit\tSegment\t08*/\n\t.quad\t0x0000920000000000\t\t\t/*2\tKERNEL\tData\t64-bit\tSegment\t10*/\n\t.quad\t0x0020f80000000000\t\t\t/*3\tUSER\tCode\t64-bit\tSegment\t18*/\n\t.quad\t0x0000f20000000000\t\t\t/*4\tUSER\tData\t64-bit\tSegment\t20*/\n\t.quad\t0x00cf9a000000ffff\t\t\t/*5\tKERNEL\tCode\t32-bit\tSegment\t28*/\n\t.quad\t0x00cf92000000ffff\t\t\t/*6\tKERNEL\tData\t32-bit\tSegment\t30*/\n\t.fill\t10,8,0\t\t\t\t\t/*8 ~ 9\tTSS (jmp one segment <7>) in long-mode 128-bit 40*/\nGDT_END:\n\nGDT_POINTER:\nGDT_LIMIT:\t.word\tGDT_END - GDT_Table - 1\nGDT_BASE:\t.quad\tGDT_Table\n\n//=======\tIDT_Table\n\n.globl IDT_Table\n\nIDT_Table:\n\t.fill  512,8,0\nIDT_END:\n\nIDT_POINTER:\nIDT_LIMIT:\t.word\tIDT_END - IDT_Table - 1\nIDT_BASE:\t.quad\tIDT_Table\n\n//=======\tTSS64_Table\n\n.globl\tTSS64_Table\n\nTSS64_Table:\n\t.fill  13,8,0\nTSS64_END:\n\nTSS64_POINTER:\nTSS64_LIMIT:\t.word\tTSS64_END - TSS64_Table - 1\nTSS64_BASE:\t.quad\tTSS64_Table\n\n"
+    },
+    {
+      "path": "kernel/main.cpp",
+      "name": "main.cpp",
+      "lang": "cpp",
+      "lines": 4,
+      "size": 49,
+      "content": "extern \"C\" void Start_Kernel(){\n\twhile (1)\n\t\t;\n}\n"
+    }
+  ]
+}

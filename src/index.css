@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue-50: #EDF4FA;
+  --color-blue-100: #DBEAF7;
+  --color-blue-200: #B8D5EE;
+  --color-blue-300: #8EBBE0;
+  --color-blue-400: #5D9CCD;
+  --color-blue-500: #3B80B8;
+  --color-blue-600: #276A9F;
+  --color-blue-700: #1E537E;
+  --color-blue-800: #184163;
+  --color-blue-900: #13314B;
+  --color-blue-950: #0B1D2D;
+}
+
+@layer base {
+  :root {
+    --bg-canvas: #F5F8FB;
+    --primary-blue: #276A9F;
+    --primary-deep-blue: #1E537E;
+    --navy-slate: #0C1A24;
+    --sky-soft: #EDF4FA;
+    --border-blue: #DBEAF7;
+    --alpenglow-gold: #C27803;
+  }
+
+  body {
+    background-color: #F5F8FB;
+    color: #0C1A24;
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Noto Serif SC', "Songti SC", "SimSun", serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  }
+}
+
+/* Bright Icy-Blue Card & Glass Styles */
+.glass-white-card {
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(219, 234, 247, 0.9);
+}
+
+.glass-blue-card {
+  background: rgba(237, 244, 250, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(184, 213, 238, 0.85);
+}
+
+/* Bright Snow Mountain Hero Scrim */
+.bright-mountain-scrim {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.88) 0%,
+    rgba(255, 255, 255, 0.76) 40%,
+    rgba(237, 244, 250, 0.90) 75%,
+    #F5F8FB 100%
+  );
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Ensure code blocks in technical reports can scroll both vertically and horizontally */
+.prose pre {
+  max-height: 520px;
+  overflow: auto;
+}

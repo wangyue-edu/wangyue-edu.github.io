@@ -1,0 +1,78 @@
+{
+  "projectId": "2016-jiang-zhengyan-led",
+  "archiveId": "2016-jiang-zhengyan-led",
+  "title": "LED灯点亮算法与循环结构源码套件",
+  "student": "蒋政延",
+  "totalFiles": 7,
+  "fileCount": 7,
+  "totalLines": 182,
+  "coreFiles": [
+    "05_led_shift_register.cpp",
+    "06_led_magic_square.cpp",
+    "07_led_spiral_matrix.cpp"
+  ],
+  "languages": [
+    {
+      "lang": "C++",
+      "lines": 182
+    }
+  ],
+  "files": [
+    {
+      "path": "01_euclidean_gcd.cpp",
+      "name": "01_euclidean_gcd.cpp",
+      "lang": "cpp",
+      "lines": 19,
+      "size": 298,
+      "content": "#include <iostream>\n#include <cstdio>\n#include <cstdlib>\n#include <cmath>\n\nusing namespace std;\n\nint main() {\n    int a, b, r;\n    cin >> a >> b;\n    cout << \"(\" << a << \",\" << b << \")=\";\n    while (a % b != 0) {\n        r = a % b;\n        a = b;\n        b = r;\n    }\n    cout << b;\n    return 0;\n}"
+    },
+    {
+      "path": "02_reverse_number.cpp",
+      "name": "02_reverse_number.cpp",
+      "lang": "cpp",
+      "lines": 18,
+      "size": 266,
+      "content": "#include <iostream>\n#include <cstdlib>\n#include <cmath>\n#include <cstdio>\n\nusing namespace std;\n\nint main() {\n    int a, b, t = 0;\n    cin >> a;\n    while (a != 0) {\n        b = a % 10;\n        t = t * 10 + b;\n        a = a / 10;\n    }\n    cout << t;\n    return 0;\n}"
+    },
+    {
+      "path": "03_trimmed_average.cpp",
+      "name": "03_trimmed_average.cpp",
+      "lang": "cpp",
+      "lines": 22,
+      "size": 391,
+      "content": "#include <iostream>\n#include <cstdio>\n#include <cstdlib>\n#include <cmath>\n\nusing namespace std;\n\nint main() {\n    float a, i, sum, min, max;\n    cin >> a;\n    min = a;\n    max = a;\n    sum = a;\n    for (i = 1; i <= 9; i++) {\n        cin >> a;\n        sum = sum + a;\n        if (min > a) min = a;\n        if (max < a) max = a;\n    }\n    printf(\"%8.3f\", (sum - min - max) / 8);\n    return 0;\n}"
+    },
+    {
+      "path": "04_digit_frequency.cpp",
+      "name": "04_digit_frequency.cpp",
+      "lang": "cpp",
+      "lines": 28,
+      "size": 472,
+      "content": "#include <iostream>\n#include <cstdlib>\n#include <cmath>\n#include <cstdio>\n#include <cstring>\n#include <iomanip>\n\nusing namespace std;\n\nint main() {\n    int N;\n    cin >> N;\n    int a[N];\n    for (int j = 0; j < N; ++j) {\n        cin >> a[j];\n    }\n    int m;\n    cin >> m;\n    int sum = 0;\n    for (int i = 0; i < N; ++i) {\n        do {\n            if (a[i] % 10 == m) sum++;\n            a[i] = a[i] / 10;\n        } while (a[i] > 0);\n    }\n    cout << sum;\n    return 0;\n}"
+    },
+    {
+      "path": "05_led_shift_register.cpp",
+      "name": "05_led_shift_register.cpp",
+      "lang": "cpp",
+      "lines": 25,
+      "size": 486,
+      "content": "#include <iostream>\n#include <cstdlib>\n#include <cmath>\n#include <cstdio>\n#include <cstring>\n#include <iomanip>\n\nusing namespace std;\n\nint main() {\n    int a[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};\n    int m;\n    cin >> m;\n    for (int j = 0; j < m; ++j) {\n        int temp = a[0];\n        for (int i = 0; i < 9; ++i) {\n            a[i] = a[i + 1];\n        }\n        a[9] = temp;\n        for (int i = 0; i < 10; ++i) {\n            cout << setw(3) << a[i];\n        }\n    }\n    return 0;\n}"
+    },
+    {
+      "path": "06_led_magic_square.cpp",
+      "name": "06_led_magic_square.cpp",
+      "lang": "cpp",
+      "lines": 44,
+      "size": 996,
+      "content": "#include <iostream>\n#include <cstdlib>\n#include <cmath>\n#include <cstdio>\n#include <cstring>\n#include <iomanip>\n\nusing namespace std;\n\nint main() {\n    int N;\n    cin >> N;\n    int hang, lie;\n    int a[100][100] = {0};\n    hang = 0;\n    lie = N / 2;\n    a[hang][lie] = 1;\n    for (int k = 2; k <= N * N; k++) {\n        if (hang == 0 && lie != N - 1) {\n            hang = N - 1;\n            lie++;\n        } else if (lie == N - 1 && hang != 0) {\n            lie = 0;\n            hang--;\n        } else if (hang == 0 && lie == N - 1) {\n            hang++;\n        } else if (hang != 0 && lie != N - 1) {\n            if (a[hang - 1][lie + 1] == 0) {\n                hang--;\n                lie++;\n            } else {\n                hang++;\n            }\n        }\n        a[hang][lie] = k;\n    }\n    for (hang = 0; hang <= N - 1; hang++) {\n        for (lie = 0; lie <= N - 2; lie++) {\n            cout << a[hang][lie] << \" \";\n        }\n        cout << a[hang][N - 1] << endl;\n    }\n    return 0;\n}"
+    },
+    {
+      "path": "07_led_spiral_matrix.cpp",
+      "name": "07_led_spiral_matrix.cpp",
+      "lang": "cpp",
+      "lines": 26,
+      "size": 620,
+      "content": "#include <cstdio>\n#include <cstring>\n\n#define MAXN 10\n\nint a[MAXN][MAXN];\n\nint main() {\n    int n, x, y, t;\n    scanf(\"%d\", &n);\n    memset(a, 0, sizeof(a));\n    t = a[x = 0][y = n - 1] = 1;\n    while (t < n * n) {\n        while (x + 1 < n && !a[x + 1][y]) a[++x][y] = ++t;\n        while (y - 1 >= 0 && !a[x][y - 1]) a[x][--y] = ++t;\n        while (x - 1 >= 0 && !a[x - 1][y]) a[--x][y] = ++t;\n        while (y + 1 < n && !a[x][y + 1]) a[x][++y] = ++t;\n    }\n    for (int i = 0; i < n; ++i) {\n        for (int j = 0; j < n; ++j) {\n            printf(\"%3d\", a[i][j]);\n        }\n        printf(\"\\n\");\n    }\n    return 0;\n}"
+    }
+  ]
+}

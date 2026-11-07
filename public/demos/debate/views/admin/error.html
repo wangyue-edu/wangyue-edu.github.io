@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--3秒后自动跳转-->
+        <meta http-equiv="refresh" content="3; url={{redirect}}" />
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <link href="{{__HOST__}}/admin/error.css" rel="stylesheet">
+    </head>
+    <body>
+    <div class="container">
+        <div class="well">
+            <h1 class="grey lighter smaller">
+                 {{message}}
+            </h1>
+    
+            <hr>
+            <h3 class="lighter smaller">
+                网页三秒后将自动跳转...
+            </h3>
+            <div class="space"></div>
+            <button class="btn btn-primary">
+                <a href="{{redirect}}" >
+                    立即返回
+                </a>
+            </button>
+        </div>
+    </div>
+    </body>
+</html>

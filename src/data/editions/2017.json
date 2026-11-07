@@ -1,0 +1,531 @@
+{
+  "year": "2017",
+  "editionNumber": 2,
+  "title": "第二届望岳奖学金 (2017)",
+  "theme": "硬核突破 · 极客精神在通中生根",
+  "intro": "第二届奖学金共收到6份正式申报，并在极客社与云平台开展思岳奖评选。王徐暘同学的无人电磁小车展现出惊艳的跨学科系统工程能力，被评委一致推举为凌绝望岳奖；周子皓同学以四项软硬件作品荣获坚韧登岳奖。",
+  "documents": [],
+  "gallery": [
+    {
+      "src": "media/2017/20171227181721.jpg",
+      "caption": "2017年12月26日江苏省南通中学第二届望岳科技创新奖学金颁奖仪式现场（报告厅大屏幕与参会师生）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2017/20171227181942.jpg",
+      "caption": "第二届望岳奖学金获奖学生代表上台领奖合影（第一批手持荣誉证书）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2017/201712271819421.jpg",
+      "caption": "第二届望岳奖学金获奖学生代表上台领奖合影（第二批手持荣誉证书）",
+      "category": "ceremony"
+    }
+  ],
+  "reviewSummary": "与第一届相比，项目平均质量有了质的飞跃。王徐暘的电磁武器小车不仅获得了评委的一致赞叹，更获得了Google Research副总裁、美国工程院院士Andrei Broder的高度评价，奠定了望岳奖学金‘重奖高完成度、硬核动手创造’的标杆。",
+  "specialAwards": [
+    {
+      "name": "极客社思岳奖（硬件卷第一名）",
+      "student": "薛博晟 (高一13班)"
+    },
+    {
+      "name": "极客社思岳奖（编程卷第一名）",
+      "student": "顾文韬 (高一9班)"
+    },
+    {
+      "name": "极客社思岳奖（编程卷第一名）",
+      "student": "王泰来 (高二11班)"
+    },
+    {
+      "name": "极客社思岳奖（编程卷第一名）",
+      "student": "陆正扬 (高一7班)"
+    }
+  ],
+  "projects": [
+    {
+      "id": "2017-wang-xuyang-coilgun",
+      "title": "无人电磁武器仿真模型的设计与制作",
+      "studentId": "wang-xuyang",
+      "studentName": "王徐旸",
+      "class": "高三9班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "硬件与嵌入式",
+      "tags": [
+        "Arduino",
+        "Python",
+        "OpenCV",
+        "单目激光测距",
+        "线圈炮",
+        "弹道建模",
+        "极客社"
+      ],
+      "summary": "综合运用机械设计、高压电容升压回路、线圈加速、Python图像处理、激光单目测距与物理弹道修正公式，制作出可在电脑无线遥控下自主行动、精确瞄准并击发弹丸的无人作战小车。",
+      "video": {
+        "src": "media/2017_wang_xuyang_coilgun.mp4",
+        "poster": "media/2017_wang_xuyang_coilgun_poster.jpg",
+        "title": "无人电磁武器仿真小车实机测试演示"
+      },
+      "hasCode": true,
+      "codeArchiveId": "2017-wang-xuyang-coilgun",
+      "artifactSpecs": [
+        {
+          "name": "线圈炮RLC工具 HA.coilgun.exe",
+          "type": "Windows 可执行程序",
+          "platform": "Windows x86",
+          "size": "408 KB",
+          "description": "自主开发的电磁线圈炮RLC振荡放电与初速数值仿真计算工具软件"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2017/coilgun_car_test.png",
+          "caption": "实物测试：王徐旸自研的无人电磁武器仿真小车底盘与线圈炮发射机构",
+          "category": "硬件实物"
+        },
+        {
+          "src": "media/2017_wang_xuyang/878540c20103_image2.png",
+          "caption": "系统架构图：无人作战平台通信层、控制层与硬件层模块分层实现",
+          "category": "系统架构"
+        },
+        {
+          "src": "media/2017_wang_xuyang/5458075ee5cd_image7.png",
+          "caption": "电机控制电路图：L298N电机驱动控制板与PWM无级调速电路设计",
+          "category": "电路原理"
+        },
+        {
+          "src": "media/2017_wang_xuyang/f2f6c469dd63_image15.png",
+          "caption": "高压发射回路图：高压电容储能与线圈炮脉冲大电流放电原理图",
+          "category": "电路原理"
+        },
+        {
+          "src": "media/2017_wang_xuyang/4bdc85912b10_image23.jpeg",
+          "caption": "电源管理电路图：高压放电、电机驱动与单片机三路独立直流供电与继电器安全隔离",
+          "category": "电路原理"
+        },
+        {
+          "src": "media/2017_wang_xuyang/5276367fe6e0_image10.gif",
+          "caption": "计算机数值仿真图：电磁线圈炮LC振荡加速过程与弹丸初速模拟曲线",
+          "category": "数值仿真"
+        },
+        {
+          "src": "media/2017_wang_xuyang/57c592ea7e93_image1.jpeg",
+          "caption": "单目测距几何光路图：手机摄像头与半导体激光三角几何测距与误差补偿模型",
+          "category": "光学算法"
+        },
+        {
+          "src": "media/2017_wang_xuyang/686c588b0fe9_image16.jpeg",
+          "caption": "双自由度瞄准机构图：舵机转轴与炮管俯仰机构设计原理",
+          "category": "机械结构"
+        },
+        {
+          "src": "media/2017_wang_xuyang/090f3563f54c_image19.png",
+          "caption": "自动装填机械结构设计图：舵机连杆带动活塞自动后拉与弹丸重力落弹装填",
+          "category": "机械结构"
+        },
+        {
+          "src": "media/2017_wang_xuyang/6690130d1be1_image21.jpeg",
+          "caption": "物理弹道修正模型图：抛物线运动轨迹与仰角反求数学解析",
+          "category": "物理建模"
+        }
+      ],
+      "details": {
+        "skills": "Arduino底层驱动、Python网络通信与图像解码、基于激光点几何三角形的单目测距算法、抛物线弹道仰角反求数学建模、高压储能与安全放电电路设计",
+        "difficulties": "高压电容瞬间大电流放电对单片机的电磁干扰、摄像头透视畸变下的激光落点坐标筛选与弹道修正",
+        "innovations": "创新性地将手机摄像头+激光发射器融为一体，利用三角几何实现低成本单目测距，并推导出二次曲线弹道仰角解，使微型小车具备类似真正火控系统的自动修正能力。",
+        "fullReportHtml": "<h2 class=\"text-lg font-bold text-slate-900 mb-2 font-serif text-center\">项目研究报告书</h2><p class=\"font-medium text-slate-800\">项目标题： 无人电磁武器仿真模型的设计与制作______</p><p class=\"font-medium text-slate-800\">申 报 者： 王徐旸</p><p class=\"font-medium text-slate-800\">项目所属学科：</p><p>□数学（MA）</p><p>□计算机科学（CS）</p><p>□物理学（PH）</p><p>□地球与空间科学（ES）</p><p>☑工程学（EN）</p><p>□动物学（ZO）</p><p>□植物学（BO）</p><p>□微生物学（MI）</p><p>□医学与健康学（ME）</p><p>□化学（CH）</p><p>□生物化学（BI）</p><p>□环境科学（EV）</p><p>□社会科学（SO）</p><h4 class=\"text-sm font-bold text-slate-800 mt-5 mb-2 font-serif\">项目摘要</h4><p>本项目综合运用多种技术，包括电子设计、机械设计、图像识别、电磁武器、软件开发等方面，实现了一种无人电磁武器仿真模型的设计。该模型可在计算机无线遥控下行动、开火，模拟了搭载电磁武器的无人作战平台的架构设计和作战模式。该设计具有一定市场潜力，含有较高科普教育价值，可在娱乐、教育等领域投入应用。</p><h4 class=\"text-sm font-bold text-slate-800 mt-5 mb-2 font-serif\">申报书目录：</h4><div class=\"text-xs text-slate-500 font-mono pl-4\">项目标题-------------------------------------------------------------------- 1</div><div class=\"text-xs text-slate-500 font-mono pl-4\">项目摘要-------------------------------------------------------------------- 1</div><div class=\"text-xs text-slate-500 font-mono pl-4\">申报书目录----------------------------------------------------------------- 2</div><h4 class=\"text-sm font-bold text-slate-800 mt-5 mb-2 font-serif\">项目正文</h4><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">1.研究背景------------------------------------------------------------- 2</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">2.研究目的------------------------------------------------------------- 2</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.研究内容</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.1模型架构------------------------------------------------------ 3</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.2功能分析------------------------------------------------------ 6</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3功能实现</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.1蓝牙模块----------------------------------------------- 6</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.2图像传输----------------------------------------------- 7</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.3电机电路----------------------------------------------- 8</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.4瞄准机制----------------------------------------------- 9</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.5电磁武器-----------------------------------------------10</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.6电源电路-----------------------------------------------11</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.7装填机构-----------------------------------------------12</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.8单目测距-----------------------------------------------13</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.9弹道修正-----------------------------------------------15</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.10目标锁定---------------------------------------------16</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.11安全装置---------------------------------------------17</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.12传感器------------------------------------------------17</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.13单片机程序------------------------------------------18</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.14远程控制---------------------------------------------19</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.15扩展方案---------------------------------------------19</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">4.研究方法------------------------------------------------------------20</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">5.研究结果------------------------------------------------------------20</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">6.研究分析和讨论--------------------------------------------------22</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">7.参考文献------------------------------------------------------------22</h3><h4 class=\"text-sm font-bold text-slate-800 mt-5 mb-2 font-serif\">项目正文</h4><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">1.研究背景</h3><p>近几年，计算机技术飞速发展，从图像识别到深度学习，从分类器到神经网络，计算机技术正在朝智能化方向大步迈进。一门技术的发展势必会有相应的应用，计算机智能技术在军事上的应用提高了无人作战平台的实用价值，增加了无人作战平台投入战场实战的可能性。</p><p>无人作战平台（Unmanned Combat Platform）系指无人驾驶的、完全按遥控操作或者按预编程序自主运作的、携带进攻性或防御性武器执行作战任务的一类武器平台。就目前而言，它包括无人作战飞机、无人反潜战或反雷战潜水器和无人战车等，具有无人员伤亡或被俘的优势，并且成本低廉，隐身性能好。[1]</p><p>电磁武器是未来武器的一大发展方向，有电磁动能武器、电磁脉冲武器等分类，具有破坏力大、可靠性高、技术难度大等特点。目前世界各大国都在研制可投入实战的各类电磁武器。</p><p>在此背景下，设计制作一种含有科普、教育价值的仿真模型将具有一定市场潜力。普通人能借此体验高新技术的威力，模型爱好者可以展开一场场仿真战斗，配合VR/AR技术，这种模型还能成为一种新的娱乐方式。</p><p>下图为一种已有的无人作战平台示例</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/57c592ea7e93_image1.jpeg\" alt=\"已有无人作战平台示例（图片来源：航空网）\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">已有无人作战平台示例（图片来源：航空网）</figcaption></figure><p>（图片来源：航空网）</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">2.研究目的</h3><p>研究设计、制作一种模型，该模型搭载电磁武器，使用图像识别等多种技术，具有遥控行动/自主行动能力。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.研究内容</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.1模型架构</h3><p>（1）通用架构</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/878540c20103_image2.png\" alt=\"模型通用系统架构设计图\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">模型通用系统架构设计图</figcaption></figure><p>（2）设计模型时，可以依据模块性质、技术难度、可靠性、安全性、性能要求等数据，对模型架构做出简化。简化后的架构如下：</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/6d2920fdb111_image3.png\" alt=\"简化后的模型系统架构设计图\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">简化后的模型系统架构设计图</figcaption></figure><p>（3）将架构落实为实际器件</p><p>手机的计算能力可以胜任一部分图像识别、自主判断的计算，因此，使用手机应用直接控制单片机是一个重要的设计，不过由于开发周期、技术难度等限制，使用下图架构以加快开发速度、减少技术难度。</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/af0f592bbfd5_image4.png\" alt=\"落实为实际器件的模型硬件连接拓扑图\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">落实为实际器件的模型硬件连接拓扑图</figcaption></figure><p>（4）模型运行流程</p><p>各种形式的信息通过架构模块之间的联系渠道传输，每个模块同时发挥作用。模型不存在单向的运行流程，取而代之的是信息反馈回路。就像人脑的神经网络，信息的不断传递和处理产生了人的意识。模型架构参考信息反馈回路这一概念，提高了智能性和可扩展性。</p><p>（5）模型抽象层</p><p>根据模型功能和信息传递回路，可将模型架构分为通信层、控制层、硬件层三个抽象层级，其中上层与下层有直接控制和信息反馈的关系，间隔的层级没有直接关系。</p><p>一是通信层，该层负责模型与远程控制者的通信。</p><p>①手机摄像头采集的数据通过无线局域网发送给电脑，由电脑做下一步的复杂计算。</p><p>这种方案的优点：电脑计算能力强，可以做复杂分析。缺点：依赖局域网络，自主性差。模型的应用场景通常不会在野外，这种方案可以适配大多数应用场景。进一步扩展的方案是：使用独立图像传输，摆脱网络依赖，使模型适用于野外场景。</p><p>②单片机通过蓝牙与电脑配对连接。</p><p>这种方案的优点：分流通信，提高通信可靠度，减少数据处理量。缺点：减少了模型的活动范围。具体分析和扩展方案与①相同。</p><p>二是控制层，该层负责模型的控制、数据处理。</p><p>①单片机采集传感器数据，通过数字输出端口做出相应反馈。</p><p>单片机监听蓝牙串口，接受来自远程控制者的命令，返回传感器数据和电路状态，通过数字输出端口控制硬件电路。</p><p>②手机软件采集摄像头数据，经解码、编码后向远程控制者发送。</p><p>进一步扩展的方案：增加手机-单片机的通信途径，使手机软件可以直接控制硬件电路，提高自主能力。</p><p>三是硬件层，该层负责模型与外部环境的交互，包含电机、武器、传感器、机械机构等方面。具体设计将在下文阐述。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.2 功能分析</h3><p>无人电磁武器模型预期功能主要有：</p><p>①传输信息</p><p>②在平面上自由移动</p><p>③观察环境</p><p>④瞄准目标</p><p>⑤发射弹丸</p><p>⑥自动充能、装填</p><p>⑦获取环境信息</p><p>⑧紧急放电</p><p>为了实现这些功能，模型需要具有以下可操作模块：</p><p>①蓝牙、手机</p><p>②电机电路</p><p>③手机摄像头</p><p>④舵机电路及机械结构</p><p>⑤线圈炮电路</p><p>⑥电源电路、装填机构</p><p>⑦激光发射头、六轴运动传感器</p><p>⑧紧急放电回路</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3 功能实现</h3><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.1 蓝牙模块</h3><p>本项目使用的HC-05蓝牙模块集成度较高，配置简单方便。</p><p>蓝牙模块固化了蓝牙协议，对单片机表现为一个串口，对蓝牙设备表现为一个可配对设备。单片机可以直接向蓝牙模块发送串口数据，蓝牙模块经转码后发送到配对设备。反过来，配对设备向蓝牙模块发送数据，蓝牙模块将数据发送给单片机串口。这样就实现了单片机与高级设备的双向通信。</p><p>配置蓝牙模块时使用的单片机程序如下：</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/f081f2e05eab_image5.png\" alt=\"HC-05蓝牙模块配置与串口双向通信单片机程序源码\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">HC-05蓝牙模块配置与串口双向通信单片机程序源码</figcaption></figure><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.2 图像传输</h3><p>为了实现远程控制，模型视角的图像是非常重要的信息，下面讨论如何获取模型视角的图像。</p><p>（1）摄像头+图像传输模块+接收器+……</p><p>这种方案的传输距离远，但耗资较大，原理不能完全掌握，也不利于之后的智能扩展，因此放弃。</p><p>（2）手机+WiFi+电脑</p><p>这种方案的传输距离近，受限制较多，但能够完全掌握原理，充分利用已有资源，并且可基于Android和Python进行扩展，提高智能，因此使用该方案。</p><p>经过查询，有一款安卓应用“IP摄像头”[2]可以提供手机的图像数据流。电脑接收图像数据流，进行图像分析。本项目使用Python处理数据，关于图像数据流的代码如下：</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/bd66925a816f_image6.png\" alt=\"Python处理手机IP摄像头图像数据流代码实现\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">Python处理手机IP摄像头图像数据流代码实现</figcaption></figure><p>使用IpCamera类时需要创建一个实例。创建实例需要提供图像数据流的URL和每次读取数据的长度。每次读取数据的长度与图像分辨率有关，该参数过小会导致效率降低甚至无法读全一帧，过大会导致程序操作过多冗余数据，同样导致效率降低。</p><p>IpCamera类提供一个实例方法，用来获取图像数据流中的一帧图像。图像数据流不断更新，程序只需将获取的帧不断刷新并显示出来，控制者便可看到模型视角的图像。getFrame函数多次读取数据，直到已读取的数据中含有完整的一帧画面，然后保存冗余数据，将画面数据切分出来交给解码函数，解码函数返回的结果就是画面矩阵。画面矩阵由显示函数显示到屏幕上，呈现给操作者。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.3电机电路</h3><p>（1）电机电路使用的元件：</p><p>L298N电机控制板，普通马达</p><p>（2）电机电路图</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/5458075ee5cd_image7.png\" alt=\"L298N电机控制与驱动电路原理图\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">L298N电机控制与驱动电路原理图</figcaption></figure><p>（3）单片机信号</p><p>IN1、IN2、ENA控制OUT1、OUT2，IN3、IN4、ENB控制OUT3、OUT4，IN端口输入电平信号，EN端口输入PWM信号。L298N控制板通过电平信号控制电机转向，通过PWM信号控制电机电压。理论上可实现变向和均匀变速，但实际上由于电机转速和电压的复杂关系，实现均匀变速的难度较大。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.4瞄准机制</h3><p>为了具有可操控性和较高精度，需要设计一种机制来瞄准，而不是借助模型自身的运动来瞄准。</p><p>现使用2个舵机来实现这种机制设计。示意图如下：</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/5034b2532c5c_image8.png\" alt=\"双自由度舵机瞄准机构设计示意图（俯仰机械结构）\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">双自由度舵机瞄准机构设计示意图（俯仰机械结构）</figcaption></figure><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/623d42675513_image9.png\" alt=\"双自由度舵机瞄准机构设计示意图（水平旋转与圆盘舵机）\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">双自由度舵机瞄准机构设计示意图（水平旋转与圆盘舵机）</figcaption></figure><p>图中红色部分为舵机转轴，圆形部分为圆盘。</p><p>将整个机构安装在模型平台上，用单片机控制两个舵机的角度，便能实现瞄准。同时，单片机所保存的水平旋转角度、炮管俯仰角度可以发送给高级设备，用来进行弹道修正。</p><p>*该设计灵感来自于法国坦克普遍采用的摇摆式炮塔[3]。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.5电磁武器</h3><p>模型选用电磁动能武器中的线圈式电磁炮。（这里的“电磁炮”指的是模拟意义上的电磁炮，真实口径并不能达到“炮”的层次。）</p><p>原理如下：</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/5276367fe6e0_image10.gif\" alt=\"线圈式电磁炮加速弹头电磁感应原理动图\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">线圈式电磁炮加速弹头电磁感应原理动图</figcaption></figure><p>铁质弹头距线圈一定距离，此时给线圈通以大电流，线圈内部会产生从线圈一端指向另一端的强磁场，弹头受磁场吸引，沿炮管直线加速。当弹头通过线圈中点时，线圈电流已经大大减弱，弹头轻微减速。这样便达成了使用电能加速弹头的目的。线圈还可多级串联，使弹头一级级加速，最终具有惊人的动能。</p><p>发射回路的电路图如下:</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/f56e81e8efd3_image11.png\" alt=\"线圈炮发射回路电路图（IGBT/继电器开关与大电容充放电）\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">线圈炮发射回路电路图（IGBT/继电器开关与大电容充放电）</figcaption></figure><p>使用计算机模拟的发射过程如下：</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/963f1afee5bc_image12.png\" alt=\"计算机模拟线圈炮发射过程曲线（位移与加速度变化）\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">计算机模拟线圈炮发射过程曲线（位移与加速度变化）</figcaption></figure><p>可见，弹头可在极短时间内被加速到高速，但不可避免地会再有一定程度的减速。多次模拟后，能找到一组合适的参数使弹头初速处于合理范围。</p><p>根据国家相关规定，模型将控制线圈炮威力在娱乐层次。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.6电源电路</h3><p>从安全性和驱动能力来考虑，模型使用三个分立直流电源。</p><p>电源①：大电流，大容量，只为电磁炮供电，单片机通过继电器控制通断。</p><p>电源②：较大电流，为电机和舵机供电。</p><p>电源③：5V电压，为控制电路供电，可从手机电池接入。</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/9eda4f9ece65_image13.png\" alt=\"三个分立直流电源供电拓扑设计图\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">三个分立直流电源供电拓扑设计图</figcaption></figure><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.7装填机构</h3><p>炮管在发射位置后一定距离开一小口，允许弹丸通过，小口上外接弹夹管。当发射完成后，固定在炮管上的舵机转动一定角度，将活塞向后拉，弹夹管中的弹丸随重力下落，舵机再反向转动，将活塞推回原位，使弹丸处于发射位置。这样便实现了自动装填。</p><p>图中红点是可转动的连接，亮绿色线为连杆，与亮绿色线相连的深蓝色线为固定的杆。</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/f95de7730996_image14.png\" alt=\"自动装填机构舵机连杆与活塞推弹机械结构图（推入待发状态）\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">自动装填机构舵机连杆与活塞推弹机械结构图（推入待发状态）</figcaption></figure><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/f2f6c469dd63_image15.png\" alt=\"自动装填机构舵机连杆与活塞推弹机械结构图（后拉漏弹状态）\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">自动装填机构舵机连杆与活塞推弹机械结构图（后拉漏弹状态）</figcaption></figure><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.8 单目测距</h3><p>为了实现锁定目标、修正弹道、辅助瞄准等功能，需要进行单目测距。计算机分析图像，获得瞄准点与模型的距离，以此修正瞄准角度、显示操作界面信息。</p><p>下面分析单目测距的原理[4]：</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/686c588b0fe9_image16.jpeg\" alt=\"单目测距几何三角光路与物距几何关系原理图\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">单目测距几何三角光路与物距几何关系原理图</figcaption></figure><p>由图可得D=S/tan(a)</p><p>将激光发射头固定在距摄像头S的地方，使激光与摄像头中心线平行，激光照射点和摄像头的连线与激光成一夹角a。显然，激光发射头与激光照射点的距离D可以通过S和a求出来，其中，S为事先测量好的常数，a为变量。</p><p>由内错角相等可得，激光照射点和摄像头的连线与摄像头中心线成夹角a， a可以通过下式计算：</p><p>a=num*rop+offset</p><p>num为落点到图像中心的像素个数，也是以1个像素长宽为单位，落点到图像中心的距离；rop是每个像素的弧度值;offset是弧度误差。对于一种摄像头，其rop和offset值应为一常量，可以通过多次测量取平均值得到。</p><p>合并以上等式可得：</p><p>D=S/tan(num*rop+offset)</p><p>确定D值，计算出Num，由此可得到关于rop和offset的等式。改变D值，多次重复，得到多个等式，两两联立解出rop和offset的值，取平均值，即为摄像头的rop值和offset值。</p><p>这里使用前人测量出的rop和offset值[4]，经实际检验，rop和offset值适用于某型号的手机摄像头。</p><p>在实际使用中还发现D值偏小，从数值上猜测D值缺少一个常数补偿项，该项的值等于激光照射点处于画面边缘时激光照射点与激光发射头的距离。猜测该误差可能与a的公式有关。实际使用时，将激光发射头与炮管绑定，因此，还要基于炮管的俯仰角phi对距离进行修正。</p><p>D=S/tan(num*rop+offset)/cos(phi)+MinDistance</p><p>代码实现如下：</p><p>①计算画面中心坐标</p><p>②遍历可能的激光照射点坐标</p><p>③根据cos(alphaX)*tan(alphaY)=tan(phi)对候选坐标筛选，并允许一定范围的不等，alphaX、alphaY是激光照射点在水平和竖直方向的偏移所计算出的夹角a。另外，激光发射头位于摄像头的左右也可用来筛选坐标。经过筛选，计算机所识别的激光照射点应位于画面中线左侧或右侧的一条水平窄带中，窄带的宽度由筛选等式的不等容忍范围决定，而不等容忍范围本质上是由激光发射头和摄像头的安装位置误差决定的。这种方法减小了误判几率，减少了计算量，较其他算法有优越性。</p><p>④找到激光照射点</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/7fbcf2ffa04c_image17.png\" alt=\"激光照射点候选坐标筛选算法代码\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">激光照射点候选坐标筛选算法代码</figcaption></figure><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.9弹道修正</h3><p>在弹头初速较小时，即使距离较近，也要考虑由于重力引起的下坠。物理模型如下：</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/5af1aa367b13_image18.png\" alt=\"重力抛物线下坠弹道物理模型几何解析图\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">重力抛物线下坠弹道物理模型几何解析图</figcaption></figure><p>已知∠XOT=alpha，alpha是一已知参数，线段OT长度为d.</p><p>现从点O以大小为v的初速度发射一炮弹，仰角为phi，范围为(-pi/2,pi/2),且∠XOT’=phi.</p><p>炮弹最终击中位于点T的目标.求仰角phi.（重力加速度为g，不计空气阻力）</p><p>解：首先表达水平、竖直分速度。</p><p>Vx=v*cosPhi</p><p>Vy=v*sinPhi</p><p>引入时间参数t.</p><p>y=(v*sinPhi)*t-(1/2)*g*t^2</p><p>x=(v*cosPhi)*t</p><p>消去t，得炮弹轨迹方程</p><p>y=x*tanPhi-(1/2)*g*x^2/（（v^2）*(cosPhi)^2）</p><p>表达点T坐标。</p><p>T（d*cosAlpha，d*sinAlpha）</p><p>点T坐标代入轨迹方程得</p><p>d*sinAlpha=d*cosAlpha*tanPhi-(1/2)*g*(d^2)*(cosAlpha)^2/((v^2)*(cosPhi)^2)</p><p>化简得</p><p>sin(2*Phi-Alpha)=(g*d*(cosAlpha)^2)/(v^2)+sinAlpha</p><p>所以</p><p>Phi=(1/2)*(arcsin((g*d*(cosAlpha)^2)/(v^2)+sinAlpha)+Alpha)</p><p>计算机获得目标距离、目标仰角，根据此物理模型计算出Phi角大小，发送给单片机，单片机驱动舵机修正炮管仰角，实现弹道修正。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.10目标锁定</h3><p>在作战过程中，可能需要对同一目标从不同位置开火。如果仅用一次瞄准就能保持指向目标，将大大提高作战性能。</p><p>模型将用以下步骤实现对静止目标的锁定。</p><p>①以模型为极点，模型正右方向为Ox轴，模型正上方向为Oz轴，建立球坐标系，由瞄准机制确定目标的空间坐标。</p><p>②由六轴运动传感器和单片机的积分运算得到模型的空间位移。</p><p>③模型的空间位移向量经反射变换得出目标相对于模型的位移向量。</p><p>④目标空间坐标加上位移向量即为新的目标坐标。</p><p>⑤根据目标坐标计算出炮管方位角和俯仰角</p><p>⑥单片机根据角度数据操控舵机指向目标</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/090f3563f54c_image19.png\" alt=\"空间球坐标系三维目标锁定与反射位移向量数学模型\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">空间球坐标系三维目标锁定与反射位移向量数学模型</figcaption></figure><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.11安全装置</h3><p>（1）模型存在的安全风险</p><p>①锂电池过充过放导致爆炸</p><p>②电解电容反向过度充电导致爆炸</p><p>③线圈炮电路损坏，电解电容无法放电</p><p>④裸露的高压升压模块被误触，致人受伤</p><p>（2）安全风险处理方案</p><p>①在电源电路中使用过充过放保护电路</p><p>②线圈反向并联大功率续流二极管，仅当续流二极管损毁时，电容爆炸风险大幅增加</p><p>③已充电的电容处于高能量状态，更换电路时易短路产生电火花，可提供大功率高阻值的电阻。处理问题时，将新的线圈炮电路和电阻串联，再连接电容，正常击发一次。测量电容电压并确认已完全放电后，可取下电阻，正常使用。</p><p>④高压电路用绝缘材料包裹，尽量和低压电路隔离。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.12传感器</h3><p>模型需要感知的信息：</p><p>①前方图像</p><p>②充能进度</p><p>③炮管指向</p><p>④炮管俯仰角</p><p>⑤运动状态和空间位置</p><p>对应的实现方案：</p><p>①手机摄像头</p><p>②电容串联两个电阻，大功率电阻分压，使小电阻的电压降到5V以下，用单片机的模拟输入端口测量电压。</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/0cd997b8213b_image20.png\" alt=\"高压储能电容分压测量与ADC检测输入电路图\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">高压储能电容分压测量与ADC检测输入电路图</figcaption></figure><p>③炮管上绑定激光发射头，激光照射点可供计算炮管指向。</p><p>④控制舵机时使用的角度变量就是炮管俯仰角，但角度变量与实际角度不是即时对应的关系。</p><p>⑤单片机连接六轴运动传感器，读取加速度信息，作积分运算，可得速度和位移。如果端口不够，可考虑增加下位机。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.13单片机程序</h3><p>这里仅分析程序流程，不列出实际代码。</p><p>（1）单片机负责的功能</p><p>①与蓝牙模块双向通信</p><p>②控制电机</p><p>③控制舵机</p><p>④控制线圈炮</p><p>⑤控制线圈炮电源的通断</p><p>⑥控制激光发射头</p><p>⑥读取电容电压</p><p>（2）单片机程序流程</p><p>①读取串口命令</p><p>②读取传感器数据</p><p>③执行相应操作函数</p><p>④返回状态码</p><p>⑤将状态码发送给高级设备</p><p>单片机以高频率执行以上流程，实现快速响应。高级设备获取任务并将任务分割为短时间动作，转换为串口命令发送给单片机，由单片机执行操作。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.14远程控制</h3><p>这里仅分析程序流程，不列出实际代码。</p><p>远程控制端程序流程</p><p>①获取键鼠操作</p><p>②获取摄像头画面</p><p>③图像识别处理</p><p>④计算图像信息</p><p>⑤依据键鼠操作和图像信息得出对应操作</p><p>⑥向下位机发送操作命令</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">3.3.15扩展方案</h3><p>（1）开发手机应用，直接控制模型，实现自主行动。</p><p>（2）增加振动传感器，实现击中检测，便于开发多机作战游戏。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">4.研究方法</h3><p>（1）调查法、文献研究法</p><p>研究初期，广泛搜集资料，了解原理，为确定方案做准备。在了解各模块性质时，翻阅了各模块说明文档。</p><p>（2）观察法</p><p>收集材料时，观察各模块，构思模型空间分配。</p><p>（3）实验法、实证研究法</p><p>根据需要解决的问题，设计相应的实验，测试方案。如单目测距时需要多次实验，验证计算公式。</p><p>（4）定量分析法、模拟法</p><p>在3.3.9弹道修正中，运用物理建模，定量分析并推导了修正角度的计算公式。</p><p>（5）跨学科研究法</p><p>运用多种技术，综合分析了无人电磁武器模型的设计。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">5.研究结果</h3><p>制作技术验证机CR-1，掌握移动、通信等技术。</p><p>制作线圈，连接回路。后因操作不慎损坏。</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/6690130d1be1_image21.jpeg\" alt=\"制作线圈与连接技术验证机CR-1发射回路\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">制作线圈与连接技术验证机CR-1发射回路</figcaption></figure><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/d4397d132963_image22.jpeg\" alt=\"技术验证机CR-1线圈及储能回路细节实物\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">技术验证机CR-1线圈及储能回路细节实物</figcaption></figure><p>OTG线和充电线连接，使用手机电池供电</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/4bdc85912b10_image23.jpeg\" alt=\"OTG与充电线连接手机电池供电实测\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">OTG与充电线连接手机电池供电实测</figcaption></figure><p>进行线圈炮发射实验，多次成功，两次失败，损坏线路。</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/8bd1d3220bc2_image24.jpeg\" alt=\"线圈炮实物发射击靶实验现场\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">线圈炮实物发射击靶实验现场</figcaption></figure><p>制作技术验证机CR-2，将电磁炮与小车组合，成功发射。</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/fb08bb50d7cb_image25.jpeg\" alt=\"制作技术验证机CR-2（电磁炮与遥控小车一体化总装实物）\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">制作技术验证机CR-2（电磁炮与遥控小车一体化总装实物）</figcaption></figure><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/578020685c36_image26.jpeg\" alt=\"技术验证机CR-2车体、双轴舵机云台与发射机构实物\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">技术验证机CR-2车体、双轴舵机云台与发射机构实物</figcaption></figure><p>编写代码，成功实现激光测距、UI绘制。</p><figure class=\"my-5 text-center\"><img src=\"media/2017_wang_xuyang/20950edeff86_image27.png\" alt=\"上位机激光测距识别与操作控制UI实测运行画面\" class=\"max-w-full mx-auto rounded-xl border border-slate-200 shadow-sm\" loading=\"lazy\" /><figcaption class=\"mt-2 text-xs text-slate-500 font-sans\">上位机激光测距识别与操作控制UI实测运行画面</figcaption></figure><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">6.研究分析、讨论和结论</h3><p>本项目运用了多种技术，通过机械设计、电路设计、算法设计、数学建模、物理建模等方法，成功设计了一种无人电磁武器仿真模型。本项目获得多位老师认可，具有技术可行性，在短期内可制作出完整实物，符合研究背景，实现了研究目的。</p><h3 class=\"text-base font-bold text-slate-900 border-b border-slate-200 pb-1.5 mt-7 mb-3 font-serif\">7.参考文献</h3><p>[1]百度百科-无人作战平台</p><p>[2]程序猿沈垚http://www.shenyaocn.com</p><p>[3]百度百科-摇摆式炮塔</p><p>[4]用摄像头及激光来测距(opencv)</p><p>http://blog.csdn.net/mbees/article/details/70138725</p>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "独立自主、工作量巨大。高中生能把机械、高压电路、通信与视觉算法全部融会贯通并做出实体，令人震撼。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "很厉害，极其难得的高中生硬核好作品！"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "我对这个高中生项目的复杂度感到非常佩服，全部给他也没有意见。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "从数学建模到工程实现的闭环极其完整，展现了极强的科研潜质。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "美国工程院院士、Google Research副总裁评价：即使在美国顶尖高校本科生的毕业设计中也是难得一见的优秀作品！"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2017-王徐旸 - 项目设计文档/学术报告",
+          "filename": "2017-王徐旸-项目技术报告.docx",
+          "url": "/downloads/projects/2017-wang-xuyang-coilgun/2017-王徐旸-项目技术报告.docx",
+          "size": "1.3 MB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2017-wang-xuyang-coilgun",
+          "projectTitle": "无人电磁武器仿真模型的设计与制作",
+          "studentName": "王徐旸",
+          "editionYear": "2017",
+          "description": "《无人电磁武器仿真模型的设计与制作》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2017-王徐旸 - 项目源代码",
+          "filename": "2017-王徐旸-项目源代码.zip",
+          "url": "/downloads/projects/2017-wang-xuyang-coilgun/2017-王徐旸-项目源代码.zip",
+          "size": "1.3 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2017-wang-xuyang-coilgun",
+          "projectTitle": "无人电磁武器仿真模型的设计与制作",
+          "studentName": "王徐旸",
+          "editionYear": "2017",
+          "description": "《无人电磁武器仿真模型的设计与制作》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2017-zhou-zihao-toolkit",
+      "title": "全屋定制价格王 / 元宝PK战 / 柔情雪花屏保 / 教师节贺卡",
+      "studentId": "zhou-zihao",
+      "studentName": "周子皓",
+      "class": "高一6班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "游戏与交互",
+      "tags": [
+        "Flash AS",
+        "C++",
+        "Android APK",
+        "算法设计",
+        "极客社"
+      ],
+      "summary": "高一自学编程制作的四件套软件与交互作品：涵盖解决家装价格黑盒的《全屋定制价格王》（跨平台Windows与安卓）、双人对战小游戏《元宝PK战》、带三维风向漂移算法的《柔情雪花屏保》以及《教师节翻页贺卡》。",
+      "interactiveDemos": [
+        {
+          "type": "flash",
+          "title": "元宝PK战 (接元宝双人对战小游戏)",
+          "swfFile": "demos/flash/jieyuanbao.swf",
+          "swf": "demos/flash/jieyuanbao.swf",
+          "entryUrl": "demos/flash/jieyuanbao.swf",
+          "description": "周子皓自研 ActionScript 双人接元宝对抗小游戏：支持键盘 A/D（玩家1）与 ←/→（玩家2）双人实时对抗得分，采用计时器动态下落、hitTest 碰撞检测、对象离屏销毁与动态数组积分排行榜机制。"
+        },
+        {
+          "type": "flash",
+          "title": "柔情雪花屏保 (3层纵深粒子动画)",
+          "swfFile": "demos/flash/snow.swf",
+          "swf": "demos/flash/snow.swf",
+          "entryUrl": "demos/flash/snow.swf",
+          "description": "周子皓自研 Flash ActionScript 粒子屏保动画：设计了 3 种不同规格与纵深的雪花粒子，采用全局坐标偏移量算法模拟动态风向变换与流畅飘落，内置古典背景音乐。"
+        },
+        {
+          "type": "flash",
+          "title": "教师节动态翻页贺卡",
+          "swfFile": "demos/flash/teacher_card.swf",
+          "swf": "demos/flash/teacher_card.swf",
+          "entryUrl": "demos/flash/teacher_card.swf",
+          "description": "周子皓献给南通中学老师的交互式音乐翻页贺卡：集成鼠标触碰上下边缘滑动翻页、逐帧补间形状形变动画与感恩配乐。"
+        }
+      ],
+      "artifactSpecs": [
+        {
+          "name": "全屋定制价格王.apk",
+          "platform": "Android",
+          "size": "601 KB",
+          "description": "移动端家具表面积与阶梯单价换算计算器安装包"
+        },
+        {
+          "name": "jsq.exe",
+          "platform": "Windows",
+          "size": "455 KB",
+          "description": "Dev-C++ 编译生成的桌面端家具价格核算系统可执行程序"
+        },
+        {
+          "name": "教师节贺卡.exe",
+          "platform": "Windows",
+          "size": "4.4 MB",
+          "description": "带独立 Flash Player 运行环境的桌面独立版电子贺卡程序"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2017-zhou-zihao-toolkit",
+      "details": {
+        "skills": "Flash ActionScript物理与碰撞检测算法、C++窗口程序设计、极客社入社编程考核试卷出题与评分标准制定",
+        "difficulties": "雪花屏保早期运行时因舞台影片剪辑过多引发卡顿，通过全局坐标偏移量与复用机制优化，实现1小时连续稳定运行不掉帧",
+        "innovations": "生活痛点驱动开发，不仅独立写出多款实用工具与交互小游戏，还主动为极客社设计了层层递进的5道编程考核试题与打分细则。",
+        "fullReportHtml": "<div class=\"space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 申报材料原件录入与多项目技术解析 (Technical Portfolio)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-blue-200/80 dark:border-blue-900/40 bg-gradient-to-br from-blue-50/50 via-white to-sky-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-blue-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-blue-100 dark:border-blue-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🧰</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">高一实用软件与交互作品集</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">高一（6）班 周子皓 · 2017 望岳奖学金申报作品合集</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300\">C++ / Win32 / APK</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">ActionScript 交互动画</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">极客社考核命题</span>\n      </div>\n    </div>\n\n    <!-- Student Statement -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-blue-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\">\n        <span>💬 申报陈述与极客自驱历程</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        “从小学开始对电脑和编程产生浓厚兴趣。初入通中暑假便加入极客社，积极参与社团编程挑战，并承担了极客社高一招新考核编程卷的命题工作。在业余时间自学利用 Flash ActionScript 与 C++ 开发实用小工具与交互游戏。希望秉承望岳探索精神，未来在信息学奥赛与底层软件工程方向深入前行。”\n      </p>\n    </div>\n  </div>\n\n  <!-- Four Projects Grid -->\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4\">\n    <!-- Subproject 1 -->\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center justify-between border-b border-slate-100 dark:border-stone-700 pb-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-lg\">📏</span>\n          <h5 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">1. 全屋定制价格王 (C++ / Win32 / APK)</h5>\n        </div>\n        <span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300\">实用算法</span>\n      </div>\n      <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        针对家装全屋定制市场套餐猫腻多、折算复杂的痛点，输入套餐长宽高与总价，自动计算六面体展开表面积并求得每平米真实单价，再输入实际定制尺寸即可精准测算公道预算，杜绝商家消费陷阱。\n      </p>\n    </div>\n\n    <!-- Subproject 2 -->\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center justify-between border-b border-slate-100 dark:border-stone-700 pb-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-lg\">🎮</span>\n          <h5 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">2. 元宝 PK 战 (Flash ActionScript)</h5>\n        </div>\n        <span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300\">双人对战</span>\n      </div>\n      <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        支持双人同屏对抗下落接宝。计时器定时复制影片剪辑并按随机 X 轴位移下落，利用每帧 <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded text-[10px]\">hitTest</code> 精准判定碰撞得分，并通过动态数组排序解决历史排行榜记录难题。\n      </p>\n    </div>\n\n    <!-- Subproject 3 -->\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center justify-between border-b border-slate-100 dark:border-stone-700 pb-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-lg\">❄️</span>\n          <h5 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">3. 柔情雪花屏保 (Flash ActionScript)</h5>\n        </div>\n        <span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-sky-50 dark:bg-sky-950 text-sky-700 dark:text-sky-300\">粒子特效</span>\n      </div>\n      <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        具有 3 层纵深景深与背景音乐的宁静办公屏保。三种不同规制雪花受随机动态风向扰动。针对初期测试卡顿问题，通过重写影片剪辑生命周期与全局偏移变量优化，消除内存泄漏与舞台掉帧。\n      </p>\n    </div>\n\n    <!-- Subproject 4 -->\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center justify-between border-b border-slate-100 dark:border-stone-700 pb-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-lg\">💌</span>\n          <h5 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">4. 教师节电子贺卡 (Flash ActionScript)</h5>\n        </div>\n        <span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-rose-50 dark:bg-rose-950 text-rose-700 dark:text-rose-300\">交互动效</span>\n      </div>\n      <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n        为教师节真挚献礼。通过判定鼠标与贺卡边缘的吸附接触实现流畅滑动翻页，配合形状补间与变形动画展现逼真的三维书页翻折动效。\n      </p>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "有点堆砌小工作的意思，不过靠自己兴趣、自己动手折腾出可运行成品的孩子，非常值得鼓励！"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "完整的四款作品呈现，展现了广泛的好奇心与极强的动手欲望。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "能把项目从想法做到软件硬件全部做完，体现了非常好的独立开发习惯。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2017-周子皓 - 申请表原件",
+          "filename": "2017-周子皓-申请表原件.doc",
+          "url": "/downloads/projects/2017-zhou-zihao-toolkit/2017-周子皓-申请表原件.doc",
+          "size": "29.5 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2017-zhou-zihao-toolkit",
+          "projectTitle": "全屋定制价格王 / 元宝PK战 / 柔情雪花屏保 / 教师节贺卡",
+          "studentName": "周子皓",
+          "editionYear": "2017",
+          "description": "周子皓 于 2017 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2017-周子皓 - 项目设计文档/学术报告",
+          "filename": "2017-周子皓-项目技术报告.doc",
+          "url": "/downloads/projects/2017-zhou-zihao-toolkit/2017-周子皓-项目技术报告.doc",
+          "size": "25.5 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2017-zhou-zihao-toolkit",
+          "projectTitle": "全屋定制价格王 / 元宝PK战 / 柔情雪花屏保 / 教师节贺卡",
+          "studentName": "周子皓",
+          "editionYear": "2017",
+          "description": "《全屋定制价格王 / 元宝PK战 / 柔情雪花屏保 / 教师节贺卡》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2017-周子皓 - 项目源代码",
+          "filename": "2017-周子皓-项目源代码.zip",
+          "url": "/downloads/projects/2017-zhou-zihao-toolkit/2017-周子皓-项目源代码.zip",
+          "size": "13.2 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2017-zhou-zihao-toolkit",
+          "projectTitle": "全屋定制价格王 / 元宝PK战 / 柔情雪花屏保 / 教师节贺卡",
+          "studentName": "周子皓",
+          "editionYear": "2017",
+          "description": "《全屋定制价格王 / 元宝PK战 / 柔情雪花屏保 / 教师节贺卡》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2017-yu-wutong-river",
+      "title": "NOIP2005 过河问题算法分析与动态规划剪枝改进",
+      "studentName": "于吴桐",
+      "class": "高一6班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "算法与数据结构",
+      "tags": [
+        "C++",
+        "动态规划",
+        "状态转移",
+        "区间压缩剪枝",
+        "NOIP"
+      ],
+      "summary": "针对NOIP2005经典动态规划题《过河》在数据量达10^9时现有参考书方案退化超时的漏洞，深入推导数学规律，提出距离压缩剪枝与S=T特判优化方案，并附上伪代码与复杂度推导。",
+      "details": {
+        "skills": "动态规划状态转移方程推导、数论周期压缩剪枝、算法时空复杂度理论分析",
+        "difficulties": "传统解法针对L<=10^9暴力DP耗时达8秒以上，无法满足竞赛时限；前人资料普遍忽略S=T的边界整除特判",
+        "innovations": "利用同余与最小公倍数理论证明两个石子距离大于90即可等效压缩为90，使时间复杂度严格降低至满足竞赛评测要求。",
+        "fullReportHtml": "<div class=\"space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 NOIP 经典算法深度研报正本 (Algorithm Paper)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-indigo-200/80 dark:border-indigo-900/40 bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-indigo-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-indigo-100 dark:border-indigo-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🐸</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">NOIP2005《过河》算法深入剖析与动态规划剪枝改进</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">高一（6）班 于吴桐 · 2017 望岳算法论文原件正本录入</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">状态压缩 DP</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-purple-100 dark:bg-purple-900/50 text-purple-800 dark:text-purple-300\">数论剪枝 (距离压缩至90)</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">S=T 边界特判</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">运算提速 8s ➔ 毫秒级</span>\n      </div>\n    </div>\n\n    <!-- Problem Definition -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-indigo-100/80 dark:border-stone-700/60 space-y-2\">\n      <h5 class=\"text-xs font-bold text-indigo-900 dark:text-indigo-300 flex items-center gap-1.5\">\n        <span>📜 问题背景与数据瓶颈</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        独木桥长为 $L$（高达 $10^9$），青蛙跳跃步长范围为 $[S, T]$（$1 \\le S \\le T \\le 10$），桥上分布有 $M$ 个石子（$M \\le 100$）。朴素状态转移方程为 $dp[i] = \\min_{S \\le j \\le T} \\{ dp[i - j] \\} + \text{stone}[i]$。然而直接在一维数组上循环至 $10^9$ 时，在 Intel Core i7 4720K 上实测耗时达 8 秒之久，严重超出 NOIP 1 秒时限。\n      </p>\n    </div>\n  </div>\n\n  <!-- Mathematical Pruning & Special Case Grid -->\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-serif leading-relaxed\">\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">📐</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 font-sans\">数论距离压缩剪枝原理</h6>\n      </div>\n      <p class=\"text-slate-600 dark:text-stone-300\">\n        石子数 $M \\le 100$，意味着两石子之间存在巨量空白段。由裴蜀定理与扩展欧几里得判定，对最坏步长情况 $T = S + 1$，当 $S$ 取最大值 9 时，验证表明两石子间距大于 90 的空隙后方任意点均可被整数线性组合完全遍历。因此，<strong>任意两颗相邻石子距离超过 90 时，均可安全等价压缩为 90</strong>，将桥长从 $10^9$ 压缩至 10000 级，运算时间降至微秒级！\n      </p>\n    </div>\n\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">🔍</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 font-sans\">关键特判：S = T 步长固化边界</h6>\n      </div>\n      <p class=\"text-slate-600 dark:text-stone-300\">\n        作者敏锐指出，当 $S = T$ 时青蛙步长固定无法调整，此时唯有石子坐标能被 $T$ 整除时必定踩中，其余必不踩中。作者在查阅大量主流网络题解后发现，<strong>网络资料普遍忽略了此边界特判</strong>，导致该情况下出现严重算法逻辑失真，本论文针对性给予了严密纠正。\n      </p>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "能发现现有资料中的算法漏洞并提出优化，具备算法反思与批判性思维。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "算法分析尚可，能针对大数据量提出剪枝，具备良好的数学基本功。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2017-于吴桐 - 项目设计文档/学术报告",
+          "filename": "2017-于吴桐-项目技术报告.docx",
+          "url": "/downloads/projects/2017-yu-wutong-river/2017-于吴桐-项目技术报告.docx",
+          "size": "21.7 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2017-yu-wutong-river",
+          "projectTitle": "NOIP2005 过河问题算法分析与动态规划剪枝改进",
+          "studentName": "于吴桐",
+          "editionYear": "2017",
+          "description": "《NOIP2005 过河问题算法分析与动态规划剪枝改进》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2017-wang-shengyu-blood",
+      "title": "盐水交叉配血法判定红细胞血型的实验观察",
+      "studentName": "王晟宇",
+      "class": "高二8班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "社团与科普",
+      "tags": [
+        "生命科学",
+        "交叉配血",
+        "实验设计",
+        "数据分析"
+      ],
+      "summary": "采集血站献血者静脉血标本，离心分离血清与血球配制5%红细胞悬液，利用凝集反应逻辑推导并验证ABO与Rh血型正反定型判定边界。",
+      "details": {
+        "skills": "临床实验规范操作、离心与洗涤步骤控制、凝集反应交叉比对矩阵设计",
+        "innovations": "严谨分析弱抗原与假阴性产生机理，提出交叉配血正反定型修正建议。",
+        "fullReportHtml": "<div class=\"space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 医学检验实验研报原件正本 (Laboratory Medicine Paper)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-rose-200/80 dark:border-rose-900/40 bg-gradient-to-br from-rose-50/50 via-white to-red-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-rose-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-rose-100 dark:border-rose-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🩸</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">盐水交叉配血法判定红细胞血型的实验观察</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">高二（8）班 王晟宇 · 临床输血安全实验研报</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-rose-100 dark:bg-rose-900/50 text-rose-800 dark:text-rose-300\">ABO 交叉配血</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300\">抗原抗体凝集反应</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">6×6 标本比对矩阵</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300\">临床输血安全</span>\n      </div>\n    </div>\n\n    <!-- Clinical Purpose -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-rose-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <h5 class=\"text-xs font-bold text-rose-900 dark:text-rose-300 flex items-center gap-1.5\">\n        <span>🔬 实验目的与临床输血意义</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        交叉配血试验是临床输血前必不可少的金标准操作，旨在证实供血者红细胞与受血者血清、供血者血清与受血者红细胞之间不存在不相容的抗原-抗体凝集反应，杜绝溶血性输血事故。本实验采用盐水介质法对 6 支标本实施主侧与次侧交叉比对。\n      </p>\n    </div>\n  </div>\n\n  <!-- Experimental 6x6 Matrix Table -->\n  <div class=\"space-y-2\">\n    <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n      <span>📊 6 支血液标本盐水介质交叉配血实测凝集反应矩阵表 (Experimental Data)</span>\n    </h5>\n    <div class=\"overflow-x-auto rounded-xl border border-slate-200 dark:border-stone-700/80\">\n      <table class=\"w-full text-xs text-center\">\n        <thead class=\"bg-slate-100 dark:bg-stone-800 text-slate-700 dark:text-stone-300 font-semibold border-b border-slate-200 dark:border-stone-700\">\n          <tr>\n            <th class=\"px-3 py-2 text-left\">血球 \\ 血清</th>\n            <th class=\"px-3 py-2\">标本 1</th>\n            <th class=\"px-3 py-2\">标本 2</th>\n            <th class=\"px-3 py-2\">标本 3</th>\n            <th class=\"px-3 py-2\">标本 4</th>\n            <th class=\"px-3 py-2\">标本 5</th>\n            <th class=\"px-3 py-2\">标本 6 (O型/对照)</th>\n          </tr>\n        </thead>\n        <tbody class=\"divide-y divide-slate-100 dark:divide-stone-800 bg-white dark:bg-stone-900/60 font-mono text-xs\">\n          <tr>\n            <td class=\"px-3 py-2 text-left font-bold font-sans text-slate-800 dark:text-slate-200\">标本 1 血球</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n          </tr>\n          <tr>\n            <td class=\"px-3 py-2 text-left font-bold font-sans text-slate-800 dark:text-slate-200\">标本 2 血球</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n          </tr>\n          <tr>\n            <td class=\"px-3 py-2 text-left font-bold font-sans text-slate-800 dark:text-slate-200\">标本 3 血球</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n          </tr>\n          <tr>\n            <td class=\"px-3 py-2 text-left font-bold font-sans text-slate-800 dark:text-slate-200\">标本 4 血球</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n          </tr>\n          <tr>\n            <td class=\"px-3 py-2 text-left font-bold font-sans text-slate-800 dark:text-slate-200\">标本 5 血球</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 font-bold text-rose-600 dark:text-rose-400\">＋</td>\n          </tr>\n          <tr>\n            <td class=\"px-3 py-2 text-left font-bold font-sans text-slate-800 dark:text-slate-200\">标本 6 血球 (O型)</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n            <td class=\"px-3 py-2 text-slate-400\">－</td>\n          </tr>\n        </tbody>\n      </table>\n    </div>\n    <p class=\"text-[11px] text-slate-500 font-serif pt-1\">\n      注：表格中「＋」代表出现清晰红细胞肉眼凝集颗粒，「－」代表呈均匀悬浊液未发生凝集反应。O 型红细胞不含 A/B 凝集原，与所有血清均不反应。\n    </p>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "有完整的科研实验经历，实验报告书写非常规范。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "有一定的工作量，设计规范，但技术实现偏传统生物实验。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2017-王晟宇 - 项目设计文档/学术报告",
+          "filename": "2017-王晟宇-项目技术报告.doc",
+          "url": "/downloads/projects/2017-wang-shengyu-blood/2017-王晟宇-项目技术报告.doc",
+          "size": "2.3 MB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2017-wang-shengyu-blood",
+          "projectTitle": "盐水交叉配血法判定红细胞血型的实验观察",
+          "studentName": "王晟宇",
+          "editionYear": "2017",
+          "description": "《盐水交叉配血法判定红细胞血型的实验观察》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2017-wang-annan-bank-dispatch",
+      "title": "银行客户智能分流与排队预测系统设计",
+      "studentName": "王安南",
+      "class": "高二1班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "Web与小程序",
+      "tags": [
+        "系统设计",
+        "需求工程",
+        "排队机API",
+        "大数据预测",
+        "移动App"
+      ],
+      "summary": "针对商业银行网点客流不均衡与客户漫长排队痛点，提出由表示层、业务逻辑层与数据访问层构建的手机分流App系统架构，并设计基于排队机API的热度热力图与Hadoop客流预测模型。",
+      "details": {
+        "skills": "三层架构设计、RESTful API对接构想、客流热力图UI规划",
+        "innovations": "从民生实际排队痛点出发，给出完整的工业级软硬件对接需求规格说明书。",
+        "fullReportHtml": "<div class=\"space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与大数据系统架构解析 (Technical Architecture)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-sky-200/80 dark:border-sky-900/40 bg-gradient-to-br from-sky-50/50 via-white to-blue-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-sky-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-sky-100 dark:border-sky-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🏦</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">银行客户智能分流与排队预测系统设计</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">高二（1）班 王安南 · 商业银行数字化排队调度研报原件正本录入</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">三层软件架构</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300\">地图红/粉/绿热度网格</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">排队机 API 联动</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">Hadoop/Spark 客流预测</span>\n      </div>\n    </div>\n\n    <!-- Core Invention Content -->\n    <div class=\"p-4 rounded-xl bg-white/80 dark:bg-stone-800/60 border border-sky-100/80 dark:border-stone-700/60 space-y-1.5\">\n      <h5 class=\"text-xs font-bold text-sky-900 dark:text-sky-300 flex items-center gap-1.5\">\n        <span>💡 发明主旨与现实经济意义</span>\n      </h5>\n      <p class=\"text-xs sm:text-sm text-slate-700 dark:text-stone-300 leading-relaxed font-serif\">\n        针对传统银行业务办理排队耗时久、客户流失与网点闲置忙碌不均的痛点，设计了由手机终端、基站与云端服务组成的智能分流系统。不仅为客户极大节省了现场等待时间，也帮助银行优化柜台人力调配、减少运营成本。\n      </p>\n    </div>\n  </div>\n\n  <!-- Three-Tier Architecture & Heatmap -->\n  <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-serif leading-relaxed\">\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">🗺️</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 font-sans\">地图热度三色分级机制</h6>\n      </div>\n      <p class=\"text-slate-600 dark:text-stone-300\">\n        APP 客户端集成地图定位 SDK，自动检索附近营业网点排队人数并通过 API 实时拉取更新：\n      </p>\n      <div class=\"space-y-1.5 pt-1 font-sans text-[11px]\">\n        <div class=\"flex items-center gap-2 text-rose-700 dark:text-rose-400\">\n          <span class=\"w-2.5 h-2.5 rounded-full bg-rose-500\"></span>\n          <span><strong>红色标定</strong>：等待人数 &gt; 20 人（严重拥挤，建议绕行）</span>\n        </div>\n        <div class=\"flex items-center gap-2 text-amber-700 dark:text-amber-400\">\n          <span class=\"w-2.5 h-2.5 rounded-full bg-amber-500\"></span>\n          <span><strong>浅红标定</strong>：等待人数 5 - 20 人（中等负荷）</span>\n        </div>\n        <div class=\"flex items-center gap-2 text-emerald-700 dark:text-emerald-400\">\n          <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-500\"></span>\n          <span><strong>绿色标定</strong>：等待人数 &lt; 5 人（畅通，推荐前往即到即办）</span>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200 dark:border-stone-700 space-y-2\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"text-base\">🧠</span>\n        <h6 class=\"font-bold text-slate-900 dark:text-slate-100 font-sans\">Hadoop / Spark 大数据客流预测模型</h6>\n      </div>\n      <p class=\"text-slate-600 dark:text-stone-300\">\n        后端服务器周期性汇总各营业网点的历史客流流水，依托分布式大数据计算框架（Hadoop / Spark）训练时间序列预测模型，精准刻画不同工作日、节假日及上下午时段的客流波动规律，为客户生成错峰出行策略与精准等待时长预估。\n      </p>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "经过电话沟通，确认该项目处于系统分析与需求设计阶段。作为高中生能写出如此规范的三层架构需求说明书，思路清晰。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "完整的系统需求设计，后续期待能看到真实的前后端实现。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2017-王安南 - 项目设计文档/学术报告",
+          "filename": "2017-王安南-项目技术报告.doc",
+          "url": "/downloads/projects/2017-wang-annan-bank-dispatch/2017-王安南-项目技术报告.doc",
+          "size": "37.5 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2017-wang-annan-bank-dispatch",
+          "projectTitle": "银行客户智能分流与排队预测系统设计",
+          "studentName": "王安南",
+          "editionYear": "2017",
+          "description": "《银行客户智能分流与排队预测系统设计》官方归档技术文档/研究报告原稿。"
+        }
+      ]
+    },
+    {
+      "id": "2017-mao-xin-smart-stove",
+      "title": "基于电容式物位传感器的厨具智能革新",
+      "studentName": "冒欣",
+      "class": "高二7班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "硬件与嵌入式",
+      "tags": [
+        "电容式物位传感器",
+        "智能厨房",
+        "节能防干烧",
+        "C++微控制"
+      ],
+      "summary": "针对日常烹饪洗锅间隙灶火空烧造成能源浪费与火灾隐患的问题，提出利用微型电容式物位传感器监测炉火上方蒸煮器具位移，自动调火的智能厨具改造方案。",
+      "details": {
+        "skills": "传感器特性比选（分析红外传感器在强热辐射下的失效原因并选用电容物位传感器）、C++控制状态机编写",
+        "innovations": "生活细微处的观察与安全节能改造，自适应灵敏度调节思路明确。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 text-amber-700 border border-amber-200\">硬件创新创意</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">电容式物位传感</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">低功耗节能安全</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">项目起源与生活痛点</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">在两个月的暑假生活中，作者观察到父亲站在灶台边烹饪时的生活细节：当准备烧第二道菜时，由于需要清洗锅内上一道菜的残渣，通常会提起锅子到一旁水池清洗。因为洗锅时间仅数十秒，烹饪者往往不会刻意关闭正处于大火状态的灶台，导致炉火在无锅状态下持续猛烈燃烧数十秒。这不仅在当前能源紧张态势下造成不必要的燃气浪费，更构成了显著的厨房烫伤与火灾安全隐患。</p>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs\">\n      <div class=\"bg-rose-50/60 border border-rose-200 rounded-lg p-3.5\">\n        <div class=\"font-semibold text-rose-700 mb-1 flex items-center gap-1.5\">\n          <span>⚠️ 传统灶台痛点</span>\n        </div>\n        <p class=\"text-slate-600 leading-relaxed\">起锅洗刷间隙空烧40-60秒；火焰外露引发烫伤；油烟机强抽加剧燃气耗损；热浪与厨房一氧化碳排放增加。</p>\n      </div>\n      <div class=\"bg-emerald-50/60 border border-emerald-200 rounded-lg p-3.5\">\n        <div class=\"font-semibold text-emerald-700 mb-1 flex items-center gap-1.5\">\n          <span>💡 智能传感解决思路</span>\n        </div>\n        <p class=\"text-slate-600 leading-relaxed\">在灶具上方10-20cm设置感应区；锅具离位瞬间毫秒级自动切换为微火保种状态；锅具复位即刻恢复预设大火。</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      系统工作原理与选型依据\n    </h3>\n    <div class=\"space-y-4 text-sm\">\n      <p class=\"text-slate-700\">核心硬件采用<strong>微型电容式物位传感器</strong>，可内嵌于炉灶本体出厂集成，亦可作为外挂配件贴装于灶台旁侧墙面，针对炉火上方 10～20cm 探测是否有导电/非导电容器：</p>\n      <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs\">\n        <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs\">\n          <div class=\"text-sky-700 font-bold mb-1\">耐高温与高热隔离</div>\n          <p class=\"text-slate-600\">普通红外传感器靠近炉膛热源时易受热辐射干扰失效；电容式传感器敏感元件采用耐高温陶瓷与特种绝缘涂层，性能稳定。</p>\n        </div>\n        <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs\">\n          <div class=\"text-indigo-700 font-bold mb-1\">自适应灵敏度与自诊断</div>\n          <p class=\"text-slate-600\">支持微机自动调节灵敏度，具备自检功能（电极破损、绝缘降低、断线即时蜂鸣报警），无需高昂的高精度激光仪表，经济实用。</p>\n        </div>\n        <div class=\"bg-white p-3 rounded-xl border border-slate-200 shadow-xs\">\n          <div class=\"text-purple-700 font-bold mb-1\">无机械磨损</div>\n          <p class=\"text-slate-600\">无机械杠杆与可动触点，免受厨房油烟积垢卡死困扰，形态支持棒状、线状与板状，结构自由度极高。</p>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n      控制逻辑与嵌入式微代码\n    </h3>\n    <p class=\"text-xs text-slate-600 mb-3\">控制主板采集电容物位传感器的距离反馈值 a（单位：cm），判定容器是否离开预定受热工作面（10～20cm）：</p>\n    <pre class=\"bg-slate-900 text-slate-100 border border-slate-800 p-4 rounded-xl overflow-x-auto border border-slate-800 font-mono text-sm leading-relaxed text-slate-200\"><code>#include &lt;iostream&gt;\nusing namespace std;\n\nint main() {\n    int distance_cm;\n    // 实时读取传感器探测高度\n    while (cin &gt;&gt; distance_cm) {\n        if (distance_cm &gt;= 10 &amp;&amp; distance_cm &lt;= 20) {\n            // 测得锅具在正常蒸煮高度区间，维持大火正常燃烧\n            cout &lt;&lt; \"NORMAL_COOKING_MODE\" &lt;&lt; endl;\n        } else {\n            // 锅具提离超过阈值（洗锅或移开），立即电磁节流为小火保温模式\n            cout &lt;&lt; \"ACCORDING_TO_BRAIN: SWITCH_TO_SMALL_FIRE\" &lt;&lt; endl;\n        }\n    }\n    return 0;\n}</code></pre>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "很接地气的小点子，观察细致，如果能连通Arduino和继电器做出实体打火演示会更出彩。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "思路新颖，具备生活洞察力。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2017-mao-xin-smart-stove",
+      "downloads": [
+        {
+          "title": "2017-冒欣 - 项目设计文档/学术报告",
+          "filename": "2017-冒欣-项目技术报告.doc",
+          "url": "/downloads/projects/2017-mao-xin-smart-stove/2017-冒欣-项目技术报告.doc",
+          "size": "28.5 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2017-mao-xin-smart-stove",
+          "projectTitle": "基于电容式物位传感器的厨具智能革新",
+          "studentName": "冒欣",
+          "editionYear": "2017",
+          "description": "《基于电容式物位传感器的厨具智能革新》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2017-冒欣 - 项目源代码",
+          "filename": "2017-冒欣-项目源代码.zip",
+          "url": "/downloads/projects/2017-mao-xin-smart-stove/2017-冒欣-项目源代码.zip",
+          "size": "689 B",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2017-mao-xin-smart-stove",
+          "projectTitle": "基于电容式物位传感器的厨具智能革新",
+          "studentName": "冒欣",
+          "editionYear": "2017",
+          "description": "《基于电容式物位传感器的厨具智能革新》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "title": "2017 届望岳奖学金评选细则 (官方章程)",
+      "filename": "2017第二届望岳奖学金评选细则.pdf",
+      "url": "/downloads/editions/2017/2017第二届望岳奖学金评选细则.pdf",
+      "size": "783.3 KB",
+      "type": "pdf",
+      "category": "评选细则",
+      "editionYear": "2017",
+      "description": "包含评选对象、申报要求、各级奖项标准与评审流程。"
+    }
+  ]
+}

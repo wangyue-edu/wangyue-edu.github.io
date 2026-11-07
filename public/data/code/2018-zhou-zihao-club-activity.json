@@ -1,0 +1,131 @@
+{
+  "projectId": "2018-zhou-zihao-robomaster",
+  "archiveId": "2018-zhou-zihao-club-activity",
+  "title": "校级社团活动申报与审批平台（微信小程序 + Android APP）",
+  "student": "周子皓",
+  "totalFiles": 13,
+  "fileCount": 13,
+  "totalLines": 521,
+  "coreFiles": [
+    "wechat_miniprogram/app.js",
+    "wechat_miniprogram/pages/index/index.js",
+    "android_app/java/zzh/ntzx/MainActivity.java",
+    "android_app/java/zzh/ntzx/PostUtils.java"
+  ],
+  "languages": [
+    {
+      "lang": "JavaScript",
+      "lines": 312
+    },
+    {
+      "lang": "Java",
+      "lines": 208
+    }
+  ],
+  "files": [
+    {
+      "path": "wechat_miniprogram/app.js",
+      "name": "app.js",
+      "lang": "javascript",
+      "lines": 5,
+      "size": 47,
+      "content": "//app.js\nApp({\n  onLaunch: function () {\n  }\n})"
+    },
+    {
+      "path": "wechat_miniprogram/app.json",
+      "name": "app.json",
+      "lang": "json",
+      "lines": 11,
+      "size": 248,
+      "content": "{\n  \"pages\": [\n    \"pages/index/index\"\n  ],\n  \"window\": {\n    \"backgroundTextStyle\": \"light\",\n    \"navigationBarBackgroundColor\": \"#ffffff\",\n    \"navigationBarTitleText\": \"南通中学社团活动申请\",\n    \"navigationBarTextStyle\": \"black\"\n  }\n}"
+    },
+    {
+      "path": "wechat_miniprogram/app.wxss",
+      "name": "app.wxss",
+      "lang": "css",
+      "lines": 10,
+      "size": 194,
+      "content": "/**app.wxss**/\n.container {\n  height: 100%;\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  justify-content: space-between;\n  padding: 200rpx 0;\n  box-sizing: border-box;\n} \n"
+    },
+    {
+      "path": "wechat_miniprogram/project.config.json",
+      "name": "project.config.json",
+      "lang": "json",
+      "lines": 40,
+      "size": 725,
+      "content": "{\n\t\"description\": \"项目配置文件\",\n\t\"packOptions\": {\n\t\t\"ignore\": []\n\t},\n\t\"setting\": {\n\t\t\"urlCheck\": false,\n\t\t\"es6\": true,\n\t\t\"postcss\": true,\n\t\t\"minified\": true,\n\t\t\"newFeature\": true,\n\t\t\"autoAudits\": false\n\t},\n\t\"compileType\": \"miniprogram\",\n\t\"libVersion\": \"2.4.1\",\n\t\"appid\": \"wx518ff368fd716288\",\n\t\"projectname\": \"%E7%A4%BE%E5%9B%A2%E6%B4%BB%E5%8A%A8%E7%94%B3%E8%AF%B7%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F\",\n\t\"debugOptions\": {\n\t\t\"hidedInDevtools\": []\n\t},\n\t\"isGameTourist\": false,\n\t\"condition\": {\n\t\t\"search\": {\n\t\t\t\"current\": -1,\n\t\t\t\"list\": []\n\t\t},\n\t\t\"conversation\": {\n\t\t\t\"current\": -1,\n\t\t\t\"list\": []\n\t\t},\n\t\t\"game\": {\n\t\t\t\"currentL\": -1,\n\t\t\t\"list\": []\n\t\t},\n\t\t\"miniprogram\": {\n\t\t\t\"current\": -1,\n\t\t\t\"list\": []\n\t\t}\n\t}\n}"
+    },
+    {
+      "path": "wechat_miniprogram/utils/util.js",
+      "name": "util.js",
+      "lang": "javascript",
+      "lines": 19,
+      "size": 472,
+      "content": "const formatTime = date => {\n  const year = date.getFullYear()\n  const month = date.getMonth() + 1\n  const day = date.getDate()\n  const hour = date.getHours()\n  const minute = date.getMinutes()\n  const second = date.getSeconds()\n\n  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')\n}\n\nconst formatNumber = n => {\n  n = n.toString()\n  return n[1] ? n : '0' + n\n}\n\nmodule.exports = {\n  formatTime: formatTime\n}\n"
+    },
+    {
+      "path": "wechat_miniprogram/pages/index/index.js",
+      "name": "index.js",
+      "lang": "javascript",
+      "lines": 157,
+      "size": 2636,
+      "content": "// pages/index/index.js\nPage({\n\n  /**\n   * 页面的初始数据\n   */\n  data: {\n    \"name\": \"\",\n    \"master\": \"\",\n    \"time\": \"\",\n    \"place\": \"\",\n    \"activity\": \"\",\n    \"purpose\": \"\",\n    \"method\": \"\",\n    \"safety\": \"\",\n  },\n\n  /**\n   * 生命周期函数--监听页面加载\n   */\n  onLoad: function (options) {\n    \n  },\n\n  /**\n   * 生命周期函数--监听页面初次渲染完成\n   */\n  onReady: function () {\n\n  },\n\n  /**\n   * 生命周期函数--监听页面显示\n   */\n  onShow: function () {\n\n  },\n\n  /**\n   * 生命周期函数--监听页面隐藏\n   */\n  onHide: function () {\n\n  },\n\n  /**\n   * 生命周期函数--监听页面卸载\n   */\n  onUnload: function () {\n\n  },\n\n  /**\n   * 页面相关事件处理函数--监听用户下拉动作\n   */\n  onPullDownRefresh: function () {\n\n  },\n\n  /**\n   * 页面上拉触底事件的处理函数\n   */\n  onReachBottom: function () {\n\n  },\n\n  /**\n   * 用户点击右上角分享\n   */\n  onShareAppMessage: function () {\n\n  },\n\n  name: function(e) {\n    this.setData({\n      name: e.detail.value\n    })\n  },\n\n  master: function (e) {\n    this.setData({\n      master: e.detail.value\n    })\n  },\n\n  place: function (e) {\n    this.setData({\n      place: e.detail.value\n    })\n  },\n\n  time: function (e) {\n    this.setData({\n      time: e.detail.value\n    })\n  },\n\n  activity: function (e) {\n    this.setData({\n      activity: e.detail.value\n    })\n  },\n\n  purpose: function (e) {\n    this.setData({\n      purpose: e.detail.value\n    })\n  },\n\n  safety: function (e) {\n    this.setData({\n      safety: e.detail.value\n    })\n  },\n\n  method: function (e) {\n    this.setData({\n      method: e.detail.value\n    })\n  },\n\n  submit: function (e) {\n    wx.request({\n      url: 'http://118.24.220.49:8080/submit/',\n      method: 'POST',\n      data: this.data,\n      header: { 'content-type': 'application/x-www-form-urlencoded; charset=UTF-8' },\n      success: function (res) {\n        if(res.data == \"success\"){\n          wx.showToast({\n            title: '提交成功',\n            icon: 'success',\n            duration: 2000\n          })\n        } else if (res.data == \"exists\") {\n          wx.showToast({\n            title: '提交失败\\r\\n该社团已提交',\n            icon: 'none',\n            duration: 2000\n          })\n        } else if (res.data == \"fail\") {\n          wx.showToast({\n            title: '提交失败\\r\\n社团名不存在',\n            icon: 'none',\n            duration: 2000\n          })\n        } else {\n          wx.showToast({\n            title: res.data,\n            icon: 'none',\n            duration: 2000\n          })\n        }\n      }\n    })\n  }\n})"
+    },
+    {
+      "path": "wechat_miniprogram/pages/index/index.json",
+      "name": "index.json",
+      "lang": "json",
+      "lines": 1,
+      "size": 2,
+      "content": "{}"
+    },
+    {
+      "path": "wechat_miniprogram/pages/index/index.wxml",
+      "name": "index.wxml",
+      "lang": "xml",
+      "lines": 17,
+      "size": 1131,
+      "content": "<!--pages/index/index.wxml-->\n<view style='display: flex; flex-direction: row'>\n  <view style='flex: 5'></view>\n  <view style='flex: 90'>\n    <input placeholder='社团名称' confirm-type='next' confirm-hold='true' bindinput='name'></input>\n    <input placeholder='负责人姓名' confirm-type='next' confirm-hold='true' bindinput='master'></input>\n    <input placeholder='活动时间' confirm-type='next' confirm-hold='true' bindinput='time'></input>\n    <input placeholder='场地要求' confirm-type='next' confirm-hold='true' bindinput='place'></input>\n    <input placeholder='活动内容' confirm-type='next' confirm-hold='true' bindinput='activity'></input>\n    <input placeholder='活动目的' confirm-type='next' confirm-hold='true' bindinput='purpose'></input>\n    <input placeholder='活动形式' confirm-type='next' confirm-hold='true' bindinput='method'></input>\n    <input placeholder='安全保障' confirm-type='next' confirm-hold='true' bindinput='safety'></input>\n    <button bindtap='submit'>提交</button>\n    <text>@南通中学极客社 周子皓</text>\n  </view>\n  <view style='flex: 5'></view>\n</view>"
+    },
+    {
+      "path": "wechat_miniprogram/pages/index/index.wxss",
+      "name": "index.wxss",
+      "lang": "css",
+      "lines": 19,
+      "size": 276,
+      "content": "/* pages/index/index.wxss */\ninput{\n  border:  0px solid #3F51B5;\n  border-bottom-width: 1px;\n  margin-top: 15px;\n  margin-bottom: 15px;\n}\n\nbutton{\n  width: 30%;\n  margin-left: 0px;\n  background-color: #3F51B5;\n  color: white;\n}\n\ntext{\n  font-size: 12px;\n  margin-top: 20px;\n}"
+    },
+    {
+      "path": "android_app/java/zzh/ntzx/MainActivity.java",
+      "name": "MainActivity.java",
+      "lang": "java",
+      "lines": 93,
+      "size": 4436,
+      "content": "package zzh.ntzx;\n\nimport android.os.Looper;\nimport android.os.StrictMode;\nimport android.support.v7.app.AppCompatActivity;\nimport android.os.Bundle;\nimport android.util.Log;\nimport android.view.View;\nimport android.widget.EditText;\nimport android.widget.Toast;\n\nimport java.io.ByteArrayOutputStream;\nimport java.io.IOException;\nimport java.io.InputStream;\nimport java.io.OutputStream;\nimport java.io.UnsupportedEncodingException;\nimport java.net.HttpURLConnection;\nimport java.net.MalformedURLException;\nimport java.net.ProtocolException;\nimport java.net.URL;\nimport java.net.URLEncoder;\n\npublic class MainActivity extends AppCompatActivity {\n\n    @Override\n    protected void onCreate(Bundle savedInstanceState) {\n        super.onCreate(savedInstanceState);\n        setContentView(R.layout.activity_main);\n    }\n\n    public void submit(View view) {\n        new Thread(new Runnable() {\n            @Override\n            public void run() {\n                Log.d(\"submit\", \"run\");\n                String SUBMIT_URL = \"http://118.24.220.49:8080/submit/\";\n                String msg = \"\";\n                try {\n                    HttpURLConnection conn = (HttpURLConnection) new URL(SUBMIT_URL).openConnection();\n                    conn.setRequestMethod(\"POST\");\n                    conn.setReadTimeout(5000);\n                    conn.setConnectTimeout(5000);\n                    conn.setDoInput(true);\n                    conn.setDoInput(true);\n                    conn.setUseCaches(false);\n                    String data = \"name=\" + URLEncoder.encode(((EditText)findViewById(R.id.name)).getText().toString(), \"UTF-8\") +\n                            \"&master=\" + URLEncoder.encode(((EditText)findViewById(R.id.master)).getText().toString(), \"UTF-8\") +\n                            \"&time=\" + URLEncoder.encode(((EditText)findViewById(R.id.time)).getText().toString(), \"UTF-8\") +\n                            \"&place=\" + URLEncoder.encode(((EditText)findViewById(R.id.place)).getText().toString(), \"UTF-8\") +\n                            \"&activity=\" + URLEncoder.encode(((EditText)findViewById(R.id.activity)).getText().toString(), \"UTF-8\") +\n                            \"&purpose=\" + URLEncoder.encode(((EditText)findViewById(R.id.purpose)).getText().toString(), \"UTF-8\") +\n                            \"&method=\" + URLEncoder.encode(((EditText)findViewById(R.id.method)).getText().toString(), \"UTF-8\") +\n                            \"&safety=\" + URLEncoder.encode(((EditText)findViewById(R.id.safety)).getText().toString(), \"UTF-8\");\n                    OutputStream out = conn.getOutputStream();\n                    out.write(data.getBytes());\n                    out.flush();\n                    if (conn.getResponseCode() == 200) {\n                        InputStream is = conn.getInputStream();\n                        ByteArrayOutputStream message = new ByteArrayOutputStream();\n                        int len = 0;\n                        byte buffer[] = new byte[1024];\n                        while ((len = is.read(buffer)) != -1) {\n                            message.write(buffer, 0, len);\n                        }\n                        is.close();\n                        message.close();\n                        msg = new String(message.toByteArray());\n                    }\n                } catch (UnsupportedEncodingException e) {\n                    e.printStackTrace();\n                } catch (ProtocolException e) {\n                    e.printStackTrace();\n                } catch (MalformedURLException e) {\n                    e.printStackTrace();\n                } catch (IOException e) {\n                    e.printStackTrace();\n                }\n                Log.d(\"onClick->submit\", msg);\n                Looper.prepare();\n                if (msg.equals(\"success\")) {\n                    Toast.makeText(MainActivity.this, \"提交成功\", Toast.LENGTH_LONG).show();\n                } else if (msg.equals(\"exists\")) {\n                    Toast.makeText(MainActivity.this, \"提交失败\\n该社团本周已提交\", Toast.LENGTH_LONG).show();\n                } else if (msg.equals(\"fail\")) {\n                    Toast.makeText(MainActivity.this, \"提交失败\\n该社团不存在\", Toast.LENGTH_LONG).show();\n                } else {\n                    Toast.makeText(MainActivity.this, msg, Toast.LENGTH_LONG).show();\n                }\n                Looper.loop();\n            }\n        }).start();\n    }\n}\n"
+    },
+    {
+      "path": "android_app/java/zzh/ntzx/PostUtils.java",
+      "name": "PostUtils.java",
+      "lang": "java",
+      "lines": 4,
+      "size": 46,
+      "content": "package zzh.ntzx;\n\npublic class PostUtils {\n}\n"
+    },
+    {
+      "path": "android_app/res/layout/activity_main.xml",
+      "name": "activity_main.xml",
+      "lang": "xml",
+      "lines": 122,
+      "size": 4294,
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<android.support.constraint.ConstraintLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    xmlns:app=\"http://schemas.android.com/apk/res-auto\"\n    xmlns:tools=\"http://schemas.android.com/tools\"\n    android:layout_width=\"match_parent\"\n    android:layout_height=\"match_parent\"\n    tools:context=\"zzh.ntzx.MainActivity\">\n\n    <LinearLayout\n        android:layout_width=\"fill_parent\"\n        android:layout_height=\"fill_parent\">\n\n        <LinearLayout\n            android:layout_width=\"0dp\"\n            android:layout_height=\"fill_parent\"\n            android:layout_weight=\"5\">\n\n        </LinearLayout>\n\n        <LinearLayout\n            android:layout_width=\"0dp\"\n            android:layout_height=\"fill_parent\"\n            android:layout_weight=\"90\"\n            android:orientation=\"vertical\">\n\n            <EditText\n                android:id=\"@+id/name\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"50dip\"\n                android:hint=\"社团名称\"\n                android:selectAllOnFocus=\"true\"\n                android:singleLine=\"true\"/>\n\n            <EditText\n                android:id=\"@+id/master\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"50dip\"\n                android:hint=\"负责人姓名\"\n                android:selectAllOnFocus=\"true\"\n                android:singleLine=\"true\"/>\n\n            <EditText\n                android:id=\"@+id/time\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"50dip\"\n                android:hint=\"活动时间\"\n                android:selectAllOnFocus=\"true\"\n                android:singleLine=\"true\"/>\n\n            <EditText\n                android:id=\"@+id/place\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"50dip\"\n                android:hint=\"场地要求\"\n                android:selectAllOnFocus=\"true\"\n                android:singleLine=\"true\"/>\n\n            <EditText\n                android:id=\"@+id/activity\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"50dip\"\n                android:hint=\"活动内容\"\n                android:selectAllOnFocus=\"true\"\n                android:singleLine=\"true\"/>\n\n            <EditText\n                android:id=\"@+id/purpose\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"50dip\"\n                android:hint=\"活动目的\"\n                android:selectAllOnFocus=\"true\"\n                android:singleLine=\"true\"/>\n\n            <EditText\n                android:id=\"@+id/method\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"50dip\"\n                android:hint=\"活动形式\"\n                android:selectAllOnFocus=\"true\"\n                android:singleLine=\"true\"/>\n\n            <EditText\n                android:id=\"@+id/safety\"\n                android:layout_width=\"match_parent\"\n                android:layout_height=\"50dip\"\n                android:hint=\"安全保障\"\n                android:selectAllOnFocus=\"true\"\n                android:singleLine=\"true\"/>\n\n            <LinearLayout\n                android:layout_width=\"fill_parent\"\n                android:layout_height=\"45dip\">\n\n                <Button\n                    android:layout_width=\"100dip\"\n                    android:layout_height=\"45dip\"\n                    android:text=\"提 交\"\n                    android:textColor=\"@android:color/white\"\n                    android:background=\"@drawable/btn_selector\"\n                    android:onClick=\"submit\"/>\n\n                <TextView\n                    android:layout_width=\"match_parent\"\n                    android:layout_height=\"45dip\"\n                    android:text=\"\\@通中极客社 周子皓 制作\"\n                    android:gravity=\"end\"\n                    android:textAlignment=\"textEnd\"/>\n\n            </LinearLayout>\n\n        </LinearLayout>\n\n        <LinearLayout\n            android:layout_width=\"0dp\"\n            android:layout_height=\"fill_parent\"\n            android:layout_weight=\"5\">\n\n        </LinearLayout>\n\n    </LinearLayout>\n\n</android.support.constraint.ConstraintLayout>\n"
+    },
+    {
+      "path": "android_app/AndroidManifest.xml",
+      "name": "AndroidManifest.xml",
+      "lang": "xml",
+      "lines": 23,
+      "size": 770,
+      "content": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<manifest xmlns:android=\"http://schemas.android.com/apk/res/android\"\n    package=\"zzh.ntzx\">\n\n    <uses-permission android:name=\"android.permission.INTERNET\" />\n\n    <application\n        android:allowBackup=\"true\"\n        android:icon=\"@mipmap/ic_launcher\"\n        android:label=\"@string/app_name\"\n        android:roundIcon=\"@mipmap/ic_launcher_round\"\n        android:supportsRtl=\"true\"\n        android:theme=\"@style/AppTheme\">\n        <activity android:name=\".MainActivity\">\n            <intent-filter>\n                <action android:name=\"android.intent.action.MAIN\" />\n\n                <category android:name=\"android.intent.category.LAUNCHER\" />\n            </intent-filter>\n        </activity>\n    </application>\n\n</manifest>"
+    }
+  ]
+}

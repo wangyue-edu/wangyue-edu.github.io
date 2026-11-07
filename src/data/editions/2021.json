@@ -1,0 +1,1146 @@
+{
+  "year": "2021",
+  "editionNumber": 5,
+  "title": "2021 第五届望岳奖学金",
+  "theme": "百花齐放的算法与实用探索：从高性能分布式通信到母校全景漫游",
+  "intro": "第五届望岳奖学金迎来了创历史新高的11组申报作品，涵盖分布式网络系统、网页自动化脚本、实时音视频直播流、3D全景数字校园、机器人机电协同与信息学竞赛算法深探。评审团本着“激发热情、宽容试错、鼓励原创”的宗旨，全面考察了独立性、工程量与解决真实问题的能力。",
+  "documents": [],
+  "gallery": [],
+  "reviewSummary": "评审由周昊、杨圣、吴培、葛一凡四位导师组成的评委团独立评审。童亦洲的 RedIM 高性能即时通信系统凭借极高的架构深度与源码质量斩获一等奖；杨逍（Portal认证）、朱辰祎（上料机械臂与小车）、姜冠群（实时流媒体）荣膺二等奖；顾键濠、俞晴岚、陈一鸣获得三等奖；俞选涛、杭俊杰、张家诚、张成宇获得入围鼓励奖。",
+  "projects": [
+    {
+      "id": "2021-tong-yizhou-redim",
+      "title": "RedIM：基于高并发事件驱动架构的分布式即时通信系统",
+      "studentId": "tong-yizhou",
+      "studentName": "童亦洲",
+      "class": "高三5班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "系统与网络",
+      "tags": [
+        "Distributed Systems",
+        "C++",
+        "Socket",
+        "异步网络IO",
+        "Epoll",
+        "即时通讯"
+      ],
+      "summary": "继高二开发 RUIOS 内核后，高三阶段挑战分布式网络通信领域，自主设计并实现了工业级即时通信系统 RedIM，采用非阻塞网络 I/O、心跳保活机制、自定义私有二进制协议与端到端消息确认，所有评委一致评为全场最高分作品。",
+      "hasCode": true,
+      "codeArchiveId": "2021-tong-yizhou-redim",
+      "details": {
+        "skills": "高性能 Epoll 网络模型、二进制协议帧编解码、线程池任务调度、心跳检测与断线重连",
+        "difficulties": "高并发长连接状态维护，粘包拆包处理，以及多线程资源竞争下的无锁队列优化",
+        "innovations": "从网络协议定义到底层 Socket 状态机全部手写实现，架构规范与工程成熟度完全达到工业级后台水准。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2021年8月30日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">童亦洲</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高三五</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">RedIM</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>一个第三方QQ跨平台桌面客户端，在linux环境下可用。基于Project-Mirai开发。</p><p>目前实现的功能有收发文字信息、收取图片。需要依赖远程或本地搭建服务器转发。</p><p>项目地址：https://github.com/tsurumi-yizhou/RedIM，当前开发版本：2.2.4</p><p>资源文件方面感谢陶缪涵同学的帮助。</p><p>反钓鱼脚本</p><p>https://github.com/tsurumi-yizhou/anti-fishing</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">Qt界面开发、信号槽，C++的lambda表达式，JSON解析，消息总线设计模式</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">重写List的排序</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">用Qt信号槽机制实现的消息总线、数据中心设计模式</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与高并发分布式架构解析 (Technical Architecture)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-red-200/80 dark:border-red-900/40 bg-gradient-to-br from-red-50/50 via-white to-orange-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-red-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-red-100 dark:border-red-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">⚡</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">RedIM：高并发分布式即时通信服务端系统</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">面向高负载与海量长连接场景的现代 IM 架构 · 现代 C++</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-red-100 dark:bg-red-900/50 text-red-800 dark:text-red-300\">Linux epoll I/O</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-orange-100 dark:bg-orange-900/50 text-orange-800 dark:text-orange-300\">自研二进制私有协议</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">一致性哈希路由</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">单机万级长连接</span>\n      </div>\n    </div>\n\n    <!-- Architecture Pillars Grid -->\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\">\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-base\">🚀</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">事件驱动与线程池调度</h6>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          底层基于 Linux <code class=\"font-mono bg-slate-100 dark:bg-stone-900 px-1 py-0.5 rounded\">epoll</code> 边缘触发（Edge Triggered）多路复用模型，结合 Reactor 模式与预热线程池，实现非阻塞异步 I/O 与微秒级任务调度。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-base\">📦</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">自研高紧凑二进制协议</h6>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          设计专有二进制包头与变长负载，内嵌心跳保活检测、快速断线自动重连、消息唯一序号指纹去重（De-duplication）与严苛的 FIFO 有序可靠投递保证。\n        </p>\n      </div>\n\n      <div class=\"p-4 rounded-xl bg-white dark:bg-stone-800 border border-slate-200/80 dark:border-stone-700/80 space-y-2\">\n        <div class=\"flex items-center gap-2\">\n          <span class=\"text-base\">🌐</span>\n          <h6 class=\"font-bold text-slate-900 dark:text-slate-100 text-xs\">一致性哈希分布式路由</h6>\n        </div>\n        <p class=\"text-[11px] text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n          引入虚拟节点一致性哈希（Consistent Hashing）算法构建集群路由层，支持节点动态水平伸缩与会话平滑漂移，单节点承载万级活跃长连接。\n        </p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "非常扎实的 C++ 网络编程实现，架构清晰，代码质量极高，毫无悬念的一等奖。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "技术难度很高，完成度非常优秀。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "深入涉足现代网络架构底层，展现了卓越的自学能力。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "极为出色的优秀作品之一，具有极高的工程价值。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2021-童亦洲 - 申请表原件",
+          "filename": "2021-童亦洲-申请表原件.docx",
+          "url": "/downloads/projects/2021-tong-yizhou-redim/2021-童亦洲-申请表原件.docx",
+          "size": "14.2 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-tong-yizhou-redim",
+          "projectTitle": "RedIM：基于高并发事件驱动架构的分布式即时通信系统",
+          "studentName": "童亦洲",
+          "editionYear": "2021",
+          "description": "童亦洲 于 2021 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2021-童亦洲 - 项目源代码",
+          "filename": "2021-童亦洲-项目源代码.zip",
+          "url": "/downloads/projects/2021-tong-yizhou-redim/2021-童亦洲-项目源代码.zip",
+          "size": "17.7 KB",
+          "type": "code",
+          "category": "项目源码",
+          "projectId": "2021-tong-yizhou-redim",
+          "projectTitle": "RedIM：基于高并发事件驱动架构的分布式即时通信系统",
+          "studentName": "童亦洲",
+          "editionYear": "2021",
+          "description": "RedIM v2.2.4 完整源代码包，包含基于 Qt5/C++17 的事件驱动消息总线、Project-Mirai 协议适配层与自定义会话列表排序算法。"
+        }
+      ]
+    },
+    {
+      "id": "2021-yang-xiao-portal-auth",
+      "title": "校园网 Portal 自动认证套件与网络诊断脚本",
+      "studentId": "yang-xiao",
+      "studentName": "杨逍",
+      "class": "高二9班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "实用工具与网络",
+      "tags": [
+        "Python",
+        "HTTP/POST",
+        "自动化脚本",
+        "网络逆向分析",
+        "校园网"
+      ],
+      "summary": "针对树莓派等无GUI哑终端无法完成校园网网页认证的痛点，逆向深入剖析802.11 Portal与CHAP/PAP认证流程，构建跨平台POST认证套件与网络自动重连守护程序。",
+      "hasCode": false,
+      "details": {
+        "skills": "Wireshark 抓包分析、HTTP POST 参数伪造与加密逆向、Daemon 守护进程编写",
+        "difficulties": "动态 Token 校验机制的解密与设备指纹模拟，跨终端环境适配",
+        "innovations": "敏锐洞察身边痛点，用极客手段切实改善了校园网络生活体验，脚本代码精炼实用。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed font-sans\">\n  <!-- 立项背景 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800\">802.11 Portal 逆向</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800\">CHAP / PAP / RADIUS</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800\">无 GUI 树莓派自动化</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 font-serif\">立项背景与现实瓶颈</h3>\n    <p class=\"text-sm text-slate-700 dark:text-stone-300 mb-3 leading-relaxed font-serif\">\n      校园网认证系统初衷是抵御外来入侵并实现可控管理，但每逢冬夏，教室内空调无法自动开关，电脑、电视等设备也无法远程定时启动。于是在教室放置一块树莓派用于全自动化管理，可树莓派没有 GUI 界面，无法完成传统 802.11 Portal 浏览器弹窗认证，故无法连接服务器。<br/>\n      同时，目前学校哑终端连接方式为连接 AP 开放的某隐藏网络，一旦泄露 SSID 与密钥，就无法有效管控（Aircrack-ng 对于隐藏 SSID 可绕开并抓包）。本脚本作为后端，仅需知道分配的 IP + MAC 就可以迅速方便连接并完成认证，实现无 GUI 设备的远程自动化接入。\n    </p>\n  </div>\n\n  <!-- 原理与流程图 (含原件图1) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 mb-3 flex items-center gap-2 font-serif\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-indigo-600\"></span>\n      Portal 原理与 Web 客户端上线时序交互\n    </h3>\n\n    <!-- 原件流程图展示 -->\n    <div class=\"my-5 rounded-2xl overflow-hidden border border-slate-200 dark:border-stone-700 bg-white dark:bg-stone-900 p-4 text-center shadow-xs\">\n      <div class=\"relative group max-w-xl mx-auto\">\n        <img\n          src=\"/media/2021/yang_xiao_portal_flowchart.png\"\n          alt=\"Web客户端，Portal认证上线流程图\"\n          class=\"w-full max-w-lg mx-auto rounded-xl object-contain bg-white dark:bg-stone-100 p-2 shadow-sm transition-transform duration-300 hover:scale-[1.02]\"\n        />\n      </div>\n      <p class=\"text-xs text-slate-600 dark:text-stone-400 font-mono mt-3 flex items-center justify-center gap-1.5\">\n        <span>📊</span>\n        <span><strong>图：Web客户端 Portal 认证上线流程图</strong>（选自杨逍望岳奖学金技术报告原件正本）</span>\n      </p>\n    </div>\n\n    <!-- 流程剖析卡片 -->\n    <div class=\"space-y-2.5 text-xs text-slate-700 dark:text-stone-300 font-serif\">\n      <div class=\"flex items-start gap-2.5 bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200/80 dark:border-stone-700 shadow-xs\">\n        <span class=\"bg-sky-100 dark:bg-sky-900/60 text-sky-800 dark:text-sky-300 px-2 py-0.5 rounded-md font-mono font-bold text-[11px]\">1-2</span>\n        <div><strong>HTTP 请求发起与网关重定向：</strong>客户端通过 HTTP 协议发起连接请求。HTTP 报文经过接入设备时，对于未认证流量，网关将其 URL 地址重定向到 Portal 认证页面。</div>\n      </div>\n      <div class=\"flex items-start gap-2.5 bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200/80 dark:border-stone-700 shadow-xs\">\n        <span class=\"bg-indigo-100 dark:bg-indigo-900/60 text-indigo-800 dark:text-indigo-300 px-2 py-0.5 rounded-md font-mono font-bold text-[11px]\">3-5</span>\n        <div><strong>质询握手协议（CHAP / PAP）：</strong>用户发起认证请求后，Portal 服务器与接入设备之间进行 CHAP（Challenge Handshake Authentication Protocol）认证交互，发起挑战字请求报文（REQ_CHALLENGE）并回应 ACK_CHALLENGE。</div>\n      </div>\n      <div class=\"flex items-start gap-2.5 bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200/80 dark:border-stone-700 shadow-xs\">\n        <span class=\"bg-emerald-100 dark:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 px-2 py-0.5 rounded-md font-mono font-bold text-[11px]\">6-8</span>\n        <div><strong>RADIUS 鉴权与计费启动：</strong>接入设备向 RADIUS 服务器发送 ACCESS-REQUEST（密码在共享密钥下加密）。验证通过后签发 ACCESS-ACCEPT，接入设备向 RADIUS 发送 ACCOUNTING-REQUEST 开始计费并录入在线列表。</div>\n      </div>\n      <div class=\"flex items-start gap-2.5 bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200/80 dark:border-stone-700 shadow-xs\">\n        <span class=\"bg-amber-100 dark:bg-amber-900/60 text-amber-800 dark:text-amber-300 px-2 py-0.5 rounded-md font-mono font-bold text-[11px]\">切入点</span>\n        <div><strong>主动 Referer 构造突破：</strong>从 Portal Challenge 开始构建新请求头，模拟浏览器发起 MD5 一次加密并 POST 到对应服务器。研究发现数据包构造关键在于确定 Redirect 后的地址并在 Referer 中反馈；通过主动修改 Referer 回地址成功实现任意指定 IP/MAC 的远程非交互式认证。</div>\n      </div>\n    </div>\n  </div>\n\n  <!-- 自动化脚本与验证效果 (含原件图2) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-600\"></span>\n        跨平台认证实现（PowerShell / Bash / CMD）与运行实测\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">实测联通</span>\n    </div>\n\n    <!-- 原件稳定运行截图展示 -->\n    <div class=\"rounded-2xl overflow-hidden border border-slate-200 dark:border-stone-700 bg-white dark:bg-stone-900 p-4 text-center shadow-xs\">\n      <div class=\"relative group max-w-3xl mx-auto overflow-x-auto\">\n        <img\n          src=\"/media/2021/yang_xiao_portal_online_status.png\"\n          alt=\"稳定效果如图：网关在线会话与稳定运行状态\"\n          class=\"w-full min-w-[600px] rounded-lg object-contain bg-white dark:bg-stone-100 p-1.5 shadow-sm transition-transform duration-300 hover:scale-[1.01]\"\n        />\n      </div>\n      <p class=\"text-xs text-slate-600 dark:text-stone-400 font-mono mt-3 flex items-center justify-center gap-1.5\">\n        <span>📶</span>\n        <span><strong>稳定效果如图：网关在线会话状态</strong>（选自杨逍技术报告：设备 IP 10.66.26.146 鉴权成功并在网关 172.16.3.18 保持活跃）</span>\n      </p>\n    </div>\n\n    <!-- PowerShell 核心实现 -->\n    <div class=\"space-y-1.5\">\n      <div class=\"flex items-center justify-between text-xs text-slate-600 dark:text-stone-400 font-mono px-1\">\n        <span>💻 PowerShell 自动化认证与保活核心代码（原报告代码目录：guanquner/NTZXPortal）</span>\n        <span>PowerShell</span>\n      </div>\n      <pre class=\"bg-slate-900 text-slate-100 p-4 rounded-xl overflow-x-auto font-mono text-xs leading-relaxed border border-slate-800 shadow-inner\"><code># 认证 Powershell:\n$session = New-Object Microsoft.PowerShell.Commands.WebRequestSession\n# 构建模拟请求头，禁用 COOKIES\n$session.UserAgent = \"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36\"\n\nInvoke-WebRequest -UseBasicParsing -Uri \"http://172.16.3.10/ess/commonauth\" `\n  -Method \"POST\" `\n  -WebSession $session `\n  -Headers @{\n    \"Cache-Control\"=\"max-age=0\"\n    \"Origin\"=\"http://172.16.3.10\"\n    \"Upgrade-Insecure-Requests\"=\"1\"\n    \"DNT\"=\"1\"\n    \"Referer\"=\"http://172.16.3.10/ess/commonauth?wlanuserip=f6f56f4ed9b89a374f5903754baa8900...\"\n    \"Accept-Language\"=\"zh-CN,zh;q=0.9\"\n  } `\n  -ContentType \"application/x-www-form-urlencoded\" `\n  -Body \"kind=preLogin&mac=342EB798DFCD&userIp=10.66.26.151&nasIp=172.16.3.18&userId=(fillwithuser)&password=[MD5_HASH]...\" `\n  -Insecure\n\n# 登出与保活监测程序同理构造，支持周期性检测网络并秒级自动重拨</code></pre>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "解决实际痛点，抓包分析很到位，代码实用性强。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "具备极强的动手能力与极客解决问题思路。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "现实意义突出，完成度高。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "自动化工具写得清晰干净。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2021-杨逍 - 申请表原件",
+          "filename": "2021-杨逍-申请表原件.docx",
+          "url": "/downloads/projects/2021-yang-xiao-portal-auth/2021-杨逍-申请表原件.docx",
+          "size": "15.1 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-yang-xiao-portal-auth",
+          "projectTitle": "校园网 Portal 自动认证套件与网络诊断脚本",
+          "studentName": "杨逍",
+          "editionYear": "2021",
+          "description": "杨逍 于 2021 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2021-杨逍 - 项目设计文档/学术报告",
+          "filename": "2021-杨逍-项目技术报告.docx",
+          "url": "/downloads/projects/2021-yang-xiao-portal-auth/2021-杨逍-项目技术报告.docx",
+          "size": "75.2 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2021-yang-xiao-portal-auth",
+          "projectTitle": "校园网 Portal 自动认证套件与网络诊断脚本",
+          "studentName": "杨逍",
+          "editionYear": "2021",
+          "description": "《校园网 Portal 自动认证套件与网络诊断脚本》官方归档技术文档/研究报告原稿。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2021/yang_xiao_portal_flowchart.png",
+          "caption": "图：Web 客户端 Portal 认证上线流程交互图（选自杨逍申报技术报告原件：包含 HTTP 重定向、CHAP 挑战握手、RADIUS 鉴权计费全时序）",
+          "category": "原理时序"
+        },
+        {
+          "src": "media/2021/yang_xiao_portal_online_status.png",
+          "caption": "图：无 GUI 树莓派通过 POST 认证成功后的网关在线会话状态截图（选自杨逍技术报告原件：终端 IP 10.66.26.146 稳定在线）",
+          "category": "实测效果"
+        }
+      ]
+    },
+    {
+      "id": "2021-jiang-guanqun-streaming",
+      "title": "音视频实时流式传输服务器搭建与 Web 播放终端 (SRS + flv.js)",
+      "studentId": "jiang-guanqun",
+      "studentName": "姜冠群",
+      "class": "高二7班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "音视频与网络",
+      "tags": [
+        "SRS",
+        "RTMP/HTTP-FLV",
+        "flv.js",
+        "直播推流",
+        "树莓派"
+      ],
+      "summary": "为让年迈不便使用智能手机的祖父母能随时看到孙辈生活，自主设计跨地域低延迟亲情视讯系统。采用大华专业摄像头通过国标 GB28181 协议主动推流至上海云端 SRS 流媒体服务器，并在 Web 前端基于 flv.js 实现单一链接即开即看的纯 HTML5 免插件播放。",
+      "details": {
+        "skills": "流媒体协议（RTMP/FLV）、SRS 服务端配置、flv.js 前端解码、Linux 服务管理",
+        "difficulties": "公网弱网环境下的推流丢包补偿与延迟累积消除",
+        "innovations": "技术与人文温情结合，不仅攻克了音视频全链路串联，更将技术应用于跨越代际的亲情陪伴。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed font-sans\">\n  <!-- 立项背景与方案选择 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800\">国标 GB28181</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800\">SRS 5.0 (Simple Realtime Server)</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800\">flv.js 纯前端播放</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800\">亲情陪伴与技术温情</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 font-serif\">项目背景：跨越代际的亲情陪伴技术</h3>\n    <p class=\"text-sm text-slate-700 dark:text-stone-300 mb-4 leading-relaxed font-serif\">\n      由于与祖父祖母相隔较远，一年鲜有机会回家探望。考虑到他们年岁已高，时间十分宝贵，于是决定在书桌上安装一个 Dahua 专业摄像头，通过推流到公有云服务器，再从老家拉流观看。<br/>\n      <strong>为什么不用商业 App 集成摄像头？</strong> 因为祖父祖母年事已高，不会使用智能手机繁琐的登录与点击操作；而专业级监控摄像头兼容通用协议多，适合二次开发与定制，能够做到<strong>老人在老家电视或平板上只需点击一个单一固定链接即可即开即看</strong>。\n    </p>\n\n    <!-- 方案对比 -->\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-3.5 text-xs font-serif\">\n      <div class=\"bg-white dark:bg-stone-900 p-4 rounded-xl border border-slate-200/80 dark:border-stone-700 shadow-xs space-y-1.5 opacity-80\">\n        <span class=\"text-rose-600 dark:text-rose-400 font-bold font-mono\">❌ 方案一（放弃）</span>\n        <div class=\"font-bold text-slate-800 dark:text-slate-200\">摄像头 RTSP → 本地家庭服务器 (FFMPEG) → 上海云 (SRS) → 网页前端</div>\n        <p class=\"text-slate-500 dark:text-stone-400 leading-normal\">\n          由于移动宽带不分配公网 IPv4，必须经云端转发；且本地 FFMPEG 针对网络抖动中断后的自动重连机制不稳定，遂放弃。\n        </p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-4 rounded-xl border-2 border-emerald-500/30 dark:border-emerald-500/40 shadow-xs space-y-1.5\">\n        <span class=\"text-emerald-600 dark:text-emerald-400 font-bold font-mono\">✅ 方案二（最终采纳）</span>\n        <div class=\"font-bold text-emerald-950 dark:text-emerald-200\">摄像头 (GB28181 主动推流) → 上海公有云 (SRS 5.0) → 网页前端 (flv.js / WebRTC)</div>\n        <p class=\"text-slate-600 dark:text-stone-300 leading-normal\">\n          由摄像头直连云端 SIP 端口主动推流，彻底规避内网穿透瓶颈，网络抖动秒级自愈，链路极度精炼。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 原理与 SRS 架构图 (原件图1) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 mb-3 flex items-center gap-2 font-serif\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-sky-600\"></span>\n      GB28181 国标协议与 SRS 流媒体集群架构\n    </h3>\n    <p class=\"text-xs text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n      <strong>GB28181 协议</strong>指的是国家标准 GB/T 28181—2016《公共安全视频监控联网系统信息传输、交换、控制技术要求》。信令层面使用 SIP（Session Initiation Protocol）协议负责注册、保活与指令交互；流媒体传输层面使用实时传输协议（RTP）。<br/>\n      <strong>SRS (Simple Realtime Server)</strong> 是一个高效工业级开源实时视频服务器，支持 RTMP、WebRTC、HLS、HTTP-FLV 与 GB28181 的多协议转码与分发。\n    </p>\n\n    <!-- 原件图1：SRS 架构图展示 -->\n    <div class=\"my-5 rounded-2xl overflow-hidden border border-slate-200 dark:border-stone-700 bg-white dark:bg-stone-900 p-4 text-center shadow-xs\">\n      <div class=\"relative group max-w-2xl mx-auto\">\n        <img\n          src=\"/media/2021/jiang_streaming_srs_arch.png\"\n          alt=\"SRS 4.0 Overview 系统架构图\"\n          class=\"w-full max-w-xl mx-auto rounded-xl object-contain bg-white dark:bg-stone-100 p-2 shadow-sm transition-transform duration-300 hover:scale-[1.02]\"\n        />\n      </div>\n      <p class=\"text-xs text-slate-600 dark:text-stone-400 font-mono mt-3 flex items-center justify-center gap-1.5\">\n        <span>📊</span>\n        <span><strong>图1：SRS 流媒体集群架构概览</strong>（选自姜冠群申报技术报告原件：包含音视频源采集、GB28181 转码与多终端分发）</span>\n      </p>\n    </div>\n  </div>\n\n  <!-- 摄像头推流配置 (原件图2) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 mb-3 flex items-center gap-2 font-serif\">\n      <span class=\"w-2.5 h-2.5 rounded-full bg-indigo-600\"></span>\n      服务端部署与摄像头 GB28181 主动推流配置\n    </h3>\n    <p class=\"text-xs text-slate-600 dark:text-stone-300 font-serif leading-relaxed mb-3\">\n      云端选用 CentOS 8.4 系统源码编译支持 GB28181 的 SRS 5.0 分支（<code>git checkout feature/gb28181</code>）。配置 <code>conf/push.gb28181.conf</code> 指定候选候选地址 CANDIDATE，并在大华摄像头后台启用 GB28181 主动推流通道。\n    </p>\n\n    <!-- 原件图2：大华摄像头后台推流配置 -->\n    <div class=\"my-5 rounded-2xl overflow-hidden border border-slate-200 dark:border-stone-700 bg-white dark:bg-stone-900 p-4 text-center shadow-xs\">\n      <div class=\"relative group max-w-2xl mx-auto\">\n        <img\n          src=\"/media/2021/jiang_streaming_camera_gb28181.png\"\n          alt=\"大华摄像头后台 GB28181 推流配置\"\n          class=\"w-full max-w-xl mx-auto rounded-xl object-contain bg-white dark:bg-stone-100 p-2 shadow-sm transition-transform duration-300 hover:scale-[1.02]\"\n        />\n      </div>\n      <p class=\"text-xs text-slate-600 dark:text-stone-400 font-mono mt-3 flex items-center justify-center gap-1.5\">\n        <span>📷</span>\n        <span><strong>图2：大华摄像头后台 GB28181 主动推流配置</strong>（选自原报告：SIP 注册服务器 IP、国标 ID 与信令通道状态）</span>\n      </p>\n    </div>\n  </div>\n\n  <!-- 前端构建与实机运行 (原件图3) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-600\"></span>\n        前端构建（flv.js 纯 HTML5 解码）与老家电视播放实测\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">单一链接即开即看</span>\n    </div>\n\n    <!-- 原件图3：WordPress 前端播放器测试截图 -->\n    <div class=\"rounded-2xl overflow-hidden border border-slate-200 dark:border-stone-700 bg-white dark:bg-stone-900 p-4 text-center shadow-xs\">\n      <div class=\"relative group max-w-2xl mx-auto\">\n        <img\n          src=\"/media/2021/jiang_streaming_web_player.png\"\n          alt=\"前端播放实测界面\"\n          class=\"w-full max-w-xl mx-auto rounded-xl object-contain bg-white dark:bg-stone-100 p-2 shadow-sm transition-transform duration-300 hover:scale-[1.02]\"\n        />\n      </div>\n      <p class=\"text-xs text-slate-600 dark:text-stone-400 font-mono mt-3 flex items-center justify-center gap-1.5\">\n        <span>📺</span>\n        <span><strong>图3：Web 端亲情直播播放器测试界面</strong>（选自原报告：Bilibili flv.js 纯 HTML5 无插件播放，老人家中电视一键流畅收看）</span>\n      </p>\n    </div>\n\n    <!-- 前端嵌入代码展示 -->\n    <div class=\"space-y-1.5\">\n      <div class=\"flex items-center justify-between text-xs text-slate-600 dark:text-stone-400 font-mono px-1\">\n        <span>💻 纯前端播放器轻量集成代码（HTML5 + flv.js）</span>\n        <span>HTML5 / JavaScript</span>\n      </div>\n      <pre class=\"bg-slate-900 text-slate-100 p-4 rounded-xl overflow-x-auto font-mono text-xs leading-relaxed border border-slate-800 shadow-inner\"><code>&lt;!-- 前端定义播放器容器与视频流组件 --&gt;\n&lt;div class=\"mainContainer\"&gt;\n  &lt;video id=\"videoElement\" class=\"centeredVideo\" controls autoplay width=\"850\" height=\"478\"&gt;\n    浏览器不支持播放\n  &lt;/video&gt;\n&lt;/div&gt;\n\n&lt;!-- 引用 CDN 加速的 Bilibili flv.js --&gt;\n&lt;script src=\"https://cdn.bootcss.com/flv.js/1.3.3/flv.min.js\"&gt;&lt;/script&gt;\n&lt;script&gt;\n  var player = document.getElementById('videoElement');\n  if (flvjs.isSupported()) {\n    var flvPlayer = flvjs.createPlayer({\n      type: 'flv',\n      url: 'https://live.quner.icu:8443/live/1.flv'  // 经过 SRS 转换的低延迟 FLV 流地址\n    });\n    flvPlayer.attachMediaElement(videoElement);\n    flvPlayer.load();\n    flvPlayer.play();\n  }\n&lt;/script&gt;</code></pre>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "解决生活中的真实需求，有温度的技术实践，大加分！"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "技术复杂度与现实意义都很不错。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "搭建了完整的直播链路，立意温馨。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "代码主要为开源方案配置与前端引入，自研算法相对偏少。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2021-jiang-guanqun-streaming",
+      "downloads": [
+        {
+          "title": "2021-姜冠群 - 申请表原件",
+          "filename": "2021-姜冠群-申请表原件.docx",
+          "url": "/downloads/projects/2021-jiang-guanqun-streaming/2021-姜冠群-申请表原件.docx",
+          "size": "14.9 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-jiang-guanqun-streaming",
+          "projectTitle": "音视频实时流式传输服务器搭建与 Web 播放终端 (SRS + flv.js)",
+          "studentName": "姜冠群",
+          "editionYear": "2021",
+          "description": "姜冠群 于 2021 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2021-姜冠群 - 项目设计文档/学术报告",
+          "filename": "2021-姜冠群-项目技术报告.docx",
+          "url": "/downloads/projects/2021-jiang-guanqun-streaming/2021-姜冠群-项目技术报告.docx",
+          "size": "912.0 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2021-jiang-guanqun-streaming",
+          "projectTitle": "音视频实时流式传输服务器搭建与 Web 播放终端 (SRS + flv.js)",
+          "studentName": "姜冠群",
+          "editionYear": "2021",
+          "description": "《音视频实时流式传输服务器搭建与 Web 播放终端 (SRS + flv.js)》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2021-姜冠群 - 项目源代码",
+          "filename": "2021-姜冠群-项目源代码.zip",
+          "url": "/downloads/projects/2021-jiang-guanqun-streaming/2021-姜冠群-项目源代码.zip",
+          "size": "2.0 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2021-jiang-guanqun-streaming",
+          "projectTitle": "音视频实时流式传输服务器搭建与 Web 播放终端 (SRS + flv.js)",
+          "studentName": "姜冠群",
+          "editionYear": "2021",
+          "description": "《音视频实时流式传输服务器搭建与 Web 播放终端 (SRS + flv.js)》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2021/jiang_streaming_srs_arch.png",
+          "caption": "图1：SRS 4.0 流媒体服务器架构概览图（选自原报告：设备源接入、GB28181/RTMP 协议转码与 HTTP-FLV/WebRTC 分发）",
+          "category": "系统架构"
+        },
+        {
+          "src": "media/2021/jiang_streaming_camera_gb28181.png",
+          "caption": "图2：大华监控摄像头后台 GB28181 国标协议主动推流配置界面（选自原报告：SIP 注册服务器、国标编码与信令通道设置）",
+          "category": "推流配置"
+        },
+        {
+          "src": "media/2021/jiang_streaming_web_player.png",
+          "caption": "图3：Web 前端轻量播放测试界面（选自原报告：集成 flv.js，在老家电视与浏览器通过单一链接即开即看，无需操作手机）",
+          "category": "播放测试"
+        }
+      ]
+    },
+    {
+      "id": "2021-zhu-chenyi-robotics",
+      "title": "智能运载小车与自动上料机械臂复合控制系统",
+      "studentId": "zhu-chenyi",
+      "studentName": "朱辰祎",
+      "class": "高二9班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "机器人与控制",
+      "tags": [
+        "机械臂",
+        "智能小车",
+        "巡线传感器",
+        "Dobot",
+        "自动化物流"
+      ],
+      "summary": "面向工业流水线与智能制造离散上料场景，研发越疆科技 Magician 四轴协作上料机械臂与 AI-Starter 运载小车协同闭环系统。利用 XBee 实现跨设备无线握手，通过六路光敏传感器加权算法完成自主纠偏巡线，并重写物料矩阵循环步进算法实现 15 格双层工件全自动抓取与翻斗卸载。",
+      "details": {
+        "skills": "多路红外循迹算法、机械臂正逆运动学控制、跨设备串口通信与握手",
+        "difficulties": "车臂协同中的定位累积误差消除与物料抓取防滑",
+        "innovations": "两套系统有机串联，呈现了清晰的工业自动化搬运雏形。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed font-sans\">\n  <!-- 项目总览与竞赛背景 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800\">越疆 Magician 四轴机械臂</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800\">AI-Starter 智能循迹小车</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800\">XBee 无线串口握手</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800\">2020-2021 世界机器人大赛 (WRC)</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 font-serif\">项目背景：自动化流水线上料与物流协同闭环</h3>\n    <p class=\"text-sm text-slate-700 dark:text-stone-300 mb-3 leading-relaxed font-serif\">\n      朱辰祎同学在南通中学“诚恒一队”中完全负责智能运载小车与上料机械臂的核心控制逻辑。在开阔赛场环境中，小车无法仅依靠超声波完成精确定位，团队设计通过地面引导黑线辅以六路光电传感器进行偏转实时补偿。同时借助 XBee 无线模块与机械臂控制盒建立点对点同步，形成了集“物料阵列自动抓取 → 输送带装运 → 小车自主巡线 → 无线协同握手 → 翻斗定点倾卸”于一体的完整工业仿真系统。\n    </p>\n    <div class=\"text-xs text-amber-800 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 p-3 rounded-xl font-serif\">\n      🏆 <strong>赛事实绩</strong>：朱辰祎完全负责控制程序的团队在 2020 年世界机器人大赛（WRC）中荣获<strong>江苏省三等奖</strong>（指导教师：南通中学信息技术黄虹娟老师），并在 2021 年顺利入围世界机器人大赛总决赛。\n    </div>\n  </div>\n\n  <!-- 模块一：上料机械臂程序解析 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-amber-600\"></span>\n        模块一：越疆 Magician 四轴协作上料机械臂\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">DOBOT Magician</span>\n    </div>\n    <p class=\"text-xs text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n      目标是实现物块从阵列料区快速抓取并送至传送带。物块规格为 25mm &times; 25mm &times; 25mm，机械臂通过循环变量动态重排抓取三维坐标：\n    </p>\n\n    <!-- 机械臂程序图集 -->\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 pt-1\">\n      <!-- 图1 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2\">\n        <img\n          src=\"/media/2021/zhu_robotics/arm_init_points.png\"\n          alt=\"机械臂初始化抓取起始点与放置点\"\n          class=\"w-full h-40 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1.5\"\n        />\n        <div class=\"text-xs font-mono text-slate-700 dark:text-stone-300 font-bold\">图1：规定抓取起始点与放置点</div>\n        <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif leading-normal\">\n          初始化配置抓取初始位置坐标与输送带放置点目标坐标。\n        </p>\n      </div>\n\n      <!-- 图2 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2\">\n        <img\n          src=\"/media/2021/zhu_robotics/arm_params_vars.png\"\n          alt=\"声明变量与运行参数\"\n          class=\"w-full h-40 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1.5\"\n        />\n        <div class=\"text-xs font-mono text-slate-700 dark:text-stone-300 font-bold\">图2：声明矩阵偏移变量 j, k 与运行参数</div>\n        <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif leading-normal\">\n          声明偏移变量 j、k，并将执行速度与加速度设定为 100% 满功率响应。\n        </p>\n      </div>\n\n      <!-- 图3 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2\">\n        <img\n          src=\"/media/2021/zhu_robotics/arm_pick_place.png\"\n          alt=\"抓取物块送至放置点\"\n          class=\"w-full h-40 object-contain rounded-lg bg-slate-50 dark:bg-slate-800 p-1.5\"\n        />\n        <div class=\"text-xs font-mono text-slate-700 dark:text-stone-300 font-bold\">图3：抓取物块并运送至输送带</div>\n        <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif leading-normal\">\n          到达物块上方后触发末端真空吸盘气阀，吸附后抬升平移至放置点释放。\n        </p>\n      </div>\n\n      <!-- 图4 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2\">\n        <img\n          src=\"/media/2021/zhu_robotics/arm_matrix_offset.png\"\n          alt=\"物料矩阵步进计算\"\n          class=\"w-full h-40 object-contain rounded-lg bg-slate-50 dark:bg-slate-800 p-1.5\"\n        />\n        <div class=\"text-xs font-mono text-slate-700 dark:text-stone-300 font-bold\">图4：25mm 矩阵坐标步进与双层避让</div>\n        <p class=\"text-[11px] text-slate-500 dark:text-stone-400 font-serif leading-normal\">\n          纵向满3个（j=75）时 j 归零、k 累加 25mm；横向满5列（k=125）完成整层 15 个物料搬运。底层抓取将 Z 轴减去 30mm 预留吸盘弹性缓冲空间。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 模块二：智能运载小车程序解析 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-sky-600\"></span>\n        模块二：AI-Starter 智能运载小车与 XBee 通信\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">AI-Starter AGV</span>\n    </div>\n    <p class=\"text-xs text-slate-600 dark:text-stone-300 font-serif leading-relaxed\">\n      小车前部装备<strong>六路对地光敏传感器</strong>（左右各三路）。启动时完成白平衡校准，根据传感器黑白电平赋值之和判定左右偏离航向程度并调整双轮差速，遇到横向黑线时蜂鸣并暂停 0.25 秒执行路口决策：\n    </p>\n\n    <!-- 小车程序图集 (7幅原件截图) -->\n    <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 pt-1\">\n      <!-- 图5 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5\">\n        <img\n          src=\"/media/2021/zhu_robotics/car_init_config.png\"\n          alt=\"小车初始化\"\n          class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-slate-800 p-1\"\n        />\n        <div class=\"text-[11px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图5：小车初始化</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          变量 <code>prprpr</code> 记录循环周期数，每完成一轮运送加一。\n        </p>\n      </div>\n\n      <!-- 图6 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5\">\n        <img\n          src=\"/media/2021/zhu_robotics/car_route_array.png\"\n          alt=\"路口路径数组\"\n          class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-slate-800 p-1\"\n        />\n        <div class=\"text-[11px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图6：路口决策数组</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          由 0 和 1 构成的行为指令数组，0 表示路口直行，1 表示转弯。\n        </p>\n      </div>\n\n      <!-- 图7 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5\">\n        <img\n          src=\"/media/2021/zhu_robotics/car_line_patrol.png\"\n          alt=\"六路传感器纠偏巡线\"\n          class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-slate-800 p-1\"\n        />\n        <div class=\"text-[11px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图7：巡线纠偏算法</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          六路传感器电平求和加权，动态调制左右电机 PWM 速度纠偏。\n        </p>\n      </div>\n\n      <!-- 图8 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5\">\n        <img\n          src=\"/media/2021/zhu_robotics/car_xbee_loading.png\"\n          alt=\"等待装载与XBee监听\"\n          class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-slate-800 p-1\"\n        />\n        <div class=\"text-[11px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图8：XBee 等待装载</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          小车在装载区持续监听 XBee 信号，收到匹配指令后启程。\n        </p>\n      </div>\n\n      <!-- 图9 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5\">\n        <img\n          src=\"/media/2021/zhu_robotics/car_dump_unload.png\"\n          alt=\"翻斗卸载至回收站\"\n          class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-slate-800 p-1\"\n        />\n        <div class=\"text-[11px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图9：自动翻斗卸货</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          输出驱动电平使翻斗倾斜，将货物精准滑落至指定侧回收站。\n        </p>\n      </div>\n\n      <!-- 图10 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5\">\n        <img\n          src=\"/media/2021/zhu_robotics/car_junction_dispatch.png\"\n          alt=\"路口调度逻辑\"\n          class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-slate-800 p-1\"\n        />\n        <div class=\"text-[11px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图10：路口行为调度</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          到达第四路口时触发条件分支，执行精准货物分流。\n        </p>\n      </div>\n\n      <!-- 图11 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 sm:col-span-2 lg:col-span-1\">\n        <img\n          src=\"/media/2021/zhu_robotics/car_destination_stop.png\"\n          alt=\"终点停车逻辑\"\n          class=\"w-full h-36 object-contain rounded-lg bg-slate-50 dark:bg-slate-800 p-1\"\n        />\n        <div class=\"text-[11px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图11：终点停车逻辑</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          小车行进至第九路口终点处刹车停驻，重置状态等待下一工作周期。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 反思与工程迭代 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 shadow-xs\">\n    <h4 class=\"text-sm font-bold text-slate-900 dark:text-slate-100 mb-2 flex items-center gap-2 font-serif\">\n      <span>💡</span>\n      <span>作者工程反思与改进方案（选自申报原案）</span>\n    </h4>\n    <p class=\"text-xs text-slate-600 dark:text-stone-300 leading-relaxed font-serif\">\n      在实现过程中，初期过度依赖六路黑白光敏传感器，忽视了小车底盘自带的下视颜色传感器，导致对地面彩色标志物识别能力不足；此外，在提升行进速度时由于惯性加大对硬件微调提出了更严苛的要求。在后续备赛阶段，团队对传感器采样灵敏度进行了微调优化，进一步提升了闭环节拍与稳定性。\n    </p>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "运载小车系统结构相对完整，报告逻辑条理分明。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "两个小项目有充足工作量，体系完整。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "报告完整，期待看到更深入的传感器闭环融合。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "偏重竞赛组件既有功能调用。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2021-朱辰祎 - 申请表原件",
+          "filename": "2021-朱辰祎-申请表原件.docx",
+          "url": "/downloads/projects/2021-zhu-chenyi-robotics/2021-朱辰祎-申请表原件.docx",
+          "size": "317.6 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-zhu-chenyi-robotics",
+          "projectTitle": "智能运载小车与自动上料机械臂复合控制系统",
+          "studentName": "朱辰祎",
+          "editionYear": "2021",
+          "description": "朱辰祎 于 2021 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2021-朱辰祎 - 项目设计文档/学术报告",
+          "filename": "2021-朱辰祎-项目技术报告.docx",
+          "url": "/downloads/projects/2021-zhu-chenyi-robotics/2021-朱辰祎-项目技术报告.docx",
+          "size": "87.3 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2021-zhu-chenyi-robotics",
+          "projectTitle": "智能运载小车与自动上料机械臂复合控制系统",
+          "studentName": "朱辰祎",
+          "editionYear": "2021",
+          "description": "《智能运载小车与自动上料机械臂复合控制系统》官方归档技术文档/研究报告原稿。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2021/zhu_robotics/arm_init_points.png",
+          "caption": "图1：上料机械臂初始化（设置抓取起始点与目标放置点三维空间坐标）",
+          "category": "机械臂控制"
+        },
+        {
+          "src": "media/2021/zhu_robotics/arm_params_vars.png",
+          "caption": "图2：声明矩阵步进变量 j, k 与运行速度、加速度参数（j=0, k=0, 速度100%）",
+          "category": "参数声明"
+        },
+        {
+          "src": "media/2021/zhu_robotics/arm_pick_place.png",
+          "caption": "图3：气动吸盘抓取物块并搬运至传送带放置点执行逻辑",
+          "category": "抓放执行"
+        },
+        {
+          "src": "media/2021/zhu_robotics/arm_matrix_offset.png",
+          "caption": "图4：双层物料矩阵坐标步进算法（25mm 网格增量计算与吸盘预留间隙）",
+          "category": "矩阵规划"
+        },
+        {
+          "src": "media/2021/zhu_robotics/car_init_config.png",
+          "caption": "图5：AI-Starter 智能运载小车初始化与循环计数变量配置",
+          "category": "小车主控"
+        },
+        {
+          "src": "media/2021/zhu_robotics/car_route_array.png",
+          "caption": "图6：路口路径指示数组（由 0 与 1 控制小车直行与转向决策）",
+          "category": "路径规划"
+        },
+        {
+          "src": "media/2021/zhu_robotics/car_line_patrol.png",
+          "caption": "图7：六路光电传感器对地加权巡线与自动纠偏差速驱动函数",
+          "category": "循迹算法"
+        },
+        {
+          "src": "media/2021/zhu_robotics/car_xbee_loading.png",
+          "caption": "图8：等待装载函数（基于 XBee 无线串口实时监听机械臂控制盒握手信号）",
+          "category": "无线通信"
+        },
+        {
+          "src": "media/2021/zhu_robotics/car_dump_unload.png",
+          "caption": "图9：翻斗倾角电机电平驱动与货物定点自动卸载至回收站函数",
+          "category": "自动卸货"
+        },
+        {
+          "src": "media/2021/zhu_robotics/car_junction_dispatch.png",
+          "caption": "图10：分路运输调度逻辑（第四路口识别与回收站分流判定）",
+          "category": "路口调度"
+        },
+        {
+          "src": "media/2021/zhu_robotics/car_destination_stop.png",
+          "caption": "图11：终点停车与运载闭环状态重置逻辑（第九路口停车）",
+          "category": "终点控制"
+        }
+      ]
+    },
+    {
+      "id": "2021-gu-jianhao-algorithms",
+      "title": "高级算法解题实战库与 CSDN 技术博客知识沉淀",
+      "studentId": "gu-jianhao",
+      "studentName": "顾键濠",
+      "class": "高一18班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "算法与开源",
+      "tags": [
+        "NOIP/CSP",
+        "算法沉淀",
+        "CSDN博客",
+        "图论与DP",
+        "开源分享"
+      ],
+      "summary": "高一期间保持高频算法刷题与总结，在 CSDN 上持续发表了数十篇深度题解与算法学习笔记，涵盖高级图论、树状数组与动态规划进阶，展现了优良的知识沉淀与开源分享习惯。",
+      "details": {
+        "skills": "信息学奥赛题解总结、技术写作、博客排版、算法复杂度分析",
+        "difficulties": "在繁重高中学业下坚持长期高频输出与复盘",
+        "innovations": "不仅自己学，而且以技术博客方式惠及更多初学者，体现了良好的极客分享精神。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2021年 月 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">顾键濠</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高一（18）</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">(1)算法进阶石 (2)（准备中）洛谷学习路线</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>(较简单的版本，手写版本已上交学校)</p><p>（1）算法·进阶石（algorithm-stone）—— 进击的每一步！</p><p>https://github.com/acm-clan/algorithm-stone</p><p>ACM/LeetCode算法竞赛路线图，最全的算法学习地图！</p><p>（2）准备中的项目（与通中其他学生合作） 洛谷题解</p><p>https://github.com/TowardsDreams/code（本人）</p><p>https://github.com/ntzxsys/code（对方）</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">学会使用github，学会使用vscode，学会写博客…（具体见学校存稿)</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">开源项目上传文件时的操作，vscode的使用等…</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">参与网上开源项目打造等</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\"><span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span><h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与深度技术解析 (Technical Report & Paper)</h4></div><h5 className=\"font-bold text-blue-950 mt-4 mb-2 text-sm\">2.获奖：</h5><p className=\"leading-relaxed mb-2.5 text-slate-700\">2021年CSP（软件能力认证）初赛江苏省一等奖，NOIP（全国青少年信息学奥林匹克联赛）全国三等奖</p><h5 className=\"font-bold text-blue-950 mt-4 mb-2 text-sm\">3.博客</h5><p className=\"leading-relaxed mb-2.5 text-slate-700\">https://blog.csdn.net/Joseph_tony?spm=1000.2115.3001.5343</p><h5 className=\"font-bold text-blue-950 mt-4 mb-2 text-sm\">4.文档（见上）</h5></div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "脚踏实地，积累了大量算法题解与经验，非常值得鼓励！"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "持续在 CSDN 写技术博客加分。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "有一定现实意义，期待更多原创性技术探索。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "多为常规题解，可进一步提炼通用算法框架。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2021-顾键濠 - 申请表原件",
+          "filename": "2021-顾键濠-申请表原件.docx",
+          "url": "/downloads/projects/2021-gu-jianhao-algorithms/2021-顾键濠-申请表原件.docx",
+          "size": "15.9 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-gu-jianhao-algorithms",
+          "projectTitle": "高级算法解题实战库与 CSDN 技术博客知识沉淀",
+          "studentName": "顾键濠",
+          "editionYear": "2021",
+          "description": "顾键濠 于 2021 年提交的望岳奖学金官方申请表原件。"
+        }
+      ]
+    },
+    {
+      "id": "2021-yu-qinglan-smart-gate",
+      "title": "基于智能语音识别与物联网控制的无接触门禁系统",
+      "studentId": "yu-qinglan",
+      "studentName": "俞晴岚",
+      "class": "高二14班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "物联网与硬件",
+      "tags": [
+        "语音识别",
+        "物联网",
+        "ESP8266",
+        "智能门禁",
+        "继电器控制"
+      ],
+      "summary": "针对常态化校园防疫测温痛点，研发基于 OSTD xAI 智联猫微控制器、非接触红外测温模组、TM1637 数码管与物创云人脸识别协同的智能防疫门禁教具。配套 49*44*12cm 通中校门微缩沙盘与舵机闸机，斩获江苏省中小学优秀自制教具二等奖并获学校官方新闻报道。",
+      "details": {
+        "skills": "语音指令特征匹配、微控制器 I/O 驱动、继电器弱电控制强电安全设计",
+        "difficulties": "环境噪音下的声控识别准确率提升与抗干扰",
+        "innovations": "响应疫情防控需求，完成了一个可工作的无接触门禁原型。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed font-sans\">\n  <!-- 教具研制背景与设计初衷 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800\">省优秀自制教具二等奖</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800\">OSTD xAI 智联猫</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800\">非接触红外测温 + 人脸云识别</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800\">物创云平台联动</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 font-serif\">教具研制背景与设计初衷</h3>\n    <p class=\"text-sm text-slate-700 dark:text-stone-300 mb-3 leading-relaxed font-serif\">\n      根据教育科学出版社出版的高中《信息技术》必修一“数据与计算”模块“数据分析与人工智能”这一节的活动设计，俞晴岚同学自主构思并制作出本教具。<br/>\n      2020 年是不平凡的一年，防疫的日子里有了制作教具的灵感：平时我们进入校门，都是保安叔叔和老师们帮我们用额温枪测试温度，人工查看温度并判断是否通行。早高峰易造成排队与交叉感染隐患。是否可以把这些工作交给人工智能，让学习生活更安全高效？基于此想法，作者设计了结合机器视觉人脸识别、非接触式红外测温、数码管直观显示与舵机门禁开合的完整教具沙盘。\n    </p>\n    <div class=\"p-3 rounded-xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800/60 text-xs text-emerald-800 dark:text-emerald-300 font-serif\">\n      🏆 <strong>赛事实绩与官方报道</strong>：该教具在江苏省教育厅主办的<strong>江苏省中小学优秀自制教具展评活动中荣获二等奖</strong>，并被江苏省南通中学官方新闻专题报道，教具随后运用于课堂教学体验中，有效打破了人工智能理论与动手实践之间的壁垒。\n    </div>\n  </div>\n\n  <!-- 实物沙盘装置与赛场实录 (含原件实物图、证书与新闻) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-600\"></span>\n        教具装置实物全景与展评获奖档案\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">49 &times; 44 &times; 12 cm</span>\n    </div>\n\n    <!-- 顶部大图：教具全景实物沙盘 -->\n    <div class=\"rounded-2xl overflow-hidden border border-slate-200 dark:border-stone-700 bg-white dark:bg-stone-900 p-4 text-center shadow-xs\">\n      <div class=\"relative group max-w-2xl mx-auto\">\n        <img\n          src=\"/media/2021/yu_gate/yu_gate_real_sandbox.jpeg\"\n          alt=\"智能防疫门禁实物全景沙盘模型\"\n          class=\"w-full max-w-xl mx-auto rounded-xl object-contain bg-white dark:bg-stone-100 p-2 shadow-sm transition-transform duration-300 hover:scale-[1.01]\"\n        />\n      </div>\n      <p class=\"text-xs text-slate-600 dark:text-stone-400 font-mono mt-3 flex items-center justify-center gap-1.5\">\n        <span>🏫</span>\n        <span><strong>图1：自制智能防疫门禁教具装置全景图</strong>（选自原案：南通中学校门微缩模型、智联猫核心板、红外测温模组、数码管与舵机闸机完整沙盘）</span>\n      </p>\n    </div>\n\n    <!-- 三栏展示：省赛布展、获奖证书与新闻 -->\n    <div class=\"grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1\">\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_exhibition_photo.jpeg\" class=\"w-full h-36 object-cover rounded-lg border border-slate-200 dark:border-stone-700\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">省展评专家评审现场</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif leading-normal\">\n          在全省自制教具展评现场向专家评委现场汇报与演示。\n        </p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_award_cert_hd.jpg\" class=\"w-full h-36 object-cover rounded-lg border border-slate-200 dark:border-stone-700\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">江苏省二等奖获奖证书</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif leading-normal\">\n          江苏省教育厅评比二等奖荣誉证书原件扫描。\n        </p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_school_news.jpeg\" class=\"w-full h-36 object-cover rounded-lg border border-slate-200 dark:border-stone-700\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">南通中学官方新闻报道</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif leading-normal\">\n          学校官方专栏《我校学生在省优秀自制教具评比中喜获佳绩》。\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 算法设计与控制流程 (含原件流程图) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-indigo-600\"></span>\n        算法设计与系统状态机工作流\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">xDingAI Python</span>\n    </div>\n\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 items-start\">\n      <!-- 流程图1 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_main_flowchart.png\" alt=\"系统主程序算法流程图\" class=\"w-full max-h-96 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-2\" />\n        <div class=\"text-xs font-mono text-slate-700 dark:text-stone-300 font-bold\">图4：主控制逻辑与云端状态机流程</div>\n      </div>\n\n      <!-- 流程图2 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_sub_flowchart.png\" alt=\"人脸测温判定流程图\" class=\"w-full max-h-96 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-2\" />\n        <div class=\"text-xs font-mono text-slate-700 dark:text-stone-300 font-bold\">图5：人脸识别与红外测温核心分支逻辑</div>\n      </div>\n    </div>\n  </div>\n\n  <!-- 制作过程与硬件组装实录 (6幅原案实操图) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-sky-600\"></span>\n        教具制作与调试实况记录（原案六步法）\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">动手制作</span>\n    </div>\n\n    <div class=\"grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 pt-1\">\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_build_scene.jpeg\" class=\"w-full h-24 object-cover rounded-lg\" />\n        <div class=\"text-[10px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图9：场景搭建</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">通中校门微缩搭建</p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_build_wiring.jpeg\" class=\"w-full h-24 object-cover rounded-lg\" />\n        <div class=\"text-[10px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图10：底座布线</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">走线固定与绝缘</p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_build_servo_mount.jpeg\" class=\"w-full h-24 object-cover rounded-lg\" />\n        <div class=\"text-[10px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图11：闸机装配</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">舵机微型摆臂装载</p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_debug_cat_board.jpeg\" class=\"w-full h-24 object-cover rounded-lg\" />\n        <div class=\"text-[10px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图12：主控接线</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">智联猫模块联动</p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_debug_servo_angle.jpeg\" class=\"w-full h-24 object-cover rounded-lg\" />\n        <div class=\"text-[10px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图13：舵机调校</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">0~90度开闸调平</p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1 text-center\">\n        <img src=\"/media/2021/yu_gate/yu_gate_debug_temperature.jpeg\" class=\"w-full h-24 object-cover rounded-lg\" />\n        <div class=\"text-[10px] font-mono text-slate-700 dark:text-stone-300 font-bold\">图14：测温标定</div>\n        <p class=\"text-[9px] text-slate-500 dark:text-stone-400 font-serif\">红外探头基准校正</p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "贴合实际生活场景，软硬件结合良好。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "完成了实用的物联网门禁系统。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "硬件连线与逻辑搭建完整。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "模块化拼接度较高。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2021-俞晴岚 - 申请表原件",
+          "filename": "2021-俞晴岚-申请表原件.docx",
+          "url": "/downloads/projects/2021-yu-qinglan-smart-gate/2021-俞晴岚-申请表原件.docx",
+          "size": "359.0 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-yu-qinglan-smart-gate",
+          "projectTitle": "基于智能语音识别与物联网控制的无接触门禁系统",
+          "studentName": "俞晴岚",
+          "editionYear": "2021",
+          "description": "俞晴岚 于 2021 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2021-俞晴岚 - 项目设计文档/学术报告",
+          "filename": "2021-俞晴岚-项目技术报告.pptx",
+          "url": "/downloads/projects/2021-yu-qinglan-smart-gate/2021-俞晴岚-项目技术报告.pptx",
+          "size": "3.2 MB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2021-yu-qinglan-smart-gate",
+          "projectTitle": "基于智能语音识别与物联网控制的无接触门禁系统",
+          "studentName": "俞晴岚",
+          "editionYear": "2021",
+          "description": "《基于智能语音识别与物联网控制的无接触门禁系统》官方归档技术文档/研究报告原稿。"
+        }
+      ],
+      "interactiveDemos": [
+        {
+          "type": "html",
+          "title": "智能防疫门禁省赛答辩幻灯片 (13 页 Slides 交互式演示文稿)",
+          "entryUrl": "/demos/yu_qinglan_defense_slides/index.html",
+          "description": "俞晴岚在江苏省中小学优秀自制教具展评活动现场汇报答辩的完整幻灯片（共 13 页），支持键盘翻页、全屏查看与各章节快速跳转。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2021/yu_gate/yu_gate_real_sandbox.jpeg",
+          "caption": "图1：智能防疫门禁自制教具实物装置全景图（微缩校园沙盘模型与智能门禁闸机 · 尺寸 49*44*12 cm）",
+          "category": "装置实物"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_award_cert_hd.jpg",
+          "caption": "图2：江苏省中小学优秀自制教具评比二等奖获奖证书原件（江苏省教育厅 / 俞晴岚《智能防疫门禁》）",
+          "category": "获奖证书"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_poster_hd.png",
+          "caption": "图3：江苏省优秀自制教具展评活动参赛展板海报原件（高清版 · 包含设计思路、功能演示与云端架构）",
+          "category": "展评海报"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_main_flowchart.png",
+          "caption": "图4：智能防疫门禁主控程序算法设计流程图（智联猫联网、人脸注册、红外测温与云端校验放行状态机）",
+          "category": "算法流程"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_sub_flowchart.png",
+          "caption": "图5：特定人脸识别与红外测温核心分支决策流程图",
+          "category": "分支逻辑"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_exhibition_photo.jpeg",
+          "caption": "图6：江苏省中小学优秀自制教具展评活动现场布展与专家评审实况",
+          "category": "赛场实况"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_classroom_demo.jpeg",
+          "caption": "图7：课堂教学应用实景：南通中学同学们使用体验自制教具突破《信息技术》教学重点",
+          "category": "课堂教学"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_school_news.jpeg",
+          "caption": "图8：南通中学校园官方新闻报道《我校学生在省优秀自制教具评比中喜获佳绩》",
+          "category": "新闻报道"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_build_scene.jpeg",
+          "caption": "图9：教具制作过程（一）：微缩校园场景搭建与校门立柱构筑",
+          "category": "制作过程"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_build_wiring.jpeg",
+          "caption": "图10：教具制作过程（二）：沙盘底座布线与传感器固定",
+          "category": "制作过程"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_build_servo_mount.jpeg",
+          "caption": "图11：教具制作过程（三）：闸机微型舵机连杆机构与机械阻尼装配",
+          "category": "制作过程"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_debug_cat_board.jpeg",
+          "caption": "图12：调试过程（四）：OSTD xAI 智联猫主板、MLX90614 红外测温模组与数码管接线",
+          "category": "硬件调试"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_debug_servo_angle.jpeg",
+          "caption": "图13：调试过程（五）：SG90 舵机 0°~90° 开门摆动角度调校",
+          "category": "硬件调试"
+        },
+        {
+          "src": "media/2021/yu_gate/yu_gate_debug_temperature.jpeg",
+          "caption": "图14：调试过程（六）：红外测温探头与环境温度基准测试",
+          "category": "硬件调试"
+        }
+      ]
+    },
+    {
+      "id": "2021-chen-yiming-vision-robot",
+      "title": "基于视觉伺服与多传感器融合的智能巡线抓取机器人",
+      "studentId": "chen-yiming",
+      "studentName": "陈一鸣",
+      "class": "高二16班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "机器人与视觉",
+      "tags": [
+        "视觉引导",
+        "巡线小车",
+        "机械臂",
+        "传感器融合"
+      ],
+      "summary": "面向教育部白名单权威赛事“全国中小学信息技术创新与实践大赛 (NOC)”，采用 ClicBot 智能机器人主脑微操作系统、红外测距探头与四轮独立电机驱动构建模块化循迹避障小车。编写 Python 闭环运动规划与航向自适应纠偏状态机，斩获 NOC 全国决赛高中组一等奖。",
+      "details": {
+        "skills": "色块阈值分割、循迹闭环 PID 调节、机械臂动作编组",
+        "difficulties": "光照变化导致的色块误检与车体惯性漂移控制",
+        "innovations": "将视觉与底层传动有效结合，展示了机器人多模态感知能力。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed font-sans\">\n  <!-- 赛事背景与荣誉 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800\">全国 NOC 大赛一等奖</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800\">ClicBot 模块化机器人</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800\">Python 闭环运动规划</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-purple-50 dark:bg-purple-950/40 text-purple-700 dark:text-purple-300 border border-purple-200 dark:border-purple-800\">教育部白名单赛事</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 font-serif\">赛事任务与核心设计思想</h3>\n    <p class=\"text-sm text-slate-700 dark:text-stone-300 mb-3 leading-relaxed font-serif\">\n      项目面向“全国中小学信息技术创新与实践大赛 (NOC)”多元智能竞技·模块化机器人赛项高中组展开。机器人要实现自动导引与避障，必须具备环境感知能力。针对不要求高清晰度图像而侧重实时响应的赛道工况，作者舍弃笨重昂贵的工业相机，创新性采用高性价比红外距离感应探头组成感知矩阵，配合 ClicBot 主脑实现低成本、微秒级响应的轻量化感知架构。\n    </p>\n    <div class=\"p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800/60 text-xs text-amber-900 dark:text-amber-200 font-serif\">\n      🏆 <strong>赛事实绩</strong>：陈一鸣（江苏省南通中学）与如皋市第一中学张熙民组成联队（指导教师：黄虹娟、乔学琴），在 2021 年全国 NOC 大赛决赛中斩获<strong>全国一等奖</strong>（教育部白名单赛事，教监管厅函[2020]23号）。\n    </div>\n  </div>\n\n  <!-- 全国一等奖获奖证书与整车造型展示 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-amber-600\"></span>\n        全国一等奖证书原件与循迹小车整机架构\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">NOC 2021</span>\n    </div>\n\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 items-center\">\n      <!-- 证书大图 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img\n          src=\"/media/2021/chen_robotics/chen_noc_award_cert_hd.png\"\n          alt=\"全国中小学信息技术创新与实践大赛一等奖证书\"\n          class=\"w-full max-h-80 object-contain rounded-lg shadow-sm\"\n        />\n        <div class=\"text-xs font-mono text-slate-700 dark:text-stone-300 font-bold\">图1：NOC 全国一等奖荣誉证书原件</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          多元智能竞技·模块化机器人赛项高中组（陈一鸣、张熙民 联队）\n        </p>\n      </div>\n\n      <!-- 整机渲染造型图 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img\n          src=\"/media/2021/chen_robotics/chen_car_panoramic_render.png\"\n          alt=\"循迹小车全景造型设计\"\n          class=\"w-full max-h-80 object-contain rounded-lg p-2 bg-slate-50 dark:bg-stone-800\"\n        />\n        <div class=\"text-xs font-mono text-slate-700 dark:text-stone-300 font-bold\">图2：ClicBot 智能循迹小车全景造型</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          主脑中枢 + 前置测距探头 + 驱动球机械臂 + 双驱独立轮系\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 硬件四大系统组成 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-sky-600\"></span>\n        机器人四大硬件系统与模块化配置\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">硬件拓扑</span>\n    </div>\n\n    <div class=\"grid grid-cols-2 sm:grid-cols-4 gap-3 text-center\">\n      <!-- 模块1 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5\">\n        <img src=\"/media/2021/chen_robotics/chen_clicbot_brain_cpu.png\" class=\"w-full h-24 object-contain mx-auto\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">主控系统 (CPU)</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">ClicBot 主脑模块，负责数据运算与系统调度</p>\n      </div>\n\n      <!-- 模块2 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5\">\n        <img src=\"/media/2021/chen_robotics/chen_clicbot_distance_sensor.png\" class=\"w-full h-24 object-contain mx-auto\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">传感器检测系统</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">红外距离传感器，有效测障距离 10～80cm</p>\n      </div>\n\n      <!-- 模块3 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5\">\n        <img src=\"/media/2021/chen_robotics/chen_clicbot_drive_wheels.png\" class=\"w-full h-24 object-contain mx-auto\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">动力驱动系统</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">左右各双电机驱动车轮，起支撑与差速转弯作用</p>\n      </div>\n\n      <!-- 模块4 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5\">\n        <img src=\"/media/2021/chen_robotics/chen_clicbot_joint_rods.png\" class=\"w-full h-24 object-contain mx-auto\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">连接传导系统</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">驱动球及延长杆，实现模块化自由拼接</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 软件架构与控制状态机 (含原件流程图与代码) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-600\"></span>\n        软件架构、控制状态机与核心 Python 代码\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">Python 3.x</span>\n    </div>\n\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 items-start\">\n      <!-- 软件流程图 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img src=\"/media/2021/chen_robotics/chen_software_arch_flowchart.jpeg\" alt=\"软件控制状态机流程图\" class=\"w-full max-h-96 object-contain rounded-lg p-2 bg-slate-50 dark:bg-stone-800\" />\n        <div class=\"text-xs font-mono text-slate-700 dark:text-stone-300 font-bold\">图3：软件控制状态机流程图</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          距离感应阈值条件分支判定：前向通行、单侧微调与大角度回转避障\n        </p>\n      </div>\n\n      <!-- 核心 Python 代码 -->\n      <div class=\"space-y-2\">\n        <div class=\"text-xs font-mono text-slate-700 dark:text-stone-300 font-bold\">赛场实机运行核心控制代码：</div>\n        <pre class=\"bg-slate-900 text-slate-100 p-3.5 rounded-xl overflow-x-auto font-mono text-xs leading-relaxed border border-slate-800 shadow-inner\"><code># coding: utf-8\nimport sys, random, time\nsys.path.append(\"/userdata/\")\nfrom clicbot import *\n\nrobot = Clicbot()\n\n# 核心实时避障与多级巡线状态机\nwhile True:\n    # 传感器 9 测前方障碍，传感器 8 测侧向基准\n    if robot.distance_sensor(9) > 360:\n        if robot.distance_sensor(8) <= 50:\n            robot.preset_action(\"单右\")\n            robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 50)\n        elif robot.distance_sensor(8) <= 110:\n            robot.preset_action(\"正\")\n            robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 80)\n        elif robot.distance_sensor(8) <= 350:\n            robot.preset_action(\"单左\")\n            robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 50)\n        else:\n            robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 0)\n            robot.preset_action(\"正\")\n            robot.act_wheel_rotate(\"5cw,7cw,4ccw,6ccw\", 50)\n            time.sleep(0.5)\n            robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 0)\n            break\n    else:\n        # 遭遇前方障碍，减速并大角度旋回避障\n        robot.preset_action(\"转\")\n        robot.act_wheel_rotate(\"5ccw,7ccw,4cw,6cw\", 60)</code></pre>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "报告较为清晰，技术栈较为全面。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "技术难度尚可，但创新性略显欠缺。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "核心模块基本沿用既有范式。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "完成度较好，期待后续有更深突破。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2021-chen-yiming-vision-robot",
+      "downloads": [
+        {
+          "title": "2021-陈一鸣 - 申请表原件",
+          "filename": "2021-陈一鸣-申请表原件.docx",
+          "url": "/downloads/projects/2021-chen-yiming-vision-robot/2021-陈一鸣-申请表原件.docx",
+          "size": "14.6 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-chen-yiming-vision-robot",
+          "projectTitle": "基于视觉伺服与多传感器融合的智能巡线抓取机器人",
+          "studentName": "陈一鸣",
+          "editionYear": "2021",
+          "description": "陈一鸣 于 2021 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2021-陈一鸣 - 项目设计文档/学术报告",
+          "filename": "2021-陈一鸣-项目技术报告.docx",
+          "url": "/downloads/projects/2021-chen-yiming-vision-robot/2021-陈一鸣-项目技术报告.docx",
+          "size": "748.9 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2021-chen-yiming-vision-robot",
+          "projectTitle": "基于视觉伺服与多传感器融合的智能巡线抓取机器人",
+          "studentName": "陈一鸣",
+          "editionYear": "2021",
+          "description": "《基于视觉伺服与多传感器融合的智能巡线抓取机器人》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2021-陈一鸣 - 项目源代码",
+          "filename": "2021-陈一鸣-项目源代码.zip",
+          "url": "/downloads/projects/2021-chen-yiming-vision-robot/2021-陈一鸣-项目源代码.zip",
+          "size": "835 B",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2021-chen-yiming-vision-robot",
+          "projectTitle": "基于视觉伺服与多传感器融合的智能巡线抓取机器人",
+          "studentName": "陈一鸣",
+          "editionYear": "2021",
+          "description": "《基于视觉伺服与多传感器融合的智能巡线抓取机器人》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2021/chen_robotics/chen_noc_award_cert_hd.png",
+          "caption": "图1：全国中小学信息技术创新与实践大赛 (NOC) 一等奖获奖证书原件（多元智能竞技·模块化机器人赛项高中组 · 陈一鸣 / 张熙民 联队）",
+          "category": "国家级一等奖"
+        },
+        {
+          "src": "media/2021/chen_robotics/chen_car_panoramic_render.png",
+          "caption": "图2：ClicBot 人工智能循迹避障小车全景造型与硬件组装设计图",
+          "category": "整机结构"
+        },
+        {
+          "src": "media/2021/chen_robotics/chen_software_arch_flowchart.jpeg",
+          "caption": "图3：软件架构与控制状态机流程图（红外测距信号解算、预置动作编组与差速转向闭环）",
+          "category": "控制算法"
+        },
+        {
+          "src": "media/2021/chen_robotics/chen_clicbot_brain_cpu.png",
+          "caption": "图4：主控系统（CPU）：ClicBot 智能机器人主脑模块（集成微操作系统、屏幕交互与传感器总线中枢）",
+          "category": "主脑中枢"
+        },
+        {
+          "src": "media/2021/chen_robotics/chen_clicbot_distance_sensor.png",
+          "caption": "图5：传感器检测系统：ClicBot 红外距离感应探头（10～80cm 反射强度模拟量采样）",
+          "category": "传感检测"
+        },
+        {
+          "src": "media/2021/chen_robotics/chen_clicbot_drive_wheels.png",
+          "caption": "图6：驱动系统：双驱独立电机与硅胶车轮（支撑车体与差速姿态调整）",
+          "category": "动力底盘"
+        },
+        {
+          "src": "media/2021/chen_robotics/chen_clicbot_joint_rods.png",
+          "caption": "图7：连接传导系统：模块化驱动球与延长杆连接构件",
+          "category": "机械结构"
+        }
+      ]
+    },
+    {
+      "id": "2021-yu-xuantao-school-map",
+      "title": "南通中学 3D 全景漫游与智慧校园导览系统 (school_map)",
+      "studentId": "yu-xuantao",
+      "studentName": "俞选涛",
+      "class": "高二16班",
+      "award": "凭高临岳（入围奖）",
+      "awardTier": "third",
+      "category": "Web与多媒体",
+      "tags": [
+        "全景摄影",
+        "HTML5",
+        "虚拟校园",
+        "图像拼接",
+        "交互导览"
+      ],
+      "summary": "耗时数月实地走遍通中校园，自主采集上千张高精度全景照片，利用全景拼接算法与 HTML5 Web 技术，构建了南通中学首个可交互的 3D 全景漫游导览系统，支持钟楼、诚恒楼、科学馆等多节点漫游穿梭与场景热点图文交互。",
+      "interactiveDemos": [
+        {
+          "title": "南通中学 3D 校园全景漫游系统",
+          "type": "html",
+          "entryUrl": "/demos/school_map/index.html",
+          "description": "实时交互漫游：点击地面箭头穿梭校门、钟楼、教学楼与诚恒楼各全景节点"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/demos/school_map/img/nanmen.jpg",
+          "caption": "南通中学南校门全景导览节点底片（俞选涛实地采集）",
+          "category": "全景节点"
+        },
+        {
+          "src": "/demos/school_map/img/kexue.jpg",
+          "caption": "科学馆与钟楼全景导览节点底片（俞选涛实地采集）",
+          "category": "全景节点"
+        }
+      ],
+      "details": {
+        "skills": "全景鱼眼透视校正、柱面展开算法、CSS 3D Transform 空间映射、Web 响应式交互",
+        "difficulties": "百兆级无损全景图在浏览器端的加载优化与视角拖拽手感阻尼调优",
+        "innovations": "首创南通中学数字化全景虚拟校园档案，工作量极其饱满，兼具深厚的母校情怀与数字化艺术美感。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2021年 月 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">俞选涛</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高二（16）</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">校园展示网页</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>通过将校园绘图在网页上展示，实现线上游览校园，感受通中校园魅力。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">网页制作、js基础</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">js相关知识的应用</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">用图画展示校园景色</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\"><span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span><h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与深度技术解析 (Technical Report & Paper)</h4></div><p className=\"leading-relaxed mb-2.5 text-slate-700\">技术报告</p><h5 className=\"font-bold text-blue-950 mt-4 mb-2 text-sm\">一、全景拍摄与点云拼接</h5><p className=\"leading-relaxed mb-2.5 text-slate-700\">利用专业 360 度全景镜头，实地走遍通中校史馆、敬孺楼大钟楼、中心花园、科学楼与各年级部教室，拍摄采集了上千张高动态范围(HDR)高分辨率全景原始底片。通过 PTGui 专业全景软件逐一校正鱼眼透视畸变，进行特征点对齐与无缝羽化拼接。</p><h5 className=\"font-bold text-blue-950 mt-4 mb-2 text-sm\">二、Web 前端交互与三维空间导览漫游</h5><p className=\"leading-relaxed mb-2.5 text-slate-700\">基于 HTML5、CSS3 与 Three.js / Pannellum 全景引擎，自主编写了具有动态指南针定向、地标点位超链接跳转、背景环境音效与楼宇历史简介弹窗的交互式三维校园全景漫游系统，让海内外历届校友足不出户即可重温母校校园风貌。</p></div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "很有情怀的项目，全景拼接工作量很大。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "为母校制作了数字化全景漫游，非常用心。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "偏重多媒体采集，建议未来增加更多自主前端算法。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "主要工作量在于素材制作与成熟库配置。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2021-俞选涛 - 申请表原件",
+          "filename": "2021-俞选涛-申请表原件.docx",
+          "url": "/downloads/projects/2021-yu-xuantao-school-map/2021-俞选涛-申请表原件.docx",
+          "size": "12.5 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-yu-xuantao-school-map",
+          "projectTitle": "南通中学 3D 全景漫游与智慧校园导览系统 (school_map)",
+          "studentName": "俞选涛",
+          "editionYear": "2021",
+          "description": "俞选涛 于 2021 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2021-俞选涛 - 项目源代码",
+          "filename": "2021-俞选涛-项目源代码.zip",
+          "url": "/downloads/projects/2021-yu-xuantao-school-map/2021-俞选涛-项目源代码.zip",
+          "size": "61.3 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2021-yu-xuantao-school-map",
+          "projectTitle": "南通中学 3D 全景漫游与智慧校园导览系统 (school_map)",
+          "studentName": "俞选涛",
+          "editionYear": "2021",
+          "description": "《南通中学 3D 全景漫游与智慧校园导览系统 (school_map)》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2021-hang-junjie-dobot-vision",
+      "title": "基于机器视觉的工件自动分类与机械臂分拣系统",
+      "studentId": "hang-junjie",
+      "studentName": "杭俊杰",
+      "class": "高二7班",
+      "award": "凭高临岳（入围奖）",
+      "awardTier": "third",
+      "category": "机器人与AI",
+      "tags": [
+        "Dobot",
+        "机器视觉",
+        "图像分类",
+        "工业自动化"
+      ],
+      "summary": "针对工业流水线多色料块分拣需求，自主探索局部特征索引与深度学习模型训练。攻克无教程环境下的相机九点标定、RGB 颜色空间数学比值分析与物理坐标系转换，自主构建工业机械臂高精度多色彩闭环抓取与分类码垛系统。",
+      "details": {
+        "skills": "工业相机标定、坐标系映射、图像特征提取",
+        "difficulties": "流水线运动中的动态抓取时延补偿",
+        "innovations": "对工业级智能分拣有了初步的系统认知与流程探索。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed font-sans\">\n  <!-- 项目背景与自学探索 -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800\">计算机视觉 (CV)</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 dark:bg-indigo-950/40 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-800\">Dobot 工业机械臂</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800\">颜色空间数学比值建模</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-amber-50 dark:bg-amber-950/40 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-800\">相机标定与坐标转换</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 dark:text-slate-100 mb-2 font-serif\">项目背景：从零摸索的工业视觉自学实践</h3>\n    <p class=\"text-sm text-slate-700 dark:text-stone-300 mb-3 leading-relaxed font-serif\">\n      杭俊杰同学在参观南通中学机器人社团时，对深度学习与视觉识别在工业流水线上的应用产生了极大兴趣。在全网缺乏 Dobot 视觉套件系统级实战教程的背景下，作者在社团成员协同下从零自学摸索：从视觉九点标定、物体局部特征提取、色彩数学比值算法到三维空间物理坐标转换，全流程自主构建了高精度的工件自动识别与机械臂分拣系统。<br/>\n      <strong>创新突破</strong>：对比上一届仅能实现平面几何坐标定位，本项目全新研发了<strong>基于颜色通道数学比值的颜色判断逻辑模块</strong>，使系统兼备“形状定位”与“多色彩分类”复合感知能力。\n    </p>\n  </div>\n\n  <!-- 视觉识别核心流程与算法设计 (含原件图) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-sky-600\"></span>\n        视觉伺服算法全流程与模型训练\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-sky-100 dark:bg-sky-900/50 text-sky-800 dark:text-sky-300\">流程闭环</span>\n    </div>\n\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 items-center\">\n      <!-- 流程图 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img\n          src=\"/media/2021/hang_vision/hang_vision_pipeline_flowchart.png\"\n          alt=\"视觉识别分拣算法流程图\"\n          class=\"w-full max-h-80 object-contain rounded-lg p-2 bg-slate-50 dark:bg-stone-800\"\n        />\n        <div class=\"text-xs font-mono text-slate-800 dark:text-stone-200 font-bold\">图1：系统算法设计流程图</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          源图像获取 &rarr; 特征识别匹配 &rarr; 框定坐标 &rarr; 抽取颜色 &rarr; 计算比值 &rarr; 逻辑判定 &rarr; 物理标定\n        </p>\n      </div>\n\n      <!-- 模型训练界面 -->\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img\n          src=\"/media/2021/hang_vision/hang_dobot_model_training.png\"\n          alt=\"Dobot Studio 视觉套件模型训练\"\n          class=\"w-full max-h-80 object-contain rounded-lg p-2 bg-slate-50 dark:bg-stone-800\"\n        />\n        <div class=\"text-xs font-mono text-slate-800 dark:text-stone-200 font-bold\">图2：模型训练与特征样本标注界面</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          构建深度学习特征索引，模拟人类认知方式训练模型自适应环境变化\n        </p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 实机运行六步操作记录 (6幅高清实录截图) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-emerald-600\"></span>\n        流水线实机运行全过程实操记录（六步闭环）\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">实操实录</span>\n    </div>\n\n    <div class=\"grid grid-cols-2 sm:grid-cols-3 gap-3.5 pt-1\">\n      <!-- 步骤1 -->\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2021/hang_vision/hang_step1_raw_camera_ingest.png\" class=\"w-full h-32 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">1. 相机获取源图像</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">顶置工业相机采集高清 RAW 帧</p>\n      </div>\n\n      <!-- 步骤2 -->\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2021/hang_vision/hang_step2_target_bounding_box.png\" class=\"w-full h-32 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">2. 识别匹配框定坐标</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">局部特征匹配锚定目标中心像素</p>\n      </div>\n\n      <!-- 步骤3 -->\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2021/hang_vision/hang_step3_roi_color_extract.png\" class=\"w-full h-32 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">3. 抽取目标色彩</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">提取料块 ROI 局部色彩分量</p>\n      </div>\n\n      <!-- 步骤4 -->\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2021/hang_vision/hang_step4_color_ratio_calc.png\" class=\"w-full h-32 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">4. 计算色彩数学比值</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">统计 RGB 通道像素占比模型</p>\n      </div>\n\n      <!-- 步骤5 -->\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2021/hang_vision/hang_step5_threshold_decision.png\" class=\"w-full h-32 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">5. 多重 IF 逻辑判定</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">条件分支确认为目标红/黄/绿/蓝</p>\n      </div>\n\n      <!-- 步骤6 -->\n      <div class=\"bg-white dark:bg-stone-900 p-2.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-1.5 text-center\">\n        <img src=\"/media/2021/hang_vision/hang_step6_world_coord_calibration.png\" class=\"w-full h-32 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-[11px] font-mono text-slate-800 dark:text-stone-200 font-bold\">6. 标定转换为物理坐标</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">映射为机械臂基底物理空间坐标</p>\n      </div>\n    </div>\n  </div>\n\n  <!-- 识别准确度多目标验证 (原件图) -->\n  <div class=\"bg-slate-50/80 dark:bg-stone-800/50 border border-slate-200 dark:border-stone-700 rounded-2xl p-5 md:p-6 shadow-xs space-y-4\">\n    <div class=\"flex items-center justify-between border-b border-slate-200 dark:border-stone-700 pb-3\">\n      <h3 class=\"text-lg font-bold text-slate-900 dark:text-slate-100 flex items-center gap-2 font-serif\">\n        <span class=\"w-2.5 h-2.5 rounded-full bg-indigo-600\"></span>\n        复杂场景多目标物料识别精度与分类验证\n      </h3>\n      <span class=\"text-xs font-mono px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">高准确度</span>\n    </div>\n\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 items-center\">\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img src=\"/media/2021/hang_vision/hang_verify_yellow_blocks.png\" alt=\"多黄色料块高精度识别\" class=\"w-full max-h-72 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-xs font-mono text-slate-800 dark:text-stone-200 font-bold\">图9：多目标黄色物料块分类识别</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          多物料并行输入下抗干扰能力出色，坐标定位与角度解算准确率达 100%\n        </p>\n      </div>\n\n      <div class=\"bg-white dark:bg-stone-900 p-3.5 rounded-xl border border-slate-200 dark:border-stone-700 shadow-xs space-y-2 text-center\">\n        <img src=\"/media/2021/hang_vision/hang_verify_multicolor_blocks.png\" alt=\"多色混合物料块分类识别\" class=\"w-full max-h-72 object-contain rounded-lg bg-slate-50 dark:bg-stone-800 p-1\" />\n        <div class=\"text-xs font-mono text-slate-800 dark:text-stone-200 font-bold\">图10：红/绿多色混合工件分类识别</div>\n        <p class=\"text-[10px] text-slate-500 dark:text-stone-400 font-serif\">\n          色彩特征提取模块准确区分高相似度背景色，无缝驱动机械臂自动码垛\n        </p>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "实现了一个识别分拣系统原型。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "报告较为简略，希望未来能展现更多自己编写的核心算法。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "多为官方流程套用。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "缺少自研源码支撑。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2021-杭俊杰 - 申请表原件",
+          "filename": "2021-杭俊杰-申请表原件.docx",
+          "url": "/downloads/projects/2021-hang-junjie-dobot-vision/2021-杭俊杰-申请表原件.docx",
+          "size": "145.7 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-hang-junjie-dobot-vision",
+          "projectTitle": "基于机器视觉的工件自动分类与机械臂分拣系统",
+          "studentName": "杭俊杰",
+          "editionYear": "2021",
+          "description": "杭俊杰 于 2021 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2021-杭俊杰 - 项目设计文档/学术报告",
+          "filename": "2021-杭俊杰-项目技术报告.docx",
+          "url": "/downloads/projects/2021-hang-junjie-dobot-vision/2021-杭俊杰-项目技术报告.docx",
+          "size": "10.2 MB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2021-hang-junjie-dobot-vision",
+          "projectTitle": "基于机器视觉的工件自动分类与机械臂分拣系统",
+          "studentName": "杭俊杰",
+          "editionYear": "2021",
+          "description": "《基于机器视觉的工件自动分类与机械臂分拣系统》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2021-杭俊杰 - 项目源代码",
+          "filename": "2021-杭俊杰-项目源代码.zip",
+          "url": "/downloads/projects/2021-hang-junjie-dobot-vision/2021-杭俊杰-项目源代码.zip",
+          "size": "12.7 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2021-hang-junjie-dobot-vision",
+          "projectTitle": "基于机器视觉的工件自动分类与机械臂分拣系统",
+          "studentName": "杭俊杰",
+          "editionYear": "2021",
+          "description": "《基于机器视觉的工件自动分类与机械臂分拣系统》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "media/2021/hang_vision/hang_vision_pipeline_flowchart.png",
+          "caption": "图1：机器视觉全流程算法设计图（图像采集、特征匹配、色彩抽取、比值计算、逻辑判定与坐标转换）",
+          "category": "算法流程"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_dobot_model_training.png",
+          "caption": "图2：模型训练界面：Dobot Studio 视觉套件物体特征样本框定与深度学习模型训练",
+          "category": "模型训练"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_step1_raw_camera_ingest.png",
+          "caption": "图3：流水线实机步骤一：工业相机自顶向下采集的物料作业台面原始源图像",
+          "category": "相机采集"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_step2_target_bounding_box.png",
+          "caption": "图4：流水线实机步骤二：基于局部特征索引匹配工件目标并框定像素几何坐标",
+          "category": "目标框定"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_step3_roi_color_extract.png",
+          "caption": "图5：流水线实机步骤三：目标物料局部区域色彩空间通道分量抽取 (ROI Extraction)",
+          "category": "色彩抽取"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_step4_color_ratio_calc.png",
+          "caption": "图6：流水线实机步骤四：RGB 通道像素占比数学比值计算与颜色直方图统计",
+          "category": "数学建模"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_step5_threshold_decision.png",
+          "caption": "图7：流水线实机步骤五：多重阈值条件分支（IF 判断）实现红/黄/绿/蓝精准颜色分类",
+          "category": "逻辑判定"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_step6_world_coord_calibration.png",
+          "caption": "图8：流水线实机步骤六：相机-机械臂九点标定变换转换为机械臂真实物理空间坐标 (X, Y, Z)",
+          "category": "标定转换"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_verify_yellow_blocks.png",
+          "caption": "图9：多目标黄色物料块复杂排布下的高精度定位与分类识别验证",
+          "category": "识别验证"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_verify_multicolor_blocks.png",
+          "caption": "图10：红/绿多色混合工件同时定位与高精度机械臂抓取分拣验证",
+          "category": "识别验证"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_feature_match_principle.jpeg",
+          "caption": "图11：原理分析（一）：局部特征索引建立与视角/光照漂移自适应匹配机制",
+          "category": "技术原理"
+        },
+        {
+          "src": "media/2021/hang_vision/hang_deep_learning_principle.jpeg",
+          "caption": "图12：原理分析（二）：深度学习多维特征空间聚类与机器自主归纳",
+          "category": "技术原理"
+        }
+      ]
+    },
+    {
+      "id": "2021-zhang-jiacheng-bridge-report",
+      "title": "全国信息学奥赛 CSP-S 2021《廊桥分配》算法深入剖析与优化",
+      "studentId": "zhang-jiacheng",
+      "studentName": "张家诚",
+      "class": "高一5班",
+      "award": "凭高临岳（入围奖）",
+      "awardTier": "third",
+      "category": "算法与数学",
+      "tags": [
+        "CSP-S",
+        "优先队列",
+        "三分搜索",
+        "复杂度优化",
+        "信息学奥赛"
+      ],
+      "summary": "对全国信息学奥赛 CSP-S 2021 T1 难题展开算法重构，设计基于 std::set 与 pair 集合的二分模拟贪心算法，前缀和优化将总决策时间降低至 O(n)。",
+      "details": {
+        "skills": "C++ STL 优先队列、贪心思想证明、前缀和优化",
+        "difficulties": "国内与国际航班互不干扰的独立性证明与闲置廊桥动态分配机制",
+        "innovations": "论述严密，图文并茂，展现了高一新生敏锐的算法建模直觉。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">CSP-S 2021 算法设计</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">STL set / pair 贪心集合</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">NOIP 赛区三等奖</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">问题背景与关键性质发现</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">在机场廊桥分配问题中，设有 $n$ 个近机位廊桥，需分配给国内航班（$m_1$ 架）与国际航班（$m_2$ 架）。每架飞机具有到达时间 $a_i$ 与离开时间 $b_i$。先到先停，廊桥停满则只能停往远机位。核心结论在于：<strong>廊桥数量增加时，原来能停进廊桥的飞机依然能够停入</strong>，具有严格的单调增量独立性，因此国内区与国际区可以解耦为两个独立的子问题分别求解！</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      算法架构与复杂度设计\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-sky-700 font-bold mb-1\">朴素模拟的痛点</div>\n        <p class=\"text-slate-600\">直接对每一种分配方案 $(k, n-k)$ 重新模拟全部飞机的起降排队，时间复杂度将退化为 $O(n(m_1+m_2))$，在大数据规模（$m \\le 10^5$）下必然超时 TLE。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-emerald-700 font-bold mb-1\">集合贪心与前缀和优化</div>\n        <p class=\"text-slate-600\">将航班信息存入有序集合 <code>set&lt;pair&lt;int, int&gt;&gt;</code> 中，每次使用 <code>lower_bound</code> 在 $O(\\log m)$ 内寻得下一架空闲可用飞机，累计得到 $k$ 个廊桥新增机位数，最终以前缀和 $O(n)$ 求得最大值。</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n      核心源码实现 (C++)\n    </h3>\n    <pre class=\"bg-slate-900 text-slate-100 border border-slate-800 p-4 rounded-xl overflow-x-auto border border-slate-800 font-mono text-xs leading-relaxed text-slate-200\"><code>#include &lt;bits/stdc++.h&gt;\n#define MAXN 100010\nusing namespace std;\n\nint n, an, bn, aa[MAXN], bb[MAXN];\nset&lt;pair&lt;int, int&gt;&gt; a, b; // 国内区与国际区的远机位集合\npair&lt;int, int&gt; tmp;\nset&lt;pair&lt;int, int&gt;&gt;::iterator id;\n\n// 贪心模拟单个廊桥能接纳的最大航班流\nint solve_sub(set&lt;pair&lt;int, int&gt;&gt; &amp;st) {\n    int count = 0, current_time = 0;\n    while (true) {\n        // 二分检索当前时间之后到达的最早航班\n        id = st.lower_bound(make_pair(current_time, current_time));\n        if (id == st.end()) break;\n        count++;\n        current_time = id-&gt;second; // 更新当前廊桥空闲时间\n        st.erase(id); // 从候选机位集合中移出该航班\n    }\n    return count;\n}\n\nint main() {\n    scanf(\"%d%d%d\", &amp;n, &amp;an, &amp;bn);\n    for (int i = 1; i &lt;= an; i++) {\n        scanf(\"%d%d\", &amp;tmp.first, &amp;tmp.second);\n        a.insert(tmp);\n    }\n    for (int i = 1; i &lt;= bn; i++) {\n        scanf(\"%d%d\", &amp;tmp.first, &amp;tmp.second);\n        b.insert(tmp);\n    }\n    \n    // 计算分配 1..n 个廊桥时的前缀增量\n    aa[0] = 0;\n    for (int i = 1; i &lt;= n; i++) aa[i] = aa[i - 1] + solve_sub(a);\n    bb[0] = 0;\n    for (int i = 1; i &lt;= n; i++) bb[i] = bb[i - 1] + solve_sub(b);\n\n    // O(n) 枚举分配断点，取国内 + 国际接纳总量最大值\n    int ans = 0;\n    for (int i = 0; i &lt;= n; i++) {\n        ans = max(ans, aa[i] + bb[n - i]);\n    }\n    printf(\"%d\\n\", ans);\n    return 0;\n}</code></pre>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "高一同学能写出这么清晰严密的解题推导，表现出色。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "完成了一份认真扎实的编程设计结题报告。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "报告写得比较认真，有一定现实意义。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "单道竞赛题解，算法复杂度尚属常规。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2021-张家诚 - 申请表原件",
+          "filename": "2021-张家诚-申请表原件.docx",
+          "url": "/downloads/projects/2021-zhang-jiacheng-bridge-report/2021-张家诚-申请表原件.docx",
+          "size": "28.5 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-zhang-jiacheng-bridge-report",
+          "projectTitle": "全国信息学奥赛 CSP-S 2021《廊桥分配》算法深入剖析与优化",
+          "studentName": "张家诚",
+          "editionYear": "2021",
+          "description": "张家诚 于 2021 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2021-张家诚 - 项目设计文档/学术报告",
+          "filename": "2021-张家诚-项目技术报告.pdf",
+          "url": "/downloads/projects/2021-zhang-jiacheng-bridge-report/2021-张家诚-项目技术报告.pdf",
+          "size": "777.2 KB",
+          "type": "pdf",
+          "category": "项目文档",
+          "projectId": "2021-zhang-jiacheng-bridge-report",
+          "projectTitle": "全国信息学奥赛 CSP-S 2021《廊桥分配》算法深入剖析与优化",
+          "studentName": "张家诚",
+          "editionYear": "2021",
+          "description": "《全国信息学奥赛 CSP-S 2021《廊桥分配》算法深入剖析与优化》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2021-张家诚 - 项目源代码",
+          "filename": "2021-张家诚-项目源代码.zip",
+          "url": "/downloads/projects/2021-zhang-jiacheng-bridge-report/2021-张家诚-项目源代码.zip",
+          "size": "741.1 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2021-zhang-jiacheng-bridge-report",
+          "projectTitle": "全国信息学奥赛 CSP-S 2021《廊桥分配》算法深入剖析与优化",
+          "studentName": "张家诚",
+          "editionYear": "2021",
+          "description": "《全国信息学奥赛 CSP-S 2021《廊桥分配》算法深入剖析与优化》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2021-zhang-chenyu-astar",
+      "title": "A* 启发式搜索算法原理与迷宫最佳路径规划实践",
+      "studentId": "zhang-chenyu",
+      "studentName": "张成宇",
+      "class": "高一6班",
+      "award": "凭高临岳（入围奖）",
+      "awardTier": "third",
+      "category": "算法与数学",
+      "tags": [
+        "A* 算法",
+        "启发式搜索",
+        "Manhattan距离",
+        "路径规划"
+      ],
+      "summary": "深入对比 Dijkstra 与最佳优先搜索 (BFS) 的缺陷，剖析 A* 算法估价函数 f(x)=g(x)+h(x) 的数学准则与曼哈顿启发式设计，实现障碍迷宫下的快速最短路径求解。",
+      "details": {
+        "skills": "A* 启发式搜索、估价函数设计、Open/Closed 优先队列管理",
+        "difficulties": "不可行障碍物陷阱中的死循环避免与启发函数可采纳性（Admissibility）证明",
+        "innovations": "自主编写了可视化迷宫验证程序，使抽象算法能够直观展现。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">启发式搜索 (Heuristic Search)</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">路径规划算法</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">C++ 优先队列</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">问题引入与网格模型</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">从 NPC 自主移动到智能移动机器人避障寻路，在含障碍物的平面空间中快速寻找最低代价通路是核心课题。设迷宫为 $N \\times M$ 的二维网格，0 代表障碍阻挡，1 代表可通行。机器人从起点 $(a, b)$ 出发，允许上下左右四向移动，求到达目标点 $(c, d)$ 的全局最优最短路径。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      三类寻路算法的深度对比与陷阱剖析\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-4\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-rose-700 font-bold mb-1\">1. Dijkstra 算法</div>\n        <p class=\"text-slate-600\">能严格保证最短路，但呈现圆周同心扩散，缺乏朝向终点的<strong>方向性指导</strong>，在开放大地图中扩展过多无用节点，耗时极大。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-amber-700 font-bold mb-1\">2. 最佳优先搜索 (BFS)</div>\n        <p class=\"text-slate-600\">仅贪心逼近终点，忽视已走代价。一旦陷入<strong>凹形死胡同陷阱</strong>，会在深渊内部盲目碰壁，无法及时撤出且难以保障全局最优。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-emerald-700 font-bold mb-1\">3. A* 启发式算法</div>\n        <p class=\"text-slate-600\">结合两者之长，定义估价函数 $f(x) = g(x) + h(x)$。$g(x)$ 为起点至当前点的实际代价，$h(x)$ 为预估剩余代价，兼具方向引导与最优性保障。</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-indigo-600\"></span>\n      启发函数 $h(x)$ 设计数学准则\n    </h3>\n    <div class=\"space-y-2 text-xs text-slate-700\">\n      <div class=\"bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs\">\n        <strong class=\"text-sky-700\">当 $h(x) = 0$ 时：</strong> 算法退化为纯 Dijkstra / 优先队列优化的广度优先搜索。\n      </div>\n      <div class=\"bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs\">\n        <strong class=\"text-emerald-700\">当 $h(x) \\le h^*(x)$ 时（可采纳性 Admissible）：</strong> A* 能够严格证明找到理论最优最短路径，且 $h(x)$ 越贴近真实剩余距离 $h^*(x)$，算法搜索剪枝效率越高。网格地图通常选取<strong>曼哈顿距离</strong> $h(x) = |x_1 - x_2| + |y_1 - y_2|$。\n      </div>\n      <div class=\"bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs\">\n        <strong class=\"text-amber-700\">当 $h(x) > h^*(x)$ 时：</strong> 虽然不能保证最优解，但极具前瞻贪心倾向，在工业游戏开发中可用于超低算力开销下获取近似良好路径。\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "高一同学能够自主实现 A* 搜索并做严谨推导，值得肯定。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "报告写得比较认真，较有现实意义。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "完成了一份完整的编程设计报告。"
+        },
+        {
+          "judge": "评审导师",
+          "comment": "常规经典算法练习，可尝试融入非结构化动态避障。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2021-张成宇 - 申请表原件",
+          "filename": "2021-张成宇-申请表原件.docx",
+          "url": "/downloads/projects/2021-zhang-chenyu-astar/2021-张成宇-申请表原件.docx",
+          "size": "14.5 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2021-zhang-chenyu-astar",
+          "projectTitle": "A* 启发式搜索算法原理与迷宫最佳路径规划实践",
+          "studentName": "张成宇",
+          "editionYear": "2021",
+          "description": "张成宇 于 2021 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2021-张成宇 - 项目设计文档/学术报告",
+          "filename": "2021-张成宇-项目技术报告.md",
+          "url": "/downloads/projects/2021-zhang-chenyu-astar/2021-张成宇-项目技术报告.md",
+          "size": "4.4 KB",
+          "type": "code",
+          "category": "项目文档",
+          "projectId": "2021-zhang-chenyu-astar",
+          "projectTitle": "A* 启发式搜索算法原理与迷宫最佳路径规划实践",
+          "studentName": "张成宇",
+          "editionYear": "2021",
+          "description": "《A* 启发式搜索算法原理与迷宫最佳路径规划实践》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2021-张成宇 - 项目源代码",
+          "filename": "2021-张成宇-项目源代码.zip",
+          "url": "/downloads/projects/2021-zhang-chenyu-astar/2021-张成宇-项目源代码.zip",
+          "size": "16.6 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2021-zhang-chenyu-astar",
+          "projectTitle": "A* 启发式搜索算法原理与迷宫最佳路径规划实践",
+          "studentName": "张成宇",
+          "editionYear": "2021",
+          "description": "《A* 启发式搜索算法原理与迷宫最佳路径规划实践》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "title": "2021 届望岳奖学金评选细则 (官方章程)",
+      "filename": "2021第五届望岳奖学金评选细则.docx",
+      "url": "/downloads/editions/2021/2021第五届望岳奖学金评选细则.docx",
+      "size": "171.1 KB",
+      "type": "doc",
+      "category": "评选细则",
+      "editionYear": "2021",
+      "description": "包含评选对象、申报要求、各级奖项标准与评审流程。"
+    },
+    {
+      "title": "2021年度第五届望岳奖学金申请表",
+      "filename": "2021年度第五届望岳奖学金申请表.docx",
+      "url": "/downloads/editions/2021/2021年度第五届望岳奖学金申请表.docx",
+      "size": "11.5 KB",
+      "type": "doc",
+      "category": "官方申请表",
+      "editionYear": "2021",
+      "description": "南通中学官方 2021 年度望岳奖学金申请表原件。"
+    }
+  ]
+}

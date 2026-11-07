@@ -1,0 +1,26 @@
+{
+  "projectId": "2018-lu-zhengyang-lisp",
+  "externalRepo": null,
+  "totalFiles": 1,
+  "totalLines": 13,
+  "coreFiles": [
+    "lisp.cc"
+  ],
+  "languages": [
+    {
+      "lang": "txt",
+      "lines": 13,
+      "percent": 100.0
+    }
+  ],
+  "files": [
+    {
+      "path": "readme.txt",
+      "name": "readme.txt",
+      "lang": "txt",
+      "lines": 13,
+      "size": 1341,
+      "content": "ʹ `g++ -std=gnu++0x lisp.cc` 룬δ汾\nãһ S ʽ AST ֹʵ֣δʹý\nʾ\n (+ 1 2)\n * + 1 2\n (let* ((yin ((lambda (foo) (newline) foo) (call/cc (lambda (bar) bar)))) (yang ((lambda (foo) (write-char #/*) foo) (call/cc (lambda (bar) bar))))) (yin yang))\n * let* * * yin * * lambda * foo * newline foo * call/cc * lambda * bar bar * yang * * lambda * foo * write-char #/* foo * call/cc * lambda * bar bar * yin yang\n\n Lisp Ե⣺\nLisp  AST﷨򵥡򵥵﷨ʵǿϵͳԱԣֻ HaskellIdris Դﵽͬˮƽ﷨Julia ĺϵͳǴ Lisp м̳еġRust Ҳʵ꣬Ȼ Lisp Ruby ų Lisp ԣΪǶܷʵ DSL\nLisp  call/cc Աһп Lambda ޷ Curry-Howard ͬУcall/cc Ӧ Pirece ((P Q) P) PLambda Ӧֱ߼ Pirece ǲ֤ġȻ߼µ Pirece ɿͨƳͨ call/cc ʵָõĹЭ̡Haskell е Free MonadF#еļʽֻ call/cc ױĽṹ\nLisp  Erlang ö̬Ͷʹ߻ӭĳԡ\nLisp ǺʽԺԵԴLisp ƼӰ Smalltalk"
+    }
+  ]
+}

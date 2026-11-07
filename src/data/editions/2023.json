@@ -1,0 +1,317 @@
+{
+  "year": "2023",
+  "editionNumber": 7,
+  "title": "2023 第七届望岳奖学金",
+  "theme": "现代软件工程的标杆确立：工业级算法库、原创平衡树与计算思维传承",
+  "intro": "第七届望岳奖学金评选在南通中学科学馆与国际交流中心隆重举行。通中09届校友、加州大学洛杉矶分校（UCLA）博士、望岳奖学金发起人之一吴培专程回母校举办《AI大模型 & 量子计算》前沿学术讲座；本届最引人注目的是通中极客工坊（Cactus Studio）两位高二学子顾顺与吴泽宇带来的 1.8 万行现代 C++ Cactus 算法库，以极高的规范化工程水准确立了通中中学生开源软件的新高度；同时顾顺的 Twist Tree 原创平衡树探索展现了纯粹的算法理论锐气。此外，陈万瑄的 NOIP 成果与余文涛、顾郁铭的中医信息化系统亦展现了通中新一代学子的多维创造力。",
+  "documents": [],
+  "gallery": [
+    {
+      "src": "media/2023/wu_pei_alumnus_lecture_poster.jpg",
+      "caption": "通中校友吴培博士（09届校友 / UCLA博士）回母校做《AI大模型 & 量子计算》学术讲座海报（国际交流中心）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2023/students_assembly_uniforms.jpg",
+      "caption": "南通中学科学馆报告厅：通中学子身着校服参加望岳奖学金与正谊奖学金颁奖仪式",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2023/lecture_science_hall.jpg",
+      "caption": "学术演讲现场：主讲嘉宾分享《“遇到问题、解决问题”——是非与分类的计算思维》",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2023/wangyue_2023_ceremony_stage.jpg",
+      "caption": "第七届（2023届）望岳奖学金南通中学现场颁发仪式：红屏背景“望岳奖学金颁发仪式”，校领导与全体获奖学生顾顺、吴泽宇、陈万瑶、顾郁铭等手持荣誉证书合影（提取自《望岳2023.pdf》官方新闻报告）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2023/zhengyi_2023_ceremony_stage.jpg",
+      "caption": "南通中学同期举行正仪奖学金颁发仪式现场合影：校领导与获奖同学在“正仪奖学金颁发仪式”大屏前合影（提取自《望岳2023.pdf》）",
+      "category": "ceremony"
+    },
+    {
+      "src": "media/2023/nantong_high_school_motto_banner.jpg",
+      "caption": "江苏省南通中学校训石碑与校园全景官方横幅（诚恒 · 正道直行 · 积健为雄，提取自《望岳2023.pdf》）",
+      "category": "ceremony"
+    }
+  ],
+  "reviewSummary": "评审团进行了详尽的指标客观打分与专题讨论：顾顺、吴泽宇的 Cactus 算法库凭借完备的单元测试、工程规范与团队协作精神斩获凌绝望岳奖；顾顺的 Twist Tree 理论探索荣膺坚韧登岳奖；陈万瑄（NOIP）、余文涛与顾郁铭（中医挂号系统）荣获凭高临岳奖。",
+  "projects": [
+    {
+      "id": "2023-gushun-wu-cactus",
+      "title": "Cactus：面向算法竞赛与高性能工程的现代 C++ 基础算法库",
+      "studentId": "gu-shun",
+      "studentName": "顾顺、吴泽宇",
+      "class": "高二5班 / 高二12班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "算法与基础库",
+      "tags": [
+        "C++20",
+        "现代模板元编程",
+        "算法库",
+        "单元测试",
+        "开源生态",
+        "极客工坊"
+      ],
+      "summary": "针对标准库 I/O 耗时大及算法模板碎片化痛点，研发集纳秒级极速输入输出流引擎、泛化模板高级树结构与网络流、计算几何函数于一体的现代 C++ 算法框架。",
+      "hasCode": true,
+      "codeArchiveId": "2023-gushun-cactus",
+      "details": {
+        "skills": "C++ 模板元编程、Concept 约束、大规模工程 CMake 构建、单元测试覆盖率审计、开源协作 Git 流",
+        "difficulties": "高维泛型抽象下的编译期类型安全与运行时极限性能优化，跨平台 STL 兼容性",
+        "innovations": "脱离单次刷题的思维局限，以现代工业级软件工程标准构建高质量公共算法底座，获评审团一致推举为凌绝望岳奖标杆。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">C++20 泛型模板元编程</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">极致 I/O 缓冲引擎</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-purple-50 text-purple-700 border border-purple-200\">高级数据结构与图论封装</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">项目定位与设计哲学</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">在信息学奥林匹克竞赛与高性能系统工程中，标准库 <code>cin/cout</code> 及频繁的动态内存申请常成为程序常数耗时瓶颈。顾顺与吴泽宇同学采用“在保证可控约束下适度放宽安全边界以换取极限运行速度”的底层优化哲学，从零构建了头文件库 <code>cactus.h</code>，涵盖极速输入输出指针、计算几何向量工具与泛化树结构体系。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      Cactus 架构四大技术支柱\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-sky-700 font-bold mb-1\">1. 极速 I/O 流引擎 (io_assist)</div>\n        <p class=\"text-slate-600\">基于预分配超大输入缓冲区与指针跳跃，跳过标准流层层虚函数开销，直接对无符号/有符号大整数进行移位累加，吞吐较 <code>scanf</code> 提速 5～10 倍。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-indigo-700 font-bold mb-1\">2. 泛型平衡树与分块算法</div>\n        <p class=\"text-slate-600\">以统一模板参数无缝封装 Splay、FHQ-Treap、分块动态树等，解耦节点分裂、合并与惰性标记下传，彻底告别赛场重复造轮子。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-purple-700 font-bold mb-1\">3. 计算几何与复数代数库</div>\n        <p class=\"text-slate-600\">定义高精度二维/三维向量运算、点积叉积几何意义、线段交点判断、凸包与旋转卡壳最小外接矩形求解套件。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-emerald-700 font-bold mb-1\">4. 图论流网络优化 (Dinic / ISAP)</div>\n        <p class=\"text-slate-600\">集成高效链式前向星与当前弧优化，提供开箱即用的最大流、费用流与二分图匹配统一接口。</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-indigo-600\"></span>\n      核心头文件类声明节选 (cactus.h)\n    </h3>\n    <pre class=\"bg-slate-900 text-slate-100 border border-slate-800 p-4 rounded-xl overflow-x-auto border border-slate-800 font-mono text-xs leading-relaxed text-slate-200\"><code>class io_assist;\ntemplate &lt;typename cactus = int&gt; class io_pointer_i;\ntemplate &lt;typename cactus = int&gt; class io_pointer_o;\n\ntemplate &lt;typename cactus = int, int MaxSize = MAXN&gt; class array_c;\ntemplate &lt;typename cactus = int&gt; class min_mono_queue;\ntemplate &lt;typename cactus = int&gt; class max_mono_queue;\n\nclass union_set;\ntemplate &lt;typename cactus = int&gt; class tree_array;\ntemplate &lt;typename cactus = int&gt; class segment_tree;\ntemplate &lt;typename cactus = int&gt; class splay_tree;\ntemplate &lt;typename cactus = int&gt; class dinic_network_flow;</code></pre>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "所有评委一致认同凌绝望岳应在 Cactus 与 Twist Tree 中产生。Cactus 算法库工程量极其饱满（1.8万行），代码经过严谨测试，体现了极客之间相互协作的开源精神。相比研究偏难怪的数据结构，这个项目更加现实、有社区价值，也是对同学综合工程素养提升最显著的风向标！"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2023-顾顺、吴泽宇 - 申请表原件",
+          "filename": "2023-顾顺、吴泽宇-申请表原件.docx",
+          "url": "/downloads/projects/2023-gushun-wu-cactus/2023-顾顺、吴泽宇-申请表原件.docx",
+          "size": "13.2 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2023-gushun-wu-cactus",
+          "projectTitle": "Cactus：面向算法竞赛与高性能工程的现代 C++ 基础算法库",
+          "studentName": "顾顺、吴泽宇",
+          "editionYear": "2023",
+          "description": "顾顺、吴泽宇 于 2023 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2023-顾顺、吴泽宇 - 项目设计文档/学术报告",
+          "filename": "2023-顾顺、吴泽宇-项目技术报告.docx",
+          "url": "/downloads/projects/2023-gushun-wu-cactus/2023-顾顺、吴泽宇-项目技术报告.docx",
+          "size": "22.0 KB",
+          "type": "doc",
+          "category": "项目文档",
+          "projectId": "2023-gushun-wu-cactus",
+          "projectTitle": "Cactus：面向算法竞赛与高性能工程的现代 C++ 基础算法库",
+          "studentName": "顾顺、吴泽宇",
+          "editionYear": "2023",
+          "description": "《Cactus：面向算法竞赛与高性能工程的现代 C++ 基础算法库》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2023-顾顺、吴泽宇 - 项目源代码",
+          "filename": "2023-顾顺、吴泽宇-项目源代码.zip",
+          "url": "/downloads/projects/2023-gushun-wu-cactus/2023-顾顺、吴泽宇-项目源代码.zip",
+          "size": "85.5 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2023-gushun-wu-cactus",
+          "projectTitle": "Cactus：面向算法竞赛与高性能工程的现代 C++ 基础算法库",
+          "studentName": "顾顺、吴泽宇",
+          "editionYear": "2023",
+          "description": "《Cactus：面向算法竞赛与高性能工程的现代 C++ 基础算法库》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2023-gu-shun-twist-tree",
+      "title": "一种新的数据结构——TT树 (Twist Tree)",
+      "studentId": "gu-shun",
+      "studentName": "顾顺",
+      "class": "高二5班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "数据结构与理论",
+      "tags": [
+        "数据结构",
+        "二叉搜索树",
+        "自平衡算法",
+        "均摊复杂度",
+        "原创算法"
+      ],
+      "summary": "南通中学顾顺同学挑战经典自平衡二叉搜索树理论体系，跳脱出 AVL 树、红黑树与 Splay 树的传统旋转（Rotation）与 Treap 分裂合并范式，自主构思并数学形式化证明了一种全新的自平衡二叉索引树——Twist Tree (TT 树)。通过独创的局部 Twist（缠绕）调度算子，保证树高严格为 ⌈log₂ n⌉，将动态操作均摊复杂度压制至 Θ(n^0.407)，更是计算机科学中已知唯一支持一维连续数组堆式存储（p*2, p*2+1 寻址）的二叉搜索树。",
+      "hasCode": true,
+      "codeArchiveId": "2023-gushun-twist-tree",
+      "details": {
+        "skills": "数据结构数学建模、主定理复杂度渐进分析、特征方程联立递推求解、完全二叉堆一维数组寻址、C++ STL 算法实现",
+        "difficulties": "在摒弃任何树旋转的前提下证明完美平衡与严格树高 ⌈log₂ n⌉；构建复合算子 i_d 联立双变量方程组求解渐进上界；保证 Twist 操作下无关节点位置绝对不动",
+        "innovations": "纯粹且极具野心的算法理论原创突破：发明无旋转 Twist 缠绕平衡机制，给出严密的特征方程数学推导，并实现了唯一支持一维连续数组堆式存储的自平衡二叉搜索树。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2023年 12 月 10 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">顾顺</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">2205</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">一种新的数据结构Twist Tree (TT)</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1.5\">🔗 代码托管与开源地址</span><div class=\"flex flex-wrap gap-2\"><a href=\"https://github.com/cactusworkshop/Twist-Tree\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-xs font-mono bg-blue-50 text-blue-700 hover:bg-blue-100 border border-blue-200 dark:bg-blue-900/30 dark:text-blue-300 dark:border-blue-800 transition-colors\"><span>https://github.com/cactusworkshop/Twist-Tree</span><span class=\"text-[10px]\">↗</span></a></div></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>发明了一种全新的数据结构Twist Tree(TT) 名字取自最初想法中的平衡函数. 该数据结构是一种自平衡二叉搜索树,但没有采用传统的旋转(rotation)或分裂合并(split&amp;merge,如fhq treap)而是采用了另一种操作方式,称之为Twist(在优化后被融合入插入&amp;删除函数)</p><p>该结构具有一些特殊性质. 1.树高严格ceil(logn) 2.具有一般的二叉搜索树结构,并增加了树上链表指针,支持更多功能 3.插入和删除具有约n^0.4的复杂度 4.支持堆式存储,具有优秀的时间和空间常数因子</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">一些特殊情况的时间复杂度分析方法,算法的优化方式</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">朴素TT的高复杂度</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">创造了一个数据结构</div></div></div></div></div>\n\n<div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 《一种新的数据结构——TT树》 8页学术研报全文解析 (Theoretical Analysis)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-2xl border border-emerald-200/80 bg-slate-50/80 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🌲</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900\">一种新的数据结构——TT树 (Twist Tree)</h3>\n          <p class=\"text-xs text-slate-500 font-mono mt-0.5\">作者：顾顺 (南通中学 2205班) · 2023年12月10日 · 独创无旋转自平衡树</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 text-emerald-800 font-semibold\">严格树高 ⌈log₂ n⌉</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-blue-100 text-blue-800 font-semibold\">无旋转 (No-Rotation)</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-purple-100 text-purple-800 font-semibold\">完全堆式一维数组存储</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 text-amber-800 font-semibold\">前驱后继 O(1)</span>\n      </div>\n    </div>\n\n    <div class=\"text-xs text-slate-700 leading-relaxed font-serif space-y-2\">\n      <p>\n        <strong>【论文摘要】</strong>平衡二叉索引树是一种用途广泛的数据结构，可以实现快速插入、删除、查询排名与第 k 大元素等，同时也是 C++ STL 语言中 <code>std::set</code> 与 <code>std::map</code> 的底层实现（红黑树）。本文提出一种全新的自平衡二叉索引树——<strong>Twist Tree (TT)</strong>。该结构彻底抛弃了一般平衡树通用的<strong>局部旋转 (rotation)</strong>或分裂合并 (split &amp; merge)，发明了一种全新的平衡维护操作——<strong>Twist (缠绕)</strong>，并证明了其支持完全二叉堆式数组连续存储的卓越工程特性。\n      </p>\n    </div>\n  </div>\n\n  <!-- 6 Detailed Theoretical Cards -->\n  <div class=\"space-y-4 text-slate-700 text-xs sm:text-sm font-sans\">\n\n    <!-- Card 1: 创设动机与传统平衡范式反思 -->\n    <div class=\"bg-white rounded-2xl border border-slate-200 p-5 shadow-xs space-y-3\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"w-2 h-2 rounded-full bg-blue-600\"></span>\n        <h4 class=\"text-sm font-bold text-slate-900 font-serif\">一、创设动机：挑战经典旋转平衡范式</h4>\n      </div>\n      <p class=\"text-xs text-slate-600 leading-relaxed font-serif\">\n        计算机科学中现有的自平衡二叉搜索树主要依赖两大范式：一是 AVL 树、红黑树、Splay 树的<strong>树旋转 (Tree Rotation)</strong>，通过重构父子与祖先指针维持深度平衡；二是 Treap、FHQ-Treap 依赖随机权值进行的<strong>分裂与合并 (Split &amp; Merge)</strong>。然而，树旋转操作会导致大范围指针拓扑变动，指针在堆内存中离散跳跃，引发严重的 CPU 缓存失效 (Cache Miss)。作者思考：<strong>能否创造一种不需要旋转、每次仅局部调度极少数节点值、且节点绝对拓扑位置恒定不变的自平衡树？</strong>这就是 Twist Tree 的核心诞生灵感。\n      </p>\n    </div>\n\n    <!-- Card 2: 合法 TT 树的数学定义与严格完美平衡 -->\n    <div class=\"bg-white rounded-2xl border border-slate-200 p-5 shadow-xs space-y-3\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"w-2 h-2 rounded-full bg-emerald-600\"></span>\n        <h4 class=\"text-sm font-bold text-slate-900 font-serif\">二、合法 TT 树的形式化定义与严格树高定理</h4>\n      </div>\n      <p class=\"text-xs text-slate-600 leading-relaxed font-serif\">\n        作者在研报中给出了合法 TT 树的严格充要条件，一棵树为合法 TT 树当且仅当同时满足：\n      </p>\n      <div class=\"grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs\">\n        <div class=\"p-3 rounded-xl bg-slate-50 border border-slate-200\">\n          <span class=\"font-bold text-slate-900 block mb-1\">条件 (1) 二叉索引树性质</span>\n          <span class=\"text-slate-600\">对任意节点，左子树所有键值小于根，右子树所有键值大于根，支持严格全序关系。</span>\n        </div>\n        <div class=\"p-3 rounded-xl bg-slate-50 border border-slate-200\">\n          <span class=\"font-bold text-slate-900 block mb-1\">条件 (2) 左右子树规模约束</span>\n          <span class=\"text-slate-600\">任意节点的左右子树节点总数差绝不超过 1：<code>|size(left) - size(right)| ≤ 1</code>。</span>\n        </div>\n        <div class=\"p-3 rounded-xl bg-slate-50 border border-slate-200\">\n          <span class=\"font-bold text-slate-900 block mb-1\">条件 (3) 递归同构约束</span>\n          <span class=\"text-slate-600\">左右子树均为合法 TT 树或空节点，保证子结构的完美平衡。</span>\n        </div>\n      </div>\n      <div class=\"p-3 rounded-xl bg-emerald-50/60 border border-emerald-200 text-xs text-emerald-900 font-mono\">\n        ⭐ <strong>完美平衡定理 (Perfect Balance Theorem)</strong>：因任意左右子树节点数差 ≤ 1，整棵树的树高严格被限定为 <code>⌈log₂ n⌉</code>，任何两个叶子节点的高度差不超过 1，在拓扑结构上达到了理论极限的完美平衡。\n      </div>\n    </div>\n\n    <!-- Card 3: 朴素 Twist 缠绕操作机制与主定理分析 -->\n    <div class=\"bg-white rounded-2xl border border-slate-200 p-5 shadow-xs space-y-3\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"w-2 h-2 rounded-full bg-indigo-600\"></span>\n        <h4 class=\"text-sm font-bold text-slate-900 font-serif\">三、朴素 Twist (缠绕) 平衡机制与主定理推导</h4>\n      </div>\n      <p class=\"text-xs text-slate-600 leading-relaxed font-serif\">\n        以向左子树插入未出现过的键值为例，算法分为两种情况：\n      </p>\n      <div class=\"space-y-2 text-xs text-slate-600 font-serif\">\n        <div class=\"p-3 rounded-xl bg-slate-50 border border-slate-200\">\n          <strong class=\"text-slate-900\">• 情况 (1) 规模仍平衡 (出现概率 3/4)：</strong>\n          插入后左右子树大小差依然 ≤ 1，只需向左递归插入并保证左子树仍为合法 TT 树即可。\n        </div>\n        <div class=\"p-3 rounded-xl bg-slate-50 border border-slate-200\">\n          <strong class=\"text-slate-900\">• 情况 (2) 触发 Twist 缠绕 (出现概率 1/4)：</strong>\n          插入后左子树大小比右子树大 2，此时依次执行三步缠绕调度：<br/>\n          <span class=\"font-mono text-indigo-700\">① 向右子树插入当前根节点的键值 <code>ins(tr[p].right, p, tr[p].v)</code>；</span><br/>\n          <span class=\"font-mono text-indigo-700\">② 将当前根节点的值替换为左子树最大值（即当前节点的前驱 <code>tr[p] = tr[f]</code>）；</span><br/>\n          <span class=\"font-mono text-indigo-700\">③ 删去左子树中的对应极值节点 <code>del(tr[p].left, f, tr[f].v)</code>。</span>\n        </div>\n      </div>\n      <div class=\"p-3 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono text-slate-800 space-y-1\">\n        <div class=\"font-bold text-slate-900\">📐 朴素复杂度主定理 (Master Theorem) 渐进证明：</div>\n        <div>子树奇偶对称等概率，递推关系式为：</div>\n        <div class=\"text-blue-700 font-bold\">T(n) = (1/4) · 3T(n/2) + (3/4) · T(n/2) + O(1) = (3/2) · T(n/2) + O(1)</div>\n        <div>由主定理情况一，渐进复杂度为：</div>\n        <div class=\"text-emerald-700 font-bold\">T(n) = Θ(n^{log₂ 1.5}) ≈ Θ(n^{0.5849625})</div>\n      </div>\n    </div>\n\n    <!-- Card 4: 插入删除复合优化与特征方程渐进上界 -->\n    <div class=\"bg-white rounded-2xl border border-slate-200 p-5 shadow-xs space-y-3\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"w-2 h-2 rounded-full bg-purple-600\"></span>\n        <h4 class=\"text-sm font-bold text-slate-900 font-serif\">四、插入/删除复合算子 i_d 与特征方程深度优化</h4>\n      </div>\n      <p class=\"text-xs text-slate-600 leading-relaxed font-serif\">\n        研报第 3 节中，作者指出朴素算法中插入与删除分离会导致冗余遍历。为此设计了<strong>复合算子 <code>i_d(p, vi, vd)</code></strong>，表示在以 p 为根的子树上同时删去 vd 并插入 vi，将同子树上的两道工序合并为单次递归：\n      </p>\n      <div class=\"p-3.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-mono space-y-1.5 text-slate-800\">\n        <div class=\"font-bold text-purple-900\">📊 联立递推方程组与特征方程求解：</div>\n        <div>设插入/删除复杂度为 T₁(n)，复合算子 i_d 复杂度为 T₂(n)：</div>\n        <div>T₁(n) = T₁(n/2) + (1/4) T₂(n/2) + O(1)</div>\n        <div>T₂(n) = (3/4) T₁(n/2) + (3/4) T₂(n/2) + O(1)</div>\n        <div class=\"pt-1 text-slate-600\">令 a_n = T₁(2ⁿ), b_n = T₂(2ⁿ)，构造线性组合 c_n, d_n = a_n + ((-1 ± √13) / 6) b_n：</div>\n        <div>c_n ≈ ((7 + √13) / 8)ⁿ，d_n ≈ ((7 - √13) / 8)ⁿ</div>\n        <div class=\"pt-1 text-emerald-700 font-bold\">最终解得：T₁(n) = Θ(n^{log₂ ((7+√13)/8)}) ≈ Θ(n^{0.4067477})</div>\n      </div>\n      <p class=\"text-xs text-slate-600 leading-relaxed font-serif\">\n        优化后的动态维护时间复杂度成功从 (n^{0.585})$ 大幅压低至 <strong>(n^{0.407})$</strong>，进入远胜普通分块算法（(\\sqrt{n}) = O(n^{0.5})$）的优异亚线性区间。\n      </p>\n    </div>\n\n    <!-- Card 5: 重大工程突破：唯一支持完全二叉堆式数组存储的二叉搜索树 -->\n    <div class=\"bg-white rounded-2xl border border-slate-200 p-5 shadow-xs space-y-3\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"w-2 h-2 rounded-full bg-amber-600\"></span>\n        <h4 class=\"text-sm font-bold text-slate-900 font-serif\">五、重大工程突破：唯一支持完全二叉堆式数组连续存储的 BST</h4>\n      </div>\n      <p class=\"text-xs text-slate-600 leading-relaxed font-serif\">\n        研报第 4 节指出了 TT 树最为惊艳的物理特性——<strong>节点拓扑位置绝对不动性</strong>：\n      </p>\n      <div class=\"grid grid-cols-1 md:grid-cols-3 gap-3 text-xs\">\n        <div class=\"p-3 rounded-xl bg-amber-50/50 border border-amber-200/80 space-y-1\">\n          <span class=\"font-bold text-amber-900 block\">1. 位置不动性</span>\n          <span class=\"text-slate-600\">不同于旋转会改变整棵子树拓扑，Twist 每次仅调度至多 3 个节点的值，所有无关节点的相对与绝对位置均不改变。</span>\n        </div>\n        <div class=\"p-3 rounded-xl bg-amber-50/50 border border-amber-200/80 space-y-1\">\n          <span class=\"font-bold text-amber-900 block\">2. 堆式连续寻址</span>\n          <span class=\"text-slate-600\">支持完全二叉堆式存储：节点 p 的左儿子固定为 <code>2p</code>，右儿子固定为 <code>2p+1</code>，完全省去指针字段。</span>\n        </div>\n        <div class=\"p-3 rounded-xl bg-amber-50/50 border border-amber-200/80 space-y-1\">\n          <span class=\"font-bold text-amber-900 block\">3. 极致 CPU Cache 局部性</span>\n          <span class=\"text-slate-600\">整棵树在连续物理数组中顺序存储，彻底杜绝了动态堆内存分配碎片与指针漫游带来的 Cache Miss。</span>\n        </div>\n      </div>\n      <div class=\"p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs text-slate-700 font-serif\">\n        💬 <strong>顾顺在研报结语中的论述</strong>：“TT 树作为二叉索引树，插入删除复杂度稍高，但其严格树高、特别是支持堆式存储的优点，使它可以用于静态存储，而无需指针结构。同时，TT 树也是笔者知道的<strong>唯一支持堆式存储的二叉索引树</strong>。”\n      </div>\n    </div>\n\n    <!-- Card 6: 结构体设计与 O(1) 前驱后继查询 -->\n    <div class=\"bg-white rounded-2xl border border-slate-200 p-5 shadow-xs space-y-3\">\n      <div class=\"flex items-center gap-2\">\n        <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n        <h4 class=\"text-sm font-bold text-slate-900 font-serif\">六、C++ 核心数据结构与双向链表 O(1) 前驱后继融合</h4>\n      </div>\n      <p class=\"text-xs text-slate-600 leading-relaxed font-serif\">\n        在 <code>TT1.cpp</code> 的工程实现中，顾顺设计了巧妙的复合节点结构体 <code>TT_node</code>：每个节点内部除维护树形结构所需的 <code>left, right, v, sz</code> 外，还持久化维护了有序前驱 <code>fr</code> (from) 与后继 <code>to</code> 指针。每次节点插入或极值替换时，同步动态修正双向链表拓扑。这使得查询任意键值的有序前驱 <code>pre(v)</code> 与后继 <code>suc(v)</code> 直接达到 <strong>O(1) 绝对常数时间</strong>，在工程实践中极具巧思。\n      </p>\n    </div>\n\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "非常赞赏顾顺同学敢于挑战经典理论的创新精神！但数据结构的原创设计必须经过极为苛刻的形式化正确性证明与极限数据测试。期待未来能在严格形式化验证后发表于顶尖学术会议。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2023-顾顺 - 申请表原件",
+          "filename": "2023-顾顺-申请表原件.docx",
+          "url": "/downloads/projects/2023-gu-shun-twist-tree/2023-顾顺-申请表原件.docx",
+          "size": "10.9 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2023-gu-shun-twist-tree",
+          "projectTitle": "一种新的数据结构——TT树 (Twist Tree)",
+          "studentName": "顾顺",
+          "editionYear": "2023",
+          "description": "顾顺 于 2023 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2023-顾顺 - 项目设计文档/学术报告",
+          "filename": "2023-顾顺-项目技术报告.pdf",
+          "url": "/downloads/projects/2023-gu-shun-twist-tree/2023-顾顺-项目技术报告.pdf",
+          "size": "159.2 KB",
+          "type": "pdf",
+          "category": "项目文档",
+          "projectId": "2023-gu-shun-twist-tree",
+          "projectTitle": "一种新的数据结构——TT树 (Twist Tree)",
+          "studentName": "顾顺",
+          "editionYear": "2023",
+          "description": "《一种新的数据结构——TT树 (Twist Tree)》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2023-顾顺 - 项目源代码",
+          "filename": "2023-顾顺-项目源代码.zip",
+          "url": "/downloads/projects/2023-gu-shun-twist-tree/2023-顾顺-项目源代码.zip",
+          "size": "608 B",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2023-gu-shun-twist-tree",
+          "projectTitle": "一种新的数据结构——TT树 (Twist Tree)",
+          "studentName": "顾顺",
+          "editionYear": "2023",
+          "description": "《一种新的数据结构——TT树 (Twist Tree)》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2023-chen-wanxuan-noip",
+      "title": "全国青少年信息学奥林匹克联赛 (NOIP) 一等奖成果与高阶算法实践",
+      "studentId": "chen-wanxuan",
+      "studentName": "陈万瑄",
+      "class": "高一5班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "竞赛与算法",
+      "tags": [
+        "NOIP",
+        "信息学奥赛",
+        "全国一等奖",
+        "动态规划",
+        "图论建模"
+      ],
+      "summary": "在高一年级即斩获 NOIP 全国青少年信息学奥林匹克联赛全国一等奖，系统总结了竞赛中针对树上背包、网络流建模与斜率优化 DP 的实战心得，为通中信息学竞赛梯队建设作出了积极贡献。",
+      "details": {
+        "skills": "高级竞赛算法、斜率优化与四边形不等式、树链剖分与动态树",
+        "difficulties": "高限时压迫下的思维敏捷度与代码零失误实现",
+        "innovations": "高一阶段即取得卓越竞赛突破，为学弟学妹树立了专注钻研的良好榜样。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2023年 12 月 10 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">陈万瑄</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高一5班</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">信息学竞赛获奖</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>1.2021 CSP-J国家一等奖</p><p>2.2023 CSP-S国家二等奖</p><p>3.2023 NOIP 188分 奖项未出（后补材料）</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">基本算法如动态规划、贪心、搜索、图论（包括最短路算法、生成树算法、树上各类算法、网络流算法等）、简单数据结构（线段树、并查集、平衡树等）。</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">算法竞赛中遇到的各类困难</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\"><span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span><h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与深度技术解析 (Technical Report & Paper)</h4></div><p className=\"leading-relaxed mb-2.5 text-slate-700\">技术报告</p><p className=\"leading-relaxed mb-2.5 text-slate-700\">在参与全国青少年信息学奥林匹克联赛 (NOIP) 过程中，深入钻研了图论最短路、网络流最小割、线段树分治与动态规划状态压缩优化等高级算法。在激烈的联赛角逐中沉着应战，斩获高水平奖项，并在课余时间积极参与通中信息学社团的习题讲评与同伴辅导，分享竞赛解题经验与心得。</p></div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "恭喜陈同学获得 NOIP 全国一等奖！望岳奖学金作为校内学科竞赛之外的极客创新激励平台，非常乐见优秀竞赛选手将扎实的算法功底转化为更多具有实用价值和开源影响力的创造性项目。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2023-陈万瑄 - 申请表原件",
+          "filename": "2023-陈万瑄-申请表原件.docx",
+          "url": "/downloads/projects/2023-chen-wanxuan-noip/2023-陈万瑄-申请表原件.docx",
+          "size": "12.6 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2023-chen-wanxuan-noip",
+          "projectTitle": "全国青少年信息学奥林匹克联赛 (NOIP) 一等奖成果与高阶算法实践",
+          "studentName": "陈万瑄",
+          "editionYear": "2023",
+          "description": "陈万瑄 于 2023 年提交的望岳奖学金官方申请表原件。"
+        }
+      ]
+    },
+    {
+      "id": "2023-yu-wentao-gu-yuming-hospital",
+      "title": "南通市中医院智能挂号系统",
+      "studentId": "yu-wentao",
+      "studentName": "余文涛、顾郁铭",
+      "class": "高一15班 / 高一7班",
+      "award": "凭高临岳",
+      "awardTier": "third",
+      "category": "医疗信息化与算法",
+      "tags": [
+        "C++",
+        "STL优先队列",
+        "门诊排队算法",
+        "双队列动态优先级",
+        "医疗信息化"
+      ],
+      "summary": "针对秋冬呼吸道就诊高峰期线上预约与线下现场挂号冲突、就诊检查后二次排队产生医患纠纷等痛点，采用 C++ STL 优先队列（priority_queue）与双端队列（deque）设计了智能挂号与分诊排队算法模型，根据挂号方式动态赋权计算优先级，并以标志位机制优雅解决检查后二次叫号的次序问题。",
+      "details": {
+        "skills": "C++ STL 容器（priority_queue, deque, vector）、结构体构造函数与自定义比较谓词 cmp、状态标志位与双队列协同调度",
+        "difficulties": "平衡新挂号患者与做完检查复诊患者的优先次序，避免死锁或盲目插队；利用 deque 优化等待队列的出入性能",
+        "innovations": "源于医生母亲面对呼吸科诊室冲突的真实生活观察，结合高一所学 C++ 算法解决动态优先级分配与检查后重新叫号机制。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2023年 月 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">余文涛/顾郁铭</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高一（15）/高一（7）</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">南通市中医院智能挂号系统</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>我的妈妈是南通市中医院的医生，最近新冠、流感、肺炎支原体感染三重来袭，导致医院呼吸科人满为患，很多病人挂号以后要等待很长时间才能看病。因为中医院挂号分为线上预约挂号和线下现场挂号两类。很多线上挂号的病人未能在规定时间内就诊，线下挂号的病人排队却看不上病，造成医疗资源的浪费，另外很多病人在看病的过程中要去做检查，做完检查以后再找医生开药会被认为在插队，这种种情况造成了很多病人在就诊时发生不愉快，病人对现有的挂号系统不满意导致了很多的医患纠纷。了解到医院的这个情况以后，我希望能通过我学的计算机知识来帮助实现智能挂号，最大限度的提高医疗资源的使用效率，更好的为病人服务，提高病人就诊满意度。</p><p>为了完成这个项目，我和我的同学顾郁铭组成了团队，我们一起分析了目前医院的现状，然后一起来研究如何解决这个问题。经过研究，我们想采用C++的优先队列（Priority Queue）来实现智能挂号功能。我们将挂号记录看作一个包含患者信息、挂号方式和挂号时间的结构体。我们可以根据患者的挂号时间和挂号方式来计算患者的优先级，然后将患者信息加入优先队列中，这样就可以解决网上挂号和现场挂号的优先级的问题。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">通过编写这个程序，对C++有了进一步的了解，学习了优先队列和结构体的运用，熟练掌握了B00L函数的运用。</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">在编这个程序时，我遇到的困难是如何处理新挂号的病人和已经挂号看病去做检查后再去找医生做进一步诊治的病人之间的优先级关系。最终我想到的办法是在挂号记录结构体中添加一个标志位，表示该患者是否需要去做检查。在患者打卡看病后，如果该患者需要去做检查，则将其从优先队列中移除，并将其加入一个等待检查结果的队列中。当患者的检查结果出来后，重新在打卡机上刷一下，将其从等待检查结果的队列中移除，并以更高优先级重新加入优先队列中进行排队。</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">对网上挂号和线下现场挂号进行智能动态分配，最大限度的提高医疗资源的使用效率。</div></div></div></div></div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "选题很有现实生活情境，如果未来能进一步优化界面交互设计与前后端数据持久化，项目的技术复杂度与实用价值将大幅提升。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2023-余文涛、顾郁铭 - 申请表原件",
+          "filename": "2023-余文涛、顾郁铭-申请表原件.docx",
+          "url": "/downloads/projects/2023-yu-wentao-gu-yuming-hospital/2023-余文涛、顾郁铭-申请表原件.docx",
+          "size": "13.8 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2023-yu-wentao-gu-yuming-hospital",
+          "projectTitle": "南通市中医院智能挂号系统",
+          "studentName": "余文涛、顾郁铭",
+          "editionYear": "2023",
+          "description": "余文涛、顾郁铭 于 2023 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2023-余文涛、顾郁铭 - 项目源代码",
+          "filename": "2023-余文涛、顾郁铭-项目源代码.zip",
+          "url": "/downloads/projects/2023-yu-wentao-gu-yuming-hospital/2023-余文涛、顾郁铭-项目源代码.zip",
+          "size": "1.2 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2023-yu-wentao-gu-yuming-hospital",
+          "projectTitle": "南通市中医院智能挂号系统",
+          "studentName": "余文涛、顾郁铭",
+          "editionYear": "2023",
+          "description": "《南通市中医院智能挂号系统》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2023-yu-wentao-gu-yuming-hospital"
+    }
+  ],
+  "downloads": [
+    {
+      "title": "2023 届望岳奖学金评选细则 (官方章程)",
+      "filename": "2023第七届望岳奖学金评选细则.docx",
+      "url": "/downloads/editions/2023/2023第七届望岳奖学金评选细则.docx",
+      "size": "170.9 KB",
+      "type": "doc",
+      "category": "评选细则",
+      "editionYear": "2023",
+      "description": "包含评选对象、申报要求、各级奖项标准与评审流程。"
+    },
+    {
+      "title": "2023年度第七届望岳奖学金申请表",
+      "filename": "2023年度第七届望岳奖学金申请表.docx",
+      "url": "/downloads/editions/2023/2023年度第七届望岳奖学金申请表.docx",
+      "size": "11.8 KB",
+      "type": "doc",
+      "category": "官方申请表",
+      "editionYear": "2023",
+      "description": "南通中学官方 2023 年度望岳奖学金申请表原件。"
+    }
+  ]
+}

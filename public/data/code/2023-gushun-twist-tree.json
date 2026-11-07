@@ -1,0 +1,26 @@
+{
+  "projectId": "2023-gushun-twist-tree",
+  "externalRepo": "https://github.com/cactusworkshop/Twist-Tree",
+  "totalFiles": 1,
+  "totalLines": 80,
+  "coreFiles": [
+    "TT1.cpp"
+  ],
+  "languages": [
+    {
+      "lang": "cpp",
+      "lines": 80,
+      "percent": 100.0
+    }
+  ],
+  "files": [
+    {
+      "path": "TT1.cpp",
+      "name": "TT1.cpp",
+      "lang": "cpp",
+      "lines": 80,
+      "size": 1576,
+      "content": "const int MAXN=1e5+5;\nconst int INF=INT_MAX;\nclass TT_node{\n\tfriend class simple_TT;\n\tprivate:\n\t\tint left,right,v,sz,fr,to;\n\t\tTT_node(void){\n\t\t\tleft=right=0;\n\t\t\tsz=0;\n\t\t\tfr=to=INF;\n\t\t}\n\t\tvoid operator=(TT_node x){\n\t\t\tv=x.v;\n\t\t\tfr=x.fr;\n\t\t\tto=x.to;\n\t\t}\n};\nclass simple_TT{\n\tprivate:\n\t\tint n;\n\t\tint root;\n\t\tTT_node tr[MAXN];\n\t\tint new_node(int v){\n\t\t\tn++;\n\t\t\ttr[n]={0,0,v,1,pre(v),suc(v)};\n\t\t\treturn n;\n\t\t}\n\t\tint new_node(void){\n\t\t\tn++;return n;\n\t\t}\n\t\tvoid pushup(int p){\n\t\t\ttr[p].sz=tr[tr[p].left].sz+tr[tr[p].right].sz+1;\n\t\t}\n\tpublic:\n\t\tconst int pre(const int v){\n\t\t\t//......\n\t\t\tint p;\n\t\t\treturn p;\n\t\t}\n\t\tconst int suc(const int v){\n\t\t\t//.......\n\t\t\tint p;\n\t\t\treturn p;\n\t\t}\n\t\tvoid ins(int& p=root,const int id,const int v){\n\t\t\tif(p==0){\n\t\t\t\tp=new_node();\n\t\t\t\ttr[p]=tr[id];\n\t\t\t\tif(tr[p].fr) tr[tr[p].fr].to=n;\n\t\t\t\tif(tr[p].to) tr[tr[p].to].fr=n;\n\t\t\t\treturn;\n\t\t\t}\n\t\t\tif(v<tr[p].v){\n\t\t\t\tif(tr[tr[p].left].sz>tr[tr[p].right].sz){\n\t\t\t\t\tins(tr[p].right,p,tr[p].v);\n\t\t\t\t\tif(tr[p].fr) tr[tr[p].fr].to=n;\n\t\t\t\t\tif(tr[p].to) tr[tr[p].to].fr=n;\n\t\t\t\t\tint f=tr[p].fr;\n\t\t\t\t\ttr[p]=tr[f];\n\t\t\t\t\tdel(tr[p].left,f,tr[f].v);\n\t\t\t\t\tif(tr[p].fr) tr[tr[p].fr].to=p;\n\t\t\t\t\tif(tr[p].to) tr[tr[p].to].fr=p;\n\t\t\t\t}\n\t\t\t\tins(tr[p].left,id,v);\n\t\t\t}else{\n\t\t\t\tif(tr[tr[p].left].sz<tr[tr[p].right].sz){\n\t\t\t\t\tins(tr[p].left,p,tr[p].v);\n\t\t\t\t\tif(tr[p].fr) tr[tr[p].fr].to=n;\n\t\t\t\t\tif(tr[p].to) tr[tr[p].to].fr=n;\n\t\t\t\t\tint f=tr[p].to;\n\t\t\t\t\ttr[p]=tr[f];\n\t\t\t\t\tdel(tr[p].right,f,tr[f].v);\n\t\t\t\t\tif(tr[p].fr) tr[tr[p].fr].to=p;\n\t\t\t\t\tif(tr[p].to) tr[tr[p].to].fr=p;\n\t\t\t\t}\n\t\t\t\tins(tr[p].left,id,v);\n\t\t\t}\n\t\t\tpushup(p);\n\t\t}\n};\n"
+    }
+  ]
+}

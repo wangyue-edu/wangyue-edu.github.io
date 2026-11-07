@@ -1,0 +1,40 @@
+{
+  "projectId": "2021-jiang-guanqun-streaming",
+  "externalRepo": "https://github.com/guanquner/homecamera",
+  "totalFiles": 2,
+  "totalLines": 99,
+  "coreFiles": [
+    "srs_deploy.sh",
+    "index.html"
+  ],
+  "languages": [
+    {
+      "lang": "bash",
+      "lines": 28,
+      "percent": 35.0
+    },
+    {
+      "lang": "html",
+      "lines": 71,
+      "percent": 65.0
+    }
+  ],
+  "files": [
+    {
+      "path": "srs_deploy.sh",
+      "name": "srs_deploy.sh",
+      "lang": "bash",
+      "lines": 28,
+      "size": 930,
+      "content": "#!/bin/bash\n# CentOS 8.4 下 SRS 流媒体服务器编译部署脚本 (支持 GB28181 国标协议与 WebRTC)\nset -e\n\n# 1. 克隆官方 SRS 源码并安装基础编译依赖\necho \"==> Cloning SRS repository...\"\ngit clone -b 4.0release https://gitee.com/ossrs/srs.git\ncd srs/trunk\n\n# 2. 编译基础 SRS 4.0 版本\necho \"==> Compiling SRS 4.0 core...\"\n./configure\nmake\n\n# 3. 切换至 feature/gb28181 分支，重新配置编译\necho \"==> Switching to GB28181 branch...\"\ngit checkout feature/gb28181\n./configure --with-gb28181\nmake clean\nmake\n\n# 4. 配置服务器端参数 (根据云服务器公网 IP 替换 Hosts 与 CANDIDATE 地址)\n# conf/push.gb28181.conf:\n# candidate: 服务器公网候选地址（客户端连接的目标 ip:port）\necho \"==> Starting SRS server with GB28181 config...\"\n./objs/srs -c conf/push.gb28181.conf\n\necho \"==> SRS Server running! Now login to Dahua camera and configure GB28181 push parameters.\"\n"
+    },
+    {
+      "path": "index.html",
+      "name": "index.html",
+      "lang": "html",
+      "lines": 71,
+      "size": 2057,
+      "content": "<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>家庭智能摄像头实时直播流播放终端 (FLV.js)</title>\n  <style>\n    body {\n      margin: 0;\n      padding: 20px;\n      background: #0f172a;\n      color: #e2e8f0;\n      font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, sans-serif;\n    }\n    .mainContainer {\n      display: block;\n      width: 100%;\n      max-width: 960px;\n      margin: 0 auto;\n    }\n    .video-wrapper {\n      position: relative;\n      background: #000;\n      border-radius: 12px;\n      overflow: hidden;\n      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);\n    }\n    .centeredVideo {\n      display: block;\n      width: 100%;\n      height: auto;\n      max-height: 540px;\n    }\n    .caption {\n      margin-top: 12px;\n      font-size: 13px;\n      color: #94a3b8;\n      text-align: center;\n    }\n  </style>\n</head>\n<body>\n  <div class=\"mainContainer\">\n    <div class=\"video-wrapper\">\n      <video id=\"videoElement\" class=\"centeredVideo\" controls autoplay muted>\n        您的浏览器版本过低，暂不支持 HTML5 视频播放。\n      </video>\n    </div>\n    <p class=\"caption\">🎥 实时音视频监控流 (GB28181 转 HTTP-FLV 协议) · 南通直连老家</p>\n  </div>\n\n  <!-- 引入 CDN 加速的 flv.js 纯 JavaScript 播放器解析库 -->\n  <script src=\"https://cdn.bootcss.com/flv.js/1.3.3/flv.min.js\"></script>\n  <script>\n    var videoElement = document.getElementById('videoElement');\n    if (flvjs.isSupported()) {\n      var flvPlayer = flvjs.createPlayer({\n        type: 'flv',\n        isLive: true,\n        url: 'https://live.quner.icu:8443/live/1.flv' // 云服务器通过 GB28181 接收推流并实时转协议输出的低延迟 HTTP-FLV\n      });\n      flvPlayer.attachMediaElement(videoElement);\n      flvPlayer.load();\n      flvPlayer.play().catch(function(e) {\n        console.log(\"Autoplay blocked, user interaction required:\", e);\n      });\n    } else {\n      alert(\"当前浏览器环境不支持 FLV.js 解码播放\");\n    }\n  </script>\n</body>\n</html>\n"
+    }
+  ]
+}

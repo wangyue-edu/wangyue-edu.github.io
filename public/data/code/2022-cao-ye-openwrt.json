@@ -1,0 +1,120 @@
+{
+  "projectId": "2022-cao-ye-openwrt",
+  "externalRepo": null,
+  "totalFiles": 10,
+  "totalLines": 267,
+  "coreFiles": [
+    "build.sh",
+    "scripts/builder-patch.sh",
+    ".github/workflows/generate-x86_64.yml"
+  ],
+  "languages": [
+    {
+      "lang": "json",
+      "lines": 90,
+      "percent": 33.7
+    },
+    {
+      "lang": "sh",
+      "lines": 87,
+      "percent": 32.6
+    },
+    {
+      "lang": "yml",
+      "lines": 84,
+      "percent": 31.5
+    },
+    {
+      "lang": "md",
+      "lines": 3,
+      "percent": 1.1
+    },
+    {
+      "lang": "txt",
+      "lines": 3,
+      "percent": 1.1
+    }
+  ],
+  "files": [
+    {
+      "path": "Σ╗úτáü/.github/workflows/generate-x86_64.yml",
+      "name": "generate-x86_64.yml",
+      "lang": "yml",
+      "lines": 84,
+      "size": 3294,
+      "content": "# This is a basic workflow to help you get started with Actions\n\nname: Generate x86_64 OpenWrt Firmware\n\n# Controls when the workflow will run\non:\n  # Allows you to run this workflow manually from the Actions tab\n  workflow_dispatch:\n    inputs:\n      release: \n        description: 将编译出的镜像上传到 Release\n        required: false\n        default: 'false'\n\nenv:\n  DOWNLOAD_BASE: https://downloads.immortalwrt.org\n  VENDOR: immortalwrt\n  VERSION: 21.02.3\n\n# A workflow run is made up of one or more jobs that can run sequentially or in parallel\njobs:\n  # This workflow contains a single job called \"build\"\n  Generate:\n    # The type of runner that the job will run on\n    runs-on: ubuntu-20.04\n\n    # Steps represent a sequence of tasks that will be executed as part of the job\n    steps:\n      - name: Initialization Environment\n        run: |\n          sudo apt-get -qq update\n          sudo apt-get -qq install build-essential libncurses5-dev libncursesw5-dev zlib1g-dev gawk git gettext libssl-dev xsltproc rsync wget unzip python qemu-utils mkisofs\n\n      - name: Setup Environment Variables\n        run: |\n          echo \"DATE=$(date +%Y%m%d)\" >> $GITHUB_ENV\n          echo \"DATETIME=$(date +'%Y%m%d%H%M%S')\" >> $GITHUB_ENV\n      \n      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it\n      - name: Checkout\n        uses: actions/checkout@v3\n        with: \n          path: origin\n\n      - name: Download Image Builder\n        run: |\n          wget $DOWNLOAD_BASE/releases/$VERSION/targets/x86/64/$VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64.tar.xz\n          tar -xvf $VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64.tar.xz\n          rm -rf $VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64.tar.xz\n          cp -r $GITHUB_WORKSPACE/origin/* $GITHUB_WORKSPACE/$VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64/\n      \n      - name: Download External Packages\n        working-directory: ${{ env.VENDOR }}-imagebuilder-${{ env.VERSION }}-x86-64.Linux-x86_64\n        run: |\n          cat external-package-urls.txt | xargs wget -P packages\n      \n      - name: Run Patch and DIY Scripts\n        working-directory: ${{ env.VENDOR }}-imagebuilder-${{ env.VERSION }}-x86-64.Linux-x86_64\n        run: |\n          bash scripts/builder-patch.sh\n          bash scripts/clash.sh\n          bash scripts/zsh.sh\n\n      - name: Generate Firmware\n        working-directory: ${{ env.VENDOR }}-imagebuilder-${{ env.VERSION }}-x86-64.Linux-x86_64\n        run: |\n          bash build.sh\n\n      - name: Upload Firmware to Artifacts\n        uses: actions/upload-artifact@v2\n        with:\n          name: ${{ env.VENDOR }}-${{ env.VERSION }}-x86_64-images-${{ env.DATETIME }}\n          path: ${{ env.VENDOR }}-imagebuilder-${{ env.VERSION }}-x86-64.Linux-x86_64/bin/targets/x86/64/*\n\n      - name: Upload Firmware to Release\n        if: github.event.inputs.release == 'true'\n        uses: svenstaro/upload-release-action@v2\n        with:\n          repo_token: ${{ secrets.GITHUB_TOKEN }}\n          file_glob: true\n          file: ${{ env.VENDOR }}-imagebuilder-${{ env.VERSION }}-x86-64.Linux-x86_64/bin/targets/x86/64/*\n          asset_name: ${{ github.event.repository.name }}-${{ github.sha }}\n          tag: release-${{ env.DATE }}\n          overwrite: true\n"
+    },
+    {
+      "path": "Σ╗úτáü/README.md",
+      "name": "README.md",
+      "lang": "md",
+      "lines": 3,
+      "size": 609,
+      "content": "在满足日常使用后，神奇的网络世界不免让我们产生兴趣，开始探索。从国产之光iKuai开始到强大功能的RouterOS，满足需求的路由系统数不胜数，但是如果想要追求真正的客制化，无论是Linux iptables转发还是Alpine Linux，都没有Openwrt优秀。\n\t使用了一段时间的大神编译的Openwrt版本，总觉得他们为了追求Openwrt功能丰富而忽略了重要的一点，作为Router，应该坚持低内存，高转发的宗旨工作。\n\t于是我决定自己编译Openwrt满足个人使用，想要什么插件就自己添加进去。\n"
+    },
+    {
+      "path": "Σ╗úτáü/build.sh",
+      "name": "build.sh",
+      "lang": "sh",
+      "lines": 39,
+      "size": 1180,
+      "content": "#!/bin/bash\n\n# 打印 info\nmake info\n\n# 主配置名称\nPROFILE=\"generic\"\n\nPACKAGES=\"\"\n\n# Argon 主题\nPACKAGES=\"$PACKAGES luci-theme-argon luci-i18n-argon-config-zh-cn\"\n# Diskman 磁盘管理\nPACKAGES=\"$PACKAGES luci-i18n-diskman-zh-cn\"\n# CPU 占用限制\nPACKAGES=\"$PACKAGES luci-i18n-cpulimit-zh-cn\"\n# collectd 统计\nPACKAGES=\"$PACKAGES luci-i18n-statistics-zh-cn\"\n# Passwall 代理\nPACKAGES=\"$PACKAGES luci-i18n-passwall-zh-cn\"\n# frp 和 nps 内网穿透\nPACKAGES=\"$PACKAGES luci-i18n-nps-zh-cn luci-i18n-frpc-zh-cn\"\n# 界面翻译补全\nPACKAGES=\"$PACKAGES luci-i18n-opkg-zh-cn luci-i18n-base-zh-cn luci-i18n-firewall-zh-cn luci-i18n-turboacc-zh-cn\"\n# Packages 文件夹下的 ipk 包\nPACKAGES=\"$PACKAGES luci-i18n-wrtbwmon-zh-cn\"\n# 一些自己需要的内核组件\nPACKAGES=\"$PACKAGES kmod-usb-printer kmod-lp\"\n# zsh 终端\nPACKAGES=\"$PACKAGES zsh\"\n# Vim 完整版，带语法高亮\nPACKAGES=\"$PACKAGES vim-fuller\"\n# X/Y/ZMODEM 文件传输\nPACKAGES=\"$PACKAGES lrzsz\"\n# OpenSSH\nPACKAGES=\"$PACKAGES openssh-server openssh-client\"\n# 一些自定义文件\nFILES=\"files\"\nmake image PROFILE=\"$PROFILE\" PACKAGES=\"$PACKAGES\" FILES=\"$FILES\" DISABLED_SERVICES=\"$DISABLED_SERVICES\"\n"
+    },
+    {
+      "path": "Σ╗úτáü/external-package-urls.txt",
+      "name": "external-package-urls.txt",
+      "lang": "txt",
+      "lines": 3,
+      "size": 332,
+      "content": "https://github.com/brvphoenix/wrtbwmon/releases/download/v1.2.1-3/wrtbwmon_1.2.1-3_all.ipk\nhttps://github.com/brvphoenix/luci-app-wrtbwmon/releases/download/release-2.0.10/luci-app-wrtbwmon_2.0.10_all.ipk\nhttps://github.com/brvphoenix/luci-app-wrtbwmon/releases/download/release-2.0.10/luci-i18n-wrtbwmon-zh-cn_211213.07899_all.ipk\n"
+    },
+    {
+      "path": "Σ╗úτáü/files/etc/docker/daemon.json",
+      "name": "daemon.json",
+      "lang": "json",
+      "lines": 9,
+      "size": 213,
+      "content": "{\n  \"bip\": \"192.168.10.1/24\",\n  \"registry-mirrors\" : [\n    \"https://registry.docker-cn.com\",\n    \"https://docker.mirrors.ustc.edu.cn\",\n    \"http://hub-mirror.c.163.com\",\n    \"https://cr.console.aliyun.com/\"\n  ]\n}\n"
+    },
+    {
+      "path": "Σ╗úτáü/files/usr/share/luci/menu.d/luci-app-nlbwmon.json",
+      "name": "luci-app-nlbwmon.json",
+      "lang": "json",
+      "lines": 40,
+      "size": 585,
+      "content": "{\n\t\"admin/nlbw\": {\n\t\t\"title\": \"Bandwidth Monitor\",\n\t\t\"order\": 80,\n\t\t\"action\": {\n\t\t\t\"type\": \"firstchild\"\n\t\t},\n\t\t\"depends\": {\n\t\t\t\"acl\": [ \"luci-app-nlbwmon\" ],\n\t\t\t\"uci\": { \"nlbwmon\": true }\n\t\t}\n\t},\n\n\t\"admin/nlbw/display\": {\n\t\t\"title\": \"Display\",\n\t\t\"order\": 1,\n\t\t\"action\": {\n\t\t\t\"type\": \"view\",\n\t\t\t\"path\": \"nlbw/display\"\n\t\t}\n\t},\n\n\t\"admin/nlbw/config\": {\n\t\t\"title\": \"Configuration\",\n\t\t\"order\": 2,\n\t\t\"action\": {\n\t\t\t\"type\": \"view\",\n\t\t\t\"path\": \"nlbw/config\"\n\t\t}\n\t},\n\n\t\"admin/nlbw/backup\": {\n\t\t\"title\": \"Backup\",\n\t\t\"order\": 3,\n\t\t\"action\": {\n\t\t\t\"type\": \"view\",\n\t\t\t\"path\": \"nlbw/backup\"\n\t\t}\n\t}\n}\n"
+    },
+    {
+      "path": "Σ╗úτáü/files/usr/share/luci/menu.d/luci-app-wrtbwmon.json",
+      "name": "luci-app-wrtbwmon.json",
+      "lang": "json",
+      "lines": 41,
+      "size": 660,
+      "content": "{\n\t\"admin/nlbw/usage\": {\n\t\t\"title\": \"Traffic Status\",\n\t\t\"order\": 60,\n\t\t\"action\": {\n\t\t\t\"type\": \"alias\",\n\t\t\t\"path\": \"admin/nlbw/usage/details\"\n\t\t},\n\t\t\"depends\": {\n\t\t\t\"acl\": [ \"luci-app-wrtbwmon\" ],\n\t\t\t\"uci\": { \"wrtbwmon\": true }\n\t\t}\n\t},\n\n\t\"admin/nlbw/usage/details\": {\n\t\t\"title\": \"Details\",\n\t\t\"order\": 10,\n\t\t\"action\": {\n\t\t\t\"type\": \"view\",\n\t\t\t\"path\": \"wrtbwmon/details\"\n\t\t}\n\t},\n\n\t\"admin/nlbw/usage/config\": {\n\t\t\"title\": \"Configuration\",\n\t\t\"order\": 20,\n\t\t\"action\": {\n\t\t\t\"type\": \"view\",\n\t\t\t\"path\": \"wrtbwmon/config\"\n\t\t}\n\t},\n\n\t\"admin/nlbw/usage/custom\": {\n\t\t\"title\": \"User file\",\n\t\t\"order\": 30,\n\t\t\"action\": {\n\t\t\t\"type\": \"view\",\n\t\t\t\"path\": \"wrtbwmon/custom\"\n\t\t}\n\t}\n}\n"
+    },
+    {
+      "path": "Σ╗úτáü/scripts/builder-patch.sh",
+      "name": "builder-patch.sh",
+      "lang": "sh",
+      "lines": 18,
+      "size": 574,
+      "content": "#!/bin/bash\n\necho \"Start Builder Patch !\"\necho \"Current Path: $PWD\"\n\ncd $GITHUB_WORKSPACE/$VENDOR-imagebuilder-$VERSION-x86-64.Linux-x86_64 || exit\n\n# Remove redundant default packages\nsed -i \"/luci-app-cpufreq/d\" include/target.mk\n\n# Force opkg to overwrite files\nsed -i \"s/install \\$(BUILD_PACKAGES)/install \\$(BUILD_PACKAGES) --force-overwrite/\" Makefile\n\n# Not generate ISO images for it is too big\nsed -i \"s/CONFIG_ISO_IMAGES=y/# CONFIG_ISO_IMAGES is not set/\" .config\n\n# Not generate VHDX images\nsed -i \"s/CONFIG_VHDX_IMAGES=y/# CONFIG_VHDX_IMAGES is not set/\" .config"
+    },
+    {
+      "path": "Σ╗úτáü/scripts/clash.sh",
+      "name": "clash.sh",
+      "lang": "sh",
+      "lines": 10,
+      "size": 364,
+      "content": "#!/bin/bash\n\necho \"Start Clash Core Download !\"\necho \"Current Path: $PWD\"\n\nmkdir -p files/etc/openclash/core\ncd files/etc/openclash/core || (echo \"Clash core path does not exist! \" && exit)\nwget https://raw.githubusercontent.com/vernesong/OpenClash/master/core-lateset/dev/clash-linux-amd64.tar.gz\ntar -zxvf clash-linux-amd64.tar.gz\nrm -rf clash-linux-amd64.tar.gz"
+    },
+    {
+      "path": "Σ╗úτáü/scripts/zsh.sh",
+      "name": "zsh.sh",
+      "lang": "sh",
+      "lines": 20,
+      "size": 680,
+      "content": "#!/bin/bash\n\necho \"Start oh-my-zsh Config !\"\necho \"Current Path: $PWD\"\n\nmkdir -p $PWD/files/root/.oh-my-zsh\n\nROOT=$PWD/files/root\nZSH=$ROOT/.oh-my-zsh\nZSH_CUSTOM=$ZSH/custom\n\ngit clone --depth=1 https://github.com/ohmyzsh/ohmyzsh.git $ZSH\ngit clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions\ngit clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting\n\ncp $ZSH/templates/zshrc.zsh-template $ROOT/.zshrc\n\nsed -i \"s/ZSH_THEME=\\\".\\+\\\"/ZSH_THEME=\\\"ys\\\"/\" $ROOT/.zshrc\n\nsed -i \"s/plugins=.\\+/plugins=(git zsh-autosuggestions zsh-syntax-highlighting)/\" $ROOT/.zshrc"
+    }
+  ]
+}

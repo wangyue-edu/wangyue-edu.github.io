@@ -1,0 +1,70 @@
+{
+  "projectId": "2017-wang-xuyang-coilgun",
+  "externalRepo": null,
+  "totalFiles": 5,
+  "totalLines": 496,
+  "coreFiles": [
+    "CoilgunRover/RoverControl.py",
+    "CoilgunRover/RoverMethods.py",
+    "RCC/RCC.ino"
+  ],
+  "languages": [
+    {
+      "lang": "py",
+      "lines": 243,
+      "percent": 49.0
+    },
+    {
+      "lang": "ino",
+      "lines": 129,
+      "percent": 26.0
+    },
+    {
+      "lang": "txt",
+      "lines": 124,
+      "percent": 25.0
+    }
+  ],
+  "files": [
+    {
+      "path": "Àµ√˜.txt",
+      "name": "Àµ√˜.txt",
+      "lang": "txt",
+      "lines": 5,
+      "size": 69,
+      "content": "׷Ӳϣ\nȦڷ湤\nPythonƳ\nArduinoƳ\nƵ"
+    },
+    {
+      "path": "CoilgunRover/RoverControl.py",
+      "name": "RoverControl.py",
+      "lang": "py",
+      "lines": 64,
+      "size": 1459,
+      "content": "#coding=utf8\nfrom RoverMethods import *\nimport cv2\nimport datetime\nimport serial\n\nVideoUrl = 'http://admin:*******************:8081/video'\nSizePerReading = 16000\ntry:\n    ipCam = IpCamera(VideoUrl, SizePerReading)\nexcept:\n    print 'Error:IpCamera is not online.'\n    exit(0)\n\ntry:\n    ser = serial.Serial('com6', 9600)\nexcept:\n    ser=None\n    print 'Error:RoverBlueTooth is not online.'\n\naim = AimCircle()\naim.StTime = datetime.datetime.now()\n\nrover=Rover()\n\ncv2.namedWindow('RoverCamera', cv2.WINDOW_NORMAL)\ncv2.setWindowProperty(\"RoverCamera\", cv2.WND_PROP_FULLSCREEN, 1)\n\nwhile True:\n    img = ipCam.getFrame()\n    if img is None:\n        print 'IpCamera is offline.'\n        exit(0)\n\n    img = aim.drawAimCircle(img)\n    #img=drawLaserCircle(img)\n    img=rover.drawDirectionArc(img)\n\n    if img is None:\n        print 'Unknown Error.'\n        exit(0)\n    cv2.imshow('RoverCamera', img)\n\n    #key = cv2.waitKey(1)\n    key=waitkey(10)\n    if key == 27:\n        exit(0)\n    if key == ord('q'):\n        aim.StTime = datetime.datetime.now()\n    if key == -1:\n        rover.sendCmd(ser,'stop')\n    if key == ord('w'):\n        rover.sendCmd(ser, 'goForward')\n    if key == ord('s'):\n        rover.sendCmd(ser, 'goBackward')\n    if key == ord('a'):\n        rover.sendCmd(ser, 'turnLeft')\n    if key == ord('d'):\n        rover.sendCmd(ser, 'turnRight')\n\n\"\"\"\nTODO:\n    莫名其妙的失去响应\n\"\"\""
+    },
+    {
+      "path": "CoilgunRover/RoverMethods.py",
+      "name": "RoverMethods.py",
+      "lang": "py",
+      "lines": 179,
+      "size": 6003,
+      "content": "import cv2\nimport urllib\nimport numpy as np\nimport datetime\nimport serial\nfrom math import *\n\n#class AimCircle()\n#class IpCamera()\n#class Rover()\n#def drawLaserCircle(frame)\n#def getLaserDistance(img,LaserPoints,PHI)\n\nclass AimCircle():\n    Circle_MaxRadii = 150\n    Circle_MinRadii = 10\n    AimTime = 3000\n    Circle_Color = (0, 255, 0)\n\n    def __init__(self):\n        self.StTime = None\n\n    def drawAimCircle(self, img):\n        if self.StTime is None: return img\n        stTime = self.StTime.minute * 60000 + self.StTime.second * 1000 + self.StTime.microsecond / 1000\n        now = datetime.datetime.now()\n        edTime = now.minute * 60000 + now.second * 1000 + now.microsecond / 1000\n        radii = AimCircle.getRadii(edTime - stTime)\n        (Ox, Oy) = (img.shape[1] / 2, img.shape[0] / 2)\n        cv2.circle(img, (Ox, Oy), radii, AimCircle.Circle_Color, 2)\n        if radii==AimCircle.Circle_MinRadii:cv2.putText(img,'Locked',(Ox-20,Oy-20),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,255,0),2)\n        return img\n\n    @classmethod\n    def getRadii(cls, dTime):\n        if dTime <= 0: return AimCircle.Circle_MaxRadii\n        if dTime > 0 and dTime < AimCircle.AimTime:\n            return int((\n                           AimCircle.Circle_MinRadii - AimCircle.Circle_MaxRadii) * dTime / AimCircle.AimTime + AimCircle.Circle_MaxRadii)\n        if dTime >= AimCircle.AimTime:\n            return AimCircle.Circle_MinRadii\n\nclass IpCamera():\n    def __init__(self, url, size):\n        self.stream = urllib.urlopen(url)\n        self.bytes = ''\n        self.SizePerReading = size\n    def getFrame(self):\n        for i in range(8):\n            if i == 7: return None\n            self.bytes += self.stream.read(self.SizePerReading)\n            a = self.bytes.find('\\xff\\xd8')\n            b = self.bytes.find('\\xff\\xd9')\n            if a != -1 and b != -1:\n                jpg = self.bytes[a:b + 2]\n                self.bytes = self.bytes[b + 2:]\n                break\n        return cv2.imdecode(np.fromstring(jpg, dtype=np.uint8), cv2.IMREAD_COLOR)\n\nclass Rover():\n    def __init__(self):\n        self.state=\"\"\n\n    def sendCmd(self,ser,cmd):\n        if ser is None:return\n        if cmd is None or cmd=='':return\n\n        if self.state==cmd:\n            return\n        else:\n            ser.write(Rover.RoverCmd[cmd])\n            self.state=cmd\n            # print cmd\n\n    def drawDirectionArc(self,img):\n        axes=(40,40)\n        if self.state==\"goForward\":\n            cv2.ellipse(img,(img.shape[1]//2,img.shape[0]//2),axes,-90,45,-45,(0,255,0),2)\n        if self.state==\"goBackward\":\n            cv2.ellipse(img, (img.shape[1] // 2, img.shape[0] // 2), axes, 90, 45, -45, (0, 255, 0),2)\n        if self.state == \"turnLeft\":\n            cv2.ellipse(img, (img.shape[1] // 2, img.shape[0] // 2), axes, -90,0, -90, (0, 255, 0),2)\n        if self.state == \"turnRight\":\n            cv2.ellipse(img, (img.shape[1] // 2, img.shape[0] // 2), axes, 0, 0, -90, (0, 255, 0),2)\n        return img\n\n    RoverCmd = {\n    'stop': '200200X',\n    'goForward': '300300X',\n    'goBackward': '100100X',\n    'turnLeft': '100300X',\n    'turnRight': '300100X',\n    'lanuch': '',\n    'reload': '',\n    'chargeOn': '',\n    'chargeOff': '',\n    'X+': '',\n    'X-': '',\n    'Y+': '',\n    'Y-': '',\n    'X0': '',\n    'Y0': ''\n}\n\ndef drawLaserCircle(frame):\n    img = frame\n    r = cv2.split(img)[2]\n    (T, gr) = cv2.threshold(r, 225, 255, cv2.THRESH_BINARY)\n    contours, h = cv2.findContours(gr, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)\n    if contours == []: return frame\n    LaserPoints=[]\n    for c in contours:\n        try:\n            M = cv2.moments(c)\n            cX = int(M[\"m10\"] / M[\"m00\"])\n            cY = int(M[\"m01\"] / M[\"m00\"])\n            LaserPoints.append((cX,cY))\n        except:\n            continue\n\n    (lX,lY),distance=getLaserDistance(img,LaserPoints,0)\n    if distance is None:return frame\n    cv2.circle(img, (lX, lY), 10, [0, 255, 0], 1)\n    cv2.putText(img,'Target:'+distance+'cm',(lX-20,lY-20),cv2.FONT_HERSHEY_SIMPLEX,0.5,(0,255,0),2)\n    return img\n\n\n\ndef getLaserDistance(img,LaserPoints,PHI):\n    '''if LaserPoints is None:return None\n    oX,oY=img.shape[1]/2,img.shape[0]/2\n    lX,lY=-1,-1\n    MinPixelDistance=sqrt(img.shape[1]**2+img.shape[0]**2)\n    for (pX,pY) in LaserPoints:\n        pPixelDistance=sqrt((pX-oX)**2+(pY-oY)**2)\n        if pPixelDistance<MinPixelDistance and img[pY,pX,2]>225:\n            lX,lY=pX,pY\n            MinPixelDistance=pPixelDistance\n    ''unit:cm''\n    S=10\n    Rop=0.0015974\n    Offset=0.0073933\n    LaserDistance=S/(tan(MinPixelDistance*Rop+Offset))\n    LaserDistance='{:.2f}'.format(LaserDistance)\n    return (lX,lY),LaserDistance'''\n    if LaserPoints is None:return None\n    oX,oY=img.shape[1]/2,img.shape[0]/2\n    lX,lY=-1,-1\n    '''S unit:cm'''\n    S,Rop,Offset,PHItol=10,0.0015974,0.0073933,0.05\n    for (pX,pY) in LaserPoints:\n        alphaX,alphaY=abs(pX-oX)*Rop+Offset,abs(pY-oY)*Rop+Offset\n        if pX>oX:continue\n        if abs((cos(alphaX)*tan(alphaY)))-abs(tan(PHI))>PHItol:continue\n        lX,lY=pX,pY\n    if lX==-1:return (0,0),None\n    PixelDistance=abs(lX-oX)\n    LaserDistance='{:.2f}'.format(S/(tan(PixelDistance*Rop+Offset))/cos(PHI)+13)\n    return (lX,lY),LaserDistance\n\ndef waitkey(delay=0):\n    getkey = lambda key1, key2: key1 if key2 == -1 else key2\n    st = datetime.datetime.now().microsecond / 1000\n    key = getkey(-1, cv2.waitKey(1))\n    while (True):\n        ed = datetime.datetime.now().microsecond / 1000\n        if ed < st: ed += 1000\n        if ed - st >= delay:\n            break\n        else:\n            key = getkey(key, cv2.waitKey(1))\n    return key\n\nif __name__ == '__main__':\n    img = cv2.imread('D:\\\\test\\img002.jpg')\n    img = drawLaserCircle(img)\n    cv2.imshow('img', img)\n    print type(datetime.datetime.now().second)\n    waitkey(10)\n"
+    },
+    {
+      "path": "RCC/RCC.ino",
+      "name": "RCC.ino",
+      "lang": "ino",
+      "lines": 129,
+      "size": 2584,
+      "content": "//Rover center control program\n\n#define in1_pin 6\n#define in2_pin 7\n#define enA_pin 10\n#define in3_pin 4\n#define in4_pin 5\n#define enB_pin 9\n#define lanuch_pin 8\n\nint lanuch_pin_state=0;\nlong cmd = 0;\n\nvoid InitRoverPins();\nvoid SetWheel(int lrate, int rrate);\nlong getSerialCmd();\nvoid ExcSerialCmd(long cmd);\nvoid test();\n\nvoid setup() {\n  pinMode(13, OUTPUT);\n  digitalWrite(13, 0);\n\n  Serial.begin(9600);\n  InitRoverPins();\n  SetWheel(0, 0);\n  Serial.println(\"yepReady\");\n  \n  delay(300);\n  digitalWrite(13, 1);\n\n  digitalWrite(13, 0);\n  delay(300);\n  digitalWrite(13, 1);\n}\n\nvoid loop() {\n  cmd = getSerialCmd();\n  ExcSerialCmd(cmd);\n  cmd=0;\n  delay(100);\n}\n\nlong getSerialCmd() {\n  long t=0;\n  while (Serial.available() > 0) {\n    t = Serial.parseInt();\n    if (Serial.read() == 'X') {\n      return t;\n    }\n  }\n  return 0;\n}\n\nvoid ExcSerialCmd(long cmd) {\n  if (cmd >= 100100 && cmd <= 300300) {\n    int lrate = (cmd / 1000) - 200;\n    int rrate = (cmd % 1000) - 200;\n    SetWheel(lrate, rrate);\n    return;\n  }\n  if (cmd == 666666) {\n    test();\n    return;\n  }\n}\n\nvoid test() {\n  lanuch_pin_state=1-lanuch_pin_state;\n  digitalWrite(lanuch_pin, lanuch_pin_state);\n  Serial.print(\"yep\");Serial.println(lanuch_pin_state);\n}\n\nvoid InitRoverPins() {\n  pinMode(in1_pin, OUTPUT);\n  pinMode(in2_pin, OUTPUT);\n  pinMode(in3_pin, OUTPUT);\n  pinMode(in4_pin, OUTPUT);\n  pinMode(enA_pin, OUTPUT);\n  pinMode(enB_pin, OUTPUT);\n  pinMode(lanuch_pin,OUTPUT);\n\n  digitalWrite(in1_pin, 0);\n  digitalWrite(in2_pin, 0);\n  digitalWrite(in3_pin, 0);\n  digitalWrite(in4_pin, 0);\n  digitalWrite(enA_pin, 0);\n  digitalWrite(enB_pin, 0);\n  digitalWrite(lanuch_pin,0);\n}\n\nvoid SetWheel(int lrate, int rrate) {\n  if (lrate == 0) {\n    digitalWrite(in1_pin, 0);\n    digitalWrite(in2_pin, 0);\n    digitalWrite(enA_pin, 0);\n  }\n  else {\n    if (lrate > 0) {\n      digitalWrite(in1_pin, 1);\n      digitalWrite(in2_pin, 0);\n    }\n    if (lrate < 0) {\n      digitalWrite(in1_pin, 0);\n      digitalWrite(in2_pin, 1);\n    }\n    lrate = abs(lrate); lrate = map(lrate, 0, 100, 0, 255);\n    analogWrite(enA_pin, lrate);\n  }\n\n  if (rrate == 0) {\n    digitalWrite(in3_pin, 0);\n    digitalWrite(in4_pin, 0);\n    digitalWrite(enB_pin, 0);\n  }\n  else {\n    if (rrate > 0) {\n      digitalWrite(in3_pin, 1);\n      digitalWrite(in4_pin, 0);\n    }\n    if (rrate < 0) {\n      digitalWrite(in3_pin, 0);\n      digitalWrite(in4_pin, 1);\n    }\n    rrate = abs(rrate); rrate = map(rrate, 0, 100, 0, 255);\n    analogWrite(enB_pin, rrate);\n  }\n  Serial.print(\"yep\");Serial.print(lrate);Serial.print(\"&\");Serial.println(rrate);\n}\n"
+    },
+    {
+      "path": "RCC/new 1.txt",
+      "name": "new 1.txt",
+      "lang": "txt",
+      "lines": 119,
+      "size": 2330,
+      "content": "//Rover center control program\n\nint in1_pin = 4;\nint in2_pin = 5;\nint in3_pin = 6;\nint in4_pin = 7;\nint enA_pin = 9;\nint enB_pin = 10;\n\nlong cmd = 0;\n\nvoid InitRoverPins();\nvoid SetWheel(int lrate, int rrate);\n\nlong getSerialCmd();\nvoid ExcSerialCmd(long cmd);\n\nvoid test();\n\nvoid setup() {\n  pinMode(13, OUTPUT);\n  digitalWrite(13, 0);\n\n  Serial.begin(9600);\n  InitRoverPins();\n  SetWheel(0, 0);\n\n  delay(300);\n  digitalWrite(13, 1);\n\n  digitalWrite(13, 0);\n  delay(300);\n  digitalWrite(13, 1);\n}\n\nvoid loop() {\n  cmd = getSerialCmd();\n  ExcSerialCmd(cmd);\n  cmd=0;\n  delay(100);\n}\n\nlong getSerialCmd() {\n  while (Serial.available() > 0) {\n    cmd = Serial.parseInt();\n    if (Serial.read() == 'X') {\n      return cmd;\n    }\n  }\n}\n\nvoid ExcSerialCmd(long cmd) {\n  if (cmd >= 100100 && cmd <= 300300) {\n    int lrate = (cmd / 1000) - 200;\n    int rrate = (cmd % 1000) - 200;\n    SetWheel(lrate, rrate);\n  }\n  if (cmd == 666666) {\n    test();\n  }\n}\n\nvoid test() {\n  digitalWrite(8, digitalRead(8) ^ 1);\n}\n\nvoid InitRoverPins() {\n  pinMode(in1_pin, OUTPUT);\n  pinMode(in2_pin, OUTPUT);\n  pinMode(in3_pin, OUTPUT);\n  pinMode(in4_pin, OUTPUT);\n  pinMode(enA_pin, OUTPUT);\n  pinMode(enB_pin, OUTPUT);\n\n  digitalWrite(in1_pin, 0);\n  digitalWrite(in2_pin, 0);\n  digitalWrite(in3_pin, 0);\n  digitalWrite(in4_pin, 0);\n  digitalWrite(enA_pin, 0);\n  digitalWrite(enB_pin, 0);\n}\n\nvoid SetWheel(int lrate, int rrate) {\n  if (lrate == 0) {\n    digitalWrite(in1_pin, 0);\n    digitalWrite(in2_pin, 0);\n    digitalWrite(enA_pin, 0);\n  }\n  else {\n    if (lrate > 0) {\n      digitalWrite(in1_pin, 1);\n      digitalWrite(in2_pin, 0);\n    }\n    if (lrate < 0) {\n      digitalWrite(in1_pin, 0);\n      digitalWrite(in2_pin, 1);\n    }\n    lrate = abs(lrate); lrate = map(lrate, 0, 100, 0, 255);\n    analogWrite(enA_pin, lrate);\n  }\n\n  if (rrate == 0) {\n    digitalWrite(in3_pin, 0);\n    digitalWrite(in4_pin, 0);\n    digitalWrite(enB_pin, 0);\n  }\n  else {\n    if (lrate > 0) {\n      digitalWrite(in3_pin, 1);\n      digitalWrite(in4_pin, 0);\n    }\n    if (lrate < 0) {\n      digitalWrite(in3_pin, 0);\n      digitalWrite(in4_pin, 1);\n    }\n    rrate = abs(rrate); rrate = map(rrate, 0, 100, 0, 255);\n    analogWrite(enB_pin, rrate);\n  }\n}"
+    }
+  ]
+}

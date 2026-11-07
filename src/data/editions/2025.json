@@ -1,0 +1,210 @@
+{
+  "year": "2025",
+  "editionNumber": 9,
+  "title": "2025 第九届望岳奖学金",
+  "theme": "前沿人工智能科研探索与现代智能制造实践",
+  "intro": "第九届望岳奖学金恰逢人工智能技术在全球迎来跨越式大发展。本届参赛作品展现了深度的科技前沿探索与现代工程实践：高二学子须天人带来了一篇达到大学学术水准的人脸识别深度神经网络研究，以严苛的消融实验震撼评审团；王梓涣的工业机械臂流水线智能分拣展现了现代智能制造的高超动手集成度。",
+  "documents": [],
+  "gallery": [],
+  "reviewSummary": "评审团进行了严谨的双盲初审、指标评分与线上答辩。须天人的深度人脸识别研究以无懈可击的学术规范与创新性荣获凌绝望岳奖；王梓涣的 DOBOT 流水线智能分拣系统凭借优秀的机电集成与扎实答辩荣膺坚韧登岳奖。",
+  "projects": [
+    {
+      "id": "2025-xu-tianren-facerecog",
+      "title": "基于深度卷积神经网络与注意力机制的人脸多任务分析与识别研究",
+      "studentId": "xu-tianren",
+      "studentName": "须天人",
+      "class": "高二5班",
+      "award": "凌绝望岳",
+      "awardTier": "first",
+      "category": "人工智能与计算机视觉",
+      "tags": [
+        "深度学习",
+        "PyTorch",
+        "自注意力机制",
+        "ResNet",
+        "度量学习",
+        "PCA降维",
+        "学术科研"
+      ],
+      "summary": "针对人脸男女分类与个体识别双任务，系统对比 AlexNet, ResNet 与 EfficientNet，自研轻量级 CNN+注意力机制模型（参数量仅 150 万），并深入论证小样本防止过拟合的泛化规律。",
+      "gallery": [
+        {
+          "src": "media/2025/xu_face_contrast_experiment.png",
+          "caption": "实验消融图：数据增强对自研注意力CNN与ResNet泛化能力及验证集准确率影响的严格对照实验",
+          "category": "消融实验"
+        },
+        {
+          "src": "media/2025/xu_face_pca_scatter.png",
+          "caption": "特征流形分布：基于表示学习（DeepFace）特征向量的主成分分析（PCA）降维与余弦相似度流形分布",
+          "category": "特征流形"
+        },
+        {
+          "src": "media/2025/xu_face_task2_curves.png",
+          "caption": "训练收敛动力学：任务二个体人脸分类损失曲线与验证准确率演进",
+          "category": "训练曲线"
+        }
+      ],
+      "hasCode": true,
+      "codeArchiveId": "2025-xu-tianren-facerecog",
+      "artifactSpecs": [
+        {
+          "name": "Face-Recog Attention PyTorch Codebase & Report",
+          "type": "Python / PyTorch 源码与科研报告",
+          "platform": "PyTorch / GPU",
+          "size": "包含完整模型定义、训练流水线与可视化分析",
+          "description": "涵盖自研注意力模块、Dropout动态调度与PCA特征矩阵流形可视化"
+        }
+      ],
+      "details": {
+        "skills": "PyTorch 深度学习框架、自注意力机制（Self-Attention）建模、特征空间度量学习、PCA 主成分分析、科学消融对照实验设计",
+        "difficulties": "小样本环境下的过拟合抑制，高维特征非线性流形在降维可视化中的可解释性构建",
+        "innovations": "论文撰写与实验论证完全达到国内外高校优秀本科毕业设计或学术论文发表水平，展现了南通中学生在前沿人工智能科研领域的顶尖钻研潜力。",
+        "fullReportHtml": "<div class=\"space-y-6 text-slate-700 leading-relaxed\">\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <div class=\"flex flex-wrap items-center gap-2 mb-4\">\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-sky-50 text-sky-700 border border-sky-200\">深度学习计算机视觉</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-indigo-50 text-indigo-700 border border-indigo-200\">卷积注意力机制 (CNN + Attention)</span>\n      <span class=\"px-2.5 py-1 text-xs font-semibold rounded bg-emerald-50 text-emerald-700 border border-emerald-200\">轻量化模型设计</span>\n    </div>\n    <h3 class=\"text-xl font-bold text-slate-900 mb-2\">多任务课题规划与研究目标</h3>\n    <p class=\"text-sm text-slate-700 mb-4\">高二（5）班须天人同学针对人脸图像多维属性表征展开系统研究，设立了<strong>任务一（性别二分类）</strong>与<strong>任务二（10位个体人脸多分类识别）</strong>两大实战方向。研究不仅横向评测了经典工业模型（AlexNet、ResNet-18/50、EfficientNet-B0）在不同优化器下的收敛动力学，更自主设计了一款参数量仅为 AlexNet 四十分之一的轻量级注意力神经网络。</p>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-sky-600\"></span>\n      自主模型架构设计 (OurModel：1.5M 参数量)\n    </h3>\n    <div class=\"grid grid-cols-1 md:grid-cols-2 gap-4 text-xs mb-3\">\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-sky-700 font-bold mb-1\">特征提取器（4 个渐进卷积块）</div>\n        <p class=\"text-slate-600\">每个块标准级联 <code>Conv2d &rarr; BatchNorm2d &rarr; ReLU &rarr; MaxPool2d &rarr; Dropout</code>，并在深层引入通道-空间双域注意力掩模，精准聚焦五官关键面貌特征。</p>\n      </div>\n      <div class=\"bg-white p-3.5 rounded-xl border border-slate-200 shadow-xs\">\n        <div class=\"text-emerald-700 font-bold mb-1\">精简双层分类器</div>\n        <p class=\"text-slate-600\">特征图展平后接入两层全连接线性层，配合动态学习率调度器（Learning Rate Scheduler），彻底规避传统巨型全连接层带来的过拟合与显存爆炸。</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"bg-slate-50/80 border border-slate-200 rounded-2xl p-5 md:p-6 shadow-xs\">\n    <h3 class=\"text-lg font-bold text-slate-900 mb-3 flex items-center gap-2\">\n      <span class=\"w-2 h-2 rounded-full bg-indigo-600\"></span>\n      实验发现与模型泛化洞察\n    </h3>\n    <ul class=\"text-xs text-slate-600 space-y-2 list-disc pl-4\">\n      <li><strong>优化器对比</strong>：在相同学习率下，收敛稳定性表现为 <code>AdamW &gt; Adam &gt; SGD</code>，带有权重衰减正则项的 AdamW 在微调阶段表现更佳。</li>\n      <li><strong>深度与任务匹配悖论</strong>：在简单任务与中等规模数据集上，ResNet-50 准确率反而显著低于轻量型的 ResNet-18。证明网络并非越深越好，盲目堆砌参数极易在小数据集上发生严重过拟合。</li>\n      <li><strong>高质量数据清洗决定上限</strong>：通过爬虫爬取 3,000 余张人脸图片后，人工执行严格的遮挡、阴阳脸与模糊清洗，使得验证集 F1-Score 提升了 12 个百分点。</li>\n    </ul>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "学术视野广阔、实验严谨、论证深刻！该研究在问题定义、对照实验设计、异常机理解释与高维流形数学推导上均达到了非凡的水准，无可争议地荣膺第九届望岳奖学金凌绝望岳奖。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2025-须天人 - 申请表原件",
+          "filename": "2025-须天人-申请表原件.docx",
+          "url": "/downloads/projects/2025-xu-tianren-facerecog/2025-须天人-申请表原件.docx",
+          "size": "21.3 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2025-xu-tianren-facerecog",
+          "projectTitle": "基于深度卷积神经网络与注意力机制的人脸多任务分析与识别研究",
+          "studentName": "须天人",
+          "editionYear": "2025",
+          "description": "须天人 于 2025 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2025-须天人 - 项目设计文档/学术报告",
+          "filename": "2025-须天人-项目技术报告.md",
+          "url": "/downloads/projects/2025-xu-tianren-facerecog/2025-须天人-项目技术报告.md",
+          "size": "9.9 KB",
+          "type": "code",
+          "category": "项目文档",
+          "projectId": "2025-xu-tianren-facerecog",
+          "projectTitle": "基于深度卷积神经网络与注意力机制的人脸多任务分析与识别研究",
+          "studentName": "须天人",
+          "editionYear": "2025",
+          "description": "《基于深度卷积神经网络与注意力机制的人脸多任务分析与识别研究》官方归档技术文档/研究报告原稿。"
+        },
+        {
+          "title": "2025-须天人 - 项目源代码",
+          "filename": "2025-须天人-项目源代码.zip",
+          "url": "/downloads/projects/2025-xu-tianren-facerecog/2025-须天人-项目源代码.zip",
+          "size": "1.3 MB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2025-xu-tianren-facerecog",
+          "projectTitle": "基于深度卷积神经网络与注意力机制的人脸多任务分析与识别研究",
+          "studentName": "须天人",
+          "editionYear": "2025",
+          "description": "《基于深度卷积神经网络与注意力机制的人脸多任务分析与识别研究》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    },
+    {
+      "id": "2025-wang-zihuan-dobot-sorting",
+      "title": "基于 DOBOT Magician 机械臂与机器视觉的工业级流水线智能分拣系统",
+      "studentId": "wang-zihuan",
+      "studentName": "王梓涣",
+      "class": "高二8班",
+      "award": "坚韧登岳",
+      "awardTier": "second",
+      "category": "机器人与自动化",
+      "tags": [
+        "DOBOT Magician",
+        "工业机械臂",
+        "颜色传感器",
+        "传送带动态抓取",
+        "状态机调度"
+      ],
+      "summary": "针对自动化工业产线物料流转需求，搭建了“传送带输送 + 光电触发 + 颜色多模态识别 + 机械臂末端真空吸附 + 分类码放”的一体化微型工业流水线闭环，通过多次实机试验改进了传感器贴合距离与光敏延时参数，答辩表现从容且技术细节回答扎实。",
+      "video": {
+        "src": "media/2025_wang_zihuan_dobot_1.mp4",
+        "poster": "media/2025_wang_zihuan_dobot_1_poster.jpg",
+        "title": "Dobot 机械臂自动化流水线抓取与分拣演示"
+      },
+      "gallery": [
+        {
+          "src": "media/2025/dobot_blockly_programming.png",
+          "caption": "王梓涣团队基于 DobotStudio 的闭环分拣搬运函数逻辑图",
+          "category": "逻辑控制"
+        },
+        {
+          "src": "media/2025/dobot_studio_interface.png",
+          "caption": "DobotStudio 工业机器人上位机示教配置与末端执行器参数标定界面",
+          "category": "示教配置"
+        }
+      ],
+      "details": {
+        "skills": "Dobot 逆运动学示教编程、光电与颜色传感器信号调理、真空吸盘气路控制、产线节拍时序优化",
+        "difficulties": "流水线传送带持续运行中的动态抓取同步误差消除，低成本颜色传感器在环境光突变下的误判抑制",
+        "innovations": "从工业 4.0 视角出发，完成了软硬件联调与现场答辩，对机械臂坐标系标定和传感器选型有深刻理解。",
+        "fullReportHtml": "<div class=\"not-prose my-6 rounded-2xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 shadow-xs overflow-hidden font-sans\"><div class=\"bg-gradient-to-r from-stone-900 via-slate-800 to-sky-950 text-white px-5 py-4 flex items-center justify-between border-b border-stone-800\"><div class=\"flex items-center gap-3\"><div class=\"w-8 h-8 rounded-lg bg-amber-400/20 text-amber-300 flex items-center justify-center font-serif font-bold text-sm border border-amber-400/30\">表</div><div><div class=\"flex items-center gap-2\"><h4 class=\"text-sm font-serif font-bold tracking-wide text-white\">南通中学 · 望岳奖学金学生申报表</h4><span class=\"px-2 py-0.5 rounded text-[10px] font-mono bg-amber-400/20 text-amber-200 border border-amber-400/30\">原件录入</span></div><p class=\"text-[11px] text-stone-300 font-mono mt-0.5\">申报档案原件正本录入</p></div></div><span class=\"text-[11px] font-mono text-stone-300 bg-stone-800/80 px-2.5 py-1 rounded-full border border-stone-700/80\">📅 2025年 月 日</span></div><div class=\"p-5 sm:p-6 space-y-4\"><div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 pb-4 border-b border-stone-100 dark:border-stone-800\"><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👤 申报人姓名</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">王梓涣</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏫 所在班级</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">高二（8）</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-1\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">🏷️ 申报项目名称</span><span class=\"font-bold text-stone-900 dark:text-stone-100 text-sm\">智能分拣</span></div><div class=\"p-3 rounded-xl bg-stone-50 dark:bg-stone-800/50 border border-stone-200/60 dark:border-stone-700/60 sm:col-span-2 lg:col-span-3\"><span class=\"text-[11px] text-stone-500 dark:text-stone-400 font-medium block mb-1\">👥 团队协作成员与分工</span><span class=\"text-xs text-stone-800 dark:text-stone-200 font-serif leading-relaxed\">王瑞翔（组长）：提出参与程序设定与完善，协调完善程序代码\n王梓涣（副组长）：提出项目,参与代码的修正与检查,项目完善\n朱梓萌（成员）：参与机械臂,传感器,传送带安装使用,</span></div></div><div class=\"p-4 rounded-xl bg-slate-50 dark:bg-stone-800/40 border border-slate-200/80 dark:border-stone-700/80 space-y-2\"><h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\"><span>📝 申报项目简介</span></h5><div class=\"text-xs sm:text-sm text-slate-700 dark:text-slate-300 leading-relaxed space-y-2 font-serif\"><p>通过dobot机械臂、配套传送带、光学传感器、颜色传感器及对应程序，通过代码编程实现传感器智能识别不同小物块颜色，并通过机械臂放置到相应位置。项目实现自动化分拣，准确识别分类不同颜色小物块，提升分拣效率和准确性。设计多传感器融合识别算法，适应不同光照条件，识别准确率高达95%。系统分拣速度达每分钟10个物品。</p></div></div><div class=\"grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1\"><div class=\"p-4 rounded-xl bg-blue-50/50 dark:bg-blue-950/20 border border-blue-200/70 dark:border-blue-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-blue-900 dark:text-blue-300 flex items-center gap-1.5\"><span>💡 掌握与习得技能</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">机械臂控制、传感器编程、颜色识别算法、图像处理基础、硬件调试、团队协作、代码调试与优化</div></div><div class=\"p-4 rounded-xl bg-amber-50/50 dark:bg-amber-950/20 border border-amber-200/70 dark:border-amber-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-amber-900 dark:text-amber-300 flex items-center gap-1.5\"><span>🛠️ 克服的技术难点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">传感器校准困难，初始识别准确率仅75%，通过调试和算法优化提升至95%。\n机械臂定位精度问题，反复调整运动参数实现精准定位。\n多设备协同时序问题，优化程序逻辑解决同步问题。</div></div><div class=\"p-4 rounded-xl bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200/70 dark:border-emerald-900/40 space-y-1.5\"><h5 class=\"text-xs font-bold text-emerald-900 dark:text-emerald-300 flex items-center gap-1.5\"><span>✨ 核心创新点</span></h5><div class=\"text-xs text-stone-700 dark:text-stone-300 leading-relaxed font-serif\">多传感器融合技术提升颜色识别准确性。\n机械臂精准定位与抓取，提高分拣效率。\n优化系统流程，实现每分钟10个物品分拣速度。\n如何利用AI辅助:\nAI工具提出项目的策划书(让AI抖音机械臂分拣项目）\n分析准确率数据，优化识别算法。（让AI调整修订程序，删去冗杂代码，加快进度）\n使用千问对申请表进行文笔润色（请你帮我把这篇申请表补充一些并且增加文采）</div></div></div></div></div><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-4\"><div class=\"border-t border-slate-200 dark:border-stone-800 pt-6 mt-6 space-y-6\">\n  <div class=\"flex items-center gap-2 pb-2 border-b border-slate-100 dark:border-stone-800\">\n    <span class=\"w-2.5 h-2.5 rounded-full bg-blue-600\"></span>\n    <h4 class=\"font-serif font-bold text-base text-slate-900 dark:text-slate-100\">📑 研报原件正文与工业级流水线系统架构解析 (Technical Architecture)</h4>\n  </div>\n\n  <!-- Hero Header -->\n  <div class=\"rounded-xl border border-blue-200/80 dark:border-blue-900/40 bg-gradient-to-br from-blue-50/50 via-white to-sky-50/30 dark:from-stone-900 dark:via-stone-900 dark:to-blue-950/20 p-5 sm:p-6 space-y-4\">\n    <div class=\"flex flex-wrap items-center justify-between gap-3 border-b border-blue-100 dark:border-blue-900/40 pb-3\">\n      <div class=\"flex items-center gap-3\">\n        <span class=\"text-2xl\">🦾</span>\n        <div>\n          <h3 class=\"font-serif font-bold text-lg text-slate-900 dark:text-white\">基于 DOBOT 机械臂与机器视觉的工业级流水线智能分拣系统</h3>\n          <p class=\"text-xs text-slate-500 dark:text-stone-400 font-mono mt-0.5\">闭环控制：视觉引导 + 机械臂精准执行 + 传送带动态协同</p>\n        </div>\n      </div>\n      <div class=\"flex flex-wrap gap-1.5\">\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-blue-100 dark:bg-blue-900/50 text-blue-800 dark:text-blue-300\">DOBOT Magician</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-emerald-100 dark:bg-emerald-900/50 text-emerald-800 dark:text-emerald-300\">分拣率 600-800块/h</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-indigo-100 dark:bg-indigo-900/50 text-indigo-800 dark:text-indigo-300\">识别率 &gt;95%</span>\n        <span class=\"px-2 py-0.5 rounded text-[11px] font-mono bg-amber-100 dark:bg-amber-900/50 text-amber-800 dark:text-amber-300\">重复定位 ±0.5mm</span>\n      </div>\n    </div>\n\n    <!-- System Architecture Table -->\n    <div class=\"space-y-2\">\n      <h5 class=\"text-xs font-bold text-slate-800 dark:text-slate-200 flex items-center gap-1.5\">\n        <span>🏭 系统总体模块架构与组件职能 (System Architecture)</span>\n      </h5>\n      <div class=\"overflow-x-auto rounded-xl border border-slate-200 dark:border-stone-700/80\">\n        <table class=\"w-full text-xs text-left\">\n          <thead class=\"bg-slate-100 dark:bg-stone-800 text-slate-700 dark:text-stone-300 font-semibold border-b border-slate-200 dark:border-stone-700\">\n            <tr>\n              <th class=\"px-4 py-2.5\">模块名称</th>\n              <th class=\"px-4 py-2.5\">核心组件选型</th>\n              <th class=\"px-4 py-2.5\">技术职能与工程说明</th>\n            </tr>\n          </thead>\n          <tbody class=\"divide-y divide-slate-100 dark:divide-stone-800 bg-white dark:bg-stone-900/60 font-mono text-[11px]\">\n            <tr>\n              <td class=\"px-4 py-2.5 font-bold text-slate-900 dark:text-slate-100 font-sans\">执行机构</td>\n              <td class=\"px-4 py-2.5 text-blue-600 dark:text-blue-400\">DOBOT Magician + 真空吸盘气泵</td>\n              <td class=\"px-4 py-2.5 text-slate-600 dark:text-stone-300 font-sans\">高精度多自由度机械臂，执行抓取、悬停转位与平滑下落码垛，重复定位精度达 ±0.5mm</td>\n            </tr>\n            <tr>\n              <td class=\"px-4 py-2.5 font-bold text-slate-900 dark:text-slate-100 font-sans\">输送机构</td>\n              <td class=\"px-4 py-2.5 text-sky-600 dark:text-sky-400\">直流减速步进电机传送带 + 编码器</td>\n              <td class=\"px-4 py-2.5 text-slate-600 dark:text-stone-300 font-sans\">平稳输送待分拣几何物块，配合光电传感器实现闭环启停与位置脉冲捕获</td>\n            </tr>\n            <tr>\n              <td class=\"px-4 py-2.5 font-bold text-slate-900 dark:text-slate-100 font-sans\">控制系统</td>\n              <td class=\"px-4 py-2.5 text-indigo-600 dark:text-indigo-400\">工业控制上位机 (PC) + SDK</td>\n              <td class=\"px-4 py-2.5 text-slate-600 dark:text-stone-300 font-sans\">系统决策中枢，执行坐标矩阵逆解算、五次多项式平滑轨迹规划、I/O 调度与状态机控制</td>\n            </tr>\n            <tr>\n              <td class=\"px-4 py-2.5 font-bold text-slate-900 dark:text-slate-100 font-sans\">传感辅助单元</td>\n              <td class=\"px-4 py-2.5 text-emerald-600 dark:text-emerald-400\">高敏光电传感器 + 颜色传感器</td>\n              <td class=\"px-4 py-2.5 text-slate-600 dark:text-stone-300 font-sans\">光电传感器毫秒级捕获工件进场触发拍照；颜色传感器完成物料色相判定与料槽分派</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n    </div>\n  </div>\n</div>"
+      },
+      "reviews": [
+        {
+          "judge": "评审导师",
+          "comment": "软硬件协同完整，视频演示详实，现场答辩对所有技术细节与参数调优对答如流，工程落地性强，荣膺坚韧登岳奖。"
+        }
+      ],
+      "downloads": [
+        {
+          "title": "2025-王梓涣 - 申请表原件",
+          "filename": "2025-王梓涣-申请表原件.docx",
+          "url": "/downloads/projects/2025-wang-zihuan-dobot-sorting/2025-王梓涣-申请表原件.docx",
+          "size": "14.8 KB",
+          "type": "doc",
+          "category": "申请表原件",
+          "projectId": "2025-wang-zihuan-dobot-sorting",
+          "projectTitle": "基于 DOBOT Magician 机械臂与机器视觉的工业级流水线智能分拣系统",
+          "studentName": "王梓涣",
+          "editionYear": "2025",
+          "description": "王梓涣 于 2025 年提交的望岳奖学金官方申请表原件。"
+        },
+        {
+          "title": "2025-王梓涣 - 项目源代码",
+          "filename": "2025-王梓涣-项目源代码.zip",
+          "url": "/downloads/projects/2025-wang-zihuan-dobot-sorting/2025-王梓涣-项目源代码.zip",
+          "size": "37.9 KB",
+          "type": "zip",
+          "category": "源代码工程",
+          "projectId": "2025-wang-zihuan-dobot-sorting",
+          "projectTitle": "基于 DOBOT Magician 机械臂与机器视觉的工业级流水线智能分拣系统",
+          "studentName": "王梓涣",
+          "editionYear": "2025",
+          "description": "《基于 DOBOT Magician 机械臂与机器视觉的工业级流水线智能分拣系统》完整源码、脚本与工程资源压缩包（已剔除大型视频媒体）。"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "title": "2025 届望岳奖学金评选细则 (官方章程)",
+      "filename": "2025第九届望岳奖学金评选细则.pdf",
+      "url": "/downloads/editions/2025/2025第九届望岳奖学金评选细则.pdf",
+      "size": "299.0 KB",
+      "type": "pdf",
+      "category": "评选细则",
+      "editionYear": "2025",
+      "description": "包含评选对象、申报要求、各级奖项标准与评审流程。"
+    },
+    {
+      "title": "2025年度第九届望岳奖学金申请表",
+      "filename": "2025年度第九届望岳奖学金申请表.pdf",
+      "url": "/downloads/editions/2025/2025年度第九届望岳奖学金申请表.pdf",
+      "size": "66.8 KB",
+      "type": "pdf",
+      "category": "官方申请表",
+      "editionYear": "2025",
+      "description": "南通中学官方 2025 年度望岳奖学金申请表原件。"
+    }
+  ]
+}
