@@ -152,7 +152,7 @@ export const ProjectsPage: React.FC = () => {
               onChange={(e) => updateParam('year', e.target.value)}
               className="px-2.5 py-1.5 rounded-lg border border-slate-200 bg-slate-50 text-slate-800 font-medium focus:outline-hidden focus:border-blue-400"
             >
-              <option value="all">全部届别 (2016–2025)</option>
+              <option value="all">全部届别 (2016–2026)</option>
               {EDITIONS.map((e) => (
                 <option key={e.year} value={e.year}>
                   {e.year}年度 (第{e.editionNumber}届)

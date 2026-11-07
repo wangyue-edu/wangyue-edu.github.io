@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { EDITIONS, getAllProjects, getTopAwardWinners } from '../data';
+import { EDITIONS, getAllProjects, getBenchmarkProjects } from '../data';
 import { AwardBadge } from '../components/AwardBadge';
 import {
   Mountain,
@@ -10,11 +10,13 @@ import {
   ArrowRight,
   Layers,
   ChevronRight,
+  Sparkles,
+  Download,
 } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
   const allProjects = getAllProjects();
-  const topWinners = getTopAwardWinners();
+  const benchmarkProjects = getBenchmarkProjects();
 
   // Metrics
   const totalEditions = EDITIONS.length;
@@ -80,7 +82,7 @@ export const HomePage: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 relative z-10 w-full">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { label: '历届盛典', value: `${totalEditions} 届`, desc: '2016至2025持续运作' },
+              { label: '历届盛典', value: `${totalEditions} 届`, desc: '2016至2026持续运作' },
               { label: '硬核成果', value: `${totalProjects} 项`, desc: '代码与真机全覆盖' },
               { label: '开源代码库', value: `${codeProjectsCount} 个`, desc: '工程源码在线浏览' },
               { label: '实机与视频演示', value: `${demoProjectsCount} 项`, desc: 'Web/Flash/视频实录' },
@@ -96,6 +98,55 @@ export const HomePage: React.FC = () => {
                 <span className="text-[11px] text-slate-400">{stat.desc}</span>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 2026 10th Edition Application Notification Banner */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-900 via-indigo-900 to-slate-900 text-white p-6 sm:p-8 shadow-xl border border-blue-400/30">
+          <div className="absolute top-0 right-0 -mt-12 -mr-12 w-80 h-80 rounded-full bg-blue-500/20 blur-3xl pointer-events-none" />
+          <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+            <div className="space-y-3 max-w-3xl">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-amber-400 text-slate-950 shadow-sm animate-pulse">
+                  <Sparkles className="w-3.5 h-3.5" />
+                  申报正式启动
+                </span>
+                <span className="text-xs font-mono px-2.5 py-0.5 rounded-full bg-white/10 text-blue-200 border border-white/20">
+                  第十届 · 十周年里程碑 (2026)
+                </span>
+              </div>
+              <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                2026年第十届望岳奖学金申报通知
+              </h2>
+              <p className="font-serif text-sm sm:text-base text-blue-100/90 leading-relaxed">
+                纪念岳军老师极客基金第十届评选现已面向江苏省南通中学全体在校学生（高一至高三）开放申请。
+                只要你有课余自主构思并亲手完成的软硬件开发、电子工程、算法研究或创新实验，均可报名参选！
+              </p>
+              <div className="pt-1 flex flex-wrap items-center gap-4 text-xs font-mono text-blue-200/80">
+                <span>✦ 面向南通中学全校在校生</span>
+                <span>✦ 独立性 100% 自主研发优先</span>
+                <span>✦ 代码开源 & 答辩复现</span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row lg:flex-col gap-3 shrink-0">
+              <Link
+                to="/editions/2026"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold bg-blue-600 hover:bg-blue-500 text-white shadow-md shadow-blue-500/30 transition-all text-center"
+              >
+                <span>查阅第十届申报指南</span>
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+              <Link
+                to="/downloads"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-all text-center"
+              >
+                <Download className="w-4 h-4 text-amber-300" />
+                <span>下载申报细则与申请表</span>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -122,7 +173,7 @@ export const HomePage: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {topWinners.map((project) => (
+          {benchmarkProjects.map((project) => (
             <Link
               key={project.id}
               to={`/projects/${project.id}`}

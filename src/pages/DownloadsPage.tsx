@@ -46,6 +46,7 @@ export const DownloadsPage: React.FC = () => {
 
   const years = [
     { id: 'all', label: '全部届别' },
+    { id: '2026', label: '2026 (第十届 · 申报中)' },
     { id: '2025', label: '2025 (第九届)' },
     { id: '2024', label: '2024 (第八届)' },
     { id: '2023', label: '2023 (第七届)' },
@@ -130,7 +131,7 @@ export const DownloadsPage: React.FC = () => {
             归档文件与工程资料下载中心
           </h1>
           <p className="font-serif text-sm sm:text-base text-blue-100/90 leading-relaxed">
-            汇集 2016–2025 历届官方评选细则章程、官方申请表原件、各获奖项目原始申报表、技术报告论文原稿以及打包源代码工程包，便于历史留存、学术研究与申报参考。
+            汇集 2016–2026 历届官方评选细则章程、官方申请表原件、各获奖项目原始申报表、技术报告论文原稿以及打包源代码工程包，便于历史留存、学术研究与申报参考。
           </p>
           <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-mono text-blue-200/80">
             <span className="flex items-center gap-1.5">

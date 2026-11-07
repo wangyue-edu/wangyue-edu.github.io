@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
               <span className="font-serif font-bold text-lg text-slate-900 tracking-wider flex items-center gap-1.5">
                 望岳奖学金
                 <span className="text-[10px] font-sans font-semibold tracking-normal px-1.5 py-0.5 rounded bg-blue-50 text-blue-700 border border-blue-200">
-                  2016–2025
+                  2016–2026
                 </span>
               </span>
               <span className="text-[11px] text-slate-500 font-sans tracking-wide">
@@ -67,11 +67,11 @@ export const Navbar: React.FC = () => {
           {/* Quick jump badge & Mobile toggle */}
           <div className="flex items-center gap-3">
             <Link
-              to="/editions/2025"
+              to="/editions/2026"
               className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800 transition-all shadow-xs"
             >
               <Sparkles className="w-3.5 h-3.5 text-amber-300 animate-pulse" />
-              <span>第九届 (2025)</span>
+              <span>第十届 (2026) 开放申报</span>
             </Link>
 
             <button

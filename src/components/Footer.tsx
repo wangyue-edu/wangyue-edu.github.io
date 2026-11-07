@@ -36,7 +36,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-sm text-slate-600">
               <li>
                 <Link to="/editions" className="hover:text-blue-600 transition-colors">
-                  历届华章（2016–2025）
+                  历届华章（2016–2026）
                 </Link>
               </li>
               <li>
@@ -65,7 +65,7 @@ export const Footer: React.FC = () => {
 
         {/* Divider */}
         <div className="border-t border-slate-200 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-          <p>© 2016–2025 望岳奖学金评审委员会 & 通中极客校友网络. All rights reserved.</p>
+          <p>© 2016–2026 望岳奖学金评审委员会 & 通中极客校友网络. All rights reserved.</p>
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1 text-slate-500">
               Made with <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" /> for Nantong High School Geeks

@@ -9,6 +9,7 @@ import e2022 from './editions/2022.json';
 import e2023 from './editions/2023.json';
 import e2024 from './editions/2024.json';
 import e2025 from './editions/2025.json';
+import e2026 from './editions/2026.json';
 
 export const EDITIONS: Edition[] = [
   e2016 as unknown as Edition,
@@ -20,6 +21,7 @@ export const EDITIONS: Edition[] = [
   e2023 as unknown as Edition,
   e2024 as unknown as Edition,
   e2025 as unknown as Edition,
+  e2026 as unknown as Edition,
 ];
 
 export function getEditions(): Edition[] {
@@ -57,4 +59,22 @@ export function getProject(id: string): EnrichedProject | undefined {
 
 export function getTopAwardWinners(): EnrichedProject[] {
   return getAllProjects().filter((p) => p.awardTier === 'first');
+}
+
+export const BENCHMARK_PROJECT_IDS = [
+  '2016-zhou-heyang-cloudedu',
+  '2017-wang-xuyang-coilgun',
+  '2018-zhou-zihao-robomaster',
+  '2020-zhu-zhenpeng-smart-campus',
+  '2021-tong-yizhou-redim',
+  '2022-jiang-guanqun-nfc',
+  '2024-gu-shun-keyboard',
+  '2025-xu-tianren-facerecog',
+];
+
+export function getBenchmarkProjects(): EnrichedProject[] {
+  const all = getAllProjects();
+  return BENCHMARK_PROJECT_IDS
+    .map((id) => all.find((p) => p.id === id))
+    .filter((p): p is EnrichedProject => Boolean(p));
 }

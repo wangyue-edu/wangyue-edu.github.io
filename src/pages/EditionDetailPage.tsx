@@ -48,7 +48,7 @@ export const EditionDetailPage: React.FC = () => {
             {edition.year} 年度 · 第 {edition.editionNumber} 届
           </span>
           <span className="text-xs text-blue-100 font-mono">
-            {edition.projects.length} 项申报作品
+            {edition.projects.length > 0 ? `${edition.projects.length} 项申报作品` : '正在开放申报中'}
           </span>
         </div>
 
@@ -194,12 +194,48 @@ export const EditionDetailPage: React.FC = () => {
           <div className="flex items-center gap-2">
             <Trophy className="w-5 h-5 text-blue-600" />
             <h2 className="font-serif text-2xl font-bold text-slate-900">
-              本届全部申报与获奖作品（{edition.projects.length} 项）
+              {edition.projects.length > 0
+                ? `本届全部申报与获奖作品（${edition.projects.length} 项）`
+                : '申报与评奖动态'}
             </h2>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {edition.projects.length === 0 ? (
+          <div className="rounded-3xl border border-blue-200 bg-gradient-to-br from-blue-50/90 to-indigo-50/70 p-8 sm:p-12 text-center space-y-5 shadow-xs">
+            <div className="w-14 h-14 mx-auto rounded-2xl bg-blue-600 text-white flex items-center justify-center shadow-md">
+              <Sparkles className="w-7 h-7 text-amber-300 animate-pulse" />
+            </div>
+            <div className="space-y-2 max-w-2xl mx-auto">
+              <h3 className="font-serif text-2xl font-bold text-slate-900">
+                2026 第十届望岳奖学金申报火热进行中
+              </h3>
+              <p className="font-serif text-sm sm:text-base text-slate-600 leading-relaxed">
+                为保护申报学子的知识产权并保障答辩评审的独立客观，作品申报材料不在此公开展示。
+                获奖作品名单、真机演示与技术报告将在评审与答辩结束后正式公示发布。
+              </p>
+            </div>
+            <div className="pt-2 flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="/downloads/editions/2026/2026第十届望岳奖学金评选细则.pdf"
+                download="2026第十届望岳奖学金评选细则.pdf"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-blue-600 hover:bg-blue-700 text-white shadow-xs transition-all"
+              >
+                <Download className="w-4 h-4" />
+                <span>下载《第十届评选细则》</span>
+              </a>
+              <a
+                href="/downloads/editions/2026/2026年度第十届望岳奖学金申请表.docx"
+                download="2026年度第十届望岳奖学金申请表.docx"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold bg-white hover:bg-blue-50 text-blue-700 border border-blue-200 shadow-xs transition-all"
+              >
+                <Download className="w-4 h-4" />
+                <span>下载《官方申请表 (Word)》</span>
+              </a>
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {(edition.projects || []).map((project) => (
             <Link
               key={project.id}
@@ -254,6 +290,7 @@ export const EditionDetailPage: React.FC = () => {
             </Link>
           ))}
         </div>
+        )}
       </div>
     </div>
   );

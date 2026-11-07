@@ -12,6 +12,10 @@ OFFICE_EXTENSIONS = {'.docx','.pptx','.xlsx'}
 ARCHIVE_EXTENSIONS = {'.zip','.sb3','.aab'}
 SURVEY_MARKERS = ('问卷调查','招新问卷','survey_responses','recruitment_survey')
 
+OFFICIAL_PUBLIC_EMAILS = {
+    'wangyue-scholarship-application+2026@googlegroups.com',
+}
+
 def is_survey(name: str) -> bool:
     return any(part in name.lower() for part in SURVEY_MARKERS)
 
@@ -20,7 +24,11 @@ def is_private_metadata(name: str) -> bool:
     return any(part in {'.git','__MACOSX','.DS_Store','Thumbs.db'} or part.startswith('._') for part in parts)
 
 def contact_spans(text: str):
-    found = [(m.start(),m.end(),'email') for m in EMAIL.finditer(text)]
+    found = []
+    for m in EMAIL.finditer(text):
+        val = m.group(0).strip().lower()
+        if val not in OFFICIAL_PUBLIC_EMAILS:
+            found.append((m.start(), m.end(), 'email'))
     found += [(m.start(2),m.end(2),'qq') for pattern in (QQ,QQ_CONTEXT,QQ_LINK) for m in pattern.finditer(text)]
     return sorted(set(found))
 
